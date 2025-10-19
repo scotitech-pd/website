@@ -29,7 +29,7 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <>
+    <div className={islength ? "pb-[80px]" : "pb-[70px]"}>
       <div
         className={
           "black_overlay w-full h-full fixed lg:hidden z-40 duration-500 mt-[-10px]"
@@ -45,7 +45,7 @@ const Navbar = () => {
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className={" font-sans w-full h-fit bg-main absolute duration-300 ".concat(
+          className={" font-sans w-full h-fit bg-main-dark absolute duration-300 ".concat(
             toggle ? "top-[0%]" : "top-[-100%]"
           )}
         >
@@ -83,7 +83,7 @@ const Navbar = () => {
       {/* Navbar Code  */}
       <nav
         className={(islength ? "h-[80px]" : "h-[70px]").concat(
-          " font-sans w-full left-0 top-0 fixed bg-main  align-middle duration-500 z-40 shadow-2xl"
+          " font-sans w-full left-0 top-0 fixed bg-main-dark  align-middle duration-500 z-40 shadow-2xl"
         )}
       >
         <div className=" h-full mx-auto my-auto flex items-center justify-between pl-2 lg:px-5 xl:px-5">
@@ -141,7 +141,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 

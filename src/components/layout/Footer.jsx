@@ -57,7 +57,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="mx-auto bg-main relative">
+    <footer className="mx-auto bg-main-dark relative overflow-hidden">
       <div className="absolute h-full w-full flex justify-center items-center text-4xl -z-0">
         <img src="/images/home/footerbg.png" alt="" className="max-w-[80%]"/>
       </div>

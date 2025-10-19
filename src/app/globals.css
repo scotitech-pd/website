@@ -3,13 +3,32 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --main: #641171;
+  --main-light: #9638E5;
+  --main: #7E1A8E;
+  --main-dark: #641171;
+  --main-blue:#2D64E6;
+  --orange: #FFA662;
+  --green: #059388;
+  --green-light: #BCB96A;
+  --yellow: #BCB96A;
+  /* about */
+  --greenblue: #34939B;
+  --seablue: #D2FAFF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-main: var(--main);
-
+  --color-main-light: var(--main-light);
+  --color-main-dark: var(--main-dark);
+  --color-orange: var(--orange);
+  --color-blue: var(--blue);
+  --color-yellow: var(--yellow);
+  --color-green: var(--green);
+  --color-green-light: var(--green-light);
+  --color-seablue : var(--seablue);
+  --color-greenblue: var(--greenblue);
+  
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
