@@ -48,6 +48,8 @@ export default function FaqSection() {
         backgroundPosition: "left",
       }}
     >
+      <img src="/images/home/Tpurple.png" alt="bg" className="left-0 absolute w-auto h-[95%] bottom-0"/>
+      
       {/* Background shape (optional subtle polygon)
     //   <div className="absolute top-0 left-0 w-full h-full bg-purple-100 opacity-20"></div> */}
       {/* Subtle overlay for readability */}
@@ -57,7 +59,7 @@ export default function FaqSection() {
         {/* Left Side */}
         <div>
           <h3 className="text-3xl md:text-4xl font-bold text-black relative z-10 font-karla">
-            <p className="text-[7rem] font-bold text-gray-200 absolute -top-10 -left-2 select-none -z-10">
+            <p className="text-[7rem] font-bold text-gray-200 absolute select-none -z-10 top-1/2 transform -translate-y-1/2">
               FAQ
             </p>
             Frequently Asked Questions
@@ -76,7 +78,7 @@ export default function FaqSection() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="border border-main rounded-xl shadow-sm bg-gradient-to-r from-white to-purple-50 relative"
+              className=" border border-main rounded-xl shadow-sm bg-gradient-to-r from-white to-purple-50 relative"
             >
               <div className="absolute  bg-main-dark rounded-full size-[26px] flex items-center justify-center -left-[13px] top-[8px]">
                 <img

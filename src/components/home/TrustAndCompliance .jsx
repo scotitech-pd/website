@@ -1,4 +1,3 @@
-import React from "react";
 
 const TrustAndCompliance = () => {
   return (
@@ -10,7 +9,7 @@ const TrustAndCompliance = () => {
         backgroundSize: "cover",
       }}
     >
-        <img src="/images/home/Timg.png" alt="bg" className="left-0 absolute w-auto h-[90%] bottom-0"/>
+        <img src="/images/home/Tpurple.png" alt="bg" className="left-0 absolute w-auto h-[90%] bottom-0"/>
       
       {/* Main Content */}
       <div className="relative z-10 max-w-8xl mx-auto px-6 py-10 flex flex-col lg:flex-row items-center">
