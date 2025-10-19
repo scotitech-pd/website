@@ -7,12 +7,14 @@ import DownloadDashboard from "./DownloadDashboard";
 import WhyChooseScotiTech from "./WhyChooseScotiTech";
 import OurProducts from "./OurProducts";
 import OurStory from "./OurStory";
+import HeroSection from "./HeroSection";
 
 const Pagehome = () => {
   return (
     <>
       {/* Stay Ahead With ScotiTech */}
       <div className=" bg-white">
+        <HeroSection/>
         <OurStory/>
         <OurProducts/>
         <WhyChooseScotiTech/>

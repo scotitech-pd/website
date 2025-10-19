@@ -148,7 +148,7 @@ const Navbar = () => {
 const nav_links = [
   { id: 1, title: "Home", link: "/" },
   { id: 3, title: "Solution", link: "/solution" },
-  { id: 2, title: "About Us", link: "/about-us" },
+  { id: 2, title: "About Us", link: "/aboutus" },
   { id: 5, title: "Our Products", link: "/ourproducts" },
   { id: 6, title: "Contact", link: "/contact" },
 ];
