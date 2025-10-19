@@ -107,7 +107,7 @@ export default function DownloadDashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black py-10">
+    <div className="bg-white text-black py-10">
       <div className="font-karla font-medium text-4xl text-center my-10 relative w-full">
         <p className="text-[7rem] font-bold text-gray-100 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           Product Download

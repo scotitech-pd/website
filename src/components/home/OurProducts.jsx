@@ -1,0 +1,74 @@
+import React from "react";
+
+const products = [
+  {
+    name: "AppDeploy",
+    tagline: "Effortless iOS App Distribution",
+    logo: "/images/home/appdeploy.png",
+  },
+  {
+    name: "Opsly",
+    tagline: "All-in-One Operations Platform",
+    logo: "/images/home/opsly.png",
+  },
+  {
+    name: "AI Caption Studio",
+    tagline: "Smarter Content Creation",
+    logo: "/images/home/ai.png",
+  },
+  {
+    name: "ClarityPath",
+    tagline: "private decision-support app",
+    logo: "/images/home/claritypath.png",
+  },
+];
+
+export default function OurProducts() {
+  return (
+    <section className=" py-20 text-center relative w-[100%] overflow-hidden">
+      <div className="absolute bottom-0 w-screen -left-0.5">
+        <img
+          src="/images/home/bgjoint.png" // replace with your actual background image
+          alt="background"
+          className="object-cover"
+        />
+      </div>
+      <h2 className="text-main font-lora text-4xl font-semibold mb-6">
+        Our Products
+      </h2>
+      <h3 className="text-2xl md:text-4xl font-semibold font-karla text-gray-900 mb-3">
+        Products Designed to Simplify, Empower, and Scale
+      </h3>
+      <p className="text-gray-600 max-w-3xl mx-auto mb-12 text-lg font-lora">
+        From app distribution to operations and content creation, our tools cut
+        complexity and deliver real-world value.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto mb-10">
+        {products.map((p, i) => (
+          <div
+            key={i}
+            className="bg-white relative rounded-2xl hover:shadow-[0_0_25px_rgba(128,128,128,0.9)] transition shadow-[0_0_25px_rgba(128,128,128,0.6)]"
+          >
+            <div
+              className={`flex justify-center items-center rounded-t-2xl overflow-hidden`}
+            >
+              <img
+                src={p.logo}
+                alt={p.name}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            <div className="py-8 px-2 font-lora text-black">
+              <h4 className="text-xl font-semibold">{p.name}</h4>
+              <p className="text-black/90 mt-2 mb-4">{p.tagline}</p>
+            </div>
+            <button className="bg-main text-white px-6 py-2 rounded-full text-sm hover:bg-main/90 absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2">
+              Read more
+            </button>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
