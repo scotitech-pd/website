@@ -1,28 +1,26 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { Rocket, DoorOpen, Lightbulb, Lock } from "lucide-react";
 
-const features = [
+const features1 = [
   {
-    icon: Rocket,
+    img: "/images/home/whyrocket.png",
     title: "Start Lean, Grow Fast",
     desc: "We focus on delivering value early and iterating with user feedback, so you always get tools that evolve with your needs.",
   },
   {
-    icon: DoorOpen,
+    img: "/images/home/whyaccessible.png",
     title: "Accessible & Affordable",
     desc: "Pricing and features designed to include, not exclude — powerful tools without enterprise-level costs.",
   },
+];
+
+const features2 = [
   {
-    icon: Lightbulb,
+    img: "/images/home/whydesign.png",
     title: "Designed for Clarity",
     desc: "Clean, intuitive user experiences that reduce friction and make adoption effortless.",
   },
   {
-    icon: Lock,
+    img: "/images/home/whyprivacy.png",
     title: "Privacy & Trust",
     desc: "Built with compliance and responsible data practices at the core, so you can work with confidence.",
   },
@@ -61,27 +59,40 @@ export default function WhyChooseScotiTech() {
             <span className="text-purple-400">creators worldwide.</span>
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 w-[60%]">
-            {features.map((f, i) => (
-              <motion.div
+          <div className="grid grid-cols-[41%_48%] gap-24 mt-10 w-[60%] text-black">
+            {features1.map((f, i) => (
+              <div
                 key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-purple-500/40 hover:shadow-[0_0_25px_rgba(168,85,247,0.3)] transition"
+                className={`relative bg-white backdrop-blur-md rounded-2xl p-6 border hover:shadow-[0_0_25px_rgba(168,85,247,0.3)] transition`}
               >
-                <div className="absolute -top-6 left-6 bg-purple-700 rounded-full p-4 shadow-lg shadow-purple-500/40">
-                  <f.icon className="w-6 h-6 text-white" />
+                <div className="absolute size-28 right-0 top-1/2 bg-white border-main-dark border-8 rounded-full flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
+                  <img src={f.img} className="size-16" />
                 </div>
-                <div className="mt-6">
-                  <h3 className="text-xl font-semibold text-white">
+                <div className="w-[80%]">
+                  <h3 className="text-xl font-semibold font-karla">
                     {f.title}
                   </h3>
-                  <p className="text-gray-300 mt-2 text-sm leading-relaxed">
-                    {f.desc}
-                  </p>
+                  <p className=" mt-2 text-[13px] leading-3.5 text-black/80">{f.desc}</p>
                 </div>
-              </motion.div>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-[51%_40%] gap-20 mt-10 w-[60%] text-black">
+            {features2.map((f, i) => (
+              <div
+                key={i}
+                className={`relative bg-white backdrop-blur-md rounded-2xl p-6 border hover:shadow-[0_0_25px_rgba(168,85,247,0.3)] transition`}
+              >
+                <div className="absolute size-28 right-0 top-1/2 bg-white border-main-dark border-8 rounded-full flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
+                  <img src={f.img} className="size-16" />
+                </div>
+                <div className="w-[80%]">
+                  <h3 className="text-xl font-semibold font-karla">
+                    {f.title}
+                  </h3>
+                  <p className=" mt-2 text-[13px] leading-3.5 text-black/80">{f.desc}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
