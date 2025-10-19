@@ -11,7 +11,9 @@ const geistSans = Geist({
 
 const karla = Karla({
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // choose weights you need
+  weight: ["200","300","400", "500", "700","800"],
+  variable: '--font-karla',
+  // choose weights you need
 });
 
 const lora = Lora({

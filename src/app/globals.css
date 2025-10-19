@@ -15,7 +15,7 @@
   --greenblue: #34939B;
   --seablue: #D2FAFF;
 }
-
+ 
 @theme inline {
   --color-background: var(--background);
   --color-main: var(--main);
@@ -32,7 +32,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-lora: var(--font-lora);
+  --font-lora: var(--font-lora); 
   --font-karla: var(--font-karla);
 
 }
