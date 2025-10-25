@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss"; 
 
 :root {
   --background: #ffffff;
@@ -10,6 +10,7 @@
   --orange: #FFA662;
   --green: #059388;
   --green-light: #BCB96A;
+  --grey:#595959;
   --yellow: #BCB96A;
   /* about */
   --greenblue: #34939B;
@@ -24,6 +25,7 @@
   --color-orange: var(--orange);
   --color-blue: var(--blue);
   --color-yellow: var(--yellow);
+  --color-grey: var(--grey);
   --color-green: var(--green);
   --color-green-light: var(--green-light);
   --color-seablue : var(--seablue);
@@ -39,7 +41,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: white;
     --foreground: #ededed;
   }
 }

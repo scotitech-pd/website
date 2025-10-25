@@ -6,9 +6,9 @@ const products = [
       "Enterprise iOS distribution without App Store rejections or MDM headaches.",
     icon: "/images/solution/maskimg.png",
     img: "/images/home/appdeploy.png",
-    bgColor: "bg-blue-800",
-    textColor: "text-blue-600",
-    buttonColor: "bg-blue-600",
+    bgColor: "bg-blue",
+    textColor: "text-blue",
+    buttonColor: "bg-blue",
     buttonText: "Download AppDeploy",
   },
   {
@@ -18,9 +18,9 @@ const products = [
       "Track and optimize SaaS usage. Cut waste, save costs, and scale smarter.",
     icon: "/images/solution/maskimg2.png",
     img: "/images/home/opsly.png",
-    bgColor: "bg-cyan-800",
-    textColor: "text-cyan-600",
-    buttonColor: "bg-cyan-600",
+    bgColor: "bg-green",
+    textColor: "text-green",
+    buttonColor: "bg-green",
     buttonText: "Join Opsly Waitlist",
   },
   {
@@ -30,9 +30,9 @@ const products = [
       "AI-powered captions & content tools to boost engagement in seconds.",
     icon: "/images/solution/maskimg3.png",
     img: "/images/home/ai.png",
-    bgColor: "bg-teal-900",
-    textColor: "text-purple-600",
-    buttonColor: "bg-purple-600",
+    bgColor: "bg-main-light",
+    textColor: "text-main-light",
+    buttonColor: "bg-main-light",
     buttonText: "Try Caption Studio Free",
   },
   {
@@ -42,9 +42,9 @@ const products = [
       "ClarityPath provides organizations with a unique tool for personal planning and growth.",
     icon: "/images/solution/maskimg4.png",
     img: "/images/home/Claritypath.png",
-    bgColor: "bg-slate-900",
-    textColor: "text-[#808000]", // Tailwind doesn't have olive, so customize or use closest match
-    buttonColor: "bg-yellow-600",
+    bgColor: "bg-green-light",
+    textColor: "text-green-light", // Tailwind doesn't have olive, so customize or use closest match
+    buttonColor: "bg-green-light",
     buttonText: "Download ClarityPath App",
   },
 ];

@@ -1,7 +1,3 @@
-"use client";
-
-import { Smartphone, Cog, Video, Users } from "lucide-react";
-
 export default function TechnologySection() {
   const problems = [
     {
@@ -27,11 +23,17 @@ export default function TechnologySection() {
       <img
         src="/images/solution/tabimg.png" // replace this with your actual image path
         alt="Tech Devices"
-        className=" absolute left-0 w-[40%] top-0"
+        className=" absolute left-0 w-[40%] min-[1400px]:-top-10 top-0  min-[1700px]:hidden"
       />
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[40%_60%] items-center justify-between gap-0">
         {/* Left image */}
-        <div className="w-[20%]"></div>
+        <div className="">
+          <img
+            src="/images/solution/tabimg1.png" // replace this with your actual image path
+            alt="Tech Devices"
+            className="w-[90%] hidden min-[1700px]:flex"
+          />
+        </div>
 
         {/* Right content */}
         <div className="text-center lg:text-left">
@@ -58,14 +60,14 @@ export default function TechnologySection() {
       </div>
 
       {/* Problem cards */}
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 max-w-7xl mx-auto">
+      <div className="mt-20 min-[1700px]:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 max-w-7xl mx-auto">
         {problems.map((item, index) => (
           <div
             key={index}
             className="relative p-6 pl-16 bg-transparent border-[#5a64b8] border-2 rounded-2xl flex flex-col group items-center justify-center text-center transition"
           >
             <div className="absolute left-0 top-1/2 bg-[#640D5F] size-20 flex justify-center items-center rounded-full border-4 border-[#a879db] group-hover:border-white transition duration-200 group-hover:scale-110 text-pink-100 transform -translate-x-1/2 -translate-y-1/2">
-              <img src={item.icon} alt={item.text} className="h-12 w-10"/>
+              <img src={item.icon} alt={item.text} className="h-11" />
             </div>
             <p className="text-[13px] text-gray-200 font-lora text-left leading-relaxed">
               {item.text}

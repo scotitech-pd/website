@@ -53,7 +53,7 @@ const WhyScotitech = () => {
               <h4 className="text-[20px] font-semibold font-lora text-black mb-2">
                 {feature.title}
               </h4>
-              <p className="text-[15px] font-lora text-gray-500">{feature.description}</p>
+              <p className="text-[15px] font-lora text-grey">{feature.description}</p>
             </div>
           ))}
         </div>
