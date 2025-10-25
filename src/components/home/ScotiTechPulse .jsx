@@ -1,4 +1,3 @@
-
 const ScotiTechPulse = () => {
   return (
     <section
