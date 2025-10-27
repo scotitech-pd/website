@@ -20,7 +20,7 @@ const page = () => {
       <HowItWorks />
       <ComparisonSection/>
       <SecurityCompliance/>
-      {/* <WhoUsesAppDeploy/> */}
+      <WhoUsesAppDeploy/>
     </>
   );
 };
