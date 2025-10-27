@@ -2,7 +2,7 @@ import { Settings, Shield, Rocket, Users } from "lucide-react";
 
 export default function WhoUsesAppDeploy() {
   return (
-    <section className="bg-white py-24 px-6 md:px-20 relative overflow-hidden">
+    <section className="bg-[#FAFAFA] py-24 px-6 md:px-20 relative overflow-hidden">
       {/* Heading */}
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
