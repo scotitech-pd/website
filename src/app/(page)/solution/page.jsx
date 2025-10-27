@@ -1,6 +1,7 @@
 import AppDeploySection from "@/components/solutions/AppDeploySection";
 import CircularProgress from "@/components/solutions/CircularProgress";
 import ComparisonSection from "@/components/solutions/ComparisonSection";
+import CtaSection from "@/components/solutions/CtaSection";
 import FaqSection from "@/components/solutions/FaqSection";
 import HeroScotitech from "@/components/solutions/HeroScotitech";
 import HowItWorks from "@/components/solutions/HowItWorks";
@@ -27,7 +28,7 @@ const page = () => {
       <Testimonials/>
       <KnowledgeSection/>
       <FaqSection/>
-      
+      <CtaSection/>
     </>
   );
 };
