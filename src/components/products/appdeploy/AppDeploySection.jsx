@@ -38,7 +38,7 @@ function AppDeploySection() {
 export default function OpslyHeroSection() {
   return (
     <section
-      className="relative overflow-hidden text-white py-24 bg-cover bg-center "
+      className="relative overflow-hidden text-white py-24 bg-cover bg-center bg-black"
       style={{
         backgroundImage: "url('/images/products/appdeploy/herobg.png')", // replace with your image
       }}

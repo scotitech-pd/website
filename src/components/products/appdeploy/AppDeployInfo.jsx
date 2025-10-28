@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AppDeployInfo() {
   return (
     <section
-      className="relative bg-white py-24 px-6 overflow-hidden bg-cover bg-center"
+      className="relative bg-white py-28 px-6 overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: "url('/images/products/appdeploy/bgimg.png')", // replace with your image
       }}
