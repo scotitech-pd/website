@@ -1,3 +1,4 @@
+import HowToGetOpsly from "@/components/products/opsly/HowToGetOpsly"
 import OpslyFeaturesSection from "@/components/products/opsly/OpslyFeaturesSection"
 import OpslyHeroSection from "@/components/products/opsly/OpslyHeroSection"
 import OpslyInfoSection from "@/components/products/opsly/OpslyInfoSection"
@@ -10,6 +11,7 @@ const Opsly = () => {
         <OpslyInfoSection/>
         <OpslyFeaturesSection/>
         <WhyChooseOpsly/>
+        <HowToGetOpsly/>
     </>
   )
 }
