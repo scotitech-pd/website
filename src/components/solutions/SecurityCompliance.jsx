@@ -15,7 +15,7 @@ export default function SecurityCompliance() {
         {/* Left Section */}
         <div className="py-20">
           <div className="relative">
-            <p className="absolute text-[4.5rem]  font-semibold text-black/20 font-karla opacity-40 top-1/2 -translate-y-1/2 text-nowrap select-none">
+            <p className="absolute text-[4.5rem]  font-semibold text-black/20 font-karla opacity-40 -left-5 top-1/2 -translate-y-1/2 text-nowrap select-none">
               Security & Compliance
             </p>
             <h2 className="text-3xl font-medium text-black font-lora">
