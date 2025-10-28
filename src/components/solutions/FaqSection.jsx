@@ -40,11 +40,11 @@ export default function FaqSection() {
         backgroundPosition: "left",
       }}
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-10 grid md:grid-cols-2 gap-10 items-center text-black">
+      <div className="relative z-10 max-w-7xl mx-auto px-10 grid md:grid-cols-[60%_40%] gap-10 items-center text-black">
         {/* Left Side */}
-        <div>
+        <div className="w-fit mx-auto">
           <h3 className="text-3xl md:text-4xl font-semibold text-black relative z-10 font-lora">
-            <p className="text-[7.5rem] font-medium text-gray-200 absolute select-none -z-10 top-1/2 transform -translate-y-1/2 -left-3">
+            <p className="text-[7.5rem] font-medium text-black/10 absolute select-none -z-10 top-1/2 transform -translate-y-1/2 -left-3">
               FAQ
             </p>
             Frequently Asked Questions
@@ -55,7 +55,7 @@ export default function FaqSection() {
         </div>
 
         {/* Right Side - Accordion */}
-        <div className="space-y-4 py-20 h-[460px]">
+        <div className="space-y-4 py-20 h-[400px]">
           {faqs.map((faq, i) => (
             <div
               key={i}
