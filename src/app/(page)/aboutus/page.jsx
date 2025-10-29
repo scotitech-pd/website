@@ -1,9 +1,20 @@
-import React from 'react'
+import AboutScotiTech from "@/components/aboutus/AboutScotitech";
+import GlobalD from "@/components/aboutus/GlobalD";
+import HowWeWorks from "@/components/aboutus/HowWeWorks";
+import LeadershipTeam from "@/components/aboutus/Leadershipteam";
+import MissionVision from "@/components/aboutus/MissionVision";
+import Timeline from "@/components/aboutus/TimelineData";
+
 
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+  return <>
+  <AboutScotiTech />
+  <Timeline />
+  <LeadershipTeam />
+  <MissionVision />
+  <GlobalD/>
+  <HowWeWorks/>
+  </>;
+};
 
-export default page
+export default page;

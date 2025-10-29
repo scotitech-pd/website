@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { ModalProvider } from "@/components/ModalContext";
 import Footer from "@/components/layout/Footer";
+import CursorGlow from "@/components/CursorGlow";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
           className={`${geistSans.variable} ${geistMono.variable} ${karla.variable} ${lora.variable} antialiased`}
         >
           <Navbar />
+               <CursorGlow />
           {children}
           <Footer/>
         </body>

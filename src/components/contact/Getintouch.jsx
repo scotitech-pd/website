@@ -165,14 +165,14 @@ const GetInTouch = () => {
   {/* Card 1 */}
   <div className="bg-white w-[450px] h-[60px] lg:shadow- lg:hover:shadow-2xl lg:transition-shadow relative rounded-lg flex items-center p-4 pl-16">
     {/* Icon */}
-    <div className="absolute lg:transition-shadow   bg-purple-100 p-4 -left-4 rounded-full flex-shrink-0 flex items-center justify-center">
+    <div className="absolute lg:transition-shadow shadow-[0_0_15px_3px_rgba(180,100,255,1)]
+transition-all duration-900 bg-purple-100 p-4 -left-4 rounded-full flex-shrink-0 flex items-center justify-center ">
       <img
         src="/images/contact/insights.png"
         alt="Insights"
         className="w-8 h-8"
       />
     </div>
-
     {/* Text */}
     <p className="text-gray-800  font-semibold text-base lg:py-5 lg:text-[16px] ">
       We turn insights into victories. Ready to achieve more.
@@ -181,7 +181,8 @@ const GetInTouch = () => {
   {/* card 2 */}
     <div className="bg-white w-[450px] h-[60px] lg:shadow-xl lg:hover:shadow-2xl lg:transition-shadow relative rounded-lg flex items-center p-4 pl-16">
     {/* Icon */}
-    <div className="absolute bg-purple-100 p-4 -left-4 rounded-full flex-shrink-0 flex items-center justify-center">
+    <div className="absolute shadow-[0_0_15px_3px_rgba(180,100,255,1)]
+ bg-purple-100 p-4 -left-4 rounded-full flex-shrink-0 flex items-center justify-center">
       <img
         src="/images/contact/data.png"
         alt="Insights"
@@ -196,7 +197,8 @@ Data-driven. Success delivered. Build with us.    </p>
   {/* card 3 */}
     <div className="bg-white w-[450px] h-[60px] lg:shadow-xl lg:hover:shadow-2xl lg:transition-shadow relative rounded-lg flex items-center p-4 pl-16">
     {/* Icon */}
-    <div className="absolute bg-purple-100 p-4 -left-4 rounded-full flex-shrink-0 flex items-center justify-center">
+    <div className="absolute shadow-[0_0_15px_3px_rgba(180,100,255,1)]
+ bg-purple-100 p-4 -left-4 rounded-full flex-shrink-0 flex items-center justify-center">
       <img
         src="/images/contact/technology.png"
         alt="Insights"
@@ -211,7 +213,8 @@ Expertise, Evolved. Technology simplified.    </p>
   {/* card 4 */}
     <div className="bg-white w-[450px] h-[60px] lg:shadow-xl lg:hover:shadow-2xl lg:transition-shadow relative rounded-lg flex items-center p-4 pl-16">
     {/* Icon */}
-    <div className="absolute bg-purple-100 p-4 -left-4 rounded-full flex-shrink-0 flex items-center justify-center">
+    <div className="absolute shadow-[0_0_15px_3px_rgba(180,100,255,1)]
+ bg-purple-100 p-4 -left-4 rounded-full flex-shrink-0 flex items-center justify-center">
       <img
         src="/images/contact/growth.png"
         alt="Insights"
