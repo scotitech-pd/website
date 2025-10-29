@@ -57,7 +57,7 @@ const BeyondBusiness = () => {
             <div className="hidden  lg:block absolute top-1/2 left-[750px]  xl:right-12 -translate-y-1/2  xl:w-[400px]  space-y-5">
               {/* Card 1 - Compassionate Companionship */}
                <div className="bg-[#e4ebec] backdrop-blur-sm rounded-2xl gap-2 flex items-start shadow-xl ">
-                <div className="bg-white p-5 rounded-xl flex-shrink-0 hover:shadow-2xl transition-all hover:scale-105">
+                <div className="bg-white p-5 rounded-xl border-[rgba(230,200,255,1)] flex-shrink-0 hover:shadow-2xl transition-all hover:scale-105">
                   <img
                     src="/images/contact/handshake-icon.png"
                     alt="Handshake"
@@ -192,7 +192,7 @@ const BeyondBusiness = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 max-w-5xl mx-auto lg:mx-0">
           {/* Author Info */}
           <div className="flex items-center gap-4 text-white">
-            <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden border-4 border-white/30 flex-shrink-0">
+            <div className="w-16 h-16 lg:w-20 lg:h-20  rounded-full overflow-hidden border-4 border-white/30 flex-shrink-0">
               <img
                 src="/images/contact/daniel-avatar.png"
                 alt="Daniel Chapman"
@@ -208,10 +208,10 @@ const BeyondBusiness = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 lg:ml-8 w-full lg:w-auto ">
-            <button className="bg-white text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-50 transition-colors shadow-lg hover:shadow-xl whitespace-nowrap">
+            <button className="bg-white  text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-50 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl whitespace-nowrap">
               Learn More About ElderConnect
             </button>
-            <button className="bg-purple-100 animate-bounce text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-200 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2 whitespace-nowrap">
+            <button className="bg-purple-100 animate-bounce text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-200 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl flex items-center justify-center gap-2 whitespace-nowrap">
               <img
                 src="/images/contact/download-icon.png"
                 alt="Download"
