@@ -35,7 +35,7 @@ export default function HowToGetOpsly() {
           Simple Steps to Smarter SaaS Management{" "}
         </p>
 
-        <div className="grid grid-cols-2 items-center justify-between gap-12">
+        <div className="grid grid-cols-2 items-center justify-between gap-12 mb-5">
           {/* Left: App mockup */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <div className="relative">
