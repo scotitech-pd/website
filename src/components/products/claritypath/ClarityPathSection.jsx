@@ -1,16 +1,16 @@
 export default function ClarityPathSection() {
   return (
     <section
-      className="relative overflow-hidden text-white py-24 bg-cover bg-center bg-black"
+      className="relative overflow-hidden text-white py-16 bg-cover bg-center bg-black"
       style={{
-        backgroundImage: "url('/images/products/appdeploy/herobg.png')", // replace with your image
+        backgroundImage: "url('/images/products/claritypath/heribg.png')", // replace with your image
       }}
     >
-      <div className="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-12">
-        <div className="lg:w-2/3 space-y-6">
+      <div className="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-2">
+        <div className="lg:w-[60%] space-y-6">
           <div className="text-6xl font-semibold relative w-fit">
             Clarity Path
-            <p className="absolute text-[85px] opacity-10 top-1/2 text-nowrap -translate-y-1/2 -left-5 ">
+            <p className="absolute text-[88px] opacity-10 top-1/2 text-nowrap -translate-y-1/2 -left-4 ">
               Clarity Path
             </p>
           </div>
@@ -26,27 +26,39 @@ export default function ClarityPathSection() {
             help individuals and teams align their focus, energy, and goals with
             clarity. Distributed securely via{" "}
             <span className="text-[#EABFFF]">Apple Business Manager (ABM)</span>
-            , ClarityPath provides organizations with a unique tool for personal
-            planning and professional growth.
+            , ClarityPath provides organizations <span className="text-[#EABFFF]"> with a unique tool for personal
+            planning and professional growth.</span>
           </p>
 
-          <div className="flex gap-5">
-            <button className="bg-white w-fit text-gray-900 px-8 py-2.5 rounded-lg font-medium hover:bg-blue-light hover:text-white hover:shadow-[0_0_25px_rgba(105,140,100,0.9)] duration-300 transition-all font-lora">
+          <div className="flex gap-10">
+            <button className="bg-white w-fit text-gray-900 px-8 py-2 rounded-lg font-semibold hover:bg-blue-light hover:text-white hover:shadow-[0_0_25px_rgba(105,140,100,0.9)] duration-300 transition-all font-lora">
                 Talk to Sales
             </button>
-            <button className="bg-white w-fit text-gray-900 px-8 py-2.5 rounded-lg font-medium hover:bg-blue-light hover:text-white hover:shadow-[0_0_25px_rgba(105,140,100,0.9)] duration-300 transition-all font-lora">
+            <button className="bg-white w-fit text-gray-900 px-8 py-2 rounded-lg font-semibold hover:bg-blue-light hover:text-white hover:shadow-[0_0_25px_rgba(105,140,100,0.9)] duration-300 transition-all font-lora">
               Download Now
             </button>
           </div>
         </div>
 
         {/* Right image mockup */}
-        <div className="lg:w-1/3 flex justify-center items-center relative">
+        <div className="lg:w-[40%] flex justify-center items-center relative">
           <img
-            src="/images/products/appdeploy/phonepic.png"
+            src="/images/products/claritypath/claritypath.png"
             alt=""
-            className=""
+            className="mt-4 -mb-6"
           />
+          <div className="absolute bottom-1/4 translate-y-1/2 left-1/2 -translate-x-1/2 w-[75%] flex justify-between">
+                  <img
+                    src="/images/products/opsly/button2.png"
+                    alt=""
+                    className="w-[45%] h-auto cursor-pointer"
+                  />
+                  <img
+                    src="/images/products/opsly/button1.png"
+                    alt=""
+                    className="w-[45%] h-auto cursor-pointer"
+                  />
+                </div>
         </div>
       </div>
     </section>
