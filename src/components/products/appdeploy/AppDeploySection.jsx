@@ -1,41 +1,4 @@
-function AppDeploySection() {
-  return (
-    <section className="relative bg-gradient-to-r from-[#240020] via-[#240045] to-[#1a0038] text-white overflow-hidden py-20">
-
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between relative z-10">
-        {/* Text content */}
-        <div className="max-w-lg">
-          <h2 className="text-4xl font-bold mb-4"></h2>
-          <h3 className="text-xl font-semibold mb-4">
-           <br />
-          </h3>
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            
-          </p>
-
-          <button className="bg-white text-black font-medium px-6 py-2 rounded-md shadow-md hover:bg-gray-200 transition">
-            Download Now
-          </button>
-        </div>
-
-        {/* Phone mockup */}
-        <div className="mt-10 md:mt-0 relative">
-          <div className="absolute -inset-10 bg-gradient-to-r from-purple-700/30 to-blue-700/20 blur-3xl rounded-full"></div>
-          <Image
-            src="/images/appdeploy-phone.png"
-            alt="AppDeploy iPhone mockup"
-            width={350}
-            height={600}
-            className="relative rounded-3xl shadow-2xl"
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-
-export default function OpslyHeroSection() {
+export default function AppDeploySection() {
   return (
     <section
       className="relative overflow-hidden text-white py-24 bg-cover bg-center bg-black"
