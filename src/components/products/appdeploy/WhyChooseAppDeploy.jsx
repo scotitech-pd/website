@@ -43,7 +43,7 @@ export default function WhyChooseAppDeploy() {
                   alt=""
                   className=""
                 />
-                <span className="absolute bg-white left-1/2 -translate-1/2 py-3 px-5 text-[#696969] font-karla font-semibold rounded-xl text-shadow-2xs cursor-pointer hover:bg-main-dark hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300">Download Now</span>
+                <span className="absolute bg-white left-1/2 shadow-[0_0_10px_rgba(128,128,128,0.9)] -translate-1/2 py-3 px-5 text-[#696969] font-karla font-semibold rounded-xl text-shadow-2xs cursor-pointer hover:bg-main-dark hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300">Download Now</span>
               </div>
             </div>
           </div>
