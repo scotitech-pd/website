@@ -12,6 +12,7 @@
   --green-light: #BCB96A;
   --grey:#595959;
   --yellow: #BCB96A;
+  --blue-light:#02698C;
   /* about */
   --greenblue: #34939B;
   --seablue: #D2FAFF;
@@ -24,6 +25,7 @@
   --color-main-dark: var(--main-dark);
   --color-orange: var(--orange);
   --color-blue: var(--blue);
+  --color-blue-light: var(--blue-light);
   --color-yellow: var(--yellow);
   --color-grey: var(--grey);
   --color-green: var(--green);
