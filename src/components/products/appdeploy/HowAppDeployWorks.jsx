@@ -38,11 +38,11 @@ export default function HowAppDeployWorks() {
               <div className="bg-[#F4F4F4] shadow-md rounded-full  flex items-center absolute left-0 size-24 justify-center z-10">
                 <img src={s.img} alt="" className="size-12" />
               </div>
-              <div className="relative font-lora ml-29 w-full">
+              <div className="relative font-lora ml-29 w-fit">
                 <img
                   src="/images/products/appdeploy/circledesign.png"
                   alt=""
-                  className="absolute inset-0 m-auto scale-[1.5]"
+                  className="absolute left-1/2 top-1/2 -translate-1/2 scale-[1.3]"
                 />
                 <h3 className="font-semibold text-xl text-gray-900 mb-1">
                   {s.title}
