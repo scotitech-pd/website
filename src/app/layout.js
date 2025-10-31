@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
           className={`${geistSans.variable} ${geistMono.variable} ${karla.variable} ${lora.variable} antialiased`}
         >
           <Navbar />
-               <CursorGlow />
+               {/* <CursorGlow /> */}
           {children}
           <Footer/>
         </body>
