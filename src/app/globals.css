@@ -38,8 +38,15 @@
   --font-mono: var(--font-geist-mono);
   --font-lora: var(--font-lora); 
   --font-karla: var(--font-karla);
-
+  
+  --animate-spin-slow :  spin-slow 2.5s linear infinite;
 }
+
+@keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
 @media (prefers-color-scheme: dark) {
   :root {
