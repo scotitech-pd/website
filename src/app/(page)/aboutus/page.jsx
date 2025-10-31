@@ -6,17 +6,18 @@ import MissionVision from "@/components/aboutus/MissionVision";
 import Timeline from "@/components/aboutus/TimelineData";
 import WhyThisMatters from "@/components/aboutus/WhyThisMatters";
 
-
 const page = () => {
-  return <>
-  {/* <AboutScotiTech />
-    <Timeline />  */}
- <LeadershipTeam />
-   {/* <MissionVision /> 
- <GlobalD/>
-  <HowWeWorks/>
-  <WhyThisMatters /> */}
-  </>
+  return (
+    <>
+      <AboutScotiTech />
+      <Timeline />
+      <LeadershipTeam />
+      <MissionVision />
+      <GlobalD />
+      <HowWeWorks />
+      <WhyThisMatters />
+    </>
+  );
 };
 
 export default page;
