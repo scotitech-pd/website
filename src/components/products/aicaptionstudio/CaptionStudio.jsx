@@ -21,8 +21,9 @@ const CaptionStudio = () => {
   ];
 
   return (
+          <div className="max-w-7xl mx-auto ">
     <section className="relative w-full py-16 px-4 sm:px-6 lg:px-12 bg-white">
-      <div className="max-w-7xl mx-auto ">
+
         <h2 className="text-3xl font-karla sm:text-4xl font-semibold text-[#641171] mb-4">
           What is Caption Studio?
         </h2>
@@ -59,8 +60,9 @@ const CaptionStudio = () => {
             </div>
           ))}
         </div>
+        </section>
       </div>
-    </section>
+    
   );
 };
 
