@@ -2,26 +2,36 @@ import React from 'react';
 
 const GlobalD = () => {
   return (
-    <div className='text-center px-4 sm:px-8 md:px-16 lg:px-[180px] flex justify-center items-center w-full bg-gradient-to-r from-[#348E94] to-[#39337C] mt-[40px] h-auto lg:h-[40vh] py-8 lg:py-0'>
-      <div className=''>
-        <h2 className='text-3xl font-karla mb-3 lg:text-[30px] font-semibold text-white'>
-          Global Delivery, Local Trust
+  <section
+      className="relative  bg-center bg-cover bg-no-repeat "
+      style={{
+        backgroundImage: "url('/images/aboutus/lead-bg.png')",
+      }}
+    >    <div className='text-center  px-4 sm:px-8 md:px-16 min-[1670px]:w-7xl min-[1670px]:mx-auto lg:px-[180px] flex justify-center items-center  mt-[4px] h-auto lg:h-[40vh] py-8 lg:py-0'>
+      <div className=''> 
+        <div className="absolute top-8 lg:top-5 -tracking-tighter left-1/2 -translate-x-1/2 pointer-events-none z-0">
+        <h1 className="text-5xl sm:text-6xl font-karla md:text-5xl lg:text-6xl  font-bold text-gray-300/20 leading-none whitespace-nowrap">
+          Global Delivery. Local Trust
+        </h1>
+      </div>
+        <h2 className='text-3xl font-karla mb-5 lg:text-[30px] min-[1670px]:py-[20px] font-semibold text-white 2xl:text-[45px]'>
+          Global Delivery. Local Trust
         </h2>
-        <p className='text-white font-lora lg:text-[15px] text-sm sm:text-[15px]'>
+        <p className='text-white font-lora lg:text-[15px] text-sm leading-6 min-[1670px]:py-[20px] min-[1670px]:text-[200px]' >
           Scotitech operates with strategic leadership from London and a remote-first engineering network spanning multiple regions. This hybrid model allows us to blend British innovation, global collaboration, and technical agility — delivering exceptional products and enterprise solutions worldwide.
         </p>
-        <div className='relative w-[250px] mx-auto mt-5 border-1 shadow-xl rounded-4xl'>
+        <div className='relative w-[250px] mx-auto mt-5 border-1 shadow-xl rounded-4xl min-[1670px]:mt-[20px]'>
           <img 
             src="/images/aboutus/globalbutton.png" 
             alt="" 
           />
-          <p className='absolute top-2 left-1/2 -translate-x-1/2 font-semibold text-black'>
+          <p className='absolute top-2 left-1/2 -translate-x-1/2 font-semibold lg:text-[20px] text-black min-[1670px]:text-[25px]'>
             Talk to Us
           </p>
         </div>
       </div>
     </div>
-  );
+ </section> );
 };
 
 export default GlobalD;
