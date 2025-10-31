@@ -9,13 +9,13 @@ import WhyThisMatters from "@/components/aboutus/WhyThisMatters";
 
 const page = () => {
   return <>
-  <AboutScotiTech />
-    <Timeline /> 
+  {/* <AboutScotiTech />
+    <Timeline />  */}
  <LeadershipTeam />
-   <MissionVision /> 
+   {/* <MissionVision /> 
  <GlobalD/>
   <HowWeWorks/>
-  <WhyThisMatters />
+  <WhyThisMatters /> */}
   </>
 };
 
