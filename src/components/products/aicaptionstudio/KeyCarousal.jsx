@@ -82,7 +82,7 @@ const FeaturesCarousel = () => {
             ref={swiperRef}
             modules={[Navigation, Autoplay, Keyboard]}
             spaceBetween={2}
-            slidesPerView={4}
+            slidesPerView={2}
             loop={true}
             autoplay={{
               delay: 3000,
