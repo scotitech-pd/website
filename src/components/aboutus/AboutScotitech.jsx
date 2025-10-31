@@ -5,14 +5,12 @@ const AboutScotiTech = () => {
   const [hoveredCard, setHoveredCard] = useState(1); // Default to middle card (50+ Countries)
 
   return (
-    <section className="relative  flex justify-center min-h-screen bg-white py-12 px-4 lg:py-20 lg:px-[120px] overflow-hidden">
-
-
+    <section className="relative  flex justify-center min-h-[90vh] bg-white py-12 px-4 lg:py-20 lg:px-[120px] overflow-hidden">
       {/* Decorative Background Pattern - Top Right */}
       <div className="absolute top-0 -right-20 w-64 h-64 lg:w-96 lg:h-96  z-0">
-        <img 
-          src="/images/aboutus/pattern-lines.png" 
-          alt="" 
+        <img
+          src="/images/aboutus/pattern-lines.png"
+          alt="Pattern lines behind the photo"
           className="w-full h-full object-contain"
         />
       </div>
@@ -22,21 +20,21 @@ const AboutScotiTech = () => {
           {/* LEFT SIDE */}
           <div className="relative">
             {/* Left Side - Content */}
-            <div className="absolute top-8 lg:-top-4 left-4 lg:-left-4 pointer-events-none z-0">
-              <h2 className="text-6xl  font-karla sm:text-7xl md:text-8xl lg:text-6xl font-bold text-yellow-200 leading-none whitespace-nowrap">
+            <div className="absolute top-8 lg:-top-4 left-4 lg:-left-0 pointer-events-none z-0">
+              <h2 className="text-6xl  font-karla sm:text-7xl md:text-8xl lg:text-6xl font-bold text-gray-200/60 leading-none whitespace-nowrap">
                 About ScotiTech
               </h2>
             </div>
             <div className="space-y-8 lg:space-y-12">
               {/* Header */}
               <div className="relative z-20">
-                <h2 className="text-4xl font-karla lg:text-[40px] 2xl:text-6xl font-bold text-gray-900 mb-6 lg:mb-8">
+                <h2 className="text-4xl font-karla lg:text-[45px] 2xl:text-6xl font-bold text-black mb-6 lg:mb-8">
                   About ScotiTech
                 </h2>
-                <h2 className="text-xl lg:text-[18px] font-karla 2xl:text-3xl font-bold text-gray-800 mb-4 lg:mb-6">
+                <h2 className="text-xl lg:text-[20px] pr-9 font-karla 2xl:text-3xl font-bold text-black mb-4 lg:mb-6">
                   ScotiTech: Pioneering Technology Solutions for Global Business
                 </h2>
-                <p className="text-base lg:text-[13px] font-lora  text-gray-700 leading-relaxed">
+                <p className="text-base lg:text-[15px] font-lora  text-black leading-relaxed">
                   We're a UK-based technology company with a global vision,
                   transforming how businesses leverage technology through
                   innovative products and solutions.
@@ -44,9 +42,9 @@ const AboutScotiTech = () => {
               </div>
 
               {/* Stats Cards */}
-              <div className="relative">
+             <div className="relative">
                 {/* Background Container with Light Cyan */}
-                <div className="bg-cyan-50/60 rounded-3xl p-4 lg:p-6">
+                <div className="bg-cyan-50/60 rounded-3xl p-4 lg:p-2">
                   <div className="grid grid-cols-3 gap-0">
                     {/* Card 1 - 50+ Team Members */}
                     <div
@@ -55,7 +53,7 @@ const AboutScotiTech = () => {
                     >
                       <div
                         className={`
-                      relative z-10 flex flex-col items-center justify-center p-4 lg:p-8 rounded-2xl transition-all duration-500
+                      relative z-10 flex flex-col items-center justify-center p-4 lg:p-4 rounded-2xl transition-all duration-500
                       ${
                         hoveredCard === 0
                           ? "bg-gradient-to-br from-teal-500 to-teal-600 text-white scale-105 shadow-2xl"
@@ -198,15 +196,22 @@ const AboutScotiTech = () => {
                       </div>
                     </div>
                   </div>
-                   </div>
                 </div>
               </div>
             </div>
-         
+          </div>
 
           {/* RIGHT SIDE */}
           <div className="relative">
-            <div className="absolute top-0 bg-amber-500">
+            <div className="absolute -bottom-[15px]  flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_10px_25px_rgba(94,11,123,0.6)] bg-white rounded-2xl h-[90px] w-[200px] border-1 border-[#7E1A8E] z-2">
+              <h2 className="text-[#9638E5] font-karla font-bold lg:text-[20px]">
+                ScotiTech
+              </h2>
+              <p className="text-[#641171] font-karla text-center  font-semibold px-5 lg:text-[13px]">
+                Global Reach, Pioneering Solutions
+              </p>
+            </div>
+            <div className="absolute top-0 `">
               <img src="/images/aboutus/hero-tech.png" alt="" />
             </div>
           </div>
