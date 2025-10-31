@@ -77,7 +77,7 @@ const AboutScotiTech = () => {
                         background: "#34939B",
                         boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
                       }}
-                    ></div>
+                    ></div> 
                     <div
                       className={`hidden min-[1500px]:flex absolute  left-0 w-[214px] h-[110%] top-1/2 -translate-y-1/2 rounded-2xl transition-transform duration-500 ease-in-out`}
                       style={{
