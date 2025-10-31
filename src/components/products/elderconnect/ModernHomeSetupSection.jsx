@@ -40,7 +40,7 @@ export default function ModernHomeSetupSection() {
         backgroundImage: "url('/images/products/elder/bgmgf.png')", // replace with your image
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-0 grid md:grid-cols-[56%_44%] gap-14 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-0 grid md:grid-cols-[55%_41%] gap-14 items-center">
         {/* LEFT SIDE */}
         <div className="space-y-8 font-lora w-full">
           <div className="font-karla text-white font-medium text-center mt-8 relative w-full">
