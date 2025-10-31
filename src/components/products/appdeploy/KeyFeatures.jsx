@@ -1,46 +1,36 @@
-"use client";
-import {
-  MousePointerClick,
-  Upload,
-  BarChart3,
-  ShieldCheck,
-  FileText,
-  ArrowUpRight,
-} from "lucide-react";
-
 const features = [
   {
-    icon: <MousePointerClick className="w-8 h-8 text-gray-800" />,
+    img: "/images/products/appdeploy/oneclick.png",
     title: "One-Click Installation:",
     description:
       "Employees receive a simple link to install the app instantly. No confusing instructions or technical skills are required.",
   },
   {
-    icon: <Upload className="w-8 h-8 text-gray-800" />,
+    img: "/images/products/appdeploy/uploads.png",
     title: "Direct .IPA Uploads:",
     description:
       "Simply drag and drop your IPA file into our dashboard. We handle the complex processes behind the scenes.",
   },
   {
-    icon: <BarChart3 className="w-8 h-8 text-gray-800" />,
+    img: "/images/products/appdeploy/analytics.png",
     title: "Real-Time Analytics:",
     description:
       "Track every installation in real-time. See who has downloaded the app and manage versions from one central hub.",
   },
   {
-    icon: <ShieldCheck className="w-8 h-8 text-gray-800" />,
+    img: "/images/products/appdeploy/redemption.png",
     title: "Secure ABM Redemption:",
     description:
       "We leverage Apple Business Manager (ABM) to create secure, private distribution links, ensuring your app remains compliant and internal.",
   },
   {
-    icon: <FileText className="w-8 h-8 text-gray-800" />,
+    img: "/images/products/appdeploy/required.png",
     title: "No MDM Required:",
     description:
       "Launch your internal apps without forcing employees to enroll their devices in a restrictive MDM profile, simplifying your workflow.",
   },
   {
-    icon: <ArrowUpRight className="w-8 h-8 text-gray-800" />,
+    img: "/images/products/appdeploy/scalable.png",
     title: "Scalable by Design:",
     description:
       "Whether you're deploying to a team of 10 or a workforce of 10,000, AppDeploy scales effortlessly with your business needs.",
@@ -50,8 +40,6 @@ const features = [
 export default function KeyFeatures() {
   return (
     <section className="relative bg-gradient-to-r from-[#3D297A] to-[#406E8F] text-white py-16 px-6 min-[1600px]:px-0 overflow-hidden">
-      
-
       <div className="text-5xl font-semibold relative text-center mb-9">
         Key Features
         <p className="absolute text-[83px] opacity-10 top-1/2 -translate-1/2 left-1/2 ">
@@ -76,8 +64,8 @@ export default function KeyFeatures() {
             className="bg-white text-gray-800 font-lora rounded-xl shadow-xl py-8 px-3 flex flex-col items-center text-center relative border-b-[12px] border-[#7E1A8E]/50"
           >
             {/* Icon circle */}
-            <div className="absolute -top-10 bg-gray-100 w-20 h-20 flex items-center justify-center rounded-full border-4 border-gray-200 shadow-md">
-              {feature.icon}
+            <div className="absolute -top-10 bg-gray-100 w-20 h-20 flex items-center justify-center rounded-full border-[6px] border-gray-200 hover:border-[#A52EB8] hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-400 shadow-md">
+              <img src={feature.img} alt="" className="size-10" />
             </div>
 
             <div className="mt-5">
