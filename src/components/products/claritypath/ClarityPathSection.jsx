@@ -6,7 +6,7 @@ export default function ClarityPathSection() {
         backgroundImage: "url('/images/products/claritypath/heribg.png')", // replace with your image
       }}
     >
-      <div className="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-2">
+      <div className="relative max-w-7xl mx-auto px-6 min-[1500px]:px-0 flex flex-col lg:flex-row items-center justify-between gap-2">
         <div className="lg:w-[60%] space-y-6">
           <div className="text-6xl font-semibold relative w-fit">
             Clarity Path
@@ -59,68 +59,6 @@ export default function ClarityPathSection() {
                     className="w-[45%] h-auto cursor-pointer"
                   />
                 </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function CladrityPathSection() {
-  return (
-    <section className="relative bg-gradient-to-b from-[#0b0015] via-[#100024] to-[#040008] text-white overflow-hidden py-20">
-      {/* Subtle background pattern or network effect */}
-      <div className="absolute inset-0 bg-[url('/images/claritypath-bg.png')] bg-cover bg-center opacity-40"></div>
-
-      {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#130020]/80 via-[#1a0040]/70 to-[#040015]/90"></div>
-
-      <div className="container relative z-10 mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-        {/* LEFT: TEXT CONTENT */}
-        <div className="max-w-xl text-left">
-          <h1 className="text-5xl font-bold mb-6">Clarity Path</h1>
-          <h2 className="text-2xl font-semibold text-purple-300 mb-6"></h2>
-          <p className="text-gray-300 leading-relaxed mb-8"></p>
-
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-white text-black font-medium px-6 py-2 rounded-md shadow-md hover:bg-gray-200 transition">
-              Talk to Sales
-            </button>
-            <button className="bg-white text-black font-medium px-6 py-2 rounded-md shadow-md hover:bg-gray-200 transition">
-              Download Now
-            </button>
-          </div>
-        </div>
-
-        {/* RIGHT: PHONE MOCKUP */}
-        <div className="mt-12 md:mt-0 relative flex flex-col items-center">
-          {/* Blurred glow circle behind phone */}
-          <div className="absolute -bottom-16 w-72 h-72 bg-cyan-600/40 rounded-full blur-3xl"></div>
-
-          <Image
-            src="/images/claritypath-phone.png"
-            alt="Clarity Path iPhone Mockup"
-            width={350}
-            height={600}
-            className="relative z-10 rounded-3xl shadow-2xl"
-          />
-
-          {/* App Store buttons */}
-          <div className="flex gap-4 mt-6 z-10">
-            <Image
-              src="/images/appstore-badge.png"
-              alt="App Store"
-              width={150}
-              height={50}
-              className="cursor-pointer hover:opacity-80 transition"
-            />
-            <Image
-              src="/images/playstore-badge.png"
-              alt="Google Play"
-              width={150}
-              height={50}
-              className="cursor-pointer hover:opacity-80 transition"
-            />
-          </div>
         </div>
       </div>
     </section>
