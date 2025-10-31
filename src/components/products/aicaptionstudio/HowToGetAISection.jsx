@@ -1,12 +1,9 @@
-
-
 const HowToGetAISection = () => {
   return (
     <section
       className="relative bg-cover bg-no-repeat py-20 px-4 sm:px-8 md:px-12 lg:px-16"
       style={{
-        backgroundImage:
-          "url('/images/products/aicaptionstudio/how-bg.png')",
+        backgroundImage: "url('/images/products/aicaptionstudio/how-bg.png')",
       }}
     >
       <div className="relative z-10 text-center max-w-7xl mx-auto">
@@ -15,13 +12,12 @@ const HowToGetAISection = () => {
           How to Get AI Caption Studio?
         </h2>
         <p className="text-base sm:text-lg text-black mt-3 font-lora mb-12">
-          Getting started is simple. AI Caption Studio is available directly for individuals and teams.
+          Getting started is simple. AI Caption Studio is available directly for
+          individuals and teams.
         </p>
 
         {/* 3 Column Grid */}
-        <div
-          className="grid grid-cols-1 [@media(min-width:1100px)]:grid-cols-3 gap-6 justify-items-center"
-        >
+        <div className="grid grid-cols-1 [@media(min-width:1100px)]:grid-cols-3 gap-6 justify-items-center">
           {/* Card 1 */}
           <div className="bg-[#B8E4FF] rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 w-[340px] py-8 px-4 text-center">
             <div className="flex justify-center mb-6">
@@ -32,7 +28,8 @@ const HowToGetAISection = () => {
               />
             </div>
             <p className="lg:text-[20px] font-semibold leading-6 mb-0 text-[20px] text-black font-lora">
-              <span className="font-semibold text-[#0034B1]">Download</span> the app
+              <span className="font-semibold text-[#0034B1]">Download</span> the
+              app
               <br /> AI Caption Studio.
             </p>
             <div className="flex justify-center items-center gap-4 mt-6 cursor-pointer hover:shadow-2xl">
@@ -59,7 +56,8 @@ const HowToGetAISection = () => {
               />
             </div>
             <p className="lg:text-[20px] font-semibold leading-6 text-[20px] px-6 text-black font-lora">
-              <span className="font-semibold text-[#005031]">Sign Up</span> for a free account
+              <span className="font-semibold text-[#005031]">Sign Up</span> for
+              a free account
               <br /> to explore our core features.
             </p>
           </div>
@@ -74,8 +72,10 @@ const HowToGetAISection = () => {
               />
             </div>
             <p className="lg:text-[20px] font-semibold leading-6 mb-0 text-[20px] text-black font-lora">
-              <span className="font-semibold text-[#641171]">Upgrade</span> to a premium plan
-              <br /> to unlock unlimited captions, advanced tools, and priority support.
+              <span className="font-semibold text-[#641171]">Upgrade</span> to a
+              premium plan
+              <br /> to unlock unlimited captions, advanced tools, and priority
+              support.
             </p>
           </div>
         </div>
