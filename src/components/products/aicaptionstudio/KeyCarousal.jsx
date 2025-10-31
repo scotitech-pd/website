@@ -69,11 +69,19 @@ const FeaturesCarousel = () => {
   return (
     <div className="w-full bg-gray-50 py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
+        
         {/* Section Title */}
-        <div className="  mb-12 px-16">
-          <h2 className="text-4xl font-bold text-[#641171]">
+       
+        <div className="relative  mb-12 px-16">
+                <div className=" absolute  -top-6  left-14 min-w-[650px]  pointer-events-none">
+              <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter  text-gray-900/40 opacity-50">
+  Key Features
+              </p>
+            </div>
+          <h2 className="text-4xl font-bold -tracking-tighter text-[#641171]">
            Key Features
           </h2>
+          
         </div>
 
         {/* Carousel Container with left margin, right edge hugging */}

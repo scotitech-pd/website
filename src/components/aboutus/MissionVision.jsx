@@ -8,11 +8,11 @@ const MissionVision = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-[150px] min[1500px]:w-[85%] min[1500px]:mx-auto max-w-[100%] mx-auto">
           {/* Left Content */}
           <div className="space-y-5 text-center lg:text-left pl-[100px] relative">
-                        <div className=" absolute -top-8  -right-16 min-w-[650px]  pointer-events-none">
-            <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter text-gray-400/60 opacity-50">
-              Our Mission
-            </p>
-          </div>
+            <div className=" absolute -top-8  -right-16 min-w-[650px]  pointer-events-none">
+              <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter text-gray-400/60 opacity-50">
+                Our Mission
+              </p>
+            </div>
             <h2 className="text-3xl font-karla lg:text-[30px] font-semibold  text-black">
               Our Mission
             </h2>
@@ -42,46 +42,38 @@ const MissionVision = () => {
             {/* Bubble Background */}
 
             {/* Main Image in Circle */}
-          <div className="transition-transform duration-300 hover:scale-105">
-  <img
-    src="/images/aboutus/teamphoto.png"
-    alt="Team working"
-    className="w-[500px]"
-  />
-</div>
-
+            <div className="transition-transform duration-300 hover:scale-105">
+              <img
+                src="/images/aboutus/teamphoto.png"
+                alt="Team working"
+                className="w-[500px]"
+              />
+            </div>
           </div>
         </div>
 
-
-
         {/* vision */}
-
-
-
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12  max-w-[100%] mx-auto">
           {/* Left Content */}
-             <div className="relative flex justify-center lg:justify-start">
+          <div className="relative flex justify-center lg:justify-start">
             {/* Right Section */}
 
             {/* Main Image in Circle */}
-          <div className="transition-transform duration-300 hover:scale-105">
-          
+            <div className="transition-transform duration-300 hover:scale-105">
               <img
                 src="/images/aboutus/teamphoto2.png"
                 alt="Team working"
                 className="w-[500px]"
               />
-
             </div>
           </div>
           <div className="space-y-5 text-center lg:text-left pr-[100px] relative">
             <div className=" absolute -top-8 left-0 min-w-[650px]  pointer-events-none">
-            <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter text-gray-400/60 opacity-50">
-              Our Vision
-            </p>
-          </div>
+              <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter text-gray-400/60 opacity-50">
+                Our Vision
+              </p>
+            </div>
             <h2 className="text-3xl font-karla lg:text-[30px] font-semibold  text-black">
               Our Vision
             </h2>
@@ -91,15 +83,16 @@ const MissionVision = () => {
             </h3>
 
             <p className="text-black text-[15px]  leading-5 font-lora">
-              Our vision is to create a future where our technology seamlessly enables the full potential of your people.
+              Our vision is to create a future where our technology seamlessly
+              enables the full potential of your people.
             </p>
 
             <p className="text-black text-[15px]  leading-5 font-lora">
-             To be the most trusted technology partner for forward-thinking companies, creating a future where technology seamlessly enables human potential.
+              To be the most trusted technology partner for forward-thinking
+              companies, creating a future where technology seamlessly enables
+              human potential.
             </p>
           </div>
-
-       
         </div>
       </section>
     </div>
