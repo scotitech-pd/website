@@ -4,12 +4,12 @@ export default function OpslyHeroSection() {
     <section
       className="relative overflow-hidden text-white py-24 bg-cover bg-center "
       style={{
-        backgroundImage: "url('/images/products/opsly/frontbg.png')", // replace with your image
+        backgroundImage: "url('/images/products/opsly/frontbg.png')", 
       }}
     >
       <div className="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="lg:w-2/3 space-y-6">
-          <div className="text-5xl font-semibold relative w-fit">Opsly
+          <div className="text-5xl font-semibold relative w-fit font-karla">Opsly
             <p className="absolute text-[85px] opacity-5 top-1/2 -translate-1/2 left-1/2 ">Opsly</p>
 
           </div>
@@ -19,7 +19,7 @@ export default function OpslyHeroSection() {
             <span className="block">Team Needs, Billed Simply.</span>
           </h2>
 
-          <p className="leading- font-lora text-white/80 max-w-[620px] text-justify">
+          <p className="leading-[22px] font-lora text-white/80 max-w-[620px] text-justify">
             Opsly is the centralized command center for your company's software
             stack. Gain complete visibility into your SaaS applications,
             eliminate redundant spending, and ensure compliance — all from a
