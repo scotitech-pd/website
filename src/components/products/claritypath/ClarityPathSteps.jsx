@@ -19,7 +19,7 @@ export default function ClarityPathSteps() {
 
   return (
     <section
-      className="relative py-20 px-6 flex justify-center items-center  bg-cover bg-center"
+      className="relative py-20 px-6 flex justify-center items-center  bg-cover bg-center overflow-hidden"
       style={{
         backgroundImage:
           "url('/images/products/claritypath/howclaritypath.png')", // replace with your image

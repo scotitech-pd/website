@@ -26,7 +26,7 @@ export default function WhyChooseSection() {
   ];
 
   return (
-    <section className="relative max-w-7xl mx-auto px-6 py-12 min-[1500px]:px-0 flex flex-col lg:flex-row items-center justify-between gap-20 font-lora">
+    <section className="relative max-w-7xl mx-auto px-6 py-12 min-[1500px]:px-0 flex flex-col lg:flex-row items-center justify-between gap-20 font-lora overflow-hidden">
       {/* LEFT SIDE */}
       <div className="flex-1">
         <h2 className="text-4xl lg:text-[46px] font-medium mb-10 text-gray-900">
