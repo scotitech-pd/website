@@ -51,16 +51,16 @@ export default function LeadershipTeam() {
         <div className="relative max-w-8xl mx-auto z-10 text-center pt-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0">
             <div className="text-left font-karla px-4 lg:px-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-[35px] min-[1500px]:text-[80px] mb-2 text-white lg:pl-20">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-[35px] xxl:text-[80px] mb-2 text-white lg:pl-20">
                 Leadership Team
               </h2>
-              <p className="text-lg md:text-xl lg:text-2xl xl:text-[20px] min-[1500px]:text-[70px]  text-gray-200 font-lora lg:pl-20 mt-2">
+              <p className="text-lg md:text-xl lg:text-2xl xl:text-[20px] xxl:text-[60px]  text-gray-200 font-lora lg:pl-20 mt-2">
                 The Experience Behind Our{" "}
                 <span className="text-yellow-400 font-semibold">Success</span>
               </p>
             </div>
             <div className="px-4 2xl:px-0 lg:px-0">
-              <p className="text-gray-200  max-w-2xl lg:pr-20 mx-auto lg:text-[17px] xl:text-[18px] min-[1500px]:text-[70px] text-left font-lora">
+              <p className="text-gray-200  xxl-pr-0  lg:pr-20 mx-auto lg:text-[17px] xl:text-[18px] xxl:text-[40px] text-left font-lora">
                 Meet the visionary leaders driving{" "}
                 <span className="text-purple-300 font-semibold">ScotiTech</span>{" "}
                 innovation and growth at the forefront of the industry.

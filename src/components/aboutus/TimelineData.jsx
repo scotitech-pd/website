@@ -32,8 +32,8 @@ export default function Timeline() {
     },
     {
       year: "2024",
-      title: "Lorem ipsum dolor",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Innovation Continues",
+      description: "Scotitech started growing more with their customers and innvoations",
       side: "right",
     },
   ];
@@ -66,18 +66,18 @@ export default function Timeline() {
             <div key={index} className="relative pl-24">
               {/* Vertical line */}
               {index < timelineData.length - 1 && (
-                <div className="absolute left-12 top-20 bottom-0 w-0.5 bg-teal-500"></div>
+                <div className="absolute left-12 top-20 bottom-0 w-1 bg-[E38DF0]"></div>
               )}
 
               {/* Year badge */}
-              <div className="absolute left-0 top-0 w-24 h-24 bg-purple-900 rounded-full flex items-center justify-center">
+              <div className="absolute left-0 top-0 w-24 h-24 bg-[#641171] rounded-full flex items-center justify-center">
                 <span className="text-white text-3xl font-bold">
                   {item.year}
                 </span>
               </div>
 
               {/* Content card */}
-              <div className="bg-purple-50 rounded-xl p-6">
+              <div className="bg-[#FBDFFF] rounded-xl p-6">
                 <h3 className="text-xl font-bold text-black mb-2">
                   {item.title}
                 </h3>
@@ -108,16 +108,16 @@ export default function Timeline() {
                 {isLeft ? (
                   // LEFT SIDE LAYOUT
                   <div className="relative">
-                    <div className="flex items-start">
+                    <div className="flex items-start relative">
                       {/* Year Circle */}
-                      <div className="w-20 h-20 bg-purple-900 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-20 h-20 absolute  z-20 -top-10 bg-[#641171] rounded-full flex items-center justify-center flex-shrink-0">
                         <span className="text-white text-2xl font-bold">
                           {item.year}
                         </span>
                       </div>
 
                       {/* Content Card */}
-                      <div className="ml-8 bg-purple-50 rounded-2xl p-8 max-w-md">
+                      <div className="ml-8 bg-[#FBDFFF] z-10 rounded-2xl p-8 pl-16 min-w-[400px]">
                         <h3 className="text-xl font-bold text-black mb-2">
                           {item.title}
                         </h3>
@@ -132,30 +132,30 @@ export default function Timeline() {
                       <div className="absolute left-1/2 top-10">
                         <div className="relative">
                           {/* Horizontal line */}
-                          <div className="absolute left-0 top-0 h-0.5 bg-teal-500 w-[300px]"></div>
+                          <div className="absolute -left-[150px] top-0 h-1 bg-[#E38DF0] w-[450px]"></div>
 
                           {/* Dot */}
-                          <div className="absolute bg-teal-500 rounded-full w-[10px] h-[10px] left-[295px] top-[-5px]"></div>
+                          <div className="absolute z-2 bg-[#368F99] rounded-full w-[15px] h-[15px] left-[295px] top-[-5px]"></div>
 
                           {/* Vertical line */}
-                          <div className="absolute w-0.5 bg-teal-500 left-[300px] top-0 h-[120px]"></div>
+                          <div className="absolute w-1 bg-[#E38DF0] left-[300px] top-1 h-[180px]"></div>
                         </div>
                       </div>
                     )}
                   </div>
                 ) : (
                   // RIGHT SIDE LAYOUT
-                  <div className="relative flex justify-end">
+                  <div className="relative flex justify-end" >
                     <div className="flex items-start flex-row-reverse">
                       {/* Year Circle */}
-                      <div className="w-20 h-20 bg-purple-900 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-20 h-20  absolute  z-20 -top-10 bg-[#641171] rounded-full flex items-center justify-center flex-shrink-0">
                         <span className="text-white text-2xl font-bold">
                           {item.year}
                         </span>
                       </div>
 
                       {/* Content Card */}
-                      <div className="mr-8 bg-purple-50 rounded-2xl p-8 max-w-md">
+                      <div className="mr-8 bg-[#FBDFFF] rounded-2xl p-8 max-w-md  z-10">
                         <h3 className="text-xl font-bold text-black mb-2">
                           {item.title}
                         </h3>
@@ -170,13 +170,13 @@ export default function Timeline() {
                       <div className="absolute right-1/2 top-10">
                         <div className="relative">
                           {/* Horizontal line */}
-                          <div className="absolute right-0 top-0 h-0.5 bg-teal-500 w-[300px]"></div>
+                        <div className="absolute -right-[240px] top-0  bg-[#E38DF0] w-[550px] h-1"></div>
 
                           {/* Dot */}
-                          <div className="absolute bg-teal-500 rounded-full w-[10px] h-[10px] right-[295px] top-[-5px]"></div>
+                          <div className="absolute z-2 bg-[#368F99] rounded-full w-[15px] h-[15px] right-[302px] top-[-5px]"></div>
 
                           {/* Vertical line */}
-                          <div className="absolute w-0.5 bg-teal-500 right-[300px] top-0 h-[120px]"></div>
+                          <div className="absolute w-1 bg-[#E38DF0] right-[308px] top-1 h-[180px]"></div>
                         </div>
                       </div>
                     )}
@@ -185,9 +185,9 @@ export default function Timeline() {
                     {!hasNext && (
                       <div className="absolute right-1/2 top-10">
                         <div className="relative">
-                          <div className="absolute right-0 top-0 h-0.5 bg-teal-500 w-[300px]"></div>
-                          <div className="absolute bg-teal-500 rounded-full w-[10px] h-[10px] right-[295px] top-[-5px]"></div>
-                          <div className="absolute w-0.5 bg-teal-500 right-[300px] top-0 h-[30px]"></div>
+                          <div className="absolute -right-4 top-5 h-1 bg-[#E38DF0] w-[300px]"></div>
+                          <div className="absolute bg-[#368F99] rounded-full w-[15px] h-[15px] right-[250px] top-[15px]"></div>
+                          <div className="absolute w-1 bg-[#E38DF0] right-[282px] top-5 h-[30px]"></div>
                         </div>
                       </div>
                     )}
