@@ -73,7 +73,7 @@ const FeaturesCarousel = () => {
   };
 
   return (
-    <div className="w-full bg-gray-50 py-16 overflow-hidden">
+    <div className="w-full bg-gray-50 py-16 overflow-hidden my-10">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
 
@@ -89,114 +89,111 @@ const FeaturesCarousel = () => {
         </div>
 
         {/* Carousel Container with left margin, right edge hugging */}
-        <div className="relative pl-0 md:pl-8 lg:pl-12">
-          <Swiper
-            ref={swiperRef}
-            modules={[Navigation, Autoplay, Keyboard]}
-            spaceBetween={2}
-            slidesPerView={2}
-            loop={true}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            keyboard={{
-              enabled: true,
-              onlyInViewport: true,
-            }}
-            speed={600}
-            breakpoints={{
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 3.2,
-                spaceBetween: 24,
-              },
-              1280: {
-                slidesPerView: 3.5,
-                spaceBetween: 24,
-              },
-            }}
-            className="!overflow-visible"
-          >
-            {features.map((feature, index) => (
-              <SwiperSlide key={index} className="!h-auto !mx-0">
-                <div
-                  className={`relative bg-gradient-to-r ${feature.gradient} w-[250px] rounded-xl p-1 overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col min-h-[350px]`}
+        <div className="relative h-[490px] pt-10 pl-0 md:pl-8 lg:pl-5">
+          <div className="absolute w-[100%]  left-[350px]">
+            <Swiper
+              ref={swiperRef}
+              modules={[Navigation, Autoplay, Keyboard]}
+              loop={true}
+              slidesPerGroup={1} // ✅ Move 1 card per slide
+              spaceBetween={20}
+              slidesPerView={1.2}
+              centeredSlides={false}
+              keyboard={{
+                enabled: true,
+                onlyInViewport: true,
+              }}
+              speed={800}
+              className="!overflow-visible"
+              breakpoints={{
+                300: { slidesPerView: 1.2, spaceBetween: 20 },
+                460: { slidesPerView: 2.2, spaceBetween: 25 },
+                640: { slidesPerView: 3, spaceBetween: 25 },
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1058: { slidesPerView: 2.6, spaceBetween: 30 },
+                1160: { slidesPerView: 3, spaceBetween: 30 },
+                1550: { slidesPerView: 4, spaceBetween: 30 },
+              }}
+            >
+              {features.map((feature, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="!h-auto flex justify-start w-[250px]"
                 >
-                  {/* Heading Card - Absolute positioned at top */}
-                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 bg-white rounded-xl px-2 py-3 shadow-lg z-20 min-w-[95%]">
-                    <h3 className="lg:text-[16px] font-karla font-bold text-center text-black leading-tight">
-                      {feature.title}
-                    </h3>
-                  </div>
+                  <div
+                    className={`relative bg-gradient-to-r ${feature.gradient}  rounded-xl p-1 overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col mx-auto`}
+                  >
+                    {/* Heading Card - Absolute positioned at top */}
+                    <div className="absolute top-8 left-1/2 transform -translate-x-1/2 bg-white rounded-xl px-2 py-3 shadow-lg z-20 min-w-[95%]">
+                      <h3 className="lg:text-[16px] font-karla font-bold text-center text-black leading-tight">
+                        {feature.title}
+                      </h3>
+                    </div>
 
-                  {/* Icon Circle - Centered vertically in upper portion */}
-                  <div className="absolute top-26 left-1/2 transform -translate-x-1/2 bg-white rounded-full w-15 h-15 flex items-center justify-center shadow-lg z-10">
-                    <img
-                      src={feature.icon}
-                      alt=""
-                      className="w-6 h-6 object-contain"
-                    />
-                  </div>
+                    {/* Icon Circle - Centered vertically in upper portion */}
+                    <div className="absolute top-30 left-1/2 transform -translate-x-1/2 bg-white rounded-xl w-15 h-15 flex items-center justify-center shadow-lg z-10">
+                      <img
+                        src={feature.icon}
+                        alt=""
+                        className="w-6 h-6 object-contain"
+                      />
+                    </div>
 
-                  {/* Main Description Card - Takes remaining space */}
-                  <div className="mt-[50px] bg-white  px-2 pt-20 shadow-lg flex-grow flex flex-col justify-center">
-                    <p className="text-base font-lora text-black text-center leading-relaxed">
-                      {feature.description}
-                    </p>
+                    {/* Main Description Card - Takes remaining space */}
+                    <div className="mt-[50px] bg-white  px-2 pt-34 pb-10 shadow-lg flex-grow flex flex-col justify-center">
+                      <p className="text-base font-lora text-black text-center leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-          {/* Navigation Buttons - Centered below carousel */}
-          <div className="flex justify-start gap-2 mt-8">
-            <button
-              onClick={handlePrevClick}
-              type="button"
-              className="w-12 h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 active:scale-95"
-              aria-label="Previous slide"
-            >
-              <svg
-                className="w-6 h-6 text-gray-700"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2.5}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={handleNextClick}
-              type="button"
-              className="w-12 h-12 rounded-full bg-purple-700 hover:bg-purple-800 flex items-center justify-center transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 active:scale-95"
-              aria-label="Next slide"
-            >
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2.5}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
           </div>
+            {/* Navigation Buttons - Centered below carousel */}
+            <div className=" absolute bottom-0 left-0 flex justify-start gap-2 mt-8">
+              <button
+                onClick={handlePrevClick}
+                type="button"
+                className="w-12 h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 active:scale-95"
+                aria-label="Previous slide"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={handleNextClick}
+                type="button"
+                className="w-12 h-12 rounded-full bg-purple-700 hover:bg-purple-800 flex items-center justify-center transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 active:scale-95"
+                aria-label="Next slide"
+              >
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
         </div>
       </div>
     </div>

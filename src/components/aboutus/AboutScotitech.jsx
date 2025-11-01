@@ -31,24 +31,24 @@ const AboutScotiTech = () => {
       <img
         src="/images/aboutus/pattern-lines.png"
         alt="Pattern lines behind the photo"
-        className="absolute top-0 right-0 w-[20vw] min-[1650px]:hidden"
+        className="absolute top-0 right-0 hidden min-[1300px]:flex w-[20vw] min-[1650px]:hidden"
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[55%_40%] gap-8 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 min-[1300px]:grid-cols-[55%_40%] gap-8 lg:gap-16 items-center">
           {/* LEFT SIDE */}
           <div className="relative max-w-[600px]">
             {/* Left Side - Content */}
-            
+
             <div className="space-y-8 lg:space-y-0">
               {/* Header */}
               <div className="relative z-20 text-black">
                 <div className="font-karla font-medium text-4xl  my-7 relative w-fit">
-              <p className="text-[4.5rem] font-semibold text-black opacity-5 text-nowrap -z-0 w-fit absolute top-1/2 -left-24 transform -translate-y-1/2">
-                About ScotiTech
-              </p>
-              <h2 className="relative z-10 font-bold">About ScotiTech</h2>
-            </div>
+                  <p className="text-[4.5rem] font-semibold text-black opacity-5 text-nowrap -z-0 w-fit absolute top-1/2 -left-24 transform -translate-y-1/2">
+                    About ScotiTech
+                  </p>
+                  <h2 className="relative z-10 font-bold">About ScotiTech</h2>
+                </div>
                 <h2 className="text-xl lg:text-[18px] pr-9 font-karla 2xl:text-[25px] font-bold text-black mb-4 lg:mb-6">
                   ScotiTech: Pioneering Technology Solutions for Global Business
                 </h2>
@@ -77,7 +77,7 @@ const AboutScotiTech = () => {
                         background: "#34939B",
                         boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
                       }}
-                    ></div> 
+                    ></div>
                     <div
                       className={`hidden min-[1500px]:flex absolute  left-0 w-[214px] h-[110%] top-1/2 -translate-y-1/2 rounded-2xl transition-transform duration-500 ease-in-out`}
                       style={{
@@ -146,16 +146,18 @@ const AboutScotiTech = () => {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="relative h-[100%]">
-            <div className="absolute -bottom-[15px]  flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_10px_25px_rgba(94,11,123,0.6)] bg-white rounded-2xl h-[90px] w-[200px] border-1 border-[#7E1A8E] z-2">
-              <h2 className="text-[#9638E5] font-karla font-bold lg:text-[20px]">
-                ScotiTech
-              </h2>
-              <p className="text-[#641171] font-karla text-center  font-semibold px-5 lg:text-[13px]">
-                Global Reach, Pioneering Solutions
-              </p>
+          <div className="relative h-[100%] hidden min-[1300px]:flex">
+            <div className="h-fit !bg-yellow">
+              <img src="/images/aboutus/hero-tech.png" alt="" className=" bg-yellow" />
+              <div className="absolute -bottom-[15px]  flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_10px_25px_rgba(94,11,123,0.6)] bg-white rounded-2xl h-[90px] w-[200px] border-1 border-[#7E1A8E] z-2">
+                <h2 className="text-[#9638E5] font-karla font-bold lg:text-[20px]">
+                  ScotiTech
+                </h2>
+                <p className="text-[#641171] font-karla text-center  font-semibold px-5 lg:text-[13px]">
+                  Global Reach, Pioneering Solutions
+                </p>
+              </div>
             </div>
-            <img src="/images/aboutus/hero-tech.png" alt="" className="" />
           </div>
         </div>
       </div>
