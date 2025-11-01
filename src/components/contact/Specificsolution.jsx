@@ -22,7 +22,7 @@ const SpecificSolution = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-white py-12 px-4 lg:py-20 lg:px-8">
+    <section className="relative  bg-gradient-to-br from-purple-50 via-pink-50 to-white py-12 px-4 lg:py-20 lg:px-8">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
         <Image 
@@ -191,56 +191,8 @@ const SpecificSolution = () => {
             </div>
 
             {/* Our Location */}
-            {/* <div className="bg-gradient-to-br from-purple-800 to-purple-900 rounded-3xl overflow-hidden shadow-2xl">
-              <div className="p-6 lg:p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Our Location</h3>
-                
-                <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-                  
-                  <div className="p-4 lg:p-6">
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <h4 className="font-bold text-gray-900 text-lg mb-1">
-                          Regus - Lanarkshire Eurocentral
-                        </h4>
-                        <div className="flex items-center gap-1 mb-2">
-                          <span className="text-yellow-500">4.1 ⭐⭐⭐⭐☆</span>
-                          <span className="text-gray-500 text-sm">(25)</span>
-                        </div>
-                        <p className="text-sm text-gray-600 mb-1">Office space rental agency</p>
-                        <p className="text-sm text-gray-700">
-                          Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business Park, 1st
-                        </p>
-                        <p className="text-green-600 text-sm font-semibold mt-2">Open 24 hours</p>
-                      </div>
-                      
-                      <div className="flex flex-col gap-2">
-                        <button className="bg-teal-100 p-2 rounded-full hover:bg-teal-200 transition-colors">
-                          <Image 
-                            src="/images/contact/directions.png" 
-                            alt="Directions" 
-                            width={24} 
-                            height={24}
-                            className="w-6 h-6"
-                          />
-                        </button>
-                        <button className="bg-purple-100 p-2 rounded-full hover:bg-purple-200 transition-colors">
-                          <Image 
-                            src="/images/contact/save.png" 
-                            alt="Save" 
-                            width={24} 
-                            height={24}
-                            className="w-6 h-6"
-                          />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div> */}
-            <div className='bg-[#641070] h-[250px] shadow-[0_0_15px_3px_rgba(180,100,255,1)]
+         
+            <div className='bg-[#641070] xxl:!mt-[90px] h-[250px] shadow-[0_0_15px_3px_rgba(180,100,255,1)]
  rounded-3xl relative overflow-hidden'>
               <div className='grid grid-cols-2'> 
                 <div>

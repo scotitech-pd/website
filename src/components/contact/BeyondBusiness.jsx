@@ -2,12 +2,12 @@ import React from "react";
 
 const BeyondBusiness = () => {
   return (
-    <section className="relative min-h-screen py-12 px-4 lg:py-20 lg:px-[60px] ">
+    <section className="relative  py-12 px-4 lg:py-20 lg:px-[60px] ">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
           src="/images/contact/bb_bg.png"
-          alt=""
+          alt="background image of dark blue color"
           className="w-full h-full object-cover -z-10"
         />
       </div>
@@ -15,7 +15,7 @@ const BeyondBusiness = () => {
 
       <div className="max-w-7xl mx-auto lg:px-24">
         {/* Header Section */}
-        <div className=" text-white mb-8 lg:mb-12">
+        <div className="relative max-w-7xl text-white mb-8 lg:mb-12">
           <h1 className="text-3xl lg:text-[35px] text-[#b5ddff] font-karla font-bold mb-4 lg:mb-2">
             Beyond Business: A Heart for Every Generation
           </h1>
@@ -25,9 +25,10 @@ const BeyondBusiness = () => {
             <span className="text-purple-300 font-semibold">ElderConect+</span>
           </p>
         </div>
-              <div className="absolute top-0 -left-[50px]   "> 
+<div className="relative ">
+              <div className="absolute -top-20 -left-[390px]   "> 
         <img src="/images/contact/bb_blush.png" alt="" className=" " />
-
+</div>
       </div>
 
         {/* Main Content Card */}
@@ -200,18 +201,18 @@ const BeyondBusiness = () => {
               />
             </div>
             <div>
-              <p className="text-base lg:text-[13px] font-karla font-semibold text-[#98F9FF]">
+              <p className="text-md lg:text-[16px] xxl:!text-[20px] font-karla font-semibold text-[#98F9FF]">
                 - Daniel Chapman, Director and Co-founder
               </p>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 lg:ml-8 w-full lg:w-auto ">
-            <button className="bg-white  text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-50 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl whitespace-nowrap">
+          <div className="flex flex-col  sm:flex-row gap-4 lg:ml-8 w-full lg:w-auto ">
+            <button className="bg-white cursor-pointer text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-50 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl whitespace-nowrap">
               Learn More About ElderConnect
             </button>
-            <button className="bg-purple-100 animate-bounce text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-200 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl flex items-center justify-center gap-2 whitespace-nowrap">
+            <button className="bg-purple-100 animate-bounce cursor-pointer text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-200 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl flex items-center justify-center gap-2 whitespace-nowrap">
               <img
                 src="/images/contact/download-icon.png"
                 alt="Download"

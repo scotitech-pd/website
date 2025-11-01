@@ -37,7 +37,7 @@ export default function WhyChooseOpsly() {
         <h2 className="text-[40px] font-semibold mb-3 font-karla">
           Why Choose AI Caption Studio?
         </h2>
-        <p className="text-xl mb-20">Smarter, Faster, Better Content</p>
+        <p className="text-xl mb-20 xxl:text-[25px] ">Smarter, Faster, Better Content</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {features.map((feature, index) => (
@@ -48,7 +48,7 @@ export default function WhyChooseOpsly() {
             >
               {/* inner card: actual content with backdrop blur & semi transparent background */}
               <div className="group relative h-full  bg-[#0d1941]/80 px-2  pb-7 p-4 rounded-4xl  shadow-[0_0_20px_rgba(139,92,246,0.3)]">
-                <div className="absolute  top-1/4 transform -translate-x-1/2  bg-white text-purple-700 w-15 h-15  flex items-center justify-center rounded-full shadow-lg">
+                <div className="absolute  top-1/4 transform -translate-x-1/2  bg-white text-purple-700 w-15 h-15   flex items-center justify-center rounded-full shadow-lg">
                   <img
                     src={feature.icon}
                     alt=" "
@@ -56,10 +56,10 @@ export default function WhyChooseOpsly() {
                   />
                 </div>
                 <div className="pl-10">
-                  <h3 className="pt-2 text-lg !text-left font-semibold mb-3">
+                  <h3 className="pt-2 text-lg  xxl:text-[22px] !text-left font-semibold mb-3">
                     {feature.title}
                   </h3>
-                  <p className=" text-[13px] text-left ">{feature.desc}</p>
+                  <p className=" text-[13px]  xxl:text-[15px] text-left ">{feature.desc}</p>
                 </div>
               </div>
             </div>
