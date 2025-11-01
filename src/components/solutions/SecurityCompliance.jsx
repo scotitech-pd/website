@@ -102,7 +102,7 @@ export default function SecurityCompliance() {
         </div>
       </div>
 
-      <div className="space-y-12 text-black absolute right-0 top-32 w-[45%]">
+      <div className="space-y-12 text-black absolute right-0 top-32 w-[45%] min-[1700px]:hidden">
           {/* Item 1 */}
           <div className="flex items-center bg-white rounded-l-full shadow-md p-2 hover:shadow-lg transition relative ml-60">
             <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">

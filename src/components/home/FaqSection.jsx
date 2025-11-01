@@ -55,11 +55,11 @@ export default function FaqSection() {
       {/* Subtle overlay for readability */}
       <div className="absolute inset-0 bg-white/70"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center text-black">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid min-[900px]:grid-cols-2 gap-10 items-center text-black">
         {/* Left Side */}
         <div>
-          <h3 className="text-3xl md:text-4xl font-bold text-black relative z-10 font-karla">
-            <p className="text-[7rem] font-bold text-gray-200 absolute select-none -z-10 top-1/2 transform -translate-y-1/2">
+          <h3 className="text-[24px] min-[450px]:text-3xl min-[1050px]:text-4xl font-bold text-black relative z-10 font-karla mb-6 flex items-center">
+            <p className="text-[5rem] min-[450px]:text-[6rem] min-[650px]:text-[7rem] font-bold text-gray-200 absolute select-none -z-10 top-1/2 transform -translate-y-1/2">
               FAQ
             </p>
             Frequently Asked Questions

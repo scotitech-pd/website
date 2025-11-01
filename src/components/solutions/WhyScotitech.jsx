@@ -29,7 +29,7 @@ const WhyScotitech = () => {
       <div className="max-w-6xl mx-auto px-4 text-black">
         <div className="max-w-6xl mx-auto px-6">
           <div className="font-karla font-medium text-4xl text-center my-11 relative w-full">
-            <p className="text-[7rem] font-semibold text-gray-200/80 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <p className="hidden md:flex text-[7rem] font-semibold text-gray-200/80 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               Why Scotitech
             </p>
             <h2 className="relative z-10 font-bold">Why Scotitech</h2>

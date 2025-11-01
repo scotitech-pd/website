@@ -28,7 +28,7 @@ const features2 = [
 
 export default function WhyChooseScotiTech() {
   return (
-    <section className="relative text-white bg-black">
+    <section className="relative text-white bg-black ">
       {/* Background overlay */}
       {/* <div className="absolute bottom-0 w-full">
         <img
@@ -41,11 +41,11 @@ export default function WhyChooseScotiTech() {
         View Products
       </button>
 
-      <div className="relative mx-auto grid gap-16 px-6 md:px-12   items-center">
+      <div className="relative mx-auto grid gap-16 px-6 md:px-12   items-center max-w-7xl ">
         {/* Left Content */}
         <div className="space-y-6 py-20">
           <div className="relative font-lora mt-5">
-            <p className="text-[6rem] font-semibold text-gray-100/10 text-nowrap -z-0 w-fit absolute -left-4  -top-1 transform -translate-y-1/2">
+            <p className="hidden min-[1100px]:flex text-[6rem] font-semibold text-gray-100/10 text-nowrap -z-0 w-fit absolute -left-4  -top-1 transform -translate-y-1/2">
               Why Choose ScotiTech
             </p>
             <h2 className="text-4xl font-lora font-semibold text-white">
@@ -59,38 +59,48 @@ export default function WhyChooseScotiTech() {
             <span className="text-purple-400">creators worldwide.</span>
           </p>
 
-          <div className="grid grid-cols-[41%_48%] gap-24 mt-10 w-[60%] text-black">
+          <div className="grid grid-cols-1 min-[600px]:grid-cols-[41%_48%] mt-10 gap-8 min-[900px]:gap-20 w-[94%] min-[900px]:w-[60%] text-black">
             {features1.map((f, i) => (
               <div
                 key={i}
                 className={`relative bg-white backdrop-blur-md rounded-2xl p-6 border hover:shadow-[0_0_25px_rgba(168,85,247,0.3)] transition`}
               >
-                <div className="absolute size-28 right-0 top-1/2 bg-white border-main-dark border-8 rounded-full flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
+                <div className="flex min-[900px]:hidden mb-2 size-20 bg-white border-main-dark border-8 rounded-full items-center justify-center">
+                  <img src={f.img} className="size-12" />
+                </div>
+                <div className="hidden min-[900px]:flex absolute size-28 right-0 top-1/2 bg-white border-main-dark border-8 rounded-full items-center justify-center transform translate-x-1/2 -translate-y-1/2">
                   <img src={f.img} className="size-16" />
                 </div>
-                <div className="w-[80%]">
+                <div className="min-[900px]:w-[80%]">
                   <h3 className="text-xl font-semibold font-karla">
                     {f.title}
                   </h3>
-                  <p className=" mt-2 text-[13px] leading-3.5 text-black/80">{f.desc}</p>
+                  <p className=" mt-2 text-[13px] leading-3.5 text-black/80">
+                    {f.desc}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-[51%_40%] gap-20 mt-10 w-[60%] text-black">
+          <div className="grid grid-cols-1 min-[600px]:grid-cols-[51%_40%] mt-10 gap-8 min-[900px]:gap-20 w-[94%] min-[900px]:w-[60%] text-black">
             {features2.map((f, i) => (
               <div
                 key={i}
                 className={`relative bg-white backdrop-blur-md rounded-2xl p-6 border hover:shadow-[0_0_25px_rgba(168,85,247,0.3)] transition`}
               >
-                <div className="absolute size-28 right-0 top-1/2 bg-white border-main-dark border-8 rounded-full flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
+                <div className="flex min-[900px]:hidden mb-2 size-20 bg-white border-main-dark border-8 rounded-full items-center justify-center">
+                  <img src={f.img} className="size-12" />
+                </div>
+                <div className="hidden min-[900px]:flex absolute size-28 right-0 top-1/2 bg-white border-main-dark border-8 rounded-full items-center justify-center transform translate-x-1/2 -translate-y-1/2">
                   <img src={f.img} className="size-16" />
                 </div>
-                <div className="w-[80%]">
+                <div className="min-[900px]:w-[80%]">
                   <h3 className="text-xl font-semibold font-karla">
                     {f.title}
                   </h3>
-                  <p className=" mt-2 text-[13px] leading-3.5 text-black/80">{f.desc}</p>
+                  <p className=" mt-2 text-[13px] leading-3.5 text-black/80">
+                    {f.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -98,11 +108,13 @@ export default function WhyChooseScotiTech() {
         </div>
       </div>
 
-      <img
-        src="/images/home/pic.png" // replace with your actual right side image
-        alt="AI Tech Illustration"
-        className="drop-shadow-[0_0_40px_rgba(168,85,247,0.6)] animate-pulse-slow absolute bottom-0 right-0 w-[35%]"
-      />
+      <div className="max-w-8xl mx-auto relative">
+        <img
+          src="/images/home/pic.png" // replace with your actual right side image
+          alt="AI Tech Illustration"
+          className="hidden min-[1080]:flex drop-shadow-[0_0_40px_rgba(168,85,247,0.6)] animate-pulse-slow absolute bottom-0 right-0 w-[35%] max-w-[700px]"
+        />
+      </div>
     </section>
   );
 }

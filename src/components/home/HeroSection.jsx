@@ -3,16 +3,16 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section
-      className="relative py-52 flex justify-center flex-col px-10 md:px-20 bg-cover bg-center text-white overflow-hidden"
+      className="relative py-20 sm:py-52 flex justify-center flex-col px-10 md:px-20 bg-cover bg-center text-white overflow-hidden"
       style={{
         backgroundImage: "url('/images/home/herobg.png')", // replace with your image path
       }}
     >
-      <p className="bg-main-dark font-semibold border-white border-[1px] text-white font-lora  px-3  py-2 rounded-lg w-fit my-7">
+      <p className="bg-main-dark font-semibold border-white border-[1px] text-white font-lora  px-3  py-2 rounded-lg w-fit my-5 min-[1200px]:my-7">
         ScotiTech Solution
       </p>
 
-      <div className="text-[55px] font-karla font-bold mb-5 leading-[57px]">
+      <div className="text-4xl min-[1200px]:text-[55px] font-karla font-bold mb-5 min-[1200px]:leading-[57px]">
         <h2>Building Technology That</h2>
         <h2>Empowers People</h2>
       </div>

@@ -30,25 +30,25 @@ export default function OurProducts() {
         <img
           src="/images/home/bgjoint.png" // replace with your actual background image
           alt="background"
-          className="object-cover"
+          className="object-cover "
         />
       </div>
       <h2 className="text-main font-lora text-4xl font-semibold mb-6">
         Our Products
       </h2>
-      <h3 className="text-2xl md:text-4xl font-semibold font-karla text-gray-900 mb-3">
+      <h3 className="text-2xl md:text-4xl font-semibold font-karla text-gray-900 mb-3 px-5">
         Products Designed to Simplify, Empower, and Scale
       </h3>
-      <p className="text-gray-600 max-w-3xl mx-auto mb-12 text-lg font-lora">
+      <p className="text-gray-600 max-w-3xl mx-auto mb-12 min-[500]:text-lg font-lora px-5">
         From app distribution to operations and content creation, our tools cut
         complexity and deliver real-world value.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto mb-10">
+      <div className="grid grid-cols-1 min-[590px]:grid-cols-2  min-[1060px]:grid-cols-4 gap-8 max-w-7xl mx-auto mb-10 px-10">
         {products.map((p, i) => (
           <div
             key={i}
-            className="bg-white relative rounded-2xl hover:shadow-[0_0_25px_rgba(128,128,128,0.9)] transition shadow-[0_0_25px_rgba(128,128,128,0.6)]"
+            className="bg-white relative rounded-2xl hover:shadow-[0_0_25px_rgba(128,128,128,0.9)] transition shadow-[0_0_25px_rgba(128,128,128,0.6)] max-w-[320px] mx-auto"
           >
             <div
               className={`flex justify-center items-center rounded-t-2xl overflow-hidden`}
@@ -59,7 +59,7 @@ export default function OurProducts() {
                 className="w-full h-auto object-contain"
               />
             </div>
-            <div className="py-8 px-2 font-lora text-black">
+            <div className="py-8 px-1.5 font-lora text-black">
               <h4 className="text-xl font-semibold">{p.name}</h4>
               <p className="text-black/90 mt-2 mb-4">{p.tagline}</p>
             </div>

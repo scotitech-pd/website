@@ -30,7 +30,7 @@ const SubscribeSection = () => {
     <div
       className="w-full py-16 px-4 bg-gradient-to-r from-teal-600/70 to-purple-800/70"
     >
-      <div className="w-[85%] max-w-[1700px] rounded-3xl border border-white mx-auto bg-white/10  px-12 py-14 text-white grid grid-cols-2">
+      <div className="w-[85%] max-w-[1350px] rounded-3xl border border-white mx-auto bg-white/10  px-12 py-14 text-white grid md:grid-cols-2">
         <div className="">
           <h2 className="text-4xl min-[1550px]:text-5xl font-medium font-karla mb-4 text-black">
             Stay Ahead With ScotiTech
