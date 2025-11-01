@@ -33,7 +33,8 @@ export default function Timeline() {
     {
       year: "2024",
       title: "Innovation Continues",
-      description: "Scotitech started growing more with their customers and innvoations",
+      description:
+        "Scotitech started growing more with their customers and innvoations",
       side: "right",
     },
   ];
@@ -145,7 +146,7 @@ export default function Timeline() {
                   </div>
                 ) : (
                   // RIGHT SIDE LAYOUT
-                  <div className="relative flex justify-end" >
+                  <div className="relative flex justify-end">
                     <div className="flex items-start flex-row-reverse">
                       {/* Year Circle */}
                       <div className="w-20 h-20  absolute  z-20 -top-10 bg-[#641171] rounded-full flex items-center justify-center flex-shrink-0">
@@ -170,7 +171,7 @@ export default function Timeline() {
                       <div className="absolute right-1/2 top-10">
                         <div className="relative">
                           {/* Horizontal line */}
-                        <div className="absolute -right-[240px] top-0  bg-[#E38DF0] w-[550px] h-1"></div>
+                          <div className="absolute -right-[240px] top-0  bg-[#E38DF0] w-[550px] h-1"></div>
 
                           {/* Dot */}
                           <div className="absolute z-2 bg-[#368F99] rounded-full w-[15px] h-[15px] right-[302px] top-[-5px]"></div>
