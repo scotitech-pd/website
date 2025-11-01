@@ -1,8 +1,32 @@
 import React from "react";
 
 const BeyondBusiness = () => {
+  const contactCards = [
+    {
+      id: 1,
+      bg: "#e4ebec",
+      title: "Empowering Independence",
+      text: "From daily tools to digital literacy, empowers shininess to thrive.",
+      icon: "/images/contact/handshake-icon.png",
+    },
+    {
+      id: 2,
+      bg: "#e4ebec",
+      title: "Compassionate Companionship",
+      text: "Meaningful conversations, shared moments, and emotional support for well-being.",
+      icon: "/images/contact/handshake-icon.png",
+    },
+    {
+      id: 3,
+      bg: "#e4ebec",
+      title: "Community Driven Care",
+      text: "Bringing elders and caregivers together to build a sense of belonging and trust.",
+      icon: "/images/contact/handshake-icon.png",
+    },
+  ];
+
   return (
-    <section className="relative  py-12 px-4 lg:py-20 lg:px-[60px] ">
+    <section className="relative  py-12 px-4 lg:py-20 lg:px-[60px] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
@@ -11,7 +35,6 @@ const BeyondBusiness = () => {
           className="w-full h-full object-cover -z-10"
         />
       </div>
-
 
       <div className="max-w-7xl mx-auto lg:px-24">
         {/* Header Section */}
@@ -25,11 +48,11 @@ const BeyondBusiness = () => {
             <span className="text-purple-300 font-semibold">ElderConect+</span>
           </p>
         </div>
-<div className="relative ">
-              <div className="absolute -top-20 -left-[390px]   "> 
-        <img src="/images/contact/bb_blush.png" alt="" className=" " />
-</div>
-      </div>
+        <div className="relative ">
+          <div className="absolute -top-20 -left-[390px]   ">
+            <img src="/images/contact/bb_blush.png" alt="" className=" " />
+          </div>
+        </div>
 
         {/* Main Content Card */}
         <div className="relative   mb-8 lg:mb-12">
@@ -38,7 +61,7 @@ const BeyondBusiness = () => {
             <img
               src="/images/contact/elderly-care.png"
               alt="Elderly Care"
-              className="w-full h-full object-contain"
+              className="w-[85%] min-[1190px]:w-[90%] min-[1330px]:w-full h-full object-contain"
             />
 
             {/* Overlay Text Box - Bottom Left on Desktop, Centered on Mobile */}
@@ -55,66 +78,27 @@ const BeyondBusiness = () => {
             </div>
 
             {/* Feature Cards - Positioned on Right Side (Desktop) / Below (Mobile) */}
-            <div className="hidden  lg:block absolute top-1/2 left-[750px]  xl:right-12 -translate-y-1/2  xl:w-[400px]  space-y-5">
-              {/* Card 1 - Compassionate Companionship */}
-               <div className="bg-[#e4ebec] backdrop-blur-sm rounded-2xl gap-2 flex items-start shadow-xl ">
-                <div className="bg-white p-5 rounded-xl border-[rgba(230,200,255,1)] flex-shrink-0 hover:shadow-2xl transition-all hover:scale-105">
-                  <img
-                    src="/images/contact/handshake-icon.png"
-                    alt="Handshake"
-                    className="w-10 h-10"
-                  />
+            <div className="hidden  lg:block absolute top-1/2 left-[600px] min-[1150px]:left-[680px] min-[1330px]:left-[770px] min-[1454px]:left-[850px]  min-[1560px]:left-[900px]  -translate-y-1/2 w-[290px] min-[1190px]:w-[340px] min-[1260px]:w-[400px]  space-y-5">
+              {contactCards.map((card) => (
+                <div
+                  key={card.id}
+                  className={`bg-[${card.bg}] backdrop-blur-sm rounded-2xl gap-2 flex items-center shadow-xl`}
+                >
+                  <div className="bg-white p-2 min-[1190px]:p-5 rounded-xl flex-shrink-0 hover:shadow-2xl transition-all hover:scale-105">
+                    <img
+                      src={card.icon}
+                      alt={card.title}
+                      className="size-10"
+                    />
+                  </div>
+                  <div className="py-1 min-[1190px]:py-2">
+                    <h4 className="text-[13px] min-[1190px]:text-[15px] font-bold text-purple-900 min-[1190px]:mb-1">
+                      {card.title}
+                    </h4>
+                    <p className="text-[11px] min-[1190px]:text-[12px] text-gray-700">{card.text}</p>
+                  </div>
                 </div>
-                <div className="py-2 ">
-                  <h4 className="text-[15px] font-bold text-purple-900 mb-1">
-                    Empowering Independence{" "}
-                  </h4>
-                  <p className="text-[12px] text-gray-700">
-                    From daily tools to digital literacy, empowers shininess to
-                    thrive.{" "}
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 2 - Empowering Independence */}
-                <div className="bg-[#e4ebec] backdrop-blur-sm rounded-2xl gap-2 flex items-start shadow-xl ">
-                <div className="bg-white p-5 rounded-xl flex-shrink-0 hover:shadow-2xl transition-all hover:scale-105">
-                  <img
-                    src="/images/contact/handshake-icon.png"
-                    alt="Handshake"
-                    className="w-10 h-10"
-                  />
-                </div>
-                <div className="py-2 ">
-                  <h4 className="text-[15px] font-bold text-purple-900 mb-1">
-                    Empowering Independence{" "}
-                  </h4>
-                  <p className="text-[12px] text-gray-700">
-                    From daily tools to digital literacy, empowers shininess to
-                    thrive.{" "}
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 3 - Community Driven Care */}
-                  <div className="bg-[#e4ebec] backdrop-blur-sm rounded-2xl gap-2 flex items-start shadow-xl ">
-                <div className="bg-white p-5 rounded-xl flex-shrink-0 hover:shadow-2xl transition-all hover:scale-105">
-                  <img
-                    src="/images/contact/handshake-icon.png"
-                    alt="Handshake"
-                    className="w-10 h-10"
-                  />
-                </div>
-                <div className="py-2 ">
-                  <h4 className="text-[15px] font-bold text-purple-900 mb-1">
-                    Empowering Independence{" "}
-                  </h4>
-                  <p className="text-[12px] text-gray-700">
-                    From daily tools to digital literacy, empowers shininess to
-                    thrive.{" "}
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 

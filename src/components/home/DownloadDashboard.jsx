@@ -108,18 +108,18 @@ export default function DownloadDashboard() {
 
   return (
     <div className="bg-white text-black py-10">
-      <div className="font-karla font-medium text-4xl text-center my-10 relative w-full">
-        <p className="text-[7rem] font-bold text-gray-100 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="font-karla font-medium text-4xl text-center mt-4 min-[570px]:my-4 min-[1000px]:my-10 relative w-full">
+        <p className=" min-[565px]:text-[4rem] min-[1000px]:text-[7rem] font-bold text-gray-100 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           Product Download
         </p>
         <h2 className="relative z-10">Product Download</h2>
       </div>
 
-      <div className="flex flex-wrap justify-center items-start gap-8 p-8">
+      <div className="grid min-[600px]:grid-cols-2 justify-center items-start gap-8 p-8 max-w-7xl mx-auto">
         {data.map((section) => (
           <div
             key={section.title}
-            className={`w-[45%] p-6 rounded-2xl shadow-md bg-gradient-to-br border border-black `}
+            className={`p-6 rounded-2xl shadow-md bg-gradient-to-br border border-black h-full`}
           >
             <h2
               className={`text-4xl font-semibold font-karla mb-3 ${section.titleColor}`}
@@ -132,14 +132,23 @@ export default function DownloadDashboard() {
               {section.items.map((item) => (
                 <div
                   key={item.name}
-                  className={`flex justify-between items-center ${item.bg}  rounded-lg px-4 py-3 shadow-sm`}
+                  className={`flex min-[770px]:justify-between items-center ${item.bg}  rounded-lg px-4 py-3 shadow-sm`}
                 >
+                  <button
+                    className={`flex min-[770px]:hidden mr-3 shrink-0 rounded-full p-2 shadow hover:bg-gray-50 transition ${section.titleColor1}`}
+                  >
+                    <img
+                      src="/images/home/droparrow.png"
+                      alt="download"
+                      className="size-5"
+                    />
+                  </button>
                   <div>
                     <p className="font-semibold text-gray-800">{item.name}</p>
-                    <p className="text-sm text-gray-500">{item.details}</p>
+                    <p className="text-xs sm:text-sm text-gray-500">{item.details}</p>
                   </div>
                   <button
-                    className={`rounded-full p-2 shadow hover:bg-gray-50 transition ${section.titleColor1}`}
+                    className={`hidden min-[770px]:flex rounded-full p-2 shadow hover:bg-gray-50 transition ${section.titleColor1}`}
                   >
                     <img
                       src="/images/home/droparrow.png"

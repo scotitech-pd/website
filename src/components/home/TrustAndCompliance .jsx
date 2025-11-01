@@ -12,9 +12,9 @@ const TrustAndCompliance = () => {
         <img src="/images/home/Tpurple.png" alt="bg" className="left-0 absolute w-auto h-[90%] bottom-0"/>
       
       {/* Main Content */}
-      <div className="relative z-10 max-w-8xl mx-auto px-6 py-10 flex flex-col lg:flex-row items-center">
+      <div className="relative z-10 max-w-8xl mx-auto px-6 py-10 flex flex-col lg:flex-row items-center max-w-7xl">
         {/* Text Content */}
-        <div className="lg:w-3/4 z-20 px-16">
+        <div className="lg:w-3/4 z-20 my-20 lg:my-0">
           <h2 className="text-3xl md:text-4xl font-semibold   font-karla text-main mb-4">
             Trust & Compliance <span className="text-black">- Expanded</span>
           </h2>
@@ -34,7 +34,7 @@ const TrustAndCompliance = () => {
         </div>
 
         {/* Image */}
-        <div className="lg:w-1/2 mt-10 lg:mt-0 flex justify-center relative z-20">
+        <div className="hidden lg:w-1/2 mt-10 lg:mt-0 lg:flex justify-center relative z-20">
           <div className="max-w-xl aspect-[1.3] overflow-hidden">
             <img
               src="/images/home/trust.png" // Replace with your actual image path

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function AppDeployComparison() {
   return (
-    <div className="bg-gradient-to-r from-[#202F5A] to-[#2A7559] text-white py-12 px-6 md:px-16">
+    <div className="bg-gradient-to-r from-[#202F5A] to-[#2A7559] text-white py-12 px-6 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-left mb-12 font-karla text-3xl md:text-4xl ">
           <h2 className="font-bold">AppDeploy vs Traditional MDM:</h2>

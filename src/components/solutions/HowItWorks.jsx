@@ -32,7 +32,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="py-16 bg-white text-center text-black">
+    <section className="py-16 bg-white text-center text-black overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div className="font-karla font-medium text-4xl text-center my-10 relative w-full">
         <p className="text-[7rem] font-semibold text-gray-200/80 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

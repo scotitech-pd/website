@@ -23,6 +23,7 @@ const Pagehome = () => {
         <UnlockSection />
         <TrustAndCompliance />
         <ScotiTechPulse />
+        
         <SubscribeSection />
       </div>
     </>
