@@ -8,8 +8,13 @@ export default function AppDeploySection() {
     >
       <div className="relative max-w-7xl mx-auto min-[1380px]:px-6 px-16 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="lg:w-2/3 space-y-6">
+<<<<<<< HEAD
           <div className="text-5xl font-semibold relative w-fit">AppDeploy
             <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 -left-5 ">AppDeploy</p>
+=======
+          <div className="text-5xl font-semibold relative w-fit font-karla">AppDeploy
+            <p className="absolute font-karla text-[85px] opacity-15 top-1/2 -translate-y-1/2 min-[1490px]:-translate-x-1/2 min-[1490px]:left-1/2 -left-6">AppDeploy</p>
+>>>>>>> ab9e653e18c4be4297b3d36659501120a3902acd
 
           </div>
 
