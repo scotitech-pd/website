@@ -23,42 +23,37 @@ const CaptionStudio = () => {
   return (
     <div className="max-w-7xl mx-auto ">
       <section className="relative w-full py-16 px-4 sm:px-6 lg:px-12 bg-white">
-        <h2 className="text-3xl font-karla sm:text-4xl font-semibold text-[#641171] mb-4">
-          What is Caption Studio?
-        </h2>
-        <p className="text-black text-[18px] font-medium mb-12 max-w-4xl font-lora ">
+        <h4 className="lg:text-3xl font-karla  min-[1570px]:text-7xl font-semibold text-[#641171] mb-4">
+          What is AI Caption Studio?
+        </h4>
+        <p className="text-black min-[1570px]:text-[24px] text-[18px] min-[1570px]:mb-3 font-medium mb-12 max-w-4xl font-lora ">
           Unlike basic text editors or manual brainstorming, AI Caption Studio
           is an intelligent content partner built for anyone who wants to win on
           social media.
         </p>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 justify-center items-center max-w-7xl mx-auto">
+        <div className="grid min-[1500px]:mt-[100px] grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 justify-center items-center max-w-7xl mx-auto ">
           {features.map((item, index) => (
             <div
               key={index}
-              className="h-full relative group flex flex-col z-20 items-center text-center rounded-full transition-all duration-500
-  bg-white shadow-[0_10px_40px_rgba(0,0,0,0.35)] hover:shadow-[0_0_40px_8px_rgba(246,188,255,0.7)] py-16  px-6
-  max-w-[260px] mx-auto hover:bg-[#641171] "
-            >
+              className="h-full relative group flex flex-col z-20 items-center text-center rounded-full transition-all duration-500 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.35)] hover:shadow-[0_0_40px_8px_rgba(246,188,255,0.7)] py-16  px-6 max-w-[260px] mx-auto hover:bg-[#641171] ">
               {/* Icon Circle */}
               <div
-                className="absolute bg-opacity-100 -top-7 w-16 h-16 border-6  border-white bg-[#F6BCFF] rounded-full  shadow-3xl 
+                className="absolute min-[1570px]:h-24 min-[1570px]:w-24 bg-opacity-100 -top-7 w-18 h-18 border-6  border-white bg-[#F6BCFF] rounded-full  shadow-3xl 
                 flex items-center justify-center shadow-[0_0_20px_rgba(160,80,255,0.3)] 
                 group-hover:bg-[#BE6FDB] duration-500"
               >
                 <img
                   src={item.icon}
                   alt="icon"
-                  className="w-8 h-8 object-contain"
+                  className="w-8 h-8 min-[1570px]:h-12 min-[1570px]:w-12 object-contain"
                 />
               </div>
 
               {/* Text */}
               <p
-                className="mt-6 text-black text-[20px] px-4 text-base leading-relaxed transition-all duration-500 
-            group-hover:text-white font-lora font-semibold    rounded-full my-[15px]"
-              >
+                className="mt-6 h-fit text-black text-[15px] min-[1570px]:text-[20px]  px-4 text-base leading-relaxed transition-all duration-500 group-hover:text-white font-lora font-semibold rounded-full my-[15px]">
                 {item.text}
               </p>
             </div>

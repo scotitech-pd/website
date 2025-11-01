@@ -40,6 +40,8 @@
   --font-karla: var(--font-karla);
   
   --animate-spin-slow :  spin-slow 2.5s linear infinite;
+
+  --breakpoint-xxl: 98.125rem;
 }
 
 @keyframes spin-slow {
