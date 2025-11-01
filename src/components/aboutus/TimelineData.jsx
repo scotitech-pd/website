@@ -39,7 +39,7 @@ export default function Timeline() {
   ];
 
   return (
-    <div className="min-h-screen bg-white py-12 px-4 md:px-8 lg:px-16">
+    <div className="bg-white py-12 px-4 md:px-8 lg:px-16">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <div className="relative">
@@ -182,7 +182,7 @@ export default function Timeline() {
                     )}
 
                     {/* Final Dot for Last Item */}
-                    {!hasNext && (
+                    {/* {!hasNext && (
                       <div className="absolute right-1/2 top-10">
                         <div className="relative">
                           <div className="absolute -right-4 top-5 h-1 bg-[#E38DF0] w-[300px]"></div>
@@ -190,7 +190,7 @@ export default function Timeline() {
                           <div className="absolute w-1 bg-[#E38DF0] right-[282px] top-5 h-[30px]"></div>
                         </div>
                       </div>
-                    )}
+                    )} */}
                   </div>
                 )}
               </div>
