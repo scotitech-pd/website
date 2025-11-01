@@ -1,15 +1,15 @@
 export default function AppDeploySection() {
   return (
     <section
-      className="relative overflow-hidden text-white py-24 bg-cover bg-center bg-black"
+      className="relative overflow-hidden text-white py-20 min-[1380px]:py-28 bg-cover bg-center bg-black"
       style={{
         backgroundImage: "url('/images/products/appdeploy/herobg.png')", // replace with your image
       }}
     >
-      <div className="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="relative max-w-7xl mx-auto min-[1380px]:px-6 px-16 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="lg:w-2/3 space-y-6">
           <div className="text-5xl font-semibold relative w-fit">AppDeploy
-            <p className="absolute text-[85px] opacity-15 top-1/2 -translate-y-1/2 min-[1490px]:-translate-x-1/2 min-[1490px]:left-1/2 -left-6">AppDeploy</p>
+            <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 -left-5 ">AppDeploy</p>
 
           </div>
 
@@ -35,7 +35,7 @@ export default function AppDeploySection() {
           <img
             src="/images/products/appdeploy/phonepic.png"
             alt=""
-            className=""
+            className=" w-[90%]"
           />
         </div>
       </div>
