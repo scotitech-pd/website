@@ -58,6 +58,56 @@ const cards = [
     title: "Yearly Roadmap",
     text: "A 12-month planning overview across career, finance, relationships, and health.",
   },
+  {
+    icon: "/images/products/claritypath/careersuccess.png",
+    title: "Career Success",
+    text: "Identify growth and promotion windows.",
+  },
+  {
+    icon: "/images/products/claritypath/relocation.png",
+    title: "Relocation Planning",
+    text: "Plan for moving abroad or migration opportunities",
+  },
+  {
+    icon: "/images/products/claritypath/property.png",
+    title: "Property Planning",
+    text: "Find clarity around property and home investments.",
+  },
+  {
+    icon: "/images/products/claritypath/financial.png",
+    title: "Financial Growth",
+    text: "Track opportunities for saving, investing, and expansion.",
+  },
+  {
+    icon: "/images/products/claritypath/yearly.png",
+    title: "Yearly Roadmap",
+    text: "A 12-month planning overview across career, finance, relationships, and health.",
+  },
+  {
+    icon: "/images/products/claritypath/careersuccess.png",
+    title: "Career Success",
+    text: "Identify growth and promotion windows.",
+  },
+  {
+    icon: "/images/products/claritypath/relocation.png",
+    title: "Relocation Planning",
+    text: "Plan for moving abroad or migration opportunities",
+  },
+  {
+    icon: "/images/products/claritypath/property.png",
+    title: "Property Planning",
+    text: "Find clarity around property and home investments.",
+  },
+  {
+    icon: "/images/products/claritypath/financial.png",
+    title: "Financial Growth",
+    text: "Track opportunities for saving, investing, and expansion.",
+  },
+  {
+    icon: "/images/products/claritypath/yearly.png",
+    title: "Yearly Roadmap",
+    text: "A 12-month planning overview across career, finance, relationships, and health.",
+  },
 ];
 
 export default function KeyFeaturesSection() {
@@ -78,7 +128,7 @@ export default function KeyFeaturesSection() {
       swiperRef.current.swiper.slideNext();
     }
   };
-  return (
+  return ( 
     <section className="w-full bg-white overflow-hidden">
       <div className="grid md:grid-cols-[45%_55%] z-0">
         {/* LEFT SIDE */}

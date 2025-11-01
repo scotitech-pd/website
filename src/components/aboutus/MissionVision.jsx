@@ -3,9 +3,9 @@ import React from "react";
 const MissionVision = () => {
   return (
     <div>
-      <section className="relative bg-white py-16  2xl:w-7xl 2xl:mx-auto  overflow-hidden  lg:w-[100%] ">
+      <section className="relative bg-white py-7  2xl:w-7xl 2xl:mx-auto  overflow-hidden  lg:w-[100%] ">
         {/* Mission */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-[100px] xxl:mb-[120px] min[1500px]:w-[85%] min[1500px]:mx-auto max-w-[100%] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-[90px] min[1500px]:w-[85%] min[1500px]:mx-auto max-w-[100%] mx-auto">
           {/* Left Content */}
           <div className="space-y-5 text-center lg:text-left pl-[100px] relative">
             <div className="relative">
@@ -39,7 +39,7 @@ const MissionVision = () => {
           </div>
 
           {/* Right Image Section */}
-          <div className="relative  flex h-full justify-center lg:justify-end">
+          <div className="relative  flex h-full justify-center lg:justify-end pr-10">
             {/* Bubble Background */}
 
             {/* Main Image in Circle */}
@@ -55,7 +55,7 @@ const MissionVision = () => {
 
         {/* vision */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12  max-w-[100%] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12  max-w-[100%] mx-auto pl-10 mb-10">
           {/* Left Content */}
           <div className="relative flex justify-center lg:justify-start">
             {/* Right Section */}
