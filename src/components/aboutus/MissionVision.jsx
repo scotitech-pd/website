@@ -3,20 +3,21 @@ import React from "react";
 const MissionVision = () => {
   return (
     <div>
-      <section className="relative bg-white py-16 mt-[200px] 2xl:w-7xl 2xl:mx-auto  overflow-hidden  lg:w-[100%] ">
+      <section className="relative bg-white py-16  2xl:w-7xl 2xl:mx-auto  overflow-hidden  lg:w-[100%] ">
         {/* Mission */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-[150px] min[1500px]:w-[85%] min[1500px]:mx-auto max-w-[100%] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-[100px] xxl:mb-[120px] min[1500px]:w-[85%] min[1500px]:mx-auto max-w-[100%] mx-auto">
           {/* Left Content */}
           <div className="space-y-5 text-center lg:text-left pl-[100px] relative">
-            <div className=" absolute -top-8  -right-16 min-w-[650px]  pointer-events-none">
-              <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter text-gray-400/60 opacity-50">
+            <div className="relative">
+              <h2 className="text-3xl font-karla lg:text-[30px] font-semibold  text-black">
                 Our Mission
-              </p>
+              </h2>
+              <div className=" absolute hidden lg:block -top-8  -right-50 lg:-left-5 min-w-[650px]  pointer-events-none">
+                <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter text-gray-400/60 opacity-50">
+                  Our Mission
+                </p>
+              </div>
             </div>
-            <h2 className="text-3xl font-karla lg:text-[30px] font-semibold  text-black">
-              Our Mission
-            </h2>
-
             <h3 className="text-xl lg:text-[20px] font-lora  text-[#5E0B7B]">
               Empowering Your Business Through Technology.
             </h3>
@@ -69,7 +70,7 @@ const MissionVision = () => {
             </div>
           </div>
           <div className="space-y-5 text-center lg:text-left pr-[100px] relative">
-            <div className=" absolute -top-8 left-0 min-w-[650px]  pointer-events-none">
+            <div className="hidden lg:block  absolute -top-8 -left-5 min-w-[650px]  pointer-events-none">
               <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter text-gray-400/60 opacity-50">
                 Our Vision
               </p>
