@@ -8,14 +8,14 @@ export default function ClarityPathSection() {
     >
       <div className="relative max-w-7xl mx-auto px-6 min-[1500px]:px-0 flex flex-col lg:flex-row items-center justify-between gap-2">
         <div className="lg:w-[60%] space-y-6">
-          <div className="text-6xl font-semibold relative w-fit">
+          <div className="text-6xl font-semibold font-karla relative w-fit">
             Clarity Path
-            <p className="absolute text-[88px] opacity-10 top-1/2 text-nowrap -translate-y-1/2 -left-4 ">
+            <p className="absolute text-[88px] opacity-10 top-1/2 text-nowrap font-karla -translate-y-1/2 -left-4 ">
               Clarity Path
             </p>
           </div>
 
-          <h2 className="text-2xl md:text-[28px] font-medium mt-7 text-[#EABFFF] font-lora">
+          <h2 className="text-2xl md:text-[28px] font-medium mt-7 text-[#EABFFF] font-karla">
             Strategic Planning. Personal Growth. Smarter Decisions
           </h2>
 

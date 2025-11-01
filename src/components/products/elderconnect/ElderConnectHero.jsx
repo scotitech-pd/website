@@ -11,7 +11,7 @@ export default function ElderConnectHero() {
       <div className="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="lg:w-2/3 ">
           <div className="text-5xl font-semibold relative w-fit font-karla">Elder Connect+
-            <p className="absolute text-[85px] opacity-5 top-1/2 -translate-y-1/2 -left-3 text-nowrap ">Elder Connect+</p>
+            <p className="absolute text-[85px] opacity-5 top-1/2 -translate-y-1/2 font-karla -left-3 text-nowrap ">Elder Connect+</p>
           </div>
 
           <h2 className="text-2xl md:text-[28px] font-medium font-karla mt-7">
