@@ -8,7 +8,7 @@ const HeroSection = () => {
         backgroundImage: "url('/images/home/herobg.png')", // replace with your image path
       }}
     >
-      <div className="max-w-8xl mx-auto w-full  px-10 md:px-20">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
         <p className="bg-main-dark font-semibold border-white border-[1px] text-white font-lora  px-3  py-2 rounded-lg w-fit my-5 min-[1200px]:my-7">
           ScotiTech Solution
         </p>
