@@ -39,6 +39,7 @@
   --font-lora: var(--font-lora); 
   --font-karla: var(--font-karla);
   
+  --spacing-8xl:1600px;
   --animate-spin-slow :  spin-slow 2.5s linear infinite;
 
   --breakpoint-xxl: 98.125rem;

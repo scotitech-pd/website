@@ -16,6 +16,7 @@ const Pagehome = () => {
       <div className=" bg-white">
         <HeroSection/>
         <OurStory/>
+{/*         
         <OurProducts/>
         <WhyChooseScotiTech/>
         <DownloadDashboard />
@@ -24,7 +25,7 @@ const Pagehome = () => {
         <TrustAndCompliance />
         <ScotiTechPulse />
         
-        <SubscribeSection />
+        <SubscribeSection /> */}
       </div>
     </>
   );
