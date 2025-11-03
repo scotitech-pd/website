@@ -4,21 +4,21 @@ const BeyondBusiness = () => {
   const contactCards = [
     {
       id: 1,
-      bg: "#e4ebec",
+      bg: "bg-[#e4ebec]",
       title: "Empowering Independence",
       text: "From daily tools to digital literacy, empowers shininess to thrive.",
       icon: "/images/contact/handshake-icon.png",
     },
     {
       id: 2,
-      bg: "#e4ebec",
+      bg: "bg-[#e4ebec]",
       title: "Compassionate Companionship",
       text: "Meaningful conversations, shared moments, and emotional support for well-being.",
       icon: "/images/contact/handshake-icon.png",
     },
     {
       id: 3,
-      bg: "#e4ebec",
+      bg: "bg-[#e4ebec]",
       title: "Community Driven Care",
       text: "Bringing elders and caregivers together to build a sense of belonging and trust.",
       icon: "/images/contact/handshake-icon.png",
@@ -26,7 +26,7 @@ const BeyondBusiness = () => {
   ];
 
   return (
-    <section className="relative  py-12 px-4 lg:py-20 lg:px-[60px] overflow-hidden">
+    <section className="relative  py-12 px-4 lg:py-20  overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
@@ -36,7 +36,7 @@ const BeyondBusiness = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto lg:px-24">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 lg:px-24 overflow-hidden">
         {/* Header Section */}
         <div className="relative max-w-7xl text-white mb-8 lg:mb-12">
           <h1 className="text-3xl lg:text-[35px] text-[#b5ddff] font-karla font-bold mb-4 lg:mb-2">
@@ -55,9 +55,9 @@ const BeyondBusiness = () => {
         </div>
 
         {/* Main Content Card */}
-        <div className="relative   mb-8 lg:mb-12">
+        <div className="relative mb-8 lg:mb-12 lg:grid lg:grid-cols-[80%_20%]">
           {/* Main Image - Full Width */}
-          <div className="relative w-full h-[400px] lg:h-full ">
+          <div className="relative w-[120%] h-[400px] lg:h-full ">
             <img
               src="/images/contact/elderly-care.png"
               alt="Elderly Care"
@@ -65,7 +65,7 @@ const BeyondBusiness = () => {
             />
 
             {/* Overlay Text Box - Bottom Left on Desktop, Centered on Mobile */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-md lg:left-12 lg:translate-x-0 lg:bottom-12 lg:max-w-lg bg-black/50 backdrop-blur-md rounded-2xl p-6 lg:p-8">
+            <div className="absolute hidden lg:block bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-md lg:left-12 lg:translate-x-0 lg:bottom-12 lg:max-w-lg bg-black/50 backdrop-blur-md rounded-2xl p-6 lg:p-8">
               <h3 className="text-xl lg:text-[18px] font-bold text-white mb-3 lg:mb-4">
                 ElderConnect: Bridging Gaps, Building Joy.
               </h3>
@@ -77,25 +77,43 @@ const BeyondBusiness = () => {
               </p>
             </div>
 
+            {/* smal devices */}
+            <div className="px-12 lg:hidden w-10 "> 
+              <div className="lg:hidden p-6 space-y-4 ">
+            {/* Card 1 - Compassionate Companionship */}
+            <div className="bg-white rounded-2xl  shadow-lg">
+          
+              <div>
+                <h4 className="text-lg font-bold text-purple-900 mb-2">
+                  Compassionate Companionship
+                </h4>
+                <p className="text-sm text-gray-700">
+                  More than just assistance, we bring genuine human connection.
+                </p>
+              </div>
+            </div>
+
+      </div>
+        
+          </div>
+
             {/* Feature Cards - Positioned on Right Side (Desktop) / Below (Mobile) */}
-            <div className="hidden  lg:block absolute top-1/2 left-[600px] min-[1150px]:left-[680px] min-[1330px]:left-[770px] min-[1454px]:left-[850px]  min-[1560px]:left-[900px]  -translate-y-1/2 w-[290px] min-[1190px]:w-[340px] min-[1260px]:w-[400px]  space-y-5">
+            <div className="hidden  lg:block absolute top-1/2   -right-[7.5%] -translate-y-1/2 w-[290px] min-[1190px]:w-[350px] min-[1260px]:w-[450px]  space-y-5">
               {contactCards.map((card) => (
                 <div
                   key={card.id}
-                  className={`bg-[${card.bg}] backdrop-blur-sm rounded-2xl gap-2 flex items-center shadow-xl`}
+                  className={`${card.bg} backdrop-blur-sm rounded-2xl gap-2 flex items-center shadow-xl`}
                 >
                   <div className="bg-white p-2 min-[1190px]:p-5 rounded-xl flex-shrink-0 hover:shadow-2xl transition-all hover:scale-105">
-                    <img
-                      src={card.icon}
-                      alt={card.title}
-                      className="size-10"
-                    />
+                    <img src={card.icon} alt={card.title} className="size-10" />
                   </div>
                   <div className="py-1 min-[1190px]:py-2">
                     <h4 className="text-[13px] min-[1190px]:text-[15px] font-bold text-purple-900 min-[1190px]:mb-1">
                       {card.title}
                     </h4>
-                    <p className="text-[11px] min-[1190px]:text-[12px] text-gray-700">{card.text}</p>
+                    <p className="text-[11px] min-[1190px]:text-[12px] text-gray-700">
+                      {card.text}
+                    </p>
                   </div>
                 </div>
               ))}
