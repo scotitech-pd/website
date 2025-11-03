@@ -42,8 +42,8 @@ export default function ModernHomeSetupSection() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-0 grid md:grid-cols-[55%_41%] gap-14 items-center">
         {/* LEFT SIDE */}
-        <div className="space-y-8 font-lora w-full">
-          <div className="font-karla text-white font-medium text-center mt-8 relative w-full">
+        <div className="space-y-4 font-lora w-full">
+          <div className="font-karla text-white font-medium text-center mt-8 mb-8 relative w-full">
             <p className="text-[4.9rem] font-semibold opacity-10 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               Key Features
             </p>

@@ -6,14 +6,14 @@ export default function ClarityPathSection() {
         backgroundImage: "url('/images/products/claritypath/heribg.png')", // replace with your image
       }}
     >
-      <div className="relative max-w-7xl mx-auto px-6 min-[1500px]:px-0 flex flex-col lg:flex-row items-center justify-between gap-2">
+      <div className="relative max-w-7xl mx-auto min-[1380px]:px-6 px-16 min-[1500px]:px-0 flex flex-col lg:flex-row items-center justify-between gap-2">
         <div className="lg:w-[60%] space-y-6">
           
           <div className="text-5xl font-semibold relative w-fit font-karla">Clarity Path
-            <p className="absolute text-[85px] opacity-5 top-1/2 -translate-y-1/2 -left-5 ">Clarity Path</p>
+            <p className="absolute text-[85px] opacity-5 top-1/2 -translate-y-1/2 -left-5 text-nowrap">Clarity Path</p>
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-medium mt-7 text-[#EABFFF] font-lora">
+          <h2 className="text-2xl md:text-3xl font-medium mt-7 text-[#EABFFF] font-karla">
             Strategic Planning. Personal Growth. Smarter Decisions
           </h2>
 
