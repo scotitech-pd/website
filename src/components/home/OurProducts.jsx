@@ -25,7 +25,7 @@ const products = [
 
 export default function OurProducts() {
   return (
-    <section className=" py-20 text-center relative w-[100%] overflow-hidden">
+    <section className="pt-5 pb-20 text-center relative w-[100%] overflow-hidden">
       <div className="absolute bottom-0 w-screen -left-0.5">
         <img
           src="/images/home/bgjoint.png" // replace with your actual background image
@@ -33,41 +33,43 @@ export default function OurProducts() {
           className="object-cover "
         />
       </div>
-      <h2 className="text-main font-karla text-5xl font-semibold mb-6">
-        Our Products
-      </h2>
-      <h3 className="text-2xl md:text-4xl font-semibold font-karla text-gray-900 mb-3 px-5">
-        Products Designed to Simplify, Empower, and Scale
-      </h3>
-      <p className="text-black max-w-4xl mx-auto mb-12 min-[500]:text-xl font-lora px-5">
-        From app distribution to operations and content creation, our tools cut
-        complexity and deliver real-world value.
-      </p>
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
+        <h2 className="text-main font-karla text-4xl sm:text-5xl font-semibold mb-2 sm:mb-6">
+          Our Products
+        </h2>
+        <h3 className="text-xl sm:text-3xl min-[1170px]:text-4xl font-semibold font-karla text-gray-900 mb-3">
+          Products Designed to Simplify, Empower, and Scale
+        </h3>
+        <p className="text-black max-w-4xl mx-auto mb-12 min-[500]:text-xl font-lora">
+          From app distribution to operations and content creation, our tools
+          cut complexity and deliver real-world value.
+        </p>
 
-      <div className="grid grid-cols-1 min-[590px]:grid-cols-2  min-[1060px]:grid-cols-4 gap-8 max-w-7xl mx-auto mb-10 px-10">
-        {products.map((p, i) => (
-          <div
-            key={i}
-            className="bg-white relative rounded-2xl hover:shadow-[0_0_25px_rgba(128,128,128,0.9)] transition shadow-[0_0_25px_rgba(128,128,128,0.6)] max-w-[320px] mx-auto"
-          >
+        <div className="grid grid-cols-1 min-[590px]:grid-cols-2  min-[1060px]:grid-cols-4 gap-8 mb-10">
+          {products.map((p, i) => (
             <div
-              className={`flex justify-center items-center rounded-t-2xl overflow-hidden`}
+              key={i}
+              className="bg-white relative rounded-2xl hover:shadow-[0_0_25px_rgba(128,128,128,0.9)] transition shadow-[0_0_25px_rgba(128,128,128,0.6)] max-w-[320px] mx-auto"
             >
-              <img
-                src={p.logo}
-                alt={p.name}
-                className="w-full h-auto object-contain"
-              />
+              <div
+                className={`flex justify-center items-center rounded-t-2xl overflow-hidden`}
+              >
+                <img
+                  src={p.logo}
+                  alt={p.name}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              <div className="py-8 px-1.5 font-lora text-black">
+                <h4 className="text-xl font-semibold">{p.name}</h4>
+                <p className="text-black/90 mt-2">{p.tagline}</p>
+              </div>
+              <button className="bg-main text-white text-nowrap px-6 py-2 rounded-full text-sm hover:bg-main/90 absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2">
+                Read more
+              </button>
             </div>
-            <div className="py-8 px-1.5 font-lora text-black">
-              <h4 className="text-xl font-semibold">{p.name}</h4>
-              <p className="text-black/90 mt-2 mb-4">{p.tagline}</p>
-            </div>
-            <button className="bg-main text-white px-6 py-2 rounded-full text-sm hover:bg-main/90 absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2">
-              Read more
-            </button>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

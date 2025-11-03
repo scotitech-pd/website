@@ -12,16 +12,23 @@ const TrustAndCompliance = () => {
         <img src="/images/home/Tpurple.png" alt="bg" className="left-0 absolute w-auto h-[90%] bottom-0"/>
       
       {/* Main Content */}
-      <div className="relative z-10 max-w-8xl mx-auto px-6 py-10 flex flex-col lg:flex-row items-center max-w-7xl">
+      <div className="relative z-10 py-10 grid grid-cols-1 min-[1110px]:grid-cols-[58%_42%] gap-10 items-center max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
         {/* Text Content */}
-        <div className="lg:w-3/4 z-20 my-20 lg:my-0">
-          <h2 className="text-3xl md:text-5xl font-semibold   font-karla text-main mb-4">
+        <div className="z-20 pt-10">
+          <h2 className="text-[34px] min-[893px]:text-4xl md:text-5xl font-semibold font-karla text-main mb-2 sm:mb-4 leading-[34px] sm:leading-[42px]">
             Trust & Compliance <span className="text-black">- Expanded</span>
           </h2>
-          <h3 className="text-2xl font-medium mb-4 font-lora">
+          <h3 className="text-xl md:text-2xl font-medium min-[1110px]:mb-4 font-lora">
             Our Commitment to Data Security
           </h3>
-          <p className="text-black/90 leading-6 text-lg font-lora">
+          <div className="max-w-xl aspect-[1.3] overflow-hidden w-fit mx-auto flex justify-center items-center h-fit">
+            <img
+              src="/images/home/trust.png" // Replace with your actual image path
+              alt="Security and Trust"
+              className="w-full h-full object-cover min-[1110px]:hidden flex ml-2"
+            />
+          </div>
+          <p className="text-black leading-6 text-lg font-lora">
             At <span className="text-main-dark font-semibold">ScotiTech</span>,
             trust isn't a feature—it's the foundation of everything we build.
             From a startup in London to an enterprise in New York or a
@@ -34,12 +41,12 @@ const TrustAndCompliance = () => {
         </div>
 
         {/* Image */}
-        <div className="hidden lg:w-1/2 mt-10 lg:mt-0 lg:flex justify-center relative z-20">
+        <div className="flex justify-center relative z-20">
           <div className="max-w-xl aspect-[1.3] overflow-hidden">
             <img
               src="/images/home/trust.png" // Replace with your actual image path
               alt="Security and Trust"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover min-[1110px]:flex hidden"
             />
           </div>
         </div>

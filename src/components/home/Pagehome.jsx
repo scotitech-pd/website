@@ -16,16 +16,14 @@ const Pagehome = () => {
       <div className=" bg-white">
         <HeroSection/>
         <OurStory/>
-{/*         
         <OurProducts/>
         <WhyChooseScotiTech/>
         <DownloadDashboard />
         <FaqSection />
         <UnlockSection />
         <TrustAndCompliance />
-        <ScotiTechPulse />
-        
-        <SubscribeSection /> */}
+        <ScotiTechPulse />   
+        <SubscribeSection />
       </div>
     </>
   );

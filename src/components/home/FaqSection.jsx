@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -41,30 +42,36 @@ export default function FaqSection() {
 
   return (
     <section
-      className="relative bg-gray-50 py-20 overflow-hidden"
+      className="relative bg-gray-500 py-10 sm:py-20 overflow-hidden"
       style={{
         backgroundImage: "url('/images/home/Timg.png')", // replace with your image
         backgroundSize: "cover",
         backgroundPosition: "left",
       }}
     >
-      <img src="/images/home/Tpurple.png" alt="bg" className="left-0 absolute w-auto h-[95%] bottom-0"/>
-      
+      <img
+        src="/images/home/Tpurple.png"
+        alt="bg"
+        className="left-0 absolute w-auto h-[95%] bottom-0"
+      />
+
       {/* Background shape (optional subtle polygon)
     //   <div className="absolute top-0 left-0 w-full h-full bg-purple-100 opacity-20"></div> */}
       {/* Subtle overlay for readability */}
       <div className="absolute inset-0 bg-white/70"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid min-[900px]:grid-cols-2 gap-10 items-center text-black">
+      <div className="relative z-10 grid min-[900px]:grid-cols-2 gap-7 sm:gap-10 items-center text-black max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
         {/* Left Side */}
         <div>
           <h3 className="text-[24px] min-[450px]:text-3xl min-[1050px]:text-4xl font-bold text-black relative z-10 font-karla mb-6 flex items-center">
-            <p className="text-[5rem] min-[450px]:text-[6rem] min-[650px]:text-[7rem] font-bold text-gray-200 absolute select-none -z-10 top-1/2 transform -translate-y-1/2 font-karla">
+            <p className="hidden min-[460px]:felx text-[5rem] min-[450px]:text-[6rem] min-[650px]:text-[7rem] font-bold text-black opacity-5 absolute select-none -z-10 top-1/2 transform -translate-y-1/2 font-karla">
               FAQ
             </p>
-            <p className="font-karla text-[40px]">Frequently Asked Questions</p>
+            <p className="font-karla text-[32px] min-[610px]:text-[40px] leading-[33px]">
+              Frequently Asked Questions
+            </p>
           </h3>
-          <p className="mt-8 text-lg leading-5  z-10 font-lora">
+          <p className=" sm:mt-8 text-lg leading-5  z-10 font-lora">
             To provide complete clarity, we've compiled detailed answers to the
             most common inquiries about,
           </p>
@@ -74,42 +81,52 @@ export default function FaqSection() {
         </div>
 
         {/* Right Side - Accordion */}
-        <div className="space-y-4">
+        <div className="space-y-4 min-[1340px]:h-[485px] pl-4 flex flex-col justify-center">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className=" border border-main rounded-xl shadow-sm bg-gradient-to-r from-white to-purple-50 relative"
+              className="border border-main rounded-xl shadow-sm bg-gradient-to-r from-white to-purple-50 relative overflow -hidden"
             >
-              <div className="absolute  bg-main-dark rounded-full size-[26px] flex items-center justify-center -left-[13px] top-[8px]">
+              <div className="absolute bg-main-dark rounded-full size-[26px] flex items-center justify-center -left-[13px] top-[12px] min-[500px]:top-[10px]">
                 <img
                   src="/images/home/faqicon.png"
                   className="size-[21px]"
                   alt="faqicon"
                 />
               </div>
+
+              {/* Toggle Button */}
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex justify-between items-center text-left px-5 py-2.5 font-medium text-main-dark"
               >
-                <div className="flex items-center gap-3 text-[18px]">
+                <div className="flex items-center gap-3 text-[17px] sm:text-[18px]">
                   <span>{faq.question}</span>
                 </div>
                 <ChevronDown
-                  className={`transition-transform duration-300 size-5 ${
-                    openIndex === i ? "rotate-180 text-main-dark" : "text-main"
+                  className={`transition-transform duration-300 size-5 text-main-dark ${
+                    openIndex === i ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
-              <div
-                className={`transition-all duration-500 overflow-hidden ${
-                  openIndex === i ? "max-h-40 px-5 pb-4" : "max-h-0"
-                }`}
-              >
-                <p className="text-black/90 text-[18px] leading-5.5 font-lora">
-                  {faq.answer}
-                </p>
-              </div>
+              {/* Animated Answer Section */}
+              <AnimatePresence initial={false}>
+                {openIndex === i && (
+                  <motion.div
+                    key="content"
+                    initial={{ opacity: 0, height: 0, y: -10 }}
+                    animate={{ opacity: 1, height: "auto", y: 0 }}
+                    exit={{ opacity: 0, height: 0, y: -10 }}
+                    transition={{ duration: 0.4 }}
+                    className="overflow-hidden px-5 pb-4"
+                  >
+                    <p className="text-black/90 text-[16px] sm:text-[18px] leading-5.5 font-lora">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>

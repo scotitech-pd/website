@@ -2,27 +2,27 @@ import React from "react";
 
 const features1 = [
   {
+    img: "/images/home/whyaccessible.png",
+    title: "Accessible & Affordable",
+    desc: "Pricing & features designed to include, not exclude powerful tools without enterprise-level costs.",
+  },
+  {
     img: "/images/home/whyrocket.png",
     title: "Start Lean, Grow Fast",
     desc: "We focus on delivering value early and iterating with user feedback, so you always get tools that evolve with your needs.",
-  },
-  {
-    img: "/images/home/whyaccessible.png",
-    title: "Accessible & Affordable",
-    desc: "Pricing and features designed to include, not exclude — powerful tools without enterprise-level costs.",
   },
 ];
 
 const features2 = [
   {
-    img: "/images/home/whydesign.png",
-    title: "Designed for Clarity",
-    desc: "Clean, intuitive user experiences that reduce friction and make adoption effortless.",
-  },
-  {
     img: "/images/home/whyprivacy.png",
     title: "Privacy & Trust",
     desc: "Built with compliance and responsible data practices at the core, so you can work with confidence.",
+  },
+  {
+    img: "/images/home/whydesign.png",
+    title: "Designed for Clarity",
+    desc: "Clean, intuitive user experiences that reduce friction and make adoption effortless.",
   },
 ];
 
@@ -41,9 +41,9 @@ export default function WhyChooseScotiTech() {
         Get in touch
       </button>
 
-      <div className="relative mx-auto grid gap-16 px-6    items-center max-w-7xl ">
+      <div className="relative grid gap-16 items-center max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
         {/* Left Content */}
-        <div className="space-y-6 py-20">
+        <div className="space-y-6 py-10 sm:py-20">
           <div className="relative  mt-5">
             <p className="hidden font-karla min-[1100px]:flex text-[6rem] font-semibold text-gray-100/10 text-nowrap -z-0 w-fit absolute -left-4  -top-1 transform -translate-y-1/2">
               Why Choose ScotiTech
@@ -52,14 +52,14 @@ export default function WhyChooseScotiTech() {
               Why Choose ScotiTech
             </h2>
           </div>
-          <p className="text-lg text-white/90 max-w-2xl font-lora" >
+          <p className="text-lg text-white max-w-2xl font-lora" >
             We believe technology should remove barriers, not create them.
             That’s why our products are designed to be simple, scalable, and
             affordable — empowering businesses and{" "}
             <span className="text-purple-400">creators worldwide.</span>
           </p>
 
-          <div className="grid grid-cols-1 min-[600px]:grid-cols-[41%_48%] mt-10 gap-8 min-[900px]:gap-20 w-[94%] min-[900px]:w-[60%] text-black">
+          <div className="grid grid-cols-1 min-[600px]:grid-cols-[41%_48%] mt-5 sm:mt-10 gap-8 min-[900px]:gap-20 w-[100%] min-[900px]:w-[90%] min-[1080px]:w-[60%] text-black">
             {features1.map((f, i) => (
               <div
                 key={i}
@@ -75,14 +75,14 @@ export default function WhyChooseScotiTech() {
                   <h3 className="text-[22px] font-semibold font-karla">
                     {f.title}
                   </h3>
-                  <p className=" mt-2 text-[16px] font-lora leading-4.5 text-black">
+                  <p className=" mt-2 text-[16px] font-lora leading-4.5 text-black pr-2">
                     {f.desc}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-1 min-[600px]:grid-cols-[51%_40%] mt-10 gap-8 min-[900px]:gap-20 w-[94%] min-[900px]:w-[60%] text-black">
+          <div className="grid grid-cols-1 min-[600px]:grid-cols-[48%_41%] mt-8 gap-8 min-[900px]:gap-20 w-[100%] min-[900px]:w-[90%] min-[1080px]:w-[60%] text-black">
             {features2.map((f, i) => (
               <div
                 key={i}
@@ -98,7 +98,7 @@ export default function WhyChooseScotiTech() {
                   <h3 className="text-[22px] font-semibold font-karla">
                     {f.title}
                   </h3>
-                  <p className=" mt-2 text-[16px] font-lora leading-4.5 text-black">
+                  <p className=" mt-2 text-[16px] font-lora leading-4.5 text-black  pr-2">
                     {f.desc}
                   </p>
                 </div>
