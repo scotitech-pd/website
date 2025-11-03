@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -48,8 +49,12 @@ export default function FaqSection() {
         backgroundPosition: "left",
       }}
     >
-      <img src="/images/home/Tpurple.png" alt="bg" className="left-0 absolute w-auto h-[95%] bottom-0"/>
-      
+      <img
+        src="/images/home/Tpurple.png"
+        alt="bg"
+        className="left-0 absolute w-auto h-[95%] bottom-0"
+      />
+
       {/* Background shape (optional subtle polygon)
     //   <div className="absolute top-0 left-0 w-full h-full bg-purple-100 opacity-20"></div> */}
       {/* Subtle overlay for readability */}
@@ -62,7 +67,9 @@ export default function FaqSection() {
             <p className="hidden min-[460px]:felx text-[5rem] min-[450px]:text-[6rem] min-[650px]:text-[7rem] font-bold text-black opacity-5 absolute select-none -z-10 top-1/2 transform -translate-y-1/2 font-karla">
               FAQ
             </p>
-            <p className="font-karla text-[32px] min-[610px]:text-[40px] leading-[33px]">Frequently Asked Questions</p>
+            <p className="font-karla text-[32px] min-[610px]:text-[40px] leading-[33px]">
+              Frequently Asked Questions
+            </p>
           </h3>
           <p className=" sm:mt-8 text-lg leading-5  z-10 font-lora">
             To provide complete clarity, we've compiled detailed answers to the
@@ -78,15 +85,17 @@ export default function FaqSection() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className=" border border-main rounded-xl shadow-sm bg-gradient-to-r from-white to-purple-50 relative"
+              className="border border-main rounded-xl shadow-sm bg-gradient-to-r from-white to-purple-50 relative overflow -hidden"
             >
-              <div className="absolute  bg-main-dark rounded-full size-[26px] flex items-center justify-center -left-[13px] top-[12px] min-[500px]:top-[8px]">
+              <div className="absolute bg-main-dark rounded-full size-[26px] flex items-center justify-center -left-[13px] top-[12px] min-[500px]:top-[10px]">
                 <img
                   src="/images/home/faqicon.png"
                   className="size-[21px]"
                   alt="faqicon"
                 />
               </div>
+
+              {/* Toggle Button */}
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex justify-between items-center text-left px-5 py-2.5 font-medium text-main-dark"
@@ -95,21 +104,29 @@ export default function FaqSection() {
                   <span>{faq.question}</span>
                 </div>
                 <ChevronDown
-                  className={`transition-transform duration-300 size-5 ${
-                    openIndex === i ? "rotate-180 text-main-dark" : "text-main"
+                  className={`transition-transform duration-300 size-5 text-main-dark ${
+                    openIndex === i ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
-              <div
-                className={`transition-all duration-500 overflow-hidden ${
-                  openIndex === i ? "max-h-40 px-5 pb-4" : "max-h-0"
-                }`}
-              >
-                <p className="text-black/90 text-[16px] sm:text-[18px] leading-5.5 font-lora">
-                  {faq.answer}
-                </p>
-              </div>
+              {/* Animated Answer Section */}
+              <AnimatePresence initial={false}>
+                {openIndex === i && (
+                  <motion.div
+                    key="content"
+                    initial={{ opacity: 0, height: 0, y: -10 }}
+                    animate={{ opacity: 1, height: "auto", y: 0 }}
+                    exit={{ opacity: 0, height: 0, y: -10 }}
+                    transition={{ duration: 0.4 }}
+                    className="overflow-hidden px-5 pb-4"
+                  >
+                    <p className="text-black/90 text-[16px] sm:text-[18px] leading-5.5 font-lora">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>

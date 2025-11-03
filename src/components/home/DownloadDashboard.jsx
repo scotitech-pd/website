@@ -4,7 +4,7 @@ export default function DownloadDashboard() {
   const data = [
     {
       title: "AppDeploy",
-      subtitle: "IOS Distribution Platform",
+      subtitle: "iOS Distribution Platform",
       color: "from-blue-50 to-blue-100",
       shadow: "shadow-[0_0_15px_rgba(45,100,230,0.2)]",
       titleColor: "text-blue",
