@@ -1,25 +1,23 @@
 export default function ClarityPathSection() {
   return (
     <section
-      className="relative overflow-hidden text-white py-16 bg-cover bg-center bg-black"
+      className="relative overflow-hidden text-white min-[1380px]:py-18 py-16 bg-cover bg-center bg-black"
       style={{
         backgroundImage: "url('/images/products/claritypath/heribg.png')", // replace with your image
       }}
     >
-      <div className="relative max-w-7xl mx-auto px-6 min-[1500px]:px-0 flex flex-col lg:flex-row items-center justify-between gap-2">
+      <div className="relative max-w-7xl mx-auto min-[1380px]:px-6 px-16 min-[1500px]:px-0 flex flex-col lg:flex-row items-center justify-between gap-2">
         <div className="lg:w-[60%] space-y-6">
-          <div className="text-6xl font-semibold font-karla relative w-fit">
-            Clarity Path
-            <p className="absolute text-[88px] opacity-10 top-1/2 text-nowrap font-karla -translate-y-1/2 -left-4 ">
-              Clarity Path
-            </p>
+          
+          <div className="text-5xl font-semibold relative w-fit font-karla">Clarity Path
+            <p className="absolute text-[85px] opacity-5 top-1/2 -translate-y-1/2 -left-5 text-nowrap">Clarity Path</p>
           </div>
 
-          <h2 className="text-2xl md:text-[28px] font-medium mt-7 text-[#EABFFF] font-karla">
+          <h2 className="text-2xl md:text-3xl font-medium mt-7 text-[#EABFFF] font-karla">
             Strategic Planning. Personal Growth. Smarter Decisions
           </h2>
 
-          <p className="leading-6 font-lora text-white/90 max-w-[700px] text-lg">
+          <p className="leading-[22px] font-lora text-white/80 max-w-[620px] text-justify">
             ClarityPath is a{" "}
             <span className="text-[#EABFFF]">private decision-support app</span>{" "}
             by <span className="text-[#EABFFF]">ScotiTech</span>, designed to
@@ -31,10 +29,10 @@ export default function ClarityPathSection() {
           </p>
 
           <div className="flex gap-10">
-            <button className="bg-white w-fit text-gray-900 px-8 py-2 rounded-lg font-semibold hover:bg-blue-light hover:text-white hover:shadow-[0_0_25px_rgba(105,140,100,0.9)] duration-300 transition-all font-lora">
+            <button className="bg-white w-fit text-gray-900 px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-light hover:text-white hover:shadow-[0_0_25px_rgba(105,140,100,0.9)] duration-300 transition-all font-lora">
                 Talk to Sales
             </button>
-            <button className="bg-white w-fit text-gray-900 px-8 py-2 rounded-lg font-semibold hover:bg-blue-light hover:text-white hover:shadow-[0_0_25px_rgba(105,140,100,0.9)] duration-300 transition-all font-lora">
+            <button className="bg-white w-fit text-gray-900 px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-light hover:text-white hover:shadow-[0_0_25px_rgba(105,140,100,0.9)] duration-300 transition-all font-lora">
               Download Now
             </button>
           </div>
@@ -45,7 +43,7 @@ export default function ClarityPathSection() {
           <img
             src="/images/products/claritypath/claritypath.png"
             alt=""
-            className="mt-4 -mb-6"
+            className="mt-4 -mb-6 w-[90%]"
           />
           <div className="absolute bottom-1/4 translate-y-1/2 left-1/2 -translate-x-1/2 w-[75%] flex justify-between">
                   <img

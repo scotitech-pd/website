@@ -132,7 +132,7 @@ const SpecificSolution1 = () => {
                 <div className="flex justify-end pt-4">
                   <button
                     onClick={handleSubmit}
-                    className="bg-white hover:shadow-[0_0_15px_3px_rgba(255,255,255,1)] cursor-pointer font-lora text-purple-900 px-8 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-purple-50 transition-colors  transition-all duration-500 ease-in-out"
+                    className="bg-white hover:shadow-[0_0_15px_3px_rgba(255,255,255,1)] cursor-pointer font-lora text-purple-900 px-8 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-purple-50  transition-all duration-500 ease-in-out"
                   >
                     Next
                     <svg
@@ -355,7 +355,7 @@ const SpecificSolution = () => {
                 <div className="flex justify-end pt-4">
                   <button
                     onClick={handleSubmit}
-                    className="bg-white hover:shadow-[0_0_15px_3px_rgba(255,255,255,1)] cursor-pointer font-lora text-purple-900 px-8 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-purple-50 transition-colors  transition-all duration-500 ease-in-out"
+                    className="bg-white hover:shadow-[0_0_15px_3px_rgba(255,255,255,1)] cursor-pointer font-lora text-purple-900 px-8 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-purple-50 transition-all duration-500 ease-in-out"
                   >
                     Next
                     <svg

@@ -33,11 +33,36 @@ const Navbar = () => {
   }, [pathname]);
 
   const products = [
-    { id: 1, title: "AppDeploy", link: "/appdeploy", desc: "Effortless iOS App Distribution" },
-    { id: 2, title: "Opsly", link: "/opsly", desc: "All-in-One Operations Platform" },
-    { id: 3, title: "ClarityPath", link: "/claritypath", desc: "Private Decision-Support App" },
-    { id: 4, title: "Elder Connect+", link: "/elderconnect", desc: "App for Elders" },
-    { id: 5, title: "AI Caption Studio", link: "/aicaptionstudio", desc: "Real-time AI Caption" },
+    {
+      id: 1,
+      title: "AppDeploy",
+      link: "/appdeploy",
+      desc: "Effortless iOS App Distribution",
+    },
+    {
+      id: 2,
+      title: "Opsly",
+      link: "/opsly",
+      desc: "All-in-One Operations Platform",
+    },
+    {
+      id: 3,
+      title: "ClarityPath",
+      link: "/claritypath",
+      desc: "Private Decision-Support App",
+    },
+    {
+      id: 4,
+      title: "Elder Connect+",
+      link: "/elderconnect",
+      desc: "App for Elders",
+    },
+    {
+      id: 5,
+      title: "AI Caption Studio",
+      link: "/aicaptionstudio",
+      desc: "Real-time AI Caption",
+    },
   ];
 
   return (
@@ -61,7 +86,11 @@ const Navbar = () => {
             toggle ? "top-[0%]" : "top-[-100%]"
           )}
         >
-          <div className={(islength ? "mt-[80px]" : "mt-[70px]").concat(" h-fit py-10 flex flex-col items-center justify-center")}>
+          <div
+            className={(islength ? "mt-[80px]" : "mt-[70px]").concat(
+              " h-fit py-10 flex flex-col items-center justify-center"
+            )}
+          >
             <div className="flex w-full">
               <ul className="text-[16px] pr-5 text-center h-fit mx-auto mt-auto font-semibold w-full">
                 {nav_links.map((item, id) => {
@@ -69,21 +98,28 @@ const Navbar = () => {
                     return (
                       <li key={id} className="m-4">
                         <div
-                          onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                          onClick={() =>
+                            setMobileProductsOpen(!mobileProductsOpen)
+                          }
                           className={`duration-300 px-4 py-1 rounded-lg cursor-pointer flex items-center justify-center gap-2 ${
-                            pathname.includes('/ourproducts') && "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                            pathname.includes("/ourproducts") &&
+                            "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
                           }`}
                         >
                           {item.title}
-                          <ChevronDown 
-                            className={`w-4 h-4 transition-transform duration-300 ${mobileProductsOpen ? 'rotate-180' : ''}`}
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform duration-300 ${
+                              mobileProductsOpen ? "rotate-180" : ""
+                            }`}
                           />
                         </div>
-                        
+
                         {/* Mobile Dropdown */}
                         <div
                           className={`overflow-hidden transition-all duration-300 ${
-                            mobileProductsOpen ? 'max-h-[500px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+                            mobileProductsOpen
+                              ? "max-h-[500px] opacity-100 mt-2"
+                              : "max-h-0 opacity-0"
                           }`}
                         >
                           <div className="bg-white/10 rounded-lg p-2 space-y-2">
@@ -92,11 +128,16 @@ const Navbar = () => {
                                 key={product.id}
                                 href={product.link}
                                 className={`block px-4 py-2 rounded-lg hover:bg-white/20 transition-all duration-300 ${
-                                  product.link === pathname && "bg-white/30 border border-white/50"
+                                  product.link === pathname &&
+                                  "bg-white/30 border border-white/50"
                                 }`}
                               >
-                                <div className="font-semibold text-sm">{product.title}</div>
-                                <div className="text-xs text-gray-300 mt-0.5">{product.desc}</div>
+                                <div className="font-semibold text-sm">
+                                  {product.title}
+                                </div>
+                                <div className="text-xs text-gray-300 mt-0.5">
+                                  {product.desc}
+                                </div>
                               </Link>
                             ))}
                           </div>
@@ -104,13 +145,14 @@ const Navbar = () => {
                       </li>
                     );
                   }
-                  
+
                   return (
                     <li key={id} className="m-4">
                       <Link
                         href={item.link}
                         className={`duration-300 px-4 py-1 rounded-lg ${
-                          item.link == pathname && "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                          item.link == pathname &&
+                          "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
                         }`}
                       >
                         {item.title}
@@ -156,32 +198,37 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          
+
           <ul className="list-none ml-auto gap-4 min-[1050px]:gap-6 text-[15px] 2xl:text-[17px] hidden lg:flex">
             {nav_links.map((item, id) => {
               if (item.title === "Our Products") {
                 return (
-                  <li 
-                    key={id} 
+                  <li
+                    key={id}
                     className="my-auto relative"
                     onMouseEnter={() => setShowProductsDropdown(true)}
                     onMouseLeave={() => setShowProductsDropdown(false)}
                   >
                     <div
                       className={`duration-300 px-1.5 py-0.5 rounded-lg transition-all cursor-pointer flex items-center gap-1 ${
-                        pathname.includes('/ourproducts') && "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                        pathname.includes("/ourproducts") &&
+                        "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
                       }`}
                     >
                       {item.title}
-                      <ChevronDown 
-                        className={`w-4 h-4 transition-transform duration-300 ${showProductsDropdown ? 'rotate-180' : ''}`}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-300 ${
+                          showProductsDropdown ? "rotate-180" : ""
+                        }`}
                       />
                     </div>
 
                     {/* Desktop Dropdown */}
                     <div
                       className={`absolute top-full left-0 mt-2 w-[280px] bg-main-dark border border-white/20 rounded-xl shadow-2xl overflow-hidden transition-all duration-300 ${
-                        showProductsDropdown ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                        showProductsDropdown
+                          ? "opacity-100 visible translate-y-0"
+                          : "opacity-0 invisible -translate-y-2"
                       }`}
                     >
                       <div className="p-2">
@@ -190,7 +237,8 @@ const Navbar = () => {
                             key={product.id}
                             href={product.link}
                             className={`block px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 group ${
-                              product.link === pathname && "bg-white/20 border border-white/30"
+                              product.link === pathname &&
+                              "bg-white/20 border border-white/30"
                             }`}
                           >
                             <div className="font-semibold text-white group-hover:text-white transition-colors">
@@ -202,7 +250,7 @@ const Navbar = () => {
                           </Link>
                         ))}
                       </div>
-                      
+
                       {/* Dropdown Arrow */}
                       <div className="absolute -top-2 left-4 w-4 h-4 bg-main-dark border-l border-t border-white/20 transform rotate-45"></div>
                     </div>
@@ -215,7 +263,8 @@ const Navbar = () => {
                   <Link
                     href={item.link}
                     className={`duration-300 px-1.5 py-0.5 rounded-lg transition-all ${
-                      item.link == pathname && "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                      item.link == pathname &&
+                      "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
                     }`}
                   >
                     {item.title}
@@ -223,10 +272,8 @@ const Navbar = () => {
                 </li>
               );
             })}
-            
-            <li
-              className="bg-white/20 cursor-pointer px-5 py-1.5 rounded-3xl text-white border border-white duration-500 font-medium mx-5 min-[1150px]:mx-10"
-            >
+
+            <li className="bg-white/20 cursor-pointer px-5 py-1.5 rounded-3xl text-white border border-white duration-500 font-medium mx-5 min-[1150px]:mx-10">
               Talk to Sales
             </li>
           </ul>

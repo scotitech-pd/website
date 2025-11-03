@@ -2,16 +2,15 @@
 export default function OpslyHeroSection() {
   return (
     <section
-      className="relative overflow-hidden text-white py-24 bg-cover bg-center "
+      className="relative overflow-hidden text-white py-22 min-[1380px]:py-28 bg-cover bg-center "
       style={{
         backgroundImage: "url('/images/products/opsly/frontbg.png')", 
       }}
     >
-      <div className="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="relative max-w-7xl mx-auto px-16 min-[1380px]:px-6 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="lg:w-2/3 space-y-6">
           <div className="text-5xl font-semibold relative w-fit font-karla">Opsly
-            <p className="absolute text-[85px] opacity-5 top-1/2 -translate-1/2 left-1/2 ">Opsly</p>
-
+            <p className="absolute text-[85px] opacity-5 top-1/2 -translate-y-1/2 -left-5 ">Opsly</p>
           </div>
 
           <h2 className="text-2xl md:text-3xl font-medium font-karla mt-7">
