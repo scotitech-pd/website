@@ -1,6 +1,6 @@
-"use client"
-import { useEffect, useState } from 'react';
-import { FaArrowUp } from 'react-icons/fa';
+"use client";
+import { ArrowDown, ArrowUp } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const GotoTop = () => {
   const [Visible, setIsVisible] = useState(false);
@@ -9,7 +9,7 @@ const GotoTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -20,46 +20,48 @@ const GotoTop = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', listentotop);
+    window.addEventListener("scroll", listentotop);
     return () => {
-      window.removeEventListener('scroll', listentotop);
+      window.removeEventListener("scroll", listentotop);
     };
   }, []);
 
   return (
-    <div
-      className="fixed right-4 bottom-6 shadow-xl bg-[#F58634] rounded-full duration-300 hover:bg-[#606062] text-white"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <>
       {Visible && (
-        <div className="relative h-10 w-10 overflow-hidden ">
-          {/* First Arrow */}
-          <div
-            className={`absolute inset-0 transition-all flex duration-500 ${
-              isHovered ? '-translate-y-12 opacity-0' : 'translate-y-0 opacity-100'
-            }`}
-          >
-            <FaArrowUp
-              className="cursor-pointer text-3xl mx-auto my-auto p-[2px] rounded-full duration-300"
-              onClick={scrollToTop}
-            />
-          </div>
+        <div
+          className="z-50 fixed right-4 bottom-6 shadow-2xl bg-[#641171] rounded-full duration-300 hover:bg-[#E38DF0] text-white"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className="relative h-15 w-15 overflow-hidden " >
+            {/* First Arrow */}
+            <div
+              className={`absolute inset-0 transition-all duration-500 ${
+                isHovered ? "-translate-y-12 opacity-0" : "translate-y-0 opacity-100"
+              }`}
+            >
+              <ArrowUp
+                className="cursor-pointer size-12  mx-auto my-auto p-[2px] rounded-full duration-300 text-white"
+                onClick={scrollToTop}
+              />
+            </div>
 
-          {/* Second Arrow */}
-          <div
-            className={`absolute inset-0 transition-all flex duration-500 ${
-              isHovered ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-            }`}
-          >
-            <FaArrowUp
-              className="cursor-pointer mx-auto my-auto text-3xl p-[2px] rounded-full duration-300"
-              onClick={scrollToTop}
-            />
+            {/* Second Arrow */}
+            <div
+              className={`absolute inset-0 transition-all duration-500 ${
+                isHovered ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+              }`}
+            >
+              <ArrowUp
+                className="cursor-pointer mx-auto my-auto size-12 p-[2px] rounded-full duration-300 text-black"
+                onClick={scrollToTop}
+              />
+            </div>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

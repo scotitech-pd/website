@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import { ModalProvider } from "@/components/ModalContext";
 import Footer from "@/components/layout/Footer";
 import CursorGlow from "@/components/CursorGlow";
+import GotoTop from "@/components/GotoTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
         >
           <Navbar />
                {/* <CursorGlow /> */}
+               < GotoTop/>
           {children}
           <Footer/>
         </body>

@@ -17,7 +17,7 @@ const HowWeWorks = () => {
     },
     {
       icon: "/images/aboutus/agile.png",
-      className: "px-[50px]",
+      className: "",
       title: "Agile Collaboration",
       description:
         "Cross-functional squads aligned with your project's goals. Whether you're in the UK, US, or Asia — we adapt to your workflow and timeline.",
@@ -47,16 +47,16 @@ const HowWeWorks = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="mt-[100px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 lg:mb-16">
+        <div className="mt-[100px]  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 lg:mb-16">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="relative group rounded-2xl p-[1.5px] bg-gradient-to-bl from-[#14FBFD]/70 via-white/70 to-main-light/70 hover:scale-[1.01]  transition-transform duration-300 shadow-lg"
+              className="relative group rounded-2xl  p-[1.5px] bg-gradient-to-bl from-[#14FBFD]/70 via-white/70 to-main-light/70 hover:scale-[1.01]  transition-transform duration-300 shadow-lg"
             >
               {/* Card */}
 
               <div
-                className="min-h-[360px] lg:min-h-[300px] bg-gradient-to-br from-[#1f2d31] to-[#060a0d] backdrop-blur-sm rounded-2xl p-6 lg:p-6 flex flex-col justify-start"
+                className="min-h-[360px] h-full lg:min-h-[300px] bg-gradient-to-br from-[#1f2d31] to-[#060a0d] backdrop-blur-sm rounded-2xl p-6 lg:p-6 flex flex-col justify-start"
               >
                 {/* Icon on top */}
                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-20">
@@ -73,13 +73,13 @@ const HowWeWorks = () => {
 
                 {/* Card Title */}
                 <h3
-                  className={`text-lg lg:text-[20px] px-[25px] font-karla font-bold mt-[40px] text-white text-center mb-4 ${card.className}`}
+                  className={`text-2xl lg:text-[20px] px-[25px] md:text-3xl font-karla font-bold mt-[40px] text-white text-center mb-4 ${card.className}`}
                 >
                   {card.title}
                 </h3>
 
                 {/* Card Description */}
-                <p className="text-sm lg:text-[13px] font-lora text-gray-300 text-center leading-relaxed flex-grow">
+                <p className="text-[18px] lg:text-[15px] md:text-[16px] font-lora text-gray-300 text-center leading-relaxed flex-grow">
                   {card.description}
                 </p>
               </div>

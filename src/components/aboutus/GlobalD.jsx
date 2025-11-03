@@ -9,12 +9,12 @@ const GlobalD = () => {
       }}
     >
       {" "}
-      <div className="text-center  px-4 sm:px-8 md:px-16 min-[1670px]:w-7xl min-[1670px]:mx-auto lg:px-[180px] flex justify-center items-center  mt-[4px] h-auto lg:h-[40vh] py-8 lg:py-0">
+      <div className="text-center px-4 sm:px-8 md:px-16 min-[1670px]:w-7xl min-[1670px]:mx-auto lg:px-[180px] flex justify-center items-center  mt-[4px] h-auto lg:h-[30vh] py-8 lg:py-0 overflow-hidden">
         <div className="relative">
-          <h3 className="text-3xl relative font-karla mb-5 lg:text-[30px] min-[1670px]:py-[20px] font-semibold text-white 2xl:text-[45px]">
+          <h3 className="text-3xl relative  font-karla mb-5 lg:text-[30px] min-[1670px]:py-[20px] font-semibold text-white 2xl:text-[45px]">
             Global Delivery. Local Trust
-            <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none z-0">
-              <p className="text-5xl sm:text-6xl font-karla md:text-5xl lg:text-7xl font-bold text-gray-300/20 leading-none whitespace-nowrap">
+            <div className="absolute hidden lg:block left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none z-0">
+              <p className="text-5xl sm:text-6xl tracking-wider font-karla md:text-5xl lg:text-7xl font-bold text-gray-300/20 leading-none whitespace-nowrap">
                 Global Delivery. Local Trust
               </p>
             </div>

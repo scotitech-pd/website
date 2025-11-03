@@ -40,12 +40,13 @@ export default function Timeline() {
   ];
 
   return (
-    <div className="bg-white py-12 px-4 md:px-8 lg:px-16">
-      <div className="max-w-6xl mx-auto">
+  
+    <div className="bg-white py-12 px-4 md:px-8 lg:px-16 overflow-hidden">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         {/* Section Title */}
         <div className="relative">
           <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 min-w-[650px] text-center pointer-events-none">
-            <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter text-gray-500/60 opacity-50">
+            <p className="text-7xl lg:text-[70px]  font-karla font-bold -tracking-tighter text-gray-500/60 opacity-50">
               Our Story
             </p>
           </div>
@@ -133,13 +134,13 @@ export default function Timeline() {
                       <div className="absolute left-1/2 top-10">
                         <div className="relative">
                           {/* Horizontal line */}
-                          <div className="absolute -left-[150px] top-0 h-1 bg-[#E38DF0] w-[450px]"></div>
+                          <div className="absolute -left-[150px] top-0 h-1 bg-[#E38DF0] min-[1400px]:-left-[400px] min-[1400px]:w-[800px] w-[450px]"></div>
 
                           {/* Dot */}
-                          <div className="absolute z-2 bg-[#368F99] rounded-full w-[15px] h-[15px] left-[295px] top-[-5px]"></div>
+                          <div className="absolute z-2 bg-[#368F99] rounded-full w-[15px] h-[15px] left-[295px] min-[1400px]:left-[400px] top-[-5px]"></div>
 
                           {/* Vertical line */}
-                          <div className="absolute w-1 bg-[#E38DF0] left-[300px] top-1 h-[180px]"></div>
+                          <div className="absolute w-1 bg-[#E38DF0] left-[300px] min-[1400px]:left-[405px] top-1 h-[180px]"></div>
                         </div>
                       </div>
                     )}
@@ -171,13 +172,13 @@ export default function Timeline() {
                       <div className="absolute right-1/2 top-10">
                         <div className="relative">
                           {/* Horizontal line */}
-                          <div className="absolute -right-[240px] top-0  bg-[#E38DF0] w-[550px] h-1"></div>
+                          <div className="absolute -right-[240px] top-0 min-[1400px]:w-[800px] min-[1400px]:-left-[400px]  bg-[#E38DF0] w-[550px] h-1"></div>
 
                           {/* Dot */}
-                          <div className="absolute z-2 bg-[#368F99] rounded-full w-[15px] h-[15px] right-[302px] top-[-5px]"></div>
+                          <div className="absolute z-2 bg-[#368F99] rounded-full w-[15px] h-[15px] right-[302px] min-[1400px]:right-[402px] top-[-5px]"></div>
 
                           {/* Vertical line */}
-                          <div className="absolute w-1 bg-[#E38DF0] right-[308px] top-1 h-[180px]"></div>
+                          <div className="absolute w-1 bg-[#E38DF0] right-[308px] top-1 h-[180px] min-[1400px]:-left-[412px]"></div>
                         </div>
                       </div>
                     )}
