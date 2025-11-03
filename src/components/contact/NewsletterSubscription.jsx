@@ -37,7 +37,7 @@ const NewsletterSubscription = () => {
 
   return (
     <section className="relative bg-black py-12 px-4 lg:py-8 lg:px-5">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="bg-white rounded-xl p-8 lg:px-10 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
             {/* Left Side - Text Content */}
