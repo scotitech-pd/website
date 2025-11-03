@@ -33,13 +33,13 @@ export default function OurProducts() {
           className="object-cover "
         />
       </div>
-      <h2 className="text-main font-lora text-4xl font-semibold mb-6">
+      <h2 className="text-main font-karla text-5xl font-semibold mb-6">
         Our Products
       </h2>
       <h3 className="text-2xl md:text-4xl font-semibold font-karla text-gray-900 mb-3 px-5">
         Products Designed to Simplify, Empower, and Scale
       </h3>
-      <p className="text-gray-600 max-w-3xl mx-auto mb-12 min-[500]:text-lg font-lora px-5">
+      <p className="text-black max-w-4xl mx-auto mb-12 min-[500]:text-xl font-lora px-5">
         From app distribution to operations and content creation, our tools cut
         complexity and deliver real-world value.
       </p>

@@ -17,13 +17,13 @@ export default function UnlockSection() {
       {/* Left Content */}
       <div className="relative z-10  py-24 w-full flex justify-end ">
         <div className="max-w-[640px]  h-full">
-          <h1 className="text-4xl md:text-5xl font-semifont mb-5 font-karla">
+          <h1 className="text-5xl md:text-6xl font-semibold font mb-5 font-karla">
             Unlock Efficiency
           </h1>
-          <h2 className="text-lg md:text-xl mb-3 font-medium font-lora">
+          <h2 className="text-lg md:text-2xl mb-3 font-medium font-lora">
             Drive Innovation with Our Technology Solutions
           </h2>
-          <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+          <p className="text-white/90 font-lora mb-4 text-lg leading-6">
             Team's best work happens when they're focused on innovation, not
             operational hurdles. ScotiTech provides the tools to make that
             happen. Our lean, scalable solutions streamline everything from app
@@ -31,12 +31,12 @@ export default function UnlockSection() {
             levels of efficiency for your business.
           </p>
 
-          <p className="text-sm md:text-base bg-main inline-block px-4 py-0.5 font-lora rounded">
+          <p className="text-sm md:text-lg bg-main inline-block px-4 py-0.5 font-lora rounded">
             ScotiTech: The Power of Lean. The Speed of Growth.
           </p>
 
           <div className="mt-8">
-            <button className="px-6 py-2 rounded-full shadow-md transition font-lora text-white bg-gray-700 border border-white">
+            <button className="px-6 py-2 text-lg rounded-full shadow-md transition font-lora text-white bg-gray-700 border border-white">
               Connect With Us
             </button>
           </div>

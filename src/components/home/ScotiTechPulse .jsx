@@ -1,3 +1,5 @@
+import { Rocket } from "lucide-react";
+
 const ScotiTechPulse = () => {
   return (
     <section
@@ -10,10 +12,10 @@ const ScotiTechPulse = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-left mb-12">
-          <h2 className="text-3xl md:text-4xl font-karla font-semibold text-gray-900">
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold text-gray-900">
             The ScotiTech Pulse
           </h2>
-          <p className="mt-3 text-xl text-black font-lora">
+          <p className="mt-3 text-2xl text-black font-lora">
             Stay connected with our latest{" "}
             <span className="text-purple-600 font-medium">innovations</span>,{" "}
             <span className="text-purple-600 font-medium">insights</span>, and{" "}
@@ -37,15 +39,11 @@ const ScotiTechPulse = () => {
                 ClarityPath Beta: <br />
                 The Future of Secure App Delivery
               </h3>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-black/90 text-lg mb-4">
                 Our revolutionary decision. Get exclusive early access.
               </p>
-              <button className="bg-blue text-white px-4 py-2 rounded-full text-sm flex transition items-center justify-center font-medium">
-                <img
-                  src="/images/home/rocketicon.png"
-                  alt="rocketicon"
-                  className="size-4 mr-1"
-                />
+              <button className="bg-blue flex text-white px-12 py-2 rounded-full text-md  transition items-center justify-center font-medium">
+                <Rocket className="m-1  " / > 
                 Join the Waitlist
               </button>
             </div>
@@ -55,25 +53,25 @@ const ScotiTechPulse = () => {
             {/* Webinar Card */}
             <div className="bg-white rounded-xl  drop-shadow-md shadow-md p-6">
               <div className="flex justify-between items-center mb-2 text-white">
-                <span className="bg-yellow/90 px-4 py-1.5 rounded-full text-[13px] flex gap-3 font-bold">
+                <span className="bg-[#BCB96A] px-4 py-1.5 rounded-full text-[14px] flex gap-3 items-center font-bold ">
                   <img
                     src="/images/home/eventicon.png"
                     alt="eventicon"
-                    className="size-5 opacity-50"
+                    className="size-7"
                   />
                   EVENT
                 </span>
-                <span className="text-xs text-gray-500">07/Oct/2025</span>
+                <span className="text-sm text-gray-500">07/Oct/2025</span>
               </div>
-              <h4 className="text-xl font-semibold font-lora mb-2 mt-4">
+              <h4 className="text-2xl font-semibold font-lora mb-2 mt-4">
                 Webinar: Secure App Deployment 2025
               </h4>
-              <p className="text-gray-600 mb-4 text-sm">
+              <p className="text-gray-600 mb-4 text-md">
                 Learn best practices for internal app distribution with
                 AppDeploy
               </p>
               <div className="w-full flex justify-end">
-                <button className="border border-blue text-blue font-lora px-4 py-1 rounded-full text-sm  transition">
+                <button className="border border-blue text-blue-700 font-lora px-5 py-2 rounded-full text-md  transition">
                   Register Now
                 </button>
               </div>
@@ -82,25 +80,25 @@ const ScotiTechPulse = () => {
             {/* Product Update Card */}
             <div className="bg-white rounded-xl drop-shadow-md  shadow-md p-6">
               <div className="flex justify-between items-center mb-2">
-                <span className="bg-orange/90 px-4 py-1.5 rounded-full text-[13px] flex gap-3 font-bold text-white">
+                <span className="bg-[#FFA662] px-4 py-1.5 items-center rounded-full text-[14px] flex gap-3 font-bold text-white  ">
                   <img
                     src="/images/home/boxicon.png"
                     alt="eventicon"
-                    className="size-5"
+                    className="size-7"
                   />
                   PRODUCT UPDATE
                 </span>
-                <span className="text-xs text-gray-500">07/Oct/2025</span>
+                <span className="text-sm text-gray-500">07/Oct/2025</span>
               </div>
-              <h4 className="text-xl font-semibold font-lora mb-2">
+              <h4 className="text-2xl font-semibold font-lora mb-2">
                 Opsly Early Access Optimize Your SaaS Stack
               </h4>
-              <p className="text-gray-600 mb-4 text-sm">
+              <p className="text-gray-600 mb-4 text-md">
                 Our new SASS optimization tool, now open for limited beta
                 testing
               </p>
               <div className="w-full flex justify-end">
-                <button className="border border-blue text-blue font-lora px-4 py-1 rounded-full text-sm  transition">
+                <button className="border border-blue text-blue-700 font-lora px-5 py-2 rounded-full text-md  transition">
                   Apply Now
                 </button>
               </div>

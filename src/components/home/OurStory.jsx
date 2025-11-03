@@ -52,7 +52,7 @@ const OurStory = () => {
             <div className="absolute top-4 w-[100%] min-[1500px]:w-[90%] text-nowrap text-center -right-10 bg-white text-main font-semibold rounded-full min-[1310px]:px-5 py-2 shadow-[0_0_25px_rgba(128,128,128,0.9)]">
               {card.title}
             </div>
-            <p className="mt-12 text-[13px] leading-relaxed">{card.text}</p>
+            <p className="mt-12 text-[15px] text-center text-white font-lora leading-relaxed">{card.text}</p>
           </div>
         ))}
       </div>

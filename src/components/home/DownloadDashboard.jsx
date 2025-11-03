@@ -109,10 +109,10 @@ export default function DownloadDashboard() {
   return (
     <div className="bg-white text-black py-10">
       <div className="font-karla font-medium text-4xl text-center mt-4 min-[570px]:my-4 min-[1000px]:my-10 relative w-full">
-        <p className=" min-[565px]:text-[4rem] min-[1000px]:text-[7rem] font-bold text-gray-100 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <p className=" min-[565px]:text-[5rem] min-[1000px]:text-[8rem] font-bold text-gray-100 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           Product Download
         </p>
-        <h2 className="relative z-10">Product Download</h2>
+        <h2 className="relative text-5xl z-10">Product Download</h2>
       </div>
 
       <div className="grid min-[600px]:grid-cols-2 justify-center items-start gap-8 p-8 max-w-7xl mx-auto">
@@ -126,7 +126,7 @@ export default function DownloadDashboard() {
             >
               {section.title}
             </h2>
-            <p className="text-gray-500 font-lora mb-2">{section.subtitle}</p>
+            <p className="text-gray-900 text-[18px] font-lora mb-2">{section.subtitle}</p>
 
             <div className="flex flex-col gap-4">
               {section.items.map((item) => (
@@ -144,7 +144,7 @@ export default function DownloadDashboard() {
                     />
                   </button>
                   <div>
-                    <p className="font-semibold text-gray-800">{item.name}</p>
+                    <p className="font-semibold font-lora  text-gray-800">{item.name}</p>
                     <p className="text-xs sm:text-sm text-gray-500">{item.details}</p>
                   </div>
                   <button

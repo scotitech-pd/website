@@ -59,12 +59,12 @@ export default function FaqSection() {
         {/* Left Side */}
         <div>
           <h3 className="text-[24px] min-[450px]:text-3xl min-[1050px]:text-4xl font-bold text-black relative z-10 font-karla mb-6 flex items-center">
-            <p className="text-[5rem] min-[450px]:text-[6rem] min-[650px]:text-[7rem] font-bold text-gray-200 absolute select-none -z-10 top-1/2 transform -translate-y-1/2">
+            <p className="text-[5rem] min-[450px]:text-[6rem] min-[650px]:text-[7rem] font-bold text-gray-200 absolute select-none -z-10 top-1/2 transform -translate-y-1/2 font-karla">
               FAQ
             </p>
-            Frequently Asked Questions
+            <p className="font-karla text-[40px]">Frequently Asked Questions</p>
           </h3>
-          <p className="mt-8 text-base leading-5 z-10 font-lora">
+          <p className="mt-8 text-lg leading-5  z-10 font-lora">
             To provide complete clarity, we've compiled detailed answers to the
             most common inquiries about,
           </p>
@@ -91,7 +91,7 @@ export default function FaqSection() {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex justify-between items-center text-left px-5 py-2.5 font-medium text-main-dark"
               >
-                <div className="flex items-center gap-3 text-[15px]">
+                <div className="flex items-center gap-3 text-[18px]">
                   <span>{faq.question}</span>
                 </div>
                 <ChevronDown
@@ -106,7 +106,7 @@ export default function FaqSection() {
                   openIndex === i ? "max-h-40 px-5 pb-4" : "max-h-0"
                 }`}
               >
-                <p className="text-main-dark text-[13px] leading-3.5 font-medium">
+                <p className="text-black/90 text-[18px] leading-5.5 font-lora">
                   {faq.answer}
                 </p>
               </div>

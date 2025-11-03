@@ -15,13 +15,13 @@ const TrustAndCompliance = () => {
       <div className="relative z-10 max-w-8xl mx-auto px-6 py-10 flex flex-col lg:flex-row items-center max-w-7xl">
         {/* Text Content */}
         <div className="lg:w-3/4 z-20 my-20 lg:my-0">
-          <h2 className="text-3xl md:text-4xl font-semibold   font-karla text-main mb-4">
+          <h2 className="text-3xl md:text-5xl font-semibold   font-karla text-main mb-4">
             Trust & Compliance <span className="text-black">- Expanded</span>
           </h2>
-          <h3 className="text-xl font-medium mb-4 font-lora">
+          <h3 className="text-2xl font-medium mb-4 font-lora">
             Our Commitment to Data Security
           </h3>
-          <p className="text-gray-700 leading-5 text-sm font-lora">
+          <p className="text-black/90 leading-6 text-lg font-lora">
             At <span className="text-main-dark font-semibold">ScotiTech</span>,
             trust isn't a feature—it's the foundation of everything we build.
             From a startup in London to an enterprise in New York or a
