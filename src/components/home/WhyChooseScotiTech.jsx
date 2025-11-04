@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const features1 = [
   {
     img: "/images/home/whyaccessible.png",
@@ -37,10 +37,14 @@ export default function WhyChooseScotiTech() {
           className="object-cover opacity-10"
         />
       </div> */}
-      <button className="bg-white font-lora text-main-dark px-8 py-2 rounded-lg text-sm hover:bg-main/90 absolute top-0 transform -translate-y-1/2 left-1/2 -translate-x-1/2">
-        Get in touch
-      </button>
-
+      <div className="cursor-pointer ">
+        <Link
+          href="/contact"
+          className="bg-white font-lora text-main-dark px-8 py-2 rounded-lg text-sm hover:text-white hover:bg-main/90 absolute top-0 transform -translate-y-1/2 left-1/2 -translate-x-1/2"
+        >
+          Get in touch
+        </Link>
+      </div>
       <div className="relative grid gap-16 items-center max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
         {/* Left Content */}
         <div className="space-y-6 py-10 sm:py-20">
@@ -52,7 +56,7 @@ export default function WhyChooseScotiTech() {
               Why Choose ScotiTech
             </h2>
           </div>
-          <p className="text-lg text-white max-w-2xl font-lora" >
+          <p className="text-lg text-white max-w-2xl font-lora">
             We believe technology should remove barriers, not create them.
             That’s why our products are designed to be simple, scalable, and
             affordable — empowering businesses and{" "}
