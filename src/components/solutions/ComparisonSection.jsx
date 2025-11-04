@@ -40,7 +40,7 @@ export default function AppDeployComparison() {
             </div>
           </div>
 
-          <table className="w-full text-sm min-[500px]:text-base min-[850px]:text-xl text-center">
+          <table className="w-full text-sm min-[500px]:text-base min-[850px]:text-xl text-center overflow-hidden">
             <thead className="bg-gradient-to-r from-[#223B5A] to-[#296D59]  text-white text-center font-karla">
               <tr className="">
                 <th className="font-medium py-3">Feature / Cost</th>
@@ -48,7 +48,7 @@ export default function AppDeployComparison() {
                 <th className="font-medium">AppDeploy</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200 text-black text-xs min-[500px]:text-sm min-[850px]:text-lg py-2">
+            <tbody className="divide-y divide-gray-200 text-black text-xs min-[500px]:text-sm min-[850px]:text-lg py-2 overflow-hidden">
               {[
                 ["Cost per Device", "$6 - $12/month", "Flat monthly fee"],
                 ["Annual Cost (500 devices)", "$36k - $72k", "$6k"],
@@ -60,7 +60,7 @@ export default function AppDeployComparison() {
                 ],
                 ["Tracking", "Limited", "Real-time tracking"],
               ].map(([feature, jamf, appdeploy], idx) => (
-                <tr key={idx} className="hover:bg-gray-50 text-left">
+                <tr key={idx} className="hover:bg-gray-50 text-left overflow-hidden">
                   <td className="px-6 py-4 font-medium text-grey">{feature}</td>
                   <td className="px-6 py-4 text-grey">{jamf}</td>
                   <td className="px-6 py-4 text-grey flex justify-between items-center min-[1011px]:w-[80%] gap-2">
