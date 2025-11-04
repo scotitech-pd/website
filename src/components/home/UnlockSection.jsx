@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function UnlockSection() {
   return (
     <section
@@ -35,9 +36,9 @@ export default function UnlockSection() {
           </p>
 
           <div className="mt-8">
-            <button className="px-6 py-2 text-lg rounded-full shadow-md transition font-lora text-white bg-gray-700 border border-white">
+            <Link href="/contact" className="px-6 py-2 text-lg rounded-full shadow-md transition font-lora text-white bg-gray-700 border border-white">
               Connect With Us
-            </button>
+            </Link>
           </div>
         </div>
 

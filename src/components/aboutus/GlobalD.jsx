@@ -3,7 +3,7 @@ import React from "react";
 const GlobalD = () => {
   return (
     <section
-      className="relative  bg-center bg-cover bg-no-repeat "
+      className="relative  bg-center bg-cover bg-no-repeat py-6 "
       style={{
         backgroundImage: "url('/images/aboutus/lead-bg.png')",
       }}
