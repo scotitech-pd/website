@@ -17,38 +17,38 @@ export default function AppDeployComparison() {
               <img
                 src="/images/solution/errow.png"
                 alt=""
-                className="w-12 py-7"
+                className="w-6 min-[500px]:w-8 min-[850px]:w-12 py-6 min-[850px]:py-7"
               />
             </div>
             <div className="flexr relative w-full h-full">
-              <div className="size-28 flex justify-center items-center rounded-full absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 bg-white shadow-2xl">
+              <div className="size-20 min-[500px]:size-24 min-[850px]:size-28 flex justify-center items-center rounded-full absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 bg-white shadow-2xl">
                 <img
                   src="/images/solution/sett.png"
                   alt="Traditional MDM"
-                  className="h-26 w-20"
+                  className="h-20 w-14 min-[500px]:h-22 min-[500px]:w-16 min-[850px]:h-26 min-[850px]:w-20"
                 />
               </div>
             </div>
             <div className="flexr relative w-full h-full">
-              <div className="size-28 flex justify-center items-center rounded-full absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 bg-white shadow-2xl">
+              <div className="size-20 min-[500px]:size-24 min-[850px]:size-28 flex justify-center items-center rounded-full absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 bg-white shadow-2xl">
                 <img
                   src="/images/solution/appdeploy.png"
                   alt="Traditional MDM"
-                  className="size-14"
+                  className="size-10 min-[500px]:size-12 min-[850px]:size-14"
                 />
               </div>
             </div>
           </div>
 
-          <table className="w-full text-sm md:text-base text-center">
-            <thead className="bg-gradient-to-r from-[#223B5A] to-[#296D59]  text-white text-center text-2xl font-karla">
+          <table className="w-full text-sm min-[500px]:text-base min-[850px]:text-xl text-center">
+            <thead className="bg-gradient-to-r from-[#223B5A] to-[#296D59]  text-white text-center font-karla">
               <tr className="">
                 <th className="font-medium py-3">Feature / Cost</th>
                 <th className="font-medium">Jamf / Intune</th>
                 <th className="font-medium">AppDeploy</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200 text-black text-lg py-2">
+            <tbody className="divide-y divide-gray-200 text-black text-xs min-[500px]:text-sm min-[850px]:text-lg py-2">
               {[
                 ["Cost per Device", "$6 - $12/month", "Flat monthly fee"],
                 ["Annual Cost (500 devices)", "$36k - $72k", "$6k"],
@@ -60,10 +60,10 @@ export default function AppDeployComparison() {
                 ],
                 ["Tracking", "Limited", "Real-time tracking"],
               ].map(([feature, jamf, appdeploy], idx) => (
-                <tr key={idx} className="hover:bg-gray-50">
+                <tr key={idx} className="hover:bg-gray-50 text-left">
                   <td className="px-6 py-4 font-medium text-grey">{feature}</td>
-                  <td className="px-6 py-4">{jamf}</td>
-                  <td className="px-6 py-4 flex justify-center items-center gap-2">
+                  <td className="px-6 py-4 text-grey">{jamf}</td>
+                  <td className="px-6 py-4 text-grey flex justify-between items-center min-[1011px]:w-[80%] gap-2">
                     {appdeploy}
                     <img
                       src="/images/solution/tick.png"
