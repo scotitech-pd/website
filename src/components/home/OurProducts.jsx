@@ -1,25 +1,30 @@
 import React from "react";
+import Link from "next/link";
 
 const products = [
   {
     name: "AppDeploy",
     tagline: "Effortless iOS App Distribution",
     logo: "/images/home/appdeploy.png",
+    link:"/appdeploy"
   },
   {
     name: "Opsly",
     tagline: "All-in-One Operations Platform",
     logo: "/images/home/opsly.png",
+    link:"/opsly"
   },
   {
     name: "AI Caption Studio",
     tagline: "Smarter Content Creation",
     logo: "/images/home/ai.png",
+    link:"/aicaptionstudio"
   },
   {
     name: "ClarityPath",
     tagline: "private decision-support app",
     logo: "/images/home/claritypath.png",
+    link:"/claritypath"
   },
 ];
 
@@ -64,9 +69,12 @@ export default function OurProducts() {
                 <h4 className="text-xl font-semibold">{p.name}</h4>
                 <p className="text-black/90 mt-2">{p.tagline}</p>
               </div>
-              <button className="bg-main text-white text-nowrap px-6 py-2 rounded-full text-sm hover:bg-main/90 absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2">
+              <Link
+                href={`/products/${p.link}`}
+                className="bg-main text-white text-nowrap px-6 py-2 rounded-full text-sm hover:bg-main/90 absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2"
+              >
                 Read more
-              </button>
+              </Link>
             </div>
           ))}
         </div>
