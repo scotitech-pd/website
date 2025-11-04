@@ -1,14 +1,14 @@
 const HeroScotitech = () => {
   return (
-    <section className="relative flex justify-center flex-col px-10 text-white bg-gradient-to-r from-[#641171]/50 via-[#641171]/10  to-white  overflow-hidden">
+    <section className="h-[84vh] lg:h-[88vh] 2xl:h-auto  relative flex justify-center flex-col px-10 text-white bg-gradient-to-r from-[#641171]/50 via-[#641171]/10  to-white  overflow-hidden">
       <div className="absolute left-0 h-full bg-gradient-to-r from-white/60 flex items-center">
         <img src="/images/solution/bgfront.png" alt="" className="h-[80%]" />
       </div>
-      <div className="max-w-7xl mx-auto w-full z-10">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center w-full ">
           {/* Left column: text content */}
-          <div className="lg:col-span-7">
-            <div className="py-48">
+          <div className="lg:col-span-7 min-[1370px]:py-24 py-7 2xl:py-52">
+            <div className="">
               <h1 className="text-4xl md:text-[50px] font-bold font-karla leading-14 text-[#265469] z-50">
                 Innovative Solutions for the
                 <br /> Modern World

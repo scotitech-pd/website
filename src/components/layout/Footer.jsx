@@ -268,7 +268,7 @@ const Footer = () => {
           <div className="hidden min-[790px]:flex absolute right-0 top-0">
             Powered by
             <Link href="/">
-              <p className="cursor-pointer text-[#F58634] ml-1">Spacelinkers</p>{" "}
+              <p className="cursor-pointer text-[#F58634] ml-1">Spacelinkers Infotech</p>{" "}
             </Link>
           </div>
         </div>
