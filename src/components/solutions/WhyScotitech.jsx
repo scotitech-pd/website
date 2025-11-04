@@ -26,16 +26,16 @@ const features = [
 const WhyScotitech = () => {
   return (
     <section className="py-16 bg-white text-center">
-      <div className="max-w-6xl mx-auto px-4 text-black">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="font-karla font-medium text-4xl text-center my-11 relative w-full">
-            <p className="hidden md:flex text-[7rem] font-semibold text-gray-200/80 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className=" max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full text-black">
+        <div className="mx-auto ">
+          <div className="font-karla font-medium text-4xl text-center my-3 md:my-11 relative w-full">
+            <p className="hidden md:flex text-[5rem] font-semibold text-black opacity-5 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               Why Scotitech
             </p>
             <h2 className="relative z-10 font-bold">Why Scotitech</h2>
           </div>
         </div>
-        <p className="mt-2 text-main-dark font-lora font-medium text-[20px] z-10 relative">
+        <p className=" text-main-dark font-lora font-medium text-[20px] z-10 relative">
           What Makes Our Solutions Different?
         </p>
 
