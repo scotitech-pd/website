@@ -52,6 +52,8 @@ const products = [
 const ProductShowcase = () => {
   return (
     <section className="bg-gray-100 py-20 px-4 text-center">
+      <div className=" max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
+
       <h2 className="text-[20px] text-black font-semibold font-karla mb-2">
         Our Solutions at a Glance
       </h2>
@@ -60,11 +62,11 @@ const ProductShowcase = () => {
         <span className="text-main-dark">Powerful</span> Products.
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
         {products.map((product) => (
           <div
             key={product.id}
-            className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col"
+            className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col max-w-[390px] mx-auto"
           >
             <div className="relative h-36 rounded-xl">
               {/* Blurred background image */}
@@ -84,13 +86,13 @@ const ProductShowcase = () => {
               </div>
             </div>
 
-            <div className="pt-10 pb-13 px-6 flex-1 flex flex-col items-center text-left relative">
+            <div className="pt-10 pb-14 px-6 flex-1 flex flex-col items-center text-left relative">
               <h3
                 className={`text-lg font-semibold mb-2 w-full font-karla ${product.textColor}`}
               >
                 {product.name}
               </h3>
-              <p className="text-[13px] text-gray-700 mb-3">
+              <p className="text-[13px] text-gray-700 mb-3 w-full">
                 {product.description}
               </p>
               <div className="space-y-2  left-4 w-[90%] absolute bottom-2">
@@ -106,7 +108,7 @@ const ProductShowcase = () => {
                 <div className="flex justify-end w-full">
                   <a
                     href="#"
-                    className={`px-2 w-fit  py-0.5 text-white/80 text-xs rounded-lg flex  ${product.buttonColor}`}
+                    className={`px-3 w-fit py-[4px] text-white/80 text-xs rounded-lg flex  ${product.buttonColor} shadow-[0_0_25px_rgba(128,128,128,0.4)] `}
                   >
                     {product.buttonText}
                   </a>
@@ -116,6 +118,8 @@ const ProductShowcase = () => {
           </div>
         ))}
       </div>
+      </div>
+      
     </section>
   );
 };
