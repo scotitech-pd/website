@@ -3,12 +3,12 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section
-      className="relative h-[84vh] sm:h-auto py-20 sm:py-52 flex justify-center flex-col bg-cover bg-center text-white overflow-hidden"
+      className="relative h-[84vh] lg:h-[88vh] 2xl:h-auto py-20 2xl:py-32 flex justify-center flex-col bg-cover bg-center text-white overflow-hidden"
       style={{
         backgroundImage: "url('/images/home/herobg.png')", // replace with your image path
       }}
     >
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full py-10">
         <p className="bg-main-dark font-semibold border-white border-[1px] text-white font-lora  px-3  py-2 rounded-lg w-fit my-5 min-[1200px]:my-7">
           ScotiTech Solution
         </p>
