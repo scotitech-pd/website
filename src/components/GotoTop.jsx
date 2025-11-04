@@ -42,7 +42,7 @@ const GotoTop = () => {
               }`}
             >
               <ArrowUp
-                className="cursor-pointer size-12  mx-auto my-auto p-[2px] rounded-full duration-300 text-white"
+                className="cursor-pointer size-14  mx-auto my-auto p-[2px] rounded-full duration-300 text-white"
                 onClick={scrollToTop}
               />
             </div>
@@ -54,7 +54,7 @@ const GotoTop = () => {
               }`}
             >
               <ArrowUp
-                className="cursor-pointer mx-auto my-auto size-12 p-[2px] rounded-full duration-300 text-black"
+                className="cursor-pointer mx-auto my-auto size-14 p-[2px] rounded-full duration-300 text-black"
                 onClick={scrollToTop}
               />
             </div>

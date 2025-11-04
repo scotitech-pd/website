@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -22,10 +23,14 @@ const HeroSection = () => {
           Building the technology that transforms what you can do into what you
           will do
         </p>
+
         <div className="p-1.5 border border-white w-fit rounded-lg mb-8">
-          <button className="bg-white text-black w-fit px-10 py-2 rounded-lg text-lg">
+          <Link
+            href="/contact"
+            className="bg-white text-black cursor-pointer w-fit px-10 py-2 rounded-lg text-lg inline-block"
+          >
             Get Started
-          </button>
+          </Link>
         </div>
       </div>
     </section>
