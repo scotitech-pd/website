@@ -42,23 +42,13 @@ export default function FaqSection() {
 
   return (
     <section
-      className="relative bg-gray-500 py-10 sm:py-20 overflow-hidden"
-      style={{
-        backgroundImage: "url('/images/home/Timg.png')", // replace with your image
-        backgroundSize: "cover",
-        backgroundPosition: "left",
-      }}
-    >
+      className="relative bg-[#F5F5F5] py-10 sm:py-20 overflow-hidden" >
       <img
         src="/images/home/Tpurple.png"
         alt="bg"
         className="left-0 absolute w-auto h-[95%] bottom-0"
       />
 
-      {/* Background shape (optional subtle polygon)
-    //   <div className="absolute top-0 left-0 w-full h-full bg-purple-100 opacity-20"></div> */}
-      {/* Subtle overlay for readability */}
-      <div className="absolute inset-0 bg-white/70"></div>
 
       <div className="relative z-10 grid min-[900px]:grid-cols-2 gap-7 sm:gap-10 items-center text-black max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
         {/* Left Side */}
