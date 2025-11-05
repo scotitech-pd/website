@@ -30,7 +30,7 @@ export default function AppDeploySection() {
                   alt=""
                   className="size-6"
                 />
-                <span>80% lower costs than MDM providers.</span>
+                <span className="font-lora">80% lower costs than MDM providers.</span>
               </li>
               <li className="flex items-start gap-3">
                 <img
@@ -38,7 +38,7 @@ export default function AppDeploySection() {
                   alt=""
                   className="size-6"
                 />
-                <span>Simple, one-click installation for employees.</span>
+                <span className="font-lora">Simple, one-click installation for employees.</span>
               </li>
               <li className="flex items-start gap-3">
                 <img
@@ -46,7 +46,7 @@ export default function AppDeploySection() {
                   alt=""
                   className="size-6"
                 />
-                <span>Real-time install tracking and code management.</span>
+                <span className="font-lora">Real-time install tracking and code management.</span>
               </li>
               <li className="flex items-start gap-3">
                 <img
@@ -54,7 +54,7 @@ export default function AppDeploySection() {
                   alt=""
                   className="size-6"
                 />
-                <span>Zero tech hurdles for non-technical users.</span>
+                <span className="font-lora">Zero tech hurdles for non-technical users.</span>
               </li>
             </ul>
 
@@ -67,7 +67,7 @@ export default function AppDeploySection() {
                   className="w-[80px]"
                   />
               </div>
-              <p className="text-main-dark text-base font-medium">
+              <p className="font-lora  text-main-dark text-base font-medium">
                 Save up to<span className="font-semibold px-1">$60,000</span>{" "}
                 annually compared to Jamf/Intune.
               </p>
@@ -107,7 +107,7 @@ export default function AppDeploySection() {
         </div>
 
         <div className="min-[1150px]:flex hidden absolute z-20 -bottom-10 min-[1400px]:-bottom-28 right-10 min-[1700px]:right-0 bg-gradient-to-r from-[#98F9FF]/20 to-[#EABFFF]/20 rounded-xl px-8 py-3 cursor-pointer shadow-lg text-center  backdrop-blur-md  hover:scale-105 duration-300 hover:backdrop-blur-sm">
-          <p className="text-lg font-medium text-white">
+          <p className="font-lora text-lg font-medium text-white">
             Download AppDeploy Now
           </p>
         </div>

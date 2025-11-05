@@ -38,22 +38,22 @@ export default function LeadershipTeam() {
   ];
 
   return (
-    <section className="relative  h-full py-8 px-8 min-[1360px]:px-0">
-      <div className="absolute w-full bg-gradient-to-r to-[#39327C] inset-0 from-[#34919B] h-[80%]"></div>
+    <section className="relative   py-8 px-8 min-[1360px]:px-0">
+      <div className="absolute w-full  bg-gradient-to-r to-[#39327C] inset-0 from-[#34919B] h-full"></div>
 
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 z-10 text-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 my-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 lg:my-12">
           <div className="text-left font-karla">
-            <h2 className="text-3xl md:text-4xl mb-2 text-white">
+            <h2 className="text-[30px] md:text-4xl font-bold mb-0 lg:mb-2 text-white">
               Leadership Team
             </h2>
-            <p className="text-2xl text-gray-200 font-lora mt-5">
+            <p className="text-[15px] text-gray-200 font-lora lg:mt-5">
               The Experience Behind Our{" "}
               <span className="text-[#FFF600]">Success</span>
             </p>
           </div>
           <div>
-            <p className="text-white text-xl text-left font-lora">
+            <p className="text-white text-[13px] lg:text-xl text-left font-lora">
               Meet the visionary leaders driving{" "}
               <span className="text-[#EABFFF] font-semibold">ScotiTech</span>{" "}
               innovation and growth at the forefront of the industry.

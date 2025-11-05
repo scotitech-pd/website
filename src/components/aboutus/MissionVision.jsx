@@ -3,12 +3,12 @@ import React from "react";
 const MissionVision = () => {
   return (
     <div>
-      <section className="relative bg-white py-7 2xl:w-7xl 2xl:mx-auto overflow-hidden lg:w-[100%]">
+      <section className="relative bg-white py-7 overflow-hidden lg:w-[100%]">
         <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
           {/* Mission */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-[90px] min-[1500px]:w-[85%] min-[1500px]:mx-auto max-w-[100%] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-[90px] ">
             {/* Left Content */}
-            <div className="space-y-5 text-center lg:text-left px-5 sm:px-8 lg:pl-[100px] lg:px-0 relative">
+            <div className="space-y-5 text-center lg:text-left lg:pl-[100px]  relative">
               <div className="relative">
                 <h2 className="text-2xl sm:text-3xl font-karla lg:text-[30px] font-semibold text-black">
                   Our Mission

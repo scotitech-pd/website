@@ -37,7 +37,7 @@ const SubscribeSection = () => {
             <h2 className="text-4xl min-[1550px]:text-5xl font-semibold font-karla mb-4 text-black">
               Stay Ahead With ScotiTech
             </h2>
-            <p className="text-lg min-[500px]:text-xl text-white sm:w-[90%] min-[1550px]:w-[70%] max-[650px]:leading-[22px]">
+            <p className="text-lg font-lora min-[500px]:text-xl text-white sm:w-[90%] min-[1550px]:w-[70%] max-[650px]:leading-[22px]">
               Get the latest insights, product updates, and exclusive offers
               delivered straight to your inbox
             </p>
@@ -53,11 +53,11 @@ const SubscribeSection = () => {
                 placeholder="Enter Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-6 py-3 rounded-md text-black w-full bg-white max-w-[600px]"
+                className="flex-1 px-6 py-3 rounded-md text-black w-full font-lora bg-white max-w-[600px]"
               />
               <button
                 type="submit"
-                className="bg-white w-fit text-main-light px-4 md:px-6 py-1.5 md:py-2 rounded-md font-semibold sm:font-medium hover:bg-purple-100 transition text-[17px] md:text-xl"
+                className="bg-white w-fit text-main-light px-4 md:px-6 py-1.5 md:py-2 rounded-md font-semibold sm:font-medium font-karla hover:bg-purple-100 transition text-[17px] md:text-xl"
               >
                 Subscribe
               </button>
@@ -65,9 +65,9 @@ const SubscribeSection = () => {
 
             {status && <p className="mt-4 text-sm text-white">{status}</p>}
 
-            <p className="text-sm min-[500px]:text-[15px] mt-4 text-white pl-3">
+            <p className="text-sm min-[500px]:text-[15px] mt-4 text-white pl-3 font-lora">
               We respect the privacy. No spam, ever. Read our{" "}
-              <a href="/privacy" className="font-bold underline text-black">
+              <a href="/privacy" className="font-bold underline text-black font-lora">
                 Privacy Policy
               </a>
             </p>

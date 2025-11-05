@@ -92,7 +92,7 @@ const ProductShowcase = () => {
               >
                 {product.name}
               </h3>
-              <p className="text-[13px] text-gray-700 mb-3 w-full">
+              <p className="text-[13px] text-black font-lora mb-4 font-medium w-full">
                 {product.description}
               </p>
               <div className="space-y-2  left-4 w-[90%] absolute bottom-2">

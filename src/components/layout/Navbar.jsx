@@ -36,7 +36,7 @@ const Navbar = () => {
     {
       id: 1,
       title: "AppDeploy",
-      link: "/appdeploy",
+      link: "products/appdeploy",
       desc: "Effortless iOS App Distribution",
     },
     {
