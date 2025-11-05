@@ -14,7 +14,7 @@ const HeroScotitech = () => {
                 <br /> Modern World
               </h1>
 
-              <p className="mt-6 text-black font-lora max-w-3xl text-lg leading-6">
+              <p className="mt-6 text-black font-lora max-w-3xl text-lg leading-6.5">
                 At{" "}
                 <span className="font-semibold text-purple-700">Scotitech</span>
                 , we solve real-world challenges with software that is simple,
@@ -23,7 +23,7 @@ const HeroScotitech = () => {
                 exploring astrology insights — Scotitech has a solution for you.
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-3 sm:gap-7 font-lora text-black z-10">
+              <div className="mt-10 flex flex-wrap gap-3 sm:gap-7 font-karla text-black z-10">
                 <a
                   href="#"
                   className="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-white  shadow-sm text-sm hover:bg-[#F4ADFF] duration-300 font-medium hover:shadow-lg transition-shadow"

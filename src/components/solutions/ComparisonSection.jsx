@@ -48,7 +48,7 @@ export default function AppDeployComparison() {
                 <th className="font-medium">AppDeploy</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200 text-black text-xs min-[500px]:text-sm min-[850px]:text-lg py-2 overflow-hidden">
+            <tbody className="divide-y divide-gray-200 text-black text-xs min-[500px]:text-sm min-[850px]:text-lg py-2 overflow-hidden font-karla">
               {[
                 ["Cost per Device", "$6 - $12/month", "Flat monthly fee"],
                 ["Annual Cost (500 devices)", "$36k - $72k", "$6k"],
@@ -78,7 +78,7 @@ export default function AppDeployComparison() {
         </div>
 
         <div className="mt-2 flex justify-center items-center bg-white w-fit px-2 py-1 rounded-2xl rounded-tr-none ml-auto">
-          <button className="bg-[#1C8BEA] text-white pl-4 group pr-1.5 py-1.5 rounded-3xl flex items-center gap-2 hover:bg-[#1C8BEA]/90 transition text-xs">
+          <button className="bg-[#1C8BEA] font-karla text-white pl-4 group pr-1.5 py-1.5 rounded-3xl flex items-center gap-2 hover:bg-[#1C8BEA]/90 transition text-sm">
             Download AppDeploy
             <div className="bg-white p-1.5 rounded-full group-hover:scale-110 duration-300 group-hover:shadow-2xl"> 
               <img

@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function TechnologySection() {
   const problems = [
     {
@@ -21,7 +22,7 @@ export default function TechnologySection() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-[#2b1f6e] to-[#3c99e5] text-white py-20">
       <img
-        src="/images/solution/tabimg.png" // replace this with your actual image path
+        src="/images/solution/tabimg.png" 
         alt="Tech Devices"
         className=" absolute left-0 w-[80%] lg:w-[40%]  top-30 min-[600px]:top-5 min-[1170px]:-top-5  min-[1400px]:-top-10  min-[1700px]:hidden opacity-20 lg:opacity-100"
       />
@@ -42,21 +43,21 @@ export default function TechnologySection() {
               How Scotitech Solves These
             </p>
 
-            <h2 className="text-2xl min-[380px]:text-3xl min-[450px]:text-4xl min-[1060px]:text-5xl font-karla font-medium">
+            <h2 className="text-2xl min-[380px]:text-3xl min-[450px]:text-4xl min-[1060px]:text-5xl font-karla font-medium ">
               Technology <span className="text-pink-300">moves fast.</span>
               <span className="block mt-0.5">
                 Problems keep <span className="text-pink-300">piling up</span>
               </span>
             </h2>
 
-            <p className="min-[380px]:text-lg text-white max-w-2xl mx-auto lg:mx-0 font-lora my-4 leading-5">
+            <p className="mb-9 min-[380px]:text-lg text-white max-w-2xl mx-auto lg:mx-0 font-lora my-4 leading-5">
               Businesses, creators, and individuals are stuck between complexity
               and cost.
             </p>
 
-            <button className="bg-black/20 border border-white text-white font-lora font-medium text-sm px-6 py-1 rounded-full">
+            <Link className=" bg-black/20 border border-white text-white font-karla font-medium text-[16px] px-4 py-2 rounded-full" href="/contact">
               Contact Sales
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -71,7 +72,7 @@ export default function TechnologySection() {
               <div className="absolute left-0 top-1/2 bg-[#640D5F] size-16 min-[1160px]:size-20 flex justify-center items-center rounded-full border-4 border-[#a879db] group-hover:border-white transition duration-200 group-hover:scale-110 text-pink-100 transform -translate-x-1/2 -translate-y-1/2">
                 <img src={item.icon} alt={item.text} className="h-8 min-[1160px]:h-11" />
               </div>
-              <p className="text-[13px] text-white font-lora text-left min-[1260px]:leading-relaxed flex justify-center items-center bg-red- 400">
+              <p className="text-[13px] text-white font-lora text-left min-[1260px]:leading-relaxed tracking-wide flex justify-center items-center bg-red- 400">
                 {item.text}
               </p>
             </div>

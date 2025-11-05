@@ -1,5 +1,5 @@
 import { Settings, Shield, Rocket, Users } from "lucide-react";
-
+import Link from "next/link";
 export default function WhoUsesAppDeploy() {
   return (
     <section className="bg-[#FAFAFA] py-24 px-6 md:px-20 relative overflow-hidden">
@@ -11,7 +11,7 @@ export default function WhoUsesAppDeploy() {
               <p className="absolute text-[5rem]  font-semibold text-black/20 font-karla opacity-40 top-1/2 -left-5 -translate-y-1/2 text-nowrap select-none">
                 Who It’s For
               </p>
-              <p className="text-2xl font-medium text-black font-kayra">
+              <p className="text-2xl font-medium text-black font-karla">
                 Who It’s For
               </p>
             </div>
@@ -22,9 +22,9 @@ export default function WhoUsesAppDeploy() {
           </div>
         {/* Button */}
         <div className="mt-6">
-          <button className="bg-gradient-to-r from-[#3D2C72] to-[#3D758C] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-[0_0_12px_rgba(61,44,114,0.9)] duration-300 transition">
+          <Link href="/contact" className="cursor-pointer font-karla bg-gradient-to-r from-[#3D2C72] to-[#3D758C] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-[0_0_12px_rgba(61,44,114,0.9)] duration-300 transition">
             Get Started Now
-          </button>
+          </Link>
         </div>
         </div>
 

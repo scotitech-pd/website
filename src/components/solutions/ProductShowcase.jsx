@@ -1,3 +1,5 @@
+import Link from "next/link";
+import React from "react";
 const products = [
   {
     id: 1,
@@ -97,21 +99,21 @@ const ProductShowcase = () => {
               </p>
               <div className="space-y-2  left-4 w-[90%] absolute bottom-2">
                 <div className="w-full">
-                  <a
+                  <Link
                     href="#"
-                    className={`inline-block bg-white px-3 font-medium font-lora py-0.5 rounded-lg text-[13px] text-blue-600 shadow-[0_0_25px_rgba(128,128,128,0.4)] `}
+                    className={` bg-white px-3 font-medium font-karla py-0.5 rounded-lg text-[13px] text-blue-600 shadow-[0_0_25px_rgba(128,128,128,0.4)] `}
                   >
                     Read Details
-                  </a>
+                  </Link>
                   <br />
                 </div>
                 <div className="flex justify-end w-full">
-                  <a
+                  <Link
                     href="#"
-                    className={`px-3 w-fit py-[4px] text-white/80 text-xs rounded-lg flex  ${product.buttonColor} shadow-[0_0_25px_rgba(128,128,128,0.4)] `}
+                    className={`px-3 w-fit py-[4px] text-white text-sm rounded-lg flex font-karla ${product.buttonColor} shadow-[0_0_25px_rgba(128,128,128,0.4)] `}
                   >
                     {product.buttonText}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -46,10 +46,10 @@ export default function CtaSection() {
           <span
             className={`absolute inset-0 rounded-[inherit] bg-gradient-to-r from-[#10385A] to-[#452463] blur-xl opacity-60 -z-10`}
           ></span>
-          <h2 className="text-4xl md:text-5xl font-semibold mb-3 font-karla">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-3 font-karla tracking-wide">
             Let’s Simplify the Future, Together.
           </h2>
-          <p className="text-xl text-white/90 mb-12 font-lora">
+          <p className="text-xl text-white/90 mb-12 font-lora ">
             Choose the right Scottitech product for your needs and start today.
           </p>
 
@@ -59,7 +59,7 @@ export default function CtaSection() {
               <button
                 key={i}
                 style={{ backgroundColor: btn.bg }}
-                className={`relative flex items-center justify-between  text-white font-medium px-11 py-5 rounded-4xl shadow-lg transition-transform duration-300 ${btn.className}`}
+                className={`relative flex text-md items-center justify-between font-karla text-white font-medium px-11 py-5 rounded-4xl shadow-lg transition-transform duration-300 ${btn.className}`}
               >
                 {btn.title}
                 <div className="rounded-full absolute right-3 translate-x-1/2 top-1/2 -translate-y-1/2 bg-white flex justify-center items-center size-11">

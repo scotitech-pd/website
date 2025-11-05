@@ -50,7 +50,7 @@ const WhyScotitech = () => {
                 alt={`${feature.title} Icon`}
                 className="size-14 mb-4"
               />
-              <h4 className="text-[20px] font-semibold font-lora text-black mb-2">
+              <h4 className="text-[20px] font-semibold font-karla text-black mb-2">
                 {feature.title}
               </h4>
               <p className="text-[15px] font-lora text-grey">{feature.description}</p>

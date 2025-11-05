@@ -32,7 +32,7 @@ export default function SecurityCompliance() {
             <p className="absolute max-[1210px]:hidden text-[3.3rem]  font-semibold text-black opacity-5 font-karla -left-3 top-1/2 -translate-y-1/2 text-nowrap select-none">
               Security & Compliance
             </p>
-            <h2 className="text-2xl min-[850px]:text-3xl font-medium text-black font-lora">
+            <h2 className="text-2xl min-[850px]:text-3xl font-medium text-black font-karla">
               Security & Compliance
             </h2>
           </div>
@@ -44,13 +44,13 @@ export default function SecurityCompliance() {
             ensuring compliance with Apple’s official guidelines.
           </p>
 
-          <button className="mt-6 bg-white text-sm text-black font-medium font-lora pl-2 pr-5 py-1 rounded-lg shadow-sm transition relative">
+          <button className="mt-6 bg-white text-md text-black font-medium font-lora pl-2 pr-5 py-1 rounded-lg shadow-sm transition relative">
             Securely with AppDeploy
             <div className="absolute right-0 top-1/2 group -translate-y-1/2 translate-x-1/2">
               <img
                 src="/images/solution/downloadcircle.png"
                 alt=""
-                className="size-7 group-hover:size-8 duration-300"
+                className="size-8 group-hover:size-9 duration-300 cursor-pointer"
               />
             </div>
           </button>
@@ -65,7 +65,7 @@ export default function SecurityCompliance() {
               <div className="p-3 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
                 <img src={item.img} alt="" className="h-10 min-[1130px]:h-12" />
               </div>
-              <p className="ml-12 min-[1130px]:ml-16 text-base font-medium">
+              <p className="ml-12 min-[1130px]:ml-16 text-base font-medium font-lora">
                 {item.text}
               </p>
             </div>
@@ -84,7 +84,7 @@ export default function SecurityCompliance() {
                 <img src={item.img} alt="" className="h-12" />
               </div>
 
-              <p className="ml-16 text-lg font-medium">{item.text}</p>
+              <p className="ml-16 text-lg font-medium font-lora">{item.text}</p>
             </div>
           ))}
         </div>
@@ -96,7 +96,7 @@ export default function SecurityCompliance() {
           <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
             <img src="/images/solution/security1.png" alt="" className="h-12" />
           </div>
-          <p className="ml-16 text-lg  font-medium">
+          <p className="ml-16 text-lg  font-medium font-lora">
             Officially supported by Apple
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function SecurityCompliance() {
           <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
             <img src="/images/solution/security2.png" alt="" className="h-12" />
           </div>
-          <p className="ml-16 text-lg  font-medium">
+          <p className="ml-16 text-lg  font-medium font-lora">
             Easy revocation to prevent misuse
           </p>
         </div>
@@ -116,7 +116,7 @@ export default function SecurityCompliance() {
           <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
             <img src="/images/solution/security3.png" alt="" className="h-12" />
           </div>
-          <p className="ml-16 text-lg  font-medium">
+          <p className="ml-16 text-lg  font-medium font-lora">
             Audit-ready for compliance teams.
           </p>
         </div>
@@ -126,7 +126,7 @@ export default function SecurityCompliance() {
           <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
             <img src="/images/solution/security4.png" alt="" className="h-12" />
           </div>
-          <p className="ml-16 text-lg  font-medium">
+          <p className="ml-16 text-lg  font-medium font-lora">
             Secure code signing & license management.
           </p>
         </div>

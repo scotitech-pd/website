@@ -40,7 +40,7 @@ export default function WhyChooseScotiTech() {
       <div className="cursor-pointer ">
         <Link
           href="/contact"
-          className="bg-white font-karla font-semibold text-main-dark px-8 py-2 rounded-lg text-sm hover:text-white hover:bg-main/90 absolute top-0 transform -translate-y-1/2 left-1/2 -translate-x-1/2"
+          className="bg-white font-karla  font-semibold text-main-dark px-8 py-2 rounded-lg text-sm hover:text-white hover:bg-main/90 absolute top-0 transform -translate-y-1/2 left-1/2 -translate-x-1/2"
         >
           Get in touch
         </Link>

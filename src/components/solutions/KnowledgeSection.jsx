@@ -66,13 +66,12 @@ export default function KnowledgeSection() {
             {card.title}
           </h3>
 
-          <p className="text-white mb-8 leading-relaxed">{card.desc}</p>
+          <p className="text-white mb-8 leading-relaxed font-lora">{card.desc}</p>
 
           <a
             href={card.link ?? "#"}
-            className="absolute bottom-6 right-6 bg-white text-gray-900 text-sm font-semibold px-4 py-1 rounded-full shadow-md hover:bg-main-light hover:shadow-[0_0_10px_rgba(150,56,229,1)] duration-300 hover:text-white transition"
+            className="absolute font-karla bottom-6 right-6 bg-white text-gray-900 text-sm font-semibold px-4 py-1 rounded-full shadow-md hover:bg-main-light hover:shadow-[0_0_10px_rgba(150,56,229,1)] duration-300 hover:text-white transition"
           >
-            <img src="/images/solution/downloadblack.png" alt="" className="absolute size-8 top-1/2 left-1/2 -translate-1/2 z-0 opacity-20"/>            
             Download
           </a>
         </div>
