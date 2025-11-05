@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-
 const SpecificSolution = () => {
   const productCards = [
     {
@@ -46,7 +45,6 @@ const SpecificSolution = () => {
   return (
     <section className="relative  bg-[url('/images/contact/pattern-bg.png')] overflow-hidden py-12  lg:py-20 ">
       {/* Background Pattern */}
-     
 
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 ">
         {/* Title */}
@@ -149,13 +147,13 @@ const SpecificSolution = () => {
           </div>
 
           {/* Right Side - Products and Location */}
-          <div className="space-y-6 lg:space-y-8 overflow-hidden">
+          <div className="space-y-16 lg:space-y-8 overflow-hidden">
             {/* Product Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
               {productCards.map((card) => (
                 <div
                   key={card.id}
-                  className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition-shadow h-full flex flex-col"
+                  className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition-shadow h-full flex flex-col "
                 >
                   {/* Image Section */}
                   <div className="flex bg-black rounded-t-2xl overflow-hidden items-center justify-center h-20">

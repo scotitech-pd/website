@@ -78,24 +78,22 @@ const BeyondBusiness = () => {
             </div>
 
             {/* smal devices */}
-            <div className="px-12 lg:hidden w-10 "> 
+            <div className="px-12 lg:hidden w-10 ">
               <div className="lg:hidden p-6 space-y-4 ">
-            {/* Card 1 - Compassionate Companionship */}
-            <div className="bg-white rounded-2xl  shadow-lg">
-          
-              <div>
-                <h4 className="text-lg font-bold text-purple-900 mb-2">
-                  Compassionate Companionship
-                </h4>
-                <p className="text-sm text-gray-700">
-                  More than just assistance, we bring genuine human connection.
-                </p>
+                {/* Card 1 - Compassionate Companionship */}
+                <div className="bg-white rounded-2xl  shadow-lg">
+                  <div>
+                    <h4 className="text-lg font-bold text-purple-900 mb-2">
+                      Compassionate Companionship
+                    </h4>
+                    <p className="text-sm text-gray-700">
+                      More than just assistance, we bring genuine human
+                      connection.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-
-      </div>
-        
-          </div>
 
             {/* Feature Cards - Positioned on Right Side (Desktop) / Below (Mobile) */}
             <div className="hidden  lg:block absolute top-1/2   -right-[7.5%] -translate-y-1/2 w-[290px] min-[1190px]:w-[350px] min-[1260px]:w-[450px]  space-y-5">
