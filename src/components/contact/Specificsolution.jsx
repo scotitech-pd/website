@@ -44,16 +44,12 @@ const SpecificSolution = () => {
 
   return (
     <section className="relative  bg-[url('/images/contact/pattern-bg.png')] bg-no-repeat bg-center bg-cover  overflow-hidden py-12  lg:py-20 ">
-      {/* Background Pattern */}
-
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20  ">
-        {/* Title */}
         <h2 className="text-3xl lg:text-[48px] font-bold font-karla text-purple-900 text-center mb-8 lg:mb-16">
           Looking Our Specific Solutions?
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-[45%_51%] gap-5 min-[1400px]:gap-12 ">
-          {/* Left Side - Form */}
           <div className="bg-gradient-to-br from-[#000] to-[#3A3287] rounded-3xl p-6 lg:p-8 shadow-2xl  ">
             <div className="border-1 border-white p-6 border-opacity-20 rounded-md">
               <h3 className="text-2xl lg:text-3xl  font-karla text-white mb-6 lg:mb-8 ">
@@ -61,7 +57,6 @@ const SpecificSolution = () => {
               </h3>
 
               <div className="space-y-6">
-                {/* Name and Contact Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                   <div>
                     <label className="block text-white font-lora text-sm font-medium mb-2">
@@ -91,7 +86,7 @@ const SpecificSolution = () => {
                     />
                   </div>
                 </div>
-                {/* Email */}
+
                 <div>
                   <label className="block font-lora text-white text-sm font-medium mb-2">
                     Email
@@ -102,11 +97,10 @@ const SpecificSolution = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Your Email"
-                    valiadtion="email"
                     className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
                   />
                 </div>
-                {/* Company Name */}
+
                 <div>
                   <label className="block font-lora text-white text-sm font-medium mb-2">
                     Company Name
@@ -120,7 +114,7 @@ const SpecificSolution = () => {
                     className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
                   />
                 </div>
-                {/* Submit Button */}
+
                 <div className="flex justify-end pt-4">
                   <button
                     onClick={handleSubmit}
@@ -141,21 +135,19 @@ const SpecificSolution = () => {
                       />
                     </svg>
                   </button>
-                </div>{" "}
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Side - Products and Location */}
           <div className="space-y-16 lg:space-y-8 overflow-hidden">
-            {/* Product Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
               {productCards.map((card) => (
-                <div
-                  key={card.id}
-                  className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition-shadow h-full flex flex-col "
-                >
-                  {/* Image Section */}
+              <div
+  key={card.id}
+  className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition h-full flex flex-col mb-8 sm:mb-0"
+>
+
                   <div className="flex bg-black rounded-t-2xl overflow-hidden items-center justify-center h-20">
                     <img
                       src={card.image}
@@ -163,9 +155,8 @@ const SpecificSolution = () => {
                       className="w-full object-center"
                     />
                   </div>
+<div className="p-4 text-center pb-4">
 
-                  {/* Content */}
-                  <div className="p-4 text-center">
                     <h4 className="font-bold text-gray-800 mb-1">
                       {card.name}
                     </h4>
@@ -173,8 +164,7 @@ const SpecificSolution = () => {
                       {card.description}
                     </p>
                     <button
-                      className="bg-purple-700 shadow-[0_0_15px_3px_rgba(180,100,255,1)] text-nowrap
-          absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs px-4 py-2 rounded-full hover:bg-purple-800 transition-colors"
+                      className="bg-purple-700 shadow-[0_0_15px_3px_rgba(180,100,255,1)] text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs px-4 py-2 rounded-full hover:bg-purple-800 transition-colors"
                     >
                       Read more
                     </button>
@@ -183,15 +173,12 @@ const SpecificSolution = () => {
               ))}
             </div>
 
-            {/* Our Location */}
-
             <div className="bg-[#641070] h-full  shadow-[0_0_5px_3px_rgba(180,100,255,0.6)] rounded-3xl relative overflow-hidden lg:h-[53%] mt-10">
               <div className="grid lg:grid-cols-[28%_72%] lg:h-full ">
                 <div>
                   <h3 className="text-white text-xl font-bold p-4 px-7 font-lora">
                     Our Location
                   </h3>
-
                   <img
                     src="/images/contact/map.png"
                     alt=""
@@ -210,6 +197,7 @@ const SpecificSolution = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { Mail, PhoneCallIcon, TimerIcon } from "lucide-react";
 const contactDetails = [
   {
     icon: "/images/contact/location.png",
-    title: "123 Canary Wharf, London E14 5AB, United Kingdom",
+    title: "Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business Park, 1st, Motherwell ML1 4WR, United Kingdom",
     type: "location",
   },
   {
@@ -91,7 +91,7 @@ const GetInTouch = () => {
             </div>
 
             {/* ====== Contact Info Desktop ====== */}
-            <div className="hidden lg:grid grid-cols-4 items-start lg:gap-8 lg:pt-8 max-w-2xl">
+            <div className="hidden lg:grid grid-cols-4 items-start lg:gap-8 lg:pt-8 max-w-3xl">
               {contactDetails.map((item, index) => (
                 <ContactCardDesktop key={index} {...item} />
               ))}
@@ -102,7 +102,7 @@ const GetInTouch = () => {
           {/* Desktop version */}
           <div className="hidden lg:flex flex-col px-10 space-y-6">
             {valueCards.map((item, index) => (
-              <ValueCard key={index} icon={item.icon} text={item.text} />
+              <ValueCard key={index} icon={item.icon} text={item.text}  />
             ))}
           </div>
 
@@ -137,7 +137,7 @@ const ContactCardDesktop = ({ icon, title, subtitle }) => (
     <div className="bg-black p-4 rounded-full mb-3">
       <img src={icon} alt={title} className="w-4 h-4" />
     </div>
-    <div className="text-[12px] xxl:text-[16px] leading-tight font-lora">
+    <div className="text-[9px] text-justify xxl:text-[14px] leading-tight font-lora">
       <p className="font-semibold">{title}</p>
       {subtitle && <p>{subtitle}</p>}
     </div>
@@ -146,11 +146,11 @@ const ContactCardDesktop = ({ icon, title, subtitle }) => (
 
 // ✅ Desktop Value Card
 const ValueCard = ({ icon, text }) => (
-  <div className="bg-white w-[450px] h-[60px] xxl:w-[500px] xxl:h-[70px] lg:shadow-xl lg:hover:shadow-2xl lg:transition-shadow relative rounded-lg flex items-center p-4 pl-16">
+  <div className="bg-white z-5 w-[450px] h-[60px] xxl:w-[500px] xxl:h-[70px] lg:shadow-xl lg:hover:shadow-2xl lg:transition-shadow relative rounded-lg flex items-center p-4 pl-16">
     <div className="absolute shadow-[0_0_15px_3px_rgba(180,100,255,1)] bg-purple-100 p-5 -left-4 rounded-full flex-shrink-0 flex items-center justify-center transition-all duration-900">
       <img src={icon} alt="icon" className="w-8 h-8" />
     </div>
-    <p className="text-gray-800 font-lora font-bold xxl:text-[19px] text-base lg:py-5 lg:text-[16px]">
+    <p className="text-gray-800 font-lora font-semibold xxl:text-[15px] lg:pl-2 text-base lg:py-5 lg:text-[16px]">
       {text}
     </p>
   </div>
