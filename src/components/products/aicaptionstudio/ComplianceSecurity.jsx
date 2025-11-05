@@ -4,14 +4,14 @@ import React from "react";
 const ComplianceSecurity = () => {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat py-20 px-4 sm:px-8 md:px-12 lg:px-16"
+      className="relative bg-cover bg-center bg-no-repeat py-20 "
       style={{
         backgroundImage:
           "url('/images/products/aicaptionstudio/compliance-bg.png')",
       }}
     >
       {/* Translucent container */}
-      <div className="relative z-10 max-w-7xl mx-auto bg-white/10 backdrop-blur-[1px] border border-white/30 rounded-4xl shadow-[0_0_40px_8px_rgba(255,255,255,0.15),_inset_0_0_15px_rgba(255,255,255,0.05)] px-6 sm:px-10 md:px-12 py-14">
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 bg-white/10 backdrop-blur-[1px] border border-white/30 rounded-4xl shadow-[0_0_40px_8px_rgba(255,255,255,0.15),_inset_0_0_15px_rgba(255,255,255,0.05)] py-14">
         {/* Heading */}
         <div className=" mb-14">
           <h2 className="text-3xl sm:text-4xl  font-semibold text-white font-karla">

@@ -1,3 +1,4 @@
+import { CircleArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -10,7 +11,7 @@ const HeroSection = () => {
       }}
     >
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full py-10">
-        <p className="bg-main-dark font-semibold border-white border-[1px] text-white font-lora  px-3  py-2 rounded-lg w-fit my-5 min-[1200px]:my-7">
+        <p className="bg-main-dark font-semibold border-white border-[1px] text-white   px-3  py-2 rounded-lg w-fit my-5 min-[1200px]:my-7 font-karla">
           ScotiTech Solution
         </p>
 
@@ -27,9 +28,10 @@ const HeroSection = () => {
         <div className="p-1.5 border border-white w-fit rounded-lg mb-8">
           <Link
             href="/contact"
-            className="bg-white text-black cursor-pointer w-fit px-10 py-2 rounded-lg text-lg inline-block"
+            className="bg-white text-black cursor-pointer w-fit px-8 py-2 rounded-lg text-lg inline-flex items-center gap-2 font-karla group"
           >
             Get Started
+            <CircleArrowLeft className="size-5 rotate-180 transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>
       </div>

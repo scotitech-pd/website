@@ -1,16 +1,17 @@
 export default function AiCaptionHero() {
   return (
     <section
-      className="relative overflow-hidden text-white min-[1380px]:py-25 py-18 bg-cover bg-center "
+      className="relative overflow-hidden text-white min-[1380px]:py-25 py-18 bg-cover bg-center h-[700px] "
       style={{
         backgroundImage: "url('/images/products/aicaptionstudio/frontbg.png')", // replace with your image
       }}
     >
-      <div className="relative max-w-7xl mx-auto min-[1380px]:px-6 px-18 flex flex-col lg:flex-row items-center justify-between gap-8">
-        <div className="lg:w-2/3 space-y-6">
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20
+ min-[1380px]:px-6  flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="lg:w-2/3 space-y-6 z-20">
           <div className="text-5xl font-semibold relative w-fit">
             AI Caption Studio
-            <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 -left-5 text-nowrap ">
+            <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 -left-5 text-nowrap hidden md:block ">
               AI Caption Studio
             </p>
           </div>
@@ -37,11 +38,16 @@ export default function AiCaptionHero() {
         </div>
 
         {/* Right image mockup */}
-        <div className="lg:w-1/3 flex justify-start items-center relative">
+        <div className="lg:w-1/4 flex justify-start items-center ">
           <img
             src="/images/products/aicaptionstudio/frontmobile.png"
             alt=""
-            className="w-[90%] "
+            className="hidden lg:block w-[90%] "
+          />
+               <img 
+            src="/images/products/aicaptionstudio/frontmobile.png"
+            alt=""
+            className="lg:hidden block  absolute max-[579px]:-bottom-20 min-[580px]:-bottom-50 opacity-50 z-2 left-1/2 w-[200px] "
           />
         </div>
       </div>

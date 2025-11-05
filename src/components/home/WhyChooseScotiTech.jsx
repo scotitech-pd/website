@@ -40,7 +40,7 @@ export default function WhyChooseScotiTech() {
       <div className="cursor-pointer ">
         <Link
           href="/contact"
-          className="bg-white font-lora text-main-dark px-8 py-2 rounded-lg text-sm hover:text-white hover:bg-main/90 absolute top-0 transform -translate-y-1/2 left-1/2 -translate-x-1/2"
+          className="bg-white font-karla font-semibold text-main-dark px-8 py-2 rounded-lg text-sm hover:text-white hover:bg-main/90 absolute top-0 transform -translate-y-1/2 left-1/2 -translate-x-1/2"
         >
           Get in touch
         </Link>
@@ -49,10 +49,10 @@ export default function WhyChooseScotiTech() {
         {/* Left Content */}
         <div className="space-y-6 py-10 sm:py-20">
           <div className="relative  mt-5">
-            <p className="hidden font-karla min-[1100px]:flex text-[6rem] font-semibold text-gray-100/10 text-nowrap -z-0 w-fit absolute -left-4  -top-1 transform -translate-y-1/2">
+            <p className="hidden font-karla min-[1100px]:flex text-[6rem] tracking-wider font-semibold text-gray-100/10 text-nowrap -z-0 w-fit absolute -left-4  -top-1 transform -translate-y-1/2">
               Why Choose ScotiTech
             </p>
-            <h2 className="text-4xl font-karla font-semibold text-white">
+            <h2 className="text-5xl font-karla font-semibold text-white tracking-wider">
               Why Choose ScotiTech
             </h2>
           </div>

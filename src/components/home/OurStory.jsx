@@ -16,12 +16,12 @@ const OurStory = () => {
         <div className="grid min-[1186px]:grid-cols-2 gap-10 items-center justify-center text-center ">
           {/* Left Content */}
           <div className="">
-            <h2 className="text-4xl font-bold mb-8 font-lora  ">Our Story</h2>
-            <h3 className="text-3xl font-semibold font-karla mb-3 sm:mb-6">
+            <h2 className="text-4xl font-bold mb-8 font-karla tracking-wider ">Our Story</h2>
+            <h3 className="text-3xl font-semibold font-lora mb-3 sm:mb-6 tracking-wider">
               From a Solo Vision to <span className="text-main">Global</span>{" "}
               Impact
             </h3>
-            <p className="text-lg leading-6 font-lora min-[1160px]:w-[80%] mx-auto text-justify sm:text-center">
+            <p className="text-lg leading-6.5 font-lora min-[1160px]:w-[80%] mx-auto text-justify sm:text-center">
               At <span className="text-main-dark font-semibold">ScotiTech</span>
               , the journey began with a single founder and a simple belief:
               technology should empower, not overwhelm. What started as a
@@ -38,7 +38,7 @@ const OurStory = () => {
               className="rounded-xl shadow-lg min-[1186px]:max-w-full  min-[880px]:max-w-[780px]  mx-auto"
             />
             <div className="hidden min-[1225px]:flex absolute -top-10 left-1/2 -translate-x-1/2 bg-white shadow-2xl rounded-xl px-6 py-4 w-[90%] md:w-[80%] text-center border border-purple-100">
-              <p className="text-black text-lg leading-6">
+              <p className="text-black text-[15px] leading-6 tracking-wide">
                 ScotiTech was built to cut through complexity, creating lean,
                 simple tools that flip the script: people drive the technology,
                 the technology doesn't drive them.
@@ -64,7 +64,7 @@ const OurStory = () => {
               <div className="absolute top-0 left-1/2  max-[1333px]:-translate-y-1/2 max-[1333px]:-translate-x-1/2 min-[1333px]:top-4 min-[1333px]:left-10  w-[90%] min-[1333px]:w-[100%] text-nowrap text-center bg-white text-main font-semibold rounded-full min-[1310px]:px-5 py-2 shadow-[0_0_25px_rgba(128,128,128,0.9)]">
                 {card.title}
               </div>
-              <p className="mt-4 min-[1333px]:mt-12 text-[15px] text-center text-white font-lora leading-relaxed">
+              <p className="mt-4 min-[1333px]:mt-12 text-[14px] lg:py-2 text-center text-white font-lora leading-relaxed">
                 {card.text}
               </p>
             </div>

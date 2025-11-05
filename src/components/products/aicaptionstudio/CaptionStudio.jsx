@@ -21,12 +21,13 @@ const CaptionStudio = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto ">
-      <section className="relative w-full py-16 px-4 sm:px-6 lg:px-12 bg-white">
+    <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20
+ ">
+      <section className="relative w-full py-16   bg-white">
         <h4 className="lg:text-3xl font-karla  min-[1570px]:text-7xl font-semibold text-[#641171] mb-4">
           What is AI Caption Studio?
         </h4>
-        <p className="text-black min-[1570px]:text-[24px] text-[18px] min-[1570px]:mb-3 font-medium mb-12 max-w-4xl font-lora ">
+        <p className="text-black min-[1570px]:text-[24px] text-[18px] min-[1570px]:mb-3 font-medium mb-12  font-lora ">
           Unlike basic text editors or manual brainstorming, AI Caption Studio
           is an intelligent content partner built for anyone who wants to win on
           social media.

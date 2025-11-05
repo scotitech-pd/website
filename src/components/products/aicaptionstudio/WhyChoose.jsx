@@ -29,11 +29,11 @@ const features = [
 
 export default function WhyChooseOpsly() {
   return (
-    <section className="relative py-20 px-6 text-center text-white overflow-hidden font-lora">
+    <section className="relative py-20  text-center text-white overflow-hidden font-lora">
       {/* Background network effect */}
       <div className="absolute inset-0 bg-[url('/images/products/opsly/whybg.png')] bg-cover bg-center pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <h2 className="text-[40px] font-semibold mb-3 font-karla">
           Why Choose AI Caption Studio?
         </h2>

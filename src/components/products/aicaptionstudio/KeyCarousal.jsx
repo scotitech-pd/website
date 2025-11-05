@@ -11,12 +11,12 @@ import "swiper/css";
 const FeaturesCarousel = () => {
   const swiperRef = useRef(null);
 
-  // Replace these paths with your actual image paths
+
 
   const features = [
     {
       title: "Instant AI Caption Generation",
-      icon: "images/products/aicaptionstudio/instant.png",
+      icon: "/images/products/aicaptionstudio/instant.png",
       description:
         "Upload an image or describe a topic, and our AI generates a variety of engaging captions tailored to your needs—from witty to professional.",
       gradient: "from-[#E9A74E] to-[#835E2C]",
@@ -24,7 +24,7 @@ const FeaturesCarousel = () => {
     },
     {
       title: "Content Scheduler Integration (Premium)",
-      icon: "images/products/aicaptionstudio/integration.png",
+      icon: "/images/products/aicaptionstudio/integration.png",
       description:
         "Plan and schedule your posts directly from the app, creating a seamless workflow from idea to publication.",
       gradient: "from-[#F58356] to-[#8F4C32]",
@@ -32,7 +32,7 @@ const FeaturesCarousel = () => {
     },
     {
       title: "Smart Hashtag Recommendations",
-      icon: "images/products/aicaptionstudio/smart.png",
+      icon: "/images/products/aicaptionstudio/smart.png",
       description:
         "Get suggestions for trending, relevant, and niche hashtags to ensure your content reaches the right audience and maximizes engagement.",
       gradient: "from-[#F58356] to-[#8F4C32]",
@@ -40,7 +40,7 @@ const FeaturesCarousel = () => {
     },
     {
       title: "Content Repurposing Tools",
-      icon: "images/products/aicaptionstudio/content.png",
+      icon: "/images/products/aicaptionstudio/content.png",
       description:
         "Turn blog posts, video scripts, or key points into perfectly sized, platform-optimized social media updates.",
       gradient: "from-[#EB4F5B] to-[#852D33]",
@@ -48,7 +48,7 @@ const FeaturesCarousel = () => {
     },
     {
       title: "Tone & Style Customization",
-      icon: "images/products/aicaptionstudio/tone.png",
+      icon: "/images/products/aicaptionstudio/tone.png",
       description:
         "Select from tones like 'Inspirational', 'Humorous', 'Professional', or 'Casual' to maintain perfect brand consistency.",
       gradient: "from-[#548BC3] to-[#28425D]",
@@ -79,7 +79,7 @@ const FeaturesCarousel = () => {
 
         <div className="relative  mb-12 px-16">
           <div className=" absolute  -top-6  left-14 min-w-[650px]  pointer-events-none">
-            <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter  text-gray-900/40 opacity-50">
+            <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter  text-gray-900/10 opacity-50">
               Key Features
             </p>
           </div>

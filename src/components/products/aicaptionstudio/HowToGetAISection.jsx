@@ -1,12 +1,12 @@
 const HowToGetAISection = () => {
   return (
     <section
-      className="relative bg-cover bg-no-repeat py-20 px-4 sm:px-8 md:px-12 lg:px-16"
+      className="relative bg-cover bg-no-repeat py-20 "
       style={{
         backgroundImage: "url('/images/products/aicaptionstudio/how-bg.png')",
       }}
     >
-      <div className="relative z-10 text-center max-w-7xl mx-auto">
+      <div className="relative z-10 text-center max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl font-bold text-[#641171] font-karla">
           How to Get AI Caption Studio?
@@ -19,7 +19,7 @@ const HowToGetAISection = () => {
         {/* 3 Column Grid */}
         <div className="grid grid-cols-1 [@media(min-width:1100px)]:grid-cols-3 gap-6 justify-items-center">
           {/* Card 1 */}
-          <div className="bg-[#B8E4FF] rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 w-[340px] py-8 px-4 text-center">
+          <div className="bg-[#B8E4FF] rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 w-[340px] py-8  text-center">
             <div className="flex justify-center mb-6">
               <img
                 src="/images/products/aicaptionstudio/logo.png"
