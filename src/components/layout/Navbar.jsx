@@ -212,7 +212,7 @@ const Navbar = () => {
                     <div
                       className={`duration-300 px-1.5 py-0.5 rounded-lg transition-all cursor-pointer flex items-center gap-1 ${
                         pathname.includes("/ourproducts") &&
-                        "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                        "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)] "
                       }`}
                     >
                       {item.title}
@@ -264,7 +264,7 @@ const Navbar = () => {
                     href={item.link}
                     className={`duration-300 px-1.5 py-0.5 rounded-lg transition-all ${
                       item.link == pathname &&
-                      "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                      "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)] font-karla"
                     }`}
                   >
                     {item.title}

@@ -7,7 +7,7 @@ const BeyondBusiness = () => {
       bg: "bg-[#e4ebec]",
       title: "Empowering Independence",
       text: "From daily tools to digital literacy, empowers shininess to thrive.",
-      icon: "/images/contact/handshake-icon.png",
+      icon: "/images/contact/independence-icon.png",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const BeyondBusiness = () => {
       bg: "bg-[#e4ebec]",
       title: "Community Driven Care",
       text: "Bringing elders and caregivers together to build a sense of belonging and trust.",
-      icon: "/images/contact/handshake-icon.png",
+      icon: "/images/contact/heart-icon.png",
     },
   ];
 
@@ -35,6 +35,11 @@ const BeyondBusiness = () => {
           className="w-full h-full object-cover -z-10"
         />
       </div>
+    <div className="relative ">
+          <div className="absolute -top-20 -left-[390px]   ">
+            <img src="/images/contact/bb_blush.png" alt="" className=" " />
+          </div>
+        </div>
 
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 lg:px-24 overflow-hidden">
         {/* Header Section */}
@@ -48,12 +53,7 @@ const BeyondBusiness = () => {
             <span className="text-purple-300 font-semibold">ElderConect+</span>
           </p>
         </div>
-        <div className="relative ">
-          <div className="absolute -top-20 -left-[390px]   ">
-            <img src="/images/contact/bb_blush.png" alt="" className=" " />
-          </div>
-        </div>
-
+    
         {/* Main Content Card */}
         <div className="relative mb-8 lg:mb-12 lg:grid lg:grid-cols-[80%_20%]">
           {/* Main Image - Full Width */}
@@ -78,22 +78,7 @@ const BeyondBusiness = () => {
             </div>
 
             {/* smal devices */}
-            <div className="px-12 lg:hidden w-10 ">
-              <div className="lg:hidden p-6 space-y-4 ">
-                {/* Card 1 - Compassionate Companionship */}
-                <div className="bg-white rounded-2xl  shadow-lg">
-                  <div>
-                    <h4 className="text-lg font-bold text-purple-900 mb-2">
-                      Compassionate Companionship
-                    </h4>
-                    <p className="text-sm text-gray-700">
-                      More than just assistance, we bring genuine human
-                      connection.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          
 
             {/* Feature Cards - Positioned on Right Side (Desktop) / Below (Mobile) */}
             <div className="hidden  lg:block absolute top-1/2   -right-[7.5%] -translate-y-1/2 w-[290px] min-[1190px]:w-[350px] min-[1260px]:w-[450px]  space-y-5">
@@ -181,7 +166,7 @@ const BeyondBusiness = () => {
         </div>
 
         {/* Quote Section */}
-        <div className="text-center lg:text-left text-white mb-8 lg:mb-12 max-w-3xl mx-auto lg:mx-0">
+        <div className="text-center lg:text-left w-full text-white mb-8 lg:mb-12 max-w-3xl mx-auto lg:mx-0">
           <p className="text-lg lg:text-md leading-relaxed font-lora mb-6 lg:mb-8">
             "At ElderConnect+, we believe that no should feel left behind. Our
             Goal to empower live independent while still feeling connected the
@@ -190,10 +175,10 @@ const BeyondBusiness = () => {
         </div>
 
         {/* Bottom Section - Author & CTAs */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 max-w-5xl mx-auto lg:mx-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8  mx-auto lg:mx-0">
           {/* Author Info */}
           <div className="flex items-center gap-4 text-white">
-            <div className="w-16 h-16 lg:w-20 lg:h-20  rounded-full overflow-hidden border-4 border-white/30 flex-shrink-0">
+            <div className=" lg:h-20  rounded-full overflow-hidden border-4 border-white/30 flex-shrink-0">
               <img
                 src="/images/contact/daniel-avatar.png"
                 alt="Daniel Chapman"
@@ -212,7 +197,7 @@ const BeyondBusiness = () => {
             <button className="bg-white cursor-pointer text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-50 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl whitespace-nowrap">
               Learn More About ElderConnect
             </button>
-            <button className="bg-purple-100 animate-bounce cursor-pointer text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-200 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl flex items-center justify-center gap-2 whitespace-nowrap">
+            <button className="bg-purple-100 animate-pulse  cursor-pointer text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-200 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl flex items-center justify-center gap-2 whitespace-nowrap">
               <img
                 src="/images/contact/download-icon.png"
                 alt="Download"
