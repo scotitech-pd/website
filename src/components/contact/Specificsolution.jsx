@@ -185,8 +185,8 @@ const SpecificSolution = () => {
 
             {/* Our Location */}
 
-            <div className="bg-[#641070]  shadow-[0_0_5px_3px_rgba(180,100,255,0.6)] rounded-3xl relative overflow-hidden h-[53%] mt-10">
-              <div className="grid grid-cols-[28%_72%] h-full">
+            <div className="bg-[#641070] h-full  shadow-[0_0_5px_3px_rgba(180,100,255,0.6)] rounded-3xl relative overflow-hidden lg:h-[53%] mt-10">
+              <div className="grid lg:grid-cols-[28%_72%] lg:h-full ">
                 <div>
                   <h3 className="text-white text-xl font-bold p-4 px-7 font-lora">
                     Our Location
@@ -195,10 +195,10 @@ const SpecificSolution = () => {
                   <img
                     src="/images/contact/map.png"
                     alt=""
-                    className="w-[300px] absolute left-4 z-20"
+                    className="w-[300px] absolute left-4 z-20 hidden lg:block "
                   />
                 </div>
-                <div className="relative bg-yellow h-full w-full overflow-hidden rounded-br-3xl rounded-tr-3xl">
+                <div className="relative bg-yellow h-full w-full overflow-hidden lg:rounded-br-3xl lg:rounded-tr-3xl">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.623166576868!2d-3.988694250583647!3d55.834499785250266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48886b87a77511b5%3A0x7521eb0d82bb9471!2sRegus%20-%20Lanarkshire%20Eurocentral!5e0!3m2!1sen!2sin!4v1762327836004!5m2!1sen!2sin"
                     className="w-full h-full"

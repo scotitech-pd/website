@@ -72,10 +72,10 @@ const GetInTouch = () => {
           {/* ================= LEFT SECTION ================= */}
           <div className="text-white space-y-8">
             <div>
-              <h1 className="text-4xl lg:text-4xl xxl:text-5xl font-karla font-bold mb-4 lg:mb-6">
+              <h1 className="text-3xl lg:text-4xl xxl:text-5xl font-karla font-bold mb-4 lg:mb-6">
                 Get in Touch
               </h1>
-              <p className="text-base lg:text-[16px] xxl:text-lg leading-relaxed max-w-2xl tracking-wider font-lora">
+              <p className="text-sm lg:text-[16px] xxl:text-lg leading-relaxed max-w-2xl lg:tracking-wider font-lora">
                 Ready to find reliable support and genuine companionship? We're
                 here to answer your questions about the ElderConnect+ app and
                 tailor services for you or your loved one. Let's start the
@@ -162,7 +162,7 @@ const ValueSection = ({ valueCards }) => (
     {/* For screens below 500px */}
     <div className="block sm:hidden">
       <div className="text-center p-6">
-        <p className="text-4xl font-semibold font-karla">Our Values</p>
+        <p className="text-3xl font-semibold font-karla">Our Values</p>
       </div>
       {valueCards.map((item, i) => (
         <div

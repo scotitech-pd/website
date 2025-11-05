@@ -73,17 +73,17 @@ export default function Timeline() {
 
               {/* Year badge */}
               <div className="absolute left-0 top-0 w-24 h-24 bg-[#641171] rounded-full flex items-center justify-center">
-                <span className="text-white text-3xl font-bold">
+                <span className="text-white text-3xl font-bold font-karla">
                   {item.year}
                 </span>
               </div>
 
               {/* Content card */}
               <div className="bg-[#FBDFFF] rounded-xl p-6">
-                <h3 className="text-xl font-bold text-black mb-2">
+                <h3 className="text-xl font-bold text-black mb-2 font-karla">
                   {item.title}
                 </h3>
-                <p className="text-black text-sm leading-relaxed">
+                <p className="text-black text-sm leading-relaxed font-lora">
                   {item.description}
                 </p>
               </div>
@@ -113,17 +113,17 @@ export default function Timeline() {
                     <div className="flex items-start relative">
                       {/* Year Circle */}
                       <div className="w-20 h-20 absolute  z-20 -top-10 bg-[#641171] rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-2xl font-bold">
+                        <span className="text-white text-2xl font-bold font-karla">
                           {item.year}
                         </span>
                       </div>
 
                       {/* Content Card */}
                       <div className="ml-8 bg-[#FBDFFF] z-10 rounded-2xl p-8 pl-16 min-w-[400px]">
-                        <h3 className="text-xl font-bold text-black mb-2">
+                        <h3 className="text-xl font-bold text-black mb-2 font-karla">
                           {item.title}
                         </h3>
-                        <p className="text-black text-sm leading-relaxed">
+                        <p className="text-black text-sm leading-relaxed font-lora">
                           {item.description}
                         </p>
                       </div>
