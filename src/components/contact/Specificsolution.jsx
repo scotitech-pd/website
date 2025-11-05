@@ -43,10 +43,10 @@ const SpecificSolution = () => {
   };
 
   return (
-    <section className="relative  bg-[url('/images/contact/pattern-bg.png')] overflow-hidden py-12  lg:py-20 ">
+    <section className="relative  bg-[url('/images/contact/pattern-bg.png')] bg-no-repeat bg-center bg-cover  overflow-hidden py-12  lg:py-20 ">
       {/* Background Pattern */}
 
-      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 ">
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20  ">
         {/* Title */}
         <h2 className="text-3xl lg:text-[48px] font-bold font-karla text-purple-900 text-center mb-8 lg:mb-16">
           Looking Our Specific Solutions?
@@ -198,12 +198,15 @@ const SpecificSolution = () => {
                     className="w-[300px] absolute left-4 z-20"
                   />
                 </div>
-                <div className="relative bg-yellow h-full w-full">
-                  <img
-                    src="/images/contact/map1.png"
-                    alt=""
+                <div className="relative bg-yellow h-full w-full overflow-hidden rounded-br-3xl rounded-tr-3xl">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.623166576868!2d-3.988694250583647!3d55.834499785250266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48886b87a77511b5%3A0x7521eb0d82bb9471!2sRegus%20-%20Lanarkshire%20Eurocentral!5e0!3m2!1sen!2sin!4v1762327836004!5m2!1sen!2sin"
                     className="w-full h-full"
-                  />
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
             </div>

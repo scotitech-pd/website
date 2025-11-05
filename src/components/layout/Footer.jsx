@@ -147,7 +147,9 @@ const Footer = () => {
           <div className="m t-5 min-[1047px]:mt-0 grid grid-cols-2 min-[570px]:grid-cols-3 min-[700px]:grid-cols-[25%_25%_25%_25%] text-justify">
             {/* Navigation */}
             <div className="z-0 max-[570px]:mx-auto">
-              <h5 className=" text font-semibold pb-3 font-karla">Quick Links</h5>
+              <h5 className=" text font-semibold pb-3 font-karla">
+                Quick Links
+              </h5>
               <ul className=" w-full ml-auto">
                 {footer_links.map((item, id) => {
                   return (
@@ -166,7 +168,9 @@ const Footer = () => {
 
             {/* Services */}
             <div className="z-0 max-[570px]:mx-auto">
-              <h5 className=" text font-semibold pb-3 font-karla">Our Products</h5>
+              <h5 className=" text font-semibold pb-3 font-karla">
+                Our Products
+              </h5>
               <ul className=" w-full ml-auto">
                 {Services.map((item, id) => {
                   return (
@@ -236,7 +240,7 @@ const Footer = () => {
             <p className="text-left font-lora">
               Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business
               Park, 1st, Motherwell ML1 4WR, United Kingdom
-            </p> 
+            </p>
             <p className="mt-1 font-lora">+44 (0) 1698 708203</p>
             <p className="font-lora">info@scotitech.com</p>
           </div>
@@ -252,23 +256,30 @@ const Footer = () => {
         <div className="relative text-sm h-fit mb-5">
           <div className="flex items-center justify-center relative h-fit">
             <div className="text-center font-lora">
-              Copyright <Copyright className="mx-1 size-3.5 inline" /> 2025 ScotiTech
-              Solutions.{" "}
-              <span className="max-[415]:block font-lora"> All Rights Reserved.</span>
+              Copyright
+              <Copyright className=" mx-1 size-3.5 inline" />{" "}
+              {new Date().getFullYear()} ScotiTech Solutions.{" "}
+              <span className="max-[415px]:block font-lora">
+                All Rights Reserved.
+              </span>
             </div>
           </div>
 
           <div className="min-[790px]:hidden   font-bold  font-karla flex justify-center items-center mt-1">
             Powered by
             <Link href="/">
-              <p className="cursor-pointer font-bold  font-karla  text-[#F58634] ml-1">Spacelinkers</p>{" "}
+              <p className="cursor-pointer font-bold  font-karla  text-[#F58634] ml-1">
+                Spacelinkers
+              </p>{" "}
             </Link>
           </div>
 
           <div className="hidden min-[790px]:flex absolute right-5 top-0 font-karla">
             Powered by
             <Link href="/">
-              <p className="cursor-pointer font-bold  font-karla text-[#F58634] ml-1">Spacelinkers Infotech</p>{" "}
+              <p className="cursor-pointer font-bold  font-karla text-[#F58634] ml-1">
+                Spacelinkers Infotech
+              </p>{" "}
             </Link>
           </div>
         </div>
