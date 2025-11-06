@@ -1,3 +1,6 @@
+"use client";
+import { CloudDownload, NotepadText } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const BeyondBusiness = () => {
@@ -20,190 +23,154 @@ const BeyondBusiness = () => {
       id: 3,
       bg: "bg-[#e4ebec]",
       title: "Community Driven Care",
-      text: "Bringing elders and caregivers together to build a sense of belonging and trust.",
+      text: "Building belonging, trust and joyful interactions for elders.",
       icon: "/images/contact/heart-icon.png",
     },
   ];
 
   return (
-    <section className="relative  py-12 px-4 lg:py-20  overflow-hidden">
-      {/* Background Image */}
+    <section className="relative py-12 px-4 lg:py-20 overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0 -z-10">
         <img
           src="/images/contact/bb_bg.png"
-          alt="background image of dark blue color"
-          className="w-full h-full object-cover -z-10"
+          alt=""
+          className="w-full h-full object-cover"
         />
       </div>
-    <div className="relative ">
-          <div className="absolute -top-20 -left-[390px]   ">
-            <img src="/images/contact/bb_blush.png" alt="" className=" " />
-          </div>
-        </div>
 
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 lg:px-24 overflow-hidden">
-        {/* Header Section */}
-        <div className="relative max-w-7xl text-white mb-8 lg:mb-12">
-          <h1 className="text-3xl lg:text-[35px] text-[#b5ddff] font-karla font-bold mb-4 lg:mb-2">
+      {/* Left blush graphic */}
+      <div className="absolute -top-20 -left-[390px] opacity-60">
+        <img src="/images/contact/bb_blush.png" alt="" />
+      </div>
+
+      <div className="max-w-8xl mx-auto px-5 md:px-20 lg:px-24">
+        {/* Heading */}
+        <div className="text-white mb-8 lg:mb-12">
+          <h1 className="text-3xl lg:text-[35px] text-[#b5ddff] font-karla font-bold mb-3">
             Beyond Business: A Heart for Every Generation
           </h1>
-          <p className="text-base font-karla lg:text-[17px] max-w-4xl lg:mx-0 mx-auto">
-            While ScotiTech build the future of digital experience, our
-            compliment social impact shine brought through{" "}
-            <span className="text-purple-300 font-semibold">ElderConect+</span>
+          <p className="text-base lg:text-[17px] font-lora max-w-4xl">
+            While ScotiTech builds the future of digital experience, our
+            compliment social impact shines through{" "}
+            <span className="text-[#98F9FF] font-semibold">
+              ElderConnect+
+            </span>
           </p>
         </div>
-    
-        {/* Main Content Card */}
-        <div className="relative mb-8 lg:mb-12 lg:grid lg:grid-cols-[80%_20%]">
-          {/* Main Image - Full Width */}
-          <div className="relative w-[120%] h-[400px] lg:h-full ">
+
+        {/* Main grid */}
+        <div className="relative mb-10 lg:mb-16 lg:grid lg:grid-cols-[80%_20%]">
+
+          {/* ✅ MOBILE TITLE FIXED */}
+         
+
+          {/* ✅ FIXED IMAGE WITHOUT TOUCHING DESKTOP */}
+          <div className="relative w-full lg:w-[120%] lg:h-auto">
             <img
               src="/images/contact/elderly-care.png"
               alt="Elderly Care"
-              className="w-[85%] min-[1190px]:w-[90%] min-[1330px]:w-full h-full object-contain"
+              className="w-full h-auto object-cover rounded-2xl mx-auto"
             />
+             <h3 className="lg:hidden text-center text-white  font-semibold text-lg mt-4 font-karla">
+            ElderConnect: Bridging Gaps, Building Joy.
+          </h3>
 
-            {/* Overlay Text Box - Bottom Left on Desktop, Centered on Mobile */}
-            <div className="absolute hidden lg:block bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-md lg:left-12 lg:translate-x-0 lg:bottom-12 lg:max-w-lg bg-black/50 backdrop-blur-md rounded-2xl p-6 lg:p-8">
-              <h3 className="text-xl lg:text-[18px] font-bold text-white mb-3 lg:mb-4">
+            {/* ✅ DESKTOP OVERLAY BOX stays SAME */}
+            <div className="hidden min-[1028px]:block absolute bottom-12 left-12 min-[1300px]:max-w-[500px] min-[1024px]:max-w-[300px]   bg-black/80 backdrop-blur-md rounded-2xl p-8">
+              <h3 className="text-xl lg:text-xl font-bold text-white/80 mb-3 font-karla min-[1024px]:text-xs" >
                 ElderConnect: Bridging Gaps, Building Joy.
               </h3>
-              <p className="text-sm lg:text-[12px] text-gray-200 leading-relaxed">
-                At ScotiTech we believe technology should empower everyone are
-                Through our ElerConnect+ app, are revolution vibrant
-                communities, can communities and ensuring live stomached,
-                independent, and fulfilling lives.
+              <p className="lg:text-sm min-[1024px]:text-xs text-gray-200 leading-relaxed font-lora">
+                At ScotiTech we believe technology should empower everyone.
+                Through our ElderConnect+ app, we build vibrant communities and
+                support independent living.
               </p>
             </div>
 
-            {/* smal devices */}
-          
-
-            {/* Feature Cards - Positioned on Right Side (Desktop) / Below (Mobile) */}
-            <div className="hidden  lg:block absolute top-1/2   -right-[7.5%] -translate-y-1/2 w-[290px] min-[1190px]:w-[350px] min-[1260px]:w-[450px]  space-y-5">
+            {/* ✅ DESKTOP CARD STACK stays SAME */}
+            <div className="hidden lg:block absolute top-1/2 -right-[9%] -translate-y-1/2 w-[330px] space-y-5">
               {contactCards.map((card) => (
                 <div
                   key={card.id}
-                  className={`${card.bg} backdrop-blur-sm rounded-2xl gap-2 flex items-center shadow-xl`}
+                  className={`${card.bg} rounded-2xl flex items-center gap-3 shadow-xl p-2`}
                 >
-                  <div className="bg-white p-2 min-[1190px]:p-5 rounded-xl flex-shrink-0 hover:shadow-2xl transition-all hover:scale-105">
+                  <div className="bg-white p-4 rounded-xl">
                     <img src={card.icon} alt={card.title} className="size-10" />
                   </div>
-                  <div className="py-1 min-[1190px]:py-2">
-                    <h4 className="text-[13px] min-[1190px]:text-[15px] font-bold text-purple-900 min-[1190px]:mb-1">
+                  <div>
+                    <h4 className="text-[15px] font-bold text-purple-900 mb-1 font-karla">
                       {card.title}
                     </h4>
-                    <p className="text-[11px] min-[1190px]:text-[12px] text-gray-700">
-                      {card.text}
-                    </p>
+                    <p className="text-[12px] text-gray-700 font-lora">{card.text}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Feature Cards - Mobile Version (Below Image) */}
-          <div className="lg:hidden p-6 space-y-4">
-            {/* Card 1 - Compassionate Companionship */}
-            <div className="bg-white rounded-2xl p-5 flex items-start gap-4 shadow-lg">
-              <div className="bg-blue-50 p-3 rounded-xl flex-shrink-0">
-                <img
-                  src="/images/contact/handshake-icon.png"
-                  alt="Handshake"
-                  className="w-10 h-10"
-                />
-              </div>
-              <div>
-                <h4 className="text-lg font-bold text-purple-900 mb-2">
-                  Compassionate Companionship
-                </h4>
-                <p className="text-sm text-gray-700">
-                  More than just assistance, we bring genuine human connection.
-                </p>
-              </div>
-            </div>
+          {/* ✅ MOBILE / TABLET CARD ROW FIXED */}
+          <div className="lg:hidden mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {contactCards.map((card) => (
+              <div
+                key={card.id}
+                className="bg-white rounded-2xl p-5 flex flex-col items-center text-center shadow-lg"
+              >
+                <div className="bg-purple-50 p-4 rounded-xl mb-3">
+                  <img
+                    src={card.icon}
+                    alt={card.title}
+                    className="w-10 h-10"
+                  />
+                </div>
 
-            {/* Card 2 - Empowering Independence */}
-            <div className="bg-white rounded-2xl p-5 flex items-start gap-4 shadow-lg">
-              <div className="bg-purple-50 p-3 rounded-xl flex-shrink-0">
-                <img
-                  src="/images/contact/independence-icon.png"
-                  alt="Independence"
-                  className="w-10 h-10"
-                />
-              </div>
-              <div>
-                <h4 className="text-lg font-bold text-purple-900 mb-2">
-                  Empowering Independence:
+                <h4 className="text-lg font-bold text-purple-900 mb-1 font-karla">
+                  {card.title}
                 </h4>
-                <p className="text-sm text-gray-700">
-                  From daily tools to digital literacy, empowering shininess to
-                  thrive.
-                </p>
-              </div>
-            </div>
 
-            {/* Card 3 - Community Driven Care */}
-            <div className="bg-white rounded-2xl p-5 flex items-start gap-4 shadow-lg">
-              <div className="bg-teal-50 p-3 rounded-xl flex-shrink-0">
-                <img
-                  src="/images/contact/heart-icon.png"
-                  alt="Heart"
-                  className="w-10 h-10"
-                />
+                <p className="text-sm text-gray-700 font-lora">{card.text}</p>
               </div>
-              <div>
-                <h4 className="text-lg font-bold text-purple-900 mb-2">
-                  Community. Driven Care:
-                </h4>
-                <p className="text-sm text-gray-700">
-                  Simple grace stirs muses, built for handful impact
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Quote Section */}
-        <div className="text-center lg:text-left w-full text-white mb-8 lg:mb-12 max-w-3xl mx-auto lg:mx-0">
-          <p className="text-lg lg:text-md leading-relaxed font-lora mb-6 lg:mb-8">
-            "At ElderConnect+, we believe that no should feel left behind. Our
-            Goal to empower live independent while still feeling connected the
-            world around. we're just the service-community"
+        {/* Quote */}
+        <div className="text-center lg:text-left w-full text-white max-w-3xl mx-auto lg:mx-0 mb-3 lg:mb-10">
+          <p className="lg:text-lg text-sm leading-relaxed font-lora">
+            "At ElderConnect+, we believe no one should feel left behind. Our
+            goal is to help seniors live independently while staying connected
+            with the world."
           </p>
         </div>
 
-        {/* Bottom Section - Author & CTAs */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8  mx-auto lg:mx-0">
-          {/* Author Info */}
+        {/* Author + CTA */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 ">
+          {/* Author */}
           <div className="flex items-center gap-4 text-white">
-            <div className=" lg:h-20  rounded-full overflow-hidden border-4 border-white/30 flex-shrink-0">
+            <div className="lg:h-20 lg:w-20 h-15 w-15 shrink-0 !rounded-full overflow-hidden border-4 border-white/30">
               <img
                 src="/images/contact/daniel-avatar.png"
                 alt="Daniel Chapman"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover "
               />
             </div>
-            <div>
-              <p className="text-md lg:text-[16px] xxl:!text-[20px] font-karla font-semibold text-[#98F9FF]">
-                - Daniel Chapman, Director and Co-founder
-              </p>
-            </div>
+            <p className="lg:text-lg text-sm font-karla font-semibold text-[#98F9FF]">
+              - Daniel Chapman, Director and Co-founder
+            </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col  sm:flex-row gap-4 lg:ml-8 w-full lg:w-auto ">
-            <button className="bg-white cursor-pointer text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-50 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl whitespace-nowrap">
-              Learn More About ElderConnect
-            </button>
-            <button className="bg-purple-100 animate-pulse  cursor-pointer text-purple-900 px-6 lg:px-4 py-3 rounded-full font-semibold text-sm lg:text-[13px] hover:bg-purple-200 transition-colors shadow-[0_0_15px_3px_rgba(180,100,255,1)] hover:shadow-xl flex items-center justify-center gap-2 whitespace-nowrap">
-              <img
-                src="/images/contact/download-icon.png"
-                alt="Download"
-                className="w-5 h-5"
-              />
-              Download the ElderConnect+ App
+          <div className="flex  sm:flex-row gap-4">
+         
+            <Link href="/products/elderconnect" passHref>
+              <button className="text-sm  lg:text-lg bg-white cursor-pointer hover:translate-y-[-2px] text-purple-900 px-3 lg:px-6 py-3 rounded-full font-semibold shadow-xl font-karla hover:bg-purple-50 transition">
+                Learn More
+              </button>
+            </Link>
+
+            <button className="text-sm lg:text-lg bg-purple-100 text-center text-purple-900 px-3 lg:px-6 py-3 rounded-full font-semibold shadow-xl hover:bg-purple-200 transition font-karla flex items-center gap-2">
+              <CloudDownload className="w-5 h-5" />
+              Download App
             </button>
           </div>
         </div>

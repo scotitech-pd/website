@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { MoveRightIcon, Send } from "lucide-react";
 
 const SpecificSolution = () => {
   const productCards = [
@@ -45,8 +46,8 @@ const SpecificSolution = () => {
   return (
     <section className="relative  bg-[url('/images/contact/pattern-bg.png')] bg-no-repeat bg-center bg-cover  overflow-hidden py-12  lg:py-20 ">
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20  ">
-        <h2 className="text-3xl lg:text-[48px] font-bold font-karla text-purple-900 text-center mb-8 lg:mb-16">
-          Looking Our Specific Solutions?
+        <h2 className="text-2xl lg:text-[48px] font-bold font-karla text-purple-900 text-center mb-8 lg:mb-16">
+          Looking for Specific Solutions?
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-[45%_51%] gap-5 min-[1400px]:gap-12 ">
@@ -118,36 +119,22 @@ const SpecificSolution = () => {
                 <div className="flex justify-end pt-4">
                   <button
                     onClick={handleSubmit}
-                    className="bg-white hover:shadow-[0_0_15px_3px_rgba(255,255,255,1)] cursor-pointer font-lora text-purple-900 px-8 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-purple-50 transition-all duration-500 ease-in-out"
+                    className="bg-white hover:shadow-[0_0_15px_3px_rgba(255,255,255,1)] cursor-pointer font-lora text-purple-900 px-5 py-2 lg:text-lg rounded-full font-semibold hover:bg-purple-50 transition-all duration-500 ease-in-out text-sm"
                   >
-                    Next
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 5l7 7-7 7M5 5l7 7-7 7"
-                      />
-                    </svg>
+                    Send
                   </button>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="space-y-16 lg:space-y-8 overflow-hidden">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+          <div className="space-y-16 mt-5 lg:mt-0 lg:space-y-8 overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 lg:gap-6">
               {productCards.map((card) => (
-              <div
-  key={card.id}
-  className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition h-full flex flex-col mb-8 sm:mb-0"
->
-
+                <div
+                  key={card.id}
+                  className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition h-full flex flex-col  mb-0"
+                >
                   <div className="flex bg-black rounded-t-2xl overflow-hidden items-center justify-center h-20">
                     <img
                       src={card.image}
@@ -155,17 +142,14 @@ const SpecificSolution = () => {
                       className="w-full object-center"
                     />
                   </div>
-<div className="p-4 text-center pb-4">
-
-                    <h4 className="font-bold text-gray-800 mb-1">
+                  <div className="py-4  text-center ">
+                    <h4 className="font-bold text-gray-800 mb-1 font-karla">
                       {card.name}
                     </h4>
-                    <p className="text-xs text-gray-600 mb-7">
+                    <p className="text-sm lg:text-[14px] text-gray-600 mb-7 font-lora">
                       {card.description}
                     </p>
-                    <button
-                      className="bg-purple-700 shadow-[0_0_15px_3px_rgba(180,100,255,1)] text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs px-4 py-2 rounded-full hover:bg-purple-800 transition-colors"
-                    >
+                    <button className="bg-purple-700 shadow-[0_0_15px_3px_rgba(180,100,255,1)] text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs lg:px-4 px-6 py-2 rounded-full hover:bg-purple-800 transition-colors font-karlas">
                       Read more
                     </button>
                   </div>
@@ -197,7 +181,6 @@ const SpecificSolution = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
