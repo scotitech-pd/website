@@ -38,7 +38,7 @@ const HeroScotitech = () => {
                   Request a Demo
                 </a>
               </div>
-              <div className="relative h-[157px] lg:hidden ">
+              <div className="relative h-[157px] lg:hidden max-[390000000000000000000000000000000000000000000000000000000000000000px]:hidden">
               <img src="/images/solution/imgs.png" alt="" className="max-w-[280px] py-5 ml-auto absolute -top-30 right-2 -z-10 opacity-20"/>
 
               </div>

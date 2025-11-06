@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function AppDeployComparison() {
   return (
-    <div className="bg-gradient-to-r from-[#202F5A] to-[#2A7559] text-white py-12 px-6 md:px-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-gradient-to-r from-[#202F5A] to-[#2A7559] text-white py-12 overflow-hidden">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
         <div className="text-left mb-12 font-karla text-3xl md:text-4xl ">
           <h2 className="font-bold">AppDeploy vs Traditional MDM:</h2>
           <p className="mt-2 font-bold">The Clear Winner</p>
@@ -61,9 +61,9 @@ export default function AppDeployComparison() {
                 ["Tracking", "Limited", "Real-time tracking"],
               ].map(([feature, jamf, appdeploy], idx) => (
                 <tr key={idx} className="hover:bg-gray-50 text-left overflow-hidden">
-                  <td className="px-6 py-4 font-medium text-grey">{feature}</td>
-                  <td className="px-6 py-4 text-grey">{jamf}</td>
-                  <td className="px-6 py-4 text-grey flex justify-between items-center min-[1011px]:w-[80%] gap-2">
+                  <td className="px-0.5 min-[490px]:px-6 py-4 font-medium text-grey">{feature}</td>
+                  <td className="px-0.5 min-[490px]:px-6 py-4 text-grey">{jamf}</td>
+                  <td className="px-0.5 min-[490px]:px-6 py-4 text-grey flex justify-between items-center min-[1011px]:w-[80%] min-[390px]:gap-2">
                     {appdeploy}
                     <img
                       src="/images/solution/tick.png"
