@@ -81,7 +81,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Quote Icon */}
-                    <Quote className="absolute top-8 left-8 text-gray-200 w-12 h-12" />
+                    <Quote className="absolute top-8 left-8 text-gray-200 w-12 h-12 rotate-180" />
 
                     {/* Text */}
                     <p className="text-main-dark mt-10 text-lg leading-relaxed font-medium font-karla">
@@ -90,7 +90,7 @@ export default function Testimonials() {
                     <p className="text-grey mt-6 text-lg italic font-lora">– {t.name}</p>
 
                     {/* Closing quote */}
-                    <Quote className="absolute bottom-8 right-8 text-gray-200 w-12 h-12 rotate-180" />
+                    <Quote className="absolute bottom-8 right-8 text-gray-200 w-12 h-12 " />
                   </div>
                 </CarouselItem>
               ))}
