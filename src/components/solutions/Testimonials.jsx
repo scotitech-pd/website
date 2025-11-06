@@ -1,6 +1,5 @@
 "use client";
 import { Quote } from "lucide-react";
-import { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -37,10 +36,9 @@ const testimonials1 = [
 ];
 
 export default function Testimonials() {
-  const [index, setIndex] = useState(-1);
 
   return (
-    <section className="bg-[linear-gradient(to_bottom,#FFFFFF_0%,#E0F0F2_29%,#368F99_100%)]py-10 min-[500px]:py-15 sm:py-20 lg:py-24 text-center relative overflow-hidden">
+    <section className="bg-[linear-gradient(to_bottom,#FFFFFF_0%,#E0F0F2_29%,#368F99_100%)] py-10 min-[500px]:py-15 sm:py-20 lg:py-24 text-center relative overflow-hidden">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
         <div className="font-karla font-medium text-4xl text-center min-[500px]:mb-5 relative w-fit mx-auto">
           <p className="absolute max-[500px]:hidden text-[4.3rem] font-semibold text-black font-karla opacity-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  text-nowrap select-none">
@@ -59,16 +57,16 @@ export default function Testimonials() {
             className="w-full relative px-6 sm:px-10"
             opts={{ loop: true }}
           >
-            <CarouselContent>
+            <CarouselContent className="h-full">
               {testimonials1.map((t, i) => (
                 <CarouselItem
                   key={i}
-                  className="basic-1/2 lg:basis-1/3 pt-14 pb-5"
+                  className="basic-1/2 lg:basis-1/3 pt-14 pb-5 h-full"
                 >
                   <div
                     key={t.id}
-                    className={`bg-white rounded-2xl shadow-lg px-7 py-12 mx-5 relative transition-all duration-500 ${
-                      i === index ? "scale-110" : "scale-100 opacity-90"
+                    className={`bg-white rounded-2xl shadow-lg px-7 py-12 mx-5 relative transition-all duration-500 h-full ${
+                      "" 
                     }`}
                   >
                     {/* Avatar */}
