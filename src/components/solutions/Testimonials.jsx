@@ -40,7 +40,7 @@ export default function Testimonials() {
   const [index, setIndex] = useState(-1);
 
   return (
-    <section className="bg-[linear-gradient(to_bottom,#FFFFFF_0%,#E0F0F2_29%,#368F99_100%)] py-12 min-[500px]:py-15 sm:py-20 text-center relative overflow-hidden">
+    <section className="bg-[linear-gradient(to_bottom,#FFFFFF_0%,#E0F0F2_29%,#368F99_100%)]py-10 min-[500px]:py-15 sm:py-20 lg:py-24 text-center relative overflow-hidden">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
         <div className="font-karla font-medium text-4xl text-center min-[500px]:mb-5 relative w-fit mx-auto">
           <p className="absolute max-[500px]:hidden text-[4.3rem] font-semibold text-black font-karla opacity-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  text-nowrap select-none">

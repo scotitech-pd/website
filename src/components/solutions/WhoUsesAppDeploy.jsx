@@ -32,11 +32,11 @@ export default function WhoUsesAppDeploy() {
     },
   ];
   return (
-    <section className="bg-[#FAFAFA] py-10 sm:py-20 overflow-hidden">
+    <section className="bg-[#FAFAFA] py-10 min-[500px]:py-15 sm:py-20 lg:py-24 overflow-hidden">
       {/* Heading */}
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
         <div className="flex  justify-between items-center">
-          <div>
+          <div> 
             <div className="relative mb-4">
               <p className="absolute max-[450px]:hidden text-[4.3rem] font-semibold text-black font-karla opacity-5 -left-3 top-1/2 -translate-y-1/2 text-nowrap select-none">
                 Who It’s For

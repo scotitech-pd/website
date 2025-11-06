@@ -22,7 +22,7 @@ export const securityItems = [
 ];
 export default function SecurityCompliance() {
   return (
-    <section className="bg-[#D4EFFF] py-2 sm:py-20 relative overflow-hidden">
+    <section className="bg-[#D4EFFF] py-2 min-[500px]:py-15 sm:py-20 lg:py-24 relative overflow-hidden">
       {/* Background faint text */}
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
         <div className="relative z-10 grid min-[1010px]:grid-cols-2 min-[1010px]:gap-12 items-center">
