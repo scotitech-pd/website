@@ -19,7 +19,7 @@ const cards = [
 export default function KnowledgeSection() {
   return (
     <section
-      className="relative bg-cover bg-center text-white py-24 px-6"
+      className="relative bg-cover bg-center text-white py-10 min-[500px]:py-15 sm:py-20 lg:py-24"
       style={{
         backgroundImage: "url('/images/solution/learnbg.png')",
       }}
@@ -27,9 +27,9 @@ export default function KnowledgeSection() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/50"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto text-left">
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 text-left">
         {/* Heading */}
-        <h2 className="text-5xl md:text-6xl font-medium leading-tight font-karla">
+        <h2 className="text-4xl min-[370px]:text-5xl md:text-6xl font-medium leading-tight font-karla">
           Learn <span className="text-[#E38DF0]">More.</span> Grow{" "}
           <span className="text-[#E38DF0]">Smarter.</span>
         </h2>
@@ -49,28 +49,28 @@ export default function KnowledgeSection() {
         </div>
 
         {/* Cards Grid */}
-       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-20 font-lora">
+       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-7 min-[1370px]:gap-20 font-lora">
   {cards.map((card, index) => (
     <div
       key={index}
       /* outer wrapper: the visible gradient border */
-      className="relative rounded-2xl p-[1.5px] bg-gradient-to-bl from-[#14FBFD]/70 via-white/70 to-main-light/70 hover:scale-[1.01]  transition-transform duration-300 shadow-lg"
+      className="relative rounded-2xl p-[1.5px] grid bg-gradient-to-bl from-[#14FBFD]/70 via-white/70 to-main-light/70 hover:scale-[1.01]  transition-transform duration-300 shadow-lg"
     >
       {/* keep corners clipped so gradient follows rounded shape */}
-      <div className="overflow-hidden rounded-2xl">
+      <div className="overflow-hidden rounded-2xl grid">
         {/* inner card: actual content with backdrop blur & semi transparent background */}
-        <div className="group relative bg-[#36454F]/80 p-8 text-left ">
+        <div className="group relative bg-[#36454F]/80 p-5 min-[900px]:p-8 text-left w-full h-full">
           <img src={card.img} alt="" className="w-16 h-16 object-contain" />
 
-          <h3 className="text-2xl font-medium font-karla text-[#14FBFD] my-3">
+          <h3 className="text-2xl font-medium font-karla text-[#14FBFD] my-2 min-[900px]:my-3">
             {card.title}
           </h3>
 
-          <p className="text-white mb-8 leading-relaxed font-lora">{card.desc}</p>
+          <p className="text-white mb-8 leading-5 font-lora">{card.desc}</p>
 
           <a
             href={card.link ?? "#"}
-            className="absolute font-karla bottom-6 right-6 bg-white text-gray-900 text-sm font-semibold px-4 py-1 rounded-full shadow-md hover:bg-main-light hover:shadow-[0_0_10px_rgba(150,56,229,1)] duration-300 hover:text-white transition"
+            className="absolute font-karla bottom-3 min-[900px]:bottom-6 right-6 bg-white text-gray-900 text-sm font-semibold px-4 py-1 rounded-full shadow-md hover:bg-main-light hover:shadow-[0_0_10px_rgba(150,56,229,1)] duration-300 hover:text-white transition"
           >
             Download
           </a>
