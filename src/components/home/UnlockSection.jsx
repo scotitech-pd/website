@@ -20,7 +20,7 @@ export default function UnlockSection() {
           <h1 className="text-4xl md:text-5xl font-semibold font mb-5 font-karla">
             Unlock Efficiency
           </h1>
-          <h2 className="text-lg md:text-2xl mb-3 font-medium font-lora">
+          <h2 className="text-lg md:text-2xl mb-3 font-medium font-karla">
             Drive Innovation with Our Technology Solutions
           </h2>
           <p className="text-white/90 font-lora mb-4 text-lg leading-6 max-w-2xl">
@@ -31,7 +31,7 @@ export default function UnlockSection() {
             levels of efficiency for your business.
           </p>
 
-          <p className="text-sm md:text-lg bg-main inline-block px-1 sm:px-4 py-0.5 font-lora rounded">
+          <p className="text-sm md:text-lg bg-main inline-block px-1 sm:px-4 py-0.5 font-karla rounded">
             ScotiTech: The Power of Lean. The Speed of Growth.
           </p>
 
