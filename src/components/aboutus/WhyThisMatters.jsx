@@ -32,12 +32,12 @@ export default function WhyThisMatters() {
   ];
 
   return (
-    <div className=" bg-white py-12 px-6 lg:py-20 lg:px-16 overflow-hidden" >
-      <div className="max-w-7xl mx-auto">
+    <div className=" bg-white py-12 overflow-hidden" >
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-start">
           {/* Left Side - Map */}
           <div className="flex flex-col items-center lg:items-center w-full">
-        <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-4xl mx-auto">
+        <div className="relative">
   <img
     src="/images/aboutus/world-map.png"
     alt="Global presence map"
@@ -58,7 +58,7 @@ export default function WhyThisMatters() {
             <h3 className="text-4xl lg:text-5xl font-bold font-karla text-center text-gray-900 mb-12">
               Why This Matters
             </h3>
-            <div className="absolute -top-[10px] -left-[50px]   min-w-[650px]     text-center pointer-events-none">
+            <div className="absolute hidden lg:block -top-[10px] -left-[50px]   min-w-[650px]     text-center pointer-events-none">
               <p className="text-8xl lg:text-[70px] font-karla font-bold  text-gray-500/30 opacity-50">
                 Why This Matters
               </p>
@@ -68,7 +68,10 @@ export default function WhyThisMatters() {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex gap-4">
                   {/* Icon */}
-                  <div className="flex-shrink-0 w-10 h-10">
+                  <div className=" hidden lg:block flex-shrink-0 w-10 h-10">
+                    <img src={benefit.iconSrc} alt="" className="w-6 h-6 " />
+                  </div>
+                  <div className="lg:hidden flex-shrink-0 w-10 h-10 bg-[#7E1A8E]/50 rounded-full flex items-center justify-center">
                     <img src={benefit.iconSrc} alt="" className="w-6 h-6 " />
                   </div>
 

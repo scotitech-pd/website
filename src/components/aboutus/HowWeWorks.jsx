@@ -6,14 +6,14 @@ const HowWeWorks = () => {
       icon: "/images/aboutus/building.png",
       title: "London Headquarters",
       description:
-        "Strategic location allows enhanced market development in the heart of Europe's tech ecosystem. Our HQ houses product strategy, partnerships, and enterprise operations.",
+        "Strategic location allows enhanced market development in the heart of Europe's tech ecosystem. Our HQ produces strategy, partnerships, and enterprise operations.",
     },
     {
       icon: "/images/aboutus/global.png",
       title: "Global Engineered Network",
 
       description:
-        "A distributed team of developers, designers, and analysts working across time zones — providing round-the-clock development, deployment, and product support.",
+        "A distributed team of developers, designers, and analysts working across time zones, providing round-the-clock development.",
     },
     {
       icon: "/images/aboutus/agile.png",
@@ -31,14 +31,14 @@ const HowWeWorks = () => {
   ];
 
   return (
-    <section className="relative  bg-black py-16 px-4 lg:py-12 lg:px-8 overflow-hidden">
+    <section className="relative  bg-black py-12  overflow-hidden">
       {/* Large Background Text */}
       <div className="absolute top-8 lg:top-2 left-1/2 -translate-x-1/2 pointer-events-none z-0">
         <h1 className="text-5xl sm:text-6xl font-karla md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white/5 leading-none whitespace-nowrap">
           How We Works
         </h1>
       </div>
-      <div className="max-w-7xl mx-auto relative z-10 mb-6 lg:mb-12">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 relative z-10  ">
         {/* Title */}
         <div className="text-center ">
           <h2 className="text-3xl lg:text-[40px] font-karla 2xl:text-5xl font-bold text-white">
@@ -47,7 +47,7 @@ const HowWeWorks = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="mt-[100px]  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 lg:mb-16">
+        <div className="mt-[100px]  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-8 mb-12 lg:mb-16">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -56,7 +56,7 @@ const HowWeWorks = () => {
               {/* Card */}
 
               <div
-                className="min-h-[360px] h-full lg:min-h-[300px] bg-gradient-to-br from-[#1f2d31] to-[#060a0d] backdrop-blur-sm rounded-2xl p-6 lg:p-6 flex flex-col justify-start"
+                className=" h-full  bg-gradient-to-br from-[#1f2d31] to-[#060a0d] backdrop-blur-sm rounded-2xl p-6 lg:p-6 flex flex-col justify-start"
               >
                 {/* Icon on top */}
                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-20">
@@ -79,7 +79,7 @@ const HowWeWorks = () => {
                 </h3>
 
                 {/* Card Description */}
-                <p className="text-[18px] lg:text-[15px] md:text-[16px] font-lora text-gray-300 text-center leading-relaxed flex-grow">
+                <p className="text-[14px] lg:text-[15px] md:text-[16px] font-lora text-gray-300 text-center leading-relaxed flex-grow">
                   {card.description}
                 </p>
               </div>

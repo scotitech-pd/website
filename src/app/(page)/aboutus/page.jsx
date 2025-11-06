@@ -9,7 +9,7 @@ import WhyThisMatters from "@/components/aboutus/WhyThisMatters";
 const page = () => {
   return (
     <>
-      <AboutScotiTech />
+      {/* <AboutScotiTech /> */}
       <Timeline />
       <LeadershipTeam />
       <MissionVision />

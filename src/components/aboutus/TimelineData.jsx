@@ -41,20 +41,20 @@ export default function Timeline() {
 
   return (
   
-    <div className="bg-white py-12 px-4 md:px-8 lg:px-16 overflow-hidden">
+    <div className="bg-white py-12  overflow-hidden">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         {/* Section Title */}
         <div className="relative">
-          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 min-w-[650px] text-center pointer-events-none">
+          <div className="hidden lg:block absolute -top-2 left-1/2 transform -translate-x-1/2 min-w-[650px] text-center pointer-events-none">
             <p className="text-7xl lg:text-[70px]  font-karla font-bold -tracking-tighter text-gray-500/60 opacity-50">
               Our Story
             </p>
           </div>
           <div className="flex justify-center items-center flex-col mb-[20px]">
-            <h3 className="text-black font-karla text-[40px] font-semibold">
+            <h3 className="text-black font-karla text-[30px] min-[500px]:text-[36px] lg:text-[40px] font-semibold">
               Our Story
             </h3>
-            <p className="text-black font-lora text-center p-6 px-[70px] text-[15px]">
+            <p className="text-black font-lora text-[12px] py-2 lg:text-center min-[500px]:text-[16px] lg:p-6 lg:px-[70px] lg:text-[15px]">
               From humble beginnings to global impact, ScotiTech evolved from a
               boutique IT services company in London to a globally recognized
               organization delivering cutting-edge, product-first solutions.
@@ -65,25 +65,25 @@ export default function Timeline() {
         {/* Mobile Layout */}
         <div className="block lg:hidden space-y-6">
           {timelineData.map((item, index) => (
-            <div key={index} className="relative pl-24">
+            <div key={index} className="relative pl-18">
               {/* Vertical line */}
               {index < timelineData.length - 1 && (
-                <div className="absolute left-12 top-20 bottom-0 w-1 bg-[E38DF0]"></div>
+                <div className="absolute left-8 top-20 -bottom-15 w-1 bg-[#E38DF0]"></div>
               )}
 
               {/* Year badge */}
-              <div className="absolute left-0 top-0 w-24 h-24 bg-[#641171] rounded-full flex items-center justify-center">
-                <span className="text-white text-3xl font-bold font-karla">
+              <div className="absolute left-0 top-5 lg:w-24 lg:h-24 w-16 h-16 bg-[#641171] rounded-full flex items-center justify-center">
+                <span className="text-white lg:text-3xl text-xl font-bold font-karla">
                   {item.year}
                 </span>
               </div>
 
               {/* Content card */}
               <div className="bg-[#FBDFFF] rounded-xl p-6">
-                <h3 className="text-xl font-bold text-black mb-2 font-karla">
+                <h3 className="lg:text-xl min-[500px]:text-lg text-md font-bold text-black mb-2 font-karla">
                   {item.title}
                 </h3>
-                <p className="text-black text-sm leading-relaxed font-lora">
+                <p className="text-black  max-[500px]:text-sm leading-relaxed font-lora">
                   {item.description}
                 </p>
               </div>
