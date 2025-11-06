@@ -1,6 +1,5 @@
 "use client";
 import { Quote } from "lucide-react";
-import { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -37,38 +36,37 @@ const testimonials1 = [
 ];
 
 export default function Testimonials() {
-  const [index, setIndex] = useState(-1);
 
   return (
-    <section className="bg-[linear-gradient(to_bottom,#FFFFFF_0%,#E0F0F2_29%,#368F99_100%)] py-24 text-center relative overflow-hidden">
-      <div className="max-w-8xl mx-auto">
-        <div className="font-karla font-medium text-4xl text-center my-10 relative w-full">
-          <p className="text-[7rem] font-medium text-gray-500/10 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <section className="bg-[linear-gradient(to_bottom,#FFFFFF_0%,#E0F0F2_29%,#368F99_100%)] py-10 min-[500px]:py-15 sm:py-20 lg:py-24 text-center relative overflow-hidden">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
+        <div className="font-karla font-medium text-4xl text-center min-[500px]:mb-5 relative w-fit mx-auto">
+          <p className="absolute max-[500px]:hidden text-[4.3rem] font-semibold text-black font-karla opacity-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  text-nowrap select-none">
             Testimonials
           </p>
-          <h2 className="relative text-black z-10 font-bold">Testimonials</h2>
+          <h2 className="text-2xl min-[850px]:text-3xl font-medium text-black font-karla">Testimonials</h2>
         </div>
-        <p className="text-2xl text-main-dark font-medium mb-5 font-lora tracking-wide">
+        <p className="text-xl min-[850px]:text-2xl text-main-dark font-medium mb-5 font-lora tracking-wide">
           Hear From Our Customers
         </p>
       </div>
 
-      <div className="relative z-0 max-w-7xl mx-auto">
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
         <div>
           <Carousel
             className="w-full relative px-6 sm:px-10"
             opts={{ loop: true }}
           >
-            <CarouselContent>
+            <CarouselContent className="h-full">
               {testimonials1.map((t, i) => (
                 <CarouselItem
                   key={i}
-                  className="basic-full lg:basis-1/3 pt-14 pb-5"
+                  className="basic-1/2 lg:basis-1/3 pt-14 pb-5 h-full"
                 >
                   <div
                     key={t.id}
-                    className={`bg-white rounded-2xl shadow-lg px-7 py-12 mx-5 relative transition-all duration-500 ${
-                      i === index ? "scale-110" : "scale-100 opacity-90"
+                    className={`bg-white rounded-2xl shadow-lg px-7 py-12 mx-5 relative transition-all duration-500 h-full ${
+                      "" 
                     }`}
                   >
                     {/* Avatar */}
@@ -81,7 +79,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Quote Icon */}
-                    <Quote className="absolute top-8 left-8 text-gray-200 w-12 h-12" />
+                    <Quote className="absolute top-8 left-8 text-gray-200 w-12 h-12 rotate-180" />
 
                     {/* Text */}
                     <p className="text-main-dark mt-10 text-lg leading-relaxed font-medium font-karla">
@@ -90,7 +88,7 @@ export default function Testimonials() {
                     <p className="text-grey mt-6 text-lg italic font-lora">– {t.name}</p>
 
                     {/* Closing quote */}
-                    <Quote className="absolute bottom-8 right-8 text-gray-200 w-12 h-12 rotate-180" />
+                    <Quote className="absolute bottom-8 right-8 text-gray-200 w-12 h-12 " />
                   </div>
                 </CarouselItem>
               ))}

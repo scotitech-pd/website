@@ -27,7 +27,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="py-16 bg-white text-center text-black overflow-hidden relative z-0">
+    <section className="py-12 sm:py-16 bg-white text-center text-black overflow-hidden relative z-0">
       <img
         src="/images/contact/pattern-bg.png"
         alt=""
@@ -45,7 +45,7 @@ export default function HowItWorks() {
           </p>
           <h2 className="relative z-10 font-bold">How It Works</h2>
         </div>
-        <p className=" text-main-dark font-lora font-medium text-[20px] z-10 relative">
+        <p className=" text-main-dark font-lora font-medium text-[17px] min-[390px]:text-[20px] z-10 relative">
           How AppDeploy works in 3 Simple Steps
         </p>
 
@@ -80,7 +80,7 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className="min-[1050px]:hidden grid min-[800px]:grid-cols-3 gap-7 min-[500px]:gap-5 md:gap-12 mt-10  max-w-6xl mx-auto z-10">
+        <div className="min-[1050px]:hidden grid min-[800px]:grid-cols-3 gap-9 min-[500px]:gap-5 md:gap-12 mt-7 sm:mt-10  max-w-6xl mx-auto z-10">
           {steps.map((step) => (
             <div
               key={step.id}

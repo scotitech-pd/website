@@ -88,9 +88,9 @@ const ProductShowcase = () => {
               </div>
             </div>
 
-            <div className="pt-10 pb-14 px-6 flex-1 flex flex-col items-center text-left relative">
+            <div className="pt-7 sm:pt-10 pb-14 px-6 flex-1 flex flex-col items-center text-left relative">
               <h3
-                className={`text-lg font-semibold mb-2 w-full font-karla ${product.textColor}`}
+                className={`text-lg font-semibold sm:mb-2 w-full font-karla ${product.textColor}`}
               >
                 {product.name}
               </h3>
