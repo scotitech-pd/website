@@ -1,7 +1,7 @@
 const HowToGetAISection = () => {
   return (
     <section
-      className="relative bg-cover bg-no-repeat py-20 "
+      className="relative bg-cover bg-no-repeat py-10 "
       style={{
         backgroundImage: "url('/images/products/aicaptionstudio/how-bg.png')",
       }}
@@ -27,7 +27,7 @@ const HowToGetAISection = () => {
                 className="w-20 h-20 object-contain"
               />
             </div>
-            <p className="lg:text-[20px] font-semibold leading-6 mb-0 text-[20px] text-black font-lora">
+            <p className="lg:text-[20px] font-semibold leading-6 mb-0 text-[20px] text-black font-karla">
               <span className="font-semibold text-[#0034B1]">Download</span> the
               app
               <br /> AI Caption Studio.
@@ -36,12 +36,12 @@ const HowToGetAISection = () => {
               <img
                 src="/images/products/aicaptionstudio/appstore.png"
                 alt="App Store"
-                className="w-24 sm:w-28 h-auto shadow-md"
+                className="lg:w-24 w-30 h-auto shadow-md"
               />
               <img
                 src="/images/products/aicaptionstudio/playstore.png"
                 alt="Google Play"
-                className="w-24 sm:w-28 h-auto shadow-md"
+                className="lg:w-24 w-30 h-auto shadow-md"
               />
             </div>
           </div>
@@ -55,7 +55,7 @@ const HowToGetAISection = () => {
                 className="w-20 h-20 object-contain"
               />
             </div>
-            <p className="lg:text-[20px] font-semibold leading-6 text-[20px] px-6 text-black font-lora">
+            <p className="lg:text-[20px] font-semibold leading-6 text-[20px] px-6 text-black font-karla">
               <span className="font-semibold text-[#005031]">Sign Up</span> for
               a free account
               <br /> to explore our core features.
@@ -71,7 +71,7 @@ const HowToGetAISection = () => {
                 className="w-20 h-20 object-contain"
               />
             </div>
-            <p className="lg:text-[20px] font-semibold leading-6 mb-0 text-[20px] text-black font-lora">
+            <p className="lg:text-[20px] font-semibold leading-6 mb-0 text-[20px] text-black font-karla">
               <span className="font-semibold text-[#641171]">Upgrade</span> to a
               premium plan
               <br /> to unlock unlimited captions, advanced tools, and priority
@@ -82,7 +82,7 @@ const HowToGetAISection = () => {
 
         {/* Button */}
         <div className="mt-14">
-          <button className="bg-gradient-to-r from-[#2593F6] to-[#1ACCC8] cursor-pointer text-white font-medium px-8 py-3 rounded-full shadow-lg hover:opacity-90 transition">
+          <button className="bg-gradient-to-r font-lora from-[#2593F6] to-[#1ACCC8] cursor-pointer text-white font-medium px-10 py-3 rounded-full shadow-lg hover:opacity-90 transition">
             Get Started Now
           </button>
         </div>
