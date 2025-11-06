@@ -41,25 +41,25 @@ export default function CtaSection() {
       {/* Animated gradient lines background */}
 
       {/* CTA Container */}
-      <div className="relative z-10 max-w-7xl mx-auto text-left py-10">
-        <div className="bg-gradient-to-r from-[#10385A] to-[#452463] rounded-[2rem] p-12 relative">
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 text-left sm:py-10">
+        <div className="bg-gradient-to-r from-[#10385A] to-[#452463] rounded-[2rem] py-8 px-5 min-[500px]:p-12 relative">
           <span
             className={`absolute inset-0 rounded-[inherit] bg-gradient-to-r from-[#10385A] to-[#452463] blur-xl opacity-60 -z-10`}
           ></span>
-          <h2 className="text-4xl md:text-5xl font-semibold mb-3 font-karla tracking-wide">
+          <h2 className="text-3xl min-[390px]:text-4xl md:text-5xl font-semibold mb-3 font-karla tracking-wide">
             Let’s Simplify the Future, Together.
           </h2>
-          <p className="text-xl text-white/90 mb-12 font-lora ">
+          <p className="text-lg min-[390px]:text-xl text-white/90 mb-12 font-lora ">
             Choose the right Scottitech product for your needs and start today.
           </p>
 
           {/* Buttons Row */}
-          <div className="flex flex-wrap justify-around gap-8 font-lora ">
+          <div className="grid min-[810px]:grid-cols-2 min-[1360px]:grid-cols-4 gap-4 font-lora ">
             {buttons.map((btn, i) => (
               <button
                 key={i}
                 style={{ backgroundColor: btn.bg }}
-                className={`relative flex text-md items-center justify-between font-karla text-white font-medium px-11 py-5 rounded-4xl shadow-lg transition-transform duration-300 ${btn.className}`}
+                className={`relative flex text-md items-center justify-between font-karla text-white font-medium mr-4 px-5 min-[1480px]:px-11 py-5 rounded-4xl shadow-lg transition-transform duration-300 ${btn.className} max-[400px]:w-full max-[810px]:w-[270px] max-[810px]:mx-auto`}
               >
                 {btn.title}
                 <div className="rounded-full absolute right-3 translate-x-1/2 top-1/2 -translate-y-1/2 bg-white flex justify-center items-center size-11">
