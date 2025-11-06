@@ -36,31 +36,31 @@ const Navbar = () => {
     {
       id: 1,
       title: "AppDeploy",
-      link: "products/appdeploy",
+      link: "/products/appdeploy",
       desc: "Effortless iOS App Distribution",
     },
     {
       id: 2,
       title: "Opsly",
-      link: "/opsly",
+      link: "/products/opsly",
       desc: "All-in-One Operations Platform",
     },
     {
       id: 3,
       title: "ClarityPath",
-      link: "/claritypath",
+      link: "/products/claritypath",
       desc: "Private Decision-Support App",
     },
     {
       id: 4,
       title: "Elder Connect+",
-      link: "/elderconnect",
+      link: "/products/elderconnect",
       desc: "App for Elders",
     },
     {
       id: 5,
       title: "AI Caption Studio",
-      link: "/aicaptionstudio",
+      link: "/products/aicaptionstudio",
       desc: "Real-time AI Caption",
     },
   ];
