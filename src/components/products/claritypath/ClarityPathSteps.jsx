@@ -28,8 +28,10 @@ export default function ClarityPathSteps() {
     >
       {/* <div className="relative rounded-3xl p-[2px] bg-gradient-to-bl from-[#98F9FF]/10 to-[#EABFFF]/20"> */}
 
-      <div className=" text-white rounded-3xl shadow-2xl max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20
- w-full p-10 backdrop-blur-xl border border-white/10">
+      <div
+        className=" text-white rounded-3xl shadow-2xl max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20
+ w-full p-10 backdrop-blur-xl border border-white/10"
+      >
         {/* Title */}
 
         <div className="relative w-fit py-4 mt-2 mx-auto">
@@ -96,10 +98,11 @@ export default function ClarityPathSteps() {
             />
           </div>
           <Link href="/contact">
-          <button className="bg-white text-black font-karla  rounded-xl  text-[15px] px-3 lg:px-6 pt-3 lg:pb-3 pb-3 transition cursor-pointer">
-            Contact <span className="text-main-dark font-bold">ScotiTech</span>{" "}
-         
-          </button></Link>
+            <button className="bg-white text-black font-karla  rounded-xl  text-[15px] px-3 lg:px-6 pt-3 lg:pb-3 pb-3 transition cursor-pointer">
+              Contact{" "}
+              <span className="text-main-dark font-bold">ScotiTech</span>{" "}
+            </button>
+          </Link>
         </div>
       </div>
     </section>

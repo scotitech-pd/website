@@ -9,13 +9,13 @@ import WhyChooseSection from "@/components/products/claritypath/WhyChooseSection
 const claritypath = () => {
   return (
     <>
-        {/* <ClarityPathSection/> */}
-        {/* <WhatIsClarityPath/> */}
-        {/* <KeyFeaturesSection/> */}
-        {/* <WhyChooseSection/> */}
+        <ClarityPathSection/>
+        <WhatIsClarityPath/>
+        <KeyFeaturesSection/>
+        <WhyChooseSection/>
         <ClarityPathSteps/>
-        {/* <ComplianceSecurity/> */}
-        {/* <AboutSection/> */}
+        <ComplianceSecurity/> // needs improvement between 760 and 1260px
+        <AboutSection/>
     </>
   )
 }
