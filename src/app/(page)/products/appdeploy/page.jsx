@@ -8,11 +8,11 @@ import WhyChooseAppDeploy from "@/components/products/appdeploy/WhyChooseAppDepl
 const page = () => {
   return (                        
     <>
-        {/* <AppDeploySection/>  
-        <AppDeployInfo/>
+        <AppDeploySection/>  
+        {/* <AppDeployInfo/> */}
         <KeyFeatures/>  
-        <WhyChooseAppDeploy/> */}
-        {/* <HowAppDeployWorks/> */}
+        <WhyChooseAppDeploy/>
+        <HowAppDeployWorks/>
         <ComplianceSecurity/>
     </>
   )

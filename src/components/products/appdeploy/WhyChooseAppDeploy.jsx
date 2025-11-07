@@ -19,19 +19,20 @@ export default function WhyChooseAppDeploy() {
   ];
 
   return (
-    <section className="bg-[#F5F6FB] overflow-hidden             ">
-      <div className="px-6 md:px-16 2xl:px-0 grid grid-cols-1 md:grid-cols-[60%_40%] justify-between items-center max-w-7xl mx-auto">
+    <section className="bg-[#F5F6FB] overflow-hidden py-6 lg:py-16">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 ">
+      <div className=" grid grid-cols-1 md:grid-cols-[60%_40%] justify-between items-center">
         {/* Left Section */}
-        <div className="py-16 ">
-          <h2 className="text-4xl font-bold text-black mb-3 font-karla">
+        <div className="lg:py-16 py-4 ">
+          <h2 className="lg:text-4xl text-3xl font-bold text-black mb-3 font-karla">
             Why Choose <br /> AppDeploy app?
           </h2>
-          <p className="text-[22px] mb-14 text-black font-karla">
+          <p className=" lg:text-[22px] text-lg mb-14 text-black font-lora">
             Discover the clear advantages of a smarter distribution model.
           </p>
 
           <div className="flex flex-col items-center md:items-start">
-            <div className="relative w-72 h-76 mb-6">
+            <div className="relative w-72 h-76 mb-16 lg:mb-0">
               <img
                 src="/images/products/appdeploy/phoneimg.png"
                 alt="AppDeploy"
@@ -40,10 +41,10 @@ export default function WhyChooseAppDeploy() {
               <div className=" hidden lg:block absolute -right-25 top-1/2 -translate-y-1/2 translate-x-1/2 w-[110%]">
                 <img
                   src="/images/products/appdeploy/logo.png"
-                  alt=""
+                  alt="appdeploy logo"
                   className=""
                 />
-                <span className="absolute bg-white left-1/2 shadow-[0_0_10px_rgba(128,128,128,0.9)] -translate-1/2 py-3 px-5 text-[#696969] font-karla font-semibold rounded-xl text-shadow-2xs cursor-pointer hover:bg-main-dark hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300">
+                <span className="absolute  bg-white left-1/2 shadow-[0_0_10px_rgba(128,128,128,0.9)] -translate-1/2 py-3 px-5 text-[#696969] font-karla font-semibold rounded-xl text-shadow-2xs cursor-pointer hover:bg-main-dark hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300">
                   Download Now
                 </span>
               </div>
@@ -64,7 +65,7 @@ export default function WhyChooseAppDeploy() {
         {/* Right Section */}
         <div className="relative h-full flex items-center">
           {/* Vertical line */}
-          <div className="absolute left-10 top-0 bottom-8 w-[2px] bg-[#7E1A8E]/50 hidden md:block h-full"></div>
+          <div className="absolute left-10 -top-15 overflow-hidden w-[2px] bg-[#7E1A8E]/50 hidden md:block h-[150%]"></div>
 
           <div className="flex flex-col gap-10">
             {features.map((f, i) => (
@@ -79,10 +80,10 @@ export default function WhyChooseAppDeploy() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-semibold text-main-dark font-karla">
+                  <h4 className="lg:text-2xl text-[20px]  font-semibold text-main-dark font-karla">
                     {f.title}
                   </h4>
-                  <p className="text-grey mt-1 text-sm font-lora leading-4">
+                  <p className="text-grey mt-1 lg:text-sm  text-[14px] font-lora leading-4">
                     {f.desc}
                   </p>
                 </div>
@@ -90,6 +91,7 @@ export default function WhyChooseAppDeploy() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

@@ -39,25 +39,28 @@ const features = [
 
 export default function KeyFeatures() {
   return (
-    <section className="relative bg-gradient-to-r from-[#3D297A] to-[#406E8F] text-white py-16 px-6 min-[1600px]:px-0 overflow-hidden">
-      <div className="text-5xl font-semibold relative text-center mb-9">
+  
+    <section className="relative bg-gradient-to-r from-[#3D297A] to-[#406E8F] text-white py-16  overflow-hidden">
+     <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 ">
+      <div className="text-3xl lg:text-5xl font-semibold relative text-center font-karla lg:mb-6 mb-2">
         Key Features
-        <p className="absolute text-[83px] opacity-10 top-1/2 -translate-1/2 left-1/2 ">
+        <p className="absolute hidden lg:block text-[83px] opacity-10 top-1/2  font-karla -translate-1/2 left-1/2 ">
           Key Features
         </p>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto text-center space-y-2 font-lora">
-        <h3 className="text-2xl text-[#EABFFF] ">
+
+      <div className="relative z-10 text-center space-y-2 font-lora">
+        <h3 className="lg:text-2xl text-xl text-[#EABFFF]  lg:font-semibold font-karla text-nowrap lg:mb-2">
           Powerful Features, Simple Interface
         </h3>
-        <p className="max-w-3xl mx-auto text-lg">
+        <p className="max-w-3xl mx-auto lg:text-lg text-md">
           Everything you need for seamless, secure, and scalable app deployment.
         </p>
       </div>
 
       {/* Features grid */}
-      <div className="relative z-10 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 max-w-7xl mx-auto">
+      <div className="relative z-10 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 ">
         {features.map((feature, index) => (
           <div
             key={index}
@@ -78,6 +81,7 @@ export default function KeyFeatures() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );
