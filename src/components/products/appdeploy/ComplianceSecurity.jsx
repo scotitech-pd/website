@@ -20,7 +20,7 @@ export default function ComplianceSecurity() {
 
   return (
     <section
-      className="relative text-white py-28 px-6 md:px-16 overflow-hidden bg-cover bg-center"
+      className="relative text-white py-20  overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: "url('/images/products/appdeploy/compliance.png')", // replace with your image
       }}
@@ -28,16 +28,16 @@ export default function ComplianceSecurity() {
       {/* Overlay */}
       {/* <div className="absolute inset-0 bg-black/10 backdrop-blur-sm"></div> */}
 
-      <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 font-lora">
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 flex flex-col min-[1090px]:flex-row items-center gap-12 font-lora">
         {/* Left Section */}
-        <div className="md:w-[55%]">
-          <h2 className="text-3xl md:text-[40px] font-semibold text-[#E38DF0] font-karla mb-4">
+        <div className="min-[1090px]:w-1/2 flex flex-col items-start gap-2 ">
+          <h2 className="text-3xl lg:text-4xl font-semibold text-[#E38DF0] font-karla lg:mb-4">
             Compliance & Security
           </h2>
-          <h3 className="text-2xl mb-4 text-white">
+          <h3 className="text-2xl lg:mb-4 text-white/90 font-karla">
             Enterprise-Grade Security & Compliance
           </h3>
-          <p className="text-white/90 text-xl font-light">
+          <p className="text-[#E2E2E2]  lg:text-xl font-light font-lora">
             Security is at the core of AppDeploy. We utilize Apple's official
             Business Manager framework for app distribution, which is the
             industry standard for deploying internal apps securely. This ensures
@@ -46,7 +46,7 @@ export default function ComplianceSecurity() {
         </div>
 
         {/* Right Section */}
-        <div className="md:w-[45%] flex flex-col gap-10">
+        <div className="min-[1090px]:w-[45%]  flex flex-col gap-10 max-[600px]:pl-9 ">
           {items.map((item, i) => (
             <div
               key={i}

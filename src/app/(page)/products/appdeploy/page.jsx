@@ -12,8 +12,8 @@ const page = () => {
         <AppDeployInfo/>
         <KeyFeatures/>  
         <WhyChooseAppDeploy/> */}
-        <HowAppDeployWorks/>
-        {/* <ComplianceSecurity/> */}
+        {/* <HowAppDeployWorks/> */}
+        <ComplianceSecurity/>
     </>
   )
 }
