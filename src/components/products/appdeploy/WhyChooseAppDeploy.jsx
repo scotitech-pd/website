@@ -19,7 +19,7 @@ export default function WhyChooseAppDeploy() {
   ];
 
   return (
-    <section className="bg-[#F5F6FB] ">
+    <section className="bg-[#F5F6FB] overflow-hidden             ">
       <div className="px-6 md:px-16 2xl:px-0 grid grid-cols-1 md:grid-cols-[60%_40%] justify-between items-center max-w-7xl mx-auto">
         {/* Left Section */}
         <div className="py-16 ">
@@ -37,13 +37,25 @@ export default function WhyChooseAppDeploy() {
                 alt="AppDeploy"
                 className="rounded-xl object-cover"
               />
-              <div className="absolute -right-25 top-1/2 -translate-y-1/2 translate-x-1/2 w-[110%]">
+              <div className=" hidden lg:block absolute -right-25 top-1/2 -translate-y-1/2 translate-x-1/2 w-[110%]">
                 <img
                   src="/images/products/appdeploy/logo.png"
                   alt=""
                   className=""
                 />
-                <span className="absolute bg-white left-1/2 shadow-[0_0_10px_rgba(128,128,128,0.9)] -translate-1/2 py-3 px-5 text-[#696969] font-karla font-semibold rounded-xl text-shadow-2xs cursor-pointer hover:bg-main-dark hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300">Download Now</span>
+                <span className="absolute bg-white left-1/2 shadow-[0_0_10px_rgba(128,128,128,0.9)] -translate-1/2 py-3 px-5 text-[#696969] font-karla font-semibold rounded-xl text-shadow-2xs cursor-pointer hover:bg-main-dark hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300">
+                  Download Now
+                </span>
+              </div>
+              <div className=" lg:hidden absolute -left-43 -bottom-5 translate-x-1/2 w-[110%]">
+                <img
+                  src="/images/products/appdeploy/logo.png"
+                  alt=""
+                  className=""
+                />
+                <span className="absolute bg-white left-1/2 shadow-[0_0_10px_rgba(128,128,128,0.9)] -translate-1/2 py-3 px-5 text-[#696969] font-karla font-semibold rounded-xl text-shadow-2xs cursor-pointer hover:bg-main-dark hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300">
+                  Download Now
+                </span>
               </div>
             </div>
           </div>
@@ -59,7 +71,11 @@ export default function WhyChooseAppDeploy() {
               <div key={i} className="flex gap-6 relative">
                 <div className="flex-shrink-0">
                   <div className="bg-white border-8 border-main-dark rounded-full size-20 p-3 flex items-center justify-center relative z-10">
-                    <img src="/images/products/appdeploy/logoicon.png" alt="" className=""/>
+                    <img
+                      src="/images/products/appdeploy/logoicon.png"
+                      alt=""
+                      className=""
+                    />
                   </div>
                 </div>
                 <div>
