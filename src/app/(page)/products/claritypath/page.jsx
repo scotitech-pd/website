@@ -11,7 +11,7 @@ const claritypath = () => {
     <>
         <ClarityPathSection/>
         <WhatIsClarityPath/>
-        <KeyFeaturesSection/>
+        <KeyFeaturesSection/> //carousal needs improvement
         <WhyChooseSection/>
         <ClarityPathSteps/>
         <ComplianceSecurity/> // needs improvement between 760 and 1260px
