@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function ClarityPathSteps() {
   const steps = [
@@ -13,7 +14,7 @@ export default function ClarityPathSteps() {
     },
     {
       id: 3,
-      text: "Users can then download ClarityPath securely, with in-app purchases available for premium features.",
+      text: "Users can then download ClarityPath, with in-app premium features.",
     },
   ];
 
@@ -27,25 +28,26 @@ export default function ClarityPathSteps() {
     >
       {/* <div className="relative rounded-3xl p-[2px] bg-gradient-to-bl from-[#98F9FF]/10 to-[#EABFFF]/20"> */}
 
-      <div className=" text-white rounded-3xl shadow-2xl max-w-7xl w-full p-10 backdrop-blur-xl border border-white/10">
+      <div className=" text-white rounded-3xl shadow-2xl max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20
+ w-full p-10 backdrop-blur-xl border border-white/10">
         {/* Title */}
 
         <div className="relative w-fit py-4 mt-2 mx-auto">
-          <p className="absolute text-[4.5rem]  font-semibold font-karla opacity-5 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-nowrap select-none">
+          <p className="absolute text-[4.5rem] hidden lg:block  font-semibold font-karla opacity-5 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-nowrap select-none">
             How to Get ClarityPath
           </p>
-          <h2 className="text-[38px] font-bold font-karla">
+          <h2 className="lg:text-[38px] text-3xl text-center font-bold font-karla">
             How to Get Clarity<span className="text-[#69DCEE]">Path</span>
           </h2>
         </div>
 
-        <p className="text-center text-xl mb-15 font-lora">
+        <p className="text-center lg:text-xl lg:mb-15 mb-8 text-md font-lora">
           ClarityPath is distributed exclusively as a Custom App via Apple
           Business Manager.
         </p>
 
         {/* Steps */}
-        <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-8 mb-14">
+        <div className="flex flex-col    min-[1050px]:flex-row justify-between gap-6 md:gap-8 mb-14">
           {steps.map((step) => (
             // <div
             //   key={step.id}
@@ -58,7 +60,7 @@ export default function ClarityPathSteps() {
             // </div>
             <div
               key={step.id}
-              className="relative bg-transparent pt-5 pb-2 border-[1px] border-[#D9D9D9] rounded-xl flex-1 flex items-start justify-start  text-white px-3 max-w-md shadow-lg"
+              className="relative mx-auto bg-transparent   pt-5 pb-2 border-[1px] border-[#D9D9D9] rounded-xl flex-1 flex items-start justify-start  text-white px-3 lg:max-w-md max-[1070px]:w-full shadow-lg"
             >
               {/* Half-border number circle */}
               <div className="absolute left-0 top-6 -translate-x-1/2 size-12">
@@ -71,13 +73,13 @@ export default function ClarityPathSteps() {
                 >
                   {/* Inner circle to mask bottom half and create depth */}
                   <div className="absolute inset-[1px] bg-[#6b1d7c] rounded-full flex items-center justify-center text-white font-semibold text-lg">
-                    <div className="text-lg">{step.id}</div>
+                    <div className="text-lg font-karla">{step.id}</div>
                   </div>
                 </div>
               </div>
 
               {/* Text content */}
-              <p className="ml-8 text-[20px] font-lora text-white/90 leading-[25px]">
+              <p className="ml-8 lg:text-[20px] text-[15px] lg:pb-0 pb-4 font-lora text-white/90 lg:leading-[30px]">
                 {step.text}
               </p>
             </div>
@@ -93,10 +95,11 @@ export default function ClarityPathSteps() {
               className="h-7 "
             />
           </div>
-          <button className="bg-white text-black font-lora  rounded-xl  px-6 pt-3 pb-3 transition cursor-pointer">
+          <Link href="/contact">
+          <button className="bg-white text-black font-karla  rounded-xl  text-[15px] px-3 lg:px-6 pt-3 lg:pb-3 pb-3 transition cursor-pointer">
             Contact <span className="text-main-dark font-bold">ScotiTech</span>{" "}
-            for ABM Access
-          </button>
+         
+          </button></Link>
         </div>
       </div>
     </section>

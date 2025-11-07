@@ -129,23 +129,23 @@ export default function KeyFeaturesSection() {
     }
   };
   return ( 
-    <section className="w-full bg-white overflow-hidden">
+    <section className="w-full  overflow-hidden ">
       <div className="grid md:grid-cols-[45%_55%] z-0">
         {/* LEFT SIDE */}
-        <div className="text-white p-12 bg-[#641171]/95 relative overflow-hidden flex items-end z-0">
+        <div className="text-white p-12 bg-[#641171]/95 relative overflow-hidden flex lg:items-end z-0">
           <img
             src="/images/products/claritypath/left.png"
             alt="back"
-            className="absolute left-0 h-[80%]"
+            className="absolute left-0 h-[80%] hidden lg:block"
           />
-          <div className="relative z-10 max-w-[620px] ml-auto h-fit ">
-            <h3 className="text-3xl font-semibold mb-5 font-karla">
+          <div className="relative z-10 lg:max-w-[620px] max-w-full lg:ml-auto lg:h-fit ">
+            <h3 className="text-3xl font-semibold mb-2 lg:mb-5 font-karla">
               Key Features
             </h3>
-            <h2 className="text-[42px] text-black font-semibold mb-6 font-lora leading-11">
+            <h2 className="lg:text-[42px] text-2xl text-black/80 font-semibold mb-2 lg:mb-6 font-karla lg:leading-11">
               Daily & Weekly Planning Signals
             </h2>
-            <p className="text-xl leading-6 font-lora mb-10 max-w-[500px]">
+            <p className="lg:text-xl text-[15px] leading-6 font-lora lg:mb-10  max-w-[500px]">
               Personalised daily cues and weekly overviews that guide focus,
               momentum, and decision-making.
             </p>
@@ -162,11 +162,11 @@ export default function KeyFeaturesSection() {
             />
           </div>
 
-          <div className="relative z-10 px-10 py-12">
-            <h2 className="text-[45px] font-medium text-center font-karla ">
+          <div className="relative z-10 lg:px-10 lg:py-12 py-4 ">
+            <h2 className="lg:text-[45px] text-[28px] font-medium text-center font-karla mb-2 ">
               Strategic Life Reports
             </h2>
-            <p className="text-center text-3xl text-white font-karla -mt-2.5">
+            <p className="text-center lg:text-3xl text-md text-white/80 font-karla -mt-2.5">
               (Premium Modules)
             </p>
           </div>
@@ -209,7 +209,7 @@ export default function KeyFeaturesSection() {
                       className="size-8 object-contain"
                       alt=""
                     />
-                    <h3 className="text-[14px] mt-5 text-main-dark font-lora font-semibold leading-tight">
+                    <h3 className="text-[14px] mt-5 text-main-dark font-karla font-semibold leading-tight">
                       {feature.title}
                     </h3>
                     <p className="text-[13px] font-lora text-[#474646] leading-[18px] mt-5">

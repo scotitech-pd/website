@@ -26,11 +26,11 @@ export default function WhyChooseSection() {
   ];
 
   return (
-    <section className="relative max-w-7xl mx-auto px-6 py-12 min-[1500px]:px-0 flex flex-col lg:flex-row items-center justify-between gap-20 font-lora overflow-hidden">
+    <section className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 py-12 min-[1500px]:px-0 flex flex-col lg:flex-row items-center justify-between gap-20 font-lora overflow-hidden">
       {/* LEFT SIDE */}
       <div className="flex-1">
-        <h2 className="text-4xl lg:text-[46px] font-medium mb-10 text-gray-900">
-          Why Choose Clarity<span className="text-[#198CAC]">Path</span>?
+        <h2 className="lg:text-4xl text-3xl lg:text-[46px] font-medium mb-10 text-gray-900 font-karla">
+          Why Choose <span className="text-[#198CAC]">ClarityPath?</span>
         </h2>
 
         <div className="space-y-5">
@@ -47,8 +47,8 @@ export default function WhyChooseSection() {
                 />
               </div>
               <div className="">
-                <h4 className="font-semibold text-black font-karla text-lg">{item.title}</h4>
-                <p className="text-white text-[13px] leading-4">{item.text}</p>
+                <h4 className="font-semibold text-black mb-2 font-karla text-md lg:text-lg">{item.title}</h4>
+                <p className="text-white text-[11px] lg:text-[13px] lg:leading-4">{item.text}</p>
               </div>
             </div>
           ))}
