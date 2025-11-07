@@ -214,7 +214,7 @@ export default function KeyFeaturesSection() {
                     </h3>
                     <p className="text-[13px] font-lora text-[#474646] leading-[18px] mt-5">
                       {feature.text}
-                    </p>
+                    </p>+
                   </div>
                 </SwiperSlide>
               ))}
