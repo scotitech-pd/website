@@ -53,7 +53,7 @@ const AboutScotiTech = () => {
                 {/* Header */}
                 <div className="relative z-20 text-black">
                   <div className="font-karla font-medium text-4xl my-7 relative w-fit">
-                    <p className="text-[4.5rem] font-semibold text-black opacity-5 absolute -left-24 top-1/2 -translate-y-1/2">
+                    <p className="text-[4.5rem] font-semibold text-nowrap text-black opacity-5 absolute -left-5 top-1/2 -translate-y-1/2">
                       About ScotiTech
                     </p>
                     <h2 className="relative z-10 font-bold">About ScotiTech</h2>
