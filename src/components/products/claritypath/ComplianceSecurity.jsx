@@ -36,25 +36,32 @@ export default function ComplianceSecurity() {
       </div>
 {/* 760 -1260 */}
       {/* Cards */}
-      <div className="relative z-10 grid grid-cols-1 min-[1260px]:w-full md:grid-cols-3 justify-center  px-6 max-w-8xl mx-auto    gap-8 lg:gap-12">
+     <div className="relative z-10 grid grid-cols-1 min-[760px]:grid-cols-2 min-[1260px]:grid-cols-3 justify-center px-6 max-w-8xl mx-auto gap-8 lg:gap-12">
+  {/* Background gradient */}
         <div className="absolute h-[80%] bg-gradient-to-bl from-[#40708F] to-[#3C367D] w-[85vw] z-0 left-50 top-1/2 -translate-y-1/2"></div>
-        {cards.map((card, index) => (
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden w-full md:w-80 transform z-10 hover:scale-[1.02] transition" key={index}>
-            <div className="h-48 overflow-hidden">
-              <img
-                src={card.img}
-                alt=""
-                className="w-full h-full md:object-center  object-cover"
-              />
-            </div>
-            <div className="p-4">
-              <p className="text-main-dark font-lora text-[14px] lg:text-[17px] leading-[21px] font-medium">
-                {card.text}
-              </p>
-            </div>
-          </div>
-        ))}
+
+  {cards.map((card, index) => (
+    <div
+      key={index}
+      className={`bg-white rounded-2xl shadow-lg overflow-hidden w-full transform z-10 hover:scale-[1.02] transition 
+        ${index === 2 ? "min-[760px]:col-span-2 min-[760px]:mx-auto min-[1260px]:col-span-1" : ""}`}
+    >
+      <div className="h-48 overflow-hidden">
+        <img
+          src={card.img}
+          alt=""
+          className="w-full h-full object-cover md:object-center"
+        />
       </div>
+      <div className="p-4">
+        <p className="text-main-dark font-lora text-[14px] lg:text-[17px] leading-[21px] font-medium">
+          {card.text}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );
