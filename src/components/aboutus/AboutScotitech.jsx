@@ -1,9 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const AboutScotiTech = () => {
-  const [hoveredCard, setHoveredCard] = useState(1); // Default to middle card (50+ Countries)
+  const [hoveredCard, setHoveredCard] = useState(1);
   const [activeIndex, setActiveIndex] = useState(1);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const cards = [
     {
       img1: "/images/aboutus/team-icon-white.png",
@@ -25,42 +27,49 @@ const AboutScotiTech = () => {
     },
   ];
 
+  // Auto slide for carousel (below 1300px)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % cards.length);
+    }, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="relative flex justify-center bg-white py-12 px-4 lg:py-24 lg:px-[120px] overflow-hidden">
-      {/* Decorative Background Pattern - Top Right */}
-      <img
-        src="/images/aboutus/pattern-lines.png"
-        alt="Pattern lines behind the photo"
-        className="absolute top-0 right-0 hidden min-[1300px]:flex w-[20vw] min-[1650px]:hidden"
-      />
+    <>
+      {/* ---------------- 1300PX AND ABOVE (ORIGINAL DESIGN) ---------------- */}
+      <section className="relative justify-center bg-white py-12 lg:py-24 overflow-hidden min-[1300px]:flex hidden">
+        <img
+          src="/images/aboutus/pattern-lines.png"
+          alt="Pattern lines behind the photo"
+          className="absolute top-0 right-0 hidden min-[1300px]:flex w-[20vw] min-[1650px]:hidden"
+        />
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 min-[1300px]:grid-cols-[55%_40%] gap-8 lg:gap-16 items-center">
-          {/* LEFT SIDE */}
-          <div className="relative max-w-[600px]">
-            {/* Left Side - Content */}
-
-            <div className="space-y-8 lg:space-y-0">
-              {/* Header */}
-              <div className="relative z-20 text-black">
-                <div className="font-karla font-medium text-4xl  my-7 relative w-fit">
-                  <p className="text-[4.5rem] font-semibold text-black opacity-5 text-nowrap -z-0 w-fit absolute top-1/2 -left-24 transform -translate-y-1/2">
-                    About ScotiTech
+        <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 relative z-10">
+          <div className="grid grid-cols-1 min-[1300px]:grid-cols-[55%_40%] gap-8 lg:gap-16 items-center">
+            {/* LEFT SIDE */}
+            <div className="relative max-w-[600px]">
+              <div className="space-y-8 lg:space-y-0">
+                {/* Header */}
+                <div className="relative z-20 text-black">
+                  <div className="font-karla font-medium text-4xl my-7 relative w-fit">
+                    <p className="text-[4.5rem] font-semibold text-black opacity-5 absolute -left-24 top-1/2 -translate-y-1/2">
+                      About ScotiTech
+                    </p>
+                    <h2 className="relative z-10 font-bold">About ScotiTech</h2>
+                  </div>
+                  <h2 className="text-xl lg:text-[18px] pr-9 font-karla 2xl:text-[25px] font-bold text-black mb-4 lg:mb-6">
+                    ScotiTech: Pioneering Technology Solutions for Global Business
+                  </h2>
+                  <p className="text-base lg:text-[15px] font-lora text-black leading-relaxed">
+                    We're a UK-based technology company with a global vision,
+                    transforming how businesses leverage technology through
+                    innovative products and solutions.
                   </p>
-                  <h2 className="relative z-10 font-bold">About ScotiTech</h2>
                 </div>
-                <h2 className="text-xl lg:text-[18px] pr-9 font-karla 2xl:text-[25px] font-bold text-black mb-4 lg:mb-6">
-                  ScotiTech: Pioneering Technology Solutions for Global Business
-                </h2>
-                <p className="text-base lg:text-[15px] font-lora  text-black leading-relaxed">
-                  We're a UK-based technology company with a global vision,
-                  transforming how businesses leverage technology through
-                  innovative products and solutions.
-                </p>
-              </div>
 
-              {/* Stats Cards */}
-              <div className="relative lg:mt-10">
+                {/* Stats Cards */}
+               <div className="relative lg:mt-10">
                 {/* Background Container with Light Cyan */}
                 <div className="rounded-3xl p-4 lg:p-2">
                   {/* Cards */}
@@ -142,26 +151,84 @@ const AboutScotiTech = () => {
                   </div>
                 </div>
               </div>
+              </div>
             </div>
-          </div>
 
-          {/* RIGHT SIDE */}
-          <div className="relative h-[100%] hidden min-[1300px]:flex">
-            <div className="h-fit !bg-yellow">
-              <img src="/images/aboutus/hero-tech.png" alt="" className=" bg-yellow" />
-              <div className="absolute -bottom-[15px]  flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_10px_25px_rgba(94,11,123,0.6)] bg-white rounded-2xl h-[90px] w-[200px] border-1 border-[#7E1A8E] z-2">
-                <h2 className="text-[#9638E5] font-karla font-bold lg:text-[20px]">
-                  ScotiTech
-                </h2>
-                <p className="text-[#641171] font-karla text-center  font-semibold px-5 lg:text-[13px]">
-                  Global Reach, Pioneering Solutions
-                </p>
+            {/* RIGHT SIDE */}
+            <div className="relative h-[100%] hidden min-[1300px]:flex">
+              <div className="h-fit">
+                <img src="/images/aboutus/hero-tech.png" alt="" />
+                <div className="absolute -bottom-[15px] flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_10px_25px_rgba(94,11,123,0.6)] bg-white rounded-2xl h-[90px] w-[200px] border-1 border-[#7E1A8E]">
+                  <h2 className="text-[#9638E5] font-karla font-bold lg:text-[20px]">
+                    ScotiTech
+                  </h2>
+                  <p className="text-[#641171] font-karla text-center font-semibold px-5 lg:text-[13px]">
+                    Global Reach, Pioneering Solutions
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* ---------------- BELOW 1300PX AUTO CAROUSEL ---------------- */}
+      <section className="block min-[1300px]:hidden bg-white py-10 text-center relative overflow-hidden">
+        <div className="px-5 mb-6">
+          <h2 className="text-3xl font-karla font-bold text-main-dark mb-2">
+            About ScotiTech
+          </h2>
+          <h3 className="text-lg font-karla font-semibold text-black mb-2">
+            ScotiTech: Pioneering Technology Solutions for Global Business
+          </h3>
+          <p className="text-[15px] text-gray-800 font-lora leading-relaxed mb-8">
+            We're a UK-based technology company with a global vision,
+            transforming how businesses leverage technology through innovative
+            products and solutions.
+          </p>
+        </div>
+
+        {/* Auto Carousel */}
+        <div className="relative flex justify-center items-center h-[260px]">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className={`absolute w-[80%] bg-[#D2FAFF] rounded-3xl shadow-xl p-8 text-center flex flex-col items-center transition-all duration-1000 ease-in-out ${
+                currentSlide === index
+                  ? "opacity-100 translate-x-0 scale-100"
+                  : "opacity-0 translate-x-10 scale-95"
+              }`}
+            >
+              <div className="bg-[#15676E] size-20 rounded-full flex items-center justify-center mb-4 shadow-md">
+                <img
+                  src={card.img1}
+                  alt={card.title}
+                  className="size-10 object-contain"
+                />
+              </div>
+              <h4 className="text-lg font-semibold text-black font-karla mb-1">
+                {card.title}
+              </h4>
+              <p className="text-[14px] text-gray-700 font-lora leading-snug">
+                {card.subtitle}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Dots */}
+        <div className="flex justify-center mt-6 gap-2">
+          {cards.map((_, index) => (
+            <div
+              key={index}
+              className={`size-3 rounded-full transition-all ${
+                currentSlide === index ? "bg-[#15676E]" : "bg-gray-300"
+              }`}
+            ></div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -26,24 +26,24 @@ export default function ComplianceSecurity() {
   ];
 
   return (
-    <section className="relative text-white py-24 px-6 overflow-hidden">
+    <section className="relative text-white lg:py-24 py-16 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-[url('/images/products/opsly/bgcompliance.png')] bg-cover bg-center"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Text Section */}
         <div>
-          <div className="text-[42px] font-semibold relative w-fit  font-karla mb-5">
+          <div className="text-3xl lg:text-[42px] font-semibold relative w-fit  font-karla mb-5">
             Compliance & Security
-            <p className="absolute text-[65px] font-medium text-nowrap opacity-10 top-1/2 -translate-1/2 left-1/2">
+            <p className="absolute hidden lg:block [65px] font-medium text-nowrap opacity-10 top-1/2 -translate-1/2 left-1/2">
               Compliance & Security
             </p>
           </div>
 
-          <h3 className="text-3xl mb-1.5 font-lora">
+          <h3 className="text-lg lg:text-text-3xl mb-1.5 font-lora">
             Built on a Foundation of Trust
           </h3>
-          <p className="text-lg max-w-lg font-lora leading-6">
+          <p className="text-md lg:text-text-lg max-w-lg font-lora leading-6">
             We are committed to the highest standards of data security and
             compliance to ensure your organization&apos;s information is always
             protected.
@@ -51,7 +51,7 @@ export default function ComplianceSecurity() {
         </div>
 
         {/* Right Cards Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6  md:h-[500px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-[1150px]:h-[600px] md:h-[500px]">
           <div className="grid md:grid-rows-[40%_55%] gap-6">
             {cards.map((card, i) => (
               <div
@@ -60,7 +60,7 @@ export default function ComplianceSecurity() {
                       transition-all duration-500 hover:scale-[1.02]`}
               >
                 <div className="bg-gradient-to-br from-[#0B1220]/90 to-[#07101E]/90 p-6 h-full rounded-3xl">
-                  <h4 className="text-[#98F9FF] font-medium text-[22px] mb-2">
+                  <h4 className="text-[#98F9FF] font-medium text-[22px] font-karla mb-2">
                     {card.title}
                   </h4>
                   <p className="text-base leading-relaxed font-lora">
@@ -78,10 +78,10 @@ export default function ComplianceSecurity() {
                       transition-all duration-500 hover:scale-[1.02]`}
               >
                 <div className="bg-gradient-to-br from-[#0B1220]/90 to-[#07101E]/90 p-6 h-full rounded-3xl">
-                  <h4 className="text-[#98F9FF] font-medium text-[22px] mb-2">
+                  <h4 className="text-[#98F9FF] font-medium text-[22px] font-karla mb-2">
                     {card.title}
                   </h4>
-                  <p className="text-base leading-relaxed font-lora">
+                  <p className="text-sm leading-relaxed font-lora">
                     {card.description}
                   </p>
                 </div>

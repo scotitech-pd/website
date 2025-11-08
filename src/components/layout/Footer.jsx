@@ -32,22 +32,22 @@ const Footer = () => {
     {
       id: 2,
       title: "Opsly",
-      link: "/opsly",
+      link: "/products/opsly",
     },
     {
       id: 1,
       title: "AppDeploy",
-      link: "/appdeploy",
+      link: "/products/appdeploy",
     },
     {
       id: 4,
       title: "Clarity Path",
-      link: "/claritypath",
+      link: "/products/claritypath",
     },
     {
       id: 3,
       title: "AI Caption Studio",
-      link: "/aicaptionstudio",
+      link: "/products/aicaptionstudio",
     },
   ];
 

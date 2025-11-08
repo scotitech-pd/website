@@ -7,19 +7,19 @@ export default function OpslyFeaturesSection() {
       title: "Real-Time Usage Dashboard",
       description:
         "Instantly see your entire SaaS inventory in one place. Track active users, login frequency, and feature adoption to make data-driven decisions about your software stack.",
-      icon: "images/products/opsly/dashboard.png",
+      icon: "/images/products/opsly/dashboard.png",
     },
     {
       title: "Security & Compliance Monitoring",
       description:
         "Mitigate risk by tracking which employees have access to which applications. Easily conduct security audits and streamline employee on-boarding and off-boarding.",
-      icon: "images/products/opsly/security.png",
+      icon: "/images/products/opsly/security.png",
     },
     {
       title: "Seamless Platform Integration",
       description:
         "Opsly connects with your existing ecosystem, including Single Sign-On (SSO), HR, and finance systems to provide a single source of truth for all your SaaS data.",
-      icon: "images/products/opsly/platform.png",
+      icon: "/images/products/opsly/platform.png",
     },
   ];
 
@@ -42,10 +42,10 @@ export default function OpslyFeaturesSection() {
   ];
 
   return (
-    <section className="w-full py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="w-full pb-10 bg-white">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 ">
         {/* Section Header */}
-        <div className="px-6 text-center">
+        <div className="lg:px-6 text-center">
           <h2 className="text-[40px] font-semibold text-main-dark mb-1 drop-shadow-2xl font-karla">
             Key Features
           </h2>
@@ -61,7 +61,7 @@ export default function OpslyFeaturesSection() {
             {features.map((feature, i) => (
               <div
                 key={i}
-                className="flex items-start bg-white shadow-[0_0_5px_rgba(128,128,128,0.3)] rounded-2xl p-6 border border-gray-100 relative group
+                className="flex items-start ml-4 lg:ml-0 bg-white shadow-[0_0_5px_rgba(128,128,128,0.3)] rounded-2xl p-6 border border-gray-100 relative group
                      hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] hover:scale-101 transform-gpu transition-all duration-300  text-black"
               >
                 <div className="absolute bg-white rounded-full flex justify-center items-center shadow-[0_0_5px_rgba(128,128,128,0.6)] group-hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] group-hover:scale-110 duration-300 top-1/2 -translate-1/2 left-0 size-12 transition-all">
@@ -92,7 +92,7 @@ export default function OpslyFeaturesSection() {
             <div className="bg-white text-gray-900 rounded-lg p-6 space-y-5 font-lora">
               {miniFeatures.map((item, i) => (
                 <div key={i}>
-                  <h4 className="font-bold text-[15px] text-black mb-0.5">
+                  <h4 className="font-bold text-[15px] text-black mb-0.5 font-karla">
                     {item.title}
                   </h4>
                   <p className="text-[15px] leading-[18px] text-main-dark">
