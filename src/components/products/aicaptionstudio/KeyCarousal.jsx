@@ -10,7 +10,7 @@ import "swiper/css";
 
 const FeaturesCarousel = () => {
   const swiperRef = useRef(null);
-
+  const [visible,setVisible] = useState(0);
 
 
   const features = [
@@ -59,7 +59,9 @@ const FeaturesCarousel = () => {
   const handlePrevClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
+
     if (swiperRef.current?.swiper) {
+      setVisible(0);
       swiperRef.current.swiper.slidePrev();
     }
   };
@@ -68,6 +70,7 @@ const FeaturesCarousel = () => {
     e.preventDefault();
     e.stopPropagation();
     if (swiperRef.current?.swiper) {
+      setVisible(prev => prev + 1);
       swiperRef.current.swiper.slideNext();
     }
   };
@@ -79,7 +82,7 @@ const FeaturesCarousel = () => {
 
         <div className="relative  mb-12 px-16">
           <div className=" absolute  -top-6  left-14 min-w-[650px]  pointer-events-none">
-            <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter  text-gray-900/10 opacity-50">
+            <p className="hidden lg:flex text-[70px] font-karla font-bold -tracking-tighter  text-gray-900/10 opacity-50">
               Key Features
             </p>
           </div>
@@ -90,7 +93,7 @@ const FeaturesCarousel = () => {
 
         {/* Carousel Container with left margin, right edge hugging */}
         <div className="relative h-[490px] pt-10 pl-0 md:pl-8 lg:pl-5">
-          <div className="absolute w-[100%]  left-[350px]">
+          <div className={`absolute w-[100%]  left-10 ${visible!=0 && "md:left-[360px]"}`}>
             <Swiper
               ref={swiperRef}
               modules={[Navigation, Autoplay, Keyboard]}
@@ -109,10 +112,9 @@ const FeaturesCarousel = () => {
                 300: { slidesPerView: 1.2, spaceBetween: 20 },
                 460: { slidesPerView: 2.2, spaceBetween: 25 },
                 640: { slidesPerView: 3, spaceBetween: 25 },
-                768: { slidesPerView: 2, spaceBetween: 30 },
-                1058: { slidesPerView: 2.6, spaceBetween: 30 },
-                1160: { slidesPerView: 3, spaceBetween: 30 },
-                1550: { slidesPerView: 4, spaceBetween: 30 },
+                600: { slidesPerView: 2.2, spaceBetween: 25 },
+                890: { slidesPerView: 3, spaceBetween: 30 },
+                1058: { slidesPerView: 4, spaceBetween: 30 },
               }}
             >
               {features.map((feature, index) => (
@@ -152,7 +154,7 @@ const FeaturesCarousel = () => {
 
           </div>
             {/* Navigation Buttons - Centered below carousel */}
-            <div className=" absolute bottom-0 left-0 flex justify-start gap-2 mt-8">
+            <div className=" absolute bottom-0 left-5 flex justify-start gap-2 mt-8">
               <button
                 onClick={handlePrevClick}
                 type="button"
