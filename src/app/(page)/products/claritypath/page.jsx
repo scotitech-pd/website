@@ -11,7 +11,7 @@ const claritypath = () => {
     <>
         <ClarityPathSection/>
         <WhatIsClarityPath/>
-        <KeyFeaturesSection/> //carousal needs improvement
+        <KeyFeaturesSection/> 
         <WhyChooseSection/>
         <ClarityPathSteps/>
         <ComplianceSecurity/> 
