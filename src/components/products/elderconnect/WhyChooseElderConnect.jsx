@@ -1,7 +1,5 @@
 "use client";
 
-import { Heart, Clock, ShieldCheck, Network } from "lucide-react";
-
 export default function WhyChooseElderConnect() {
   const features = [
     {
@@ -31,34 +29,37 @@ export default function WhyChooseElderConnect() {
   ];
 
   return (
-    <section className="bg-black text-white py-20">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-0">
+    <section className="bg-black text-white py-16 min-[1260px]:py-20">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         {/* HEADER */}
-        <div className="grid md:grid-cols-2 gap-10 mb-12 items-center justify-center">
-          <div className="h-fit">
-            <h2 className="text-3xl text-white md:text-[38px] font-semibold drop-shadow-2xl font-karla pl-10">
+        <div className="grid min-[1260px]:grid-cols-2 gap-4 min-[1260px]:gap-10 min-[1260px]:mb-12 items-center justify-center">
+          <div className="min-[1260px]:h-fit w-full flex items-center">
+            <h2 className="text-3xl text-nowrap text-white md:text-[38px] font-semibold drop-shadow-2xl font-karla min-[1260px]:pl-10">
               Why Choose <br />
               <span className="">Elder Connect app?</span>
             </h2>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <p className="text-xl text-white leading-[25px]">
+          <div className="flex flex-col gap-6 min-[1260px]:gap-4">
+            <p className="text-md min-[1260px]:text-xl text-white leading-[25px] font-lora">
               More than just an app, Elder Connect is your all-in-one companion,
               delivering safety, connection, and real-time support for your
               senior loved one, and complete peace of mind for you.
             </p>
-            <button className="self-start bg-white text-main-dark font-semibold px-6 py-2 rounded-md shadow-md hover:scale-101 hover:shadow-[0_0_5px_rgba(255,255,255,0.6)] duration-200 transition-all">
+            <button className="self-start mb-6 font-karla bg-white text-main-dark font-semibold px-6 py-2 rounded-md shadow-md hover:scale-101 hover:shadow-[0_0_5px_rgba(255,255,255,0.6)] duration-200 transition-all">
               Download Now
             </button>
           </div>
         </div>
 
         {/* FEATURES */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 min-[1260px]:grid-cols-4 gap-6">
           {features.map((feature) => (
-            <div key={feature.id} className="relative rounded-3xl p-[1.6px] bg-gradient-to-br from-[#98F9FF] via-main-light/40 to-[#EABFFF]">
-              <div className="bg-black  font-lora border border-purple-400/40 rounded-3xl px-7 pt-8 pb-5 text-left backdrop-blur-xl h-full w-full">
+            <div
+              key={feature.id}
+              className="relative rounded-3xl p-[1.6px] bg-gradient-to-br from-[#98F9FF] via-main-light/40 to-[#EABFFF]"
+            >
+              <div className="bg-black font-lora border border-purple-400/40 rounded-3xl px-7 pt-8 pb-5 text-left backdrop-blur-xl h-full w-full">
                 <div className="bg-white size-18 rounded-xl flex items-center justify-center mb-4">
                   <img
                     src={feature.icon}
@@ -66,10 +67,10 @@ export default function WhyChooseElderConnect() {
                     className="size-10"
                   />
                 </div>
-                <h4 className="text-lg font-semibold text-[#E38DF0] mb-2 max-w-[180px] leading-[22px]">
+                <h4 className="text-lg font-semibold text-[#E38DF0] font-karla mb-2 min-[1260px]:max-w-[180px] leading-[22px]">
                   {feature.title}
                 </h4>
-                <p className="text-sm text-white/80 leading-[18px]">
+                <p className="text-sm text-white/80 min-[1260px]:leading-[18px]">
                   {feature.text}
                 </p>
               </div>
