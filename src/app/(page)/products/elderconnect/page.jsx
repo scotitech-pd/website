@@ -8,12 +8,12 @@ import WhyChooseElderConnect from "@/components/products/elderconnect/WhyChooseE
 const ElderConnectPage = () => {
   return (
     <>
-        {/* <ElderConnectHero/> 
+        <ElderConnectHero/> 
         <ElderConnectSection/>   
         <ModernHomeSetupSection/>
-        <WhyChooseElderConnect/> */}
+        <WhyChooseElderConnect/>
         <HowToGetElderConnect/>
-        {/* <ComplianceSecuritySection/> */}
+        <ComplianceSecuritySection/>
     </>
   )
 }
