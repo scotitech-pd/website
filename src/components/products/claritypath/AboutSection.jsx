@@ -5,7 +5,7 @@ import React from "react";
 export default function AboutSection() {
   return (
     <section
-      className="relative flex items-center py-40 justify-center bg-cover bg-center"
+      className="relative flex items-center py-16 lg:py-40 justify-center bg-cover bg-center"
       style={{
         backgroundImage:
           "url('/images/products/claritypath/aboutclarity1.png')",
