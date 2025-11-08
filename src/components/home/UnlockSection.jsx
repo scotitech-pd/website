@@ -47,22 +47,22 @@ export default function UnlockSection() {
           <StatCircle
             number="15+"
             label="Years Of Experience"
-            className="absolute top-6 right-16 size-40 hover:scale-101 duration-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.9)]"
+            className="absolute top-6 right-16 size-40 font-karla hover:scale-101 duration-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.9)]"
           />
           <StatCircle
             number="120+"
             label="Expert Team"
-            className="absolute top-52 right-24 size-36 hover:scale-101 duration-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.9)]"
+            className="absolute top-52 right-24 size-36 font-karla hover:scale-101 duration-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.9)]"
           />
           <StatCircle
             number="1.5k+"
             label="Clients"
-            className="absolute bottom-16 right-64 size-32 hover:scale-101 duration-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.9)]"
+            className="font-karla absolute bottom-16 right-64 size-32 hover:scale-101 duration-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.9)]"
           />
           <StatCircle
             number="5+"
             label="Products"
-            className="absolute bottom-4 right-[430px] size-32 hover:scale-101 duration-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.9)]"
+            className="absolute bottom-4 right-[430px] font-karla size-32 hover:scale-101 duration-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.9)]"
           />
         </div>
       </div>

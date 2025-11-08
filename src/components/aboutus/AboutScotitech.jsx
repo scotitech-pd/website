@@ -53,10 +53,10 @@ const AboutScotiTech = () => {
                 {/* Header */}
                 <div className="relative z-20 text-black">
                   <div className="font-karla font-medium text-4xl my-7 relative w-fit">
-                    <p className="text-[4.5rem] font-semibold text-nowrap text-black opacity-5 absolute -left-5 top-1/2 -translate-y-1/2">
+                    <p className="text-[4.5rem] font-karla   font-semibold text-nowrap text-black opacity-5 absolute -left-5 top-1/2 -translate-y-1/2">
                       About ScotiTech
                     </p>
-                    <h2 className="relative z-10 font-bold">About ScotiTech</h2>
+                    <h2 className="relative z-10 font-bold text-4xl">About ScotiTech</h2>
                   </div>
                   <h2 className="text-xl lg:text-[18px] pr-9 font-karla 2xl:text-[25px] font-bold text-black mb-4 lg:mb-6">
                     ScotiTech: Pioneering Technology Solutions for Global Business
@@ -158,7 +158,7 @@ const AboutScotiTech = () => {
             <div className="relative h-[100%] hidden min-[1300px]:flex">
               <div className="h-fit">
                 <img src="/images/aboutus/hero-tech.png" alt="" />
-                <div className="absolute -bottom-[15px] flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_10px_25px_rgba(94,11,123,0.6)] bg-white rounded-2xl h-[90px] w-[200px] border-1 border-[#7E1A8E]">
+                <div className="absolute -bottom-[40px] flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_10px_25px_rgba(94,11,123,0.6)] bg-white rounded-2xl h-[90px] w-[200px] border-1 border-[#7E1A8E]">
                   <h2 className="text-[#9638E5] font-karla font-bold lg:text-[20px]">
                     ScotiTech
                   </h2>

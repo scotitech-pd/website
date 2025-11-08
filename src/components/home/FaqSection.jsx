@@ -88,7 +88,7 @@ export default function FaqSection() {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex justify-between items-center text-left px-5 py-2.5 font-medium text-main-dark"
               >
-                <div className="flex items-center gap-3 text-[17px] sm:text-[18px]">
+                <div className="flex items-center gap-3 text-[17px] sm:text-[18px] font-karla">
                   <span>{faq.question}</span>
                 </div>
                 <ChevronDown

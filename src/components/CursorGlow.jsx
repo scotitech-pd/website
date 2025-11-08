@@ -22,16 +22,15 @@ export default function CursorBall() {
 
   return (
     <div
-      className="fixed top-0 left-0 pointer-events-none z-[9999] transition-transform duration-150 ease-out"
+      className="hidden lg:block fixed top-0 left-0 pointer-events-none z-[9999] transition-transform duration-150 ease-out"
       style={{
         transform: `translate(${pos.x - 5}px, ${pos.y - 5}px)`,
       }}
     >
       <div
-  className={`w-[12px] h-[12px] rounded-full bg-white shadow-[0_0_8px_2px_#641171] transition-all duration-200 ease-in-out 
+        className={`w-[12px] h-[12px] rounded-full bg-white shadow-[0_0_8px_2px_#641171] transition-all duration-200 ease-in-out 
   ${clicked ? "scale-150 opacity-90" : "scale-100 opacity-80"}`}
-></div>
-
+      ></div>
     </div>
   );
 }

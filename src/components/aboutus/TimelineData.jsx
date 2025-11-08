@@ -151,17 +151,17 @@ export default function Timeline() {
                     <div className="flex items-start flex-row-reverse">
                       {/* Year Circle */}
                       <div className="w-20 h-20  absolute  z-20 -top-10 bg-[#641171] rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-2xl font-bold">
+                        <span className="text-white text-2xl font-bold font-karla">
                           {item.year}
                         </span>
                       </div>
 
                       {/* Content Card */}
                       <div className="mr-8 bg-[#FBDFFF] rounded-2xl p-8 max-w-md  z-10">
-                        <h3 className="text-xl font-bold text-black mb-2">
+                        <h3 className="text-xl font-bold text-black mb-2 font-karla">
                           {item.title}
                         </h3>
-                        <p className="text-black text-sm leading-relaxed">
+                        <p className="text-black text-sm leading-relaxed font-lora">
                           {item.description}
                         </p>
                       </div>

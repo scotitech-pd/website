@@ -87,7 +87,7 @@ const HowWeWorks = () => {
         {/* CTA Button */}
         <div className="flex justify-center lg:mt-3">
           <Link href="/contact">
-            <button className="px-8 lg:px-6 py-3 lg:py-2 lg:mt-2.5 bg-white text-black font-semibold text-base lg:text-[15px] font-lora  cursor-pointer rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+            <button className="px-8 font-karla lg:px-6 py-3 lg:py-2 lg:mt-2.5 bg-white text-black font-semibold text-base lg:text-[15px]   cursor-pointer rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
               Request a Global Delivery Plan
             </button>
           </Link>

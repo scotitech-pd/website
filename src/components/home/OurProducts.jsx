@@ -68,10 +68,10 @@ export default function OurProducts() {
               </div>
               <div className="py-8 px-1.5  text-black">
                 <h4 className="text-xl font-semibold font-karla tracking-wide">{p.name}</h4>
-                <p className="text-black/90 mt-2 font-lora font-semibold">{p.tagline}</p>
+                <p className="text-black/70 mt-2 font-lora font-semibold">{p.tagline}</p>
               </div>
               <Link
-                href={`/products/${p.link}`}
+                href={`/products${p.link}`}
                 className="bg-main font-karla tracking-wider font-semibold text-white text-nowrap px-6 py-2 rounded-full text-sm hover:bg-main/90 absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2"
               >
                 Read more

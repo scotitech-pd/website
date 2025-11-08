@@ -151,10 +151,10 @@ export default function DownloadDashboard() {
                       />
                     </button>
                     <div className="">
-                      <p className="font-semibold font-lora  text-gray-800">
+                      <p className="font-semibold font-karla  text-gray-800">
                         {item.name}
                       </p>
-                      <p className="text-xs sm:text-sm text-gray-500">
+                      <p className="text-xs font-lora sm:text-sm text-gray-500">
                         {item.details}
                       </p>
                     </div>
