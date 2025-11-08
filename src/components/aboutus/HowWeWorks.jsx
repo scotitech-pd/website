@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const HowWeWorks = () => {
@@ -55,14 +56,10 @@ const HowWeWorks = () => {
             >
               {/* Card */}
 
-              <div
-                className=" h-full  bg-gradient-to-br from-[#1f2d31] to-[#060a0d] backdrop-blur-sm rounded-2xl p-6 lg:p-6 flex flex-col justify-start"
-              >
+              <div className=" h-full  bg-gradient-to-br from-[#1f2d31] to-[#060a0d] backdrop-blur-sm rounded-2xl p-6 lg:p-6 flex flex-col justify-start">
                 {/* Icon on top */}
                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-20">
-                  <div
-                    className="w-20 h-20 border border-[#9c27b0]/60 shadow-[0_0_25px_3px_rgba(156,39,176,0.7)] hover:shadow-[0_0_35px_6px_rgba(156,39,176,0.8)]   lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-white/20 group-hover:scale-110 transition-transform duration-300"
-                  >
+                  <div className="w-20 h-20 border border-[#9c27b0]/60 shadow-[0_0_25px_3px_rgba(156,39,176,0.7)] hover:shadow-[0_0_35px_6px_rgba(156,39,176,0.8)]   lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-white/20 group-hover:scale-110 transition-transform duration-300">
                     <img
                       src={card.icon}
                       alt={card.title}
@@ -88,10 +85,12 @@ const HowWeWorks = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="flex justify-center lg:mt-3" >
-          <button className="px-8 lg:px-6 py-3 lg:py-2 lg:mt-2.5 bg-white text-black font-semibold text-base lg:text-[15px] font-lora  cursor-pointer rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
-            Request a Global Delivery Plan
-          </button>
+        <div className="flex justify-center lg:mt-3">
+          <Link href="/contact">
+            <button className="px-8 lg:px-6 py-3 lg:py-2 lg:mt-2.5 bg-white text-black font-semibold text-base lg:text-[15px] font-lora  cursor-pointer rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+              Request a Global Delivery Plan
+            </button>
+          </Link>
         </div>
       </div>
     </section>

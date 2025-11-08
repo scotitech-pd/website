@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const securityItems = [
   {
     img: "/images/solution/security1.png",
@@ -43,17 +45,18 @@ export default function SecurityCompliance() {
               AppDeploy leverages Apple Business Manager for distribution,
               ensuring compliance with Apple’s official guidelines.
             </p>
-
-            <button className="mt-6 bg-white text-md text-black font-medium font-lora pl-2 pr-5 py-1 rounded-lg shadow-sm transition relative">
-              Securely with AppDeploy
-              <div className="absolute right-0 top-1/2 group -translate-y-1/2 translate-x-1/2">
-                <img
-                  src="/images/solution/downloadcircle.png"
-                  alt=""
-                  className="size-8 group-hover:size-9 duration-300 cursor-pointer"
-                />
-              </div>
-            </button>
+            <Link href="/products/appdeploy">
+              <button className="mt-6 bg-white text-md text-black font-medium font-lora pl-2 pr-5 py-1 rounded-lg shadow-sm transition relative">
+                Securely with AppDeploy
+                <div className="absolute right-0 top-1/2 group -translate-y-1/2 translate-x-1/2">
+                  <img
+                    src="/images/solution/downloadcircle.png"
+                    alt=""
+                    className="size-8 group-hover:size-9 duration-300 cursor-pointer"
+                  />
+                </div>
+              </button>
+            </Link>
           </div>
 
           <div className="space-y-5 min-[390px]:space-y-10 text-black ml-5 min-[1220px]:hidden sm:mt-5 pb-8">

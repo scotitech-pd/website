@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AppDeploySection() {
   return (
     <section
@@ -107,9 +109,10 @@ export default function AppDeploySection() {
         </div>
 
         <div className="min-[1150px]:flex hidden absolute z-20 -bottom-10 min-[1400px]:-bottom-28 right-10 min-[1700px]:right-0 bg-gradient-to-r from-[#98F9FF]/20 to-[#EABFFF]/20 rounded-xl px-8 py-3 cursor-pointer shadow-lg text-center  backdrop-blur-md  hover:scale-105 duration-300 hover:backdrop-blur-sm">
+          <Link href="/products/appdeploy">
           <p className="font-lora text-lg font-medium text-white">
             Download AppDeploy Now
-          </p>
+          </p></Link>
         </div>
       </div>
 

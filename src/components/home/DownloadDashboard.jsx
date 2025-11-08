@@ -159,12 +159,12 @@ export default function DownloadDashboard() {
                       </p>
                     </div>
                     <button
-                      className={`hidden min-[830px]:flex rounded-full p-2 shadow hover:bg-gray-50 transition ${section.titleColor1}`}
+                      className={ `cursor-pointer text-white hover:text-black hidden min-[830px]:flex rounded-full p-2 shadow hover:bg-gray-50/90 transition ${section.titleColor1}`}
                     >
-                      <img
-                        src="/images/home/droparrow.png"
+                      <Download
+                        
                         alt="download"
-                        className="size-5"
+                        className="size-5 "
                       />
                     </button>
                   </div>

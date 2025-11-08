@@ -12,6 +12,7 @@ const products = [
     textColor: "text-blue",
     buttonColor: "bg-blue",
     buttonText: "Download AppDeploy",
+    link:"appdeploy"
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const products = [
     textColor: "text-green",
     buttonColor: "bg-green",
     buttonText: "Join Opsly Waitlist",
+    link:"opsly"
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ const products = [
     textColor: "text-main-light",
     buttonColor: "bg-main-light",
     buttonText: "Try Caption Studio Free",
+    link:"aicaptionstudio"
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ const products = [
     textColor: "text-green-light", // Tailwind doesn't have olive, so customize or use closest match
     buttonColor: "bg-green-light",
     buttonText: "Download ClarityPath App",
+    link:"claritypath"
   },
 ];
 
@@ -100,7 +104,7 @@ const ProductShowcase = () => {
               <div className="space-y-2  left-4 w-[90%] absolute bottom-2">
                 <div className="w-full">
                   <Link
-                    href="#"
+             href={`/products/${product.link}`}
                     className={` bg-white px-3 font-medium font-karla py-0.5 rounded-lg text-[13px] text-blue-600 shadow-[0_0_25px_rgba(128,128,128,0.4)] `}
                   >
                     Read Details
@@ -109,7 +113,7 @@ const ProductShowcase = () => {
                 </div>
                 <div className="flex justify-end w-full">
                   <Link
-                    href="#"
+                  href={`/products/${product.link}`}
                     className={`px-3 w-fit py-[4px] text-white text-sm rounded-lg flex font-karla ${product.buttonColor} shadow-[0_0_25px_rgba(128,128,128,0.4)] `}
                   >
                     {product.buttonText}

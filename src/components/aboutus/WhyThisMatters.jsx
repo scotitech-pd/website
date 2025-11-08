@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function WhyThisMatters() {
   const benefits = [
     {
@@ -32,23 +34,25 @@ export default function WhyThisMatters() {
   ];
 
   return (
-    <div className=" bg-white py-12 overflow-hidden" >
+    <div className=" bg-white py-12 overflow-hidden">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-start">
           {/* Left Side - Map */}
           <div className="flex flex-col items-center lg:items-center w-full">
-        <div className="relative">
-  <img
-    src="/images/aboutus/world-map.png"
-    alt="Global presence map"
-    className="w-full h-auto object-contain opacity-90"
-  />
-</div>
+            <div className="relative">
+              <img
+                src="/images/aboutus/world-map.png"
+                alt="Global presence map"
+                className="w-full h-auto object-contain opacity-90"
+              />
+            </div>
 
             <div className="mt-10 flex justify-center">
+              <Link href="/contact">
               <button className="px-12 py-2 font-lora cursor-pointer bg-white border rounded-xl border-gray-300   text-gray-900 font-medium hover:bg-gray-50 transition-colors text-base shadow-[0_0_15px_3px_rgba(139,42,214,0.3)] hover:shadow-[0_0_25px_6px_rgba(139,42,214,0.5)]">
                 Book a 15-Min Consultation
               </button>
+              </Link>
             </div>
           </div>
 

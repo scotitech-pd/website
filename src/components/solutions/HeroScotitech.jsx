@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const HeroScotitech = () => {
   return (
     <section className="h-[84vh] lg:h-[88vh] 2xl:h-auto  relative flex justify-center flex-col text-white bg-gradient-to-r from-[#641171]/50 via-[#641171]/10  to-white  overflow-hidden">
@@ -24,19 +26,19 @@ const HeroScotitech = () => {
               </p>
 
               <div className="mt-10 flex flex-wrap gap-3 sm:gap-7 font-karla text-black z-10">
-                <a
-                  href="#"
+                <Link
+                  href="/products/appdeploy"
                   className="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-white  shadow-sm text-sm hover:bg-[#F4ADFF] duration-300 font-medium hover:shadow-lg transition-shadow"
                 >
                   Explore Our Products
-                </a>
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-white  shadow-sm text-sm hover:bg-[#F4ADFF] duration-300 font-medium hover:shadow-lg transition-shadow"
                 >
                   Request a Demo
-                </a>
+                </Link>
               </div>
               <div className="relative h-[157px] lg:hidden max-[390000000000000000000000000000000000000000000000000000000000000000px]:hidden">
               <img src="/images/solution/imgs.png" alt="" className="max-w-[280px] py-5 ml-auto absolute -top-30 right-2 -z-10 opacity-20"/>

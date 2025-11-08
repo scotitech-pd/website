@@ -13,7 +13,7 @@ const MissionVision = () => {
                 <h2 className="text-2xl sm:text-3xl font-karla lg:text-[30px] font-semibold text-black">
                   Our Mission
                 </h2>
-                <div className="absolute hidden lg:block -top-8 -right-50 lg:-left-5 min-w-[650px] pointer-events-none">
+                <div className="absolute hidden lg:block -top-8 -right-50 lg:-left-1 min-w-[650px] pointer-events-none">
                   <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter text-gray-400/60 opacity-50">
                     Our Mission
                   </p>
@@ -68,7 +68,7 @@ const MissionVision = () => {
 
             {/* Right Content - Text (appears first on mobile) */}
             <div className="space-y-5 text-center lg:text-left px-5 sm:px-8 lg:pr-[100px] lg:px-0 relative order-1 lg:order-2">
-              <div className="hidden lg:block absolute -top-8 -left-5 min-w-[650px] pointer-events-none">
+              <div className="hidden lg:block absolute -top-8 -left-1 min-w-[650px] pointer-events-none">
                 <p className="text-8xl lg:text-[70px] font-karla font-bold -tracking-tighter text-gray-400/60 opacity-50">
                   Our Vision
                 </p>

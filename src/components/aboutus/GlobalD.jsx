@@ -1,9 +1,10 @@
+import Link from "next/link";
 import React from "react";
 
 const GlobalD = () => {
   return (
     <section
-      className="relative  bg-center bg-cover bg-no-repeat py-6 "
+      className="relative  bg-center bg-cover bg-no-repeat py-9 "
       style={{
         backgroundImage: "url('/images/aboutus/lead-bg.png')",
       }}
@@ -19,19 +20,21 @@ const GlobalD = () => {
               </p>
             </div>
           </h3>
-          <p className="text-white font-lora lg:text-[15px] text-xs leading-5 min-[1670px]:py-[20px] min-[1670px]:text-[200px]">
+          <p className="text-white font-lora lg:text-[15px] text-xs leading-5.5 min-[1670px]:py-[20px] min-[1670px]:text-[200px]">
             Scotitech operates with strategic leadership from London and a
             remote-first engineering network spanning multiple regions. This
             hybrid model allows us to blend British innovation, global
             collaboration, and technical agility — delivering exceptional
             products and enterprise solutions worldwide.
           </p>
-          <div className="relative w-[250px] mx-auto mt-5 border-1 shadow-xl rounded-4xl min-[1670px]:mt-[20px]">
+          <Link href="/contact">
+          <div className="cursor-pointer relative w-[250px] mx-auto mt-5 border-1 shadow-xl rounded-4xl min-[1670px]:mt-[20px] mb-5">
             <img src="/images/aboutus/globalbutton.png" alt="" />
             <p className="absolute top-2 left-1/2 -translate-x-1/2 font-semibold lg:text-[20px] text-black min-[1670px]:text-[25px]">
               Talk to Us
             </p>
           </div>
+          </Link>
         </div>
       </div>
     </section>

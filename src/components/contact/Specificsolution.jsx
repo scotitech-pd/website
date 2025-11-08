@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { MoveRightIcon, Send } from "lucide-react";
+import Link from "next/link";
 
 const SpecificSolution = () => {
   const productCards = [
@@ -10,18 +11,21 @@ const SpecificSolution = () => {
       name: "AppDeploy",
       image: "/images/contact/appdeploy.png",
       description: "Effortless iOS App Distribution",
+      link:"/appdeploy",
     },
     {
       id: 2,
       name: "Opsly",
       image: "/images/contact/opsly.png",
       description: "All-in-One Operations Platform",
+      link:"/opsly",
     },
     {
       id: 3,
       name: "ClarityPath",
       image: "/images/contact/claritypath.png",
       description: "Private decision-support app",
+      link:"/claritypath",
     },
   ];
 
@@ -149,9 +153,11 @@ const SpecificSolution = () => {
                     <p className="text-sm lg:text-[14px] text-gray-600 mb-7 font-lora">
                       {card.description}
                     </p>
-                    <button className="bg-purple-700 shadow-[0_0_15px_3px_rgba(180,100,255,1)] text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs lg:px-4 px-6 py-2 rounded-full hover:bg-purple-800 transition-colors font-karlas">
+                    <Link href={`/products/${card.link}`}>
+                    <button className="bg-purple-700 cursor-pointer font-karla shadow-[0_0_15px_3px_rgba(180,100,255,1)] text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs lg:px-4 px-6 py-2 rounded-full hover:bg-purple-800 transition-colors font-karlas">
                       Read more
                     </button>
+                    </Link>
                   </div>
                 </div>
               ))}

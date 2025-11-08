@@ -205,7 +205,7 @@ const Footer = () => {
                     <p className="font-lora">+44 (0) 7459 444274</p>
                   </div>
                 </a>
-                <a href="mailto:info@spacelinkers.com">
+                <a href="mailto:info@scotitech.com">
                   {" "}
                   <div className="md:flex flex-col  md:mt-1.5">
                     <p className="-mb-0.5 font-karla">Email:</p>
@@ -267,20 +267,20 @@ const Footer = () => {
 
           <div className="min-[790px]:hidden   font-bold  font-karla flex justify-center items-center mt-1">
             Powered by
-            <Link href="/">
+            <a href="https://www.spacelinkers.com/" target="_blank"> 
               <p className="cursor-pointer font-bold  font-karla  text-[#F58634] ml-1">
                 Spacelinkers
               </p>{" "}
-            </Link>
+            </a>
           </div>
 
           <div className="hidden min-[790px]:flex absolute right-5 top-0 font-karla">
             Powered by
-            <Link href="/">
+            <a href="https://www.spacelinkers.com/" target="_blank"> 
               <p className="cursor-pointer font-bold  font-karla text-[#F58634] ml-1">
                 Spacelinkers Infotech
               </p>{" "}
-            </Link>
+            </a>
           </div>
         </div>
       </div>
