@@ -44,7 +44,7 @@ export default function KeyFeatures() {
      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 ">
       <div className="text-3xl lg:text-5xl font-semibold relative text-center font-karla lg:mb-6 mb-2">
         Key Features
-        <p className="absolute hidden lg:block text-[83px] opacity-10 top-1/2  font-karla -translate-1/2 left-1/2 ">
+        <p className="absolute hidden lg:block text-[83px] opacity-10 top-1/2  font-karla -translate-1/2 left-1/2 text-nowrap">
           Key Features
         </p>
       </div>

@@ -22,7 +22,7 @@ export default function AppDeploySection() {
           </div>
 
           {/* Subtitle */}
-          <h2 className="lg:text-2xl font-xl font-medium font-karla mt-7">
+          <h2 className="lg:text-2xl text-xl font-medium font-karla mt-7">
             The Smarter Way to Distribute
             <span className="block"> iOS Apps</span>
           </h2>

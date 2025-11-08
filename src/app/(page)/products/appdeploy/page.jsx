@@ -9,7 +9,7 @@ const page = () => {
   return (                        
     <>
         <AppDeploySection/>  
-        {/* <AppDeployInfo/> */}
+        <AppDeployInfo/>
         <KeyFeatures/>  
         <WhyChooseAppDeploy/>
         <HowAppDeployWorks/>
