@@ -10,7 +10,7 @@ const GlobalD = () => {
       }}
     >
       {" "}
-      <div className="text-center px-4 sm:px-8 md:px-16 min-[1670px]:w-7xl min-[1670px]:mx-auto lg:px-[180px] flex justify-center items-center  mt-[4px] h-auto lg:h-[30vh] py-8 lg:py-0 overflow-hidden">
+      <div className="text-center px-4 sm:px-8 md:px-16 min-[1670px]:w-7xl min-[1670px]:mx-auto lg:px-[180px] flex justify-center items-center  mt-[4px] h-auto  py-8 lg:py-0 overflow-hidden">
         <div className="relative">
           <h3 className="text-2xl relative  font-karla mb-5 lg:text-[35px] min-[1670px]:py-[20px] font-semibold text-white 2xl:text-[45px]">
             Global Delivery. Local Trust

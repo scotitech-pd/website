@@ -103,12 +103,12 @@ const Navbar = () => {
                           }
                           className={`duration-300 px-4 py-1 rounded-lg cursor-pointer flex items-center justify-center gap-2 ${
                             pathname.includes("/ourproducts") &&
-                            "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                            "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)] font-karla"
                           }`}
                         >
                           {item.title}
                           <ChevronDown
-                            className={`w-4 h-4 transition-transform duration-300 ${
+                            className={`w-4 h-4 font-karla transition-transform duration-300 ${
                               mobileProductsOpen ? "rotate-180" : ""
                             }`}
                           />
@@ -132,10 +132,10 @@ const Navbar = () => {
                                   "bg-white/30 border border-white/50"
                                 }`}
                               >
-                                <div className="font-semibold text-sm">
+                                <div className="font-semibold text-sm font-karla" >
                                   {product.title}
                                 </div>
-                                <div className="text-xs text-gray-300 mt-0.5">
+                                <div className="text-xs text-gray-300 mt-0.5 font-lora">
                                   {product.desc}
                                 </div>
                               </Link>
@@ -152,7 +152,7 @@ const Navbar = () => {
                         href={item.link}
                         className={`duration-300 px-4 py-1 rounded-lg ${
                           item.link == pathname &&
-                          "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                          "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)] font-karla"
                         }`}
                       >
                         {item.title}
@@ -212,7 +212,7 @@ const Navbar = () => {
                     <div
                       className={`duration-300 px-1.5 py-0.5 rounded-lg transition-all cursor-pointer flex items-center gap-1 ${
                         pathname.includes("/ourproducts") &&
-                        "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)] "
+                        "border-white border-2 shadow-[0_0_15px_rgba(255,255,255,0.5)] font-karla"
                       }`}
                     >
                       {item.title}
@@ -241,10 +241,10 @@ const Navbar = () => {
                               "bg-white/20 border border-white/30"
                             }`}
                           >
-                            <div className="font-semibold text-white group-hover:text-white transition-colors">
+                            <div className="font-semibold text-white group-hover:text-white transition-colors font-karla">
                               {product.title}
                             </div>
-                            <div className="text-xs text-gray-400 mt-0.5 group-hover:text-gray-300 transition-colors">
+                            <div className="text-xs text-gray-400 mt-0.5 group-hover:text-gray-300 transition-colors font-lora">
                               {product.desc}
                             </div>
                           </Link>
