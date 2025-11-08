@@ -4,7 +4,7 @@ export default function AppDeploySection() {
   return (
     // Hero section for AppDeploy
     <section
-      className="relative overflow-hidden text-white min-[1380px]:py-25 py-18 bg-cover bg-center bg-no-repeat"
+      className="relative overflow-hidden text-white min-[1380px]:py-25 py-18 bg-cover bg-center bg-no-repeat -mt-[1px]"
       style={{
         backgroundImage: "url('/images/products/appdeploy/herobg.png')", // main hero background
       }}
