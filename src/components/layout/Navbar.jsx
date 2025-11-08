@@ -66,7 +66,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className={islength ? "pb-[80px]" : "pb-[70px]"}>
+    <div className={islength ? "pb-[80px] bg-main-dark" : "pb-[70px] bg-main-dark"}>
       <div
         className={
           "black_overlay w-full h-full fixed lg:hidden z-40 duration-500 mt-[-10px]"
