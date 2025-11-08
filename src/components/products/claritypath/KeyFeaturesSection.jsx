@@ -58,56 +58,7 @@ const cards = [
     title: "Yearly Roadmap",
     text: "A 12-month planning overview across career, finance, relationships, and health.",
   },
-  {
-    icon: "/images/products/claritypath/careersuccess.png",
-    title: "Career Success",
-    text: "Identify growth and promotion windows.",
-  },
-  {
-    icon: "/images/products/claritypath/relocation.png",
-    title: "Relocation Planning",
-    text: "Plan for moving abroad or migration opportunities",
-  },
-  {
-    icon: "/images/products/claritypath/property.png",
-    title: "Property Planning",
-    text: "Find clarity around property and home investments.",
-  },
-  {
-    icon: "/images/products/claritypath/financial.png",
-    title: "Financial Growth",
-    text: "Track opportunities for saving, investing, and expansion.",
-  },
-  {
-    icon: "/images/products/claritypath/yearly.png",
-    title: "Yearly Roadmap",
-    text: "A 12-month planning overview across career, finance, relationships, and health.",
-  },
-  {
-    icon: "/images/products/claritypath/careersuccess.png",
-    title: "Career Success",
-    text: "Identify growth and promotion windows.",
-  },
-  {
-    icon: "/images/products/claritypath/relocation.png",
-    title: "Relocation Planning",
-    text: "Plan for moving abroad or migration opportunities",
-  },
-  {
-    icon: "/images/products/claritypath/property.png",
-    title: "Property Planning",
-    text: "Find clarity around property and home investments.",
-  },
-  {
-    icon: "/images/products/claritypath/financial.png",
-    title: "Financial Growth",
-    text: "Track opportunities for saving, investing, and expansion.",
-  },
-  {
-    icon: "/images/products/claritypath/yearly.png",
-    title: "Yearly Roadmap",
-    text: "A 12-month planning overview across career, finance, relationships, and health.",
-  },
+  
 ];
 
 export default function KeyFeaturesSection() {
@@ -128,9 +79,10 @@ export default function KeyFeaturesSection() {
       swiperRef.current.swiper.slideNext();
     }
   };
+
   return ( 
     <section className="w-full  overflow-hidden ">
-      <div className="grid md:grid-cols-[45%_55%] z-0">
+      <div className="grid md:grid-cols-[45%_55%] z-0 !overflow-visible">
         {/* LEFT SIDE */}
         <div className="text-white p-12 bg-[#641171]/95 relative overflow-hidden flex lg:items-end z-0">
           <img
@@ -171,57 +123,52 @@ export default function KeyFeaturesSection() {
             </p>
           </div>
 
-          <div className="relative pl-5 pb-2.5">
+          <div className="relative md:pl-5 pb-2.5">
+           <div className="relative pb-1">
             <Swiper
               ref={swiperRef}
-              modules={[Navigation, Autoplay, Keyboard]}
+              modules={[Navigation, Keyboard]}
               loop={true}
-              slidesPerGroup={1} // ✅ Move 1 card per slide
-              spaceBetween={20}
-              slidesPerView={1.2}
+              slidesPerGroup={1}
+              spaceBetween={25}
+              slidesPerView={3}
               centeredSlides={false}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              keyboard={{
-                enabled: true,
-                onlyInViewport: true,
-              }}
+              keyboard={{ enabled: true, onlyInViewport: true }}
               speed={800}
               className="!overflow-visible"
               breakpoints={{
-                300: { slidesPerView: 1.2, spaceBetween: 20 },
-                460: { slidesPerView: 2.2, spaceBetween: 25 },
-                640: { slidesPerView: 3, spaceBetween: 25 },
-                768: { slidesPerView: 2, spaceBetween: 30 },
-                1058: { slidesPerView: 2.6, spaceBetween: 30 },
-                1160: { slidesPerView: 3, spaceBetween: 30 },
-                1550: { slidesPerView: 4, spaceBetween: 30 },
+                20: { slidesPerView: 1, spaceBetween: 20 },
+                640: { slidesPerView: 2.2, spaceBetween: 25 },
+                1024: { slidesPerView: 3, spaceBetween: 25 },
+                1280: { slidesPerView: 3.5, spaceBetween: 30 },
+                1600: { slidesPerView: 4, spaceBetween: 35 },
               }}
             >
               {cards.map((feature, index) => (
-                <SwiperSlide key={index} className="!h-auto flex justify-start !w-[200px] ">
-                  <div className="bg-white mx-auto h-full flex flex-col justify-start items-start rounded-xl p-4 shadow-2xl">
+                <SwiperSlide
+                  key={index}
+                  className="!h-auto flex justify-start"
+                >
+                  <div className="bg-white rounded-xl p-5 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col mx-auto h-full w-full max-w-[250px]">
                     <img
                       src={feature.icon}
                       className="size-8 object-contain"
-                      alt=""
+                      alt={feature.title}
                     />
-                    <h3 className="text-[14px] mt-5 text-main-dark font-karla font-semibold leading-tight">
+                    <h3 className="text-[15px] mt-4 text-[#2c2c2c] font-karla font-semibold leading-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-[13px] font-lora text-[#474646] leading-[18px] mt-5">
+                    <p className="text-[13px] font-lora text-[#474646] leading-[18px] mt-3">
                       {feature.text}
-                    </p>+
+                    </p>
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
 
+          </div>
             {/* Navigation Buttons */}
-            <div className="flex justify-start gap-4 mt-5 bg-white w-fit rounded-3xl p-1 md:mx-0 mx-auto">
+            <div className="flex justify-start gap-4 mt-5 mr-10 bg-white w-fit rounded-3xl p-1 md:mx-0 mx-auto">
               <button
                 onClick={handlePrevClick}
                 type="button"
