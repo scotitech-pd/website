@@ -31,7 +31,7 @@ const AboutScotiTech = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % cards.length);
-    }, 30000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -193,7 +193,7 @@ const AboutScotiTech = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`absolute w-[80%] bg-[#D2FAFF] rounded-3xl shadow-xl p-8 text-center flex flex-col items-center transition-all duration-1000 ease-in-out ${
+              className={`absolute w-[80%] bg-[#D2FAFF] rounded-3xl shadow-xl p-8 text-center flex flex-col items-center transition-all duration-10 ease-in-out ${
                 currentSlide === index
                   ? "opacity-100 translate-x-0 scale-100"
                   : "opacity-0 translate-x-10 scale-95"

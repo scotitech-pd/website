@@ -67,7 +67,7 @@ export default function WhatIsClarityPath() {
 
         {/* === Right Cards Section === */}
         <div className="w-full min-[1250px]:w-[50%] ml-auto">
-          <div className="mt-14 flex-col min-[1250px]:flex gap-8 justify-end items-center">
+          <div className="mt-2 flex-col min-[1250px]:flex gap-8 justify-end items-center">
             
             {/* Desktop View (1250px and above) */}
             <div className="hidden min-[1250px]:flex gap-8 justify-end">
@@ -100,7 +100,7 @@ export default function WhatIsClarityPath() {
                 <div
                   key={id}
                   className="
-                    bg-white py-8 px-4 rounded-2xl shadow-[0_0_15px_rgba(128,128,128,0.6)] 
+                    bg-white py-4 px-4 rounded-2xl shadow-[0_0_15px_rgba(128,128,128,0.6)] 
                     relative max-w-[220px] w-full min-[601px]:w-[45%] 
                     group hover:shadow-[0_0_15px_rgba(140,82,255,0.9)] 
                     hover:scale-102 duration-300 text-center transition-all
