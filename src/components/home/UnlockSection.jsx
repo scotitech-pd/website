@@ -8,7 +8,7 @@ export default function UnlockSection() {
       }}
     >
       <img
-        src="/images/home/Rectangle.png"
+        src="/images/home/rectangle.png"
         alt="bg"
         className="absolute bottom-0 h-full right-0"
       />

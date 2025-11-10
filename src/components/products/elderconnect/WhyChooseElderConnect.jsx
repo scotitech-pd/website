@@ -4,7 +4,7 @@ export default function WhyChooseElderConnect() {
   const features = [
     {
       id: 1,
-      icon: "/images/products/elder/Heartfelt.png",
+      icon: "/images/products/elder/heartfelt.png",
       title: "Heartfelt Companionship:",
       text: "Our trained team offers genuine connection, not just assistance, ensuring your loved one feels valued and never alone.",
     },

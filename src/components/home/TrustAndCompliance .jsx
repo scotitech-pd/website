@@ -9,7 +9,7 @@ const TrustAndCompliance = () => {
         backgroundSize: "cover",
       }}
     >
-        <img src="/images/home/Tpurple.png" alt="bg" className="left-0 absolute w-auto h-[90%] bottom-0"/>
+        <img src="/images/home/tpurple.png" alt="bg" className="left-0 absolute w-auto h-[90%] bottom-0"/>
       
       {/* Main Content */}
       <div className="relative z-10 py-10 grid grid-cols-1 min-[1110px]:grid-cols-[58%_42%] gap-10 items-center max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
