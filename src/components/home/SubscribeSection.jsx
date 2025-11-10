@@ -43,25 +43,30 @@ const SubscribeSection = () => {
             </p>
           </div>
           <div>
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col md:flex-row gap-2 md:gap-4 max-[500px]:mt-1"
-            >
-              <input
-                type="email"
-                required
-                placeholder="Enter Your Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-6 py-3 rounded-md text-black w-full font-lora bg-white max-w-[600px]"
-              />
-              <button
-                type="submit"
-                className="bg-white w-fit text-main-light px-4 md:px-6 py-1.5 md:py-2 rounded-md font-semibold sm:font-medium font-karla hover:bg-purple-100 transition text-[17px] md:text-xl"
-              >
-                Subscribe
-              </button>
-            </form>
+   <form
+  onSubmit={handleSubmit}
+  className="flex flex-col md:flex-row gap-3 md:gap-4 w-full max-[500px]:mt-1"
+>
+  <input
+    type="email"
+    required
+    placeholder="Enter Your Email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    className="flex-1 px-6 py-3 rounded-md text-black w-full font-lora bg-white max-w-[600px]"
+  />
+
+  {/* Button Wrapper */}
+  <div className="flex w-full justify-end md:w-auto md:justify-normal">
+    <button
+      type="submit"
+      className="bg-white text-main-light px-6 py-2 rounded-md font-semibold font-karla hover:bg-purple-100 transition text-[17px] md:text-xl"
+    >
+      Subscribe
+    </button>
+  </div>
+</form>
+
 
             {status && <p className="mt-4 text-sm text-white">{status}</p>}
 

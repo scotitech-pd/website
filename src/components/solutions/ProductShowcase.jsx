@@ -46,7 +46,7 @@ const products = [
     description:
       "ClarityPath provides organizations with a unique tool for personal planning and growth.",
     icon: "/images/solution/maskimg4.png",
-    img: "/images/home/Claritypath.png",
+    img: "/images/home/claritypath.png",
     bgColor: "bg-green-light",
     textColor: "text-green-light", // Tailwind doesn't have olive, so customize or use closest match
     buttonColor: "bg-green-light",
