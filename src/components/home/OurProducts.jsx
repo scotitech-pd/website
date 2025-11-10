@@ -35,7 +35,7 @@ export default function OurProducts() {
         <img
           src="/images/home/bgjoint.png" // replace with your actual background image
           alt="background"
-          className="object-cover "
+          className="object-cover w-screen"
         />
       </div>
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
