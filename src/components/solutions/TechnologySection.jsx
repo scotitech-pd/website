@@ -1,5 +1,10 @@
+'use client';
 import Link from "next/link";
+import { useModal } from "@/components/ModalContext";
+
 export default function TechnologySection() {
+  const { setShowModal } = useModal();
+
   const problems = [
     {
       icon: "/images/solution/ii1.png",
@@ -55,9 +60,13 @@ export default function TechnologySection() {
               and cost.
             </p>
 
-            <Link className=" bg-black/20 border border-white text-white font-karla font-medium text-[16px] px-4 py-2 rounded-full" href="/contact">
-              Contact Sales
-            </Link>
+           <button
+  onClick={() => setShowModal(true)}
+  className="bg-black/20 border border-white text-white font-karla font-medium text-[16px] px-4 py-2 rounded-full"
+>
+  Contact Sales
+</button>
+
           </div>
         </div>
 

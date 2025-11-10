@@ -1,6 +1,10 @@
+"use client";
 import Link from "next/link";
+import { useModal } from "@/components/ModalContext";
 
 const HeroScotitech = () => {
+  const { setShowModal } = useModal();
+
   return (
     <section className="h-[84vh] lg:h-[88vh] 2xl:h-auto  relative flex justify-center flex-col text-white bg-gradient-to-r from-[#641171]/50 via-[#641171]/10  to-white  overflow-hidden">
       <div className="absolute left-0 h-full bg-gradient-to-r from-white/60 flex items-center">
@@ -33,16 +37,19 @@ const HeroScotitech = () => {
                   Explore Our Products
                 </Link>
 
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-white  shadow-sm text-sm hover:bg-[#F4ADFF] duration-300 font-medium hover:shadow-lg transition-shadow"
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-white shadow-sm text-sm hover:bg-[#F4ADFF] duration-300 font-medium hover:shadow-lg transition-shadow"
                 >
                   Request a Demo
-                </Link>
+                </button>
               </div>
-              <div className="relative h-[157px] lg:hidden max-[390000000000000000000000000000000000000000000000000000000000000000px]:hidden">
-              <img src="/images/solution/imgs.png" alt="" className="max-w-[280px] py-5 ml-auto absolute -top-30 right-2 -z-10 opacity-20"/>
-
+              <div className="relative h-[157px] lg:hidden max-[390px]:hidden">
+                <img
+                  src="/images/solution/imgs.png"
+                  alt=""
+                  className="max-w-[280px] py-5 ml-auto absolute -top-30 right-2 -z-10 opacity-20"
+                />
               </div>
             </div>
           </div>
@@ -54,28 +61,27 @@ const HeroScotitech = () => {
               alt=""
               className="absolute top-1/2 -translate-y-1/2 right-0 w-[75%] max-w-[450px]"
             />
-              <img
-                src="/images/solution/imgs2.png"
-                alt=""
-                className="absolute top-[38%] left-0 w-[42%] z-40 hover:scale-105 duration-300"
-              />
-              <img
-                src="/images/solution/imgs3.png"
-                alt=""
-                className="absolute top-[13%] left-[9%] w-[30%] z-30 hover:scale-105 duration-300"
-                />
-              <img
-                src="/images/solution/imgs4.png"
-                alt=""
-                className="absolute top-0 left-[27%] w-[20%] z-20 hover:scale-105 duration-300"
-                />
-                
-              <img
-                src="/images/solution/imgs5.png"
-                alt=""
-                className="absolute -top-4 left-[42%] w-[15%] z-10 hover:scale-105 duration-300"
-              />
-            
+            <img
+              src="/images/solution/imgs2.png"
+              alt=""
+              className="absolute top-[38%] left-0 w-[42%] z-40 hover:scale-105 duration-300"
+            />
+            <img
+              src="/images/solution/imgs3.png"
+              alt=""
+              className="absolute top-[13%] left-[9%] w-[30%] z-30 hover:scale-105 duration-300"
+            />
+            <img
+              src="/images/solution/imgs4.png"
+              alt=""
+              className="absolute top-0 left-[27%] w-[20%] z-20 hover:scale-105 duration-300"
+            />
+
+            <img
+              src="/images/solution/imgs5.png"
+              alt=""
+              className="absolute -top-4 left-[42%] w-[15%] z-10 hover:scale-105 duration-300"
+            />
           </div>
         </div>
       </div>

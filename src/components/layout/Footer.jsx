@@ -19,12 +19,12 @@ const Footer = () => {
     {
       id: 5,
       title: "About us",
-      link: "/about",
+      link: "/aboutus",
     },
     {
       id: 4,
       title: "Our Products",
-      link: "/ourproducts",
+      link: "/products/appdeploy",
     },
   ];
 

@@ -1,21 +1,16 @@
-// ModalContext.js
-"use client"
-import { createContext, useState,useEffect, useContext } from 'react';
+"use client";
+import { createContext, useContext, useState } from "react";
 
-const ModalContext = createContext();
+const ModalCtx = createContext();
 
 export const ModalProvider = ({ children }) => {
-    const [showModal, setShowModal] = useState(false);
-    const [open,setOpen]=useState(true);
-    useEffect(()=>{
-        document.body.style.overflow = showModal ? 'hidden' : '';
-    },[showModal]);
+  const [showModal, setShowModal] = useState(false);
 
-    return (
-        <ModalContext.Provider value={{ showModal, setShowModal ,open,setOpen}}>
-            {children}
-        </ModalContext.Provider>
-    );
+  return (
+    <ModalCtx.Provider value={{ showModal, setShowModal }}>
+      {children}
+    </ModalCtx.Provider>
+  );
 };
 
-export  const useModal = () => useContext(ModalContext);
+export const useModal = () => useContext(ModalCtx);

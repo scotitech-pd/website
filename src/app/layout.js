@@ -1,10 +1,12 @@
 import { Geist, Geist_Mono, Karla, Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
-import { ModalProvider } from "@/components/ModalContext";
 import Footer from "@/components/layout/Footer";
 import CursorGlow from "@/components/CursorGlow";
 import GotoTop from "@/components/GotoTop";
+
+import { ModalProvider } from "@/components/ModalContext";
+import RequestaQuote from "@/components/RequestaQuote";   // ✅ MUST ADD THIS
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +15,8 @@ const geistSans = Geist({
 
 const karla = Karla({
   subsets: ["latin"],
-  weight: ["200","300","400", "500", "700","800"],
-  variable: '--font-karla',
-  // choose weights you need
+  weight: ["200", "300", "400", "500", "700", "800"],
+  variable: "--font-karla",
 });
 
 const lora = Lora({
@@ -38,18 +39,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ModalProvider>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} ${karla.variable} ${lora.variable} antialiased`}
-        >
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${karla.variable} ${lora.variable} antialiased`}
+      >
+        {/* ✅ Provider ALWAYS wraps body children */}
+        <ModalProvider>
           <Navbar />
-          
-               <CursorGlow />
-               < GotoTop/>
+
+          {/* ✅ GLOBAL MODAL Mount (always present but hidden) */}
+          <RequestaQuote />
+
+          <CursorGlow />
+          <GotoTop />
+
           {children}
-          <Footer/>
-        </body>
-      </ModalProvider>
+
+          <Footer />
+        </ModalProvider>
+      </body>
     </html>
   );
 }
