@@ -52,11 +52,11 @@ export default function WhyChooseScotiTech() {
             <p className="hidden font-karla min-[1100px]:flex text-[6rem] tracking-wider font-semibold text-gray-100/10 text-nowrap -z-0 w-fit absolute -left-4  -top-1 transform -translate-y-1/2">
               Why Choose ScotiTech
             </p>
-            <h2 className="text-5xl font-karla font-semibold text-white tracking-wider">
+            <h2 className="lg:text-5xl text-3xl font-karla font-semibold text-white tracking-wider">
               Why Choose ScotiTech
             </h2>
           </div>
-          <p className="text-lg text-white max-w-2xl font-lora">
+          <p className="lg:text-lg text-md text-white max-w-2xl font-lora">
             We believe technology should remove barriers, not create them.
             That’s why our products are designed to be simple, scalable, and
             affordable — empowering businesses and{" "}
