@@ -3,7 +3,7 @@ export default function ComplianceSecurity() {
     {
       id: 1,
       img: "/images/products/claritypath/pic1.png",
-      text: "Distributed securely through Apple’s ABM framework",
+      text: "Distributed securely through Appdeploy",
     },
     {
       id: 2,

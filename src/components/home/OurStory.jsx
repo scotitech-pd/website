@@ -23,7 +23,7 @@ const OurStory = () => {
             </h3>
             <p className="text-lg leading-6.5 font-lora min-[1160px]:w-[80%] mx-auto text-justify sm:text-center">
               At <span className="text-main-dark font-semibold">ScotiTech</span>
-              , the journey began with a single founder and a simple belief:
+              , the journey began with a vision and a simple belief:
               technology should empower, not overwhelm. What started as a
               self-sponsored idea has grown into products that help teams and
               creators worldwide.
@@ -78,7 +78,7 @@ const OurStory = () => {
 const cards = [
   {
     title: "A Founder's Vision",
-    text: "Our journey started with a single founder's vision to create tools that are intuitive and empowering, cutting through complexity to deliver real value.",
+    text: "Our journey started with a vision to create tools that are intuitive and empowering, cutting through complexity to deliver real value.",
   },
   {
     title: "Empowering Future",

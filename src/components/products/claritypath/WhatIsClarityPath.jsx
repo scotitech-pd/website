@@ -6,24 +6,24 @@ const cardData = [
     {
       id: 1,
       icon: "/images/products/claritypath/gaindaily.png",
-      text: "Gain daily clarity for focus and decision-making.",
+      text: "Gain daily clarity for focus and decision-making through AI insights.",
     },
     {
       id: 3,
       icon: "/images/products/claritypath/plancareer.png",
-      text: "Plan career, finance, and personal goals with confidence.",
+      text: "Plan career, finance, and personal goals with confidence using AI recommendations.",
     },
   ],
   [
     {
       id: 2,
       icon: "/images/products/claritypath/growth.png",
-      text: "Reflect on past milestones to understand growth patterns.",
+      text: "Reflect on past milestones as AI identifies your growth patterns and key strengths.",
     },
     {
       icon: "/images/products/claritypath/premium.png",
       id: 4,
-      text: "Access premium reports for relocation, property planning, career breakthroughs, and financial growth.",
+      text: "Access premium AI reports for relocation, property planning, career breakthroughs, and financial growth.",
     },
   ],
 ];
@@ -39,11 +39,11 @@ export default function WhatIsClarityPath() {
       />
 
       {/* Main Content */}
-      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 z-10 flex flex-col min-[1250px]:flex-row justify-center items-center gap-12">
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 z-10 flex flex-col min-[1250px]:flex-row justify-center items-center gap-14">
         {/* === Left Content === */}
         <div className="w-full min-[1250px]:w-[50%] text-center min-[1250px]:text-left">
           <div className="relative w-fit py-5 lg:py-10 mx-auto min-[1250px]:mx-0 ">
-            <p className="hidden lg:block absolute text-[4.5rem] font-semibold  text-black font-karla opacity-5 left-3/4 -translate-x-1/2 top-1/2 -translate-y-1/2 text-nowrap select-none">
+            <p className="hidden lg:block absolute text-[4.5rem] font-semibold text-black font-karla opacity-5 left-3/4 -translate-x-1/2 top-1/2 -translate-y-1/2 text-nowrap select-none">
               What is Clarity Path?
             </p>
             <h2 className="lg:text-5xl text-3xl font-bold text-black font-karla">
@@ -51,16 +51,22 @@ export default function WhatIsClarityPath() {
             </h2>
           </div>
 
-          <p className="text-[18px] sm:text-[20px] md:text-[21px] text-black mb-4 lg:mb-6 font-karla leading-[20px]">
-            Unlike traditional “horoscope” apps, Clarity Path is built for{" "}
+          <p className="text-[18px] sm:text-[20px] md:text-[21px] text-black mb-4 lg:mb-6 font-karla leading-[22px]">
+          {" "}
+            <span className="text-main-dark font-semibold">Clarity Path</span> is an{" "}
+            <span className="text-main-dark font-semibold">AI-based application</span>{" "}
+            built for{" "}
             <span className="text-main-dark font-semibold">
               professionals, students, and organizations
             </span>{" "}
-            who want to:
+            who want to make smarter, data-backed, and meaningful life decisions.
           </p>
+
           <p className="text-gray-900 w-full min-[1250px]:w-[90%] leading-6 text-[14px] lg:text-[17px] font-lora mx-auto min-[1250px]:mx-0">
-            We provide the tools to foster self-awareness, set meaningful
-            objectives, and build consistent momentum toward what matters most
+            Powered by artificial intelligence, Clarity Path analyzes behavioral
+            patterns, goals, and progress to offer personalized insights and
+            recommendations. It helps you foster self-awareness, set meaningful
+            objectives, and maintain consistent momentum toward what matters most
             to you and your organization.
           </p>
         </div>
@@ -95,7 +101,7 @@ export default function WhatIsClarityPath() {
             </div>
 
             {/* Below 1250px (Responsive Version) */}
-            <div className="flex flex-wrap justify-center  gap-14  min-[900px]:gap-20 max-[1249px]:flex max-[1249px]:justify-center min-[1250px]:hidden">
+            <div className="flex flex-wrap justify-center gap-14 min-[900px]:gap-20 max-[1249px]:flex max-[1249px]:justify-center min-[1250px]:hidden">
               {cardData.flat().map(({ id, icon, text }) => (
                 <div
                   key={id}

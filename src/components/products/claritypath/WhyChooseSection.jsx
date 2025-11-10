@@ -5,8 +5,8 @@ export default function WhyChooseSection() {
   const features = [
     {
       icon: "/images/products/claritypath/privatedistribution.png",
-      title: "Private Distribution",
-      text: "Available only via Apple Business Manager for select organizations.",
+      title: "AI-Based Intelligence",
+      text: "Powered by advanced AI-based insights to enhance clarity, focus, and decision-making.",
     },
     {
       icon: "/images/products/claritypath/uniqueapproach.png",
@@ -40,15 +40,15 @@ export default function WhyChooseSection() {
               className="flex items-center gap-4 bg-gradient-to-r to-[#3D327C]/60 from-[#406D8E]/60 rounded-full pl-2 pr-6 py-3 shadow-sm hover:shadow-md transition"
             >
               <div className="bg-white rounded-full shadow-sm grid place-items-center size-15 shrink-0">
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="size-9 "
-                />
+                <img src={item.icon} alt={item.title} className="size-9 " />
               </div>
               <div className="">
-                <h4 className="font-semibold text-black mb-2 font-karla text-md lg:text-lg">{item.title}</h4>
-                <p className="text-white text-[11px] lg:text-[13px] lg:leading-4">{item.text}</p>
+                <h4 className="font-semibold text-black mb-2 font-karla text-md lg:text-lg">
+                  {item.title}
+                </h4>
+                <p className="text-white text-[11px] lg:text-[13px] lg:leading-4">
+                  {item.text}
+                </p>
               </div>
             </div>
           ))}
@@ -57,7 +57,6 @@ export default function WhyChooseSection() {
 
       {/* RIGHT SIDE IMAGE */}
       <div className="flex-1 flex justify-center relative">
-
         {/* Main Image */}
         <div className="relative z-10">
           <img

@@ -27,7 +27,7 @@ const HeroSection = () => {
 
         <div className="p-1.5 border border-white w-fit rounded-lg mb-8">
           <Link
-            href="/products/appdeploy"
+            href="/contact"
             className="bg-white text-black cursor-pointer w-fit px-8 py-2 rounded-lg text-lg inline-flex items-center gap-2 font-karla group"
           >
             Get Started

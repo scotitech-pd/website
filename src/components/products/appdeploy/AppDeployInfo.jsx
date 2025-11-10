@@ -12,7 +12,7 @@ export default function AppDeployInfo() {
         {/* Left content */}
         <div className="">
           <h2 className="lg:text-5xl text-3xl font-semibold text-transparent bg-clip-text bg-main-dark drop-shadow-md font-karla mb-3.5">
-            What is AppDeploy app?
+            What is AppDeploy?
           </h2>
 
           <h3 className="text-xl lg:text-2xl font-medium text-main-dark font-karla mb-2.5">
@@ -73,7 +73,7 @@ export default function AppDeployInfo() {
                   className="opacity-40 w-full h-full"
                 />
 
-                <div className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 w-[85%] flex justify-between">
+                {/* <div className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 w-[85%] flex justify-between">
                   <img
                     src="/images/products/opsly/button2.png"
                     alt=""
@@ -84,7 +84,7 @@ export default function AppDeployInfo() {
                     alt=""
                     className="w-[40%] h-auto cursor-pointer"
                   />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

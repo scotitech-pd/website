@@ -2,8 +2,8 @@ export default function HowAppDeployWorks() {
   const steps = [
     {
       img: "/images/products/appdeploy/upload.png",
-      title: "Upload Your App",
-      desc: "Log in to your AppDeploy dashboard and upload your application's .IPA file.",
+      title: "Manage Your App",
+      desc: "Log in to your AppDeploy dashboard and manage your application's .IPA/.APK file.",
     },
     {
       img: "/images/products/appdeploy/securelinks.png",

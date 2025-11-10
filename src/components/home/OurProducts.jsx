@@ -6,25 +6,27 @@ const products = [
     name: "AppDeploy",
     tagline: "Effortless iOS App Distribution",
     logo: "/images/home/appdeploy.png",
-    link:"/appdeploy"
+    link: "/appdeploy",
   },
   {
     name: "Opsly",
     tagline: "All-in-One Operations Platform",
     logo: "/images/home/opsly.png",
-    link:"/opsly"
+    link: "/opsly",
+    button: "Coming Soon!",
   },
   {
     name: "AI Caption Studio",
     tagline: "Smarter Content Creation",
     logo: "/images/home/ai.png",
-    link:"/aicaptionstudio"
+    link: "/aicaptionstudio",
+    button: "Coming Soon!",
   },
   {
     name: "ClarityPath",
     tagline: "private decision-support app",
     logo: "/images/home/claritypath.png",
-    link:"/claritypath"
+    link: "/claritypath",
   },
 ];
 
@@ -39,7 +41,6 @@ export default function OurProducts() {
         />
       </div>
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
-        
         <h2 className="text-main font-karla text-4xl sm:text-5xl font-semibold mb-2 sm:mb-6">
           Our Products
         </h2>
@@ -67,15 +68,25 @@ export default function OurProducts() {
                 />
               </div>
               <div className="py-8 px-1.5  text-black">
-                <h4 className="text-xl font-semibold font-karla tracking-wide">{p.name}</h4>
-                <p className="text-black/70 mt-2 font-lora font-semibold">{p.tagline}</p>
+                <h4 className="text-xl font-semibold font-karla tracking-wide">
+                  {p.name}
+                </h4>
+                <p className="text-black/70 mt-2 font-lora font-semibold">
+                  {p.tagline}
+                </p>
               </div>
-              <Link
-                href={`/products${p.link}`}
-                className="bg-main font-karla tracking-wider font-semibold text-white text-nowrap px-6 py-2 rounded-full text-sm hover:bg-main/90 absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2"
-              >
-                Read more
-              </Link>
+              {p.button ? (
+                <div className="bg-main font-karla tracking-wider font-semibold text-white text-nowrap px-6 py-2 rounded-full text-sm absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2 cursor-none select-none">
+                  {p.button}
+                </div>
+              ) : (
+                <Link
+                  href={`/products${p.link}`}
+                  className="bg-main font-karla tracking-wider font-semibold text-white text-nowrap px-6 py-2 rounded-full text-sm hover:bg-main/90 absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2"
+                >
+                  Read more
+                </Link>
+              )}
             </div>
           ))}
         </div>
