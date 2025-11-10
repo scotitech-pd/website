@@ -64,12 +64,12 @@ export default function AppDeployComparison() {
                 <tr key={idx} className="hover:bg-gray-50 text-left overflow-hidden">
                   <td className="px-0.5 min-[490px]:px-6 py-4 font-medium text-grey">{feature}</td>
                   <td className="px-0.5 min-[490px]:px-6 py-4 text-grey">{jamf}</td>
-                  <td className="px-0.5 min-[490px]:px-6 py-4 text-grey flex justify-between items-center min-[1011px]:w-[80%] min-[390px]:gap-2">
+                  <td className="px-0.5 min-[490px]:px-6 py-4 text-grey flex min-[390px]:justify-between items-center min-[1011px]:w-[80%]">
                     {appdeploy}
                     <img
                       src="/images/solution/tick.png"
                       alt=""
-                      className="h-3"
+                      className="h-3 max-[390px]:px-2 shrink-0"
                     />
                   </td>
                 </tr>
