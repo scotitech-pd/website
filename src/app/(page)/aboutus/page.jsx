@@ -1,4 +1,5 @@
 import AboutScotiTech from "@/components/aboutus/AboutScotitech";
+import FoundersSection from "@/components/aboutus/FoundersSection";
 import GlobalD from "@/components/aboutus/GlobalD";
 import HowWeWorks from "@/components/aboutus/HowWeWorks";
 import LeadershipTeam from "@/components/aboutus/Leadershipteam";
@@ -11,11 +12,15 @@ const page = () => {
     <>
       <AboutScotiTech />
       <Timeline />
-      <LeadershipTeam />
+      <FoundersSection />
+
       <MissionVision />
       <GlobalD />
+      <LeadershipTeam />
+
       <HowWeWorks />
       <WhyThisMatters />
+
     </>
   );
 };
