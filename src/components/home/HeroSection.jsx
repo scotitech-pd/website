@@ -4,43 +4,60 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const HeroSection = () => {
-  // ✅ PC Carousel Slides
+  // ✅ PC Carousel Slides (image + video mix)
   const slides = [
-    "/images/home/herobg.png",
-    "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1920&q=80",
-    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80",
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80",
+    { type: "image", src: "/images/home/herobg.png" },
+    // { type: "image", src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1920&q=80" },
+    // { type: "image", src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80" },
+     { type: "video", src: "https://www.pexels.com/download/video/4974699/" },
+    // { type: "video", src: "https://www.pexels.com/download/video/7989701/" },
+  
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // ✅ PC only auto-slide
+  // ✅ Auto-slide for PC
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) =>
-        prev === slides.length - 1 ? 0 : prev + 1
-      );
-    }, 6000);
+      setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
-      {/* ✅ DESKTOP VIEW (CAROUSEL + BREATHING) */}
+      {/* ✅ DESKTOP VIEW */}
       <section className="relative hidden lg:flex h-[80vh] w-full overflow-hidden">
-
-        {slides.map((img, i) => (
+        {slides.map((slide, i) => (
           <div
             key={i}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] breathe ${
+            className={`absolute inset-0 transition-opacity duration-[1500ms] breathe ${
               currentIndex === i ? "opacity-100" : "opacity-0"
             }`}
-            style={{ backgroundImage: `url(${img})` }}
-          />
+          >
+            {slide.type === "video" ? (
+              <video
+                src={slide.src}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            ) : (
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${slide.src})` }}
+              />
+            )}
+          </div>
         ))}
 
+        {/* Overlay for better readability */}
+        <div className="absolute inset-0 bg-black/40 z-5" />
+
         {/* CONTENT */}
-<div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full py-10 text-white m-10">
+        <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full py-10 text-white m-10">
           <p className="bg-main-dark font-semibold border border-white px-3 py-2 rounded-lg w-fit font-karla">
             ScotiTech Solution
           </p>
@@ -64,19 +81,15 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* ✅ MOBILE/TABLET VIEW (STATIC IMAGE + BREATHING) */}
-      <section
-        className="relative lg:hidden h-[84vh] px-6 py-20 flex flex-col justify-center text-white overflow-hidden"
-      >
-        {/* Background image breathing effect */}
+      {/* ✅ MOBILE/TABLET VIEW */}
+      <section className="relative lg:hidden h-[84vh] px-6 py-20 flex flex-col justify-center text-white overflow-hidden">
+        {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center breathe"
           style={{
             backgroundImage: "url('/images/home/herobg.png')",
           }}
         />
-
-        {/* Overlay for better mobile text contrast */}
         <div className="absolute inset-0 bg-black/40" />
 
         {/* CONTENT */}
@@ -104,6 +117,7 @@ const HeroSection = () => {
         </div>
       </section>
 
+      {/* ✅ Breathing Animation */}
       <style>{`
         @keyframes breathe {
           0% { transform: scale(1); }

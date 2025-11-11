@@ -30,101 +30,84 @@ const NewsletterSubscription = () => {
   };
 
   return (
-    <section className="relative bg-black py-12 lg:py-8 ">
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-        <div className="bg-white rounded-xl py-3 px-3 lg:px-10 shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+    <section
+      className="relative text-white py-14 md:py-20 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80')",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
 
+      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 md:px-20">
+        <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-[0_0_25px_rgba(255,255,255,0.15)] p-6 md:p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* LEFT SIDE */}
             <div>
-              <h2 className="text-2xl font-karla lg:text-md font-bold text-teal-600 mb-4">
-                Stay updated with Scotitech
+              <h2 className="text-3xl font-karla font-bold mb-3">
+                Stay Updated with Scotitech
               </h2>
-              <p className="text-sm lg:text-[12px] font-lora font-medium text-gray-600 leading-relaxed">
-                Stay ahead of the curve and ensure you're always up-to-date with 
-                emerging technology by consistently following Scotitech for all 
-                our newest announcements and breakthroughs.
+              <p className="text-gray-200 font-lora text-sm md:text-base leading-relaxed max-w-md">
+                Get the latest updates on our technology breakthroughs, product launches, and insights.
+                Subscribe to our newsletter to never miss what’s next.
               </p>
             </div>
 
             {/* RIGHT SIDE */}
             <div className="flex flex-col gap-3">
-
-              {/* ✅ BELOW lg → TWO LINE LAYOUT */}
+              {/* MOBILE/TABLET */}
               <div className="lg:hidden flex flex-col gap-3">
-                {/* Input */}
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Enter your Email Address"
-                  className={` px-4 font-lora font-semibold text-center
-                    pl-5 py-3 rounded-full bg-[#C3FFFA] border-2
-                    ${status === "error" ? "border-red-400" : "border-teal-100"} 
-                    focus:border-[#C3FFFA] focus:outline-none 
-                    text-gray-700 placeholder-gray-500 
-                    text-sm transition-colors`}
+                  placeholder="Enter your email address"
+                  className={`px-4 py-3 rounded-full bg-white text-gray-800 font-lora font-medium text-sm text-center focus:outline-none border-2 ${
+                    status === "error" ? "border-red-400" : "border-white/30"
+                  }`}
                 />
-
-                {/* Button below input */}
                 <button
                   onClick={handleSubmit}
-                  className="
-                    px-6 py-3 mt-1 rounded-full bg-teal-600 hover:bg-teal-700 
-                    text-white font-semibold text-sm transition shadow-md hover:shadow-lg
-                  "
+                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-main-dark hover:bg-white hover:text-black text-white font-karla font-semibold text-sm transition shadow-md hover:shadow-lg"
                 >
-                  Submit Now <ArrowRightCircle className="w-5 h-5 inline-block ml-1" />
+                  Subscribe <ArrowRightCircle className="w-5 h-5" />
                 </button>
               </div>
 
-              {/* ✅ DESKTOP (lg and above) → ONE LINE INSIDE INPUT */}
+              {/* DESKTOP */}
               <div className="hidden lg:block relative w-full">
-
-                {/* Email Input Desktop */}
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Enter your Email Address"
-                  className={`w-full font-lora font-semibold 
-                    pl-6 pr-[130px] py-4 
-                    rounded-full bg-[#C3FFFA] border-2
-                    ${status === "error" ? "border-red-400" : "border-teal-100"} 
-                    focus:border-[#C3FFFA] focus:outline-none 
-                    text-gray-700 placeholder-gray-500 
-                    text-base transition-colors`}
+                  placeholder="Enter your email address"
+                  className={`w-full py-4 pl-6 pr-[140px] rounded-full bg-white text-gray-800 font-lora font-medium text-base focus:outline-none border-2 ${
+                    status === "error" ? "border-red-400" : "border-white/30"
+                  }`}
                 />
-
-                {/* Button inside input (desktop only) */}
                 <button
                   onClick={handleSubmit}
-                  className="
-                    absolute top-1/2 right-2 -translate-y-1/2
-                    px-8 py-3 rounded-full bg-teal-600 hover:bg-teal-700 
-                    text-white font-semibold text-base 
-                    shadow-md hover:shadow-lg transition whitespace-nowrap
-                  "
+                  className="absolute top-1/2 right-2 -translate-y-1/2 px-8 py-3 rounded-full bg-main-dark hover:bg-white hover:text-black text-white font-karla font-semibold text-base transition-all shadow-md hover:shadow-lg"
                 >
-                  Submit Now
+                  Subscribe
                 </button>
               </div>
 
-              {/* ✅ Status Messages */}
+              {/* STATUS MESSAGE */}
               {status === "success" && (
-                <p className="text-sm text-green-600 font-medium px-2">
-                  ✓ Successfully subscribed! Thank you for joining us.
+                <p className="text-sm text-green-400 font-medium">
+                  ✓ Successfully subscribed! Welcome to the Scotitech community.
                 </p>
               )}
               {status === "error" && (
-                <p className="text-sm text-red-600 font-medium px-2">
+                <p className="text-sm text-red-400 font-medium">
                   ✗ Please enter a valid email address.
                 </p>
               )}
             </div>
-
           </div>
         </div>
       </div>

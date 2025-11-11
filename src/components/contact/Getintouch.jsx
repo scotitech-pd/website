@@ -1,12 +1,20 @@
+"use client";
+
 import React from "react";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
 
 /* contact info */
 const contactDetails = [
-  { icon: "location", title: "Eurocentral Scotland, 2 Parklands Way Maxim 1, UK", type: "location" },
+  {
+    icon: "location",
+    title:
+      "Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business Park, 1st, Motherwell ML1 4WR, UK",
+    type: "location",
+    style: "text-left",
+  },
   { icon: "phone", title: "+44 20 7946 0958", type: "phone" },
-  { icon: "email", title: "uk@scotitech.com", type: "email" },
-  { icon: "time", title: "Mon-Fri", subtitle: "9:00 AM - 6:00 PM GMT", type: "time" },
+  { icon: "email", title: "info@scotitech.com", type: "email" },
+  { icon: "time", title: "Mon-Fri", subtitle: "9:00 AM - 5:30 PM GMT", type: "time" },
 ];
 
 /* values section */
@@ -21,11 +29,35 @@ const valueCards = [
 const renderIcon = (type, size = 20) => {
   const iconProps = { size, strokeWidth: 1.7 };
   switch (type) {
-    case "location": return <MapPin {...iconProps} />;
-    case "phone": return <Phone {...iconProps} />;
-    case "email": return <Mail {...iconProps} />;
-    case "time": return <Clock {...iconProps} />;
-    default: return null;
+    case "location":
+      return <MapPin {...iconProps} />;
+    case "phone":
+      return <Phone {...iconProps} />;
+    case "email":
+      return <Mail {...iconProps} />;
+    case "time":
+      return <Clock {...iconProps} />;
+    default:
+      return null;
+  }
+};
+
+/* helper to generate href for contact item */
+const getContactHref = (item) => {
+  switch (item.type) {
+    case "location": {
+      const query = encodeURIComponent(item.title);
+      return `https://maps.app.goo.gl/9fkHLWDX2CqnugMaA`;
+    }
+    case "phone": {
+      // normalize phone number for tel: (remove spaces)
+      const tel = item.title.replace(/\s+/g, "");
+      return `tel:${tel}`;
+    }
+    case "email":
+      return `mailto:${item.title}`;
+    default:
+      return null;
   }
 };
 
@@ -57,7 +89,7 @@ const GetInTouch = () => {
                 Get in Touch
               </h1>
               <p className="text-sm lg:text-[16px] xxl:text-lg leading-relaxed max-w-2xl font-lora">
-                Ready to find reliable support and genuine companionship? We're here to answer your questions about the ElderConnect+ app and tailor services for you or your loved one. Let's start the conversation.
+                Ready to find reliable support and genuine companionship? We're here to answer your all questions & tailor services for you or your Business. Let's start the conversation.
               </p>
             </div>
 
@@ -96,35 +128,73 @@ const GetInTouch = () => {
 export default GetInTouch;
 
 /* mobile contact card */
-const ContactCard = ({ type, title, subtitle }) => (
-  <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-2xl hover:bg-white/20 transition-all duration-300">
-    <div className="bg-indigo-800 p-3 rounded-full flex-shrink-0 flex items-center justify-center shadow-[0_0_10px_rgba(99,102,241,0.6)] hover:shadow-[0_0_20px_rgba(99,102,241,0.9)] transition-shadow duration-300">
-      {renderIcon(type, 22)}
-    </div>
-    <div className="text-sm">
-      <p className="font-semibold font-lora">{title}</p>
-      {subtitle && <p className="font-lora">{subtitle}</p>}
-    </div>
-  </div>
-);
-
-/* desktop contact card — hover only changes icon color */
-const ContactCardDesktop = ({ type, title, subtitle }) => (
-  <div className="group flex flex-col items-center text-center min-h-[120px] justify-start cursor-pointer transition-all duration-300">
-    {/* background and icon hover behavior */}
-    <div className="bg-black group-hover:bg-white p-4 rounded-full mb-3 flex items-center justify-center shadow-[0_0_10px_rgba(255,255,255,0.3)] group-hover:shadow-[0_0_18px_rgba(99,102,241,0.8)] transition-all duration-300">
-      <div className="text-white group-hover:text-black transition-colors duration-300">
-        {renderIcon(type, 18)}
+const ContactCard = ({ type, title, subtitle }) => {
+  const href = getContactHref({ type, title });
+  // if href exists wrap in anchor, else render plain div
+  const Content = (
+    <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-2xl hover:bg-white/20 transition-all duration-300">
+      <div className="bg-indigo-800 p-3 rounded-full flex-shrink-0 flex items-center justify-center shadow-[0_0_10px_rgba(99,102,241,0.6)] hover:shadow-[0_0_20px_rgba(99,102,241,0.9)] transition-shadow duration-300">
+        {renderIcon(type, 22)}
+      </div>
+      <div className="text-sm">
+        <p className="font-semibold font-lora">{title}</p>
+        {subtitle && <p className="font-lora">{subtitle}</p>}
       </div>
     </div>
+  );
 
-    {/* fixed white text under icon */}
-    <div className="text-[12px] text-center xxl:text-[16px] leading-tight font-karla text-white">
-      <p className="font-semibold">{title}</p>
-      {subtitle && <p>{subtitle}</p>}
+  if (href) {
+    // open maps in new tab, tel/mailto use same tab
+    const isExternalMap = type === "location";
+    return (
+      <a
+        href={href}
+        target={isExternalMap ? "_blank" : "_self"}
+        rel={isExternalMap ? "noopener noreferrer" : undefined}
+      >
+        {Content}
+      </a>
+    );
+  }
+
+  return Content;
+};
+
+/* desktop contact card — hover only changes icon color */
+const ContactCardDesktop = ({ type, title, subtitle }) => {
+  const href = getContactHref({ type, title });
+  const Inner = (
+    <div className="group flex flex-col items-center text-center min-h-[120px] justify-start cursor-pointer transition-all duration-300">
+      {/* background and icon hover behavior */}
+      <div className="bg-black group-hover:bg-white p-4 rounded-full mb-3 flex items-center justify-center shadow-[0_0_10px_rgba(255,255,255,0.3)] group-hover:shadow-[0_0_18px_rgba(99,102,241,0.8)] transition-all duration-300">
+        <div className="text-white group-hover:text-black transition-colors duration-300">
+          {renderIcon(type, 18)}
+        </div>
+      </div>
+
+      {/* fixed white text under icon */}
+      <div className="text-[12px] text-center xxl:text-[16px] leading-tight font-karla text-white">
+        <p className="">{title}</p>
+        {subtitle && <p>{subtitle}</p>}
+      </div>
     </div>
-  </div>
-);
+  );
+
+  if (href) {
+    const isExternalMap = type === "location";
+    return (
+      <a
+        href={href}
+        target={isExternalMap ? "_blank" : "_self"}
+        rel={isExternalMap ? "noopener noreferrer" : undefined}
+      >
+        {Inner}
+      </a>
+    );
+  }
+
+  return Inner;
+};
 
 /* value cards desktop */
 const ValueCard = ({ icon, text }) => (

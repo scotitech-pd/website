@@ -11,21 +11,21 @@ const SpecificSolution = () => {
       name: "AppDeploy",
       image: "/images/contact/appdeploy.png",
       description: "Effortless iOS App Distribution",
-      link:"/appdeploy",
+      link: "/appdeploy",
     },
     {
       id: 2,
       name: "Opsly",
       image: "/images/contact/opsly.png",
       description: "All-in-One Operations Platform",
-      link:"/opsly",
+      link: "/opsly",
     },
     {
       id: 3,
       name: "ClarityPath",
       image: "/images/contact/claritypath.png",
       description: "Private decision-support app",
-      link:"/claritypath",
+      link: "/claritypath",
     },
   ];
 
@@ -154,9 +154,9 @@ const SpecificSolution = () => {
                       {card.description}
                     </p>
                     <Link href={`/products/${card.link}`}>
-                    <button className="bg-purple-700 cursor-pointer font-karla shadow-[0_0_15px_3px_rgba(180,100,255,1)] text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs lg:px-4 px-6 py-2 rounded-full hover:bg-purple-800 transition-colors font-karlas">
-                      Read more
-                    </button>
+                      <button className="bg-purple-700 cursor-pointer font-karla shadow-[0_0_15px_3px_rgba(180,100,255,1)] text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs lg:px-4 px-6 py-2 rounded-full hover:bg-purple-800 transition-colors font-karlas">
+                        Read more
+                      </button>
                     </Link>
                   </div>
                 </div>
@@ -177,13 +177,13 @@ const SpecificSolution = () => {
                 </div>
                 <div className="relative bg-yellow h-full w-full overflow-hidden lg:rounded-br-3xl lg:rounded-tr-3xl">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.623166576868!2d-3.988694250583647!3d55.834499785250266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48886b87a77511b5%3A0x7521eb0d82bb9471!2sRegus%20-%20Lanarkshire%20Eurocentral!5e0!3m2!1sen!2sin!4v1762327836004!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18288769.910807166!2d12.5088275!3d47.73855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x427253cbf716dbf5%3A0xc978dbe2283363f5!2sScotiTech%20Solutions%20Limited!5e1!3m2!1sen!2sin!4v1762855227518!5m2!1sen!2sin"
                     className="w-full h-full"
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
+                  />
                 </div>
               </div>
             </div>

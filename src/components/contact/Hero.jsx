@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import React from "react";
 
 function Hero() {
@@ -13,19 +14,31 @@ function Hero() {
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 flex flex-col lg:flex-row justify-between items-center lg:items-center">
         {/* Left Text Section */}
-        <div className="flex flex-col justify-center w-full items-center lg:items-start text-center min-[501px]:text-center max-[500px]:text-left">
-          <h2 className="text-white text-2xl font-bold font-karla lg:text-6xl max-[1040px]:text-3xl min-[501px]:text-center max-[500px]:text-left max-[540px]:w-full">
+        <div className="flex flex-col justify-center w-full items-start text-left lg:items-start lg:text-left">
+          <h2 className="text-white text-2xl font-bold font-karla lg:text-6xl max-[1040px]:text-3xl">
             Contact Us
           </h2>
-          <p className="text-white hidden lg:block text-lg font-lora mt-5 leading-7.5  max-[1040px]:text-2xl  md:text-left">
+
+          <p className="text-white hidden lg:block text-lg font-lora mt-5 leading-7.5 max-[1040px]:text-2xl md:text-left">
             Precision data, proven success. Reach out to us to explore strategic
             insights, tailored solutions, and a partnership built to drive
-            measurable growth and lasting impact.{" "}
+            measurable growth and lasting impact.
           </p>
-          <p className="text-white lg:hidden  !text-sm font-lora mt-5 lg:leading-7.5  max-[1040px]:text-2xl  md:text-left">
-            Precision data, proven success. Together, we'll redefine what's
-            possible.
+
+          <p className="text-white lg:hidden text-sm font-lora mt-5 leading-6 max-[1040px]:text-base">
+            Precision data, proven success. Together, we'll redefine what's possible.
           </p>
+
+          {/* Button */}
+          <a
+            href="https://calendly.com/pradeepdahiya2411/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center justify-center lg:gap-2 gap-1 bg-white text-black lg:px-5 px-3 py-2.5 rounded-lg font-karla lg:text-[16px] font-semibold hover:bg-main-dark hover:text-white transition-all shadow-lg mt-6 sm:mt-8 w-fit text-[12px]"
+          >
+            Schedule a Call
+            <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
         </div>
 
         {/* Right Image Section for Desktop */}
