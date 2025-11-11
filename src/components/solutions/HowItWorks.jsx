@@ -53,7 +53,7 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div
               key={step.id}
-              className="flex flex-col items-center bg-yel low"
+              className="flex flex-col items-center "
             >
               {/* Icon Circle */}
               <CircularProgress
@@ -63,7 +63,7 @@ export default function HowItWorks() {
               />
 
               {/* Step Label */}
-              <div className="bg-main-dark text-white px-6 py-1 rounded-md text-lg font-medium mb-3">
+              <div className="bg-main-dark text-white px-6 py-1 rounded-md text-lg font-medium mb-3 font-karla">
                 Step {step.id}
               </div>
 
@@ -84,7 +84,7 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div
               key={step.id}
-              className="flex min-[800px]:flex-col items-center mx-auto gap-2 min-[404px]:gap-5"
+              className="flex min-[800px]:flex-col items-center mx-auto gap-2 min-[404px]:gap-5 font-karla"
             >
               {/* Icon Circle */}
               <CircularProgress1
@@ -95,11 +95,11 @@ export default function HowItWorks() {
               {/* Step Label */}
               <div className="relative text-left min-[800px]:text-center max-w-[250px] max-[800px]:shadow-[0_0_25px_rgba(128,128,128,0.4)] max-[400px]:p-2 max-[800px]:p-3 rounded-2xl max-[400px]:pt-4 max-[800px]:pt-5">
                 
-                <div className=" min-[800px]:hidden -top-3 absolute bg-main-dark w-fit min-[800px]:mx-auto text-white px-2.5 py-0.5 rounded-md min-[800px]:text-lg mb-2">
+                <div className=" min-[800px]:hidden font-karla -top-3 absolute bg-main-dark w-fit min-[800px]:mx-auto text-white px-2.5 py-0.5 rounded-md min-[800px]:text-lg mb-2">
                   Step {step.id}
                 </div>
 
-                <div className=" max-[800px]:hidden bg-main-dark w-fit min-[800px]:mx-auto text-white px-2.5 py-0.5 rounded-md text-lg font-medium mb-2">
+                <div className=" max-[800px]:hidden font-karla bg-main-dark w-fit min-[800px]:mx-auto  px-2.5 py-0.5 rounded-md text-lg font-medium mb-2">
                   Step {step.id}
                 </div>
 
