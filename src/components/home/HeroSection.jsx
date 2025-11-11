@@ -1,41 +1,120 @@
-import { CircleArrowLeft } from "lucide-react";
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import React from "react";
 
 const HeroSection = () => {
+  // ✅ PC Carousel Slides
+  const slides = [
+    "/images/home/herobg.png",
+    "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1920&q=80",
+    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80",
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // ✅ PC only auto-slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === slides.length - 1 ? 0 : prev + 1
+      );
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section
-      className="relative h-[84vh] lg:h-[88vh] 2xl:h-auto py-20 2xl:py-32 flex justify-center flex-col bg-cover bg-center text-white overflow-hidden"
-      style={{
-        backgroundImage: "url('/images/home/herobg.png')", // replace with your image path
-      }}
-    >
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full py-10">
-        <p className="bg-main-dark font-semibold border-white border-[1px] text-white   px-3  py-2 rounded-lg w-fit my-5 min-[1200px]:my-7 font-karla">
-          ScotiTech Solution
-        </p>
+    <>
+      {/* ✅ DESKTOP VIEW (CAROUSEL + BREATHING) */}
+      <section className="relative hidden lg:flex h-[80vh] w-full overflow-hidden">
 
-        <div className="text-4xl min-[1200px]:text-[55px] font-karla font-bold mb-5 min-[1200px]:leading-[57px]">
-          <h2>Building Technology That</h2>
-          <h2>Empowers People</h2>
+        {slides.map((img, i) => (
+          <div
+            key={i}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] breathe ${
+              currentIndex === i ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${img})` }}
+          />
+        ))}
+
+        {/* CONTENT */}
+<div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full py-10 text-white m-10">
+          <p className="bg-main-dark font-semibold border border-white px-3 py-2 rounded-lg w-fit font-karla">
+            ScotiTech Solution
+          </p>
+
+          <h1 className="lg:text-[50px] text-4xl font-karla font-bold leading-[57px] mt-6">
+            Building Technology That<br />Empowers People
+          </h1>
+
+          <p className="lg:text-xl text-md mt-4 mb-8 font-lora max-w-xl">
+            Building the technology that transforms what you can do into what you will do.
+          </p>
+
+          <div className="p-1.5 border border-white w-fit rounded-lg">
+            <Link
+              href="/contact"
+              className="bg-white text-black px-8 py-2 rounded-lg text-lg inline-flex items-center gap-2 font-karla"
+            >
+              Get Started →
+            </Link>
+          </div>
         </div>
+      </section>
 
-        <p className="text-xl mb-5 font-lora">
-          Building the technology that transforms what you can do into what you
-          will do
-        </p>
+      {/* ✅ MOBILE/TABLET VIEW (STATIC IMAGE + BREATHING) */}
+      <section
+        className="relative lg:hidden h-[84vh] px-6 py-20 flex flex-col justify-center text-white overflow-hidden"
+      >
+        {/* Background image breathing effect */}
+        <div
+          className="absolute inset-0 bg-cover bg-center breathe"
+          style={{
+            backgroundImage: "url('/images/home/herobg.png')",
+          }}
+        />
 
-        <div className="p-1.5 border border-white w-fit rounded-lg mb-8">
-          <Link
-            href="/contact"
-            className="bg-white text-black cursor-pointer w-fit px-8 py-2 rounded-lg text-lg inline-flex items-center gap-2 font-karla group"
-          >
-            Get Started
-            <CircleArrowLeft className="size-5 rotate-180 transition-transform duration-200 group-hover:translate-x-1" />
-          </Link>
+        {/* Overlay for better mobile text contrast */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* CONTENT */}
+        <div className="relative z-10">
+          <p className="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-lg w-fit font-karla border border-white/50">
+            ScotiTech Solution
+          </p>
+
+          <h2 className="text-3xl font-karla font-bold mt-5 leading-[46px]">
+            Building Technology<br />That Empowers People
+          </h2>
+
+          <p className="text-md mt-4 mb-6 font-lora max-w-sm">
+            Technology built to turn your ideas into action.
+          </p>
+
+          <div className="p-1.5 border border-white/60 w-fit rounded-lg">
+            <Link
+              href="/contact"
+              className="bg-white text-black px-6 py-2 rounded-lg text-base inline-flex items-center gap-2 font-karla"
+            >
+              Get Started →
+            </Link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <style>{`
+        @keyframes breathe {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.06); }
+          100% { transform: scale(1); }
+        }
+        .breathe {
+          animation: breathe 8s ease-in-out infinite;
+        }
+      `}</style>
+    </>
   );
 };
 

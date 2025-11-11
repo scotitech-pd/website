@@ -1,4 +1,4 @@
-import { DownloadCloudIcon } from "lucide-react";
+import { DownloadCloudIcon, ExternalLink } from "lucide-react";
 
 export default function AppDeploySection() {
   return (
@@ -10,7 +10,6 @@ export default function AppDeploySection() {
       }}
     >
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 flex flex-col lg:flex-row items-center justify-between gap-8">
-
         {/* === Left Side (Text Section) === */}
         <div className="lg:w-2/3 space-y-6 z-20">
           {/* Main title with faint background text for depth */}
@@ -29,22 +28,26 @@ export default function AppDeploySection() {
 
           {/* Description: full text for desktop, short version for mobile */}
           <p className="hidden lg:block leading-6 font-lora text-white/80 max-w-[620px]">
-            AppDeploy makes internal, beta, and enterprise app distribution
-            faster, easier, and more reliable than ever before. Get your latest
-            builds into the hands of your testers and users in seconds,
-            ensuring everyone is always on the most current version.
+            AppDeploy simplifies internal, beta, and enterprise app deployment
+            when App Store submissions face rejection or undefined delays. It
+            ensures guaranteed distribution by allowing you to deliver, manage,
+            and update your apps securely for both internal teams and external
+            users, keeping everyone on the latest version with ease.
           </p>
 
           <p className="lg:hidden block leading-6 font-lora text-white/80 max-w-[620px]">
-            AppDeploy makes internal, beta, and enterprise app distribution
-            faster, easier, and more reliable than ever before.
+            AppDeploy enables seamless internal and external app distribution
+            when App Store rejects or delays approval, ensuring secure, fast,
+            and reliable access to the latest builds.
           </p>
 
           {/* CTA Button */}
-          <button className="bg-white text-gray-900 px-6 py-2.5 rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora">
-            Download Now
-            <DownloadCloudIcon className="inline-block ml-2 h-5 w-5" />
-          </button>
+          <a href="https://appdeploy.scotitech.com:5173/">
+            <button className="bg-white cursor-pointer text-gray-900 px-6 py-2.5 rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora">
+              Explore Now
+              <ExternalLink className="inline-block ml-2 h-5 w-5" />
+            </button>
+          </a>
         </div>
 
         {/* === Right Side (Phone Mockup) === */}

@@ -61,7 +61,7 @@ export default function TechnologySection() {
 
             <button
               onClick={() => setShowModal(true)}
-              className="bg-black/20 border border-white text-white font-karla font-medium text-[16px] px-4 py-2 rounded-full"
+              className="bg-black/20 border cursor-pointer border-white text-white font-karla font-medium text-[16px] px-4 py-2 rounded-full"
             >
               Contact Sales
             </button>

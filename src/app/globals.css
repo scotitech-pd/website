@@ -49,6 +49,14 @@
       transform: rotate(360deg);
     }
   }
+@keyframes breathe {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.breathe-animation {
+  animation: breathe 6s ease-in-out infinite;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

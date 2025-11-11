@@ -19,18 +19,23 @@ export default function AppDeployInfo() {
             Effortless iOS App Distribution for Your Business
           </h3>
 
-          <p className="max-[600px]:text-[15px] leading-[22px] font-grey max-[1150px]:hidden  ">
-            AppDeploy is the definitive platform for distributing your private
-            iOS applications securely and efficiently. Forget the long review
-            times and rejection risks of the App Store, and eliminate the high
-            costs and technical overhead of traditional MDM providers. With
-            AppDeploy, you get a streamlined, powerful dashboard to upload your
-            app, generate secure links, and get it into the hands of your
-            employees or testers in minutes. It’s enterprise-grade distribution
-            made simple for everyone.
+          <p className="max-[600px]:text-[15px] leading-[22px] font-grey max-[1150px]:hidden">
+            AppDeploy is your ultimate solution when the App Store rejects or
+            delays your iOS app. It removes uncertainty by giving you complete
+            control over internal and external app distribution. Skip review
+            times, bypass rejection risks, and eliminate the heavy costs of MDM
+            tools. Upload your builds, create secure links, and deploy to teams,
+            clients, or testers within minutes—no approval required. Reliable,
+            compliant, and built for guaranteed delivery every time.
           </p>
-          <p className=" leading-[22px] font-grey min-[1150px]:hidden">
-            AppDeploy is the all-in-one platform for secure, private iOS app distribution. Skip App Store reviews, rejection risks, and expensive MDM solutions. With AppDeploy, you can easily upload your app, generate secure install links, and share them with your team, employees, or testers in minutes. Enjoy a powerful, intuitive dashboard that makes enterprise-grade app deployment simple, fast, and hassle-free.
+
+          <p className="leading-[22px] font-grey min-[1150px]:hidden">
+            AppDeploy helps you distribute iOS apps even when App Store reviews
+            or rejections slow you down. Avoid delays, skip costly MDM setups,
+            and deliver apps directly to your users or team securely. With an
+            intuitive dashboard, you can upload, generate secure links, and
+            share your apps in minutes—ensuring guaranteed, fast, and private
+            deployment every time.
           </p>
         </div>
 
@@ -56,8 +61,7 @@ export default function AppDeployInfo() {
               </p>
             </div>
             {/* Mobile View */}
-            <div
-              className="min-[580px]:hidden  w-[90%] absolute z-10 -top-18 min-[420px]:-top-14 left-1/2 -translate-x-1/2 text-white p-2 min-[376px]:pt-4 flex justify-center items-center  text-sm leading-relaxed shadow-lg rounded-2xl bg-[#641171]">
+            <div className="min-[580px]:hidden  w-[90%] absolute z-10 -top-18 min-[420px]:-top-14 left-1/2 -translate-x-1/2 text-white p-2 min-[376px]:pt-4 flex justify-center items-center  text-sm leading-relaxed shadow-lg rounded-2xl bg-[#641171]">
               <p className="text-[13px] min-[376px]:text-[15px] leading-[19px]">
                 Deploy internal apps directly to your team&apos;s devices,
                 bypassing the public App Store and complex Mobile Device

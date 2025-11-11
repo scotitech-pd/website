@@ -78,13 +78,14 @@ export default function AppDeploySection() {
             {/* mobile screen image */}
             <div className="min-[1150px]:hidden rounded-2xl shadow-2xl flex flex-col items-center justify-center text-center max-[890px]:mx-auto w-fit z-0">
               <div className="flex flex-col items-center">
-                <div className="relative">
+                <div className="relative"> 
+                  <a href="https://appdeploy.scotitech.com:5173/">
                   <img
                     src="/images/products/appdeploy/logo.png"
                     alt="AppDeploy Logo"
                     className="opacity-100 w-full h-full max-h-[150px]"
-                  />
-
+                  /></a>
+{/* 
                   <div className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 w-[85%] flex justify-between">
                     <img
                       src="/images/products/opsly/button2.png"
@@ -96,7 +97,7 @@ export default function AppDeploySection() {
                       alt=""
                       className="w-[40%] h-auto cursor-pointer"
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -109,9 +110,9 @@ export default function AppDeploySection() {
         </div>
 
         <div className="min-[1150px]:flex hidden absolute z-20 -bottom-10 min-[1400px]:-bottom-28 right-10 min-[1700px]:right-0 bg-gradient-to-r from-[#98F9FF]/20 to-[#EABFFF]/20 rounded-xl px-8 py-3 cursor-pointer shadow-lg text-center  backdrop-blur-md  hover:scale-105 duration-300 hover:backdrop-blur-sm">
-          <Link href="/products/appdeploy">
+          <Link href="https://appdeploy.scotitech.com:5173/">
           <p className="font-lora text-lg font-medium text-white">
-            Download AppDeploy Now
+            Explore AppDeploy Now
           </p></Link>
         </div>
       </div>

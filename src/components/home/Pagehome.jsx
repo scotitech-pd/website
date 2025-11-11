@@ -30,3 +30,4 @@ const Pagehome = () => {
 };
 
 export default Pagehome;
+
