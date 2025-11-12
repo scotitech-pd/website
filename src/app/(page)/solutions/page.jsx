@@ -1,3 +1,4 @@
+import GlobalD from "@/components/aboutus/GlobalD";
 import AppDeploySection from "@/components/solutions/AppDeploySection";
 import ComparisonSection from "@/components/solutions/ComparisonSection";
 import CtaSection from "@/components/solutions/CtaSection";
@@ -24,7 +25,9 @@ const page = () => {
       <ComparisonSection/>
       <SecurityCompliance/>
       <WhoUsesAppDeploy/>
+       
       <Testimonials/>
+     
       <KnowledgeSection/>
       <FaqSection/>
       <CtaSection/>

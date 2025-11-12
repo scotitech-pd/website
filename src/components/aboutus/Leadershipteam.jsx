@@ -10,6 +10,7 @@ export default function LeadershipTeam() {
       description:
         "Prachi is a strategic Marketing & Content Manager with over nine years of experience. She excels at crafting compelling narratives and data-driven campaigns that build brand presence and engage audiences.",
       img: "/images/aboutus/prachi.jfif",
+      linkedin: "https://www.linkedin.com/in/prachi-dwivedi-5724a51b6/",
     },
     {
       name: "Hitesh Dubey",
@@ -18,6 +19,7 @@ export default function LeadershipTeam() {
       description:
         "Hitesh architects the scalable and secure systems that power our platform. With over nine years of leadership, he ensures our technology backbone is robust, automated, and ready for future growth.",
       img: "/images/aboutus/hitesh.jfif",
+      linkedin: "https://www.linkedin.com/in/hitesh-dubey-4349731b/",
     },
     {
       name: "Anurag Parmar",
@@ -26,6 +28,7 @@ export default function LeadershipTeam() {
       description:
         "Anurag brings over eight years of experience translating client needs into innovative and effective product strategies. She excels at building lasting relationships and ensuring our solutions solve real-world challenges for our partners.",
       img: "/images/aboutus/anurag.jfif",
+      linkedin: "https://www.linkedin.com/in/anuragparmar/",
     },
     {
       name: "Daniel Chapman",
@@ -33,13 +36,14 @@ export default function LeadershipTeam() {
       location: "London, UK",
       description:
         "Daniel is the Co-founder and Director at ScotiTech, where he steers the company's strategic vision and innovation. His leadership is fundamental to our mission of delivering cutting-edge solutions and exceptional client value.",
-      img: "/images/aboutus/daniel-avatar.png",
+      img: "/images/aboutus/daniel.jpeg",
+      linkedin: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     },
   ];
 
   return (
     <section className="relative py-8 ">
-      <div className="absolute w-full  bg-gradient-to-r to-[#39327C] inset-0 from-[#34919B] lg:h-[70%] min-[650px]:h-full"></div>
+      <div className="absolute w-full bg-gradient-to-r to-[#39327C] inset-0 from-[#34919B] lg:h-[70%] min-[650px]:h-full"></div>
 
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 z-10 text-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 lg:my-12">
@@ -94,8 +98,11 @@ export default function LeadershipTeam() {
             </p>
 
             <div className="flex justify-center items-center space-x-4 mt-auto">
+              {/* LinkedIn */}
               <a
-                href="#"
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative text-black rounded-full bg-white hover:bg-[#5E0B7B] transition w-10 h-10 flex items-center justify-center shadow-sm"
               >
                 <img
@@ -110,6 +117,7 @@ export default function LeadershipTeam() {
                 />
               </a>
 
+              {/* X */}
               <a
                 href="#"
                 className="group relative text-black rounded-full bg-white hover:bg-[#5E0B7B] transition w-10 h-10 flex items-center justify-center shadow-sm"
@@ -135,7 +143,7 @@ export default function LeadershipTeam() {
         {team.map((member, index) => (
           <div
             key={index}
-            className="bg-white/95 shadow-[0_0_8px_2px_rgba(94,11,123,0.3)] rounded-2xl  my-9 text-center px-3 py-5 flex flex-col items-center backdrop-blur-sm border border-[#e9d5ff]"
+            className="bg-white/95 shadow-[0_0_8px_2px_rgba(94,11,123,0.3)] rounded-2xl my-9 text-center px-3 py-5 flex flex-col items-center backdrop-blur-sm border border-[#e9d5ff]"
           >
             <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-purple-200 mb-4 absolute -top-15">
               <img
@@ -145,7 +153,7 @@ export default function LeadershipTeam() {
               />
             </div>
 
-            <h3 className="text-lg font-karla font-bold text-black mb-1 pt-9" >
+            <h3 className="text-lg font-karla font-bold text-black mb-1 pt-9">
               {member.name}
             </h3>
             <p className="text-[#059388] font-medium font-karla text-sm mb-2">
@@ -162,8 +170,11 @@ export default function LeadershipTeam() {
             </p>
 
             <div className="flex justify-center items-center space-x-4 mt-auto">
+              {/* LinkedIn */}
               <a
-                href="#"
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative text-black rounded-full bg-white hover:bg-[#5E0B7B] transition w-10 h-10 flex items-center justify-center shadow-sm"
               >
                 <img
@@ -178,6 +189,7 @@ export default function LeadershipTeam() {
                 />
               </a>
 
+              {/* X */}
               <a
                 href="#"
                 className="group relative text-black rounded-full bg-white hover:bg-[#5E0B7B] transition w-10 h-10 flex items-center justify-center shadow-sm"

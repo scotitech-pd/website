@@ -13,14 +13,11 @@ const page = () => {
       <AboutScotiTech />
       <Timeline />
       <FoundersSection />
-
       <MissionVision />
-      <GlobalD />
       <LeadershipTeam />
-
       <HowWeWorks />
+      <GlobalD />
       <WhyThisMatters />
-
     </>
   );
 };

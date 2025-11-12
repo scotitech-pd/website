@@ -8,6 +8,7 @@ const founders = [
     title: "Co-Founder & CEO",
     image: "/images/home/pradeep.jpg",
     color: "from-[#6D28D9] to-[#14B8A6]",
+    linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
     desc: [
       "A technology entrepreneur, software engineer, and strategic leader driving ScotiTech’s innovation roadmap.",
       "With 10+ years of experience in AI integration and app development, Pradeep focuses on human-centered, ethical technology.",
@@ -17,8 +18,9 @@ const founders = [
   {
     name: "Daniel Chapman",
     title: "Co-Founder & Chief Strategy Officer",
-    image: "/images/aboutus/daniel-avatar.png",
+    image: "/images/aboutus/daniel-avatar.jpeg",
     color: "from-[#0EA5E9] to-[#6366F1]",
+    linkedin: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     desc: [
       "Daniel leads ScotiTech’s global strategy and partnerships with a focus on innovation and growth.",
       "Having built ventures across Europe, he bridges creative thinking with scalable business execution.",
@@ -84,8 +86,9 @@ const FoundersSpotlight = () => {
 
                 <div className="pt-3 flex justify-start">
                   <a
-                    href="https://linkedin.com"
+                    href={f.linkedin}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className={`inline-flex items-center gap-2 text-sm font-karla font-semibold bg-gradient-to-r ${f.color} text-white px-4 py-2 rounded-full hover:scale-105 transition`}
                   >
                     <Linkedin className="w-4 h-4" /> Connect on LinkedIn
