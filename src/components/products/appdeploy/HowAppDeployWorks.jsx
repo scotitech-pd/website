@@ -18,12 +18,12 @@ export default function HowAppDeployWorks() {
   ];
 
   return (
-    <section className="bg-white py-10 text-center max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 overflow-hidden">
+    <section className="bg-white lg:my-20 py-10 text-center max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 overflow-hidden">
       {/* Heading */}
       <h2 className="text-3xl md:text-[40px] font-semibold text-main-dark drop-shadow-sm mb-3 font-karla">
         How AppDeploy App Works?
       </h2>
-      <p className="text-[#4E4E4E] lg:text-2xl text-lg font-lora mb-16">
+      <p className="text-[#4E4E4E] lg:text-xl text-lg font-lora mb-16">
         From upload to installation in minutes, not weeks
       </p>
 
@@ -46,7 +46,7 @@ export default function HowAppDeployWorks() {
           <div
             key={i}
             className={`
-              relative py-8 px-4 shadow-none flex items-center justify-center group w-full
+              relative py-8 px-4 shadow-none flex items-center justify-center group w-full 
               ${
                 // 3rd card full width only for 1051–1219px
                 i === 2

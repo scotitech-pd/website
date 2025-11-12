@@ -20,7 +20,7 @@ const products = [
     tagline: "Smarter Content Creation",
     logo: "/images/home/ai.png",
     link: "/aicaptionstudio",
-    button: "Coming Soon!",
+    
   },
   {
     name: "ClarityPath",
@@ -84,7 +84,7 @@ export default function OurProducts() {
                   href={`/products${p.link}`}
                   className="bg-main font-karla tracking-wider font-semibold text-white text-nowrap px-6 py-2 rounded-full text-sm hover:bg-main/90 absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2"
                 >
-                  Read more
+                  Read more                                  
                 </Link>
               )}
             </div>

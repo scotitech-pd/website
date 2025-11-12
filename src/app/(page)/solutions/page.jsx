@@ -8,6 +8,7 @@ import HowItWorks from "@/components/solutions/HowItWorks";
 import KnowledgeSection from "@/components/solutions/KnowledgeSection";
 import ProductShowcase from "@/components/solutions/ProductShowcase";
 import SecurityCompliance from "@/components/solutions/SecurityCompliance";
+import SuccessStory from "@/components/solutions/SuccessStory";
 import TechnologySection from "@/components/solutions/TechnologySection";
 import Testimonials from "@/components/solutions/Testimonials";
 import WhoUsesAppDeploy from "@/components/solutions/WhoUsesAppDeploy";
@@ -24,11 +25,9 @@ const page = () => {
       <HowItWorks />
       <ComparisonSection/>
       <SecurityCompliance/>
-      <WhoUsesAppDeploy/>
-       
-      <Testimonials/>
-     
-      <KnowledgeSection/>
+      <WhoUsesAppDeploy/>       
+      <Testimonials/>     
+      <KnowledgeSection/>      
       <FaqSection/>
       <CtaSection/>
     </>

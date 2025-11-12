@@ -37,7 +37,7 @@ const FoundersSpotlight = () => {
       <div className="max-w-8xl mx-auto px-6 md:px-20 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-karla font-bold text-gray-900">
+          <h2 className="lg:text-4xl m text-3xl md:text-5xl font-karla font-bold text-main-dark">
             Meet Our Founders
           </h2>
           <p className="text-gray-600 text-lg md:text-xl font-lora mt-3 max-w-2xl mx-auto">

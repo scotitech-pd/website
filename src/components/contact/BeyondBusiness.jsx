@@ -16,7 +16,7 @@ const BeyondBusiness = () => {
       id: 2,
       bg: "bg-[#e4ebec]",
       title: "Compassionate Companionship",
-      text: "Meaningful conversations, shared moments, and emotional support for well-being.",
+      text: "Meaningful conversations, shared moments, and emotional support.",
       icon: "/images/contact/handshake-icon.png",
     },
     {
@@ -89,14 +89,14 @@ const BeyondBusiness = () => {
             </div>
 
             {/* ✅ DESKTOP CARD STACK stays SAME */}
-            <div className="hidden lg:block absolute top-1/2 -right-[9%] -translate-y-1/2 w-[330px] space-y-5">
+            <div className="hidden lg:block absolute top-1/2 -right-[9%] -translate-y-1/2 w-[370px] space-y-5">
               {contactCards.map((card) => (
                 <div
                   key={card.id}
                   className={`${card.bg} rounded-2xl flex items-center gap-3 shadow-xl p-2`}
                 >
-                  <div className="bg-white p-4 rounded-xl">
-                    <img src={card.icon} alt={card.title} className="size-10" />
+                  <div className="bg-white p-4 rounded-xl shrink-0">
+                    <img src={card.icon} alt={card.title} className="h-10 w-10 "  />
                   </div>
                   <div>
                     <h4 className="text-[15px] font-bold text-purple-900 mb-1 font-karla">
@@ -120,7 +120,7 @@ const BeyondBusiness = () => {
                   <img
                     src={card.icon}
                     alt={card.title}
-                    className="w-10 h-10"
+                    className="w-10  h-10"
                   />
                 </div>
 
@@ -167,11 +167,13 @@ const BeyondBusiness = () => {
                 Learn More
               </button>
             </Link>
+            <a href="https://apps.apple.com/gb/app/elderconnect/id6720757966" passHref>
 
-            <button className="text-sm lg:text-lg bg-purple-100 text-center text-purple-900 px-3 lg:px-6 py-3 rounded-full font-semibold shadow-xl hover:bg-purple-200 transition font-karla flex items-center gap-2">
+            <button className="text-sm lg:text-lg cursor-pointer  bg-purple-100 text-center text-purple-900 px-3 lg:px-6 py-3 rounded-full font-semibold shadow-xl hover:bg-purple-200 transition font-karla flex items-center gap-2">
               <CloudDownload className="w-5 h-5" />
               Download App
             </button>
+            </a>
           </div>
         </div>
       </div>
