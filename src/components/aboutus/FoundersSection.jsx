@@ -6,7 +6,7 @@ const founders = [
   {
     name: "Pradeep Dahiya",
     title: "Co-Founder & CEO",
-    image: "/images/home/award.jpg",
+    image: "/images/home/pradeep.jpg",
     color: "from-[#6D28D9] to-[#14B8A6]",
     desc: [
       "A technology entrepreneur, software engineer, and strategic leader driving ScotiTech’s innovation roadmap.",
@@ -17,7 +17,7 @@ const founders = [
   {
     name: "Daniel Chapman",
     title: "Co-Founder & Chief Strategy Officer",
-    image: "/images/aboutus/daniel.jpg",
+    image: "/images/aboutus/daniel-avatar.png",
     color: "from-[#0EA5E9] to-[#6366F1]",
     desc: [
       "Daniel leads ScotiTech’s global strategy and partnerships with a focus on innovation and growth.",
