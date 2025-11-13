@@ -131,16 +131,11 @@ const Footer = () => {
 
         <div className="grid grid-cols-1 min-[1047px]:grid-cols-[30%_70%] text-sm text-white min-[570px]:text-white/80 my-10">
           <div className="w-[80%] z-0 hidden min-[1047px]:block">
-            <h5 className=" text font-bold pb-3 font-karla">About us</h5>
-            <p className="text-[13px] font-lora">
-              ScotiTech was founded on one simple belief: technology should
-              empower, not overwhelm. We started with a self-sponsored idea and
-              have grown into a company building lean, simple tools that help
-              teams and creators worldwide focus on what matters.
-            </p>
-            <p className="mt-1 min-[1047px]:mt-3 font-karla">
-              Security & Compliance Statement
-            </p>
+            <h5 className=" text font-bold pb-3 font-karla">Mentorship, and Social Impact</h5>
+            <p className=" font-lora ">At ScotiTech, we believe innovation creates more value when shared. Our founder mentors early-stage entrepreneurs through NASSCOM, Startup India, and The Mentoring Club, helping them build ethical and sustainable products.
+<br />
+</p>
+          
           </div>
 
           {/* Services and Address Block */}
@@ -217,7 +212,7 @@ const Footer = () => {
 
             {/* Address */}
             <div className="max-[570px]:hidden pb-3 z-0 max-w-[237px]">
-              <h5 className="text font-semibold pb-3 font-karla">Address</h5>
+              <h5 className=" font-semibold pb-3 font-karla">Address</h5>
               <p className="w-[90%] text-left font-lora">
                 Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business
                 Park, 1st, Motherwell ML1 4WR, United Kingdom

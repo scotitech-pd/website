@@ -19,7 +19,7 @@ export default function HowToGetElderConnect() {
   return (
     <>
       {/* -------------------- ORIGINAL SECTION (1150PX AND ABOVE) -------------------- */}
-      <section className="bg-white py-16 lg:py-20 hidden min-[1150px]:block">
+      <section className="bg-white py-16 lg:py-20 hidden min-[1150px]:block overflow-hidden">
         <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 grid md:grid-cols-2 gap-12 items-center font-lora">
           {/* LEFT SIDE */}
           <div>
@@ -63,24 +63,21 @@ export default function HowToGetElderConnect() {
               alt="Elder Connect App Icon"
               className="mx-auto"
             />
-            <div className="absolute bottom-5 translate-y-1/2 left-1/2 -translate-x-1/2 w-[70%] flex justify-between">
-              <img
-                src="/images/products/opsly/button2.png"
-                alt=""
-                className="w-[43%] h-auto cursor-pointer"
-              />
-              <img
-                src="/images/products/opsly/button1.png"
-                alt=""
-                className="w-[43%] h-auto cursor-pointer"
-              />
+            <div className="absolute bottom-5 translate-y-1/2 left-1/3  w-[70%] flex justify-center">
+              <a href="https://apps.apple.com/gb/app/elderconnect/id6720757966">
+                <img
+                  src="/images/products/opsly/button2.png"
+                  alt=""
+                  className="w-[43%] h-auto cursor-pointer"
+                />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* -------------------- MOBILE/TABLET SECTION (BELOW 1150PX) -------------------- */}
-      <section className="bg-white py-14 block min-[1150px]:hidden">
+      <section className="bg-white py-14 block min-[1150px]:hidden overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 flex flex-col items-center text-center gap-10 font-lora">
           {/* HEADER */}
           <div>
@@ -120,26 +117,27 @@ export default function HowToGetElderConnect() {
 
           {/* APP IMAGE + BUTTONS (moved below for mobile) */}
           <div className="flex flex-col items-center relative lg:mt-12 w-full">
-            <img
-              src="/images/products/elder/connectapp.png"
-              alt="Elder Connect App"
-              className="mx-auto w-[80%] sm:w-[65%] md:w-[55%]"
-            />
-            <div className="flex justify-center gap-5 mt-6 w-full sm:w-[60%]">
+            <a href="https://apps.apple.com/gb/app/elderconnect/id6720757966">
               <img
-                src="/images/products/opsly/button2.png"
-                alt=""
-                className="w-[45%] h-auto cursor-pointer"
+                src="/images/products/elder/connectapp.png"
+                alt="Elder Connect App"
+                className="mx-auto w-[80%] sm:w-[65%] md:w-[55%] breathe"
               />
-              <img
-                src="/images/products/opsly/button1.png"
-                alt=""
-                className="w-[45%] h-auto cursor-pointer"
-              />
-            </div>
+            </a>
           </div>
         </div>
       </section>
+        {/* ✅ Breathing Animation */}
+      <style>{`
+        @keyframes breathe {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.06); }
+          100% { transform: scale(1); }
+        }
+        .breathe {
+          animation: breathe 5s ease-in-out infinite;
+        }
+      `}</style>
     </>
   );
 }

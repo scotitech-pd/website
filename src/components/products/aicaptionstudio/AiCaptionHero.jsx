@@ -46,10 +46,11 @@ export default function AiCaptionHero() {
           </p>
 
           {/* CTA Button */}
-          <button className="bg-white text-gray-900 px-6 py-2.5 rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora">
+          <a href="https://apps.apple.com/gb/app/ai-caption-studio/id6743449367">
+          <button className="bg-white cursor-pointer text-gray-900 px-6 py-2.5 rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora">
             Download Now
             <DownloadCloudIcon className="inline-block ml-2 h-5 w-5" />
-          </button>
+          </button></a>
         </div>
 
         {/* === Right Side (Phone Mockup) === */}

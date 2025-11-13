@@ -33,7 +33,7 @@ export default function ModernHomeSetupSection() {
 
   return (
     <section
-      className="relative py-14 overflow-hidden bg-cover bg-center"
+      className="relative lg:py-14 pb-14  overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: "url('/images/products/elder/bgmgf.png')",
       }}

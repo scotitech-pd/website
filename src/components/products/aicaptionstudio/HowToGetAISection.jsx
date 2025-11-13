@@ -33,16 +33,13 @@ const HowToGetAISection = () => {
               <br /> AI Caption Studio.
             </p>
             <div className="flex justify-center items-center gap-4 mt-6 cursor-pointer hover:shadow-2xl">
-              <img
-                src="/images/products/aicaptionstudio/appstore.png"
-                alt="App Store"
-                className="lg:w-24 w-30 h-auto shadow-md"
-              />
-              <img
-                src="/images/products/aicaptionstudio/playstore.png"
-                alt="Google Play"
-                className="lg:w-24 w-30 h-auto shadow-md"
-              />
+              <a href="https://apps.apple.com/gb/app/ai-caption-studio/id6743449367">
+                <img
+                  src="/images/products/aicaptionstudio/appstore.png"
+                  alt="App Store"
+                  className="lg:w-24 w-30 h-auto shadow-md"
+                />
+              </a>
             </div>
           </div>
 
@@ -82,9 +79,12 @@ const HowToGetAISection = () => {
 
         {/* Button */}
         <div className="mt-14">
-          <button className="bg-gradient-to-r font-lora from-[#2593F6] to-[#1ACCC8] cursor-pointer text-white font-medium px-10 py-3 rounded-full shadow-lg hover:opacity-90 transition">
-            Get Started Now
-          </button>
+          <a href="https://apps.apple.com/gb/app/ai-caption-studio/id6743449367">
+            <button className="bg-gradient-to-r font-lora from-[#2593F6] to-[#1ACCC8] cursor-pointer text-white font-medium px-10 py-3 rounded-full shadow-lg hover:opacity-90 transition">
+              Download Now 
+               
+            </button>
+          </a>
         </div>
       </div>
     </section>

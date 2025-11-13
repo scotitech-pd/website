@@ -5,37 +5,48 @@ import Link from "next/link";
 
 const HeroSection = () => {
   const slides = [
-    { type: "image", src: "/images/home/herobg.png" },
-    { type: "video", src: "https://www.pexels.com/download/video/4974699/" },
+    { type: "video", src: "/images/home/hero-vid.mp4" },
+    { type: "video", src: "/images/home/hero-vid2.mp4" },
+    { type: "video", src: "/images/home/hero-vid3.mp4" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 7000);
+      setCurrentIndex((prev) =>
+        prev === slides.length - 1 ? 0 : prev + 1
+      );
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
-      {/* ✅ DESKTOP VIEW */}
-      <section className="relative hidden lg:flex h-[80vh] w-full overflow-hidden items-center justify-center">
+      {/* DESKTOP VIEW */}
+      <section className="relative hidden lg:flex h-[93vh] w-full overflow-hidden items-center justify-center">
+        
         {slides.map((slide, i) => (
           <div
             key={i}
-            className={`absolute inset-0 transition-opacity duration-[1500ms] breathe ${
+            className={`absolute inset-0 duration-[1500ms] breathe ${
               currentIndex === i ? "opacity-100" : "opacity-0"
             }`}
           >
             {slide.type === "video" ? (
               <video
+                key={slide.src}
                 src={slide.src}
-                autoPlay
                 muted
-                loop
+                autoPlay
                 playsInline
+                preload="auto"
+                ref={(el) => {
+                  if (currentIndex === i && el) {
+                    el.currentTime = 0;
+                    el.play();
+                  }
+                }}
                 className="absolute inset-0 w-full h-full object-cover"
               />
             ) : (
@@ -47,10 +58,8 @@ const HeroSection = () => {
           </div>
         ))}
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/40 z-5" />
 
-        {/* CONTENT */}
         <div className="relative z-10 max-w-8xl mx-auto px-5 md:px-20 w-full text-white flex flex-col justify-center h-full">
           <p className="bg-main-dark font-semibold border border-white px-3 py-2 rounded-lg w-fit font-karla">
             ScotiTech Solution
@@ -64,7 +73,7 @@ const HeroSection = () => {
             Building the technology that transforms what you can do into what you will do.
           </p>
 
-          <div className="p-1.5 border border-white w-fit rounded-lg">
+          <div className="p-1.5 border border-main-dark w-fit rounded-lg">
             <Link
               href="/contact"
               className="bg-white text-black px-8 py-2 rounded-lg text-lg inline-flex items-center gap-2 font-karla"
@@ -75,7 +84,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* ✅ MOBILE/TABLET VIEW */}
+      {/* MOBILE VIEW */}
       <section className="relative lg:hidden h-[84vh] px-6 py-20 flex flex-col justify-center text-white overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center breathe"
@@ -83,9 +92,7 @@ const HeroSection = () => {
             backgroundImage: "url('/images/home/herobg.png')",
           }}
         />
-        <div className="absolute inset-0 bg-black/40" />
 
-        {/* Centered Content */}
         <div className="relative z-10 flex flex-col justify-center h-full">
           <p className="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-lg w-fit font-karla border border-white/50">
             ScotiTech Solution
@@ -110,7 +117,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* ✅ Breathing Animation */}
+      {/* Breathing Animation */}
       <style>{`
         @keyframes breathe {
           0% { transform: scale(1); }

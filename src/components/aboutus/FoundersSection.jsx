@@ -9,11 +9,8 @@ const founders = [
     image: "/images/home/pradeep.jpg",
     color: "from-[#6D28D9] to-[#14B8A6]",
     linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
-    desc: [
-      "A technology entrepreneur, software engineer, and strategic leader driving ScotiTech’s innovation roadmap.",
-      "With 10+ years of experience in AI integration and app development, Pradeep focuses on human-centered, ethical technology.",
-      "A graduate of the University of Strathclyde, he also serves as a Digital Trustee with Third Sector Lab (Scotland).",
-    ],
+    desc: ["Pradeep Dahiya leads ScotiTech as CEO and Lead Developer, bringing more than a decade of hands-on experience in app development, AI integration, and digital transformation.", "He founded ScotiTech with a vision to create simpler, secure, and sustainable technology that empowers businesses, creators, and communities across markets." , "Under his leadership, ScotiTech has delivered products like AppDeploy, Opsly, and AI Caption Studio. Pradeep holds an MSc from the University of Strathclyde and serves as a Digital Trustee with Third Sector Lab in Scotland."
+    ,"Pradeep also supports charities and non-profits in Scotland in adopting secure digital systems and building confidence in technology."],
   },
   {
     name: "Daniel Chapman",
@@ -22,10 +19,10 @@ const founders = [
     color: "from-[#0EA5E9] to-[#6366F1]",
     linkedin: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     desc: [
-      "Daniel leads ScotiTech’s global strategy and partnerships with a focus on innovation and growth.",
-      "Having built ventures across Europe, he bridges creative thinking with scalable business execution.",
-      "His leadership shapes ScotiTech’s global presence, driving purpose-led digital transformation.",
-    ],
+      "Daniel leads ScotiTech’s global strategy and partnerships, driving innovation and long-term growth. He focuses on expanding the company’s impact through strategic opportunities and scalable digital initiatives..",
+      "With experience building ventures across Europe, he blends creative thinking with structured business execution. His approach transforms ideas into practical solutions that deliver measurable value.",
+      "His leadership strengthens ScotiTech’s global presence and accelerates purpose-led digital transformation. He continues to shape the company’s vision while fostering collaboration and innovation.",
+    ,"His guidance supports sustainable expansion of ScotiTech around the globe"],
   },
 ];
 
@@ -47,15 +44,15 @@ const FoundersSpotlight = () => {
         </div>
 
         {/* Founders Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 h-full">
           {founders.map((f, index) => (
             <div
               key={index}
-              className={`relative rounded-3xl overflow-hidden shadow-2xl bg-white/5 backdrop-blur-sm hover:scale-[1.02] transition-all duration-700 border border-gray-200/30 group`}
+              className={`relative rounded-3xl overflow-hidden  shadow-2xl bg-white/5 backdrop-blur-sm hover:scale-[1.02] transition-all duration-700 border border-gray-200/30 group`}
             >
               {/* Gradient border layer */}
               <div
-                className={`absolute inset-0 bg-gradient-to-r ${f.color} opacity-30 group-hover:opacity-50 blur-2xl transition-all`}
+                className={`absolute inset-0 bg-gradient-to-r ${f.color} opacity-30 group-hover:opacity-50 blur-2xl transition-all `}
               ></div>
 
               {/* Image */}
@@ -74,7 +71,7 @@ const FoundersSpotlight = () => {
               </div>
 
               {/* Text */}
-              <div className="relative z-10 p-6 sm:p-8 bg-white">
+              <div className="relative z-10 p-6 sm:p-8 bg-white h-full">
                 {f.desc.map((p, i) => (
                   <p
                     key={i}

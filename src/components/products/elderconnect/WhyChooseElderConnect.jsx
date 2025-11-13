@@ -46,9 +46,11 @@ export default function WhyChooseElderConnect() {
               delivering safety, connection, and real-time support for your
               senior loved one, and complete peace of mind for you.
             </p>
-            <button className="self-start mb-6 font-karla bg-white text-main-dark font-semibold px-6 py-2 rounded-md shadow-md hover:scale-101 hover:shadow-[0_0_5px_rgba(255,255,255,0.6)] duration-200 transition-all">
-              Download Now
-            </button>
+            <a href="https://apps.apple.com/gb/app/elderconnect/id6720757966">
+              <button className="cursor-pointer self-start mb-6 font-karla bg-white text-main-dark font-semibold px-6 py-2 rounded-md shadow-md hover:scale-101 hover:shadow-[0_0_5px_rgba(255,255,255,0.6)] duration-200 transition-all">
+                Download Now
+              </button>
+            </a>
           </div>
         </div>
 

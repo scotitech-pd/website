@@ -148,10 +148,10 @@ const Navbar = () => {
 
                     {/* DESKTOP DROPDOWN */}
                     <div
-                      className={`absolute right-0 top-12 ${showProductsDropdown ? "opacity-100 visible" : "opacity-0 invisible"} duration-300`}
+                      className={`absolute right-0 top-12  ${showProductsDropdown ? "opacity-100 visible" : "opacity-0 invisible"} duration-300 -z-20`}
                       style={{ marginRight: "20px" }}
                     >
-                      <div className="w-[60vw] max-w-[900px] bg-[#0f0b14] border border-[#2d1b3c] rounded-b-2xl shadow-[0_12px_45px_rgba(0,0,0,0.6)] pt-6 pb-8 px-8">
+                      <div className="w-[60vw] max-w-[900px]  bg-gradient-to-r to-[#39327C] -z-2 inset-0 from-[#34919B]  rounded-b-2xl shadow-[0_12px_45px_rgba(0,0,0,0.6)] pt-6 pb-8 px-8">
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                           {products.map(product => (
@@ -159,8 +159,8 @@ const Navbar = () => {
                               key={product.id}
                               href={product.link}
                               onClick={() => setShowProductsDropdown(false)}
-                              className={`group p-4 rounded-xl border border-[#3b2950] bg-[#1a1122] hover:bg-[#261832] duration-200 cursor-pointer relative
-                                ${product.link === pathname && "border-[#641171] bg-[#2a1836]"}`}
+                              className={`group p-4 rounded-xl border border-[#3b2950] bg-[#1a1122]/70 hover:bg-[#261832] duration-200 cursor-pointer relative
+                                ${product.link === pathname && "border-[#641171] bg-[#2a1836]/70"}`}
                             >
                               <div className="flex items-center justify-between mb-3">
                                 <img src={product.icon} alt={product.title} className="w-10 h-10 object-contain rounded-lg" />
