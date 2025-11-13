@@ -36,13 +36,18 @@ const HeroScotitech = () => {
                 >
                   Explore Our Products
                 </Link>
-
-                <button
-                  onClick={() => setShowModal(true)}
-                  className="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-white shadow-sm text-sm hover:bg-[#F4ADFF] duration-300 font-medium hover:shadow-lg transition-shadow"
+                <a
+                  href="https://calendly.com/pradeepdahiya2411/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Request a Demo
-                </button>
+                  <button
+                    onClick={() => setShowModal(true)}
+                    className="inline-flex items-center justify-center cursor-pointer px-5 py-2 rounded-lg bg-white shadow-sm text-sm hover:bg-[#F4ADFF] duration-300 font-medium hover:shadow-lg transition-shadow"
+                  >
+                    Request a Call
+                  </button>
+                </a>
               </div>
               <div className="relative h-[157px] lg:hidden max-[390px]:hidden">
                 <img

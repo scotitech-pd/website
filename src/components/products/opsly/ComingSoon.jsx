@@ -1,144 +1,72 @@
-"use client";
-
-import { useState } from "react";
-import { CalendarDaysIcon, Rocket } from "lucide-react";
+import { CalendarDaysIcon } from "lucide-react"; // using a fitting icon for "Schedule Demo"
 
 export default function ComingSoon() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setEmail("");
-      setIsModalOpen(false);
-    }, 2500);
-  };
-
   return (
-    <>
-      {/* ======================= HERO SECTION ======================= */}
-      <section
-        className="relative overflow-hidden lg:h-[100%] text-white min-[1380px]:py-25 py-18 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/products/opsly/frontbg.png')",
-        }}
-      >
-        <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 flex flex-col lg:flex-row items-center justify-between gap-8">
+    // Hero section for Opsly product page
+    // Full-width section with a background image and top/bottom padding
+    <section
+      className="relative overflow-hidden lg:h-[100%] text-white min-[1380px]:py-25 py-18 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/images/products/opsly/frontbg.png')", // hero background image
+      }}
+    >
+      {/* Layout wrapper - controls width, padding, and responsive structure */}
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 flex flex-col lg:flex-row items-center justify-between gap-8">
 
-          {/* Left Content */}
-          <div className="lg:w-2/3 space-y-6 z-20">
-            <div className="lg:text-5xl text-3xl font-semibold relative w-fit font-karla">
-              Opsly - Launching Soon
-              <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 -left-5 text-nowrap hidden md:block">
-                Opsly
-              </p>
-            </div>
-
-            <h2 className="lg:text-2xl font-xl font-medium font-karla mt-7">
-              Integrating Every Tool Your
-              <span className="block">Team Needs, Billed Simply.</span>
-            </h2>
-
-            <p className="hidden lg:block leading-6 font-lora text-white/80 max-w-[620px]">
-              Opsly is the centralized command center for your company’s software
-              stack. Gain complete visibility into your SaaS applications,
-              eliminate redundant spending, and ensure compliance, all from a
-              single powerful platform developed by Scotitech.
+        {/* === Left Column: Text and CTA === */}
+        <div className="lg:w-2/3 space-y-6 z-20">
+          {/* Product title with subtle ghost text layer */}
+          <div className= "lg:text-5xl text-3xl font-semibold relative w-fit font-karla">
+            Opsly - Launching Soon
+            <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 -left-5 text-nowrap hidden md:block">
+              Opsly
             </p>
-
-            <p className="lg:hidden block leading-6 font-lora text-white/80 max-w-[620px]">
-              Opsly centralizes your company’s SaaS tools to save costs and ensure
-              compliance, all from one powerful dashboard.
-            </p>
-
-            {/* ===== CTA BUTTON WITH MODAL TRIGGER ===== */}
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="bg-white text-gray-900 px-6 py-2.5 cursor-pointer rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora flex items-center gap-2"
-            >
-              Remind Me!
-              <CalendarDaysIcon className="h-5 w-5" />
-            </button>
           </div>
 
-          {/* Right Image */}
-          <div className="lg:w-1/4 flex justify-start items-center">
-            <img
-              src="/images/products/opsly/frontmobile.png"
-              alt="Opsly dashboard preview"
-              className="hidden lg:block w-[90%]"
-            />
+          {/* Subtitle / tagline */}
+          <h2 className="lg:text-2xl font-xl font-medium font-karla mt-7">
+            Integrating Every Tool Your
+            <span className="block">Team Needs, Billed Simply.</span>
+          </h2>
 
-            <img
-              src="/images/products/opsly/frontmobile.png"
-              alt="Opsly mobile preview"
-              className="lg:hidden block absolute max-[579px]:-bottom-20 max-[620px]:-bottom-[90px] opacity-50 z-2 left-1/2 w-[200px]"
-            />
-          </div>
+          {/* Full-length description for desktop */}
+          <p className="hidden lg:block leading-6 font-lora text-white/80 max-w-[620px]">
+            Opsly is the centralized command center for your company’s software
+            stack. Gain complete visibility into your SaaS applications,
+            eliminate redundant spending, and ensure compliance — all from a
+            single, powerful platform developed by Scotitech.
+          </p>
+
+          {/* Shorter description for mobile */}
+          <p className="lg:hidden block leading-6 font-lora text-white/80 max-w-[620px]">
+            Opsly centralizes your company’s SaaS tools to save costs and ensure
+            compliance — all from one powerful dashboard.
+          </p>
+
+          {/* CTA button with hover glow and icon */}
+          <button className="bg-white text-gray-900 px-6 py-2.5 rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora">
+            Remind Me!
+            <CalendarDaysIcon className="inline-block ml-2 h-5 w-5" />
+          </button>
         </div>
-      </section>
 
-      {/* ======================= REMIND ME MODAL ======================= */}
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-          <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-[90%] sm:w-[400px] relative text-left">
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute top-3 right-3 text-gray-500 hover:text-black"
-            >
-              ✕
-            </button>
+        {/* === Right Column: Product Image === */}
+        <div className="lg:w-1/4 flex justify-start items-center">
+          {/* Desktop mockup image */}
+          <img
+            src="/images/products/opsly/frontmobile.png"
+            alt="Opsly dashboard preview"
+            className="hidden lg:block w-[90%]"
+          />
 
-            {!submitted ? (
-              <>
-                <div className="flex items-center gap-2 mb-3">
-                  <Rocket className="text-blue animate-bounce" size={22} />
-                  <h3 className="text-xl font-semibold text-blue font-karla">
-                    Get Notified When Opsly Launches
-                  </h3>
-                </div>
-
-                <p className="text-gray-600 text-sm mb-4 font-lora">
-                  Enter your email to receive launch updates and early access alerts.
-                </p>
-
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <input
-                    type="email"
-                    required
-                    placeholder="Enter your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full border text-main-dark font-lora border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-blue"
-                  />
-
-                  <button
-                    type="submit"
-                    className="w-full bg-blue cursor-pointer text-white py-2 rounded-lg font-karla hover:bg-blue/90 transition"
-                  >
-                    Remind Me
-                  </button>
-                </form>
-              </>
-            ) : (
-              <div className="flex flex-col items-center text-center space-y-3 py-6">
-                <Rocket className="text-blue animate-pulse" size={42} />
-                <h4 className="text-lg font-semibold text-blue">
-                  You're on the list!
-                </h4>
-                <p className="text-gray-600 text-sm font-lora">
-                  We will notify you as soon as Opsly is live.
-                </p>
-              </div>
-            )}
-          </div>
+          {/* Mobile mockup image - softly overlaid in background */}
+          <img
+            src="/images/products/opsly/frontmobile.png"
+            alt="Opsly mobile preview"
+            className="lg:hidden block absolute max-[579px]:-bottom-20 max-[620px]:-bottom-[90px] opacity-50 z-2 left-1/2 w-[200px]"
+          />
         </div>
-      )}
-    </>
+      </div>
+    </section>
   );
 }

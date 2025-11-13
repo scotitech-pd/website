@@ -1,6 +1,7 @@
 "use client";
 import { Rocket } from "lucide-react";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 const carouselItems = [
   {
@@ -8,18 +9,26 @@ const carouselItems = [
     tag: "INSIGHT",
     title: "Innovate Build Lead Succeed Grow",
     desc: "Driving next-generation growth through innovation.",
+    ctaButtonText: "Contact us",
+    ctaButtonLink: "/contact",
   },
   {
     img: "/images/home/award.jpg",
     tag: "RECOGNITION",
-    title: "Transform Ideas Into Powerful Impact",
-    desc: "Celebrating our achievements in global tech excellence.",
+    title: "Indian Tech Society – UK",
+    desc: "An inspiring evening celebrating innovation and excellence in the UK tech community.",
+    ctaButtonText: "Read on Linkedin",
+    ctaButtonLink:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7218239558662922240/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7218239558662922240%29",
   },
   {
     img: "/images/home/forttuna.jpg",
     tag: "AWARD",
     title: "ScotiTech at Forttuna",
-    desc: "Recognized for excellence in technological innovation and business impact.",
+    desc: "ScotiTech has been nominated for the Forttuna Global Excellence Awards® 2025 (Global Edition).",
+    ctaButtonText: "Read on Linkedin",
+    ctaButtonLink:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7313247079722541058/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7313247079722541058%29",
   },
 ];
 
@@ -66,12 +75,13 @@ const ScotiTechPulse = () => {
             Stay connected with our latest{" "}
             <span className="text-main-dark font-medium">innovations</span>,{" "}
             <span className="text-main-dark font-medium">insights</span>, and{" "}
-            <span className="text-main-dark font-medium">community events</span>.
+            <span className="text-main-dark font-medium">community events</span>
+            .
           </p>
         </div>
 
         <div className="grid min-[990px]:grid-cols-[45%_53%] lg:w-[88%] mx-auto gap-6 text-black">
-          {/* ✅ Carousel Card */}
+          {/* Carousel Card */}
           <div className="bg-white rounded-xl overflow-hidden shadow-md relative min-h-[480px] sm:min-h-[450px]">
             {carouselItems.map((item, i) => (
               <div
@@ -97,17 +107,20 @@ const ScotiTechPulse = () => {
                       {item.title}
                     </h3>
 
-                    <p className="text-black/90 text-sm sm:text-base md:text-lg mb-4 font-lora ">
+                    <p className="text-black/90 text-sm sm:text-base md:text-lg mb-4 font-lora">
                       {item.desc}
                     </p>
                   </div>
 
-                  <div className="w-full flex justify-end min-[990px]:justify-start mt-auto ">
+                  {/* CTA BUTTON UNIQUE PER SLIDE */}
+                  <div className="w-full flex justify-end min-[990px]:justify-start mt-auto">
                     <a
-                      href="#"
-                      className="bg-blue flex text-white px-6  sm:px-8 py-2 font-karla cursor-pointer rounded-full text-sm sm:text-md transition items-center justify-center font-medium hover:bg-blue/90"
+                      href={item.ctaButtonLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue flex text-white px-6 sm:px-8 py-2 font-karla cursor-pointer rounded-full text-sm sm:text-md transition items-center justify-center font-medium hover:bg-blue/90"
                     >
-                      View Details
+                      {item.ctaButtonText}
                     </a>
                   </div>
                 </div>
@@ -115,7 +128,7 @@ const ScotiTechPulse = () => {
             ))}
           </div>
 
-          {/* ✅ Right Side — untouched */}
+          {/* Right Side */}
           <div className="grid grid-cols-1 gap-6">
             {/* Dubai Event */}
             <div className="bg-white rounded-xl drop-shadow-md shadow-md p-6">
@@ -133,19 +146,21 @@ const ScotiTechPulse = () => {
                 </span>
               </div>
               <h4 className="text-xl min-[650px]:text-2xl font-semibold font-karla mb-2 mt-4">
-                ScotiTech at Dubai Tech Summit 2025
+                ScotiTech at Forttuna Global Excellence Awards®, Dubai
               </h4>
               <p className="text-gray-600 mb-4 text-md font-lora">
                 Join our leadership team live in Dubai to discuss innovation and
                 enterprise technology.
               </p>
               <div className="w-full flex justify-end">
-                <button className="relative overflow-hidden border border-blue cursor-pointer text-blue-700 font-lora px-5 py-2 rounded-full text-md transition-all duration-300 group">
-                  <span className="relative z-10 group-hover:text-white transition-colors duration-300">
-                    Meet Us in Dubai
-                  </span>
-                  <span className="absolute inset-0 bg-blue scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-300"></span>
-                </button>
+                <Link href="/contact">
+                  <button className="relative overflow-hidden border border-blue cursor-pointer text-blue-700 font-lora px-5 py-2 rounded-full text-md transition-all duration-300 group">
+                    <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+                      Talk to Us
+                    </span>
+                    <span className="absolute inset-0 bg-blue scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-300"></span>
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -168,8 +183,8 @@ const ScotiTechPulse = () => {
                 Opsly Launch — Get Early Access
               </h4>
               <p className="text-gray-600 mb-4 text-md font-lora">
-                Be among the first to explore our SaaS optimization suite with exclusive
-                early access.
+                Be among the first to explore our SaaS optimization suite with
+                exclusive early access.
               </p>
               <div className="w-full flex justify-end">
                 <button
@@ -185,7 +200,7 @@ const ScotiTechPulse = () => {
         </div>
       </div>
 
-      {/* ✅ Opsly Waitlist Modal */}
+      {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
           <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-[90%] sm:w-[400px] relative text-left">
@@ -205,7 +220,8 @@ const ScotiTechPulse = () => {
                   </h3>
                 </div>
                 <p className="text-gray-600 text-sm mb-4 font-lora">
-                  Be the first to get early access updates as soon as Opsly launches.
+                  Be the first to get early access updates as soon as Opsly
+                  launches.
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-3">
                   <input

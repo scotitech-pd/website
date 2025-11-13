@@ -51,7 +51,7 @@ export default function FaqSection() {
             Frequently Asked Questions
           </h3>
           <p className="mt-2 min-[475px]:mt-10 text-xl min-[390px]:text-2xl leading-7 z-10 font-medium font-lora">
-            FAQ (Engagement + SEO)
+            FAQs about Our Products
           </p>
         </div>
 
