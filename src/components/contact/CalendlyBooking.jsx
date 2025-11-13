@@ -30,7 +30,7 @@ const CalendlySection = () => {
           rel="noopener noreferrer"
           className="group inline-flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-karla font-semibold hover:bg-main-dark hover:text-white transition-all shadow-lg"
         >
-          Book A Slot!
+          Book A Slot
           <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1" />
         </a>
       </div>
