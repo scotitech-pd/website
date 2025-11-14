@@ -44,7 +44,7 @@ export default function FaqSection() {
     <section
       className="relative bg-[#F5F5F5] py-10 sm:py-20 overflow-hidden" >
       <img
-        src="/images/home/Tpurple.png"
+        src="/images/home/tpurple.png"
         alt="bg"
         className="left-0 absolute w-auto h-[95%] bottom-0"
       />
