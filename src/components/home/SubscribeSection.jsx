@@ -71,7 +71,7 @@ const SubscribeSection = () => {
             {status && <p className="mt-4 text-sm text-white">{status}</p>}
 
             <p className="text-sm min-[500px]:text-[15px] mt-4 text-white pl-3 font-lora">
-              We respect the privacy. No spam, ever. Read our{" "}
+             We respect your privacy.. No spam, ever. Read our{" "}
               <a href="/privacy" className="font-bold underline text-black font-lora">
                 Privacy Policy
               </a>

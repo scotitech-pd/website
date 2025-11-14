@@ -6,7 +6,7 @@ export default function HowItWorks() {
       p1: 0.5,
       p2: 0.5,
       title: "Upload Your App",
-      desc: "Add your .IPL file of the AppDeploy dashboard",
+      desc: "Add your .IPA file of the AppDeploy dashboard",
     },
     {
       id: 2,

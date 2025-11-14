@@ -53,7 +53,7 @@ export default function ComingSoon() {
 
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-white text-gray-900 px-6 py-2.5 rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora"
+            className="bg-white cursor-pointer text-gray-900 px-6 py-2.5 rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora"
           >
             Remind Me
             <CalendarDaysIcon className="inline-block ml-2 h-5 w-5" />

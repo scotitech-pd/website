@@ -44,7 +44,7 @@ export default function TechnologySection() {
           {/* Right content */}
           <div className="text-center lg:text-left">
             <p className="text-teal-300 font-lora font-medium text-base mb-3">
-              How Scotitech Solves These
+              How ScotiTech Solves These
             </p>
 
             <h2 className="text-2xl min-[380px]:text-3xl min-[450px]:text-4xl min-[1060px]:text-5xl font-karla font-medium ">

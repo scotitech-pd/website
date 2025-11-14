@@ -6,7 +6,7 @@ const OurStory = () => {
       {/* Background shape */}
       {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-gray-100 to-transparent -z-10 clip-path-polygon"></div> */}
       <img
-        src="/images/home/Timg.png"
+        src="/images/home/timg.png"
         alt="bg"
         className="left-0 absolute w-[50%] top-16"
       />
@@ -24,7 +24,7 @@ const OurStory = () => {
             <p className="text-lg leading-6.5 font-lora min-[1160px]:w-[80%] mx-auto text-justify sm:text-center">
               At <span className="text-main-dark font-semibold">ScotiTech</span>
               , the journey began with a vision and a simple belief:
-              technology should empower, not overwhelm. What started as a
+              technology, should empower, not overwhelm. What started as a
               self-sponsored idea has grown into products that help teams and
               creators worldwide.
             </p>

@@ -9,7 +9,7 @@ const BeyondBusiness = () => {
       id: 1,
       bg: "bg-[#e4ebec]",
       title: "Empowering Independence",
-      text: "From daily tools to digital literacy, empowers shininess to thrive.",
+      text: "From daily tools to digital literacy, empowers seniors to thrive.",
       icon: "/images/contact/independence-icon.png",
     },
     {
@@ -52,7 +52,7 @@ const BeyondBusiness = () => {
           </h1>
           <p className="text-base lg:text-[17px] font-lora max-w-4xl">
             While ScotiTech builds the future of digital experience, our
-            compliment social impact shines through{" "}
+            complement social impact shines through{" "}
             <span className="text-[#98F9FF] font-semibold">
               ElderConnect+
             </span>
@@ -73,16 +73,16 @@ const BeyondBusiness = () => {
               className="w-full h-auto object-cover rounded-2xl mx-auto"
             />
              <h3 className="lg:hidden text-center text-white  font-semibold text-lg mt-4 font-karla">
-            ElderConnect: Bridging Gaps, Building Joy.
+            ElderConnect+ : Bridging Gaps, Building Joy.
           </h3>
 
             {/* ✅ DESKTOP OVERLAY BOX stays SAME */}
             <div className="hidden min-[1028px]:block absolute bottom-12 left-12 min-[1300px]:max-w-[500px] min-[1024px]:max-w-[300px]   bg-black/80 backdrop-blur-md rounded-2xl p-8">
               <h3 className="text-xl lg:text-xl font-bold text-white/80 mb-3 font-karla min-[1024px]:text-xs" >
-                ElderConnect: Bridging Gaps, Building Joy.
+                ElderConnect+ : Bridging Gaps, Building Joy.
               </h3>
               <p className="lg:text-sm min-[1024px]:text-xs text-gray-200 leading-relaxed font-lora">
-                At ScotiTech we believe technology should empower everyone.
+                At ScotiTech, we believe technology should empower everyone.
                 Through our ElderConnect+ app, we build vibrant communities and
                 support independent living.
               </p>

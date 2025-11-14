@@ -24,10 +24,10 @@ export default function HowToGetElderConnect() {
           {/* LEFT SIDE */}
           <div>
             <h2 className="text-3xl md:text-[38px] font-semibold mb-3 text-main-dark drop-shadow-2xl font-karla">
-              How to Get <br /> Elder Connect App?
+              How to Get <br /> ElderConnect+ App?
             </h2>
             <p className="text-[#4E4E4E] text-md lg:text-xl mb-2 lg:mb-5">
-              Getting started with Elder Connect is simple and takes just a few
+              Getting started with ElderConnect+ is simple and takes just a few
               minutes.
             </p>
 

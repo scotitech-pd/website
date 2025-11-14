@@ -53,7 +53,7 @@ export default function WhatIsClarityPath() {
 
           <p className="text-[18px] sm:text-[20px] md:text-[21px] text-black mb-4 lg:mb-6 font-karla leading-[22px]">
           {" "}
-            <span className="text-main-dark font-semibold">Clarity Path</span> is an{" "}
+            <span className="text-main-dark font-semibold">ClarityPath</span> is an{" "}
             <span className="text-main-dark font-semibold">AI-based application</span>{" "}
             built for{" "}
             <span className="text-main-dark font-semibold">

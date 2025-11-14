@@ -36,13 +36,13 @@ export default function WhyChooseElderConnect() {
           <div className="min-[1260px]:h-fit w-full flex items-center">
             <h2 className="text-3xl text-nowrap text-white md:text-[38px] font-semibold drop-shadow-2xl font-karla min-[1260px]:pl-10">
               Why Choose <br />
-              <span className="">Elder Connect app?</span>
+              <span className="">ElderConnect+ app?</span>
             </h2>
           </div>
 
           <div className="flex flex-col gap-6 min-[1260px]:gap-4">
             <p className="text-md min-[1260px]:text-xl text-white leading-[25px] font-lora">
-              More than just an app, Elder Connect is your all-in-one companion,
+              More than just an app, ElderConnect+ is your all-in-one companion,
               delivering safety, connection, and real-time support for your
               senior loved one, and complete peace of mind for you.
             </p>

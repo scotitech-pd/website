@@ -65,7 +65,7 @@ export default function CompetitorComparisonPremium() {
                   Parameter
                 </th>
                 <th className="py-5 px-6 font-semibold border-r border-white/20 w-[28%] relative font-karla">
-                  AppDeploy (Scotitech)
+                  AppDeploy (ScotiTech)
                
                 </th>
                 <th className="py-5 px-6 font-semibold border-r border-white/20 w-[27%] font-karla">

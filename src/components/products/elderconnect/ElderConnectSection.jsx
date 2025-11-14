@@ -37,15 +37,15 @@ export default function ElderConnectSection() {
           {/* LEFT SECTION */}
           <div className="max-w-lg">
             <h2 className="text-3xl md:text-[38px] font-semibold mb-6 text-main-dark drop-shadow-2xl font-karla">
-              What is Elder Connect app?
+              What is ElderConnect+ app?
             </h2>
             <p className="text-gray-900 lg:text-lg text-md mb-8 lg:mb-0 font-lora leading-[22px] ">
               Discover the comprehensive support you deserve with{" "}
-              <span className="font-semibold text-purple-700">ElderConnect</span>.
+              <span className="font-semibold text-purple-700">ElderConnect+</span>.
               We offer a wide range of services tailored to your needs, including
               assistance with daily tasks, meaningful companionship, routine
               health check-ins, vital mental health support, and much more. With
-              the ElderConnect app, it&apos;s easier than ever to stay connected
+              the ElderConnect+ app, it&apos;s easier than ever to stay connected
               to your community and stay fully supported.
             </p>
           </div>

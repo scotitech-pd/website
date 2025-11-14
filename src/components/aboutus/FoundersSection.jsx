@@ -19,7 +19,7 @@ const founders = [
     color: "from-[#0EA5E9] to-[#6366F1]",
     linkedin: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     desc: [
-      "Daniel leads ScotiTech’s global strategy and partnerships, driving innovation and long-term growth. He focuses on expanding the company’s impact through strategic opportunities and scalable digital initiatives..",
+      "Daniel leads ScotiTech’s global strategy and partnerships, driving innovation and long-term growth. He focuses on expanding the company’s impact through strategic opportunities and scalable digital initiatives.",
       "With experience building ventures across Europe, he blends creative thinking with structured business execution. His approach transforms ideas into practical solutions that deliver measurable value.",
       "His leadership strengthens ScotiTech’s global presence and accelerates purpose-led digital transformation. He continues to shape the company’s vision while fostering collaboration and innovation.",
     ,"His guidance supports sustainable expansion of ScotiTech around the globe"],

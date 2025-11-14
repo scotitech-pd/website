@@ -46,7 +46,7 @@ const NewsletterSubscription = () => {
             {/* LEFT SIDE */}
             <div>
               <h2 className="text-3xl font-karla font-bold mb-3">
-                Stay Updated with Scotitech
+                Stay Updated with ScotiTech
               </h2>
               <p className="text-gray-200 font-lora text-sm md:text-base leading-relaxed max-w-md">
                 Get the latest updates on our technology breakthroughs, product launches, and insights.

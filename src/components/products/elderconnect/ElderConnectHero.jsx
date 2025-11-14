@@ -14,9 +14,9 @@ export default function ElderConnectHero() {
         <div className="lg:w-2/3 space-y-6 z-20">
           {/* Main title with faint background text for depth */}
           <div className="lg:text-5xl text-3xl font-semibold relative font-karla w-fit">
-            Elder Connect+
+            ElderConnect+
             <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 -left-5 text-nowrap hidden md:block">
-              Elder Connect+
+              ElderConnect+
             </p>
           </div>
 
@@ -28,7 +28,7 @@ export default function ElderConnectHero() {
 
           {/* Description: full text for desktop, short version for mobile */}
           <p className="hidden lg:block leading-6 font-lora text-white/80 max-w-[620px]">
-            Elder Connect+ by <span className="text-[#EABFFF]">ScotiTech</span>{" "}
+            ElderConnect+ by <span className="text-[#EABFFF]">ScotiTech</span>{" "}
             is a trusted companion and assistance app designed to help seniors
             live active, independent, and safe lives — while keeping their
             families connected and informed every step of the way.

@@ -24,7 +24,7 @@ const products = [
   },
   {
     name: "ClarityPath",
-    tagline: "private decision-support app",
+    tagline: "Private Decision-Support App",
     logo: "/images/home/claritypath.png",
     link: "/claritypath",
   },

@@ -12,9 +12,9 @@ export default function ClarityPathSection() {
         {/* === Left Column: Text Content === */}
         <div className="lg:w-2/3 space-y-6 z-20">
           <div className="lg:text-5xl text-3xl font-semibold relative w-fit font-karla">
-            Clarity Path
+            ClarityPath
             <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 -left-5 text-nowrap hidden md:block">
-              Clarity Path
+              ClarityPath
             </p>
           </div>
 
@@ -32,7 +32,7 @@ export default function ClarityPathSection() {
             help individuals and teams make smarter, more focused choices. It
             uses intelligent insights to align goals, priorities, and actions
             with clarity. Distributed securely via{" "}
-            <span className="text-[#EABFFF] font-semibold">Appdeploy</span>,
+            <span className="text-[#EABFFF] font-semibold">AppDeploy</span>,
             ClarityPath empowers organizations{" "}
             <span className="text-[#EABFFF]">
               with a private, data-driven tool for planning and personal growth.

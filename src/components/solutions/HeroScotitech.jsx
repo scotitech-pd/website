@@ -22,7 +22,7 @@ const HeroScotitech = () => {
 
               <p className="mt-6 text-black font-lora max-w-3xl text-lg leading-6.5">
                 At{" "}
-                <span className="font-semibold text-purple-700">Scotitech</span>
+                <span className="font-semibold text-purple-700">ScotiTech</span>
                 , we solve real-world challenges with software that is simple,
                 scalable, and impactful. Whether you’re distributing internal
                 iOS apps, reducing SaaS costs, creating engaging content, or

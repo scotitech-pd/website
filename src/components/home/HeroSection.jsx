@@ -62,7 +62,7 @@ const HeroSection = () => {
 
         <div className="relative z-10 max-w-8xl mx-auto px-5 md:px-20 w-full text-white flex flex-col justify-center h-full">
           <p className="bg-main-dark font-semibold border border-white px-3 py-2 rounded-lg w-fit font-karla">
-            ScotiTech Solution
+            ScotiTech Solutions
           </p>
 
           <h1 className="lg:text-[50px] text-4xl font-karla font-bold leading-[57px] mt-6">
@@ -95,7 +95,7 @@ const HeroSection = () => {
 
         <div className="relative z-10 flex flex-col justify-center h-full">
           <p className="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-lg w-fit font-karla border border-white/50">
-            ScotiTech Solution
+            ScotiTech Solutions
           </p>
 
           <h2 className="text-3xl font-karla font-bold mt-5 leading-[46px]">

@@ -95,7 +95,7 @@ export default function CtaSection() {
             </h2>
 
             <p className="text-lg min-[390px]:text-xl text-white/90 mb-12 font-lora">
-              Choose the right Scottitech product for your needs and start today.
+              Choose the right ScotiTech product for your needs and start today.
             </p>
 
             <div className="grid min-[810px]:grid-cols-2 min-[1360px]:grid-cols-4 gap-4 font-lora">

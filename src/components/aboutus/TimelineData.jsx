@@ -34,7 +34,7 @@ export default function Timeline() {
       year: "2024",
       title: "Innovation Continues",
       description:
-        "Scotitech started growing more with their customers and innvoations",
+        "ScotiTech started growing more with their customers and innovations",
       side: "right",
     },
   ];

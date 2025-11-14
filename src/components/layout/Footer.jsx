@@ -8,14 +8,14 @@ const Footer = () => {
   const footer_links = [
     { id: 1, title: "Home", link: "/" },
     { id: 2, title: "Solutions", link: "/solutions" },
-    { id: 5, title: "About us", link: "/aboutus" },
+    { id: 5, title: "About Us", link: "/aboutus" },
     { id: 4, title: "Our Products", link: "/products/appdeploy" },
   ];
 
   const Services = [
     { id: 2, title: "Opsly", link: "/products/opsly" },
     { id: 1, title: "AppDeploy", link: "/products/appdeploy" },
-    { id: 4, title: "Clarity Path", link: "/products/claritypath" },
+    { id: 4, title: "ClarityPath", link: "/products/claritypath" },
     { id: 3, title: "AI Caption Studio", link: "/products/aicaptionstudio" },
   ];
 
@@ -162,7 +162,7 @@ const Footer = () => {
 
             {/* Contact */}
             <div className="max-[700px]:hidden z-10">
-              <h5 className="font-semibold font-karla pb-3">Contact us</h5>
+              <h5 className="font-semibold font-karla pb-3">Contact Us</h5>
               <div className="w-[85%]">
                 <a href="tel:+441698708203">
                   <p className="font-karla">Phone no:</p>

@@ -17,7 +17,7 @@ const CalendlySection = () => {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-karla font-bold mb-3">
-          Book Your Slot with Scotitech
+          Book Your Slot with ScotiTech
         </h2>
         <p className="text-gray-200 font-lora text-sm md:text-base max-w-xl mx-auto mb-6">
           Schedule a quick session to learn more about our products, plans, and pricing.

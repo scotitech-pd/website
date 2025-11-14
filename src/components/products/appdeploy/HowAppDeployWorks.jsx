@@ -21,7 +21,7 @@ export default function HowAppDeployWorks() {
     <section className="bg-white lg:my-20 py-10 text-center max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 overflow-hidden">
       {/* Heading */}
       <h2 className="text-3xl md:text-[40px] font-semibold text-main-dark drop-shadow-sm mb-3 font-karla">
-        How AppDeploy App Works?
+        How AppDeploy Works?
       </h2>
       <p className="text-[#4E4E4E] lg:text-xl text-lg font-lora mb-16">
         From upload to installation in minutes, not weeks

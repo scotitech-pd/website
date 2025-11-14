@@ -78,7 +78,7 @@ const MissionVision = () => {
               </h2>
 
               <h3 className="text-lg sm:text-xl lg:text-[20px] font-lora text-[#5E0B7B]">
-                Beyond Innovation, We Build the Trust
+                Beyond Innovation, We Build Trust
               </h3>
 
               <p className="text-black text-sm sm:text-[15px] leading-5 font-lora">

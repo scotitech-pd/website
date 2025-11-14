@@ -17,7 +17,7 @@ const carouselItems = [
     tag: "RECOGNITION",
     title: "Indian Tech Society – UK",
     desc: "An inspiring evening celebrating innovation and excellence in the UK tech community.",
-    ctaButtonText: "Read on Linkedin",
+    ctaButtonText: "Read on LinkedIn",
     ctaButtonLink:
       "https://www.linkedin.com/feed/update/urn:li:activity:7218239558662922240/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7218239558662922240%29",
   },
@@ -26,7 +26,7 @@ const carouselItems = [
     tag: "AWARD",
     title: "ScotiTech at Forttuna",
     desc: "ScotiTech has been nominated for the Forttuna Global Excellence Awards® 2025 (Global Edition).",
-    ctaButtonText: "Read on Linkedin",
+    ctaButtonText: "Read on LinkedIn",
     ctaButtonLink:
       "https://www.linkedin.com/feed/update/urn:li:activity:7313247079722541058/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7313247079722541058%29",
   },

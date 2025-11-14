@@ -11,7 +11,7 @@ export default function FaqSection() {
     {
       question: "How fast can I set up AppDeploy?",
       answer:
-        "In under 30 minute - no coding, no MDM enrollment required.",
+        "In under 30 minutes - no coding, no MDM enrollment required.",
     },
     {
       question: "Is there a free trial?",
@@ -21,7 +21,7 @@ export default function FaqSection() {
     {
       question: "What if my company grows?",
       answer:
-        "Scotitech products scale with you - from 20 users to 5000+.",
+        "ScotiTech products scale with you - from 20 users to 5000+.",
     },
     {
       question: "Do I need a developer account?",
