@@ -222,25 +222,80 @@ const Footer = () => {
 
         {/* Copyright */}
      {/* Copyright */}
-<div className="text-center text-white z-10 mb-6">
-  <div className="flex flex-wrap justify-center items-center font-lora text-sm leading-relaxed">
-    <span>Copyright</span>
-    <Copyright className="mx-1 size-3.5 inline" />
-    <span>{new Date().getFullYear()} ScotiTech Solutions, All Rights Reserved.</span>
+{/* Copyright + Powered By */}
+<div className="text-white z-10 mb-6 hidden md:block">
+
+  {/* DESKTOP VERSION: center + right */}
+  <div className="hidden md:flex items-center w-full px-4 relative">
+
+    {/* CENTER: Copyright */}
+    <div className="absolute left-1/2 -translate-x-1/2 font-lora text-sm flex items-center gap-1">
+      <span>Copyright</span>
+      <Copyright className="size-3.5 inline" />
+      <span>{new Date().getFullYear()} ScotiTech Solutions, All Rights Reserved.</span>
+    </div>
+
+    {/* RIGHT: Powered By */}
+    <div className="ml-auto flex items-center font-karla text-sm breathe">
+      <span>Powered by</span>
+      <a
+        href="https://www.spacelinkers.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span className="ml-1 text-[#F58634] font-bold cursor-pointer">
+          Spacelinkers Infotech
+        </span>
+      </a>
+    </div>
   </div>
 
-  {/* Powered By */}
-  <div className="flex justify-center items-center mt-2 font-karla text-sm">
+  {/* MOBILE VERSION (same as before) */}
+ 
+
+
+
+  </div>
+
+</div>
+{/* MOBILE VERSION */}
+<div className="md:hidden text-center">
+  
+  {/* Full copyright in ONE LINE */}
+  <div className="flex justify-center  items-center font-lora text-sm leading-relaxed flex-wrap gap-1 text-[12px]">
+    <span className="  ">Copyright</span>
+    <Copyright className="size-3 inline" />
+    <span className="inline">
+      {new Date().getFullYear()} ScotiTech Solutions, All Rights Reserved.
+    </span>
+  </div>
+
+  {/* Powered by stays same */}
+  <div className="flex justify-center items-center mt-2 font-karla text-sm breathe">
     <span>Powered by</span>
-    <a href="https://www.spacelinkers.com/" target="_blank">
+    <a
+      href="https://www.spacelinkers.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <span className="ml-1 text-[#F58634] font-bold cursor-pointer">
         Spacelinkers Infotech
       </span>
     </a>
   </div>
-</div>
 
-      </div>
+</div>
+  <style>{`
+        @keyframes breathe {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.06); }
+          100% { transform: scale(1); }
+        }
+        .breathe {
+          animation: breathe 8s ease-in-out infinite;
+        }
+      `}</style>
+
     </footer>
   );
 };

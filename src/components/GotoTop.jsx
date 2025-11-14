@@ -1,5 +1,5 @@
 "use client";
-import { ArrowDown, ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const GotoTop = () => {
@@ -14,7 +14,8 @@ const GotoTop = () => {
   };
 
   const listentotop = () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
     if (winScroll > 500) setIsVisible(true);
     else setIsVisible(false);
   };
@@ -34,15 +35,30 @@ const GotoTop = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="relative h-15 w-15 overflow-hidden " >
+          <div
+            className="
+              relative 
+              h-15 w-15 
+              overflow-hidden 
+              max-sm:h-12 max-sm:w-12    /* Smaller button on mobile */
+            "
+          >
             {/* First Arrow */}
             <div
               className={`absolute inset-0 transition-all duration-500 ${
-                isHovered ? "-translate-y-12 opacity-0" : "translate-y-0 opacity-100"
+                isHovered
+                  ? "-translate-y-12 opacity-0"
+                  : "translate-y-0 opacity-100"
               }`}
             >
               <ArrowUp
-                className="cursor-pointer size-14  mx-auto my-auto p-[2px] rounded-full duration-300 text-white"
+                className="
+                  cursor-pointer 
+                  size-14 
+                  max-sm:size-10   /* Smaller arrow on mobile */
+                  mx-auto my-auto p-[2px] 
+                  rounded-full duration-300 text-white
+                "
                 onClick={scrollToTop}
               />
             </div>
@@ -50,11 +66,20 @@ const GotoTop = () => {
             {/* Second Arrow */}
             <div
               className={`absolute inset-0 transition-all duration-500 ${
-                isHovered ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+                isHovered
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-12 opacity-0"
               }`}
             >
               <ArrowUp
-                className="cursor-pointer mx-auto my-auto size-14 p-[2px] rounded-full duration-300 text-black"
+                className="
+                  cursor-pointer 
+                  mx-auto my-auto 
+                  size-14 
+                  max-sm:size-10   /* Smaller arrow on mobile */
+                  p-[2px] rounded-full 
+                  duration-300 text-black
+                "
                 onClick={scrollToTop}
               />
             </div>

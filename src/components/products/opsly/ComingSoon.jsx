@@ -1,6 +1,5 @@
 "use client";
-import { CalendarDaysIcon } from "lucide-react";
-import { Rocket } from "lucide-react";
+import { CalendarDaysIcon, Rocket } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
 export default function ComingSoon() {
@@ -18,6 +17,24 @@ export default function ComingSoon() {
       setIsModalOpen(false);
     }, 2500);
   };
+
+  // BACK BUTTON CLOSE FIX
+  useEffect(() => {
+    if (isModalOpen) {
+      window.history.pushState(null, "", window.location.href);
+    }
+
+    const handleBack = () => {
+      if (isModalOpen) {
+        setIsModalOpen(false);
+      }
+    };
+
+    window.addEventListener("popstate", handleBack);
+    return () => {
+      window.removeEventListener("popstate", handleBack);
+    };
+  }, [isModalOpen]);
 
   return (
     <section
@@ -77,8 +94,14 @@ export default function ComingSoon() {
 
       {/* WAITLIST MODAL */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-          <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-[90%] sm:w-[400px] relative text-left">
+        <div
+          className="fixed inset-0 bg-black/50 flex justify-center items-center z-50"
+          onClick={() => setIsModalOpen(false)}  /* Close on outside click */
+        >
+          <div
+            className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-[90%] sm:w-[400px] relative text-left"
+            onClick={(e) => e.stopPropagation()} /* Prevent closing on inside click */
+          >
             <button
               onClick={() => setIsModalOpen(false)}
               className="absolute top-3 right-3 text-gray-500 hover:text-black"
