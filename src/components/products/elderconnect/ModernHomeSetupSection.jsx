@@ -106,7 +106,7 @@ export default function ModernHomeSetupSection() {
 
         {/* RIGHT SIDE */}
        {/* RIGHT SIDE */}
-<div className="relative h-fit flex justify-center min-[1260px]:block">
+<div className="relative h-fit flex justify-center min-[1260px]:block min-[1300px]:w-[90%]">
   <div className="relative w-full max-w-[600px] min-[1260px]:max-w-none">
     {/* Colored background perfectly fixed behind */}
     <div className="absolute inset-0 translate-x-[8%] translate-y-[8%] bg-[#4D0858] rounded-3xl rounded-br-none z-0"></div>
@@ -122,9 +122,9 @@ export default function ModernHomeSetupSection() {
         <h3 className="text-3xl md:text-4xl text-white font-karla mb-4">
           Modern Home Setup:
         </h3>
-        <p className="text-gray-200 text-base md:text-lg leading-[22px] font-lora mb-5">
+        <p className="text-gray-200 text-base md:text-[16px] leading-[22px] font-lora mb-5">
           Effortless installation of smart devices for enhanced living and peace
-          of mind. <br />
+          of mind. 
           Setting up technology that provides enhanced safety and convenience.
         </p>
       </div>

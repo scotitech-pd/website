@@ -55,7 +55,7 @@ export default function WhyChooseElderConnect() {
         </div>
 
         {/* FEATURES */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 min-[1260px]:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 min-[600px]:grid-cols-2 min-[1260px]:grid-cols-4 gap-6">
           {features.map((feature) => (
             <div
               key={feature.id}

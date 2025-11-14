@@ -20,7 +20,7 @@ export default function HowToGetElderConnect() {
     <>
       {/* -------------------- ORIGINAL SECTION (1150PX AND ABOVE) -------------------- */}
       <section className="bg-white py-16 lg:py-20 hidden min-[1150px]:block overflow-hidden">
-        <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 grid md:grid-cols-2 gap-12 items-center font-lora">
+        <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 grid md:grid-cols-[60%_40%] gap-12 items-center font-lora">
           {/* LEFT SIDE */}
           <div>
             <h2 className="text-3xl md:text-[38px] font-semibold mb-3 text-main-dark drop-shadow-2xl font-karla">
