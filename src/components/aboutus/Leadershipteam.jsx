@@ -9,7 +9,7 @@ export default function LeadershipTeam() {
       location: "London, UK",
       description:
         "Prachi is a strategic Marketing & Content Manager with over nine years of experience. She excels at crafting compelling narratives and data-driven campaigns that build brand presence and engage audiences.",
-      img: "/images/aboutus/prachi.jfif",
+      img: "/images/aboutus/prachi.jpeg",
       linkedin: "https://www.linkedin.com/in/prachi-dwivedi-5724a51b6/",
     },
     {
@@ -18,7 +18,7 @@ export default function LeadershipTeam() {
       location: "London, UK",
       description:
         "Hitesh architects the scalable and secure systems that power our platform. With over nine years of leadership, he ensures our technology backbone is robust, automated, and ready for future growth.",
-      img: "/images/aboutus/hitesh.jfif",
+      img: "/images/aboutus/hitesh.png",
       linkedin: "https://www.linkedin.com/in/hitesh-dubey-4349731b/",
     },
     {

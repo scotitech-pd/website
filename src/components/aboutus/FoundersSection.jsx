@@ -9,8 +9,12 @@ const founders = [
     image: "/images/home/pradeep.jpg",
     color: "from-[#6D28D9] to-[#14B8A6]",
     linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
-    desc: ["Pradeep Dahiya leads ScotiTech as CEO and Lead Developer, bringing more than a decade of hands-on experience in app development, AI integration, and digital transformation.", "He founded ScotiTech with a vision to create simpler, secure, and sustainable technology that empowers businesses, creators, and communities across markets." , "Under his leadership, ScotiTech has delivered products like AppDeploy, Opsly, and AI Caption Studio. Pradeep holds an MSc from the University of Strathclyde and serves as a Digital Trustee with Third Sector Lab in Scotland."
-    ,"Pradeep also supports charities and non-profits in Scotland in adopting secure digital systems and building confidence in technology."],
+    desc: [
+      "Pradeep Dahiya leads ScotiTech as CEO and Lead Developer, bringing more than a decade of hands-on experience in app development, AI integration, and digital transformation.",
+      "He founded ScotiTech with a vision to create simpler, secure, and sustainable technology that empowers businesses, creators, and communities across markets.",
+      "Under his leadership, ScotiTech has delivered products like AppDeploy, Opsly, and AI Caption Studio. Pradeep holds an MSc from the University of Strathclyde and serves as a Digital Trustee with Third Sector Lab in Scotland.",
+      "Pradeep also supports charities and non-profits in Scotland in adopting secure digital systems and building confidence in technology.",
+    ],
   },
   {
     name: "Daniel Chapman",
@@ -19,10 +23,11 @@ const founders = [
     color: "from-[#0EA5E9] to-[#6366F1]",
     linkedin: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     desc: [
-      "Daniel leads ScotiTech’s global strategy and partnerships, driving innovation and long-term growth. He focuses on expanding the company’s impact through strategic opportunities and scalable digital initiatives.",
-      "With experience building ventures across Europe, he blends creative thinking with structured business execution. His approach transforms ideas into practical solutions that deliver measurable value.",
-      "His leadership strengthens ScotiTech’s global presence and accelerates purpose-led digital transformation. He continues to shape the company’s vision while fostering collaboration and innovation.",
-    ,"His guidance supports sustainable expansion of ScotiTech around the globe"],
+      "Daniel Chapman is Director at ScotiTech, steering strategy, operations, and innovation across UK and India. With a BSc in Computing and IT, he built strong skills in networking, systems, and troubleshooting.",
+      "His experience spans technical roles at Boss Kidz Inc, a Bright Network internship, and staff training leadership at McDonald’s. aniel brings clarity, discipline, and innovation oriented thinking that advances ScotiTech’s mission and global expansion.",
+      "At ScotiTech, he supports decisions, operations, and product initiatives, bringing practical expertise, ethical focus, and growth driven leadership shaped by continuous learning.",
+      "He contributes to scalable solutions that empower teams and future innovation forward.",
+    ],
   },
 ];
 
@@ -38,8 +43,8 @@ const FoundersSpotlight = () => {
             Meet Our Founders
           </h2>
           <p className="text-gray-600 text-lg md:text-xl font-lora mt-3 max-w-2xl mx-auto">
-            Leaders with vision, passion, and purpose — the force behind ScotiTech’s
-            journey toward innovation and ethical growth.
+            Leaders with vision, passion, and purpose — the force behind
+            ScotiTech’s journey toward innovation and ethical growth.
           </p>
         </div>
 
