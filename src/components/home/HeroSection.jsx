@@ -12,42 +12,19 @@ const HeroSection = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const videoRefs = useRef([]);
-  const heroRef = useRef(null);
-  const [startPlayback, setStartPlayback] = useState(false);
 
-  // Lazy load on intersection
+  // Auto slide every 5 seconds
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setStartPlayback(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (heroRef.current) observer.observe(heroRef.current);
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Auto slide
-  useEffect(() => {
-    if (!startPlayback) return;
-
     const interval = setInterval(() => {
       setCurrentIndex((prev) =>
         prev === slides.length - 1 ? 0 : prev + 1
       );
     }, 5000);
-
     return () => clearInterval(interval);
-  }, [startPlayback]);
+  }, []);
 
-  // Force play/pause correct video
+  // Ensure correct video plays instantly without delay
   useEffect(() => {
-    if (!startPlayback) return;
-
     videoRefs.current.forEach((video, i) => {
       if (!video) return;
 
@@ -58,15 +35,13 @@ const HeroSection = () => {
         video.pause();
       }
     });
-  }, [currentIndex, startPlayback]);
+  }, [currentIndex]);
 
   return (
     <>
       {/* DESKTOP VIEW */}
-      <section
-        ref={heroRef}
-        className="relative hidden lg:flex h-[93vh] w-full overflow-hidden items-center justify-center"
-      >
+      <section className="relative hidden lg:flex h-[93vh] w-full overflow-hidden items-center justify-center">
+
         {slides.map((slide, i) => (
           <div
             key={i}
@@ -78,11 +53,11 @@ const HeroSection = () => {
               <video
                 ref={(el) => (videoRefs.current[i] = el)}
                 muted
+                autoPlay
                 playsInline
-                preload="none"
+                preload="auto" 
                 className="absolute inset-0 w-full h-full object-cover will-change-transform"
               >
-                {/* WebM first + fallback MP4 */}
                 <source src={`${slide.src}.webm`} type="video/webm" />
                 <source src={`${slide.src}.mp4`} type="video/mp4" />
               </video>
@@ -95,7 +70,7 @@ const HeroSection = () => {
           </div>
         ))}
 
-        {/* Black overlay */}
+        {/* BLACK OVERLAY */}
         <div className="absolute inset-0 bg-black/40 z-5 will-change-transform" />
 
         <div className="relative z-10 max-w-8xl mx-auto px-5 md:px-20 w-full text-white flex flex-col justify-center h-full">
