@@ -1,52 +1,103 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function Timeline() {
+  const leftVariant = {
+    hidden: { opacity: 0, x: -80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
+
+  const rightVariant = {
+    hidden: { opacity: 0, x: 80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
+
   const timelineData = [
     {
-      year: "2019",
-      title: "Company Founded",
-      description: "Started as a boutique IT services company in London",
-      side: "left",
-    },
-    {
-      year: "2020",
-      title: "Team Expansion",
-      description: "Opened development center in Mumbai, India",
-      side: "right",
-    },
-    {
-      year: "2021",
-      title: "First Product Launch",
-      description: "Launched AppDeploy for iOS distribution",
-      side: "left",
-    },
-    {
       year: "2022",
-      title: "Product Suite Growth",
-      description: "Added Opsly and AI Caption Studio to our portfolio",
-      side: "right",
+      title: "The Spark",
+      desc1: "Where frustration turned into innovation.",
+      desc2:
+        "Founders realised gaps in accessibility, app distribution, and digital care.",
+      side: "left",
     },
     {
       year: "2023",
-      title: "Global Reach",
-      description: "Serving 10,000+ users across 50+ countries",
+      title: "Exploration and Early Prototypes",
+      desc1: "Small experiments leading to big insights.",
+      desc2: "Built early prototypes and analysed real-world user problems.",
+      side: "right",
+    },
+    {
+      year: "2024",
+      title: "From Ideas to Working Solutions",
+      desc1: "When concepts began proving real value.",
+      desc2: "Internal AppDeploy version solved key distribution challenges.",
       side: "left",
     },
     {
       year: "2024",
-      title: "Innovation Continues",
-      description:
-        "ScotiTech started growing more with their customers and innovations",
+      title: "Official Incorporation",
+      desc1: "A vision became a company in November 2024.",
+      desc2:
+        "ScotiTech Ltd registered in the UK for people-centric technology.",
       side: "right",
+    },
+    {
+      year: "2025",
+      title: "Building the ScotiTech Ecosystem",
+      desc1: "A year of execution, expansion, and product growth.",
+      desc2:
+        "Major development across AppDeploy, ElderConnect+, Opsly, ClarityPath and more.",
+      side: "left",
+    },
+    {
+      year: "2026",
+      title: "Expansion and Early Integrations",
+      desc1: "Technology growing beyond boundaries.",
+      desc2: "Integrations prepared ScotiTech for global partnerships.",
+      side: "right",
+    },
+    {
+      year: "2027",
+      title: "Towards a Unified Platform",
+      desc1: "Connecting innovation into one ecosystem.",
+      desc2: "AppDeploy, AI services, and cloud began merging.",
+      side: "left",
+    },
+    {
+      year: "2028",
+      title: "Scaling with Purpose",
+      desc1: "Sustainable growth powered by trust.",
+      desc2:
+        "Adoption increased across industries seeking secure and smart tech.",
+      side: "right",
+    },
+    {
+      year: "2029+",
+      title: "Looking Forward to the Future",
+      desc1: "Building technology that feels human.",
+      desc2:
+        "Global expansion across secure cloud, AI automation, and digital care.",
+      side: "left",
     },
   ];
 
   return (
-  
-    <div className="bg-white py-12  overflow-hidden">
+    <div className="bg-white py-12 overflow-hidden">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         {/* Section Title */}
         <div className="relative">
           <div className="hidden lg:block absolute -top-2 left-1/2 transform -translate-x-1/2 min-w-[650px] text-center pointer-events-none">
-            <p className="text-7xl lg:text-[70px]  font-karla font-bold -tracking-tighter text-gray-500/60 opacity-50">
+            <p className="text-7xl lg:text-[70px] font-karla font-bold text-gray-500/60 opacity-50">
               Our Story
             </p>
           </div>
@@ -72,21 +123,27 @@ export default function Timeline() {
               )}
 
               {/* Year badge */}
-              <div className="absolute left-0 top-5 lg:w-24 lg:h-24 w-16 h-16 bg-[#641171] rounded-full flex items-center justify-center">
-                <span className="text-white lg:text-3xl text-xl font-bold font-karla">
+              <div className="absolute left-0 top-5 w-16 h-16 bg-[#641171] rounded-full flex items-center justify-center">
+                <span className="text-white text-xl font-bold font-karla">
                   {item.year}
                 </span>
               </div>
 
               {/* Content card */}
-              <div className="bg-[#FBDFFF] rounded-xl p-6">
-                <h3 className="lg:text-xl min-[500px]:text-lg text-md font-bold text-black mb-2 font-karla">
+              <motion.div
+                className="bg-[#FBDFFF] rounded-xl p-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={item.side === "left" ? leftVariant : rightVariant}
+              >
+                <h3 className="text-md font-bold text-black mb-2 font-karla">
                   {item.title}
                 </h3>
-                <p className="text-black  max-[500px]:text-sm leading-relaxed font-lora">
-                  {item.description}
+                <p className="text-black max-[500px]:text-sm leading-relaxed font-lora">
+                  {item.desc1} <br /> {item.desc2}
                 </p>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>
@@ -112,35 +169,36 @@ export default function Timeline() {
                   <div className="relative">
                     <div className="flex items-start relative">
                       {/* Year Circle */}
-                      <div className="w-20 h-20 absolute  z-20 -top-10 bg-[#641171] rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-20 h-20 absolute -top-10 bg-[#641171] rounded-full flex items-center justify-center z-20">
                         <span className="text-white text-2xl font-bold font-karla">
                           {item.year}
                         </span>
                       </div>
 
                       {/* Content Card */}
-                      <div className="ml-8 bg-[#FBDFFF] z-10 rounded-2xl p-8 pl-16 min-w-[400px]">
+                      <motion.div
+                        className="ml-8 bg-[#FBDFFF] z-10 rounded-2xl p-8 pl-16 min-w-[400px]"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={leftVariant}
+                      >
                         <h3 className="text-xl font-bold text-black mb-2 font-karla">
                           {item.title}
                         </h3>
-                        <p className="text-black text-sm leading-relaxed font-lora">
-                          {item.description}
+                        <p className="text-black text-sm leading-relaxed font-lora font-medium">
+                          {item.desc1} <br /> {item.desc2}
                         </p>
-                      </div>
+                      </motion.div>
                     </div>
 
                     {/* Connector to Right */}
                     {hasNext && nextItem.side === "right" && (
                       <div className="absolute left-1/2 top-10">
                         <div className="relative">
-                          {/* Horizontal line */}
-                          <div className="absolute -left-[150px] top-0 h-1 bg-[#E38DF0] min-[1400px]:-left-[400px] min-[1400px]:w-[800px] w-[450px]"></div>
-
-                          {/* Dot */}
-                          <div className="absolute z-2 bg-[#368F99] rounded-full w-[15px] h-[15px] left-[295px] min-[1400px]:left-[400px] top-[-5px]"></div>
-
-                          {/* Vertical line */}
-                          <div className="absolute w-1 bg-[#E38DF0] left-[300px] min-[1400px]:left-[405px] top-1 h-[180px]"></div>
+                          <div className="absolute -left-100 0 top-5 h-1 bg-[#E38DF0] w-[700px]"></div>
+                          <div className="absolute bg-[#368F99] rounded-full w-[15px] h-[15px] left-[295px] top-[14px] z-2"></div>
+                          <div className="absolute w-1 bg-[#E38DF0] left-[300px] top-4 h-[220px]"></div>
                         </div>
                       </div>
                     )}
@@ -150,49 +208,39 @@ export default function Timeline() {
                   <div className="relative flex justify-end">
                     <div className="flex items-start flex-row-reverse">
                       {/* Year Circle */}
-                      <div className="w-20 h-20  absolute  z-20 -top-10 bg-[#641171] rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-20 h-20 absolute -top-10 bg-[#641171] rounded-full flex items-center justify-center z-20">
                         <span className="text-white text-2xl font-bold font-karla">
                           {item.year}
                         </span>
                       </div>
 
                       {/* Content Card */}
-                      <div className="mr-8 bg-[#FBDFFF] rounded-2xl p-8 max-w-md  z-10">
+                      <motion.div
+                        className="mr-8 bg-[#FBDFFF] rounded-2xl p-8 max-w-md z-10"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={rightVariant}
+                      >
                         <h3 className="text-xl font-bold text-black mb-2 font-karla">
                           {item.title}
                         </h3>
-                        <p className="text-black text-sm leading-relaxed font-lora">
-                          {item.description}
+                        <p className="text-black text-sm leading-relaxed font-lora font-medium">
+                          {item.desc1} <br /> {item.desc2}
                         </p>
-                      </div>
+                      </motion.div>
                     </div>
 
                     {/* Connector to Left */}
                     {hasNext && nextItem.side === "left" && (
                       <div className="absolute right-1/2 top-10">
                         <div className="relative">
-                          {/* Horizontal line */}
-                          <div className="absolute -right-[240px] top-0 min-[1400px]:w-[800px] min-[1400px]:-left-[400px]  bg-[#E38DF0] w-[550px] h-1"></div>
-
-                          {/* Dot */}
-                          <div className="absolute z-2 bg-[#368F99] rounded-full w-[15px] h-[15px] right-[302px] min-[1400px]:right-[402px] top-[-5px]"></div>
-
-                          {/* Vertical line */}
-                          <div className="absolute w-1 bg-[#E38DF0] right-[308px] top-1 h-[180px] min-[1400px]:-left-[412px]"></div>
+                          <div className="absolute -right-97 top-5 bg-[#E38DF0] w-[700px] h-1"></div>
+                          <div className="absolute bg-[#368F99] rounded-full w-[15px] h-[15px] right-[302px] top-[15px] z-2"></div>
+                          <div className="absolute w-1 bg-[#E38DF0] right-[308px] top-4 h-[220px]"></div>
                         </div>
                       </div>
                     )}
-
-                    {/* Final Dot for Last Item */}
-                    {/* {!hasNext && (
-                      <div className="absolute right-1/2 top-10">
-                        <div className="relative">
-                          <div className="absolute -right-4 top-5 h-1 bg-[#E38DF0] w-[300px]"></div>
-                          <div className="absolute bg-[#368F99] rounded-full w-[15px] h-[15px] right-[250px] top-[15px]"></div>
-                          <div className="absolute w-1 bg-[#E38DF0] right-[282px] top-5 h-[30px]"></div>
-                        </div>
-                      </div>
-                    )} */}
                   </div>
                 )}
               </div>

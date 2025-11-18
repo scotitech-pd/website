@@ -162,7 +162,7 @@ const BeyondBusiness = () => {
           {/* CTA Buttons */}
           <div className="flex  sm:flex-row gap-4">
          
-            <Link href="/products/elderconnect" passHref>
+            <Link href="/products/elderconnect" >
               <button className="text-sm  lg:text-lg bg-white cursor-pointer hover:translate-y-[-2px] text-purple-900 px-3 lg:px-6 py-3 rounded-full font-semibold shadow-xl font-karla hover:bg-purple-50 transition">
                 Learn More
               </button>

@@ -23,10 +23,10 @@ const founders = [
     color: "from-[#0EA5E9] to-[#6366F1]",
     linkedin: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     desc: [
-      "Daniel Chapman is Director at ScotiTech, steering strategy, operations, and innovation across UK and India. With a BSc in Computing and IT, he built strong skills in networking, systems, and troubleshooting.",
-      "His experience spans technical roles at Boss Kidz Inc, a Bright Network internship, and staff training leadership at McDonald’s. aniel brings clarity, discipline, and innovation oriented thinking that advances ScotiTech’s mission and global expansion.",
-      "At ScotiTech, he supports decisions, operations, and product initiatives, bringing practical expertise, ethical focus, and growth driven leadership shaped by continuous learning.",
-      "He contributes to scalable solutions that empower teams and future innovation forward.",
+      "Daniel Chapman is the Co-Founder and Chief Strategy Officer at ScotiTech, leading strategy, innovation, and sustainable growth. With a strong foundation in Computing and IT, he aligns the company with its mission of delivering intelligent and accessible digital solutions.",
+      "Pursuing his BSc with The Open University, Daniel brings skills in networking, Linux, and digital workflows.",
+      "As founder of WalLove, he applies creative thinking to ScotiTech’s products, guiding initiatives like AppDeploy and Opsly with a focus on ethics, clarity, and user centricity, driving long term value globally.",
+      "His leadership experience, including roles at Boss Kidz Inc, strengthens his operational insight.",
     ],
   },
 ];

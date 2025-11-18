@@ -10,20 +10,20 @@ const AboutScotiTech = () => {
     {
       img1: "/images/aboutus/team-icon-white.png",
       img2: "/images/aboutus/team-icon.png",
-      title: "50+ Team Members",
-      subtitle: "Talented professionals across UK and India",
+      title: "Small Team, Big Impact",
+      subtitle: "A growing team of engineers and creators across the UK and India.",
     },
     {
       img1: "/images/aboutus/globe-icon-white.png",
       img2: "/images/aboutus/globe-icon.png",
-      title: "50+ Countries",
-      subtitle: "Serving clients and users worldwide",
+      title: "Global Mindset from Day One",
+      subtitle: "Our products are designed for worldwide compatibility and deployment.",
     },
     {
       img1: "/images/aboutus/users-icon-white.png",
       img2: "/images/aboutus/users-icon.png",
-      title: "10,000+ Users",
-      subtitle: "Trusted by businesses of all sizes",
+      title: "Real Users, Real Problems Solved",
+      subtitle: "Our apps and tools already support users across multiple countries.",
     },
   ];
 
@@ -133,12 +133,18 @@ const AboutScotiTech = () => {
                           />
                         </div>
 
-                        <h4 className="font-semibold text-black transition-colors duration-700">
+                        <h4 
+                        className={`text-[16px] font-semibold font-karla  ${
+                            activeIndex === index
+                              ? "text-white"
+                              : "text-[#3B3B3B]"
+                          } transition-colors duration-700`}>
+
                           {card.title}
                         </h4>
 
                         <p
-                          className={`text-[13px] leading-[17px] mt-1 ${
+                          className={`text-[12px] leading-[17px] mt-1 ${
                             activeIndex === index
                               ? "text-white"
                               : "text-[#3B3B3B]"
@@ -158,7 +164,7 @@ const AboutScotiTech = () => {
             <div className="relative h-[100%] hidden min-[1300px]:flex">
               <div className="h-fit">
                 <img src="/images/aboutus/hero-tech.png" alt="" />
-                <div className="absolute -bottom-[40px] flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_10px_25px_rgba(94,11,123,0.6)] bg-white rounded-2xl h-[90px] w-[200px] border-1 border-[#7E1A8E]">
+                <div className="absolute -bottom-[20px] flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_10px_25px_rgba(94,11,123,0.6)] bg-white rounded-2xl h-[90px] w-[200px] border-1 border-[#7E1A8E]">
                   <h2 className="text-[#9638E5] font-karla font-bold lg:text-[20px]">
                     ScotiTech
                   </h2>
