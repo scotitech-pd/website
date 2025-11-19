@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CursorGlow from "@/components/CursorGlow";
 import GotoTop from "@/components/GotoTop";
-
+import RouteLoader from "@/components/RouteLoader";
 import { ModalProvider } from "@/components/ModalContext";
 import RequestaQuote from "@/components/RequestaQuote";   // ✅ MUST ADD THIS
 
@@ -52,8 +52,7 @@ export default function RootLayout({ children }) {
           <CursorGlow />
           <GotoTop />
 
-          {children}
-
+           <RouteLoader>{children}</RouteLoader>
           <Footer />
         </ModalProvider>
       </body>

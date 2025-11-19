@@ -5,24 +5,50 @@ import Link from "next/link";
 
 const HeroSection = () => {
   const slides = [
-    { type: "video", src: "/images/home/hero-vid" },
-    { type: "video", src: "/images/home/hero-vid2" },
-    { type: "video", src: "/images/home/hero-vid3" },
+    { src: "/images/home/hero-vid.mp4" },
+    { src: "/images/home/hero-vid2.mp4" },
+    { src: "/images/home/hero-vid3.mp4" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [videosReady, setVideosReady] = useState(false);
   const videoRefs = useRef([]);
 
-  // Auto slide every 5 seconds
+  // Preload videos BEFORE showing HeroSection
   useEffect(() => {
+    let loaded = 0;
+
+    slides.forEach((slide) => {
+      const video = document.createElement("video");
+      video.src = slide.src;
+      video.preload = "auto";
+      video.muted = true;
+      video.playsInline = true;
+
+      video.addEventListener("loadeddata", () => {
+        loaded++;
+        if (loaded === slides.length) {
+          setVideosReady(true);
+        }
+      });
+    });
+  }, []);
+
+  // Auto slide after videos are ready
+  useEffect(() => {
+    if (!videosReady) return;
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
     }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
-  // Ensure correct video plays instantly without delay
+    return () => clearInterval(interval);
+  }, [videosReady]);
+
+  // Play correct video instantly
   useEffect(() => {
+    if (!videosReady) return;
+
     videoRefs.current.forEach((video, i) => {
       if (!video) return;
 
@@ -33,42 +59,31 @@ const HeroSection = () => {
         video.pause();
       }
     });
-  }, [currentIndex]);
+  }, [currentIndex, videosReady]);
+
+  // Loader already handles initial delay, so return nothing until videos ready
+  if (!videosReady) return null;
 
   return (
     <>
       {/* DESKTOP VIEW */}
       <section className="relative hidden lg:flex h-[93vh] w-full overflow-hidden items-center justify-center">
         {slides.map((slide, i) => (
-          <div
+          <video
             key={i}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
+            ref={(el) => (videoRefs.current[i] = el)}
+            src={slide.src}
+            muted
+            playsInline
+            preload="auto"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
               currentIndex === i ? "opacity-100" : "opacity-0"
             }`}
-          >
-            {slide.type === "video" ? (
-              <video
-                ref={(el) => (videoRefs.current[i] = el)}
-                muted
-                autoPlay
-                playsInline
-                preload="auto"
-                className="absolute inset-0 w-full h-full object-cover will-change-transform"
-              >
-                <source src={`${slide.src}.webm`} type="video/webm" />
-                <source src={`${slide.src}.mp4`} type="video/mp4" />
-              </video>
-            ) : (
-              <div
-                className="absolute inset-0 bg-cover bg-center will-change-transform"
-                style={{ backgroundImage: `url(${slide.src})` }}
-              />
-            )}
-          </div>
+          />
         ))}
 
         {/* BLACK OVERLAY */}
-        <div className="absolute inset-0 bg-black/40 z-5 will-change-transform" />
+        <div className="absolute inset-0 bg-black/40 z-5" />
 
         <div className="relative z-10 max-w-8xl mx-auto px-5 md:px-20 w-full text-white flex flex-col justify-center h-full">
           <p className="bg-main-dark font-semibold border border-white px-3 py-2 rounded-lg w-fit font-karla">
@@ -82,9 +97,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="lg:text-xl text-md mt-4 mb-8 font-lora max-w-xl">
-            Building Trusted Technology for a Smarter, Safer Digital Future
-            Practical solutions designed for people, powered by innovation,
-            built with responsibility.
+            Building Trusted Technology for a Smarter, Safer Digital Future.
           </p>
 
           <div className="p-1.5 border border-main-dark w-fit rounded-lg">

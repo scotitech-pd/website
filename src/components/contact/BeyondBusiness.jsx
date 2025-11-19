@@ -167,7 +167,7 @@ const BeyondBusiness = () => {
                 Learn More
               </button>
             </Link>
-            <a href="https://apps.apple.com/gb/app/elderconnect/id6720757966" passHref>
+            <a href="https://apps.apple.com/gb/app/elderconnect/id6720757966" >
 
             <button className="text-sm lg:text-lg cursor-pointer  bg-purple-100 text-center text-purple-900 px-3 lg:px-6 py-3 rounded-full font-semibold shadow-xl hover:bg-purple-200 transition font-karla flex items-center gap-2">
               <CloudDownload className="w-5 h-5" />
