@@ -44,12 +44,13 @@ export default function Timeline() {
       side: "left",
     },
     {
-      year: "2024",
+      year: "Nov 2024 ",
       title: "Official Incorporation",
       desc1: "A vision became a company in November 2024.",
       desc2:
         "ScotiTech Ltd registered in the UK for people-centric technology.",
       side: "right",
+      style: "text-center"
     },
     {
       year: "2025",
@@ -124,7 +125,7 @@ export default function Timeline() {
 
               {/* Year badge */}
               <div className="absolute left-0 top-5 w-16 h-16 bg-[#641171] rounded-full flex items-center justify-center">
-                <span className="text-white text-xl font-bold font-karla">
+                <span className="text-white text-xl font-bold font-karla text-center">
                   {item.year}
                 </span>
               </div>
@@ -209,8 +210,8 @@ export default function Timeline() {
                     <div className="flex items-start flex-row-reverse">
                       {/* Year Circle */}
                       <div className="w-20 h-20 absolute -top-10 bg-[#641171] rounded-full flex items-center justify-center z-20">
-                        <span className="text-white text-2xl font-bold font-karla">
-                          {item.year}
+                        <span className= "text-center text-white text-2xl font-bold font-karla " >
+                          {item.year} 
                         </span>
                       </div>
 

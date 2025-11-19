@@ -18,15 +18,13 @@ const OurStory = () => {
           <div className="">
             <h2 className="text-4xl font-bold mb-8 font-karla tracking-wider ">Our Story</h2>
             <h3 className="text-3xl font-semibold font-lora mb-3 sm:mb-6 tracking-wider">
-              From a Solo Vision to <span className="text-main">Global</span>{" "}
-              Impact
+              From a Solo Vision to Real-World  <span className="text-main">Innovation</span>{" "}
+              
             </h3>
             <p className="text-lg leading-6.5 font-lora min-[1160px]:w-[80%] mx-auto text-justify sm:text-center">
-              At <span className="text-main-dark font-semibold">ScotiTech</span>
-              , the journey began with a vision and a simple belief:
-              technology, should empower, not overwhelm. What started as a
-              self-sponsored idea has grown into products that help teams and
-              creators worldwide.
+              <span className="text-main-dark font-semibold">ScotiTech </span>
+               began as a personal mission: to create technology that solves real problems with clarity and integrity.
+               From a technical founder with a big vision in UK, we’ve grown into a company delivering practical, secure, and sustainable digital solutions across the UK, India, Europe and beyond.
             </p>
           </div>
 

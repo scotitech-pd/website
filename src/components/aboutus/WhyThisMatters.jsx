@@ -3,32 +3,23 @@ import Link from "next/link";
 export default function WhyThisMatters() {
   const benefits = [
     {
-      title: "Follow-the-Sun Productivity",
-      description:
-        "Development never sleeps; our global teams keep momentum 24/7.",
+      title: "Faster and safer app deployment for SMEs",
       iconSrc: "/images/aboutus/sun-productivity.png",
     },
     {
-      title: "Faster Iterations",
-      description: "Product releases in weeks, not months.",
+      title: "Lower cost and zero reliance on heavy MDM systems",
       iconSrc: "/images/aboutus/faster-iterations.png",
     },
     {
-      title: "Closer Partnerships",
-      description:
-        "UK-based relationship management ensures accountability and trust.",
+      title: "Clear, transparent digital infrastructure",
       iconSrc: "/images/aboutus/partnerships.png",
     },
     {
-      title: "Clear Communication",
-      description:
-        "Dedicated project leads and transparent reporting structures.",
+      title: "Responsible innovation aligned with UK and global standards",
       iconSrc: "/images/aboutus/communication.png",
     },
     {
-      title: "Scalable Expertise",
-      description:
-        "Access to engineers, designers, and product strategists on-demand.",
+      title: "Responsible innovation aligned with UK and global standards",
       iconSrc: "/images/aboutus/expertise.png",
     },
   ];
@@ -85,12 +76,9 @@ export default function WhyThisMatters() {
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-700 font-karla mb-[1px]">
+                    <h3 className="text-lg font-semibold text-main-dark font-karla mb-[1px]">
                       {benefit.title}
                     </h3>
-                    <p className="text-purple-600 text-base leading-relaxed font-lora">
-                      {benefit.description}
-                    </p>
                   </div>
                 </div>
               ))}

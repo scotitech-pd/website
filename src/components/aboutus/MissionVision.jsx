@@ -24,18 +24,11 @@ const MissionVision = () => {
               </h3>
 
               <p className="text-black text-sm sm:text-[15px] leading-5 font-lora">
-                Our mission is to empower businesses every day. We achieve this by
-                designing and developing custom-built technology solutions that
-                are inherently scalable and secure. Our focus is not just on
-                delivering a product, but on creating a partnership that drives
-                efficiency, fuels growth, and ensures a tangible return on your
-                investment.
-              </p>
-
-              <p className="text-black text-sm sm:text-[15px] leading-5 font-lora">
-                To empower businesses with custom-built, scalable, and secure
-                technology solutions that drive efficiency, growth, and a tangible
-                return on investment.
+                Empowering organisations through trusted digital innovation. We
+                design products that simplify complex digital challenges — from
+                secure app deployment to private cloud infrastructure. Our
+                mission is to build technology that is transparent, sustainable,
+                and built for long-term digital trust.
               </p>
             </div>
 
@@ -82,14 +75,11 @@ const MissionVision = () => {
               </h3>
 
               <p className="text-black text-sm sm:text-[15px] leading-5 font-lora">
-                Our vision is to create a future where our technology seamlessly
-                enables the full potential of your people.
-              </p>
-
-              <p className="text-black text-sm sm:text-[15px] leading-5 font-lora">
-                To be the most trusted technology partner for forward-thinking
-                companies, creating a future where technology seamlessly enables
-                human potential.
+                A future where secure, ethical technology is accessible to every
+                organisation. We aim to become a leading UK–India connector for
+                digital innovation — helping SMEs, enterprises, and communities
+                adopt reliable tools that empower growth while protecting
+                privacy. .
               </p>
             </div>
           </div>

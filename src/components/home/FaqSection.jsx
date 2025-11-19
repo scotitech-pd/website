@@ -9,35 +9,30 @@ export default function FaqSection() {
 
   const faqs = [
     {
-      question: "How do I install AppDeploy on my Mac?",
+      question: "What makes ScotiTech different?",
       answer:
-        "Installation is straightforward. First, download the AppDeploy installer package (a .pkg file) from your ScotiTech account portal. Then, double-click the file and follow the on-screen prompts to complete the installation process",
+        "We design products that solve real problems using trusted methods—no hype, just practical innovation.",
     },
     {
-      question: "Is there a free trial available for Opsly?",
+      question: "How does AppDeploy simplify app distribution?",
       answer:
-        "Yes, we offer a 7-day free trial for Opsly. 1 This allows you to explore all core features before committing. You can easily register for your trial on the Opsly product page or by contacting our sales team",
+        "It removes App Store barriers by enabling secure private distribution through Apple Business Manager.",
     },
     {
-      question: "Can I use AI Caption Studio offline?",
-      answer:
-        "While Al Caption Studio requires an initial internet connection for features like Al processing and content sync, some basic editing functions may be available offline. For the best experience and full AI capability, a stable internet connection is recommended",
+      question: "Can Opsly replace SaaS tools?",
+      answer: "Yes—Opsly reduces subscription costs by offering private hosting for calendars, notes, files, and more.",
+
     },
     {
-      question: "What devices are compatible with ClarityPath?",
+      question: "How do I get started with ScotiTech?",
       answer:
-        "ClarityPath is a private decision-support app from ScotiTech that helps individuals and teams align their focus, energy, and goals. Securely distributed through Apple Business Manager (ABM), it offers a unique tool for both personal planning and professional development.",
-    },
+"Contact us, and we’ll guide you through the best product for your needs.",    },
     {
-      question: "How often are updates released?",
+      question: "Are your tools compliance-ready??",
       answer:
-        "We generally release minor updates, which include bug fixes and small improvements, monthly. Major feature updates and new version releases are typically scheduled quarterly. You will receive notifications about updates within the application.",
+        "Absolutely. Every product is built with privacy and policy guidelines at the foundation.",
     },
-    {
-      question: "Do I need separate licenses for different platforms?",
-      answer:
-        "No, your subscription includes access to all platforms. Simply log in with your account credentials on any supported device.",
-    },
+   
   ];
 
   return (

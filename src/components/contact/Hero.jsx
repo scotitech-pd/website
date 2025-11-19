@@ -15,18 +15,20 @@ function Hero() {
       <div className="relative z-10 w-full max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 flex flex-col lg:flex-row justify-between items-center lg:items-center">
         {/* Left Text Section */}
         <div className="flex flex-col justify-center w-full items-start text-left lg:items-start lg:text-left">
-          <h2 className="text-white text-2xl font-bold font-karla lg:text-6xl max-[1040px]:text-3xl">
-            Contact Us
+          <h2 className="text-white text-2xl font-bold font-karla lg:text-4xl max-[1040px]:text-3xl">
+            Let’s Build Something Meaningful Together
           </h2>
 
           <p className="text-white hidden lg:block text-lg font-lora mt-5 leading-7.5 max-[1040px]:text-2xl md:text-left">
-            Precision data, proven success. Reach out to us to explore strategic
-            insights, tailored solutions, and a partnership built to drive
-            measurable growth and lasting impact.
+            Whether you’re exploring digital transformation, secure app
+            deployment, or operational efficiency, our team is here to help.
+            Reach out to us for tailored solutions, technical guidance, and
+            long-term partnerships that support sustainable growth.
           </p>
 
           <p className="text-white lg:hidden text-sm font-lora mt-5 leading-6 max-[1040px]:text-base">
-            Precision data, proven success. Together, we'll redefine what's possible.
+            Precision data, proven success. Together, we'll redefine what's
+            possible.
           </p>
 
           {/* Button */}

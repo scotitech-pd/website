@@ -5,29 +5,28 @@ const HowWeWorks = () => {
   const cards = [
     {
       icon: "/images/aboutus/building.png",
-      title: "London Headquarters",
+      title: "Glasgow Headquarters",
       description:
-        "Strategic location allows enhanced market development in the heart of Europe's tech ecosystem. Our HQ produces strategy, partnerships, and enterprise operations.",
-    },
+"Serving clients worldwide with UK-based standards and compliance.",    },
     {
       icon: "/images/aboutus/global.png",
       title: "Global Engineered Network",
 
       description:
-        "A distributed team of developers, designers, and analysts working across time zones, providing round-the-clock development.",
+        "Products built with cross-disciplinary expertise across the UK, Europe, and India.",
     },
     {
       icon: "/images/aboutus/agile.png",
       className: "",
-      title: "Agile Collaboration",
+      title: "Agile, User-Centred Delivery",
       description:
-        "Cross-functional squads aligned with your project's goals. Whether you're in the UK, US, or Asia — we adapt to your workflow and timeline.",
+        "Rapid iteration to solve real problems with clean, efficient technology.",
     },
     {
       icon: "/images/aboutus/compliance.png",
       title: "Compliance-Ready Operations",
       description:
-        "Data privacy and security come standard. Every engagement follows GDPR and industry best practices for code delivery, testing, and deployment.",
+        "All products follow GDPR, ABM, and Play Store guidelines for secure deployment.",
     },
   ];
 

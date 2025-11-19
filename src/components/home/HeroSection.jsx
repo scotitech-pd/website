@@ -16,9 +16,7 @@ const HeroSection = () => {
   // Auto slide every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) =>
-        prev === slides.length - 1 ? 0 : prev + 1
-      );
+      setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -41,7 +39,6 @@ const HeroSection = () => {
     <>
       {/* DESKTOP VIEW */}
       <section className="relative hidden lg:flex h-[93vh] w-full overflow-hidden items-center justify-center">
-
         {slides.map((slide, i) => (
           <div
             key={i}
@@ -55,7 +52,7 @@ const HeroSection = () => {
                 muted
                 autoPlay
                 playsInline
-                preload="auto" 
+                preload="auto"
                 className="absolute inset-0 w-full h-full object-cover will-change-transform"
               >
                 <source src={`${slide.src}.webm`} type="video/webm" />
@@ -79,11 +76,15 @@ const HeroSection = () => {
           </p>
 
           <h1 className="lg:text-[50px] text-4xl font-karla font-bold leading-[57px] mt-6">
-            Building Technology That<br />Empowers People
+            Building Technology That
+            <br />
+            Empowers People
           </h1>
 
           <p className="lg:text-xl text-md mt-4 mb-8 font-lora max-w-xl">
-            Building the technology that transforms what you can do into what you will do.
+            Building Trusted Technology for a Smarter, Safer Digital Future
+            Practical solutions designed for people, powered by innovation,
+            built with responsibility.
           </p>
 
           <div className="p-1.5 border border-main-dark w-fit rounded-lg">
@@ -112,7 +113,9 @@ const HeroSection = () => {
           </p>
 
           <h2 className="text-3xl font-karla font-bold mt-5 leading-[46px]">
-            Building Technology<br />That Empowers People
+            Building Technology
+            <br />
+            That Empowers People
           </h2>
 
           <p className="text-md mt-4 mb-6 font-lora max-w-sm">
