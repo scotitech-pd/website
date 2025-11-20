@@ -5,30 +5,30 @@ import { CheckCircle } from "lucide-react";
 
 export default function PricingAppDeploy() {
   const plans = [
-    {
-      name: "Starter",
-      price: "£15/mo",
-      desc: "Best for independent developers",
-      features: [
-        "Upload up to 3 apps (iOS & Android)",
-        "Up to 100 installs per month",
-        "Secure HTTPS hosting",
-        "Basic dashboard & support",
-      ],
-      btn: "Start Free Trial",
-    },
-    {
-      name: "Pro",
-      price: "£39/mo",
-      desc: "Perfect for SMEs, schools & agencies",
-      features: [
-        "Upload up to 10 apps",
-        "1,000 installs per month",
-        "App analytics dashboard",
-        "Team access (3 users)",
-      ],
-      btn: "Get Pro",
-    },
+    // {
+    //   name: "Starter",
+    //   price: "£15/mo",
+    //   desc: "Best for independent developers",
+    //   features: [
+    //     "Upload up to 3 apps (iOS & Android)",
+    //     "Up to 100 installs per month",
+    //     "Secure HTTPS hosting",
+    //     "Basic dashboard & support",
+    //   ],
+    //   btn: "Start Free Trial",
+    // },
+    // {
+    //   name: "Pro",
+    //   price: "£39/mo",
+    //   desc: "Perfect for SMEs, schools & agencies",
+    //   features: [
+    //     "Upload up to 10 apps",
+    //     "1,000 installs per month",
+    //     "App analytics dashboard",
+    //     "Team access (3 users)",
+    //   ],
+    //   btn: "Get Pro",
+    // },
     {
       name: "Enterprise",
       price: "Get Quote",
@@ -55,7 +55,7 @@ export default function PricingAppDeploy() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-14 relative z-10 min-[1250px]:mx-100">
           {plans.map((plan, i) => (
             <motion.div
               key={i}

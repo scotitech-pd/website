@@ -61,35 +61,35 @@ export default function Timeline() {
       side: "left",
     },
     {
-      year: "2026",
-      title: "Expansion and Early Integrations",
-      desc1: "Technology growing beyond boundaries.",
-      desc2: "Integrations prepared ScotiTech for global partnerships.",
-      side: "right",
-    },
-    {
-      year: "2027",
-      title: "Towards a Unified Platform",
-      desc1: "Connecting innovation into one ecosystem.",
-      desc2: "AppDeploy, AI services, and cloud began merging.",
-      side: "left",
-    },
-    {
-      year: "2028",
-      title: "Scaling with Purpose",
-      desc1: "Sustainable growth powered by trust.",
-      desc2:
-        "Adoption increased across industries seeking secure and smart tech.",
-      side: "right",
-    },
-    {
-      year: "2029+",
+      year: "2026+",
       title: "Looking Forward to the Future",
       desc1: "Building technology that feels human.",
-      desc2:
-        "Global expansion across secure cloud, AI automation, and digital care.",
-      side: "left",
+      desc2: "Global expansion across secure cloud, AI automation, and digital care.",
+      side: "right",
     },
+    // {
+    //   year: "2027",
+    //   title: "Towards a Unified Platform",
+    //   desc1: "Connecting innovation into one ecosystem.",
+    //   desc2: "AppDeploy, AI services, and cloud began merging.",
+    //   side: "left",
+    // },
+    // {
+    //   year: "2028",
+    //   title: "Scaling with Purpose",
+    //   desc1: "Sustainable growth powered by trust.",
+    //   desc2:
+    //     "Adoption increased across industries seeking secure and smart tech.",
+    //   side: "right",
+    // },
+    // {
+    //   year: "2029+",
+    //   title: "",
+    //   desc1: "",
+    //   desc2:
+    //     "Global expansion across secure cloud, AI automation, and digital care.",
+    //   side: "left",
+    // },
   ];
 
   return (

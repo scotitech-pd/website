@@ -9,12 +9,12 @@ import WhyChooseOpsly from "@/components/products/opsly/WhyChooseOpsly"
 const Opsly = () => {
   return (
     <>
-        {/* <OpslyHeroSection/>
+        <OpslyHeroSection/>
         <OpslyInfoSection/>
         <OpslyFeaturesSection/>
         <WhyChooseOpsly/>
         <HowToGetOpsly/>
-        <ComplianceSecurity/> */}
+        <ComplianceSecurity/>
         <ComingSoon/>
     </>
   )

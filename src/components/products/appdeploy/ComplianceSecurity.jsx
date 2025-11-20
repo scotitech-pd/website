@@ -39,7 +39,7 @@ export default function ComplianceSecurity() {
           </h3>
           <p className="text-[#E2E2E2]  lg:text-xl font-light font-lora">
             Security is at the core of AppDeploy. We utilize Apple's official
-            Business Manager framework for app distribution, which is the
+            Business Manager for app distribution, which is the
             industry standard for deploying internal apps securely. This ensures
             you are fully compliant with Apple's terms of service.
           </p>

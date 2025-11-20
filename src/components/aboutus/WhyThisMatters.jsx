@@ -19,7 +19,7 @@ export default function WhyThisMatters() {
       iconSrc: "/images/aboutus/communication.png",
     },
     {
-      title: "Responsible innovation aligned with UK and global standards",
+      title: "Built for organisations that value privacy and long-term trust",
       iconSrc: "/images/aboutus/expertise.png",
     },
   ];

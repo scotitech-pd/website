@@ -118,7 +118,7 @@ export default function LeadershipTeam() {
               </a>
 
               {/* X */}
-              <a
+              {/* <a
                 href="#"
                 className="group relative text-black rounded-full bg-white hover:bg-[#5E0B7B] transition w-10 h-10 flex items-center justify-center shadow-sm"
               >
@@ -132,7 +132,7 @@ export default function LeadershipTeam() {
                   alt="x-hover"
                   className="w-5 h-5 absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
         ))}
@@ -190,7 +190,7 @@ export default function LeadershipTeam() {
               </a>
 
               {/* X */}
-              <a
+              {/* <a
                 href="#"
                 className="group relative text-black rounded-full bg-white hover:bg-[#5E0B7B] transition w-10 h-10 flex items-center justify-center shadow-sm"
               >
@@ -204,7 +204,7 @@ export default function LeadershipTeam() {
                   alt="x-hover"
                   className="w-5 h-5 absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
         ))}

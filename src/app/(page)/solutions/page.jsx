@@ -27,7 +27,7 @@ const page = () => {
       <SecurityCompliance/>
       <WhoUsesAppDeploy/>       
       <Testimonials/>     
-      <KnowledgeSection/>      
+      {/* <KnowledgeSection/>       */}
       <FaqSection/>
       <CtaSection/>
     </>

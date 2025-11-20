@@ -5,15 +5,15 @@ export default function HowAppDeployWorks() {
       title: "Manage Your App",
       desc: "Log in to your AppDeploy dashboard and manage your application's .IPA/.APK file.",
     },
-    {
-      img: "/images/products/appdeploy/securelinks.png",
-      title: "Generate Secure Links",
-      desc: "Instantly create unique, private installation links for your employees or user groups using our secure Apple Business Manager integration.",
-    },
+    // {
+    //   img: "/images/products/appdeploy/securelinks.png",
+    //   title: "Generate Secure Links",
+    //   desc: "Instantly create unique, private installation links for your employees or user groups using our secure Apple Business Manager integration.",
+    // },
     {
       img: "/images/products/appdeploy/oneclick.png",
       title: "One-Click Install",
-      desc: "Share the links with your team. They just tap the link on their iOS device to download and install the app immediately.",
+      desc: "Share the links with your team. They just tap the link on their iOS/Android device to download and install the app immediately.",
     },
   ];
 
@@ -35,7 +35,7 @@ export default function HowAppDeployWorks() {
           min-[1051px]:grid-cols-2 
           min-[1051px]:gap-x-8 
           min-[1051px]:gap-y-10
-          min-[1220px]:grid-cols-3
+          min-[1220px]:grid-cols-2
           justify-center 
           items-start 
           gap-5 
