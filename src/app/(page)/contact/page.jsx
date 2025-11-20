@@ -15,10 +15,10 @@ const page = () => {
       <CalendlyBooking/>
       <SpecificSolution />
       <NewsletterSubscription />
-      <CaseStudiesAppDeploy />
+      {/* <CaseStudiesAppDeploy /> */}
       <BeyondBusiness />
     </>
   );
-};
+};  
 
 export default page;
