@@ -54,7 +54,7 @@ export default function SecurityCompliance() {
             </Link>
           </div>
 
-          <div className="space-y-5 min-[390px]:space-y-10 text-black ml-5 min-[1220px]:hidden sm:mt-5 pb-8">
+          <div className="space-y-9 min-[390px]:space-y-10 text-black ml-5 min-[1220px]:hidden sm:mt-5 pb-8">
             {securityItems.map((item, index) => (
               <div
                 key={index}
@@ -94,9 +94,9 @@ export default function SecurityCompliance() {
           </div>
         </div>
 
-        <div className="space-y-12 text-black absolute right-0 top-32 w-[45%] max-[1220px]:hidden min-[1700px]:hidden">
+        <div className="space-y-16 text-black absolute right-0 top-32 w-[45%] max-[1220px]:hidden min-[1700px]:hidden">
           {/* Item 1 */}
-          <div className="flex items-center bg-white rounded-l-full shadow-md p-2 hover:shadow-lg transition relative ml-60">
+          <div className="flex items-center bg-white rounded-l-full shadow-md p-2 hover:shadow-lg transition relative ml-60 ">
             <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
               <img
                 src="/images/solution/security1.png"

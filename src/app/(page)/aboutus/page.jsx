@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "About us | ScotiTech Solutions Limited",
+}
+
 import AboutScotiTech from "@/components/aboutus/AboutScotitech";
 import FoundersSection from "@/components/aboutus/FoundersSection";
 import GlobalD from "@/components/aboutus/GlobalD";

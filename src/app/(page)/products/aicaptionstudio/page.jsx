@@ -1,4 +1,6 @@
-
+export const metadata = {
+  title: "AI Caption Studio | ScotiTech Solutions Limited",
+}
 import AiCaptionHero from "@/components/products/aicaptionstudio/AiCaptionHero"
 import WhyChooseAICaptionStudio from '@/components/products/aicaptionstudio/WhyChoose'
 import HowToGetAISection from '@/components/products/aicaptionstudio/HowToGetAISection'

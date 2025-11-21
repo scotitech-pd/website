@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "Contact Us | ScotiTech Solutions Limited",
+}
 import Hero from "@/components/contact/Hero";
 import GetInTouch from "@/components/contact/Getintouch";
 import SpecificSolution from "@/components/contact/Specificsolution";

@@ -2,7 +2,7 @@
 import React from "react";
 
 export const metadata = {
-  title: "Terms and Conditions | ScotiTech Solutions Limited",
+  title: "Terms & Conditions | ScotiTech Solutions Limited",
 };
 
 const TermsAndConditions = () => {

@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "Solutions | ScotiTech Solutions Limited",
+}
 import GlobalD from "@/components/aboutus/GlobalD";
 import AppDeploySection from "@/components/solutions/AppDeploySection";
 import ComparisonSection from "@/components/solutions/ComparisonSection";

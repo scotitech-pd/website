@@ -1,42 +1,40 @@
 "use client";
 
 export default function OpslyInfoSection() {
-  const features = [
-    {
-      icon: "/images/products/opsly/clear.png",
-      title: "Gain a Clear View",
-      desc: "Discover every subscription and see exactly who is using what.",
-    },
-    {
-      icon: "/images/products/opsly/optimize.png",
-      title: "Optimize Licensing",
-      desc: "Automatically identify underused, unused, and redundant licenses to eliminate waste.",
-    },
-    {
-      icon: "/images/products/opsly/control.png",
-      title: "Control Your Spending",
-      desc: "Manage renewals, negotiate better contracts, and forecast future software costs with precision.",
-    },
-    {
-      icon: "/images/products/opsly/ssecurity.png",
-      title: "Strengthen Security",
-      desc: "Monitor app permissions and ensure compliance with industry standards.",
-    },
-  ];
+ const features = [
+  {
+    icon: "/images/products/opsly/clear.png",
+    title: "One login",
+    desc: "Access all apps with a single secure login without switching platforms.",
+  },
+  {
+    icon: "/images/products/opsly/optimize.png",
+    title: "All your apps in one place",
+    desc: "Get full visibility of every tool, user, and license in a single dashboard.",
+  },
+  {
+    icon: "/images/products/opsly/control.png",
+    title: "AI built in",
+    desc: "Use AI to highlight risks, forecast spends, and recommend cost-saving actions automatically.",
+  },
+  {
+    icon: "/images/products/opsly/ssecurity.png",
+    title: "Your data stays private",
+    desc: "Data is safeguarded with enterprise-grade privacy and never shared or stored externally.",
+  },
+];
+
 
   return (
     <>
       {/* -------------------- ORIGINAL (LG AND ABOVE) -------------------- */}
-      <section className="relative w-full py-16  hidden lg:block ">
+      <section className="relative w-full py-16  hidden lg:block mb-3 ">
         <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
           <h2 className="text-[40px] font-semibold text-main-dark mb-6 drop-shadow-2xl font-karla">
-            What is Opsly app?
+           Opsly — Your All-in-One Private Cloud Workspace
           </h2>
-          <p className="text-black font-lora text-xl mb-16 pr-20">
-            Opsly is a SaaS Management Platform built for finance, IT, and
-            operations teams struggling with software sprawl. In today's digital
-            workplace, unmanaged subscriptions lead to wasted budget, security
-            risks, and operational blind spots.
+          <p className="text-black font-lora text-xl mb-16 pr-20">          
+Opsly gives you a secure, private, self-hosted digital workspace with powerful AI assistance — all connected through Private Smart WorkSpace, your personal cloud hub running on your own premises.
           </p>
         </div>
 
@@ -46,8 +44,8 @@ export default function OpslyInfoSection() {
           <div className="max-w-[1250px] mb-10 mx-auto grid md:grid-cols-[24%_76%] gap-2 mt-20 items-start font-lora px-6 min-[1190px]:px-0">
             <div className="bg-transparent text-white z-10">
               <p className="text-lg leading-relaxed font-medium my-5">
-                Opsly solves this by providing a unified view of your entire
-                software ecosystem. We empower your organization to:
+                Integrate your tools. Protect your data. Run your work your way. <br /> <br />
+
               </p>
             </div>
             <div className="relative">
@@ -76,18 +74,18 @@ export default function OpslyInfoSection() {
       <section className="relative w-full py-16 bg-white lg:hidden block">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-[32px] font-semibold text-main-dark mb-4 drop-shadow-2xl font-karla">
-            What is Opsly app?
+            Opsly — Your All-in-One Private Cloud Workspace
           </h2>
-          <p className="text-[#2B2B2B] font-lora text-base md:text-lg mb-10 leading-relaxed">
-            Opsly helps your organization manage all software subscriptions from
-            one place, saving time, money, and reducing risks.
+          <p className="text-[#2B2B2B] font-lora text-base md:text-lg mb-10 leading-relaxed">          
+Opsly gives you a secure, private, self-hosted digital workspace with powerful AI assistance — all connected through Private Smart WorkSpace, your personal cloud hub running on your own premises.
           </p>
         </div>
 
         <div className="relative bg-gradient-to-r from-[#407691] to-[#3D2779] py-14">
           <div className="max-w-6xl mx-auto px-6 text-white">
             <p className="text-base md:text-lg mb-10 font-lora text-center">
-              Opsly provides a unified view of your entire software ecosystem:
+          Integrate your tools. Protect your data. Run your work your way.
+
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 justify-center items-center ">

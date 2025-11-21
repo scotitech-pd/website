@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "ClarityPath | ScotiTech Solutions Limited",
+}
 import AboutSection from "@/components/products/claritypath/AboutSection"
 import ClarityPathSection from "@/components/products/claritypath/ClarityPathSection"
 import ClarityPathSteps from "@/components/products/claritypath/ClarityPathSteps"

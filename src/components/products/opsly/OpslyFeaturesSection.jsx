@@ -1,5 +1,5 @@
 "use client";
-import { LayoutGrid, ShieldCheck, Layers } from "lucide-react";
+import { LayoutGrid, ShieldCheck, Layers, CheckCircle } from "lucide-react";
 
 export default function OpslyFeaturesSection() {
   const features = [
@@ -23,23 +23,40 @@ export default function OpslyFeaturesSection() {
     },
   ];
 
-  const miniFeatures = [
-    {
-      title: "Redundancy Alerts",
-      description:
-        "Get notified of overlapping applications with similar functionality.",
-    },
-    {
-      title: "Renewal Management",
-      description:
-        "Never miss a renewal date with automated alerts and a 90-day timeline view.",
-    },
-    {
-      title: "Contract Intelligence",
-      description:
-        "Store all your contracts and payment details in a secure, centralized vault.",
-    },
-  ];
+  // const miniFeatures = [
+  //   {
+  //     title: "Redundancy Alerts",
+  //     description:
+  //       "Get notified of overlapping applications with similar functionality.",
+  //   },
+  //   {
+  //     title: "Renewal Management",
+  //     description:
+  //       "Never miss a renewal date with automated alerts and a 90-day timeline view.",
+  //   },
+  //   {
+  //     title: "Contract Intelligence",
+  //     description:
+  //       "Store all your contracts and payment details in a secure, centralized vault.",
+  //   },
+  // ];
+
+  const capabilities = [
+  { label: "Files", desc: "browse, sync, and manage documents" },
+  { label: "Talk", desc: "chat and call with your team" },
+  { label: "Tasks", desc: "create to-dos and kanban boards" },
+  { label: "Photos", desc: "organise your media" },
+  { label: "Mail", desc: "unified inbox for all email accounts" },
+  { label: "Notes", desc: "store ideas and documents" },
+  { label: "Calendar", desc: "manage events and reminders" },
+  { label: "Contacts", desc: "personal + team contacts" },
+  { label: "Deck", desc: "workflow boards" },
+  { label: "Settings", desc: "privacy & security tools" },
+  { label: "Meet / Video", desc: "instant video meetings" },
+  { label: "AI Assistant", desc: "ask anything, get instant answers" },
+  { label: "AI Chat About Files", desc: "read and summarise your documents" },
+];
+
 
   return (
     <section className="w-full pb-10 bg-white">
@@ -47,10 +64,10 @@ export default function OpslyFeaturesSection() {
         {/* Section Header */}
         <div className="lg:px-6 text-center">
           <h2 className="text-[40px] font-semibold text-main-dark mb-1 drop-shadow-2xl font-karla">
-            Key Features
+            What Opsly Actually Is
           </h2>
           <p className="text-black font-lora text-xl mb-14">
-            The Power to See, Control, and Optimize
+Built for People Who Want Control — Not Complexity
           </p>
         </div>
 
@@ -82,25 +99,27 @@ export default function OpslyFeaturesSection() {
           {/* Right column gradient box */}
           <div className="bg-gradient-to-bl from-[#406E8F] to-[#3D297A] text-white rounded-xl p-10 shadow-lg">
             <h3 className="font-medium text-2xl font-karla mb-2">
-              Automated Cost Optimization Reports
+      You get all your digital tools in one unified dashboard
             </h3>
             <p className="mb-6 font-lora leading-6">
-              Our intelligent engine identifies immediate cost-saving
-              opportunities.
-            </p>
+              Opsly brings together files, calendar, mail, notes, tasks, calls, contacts, workflows, and AI — all on a self-hosted cloud platform designed for privacy and productivity.
 
-            <div className="bg-white text-gray-900 rounded-lg p-6 space-y-5 font-lora">
-              {miniFeatures.map((item, i) => (
-                <div key={i}>
-                  <h4 className="font-bold text-[15px] text-black mb-0.5 font-karla">
-                    {item.title}
-                  </h4>
-                  <p className="text-[15px] leading-[18px] text-main-dark">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+            </p>
+            <div className="font-lora">
+              
+ {capabilities.map((item, idx) => (
+  <p key={idx} className="block pb-1">
+    <CheckCircle className="inline size-4 text-green-400 mr-2" />
+    <span className="font-semibold font-karla">{item.label}</span>
+    {" — "}{item.desc}
+  </p>
+))}
+
+              
+
             </div>
+
+          
           </div>
         </div>
       </div>

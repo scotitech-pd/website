@@ -1,7 +1,9 @@
-"use client";
-import React from "react";
 
-export default function PrivacyPolicy() {
+import React from "react";
+export const metadata = {
+  title: "Privacy Policy | ScotiTech Solutions Limited",
+}
+const  PrivacyPolicy  = () => {
   return (
     <section className="max-w-5xl mx-auto px-5 min-[500px]:px-10 md:px-20 py-16 text-black font-lora">
       <div className="space-y-12 text-gray-800">
@@ -171,3 +173,4 @@ export default function PrivacyPolicy() {
     </section>
   );
 }
+export default PrivacyPolicy;

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export default function RouteLoader({ children }) {
   const pathname = usePathname();
   const [loading, setLoading] = useState(true);
-  const LOADER_TIME = 1500;
+  const LOADER_TIME = 2000;
 
   useEffect(() => {
     if (!pathname) return;

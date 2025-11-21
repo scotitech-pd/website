@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "Elder Connect+ | ScotiTech Solutions Limited",
+}
 import ComplianceSecuritySection from "@/components/products/elderconnect/ComplianceSecuritySection"
 import ElderConnectHero from "@/components/products/elderconnect/ElderConnectHero"
 import ElderConnectSection from "@/components/products/elderconnect/ElderConnectSection"

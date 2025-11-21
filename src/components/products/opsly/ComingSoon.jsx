@@ -48,7 +48,7 @@ export default function ComingSoon() {
         {/* TEXT SECTION */}
         <div className="lg:w-2/3 space-y-6 z-20">
           <div className="lg:text-5xl text-3xl font-semibold relative w-fit font-karla">
-            Opsly Launching Soon
+            Opsly - Launching Soon
             <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 -left-5 text-nowrap hidden md:block">
               Opsly
             </p>

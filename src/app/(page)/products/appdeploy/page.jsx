@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "AppDeploy | ScotiTech Solutions Limited",
+}
 import AppDeployCTA from "@/components/products/appdeploy/AppDeployCTA";
 import AppDeployInfo from "@/components/products/appdeploy/AppDeployInfo";
 import AppDeploySection from "@/components/products/appdeploy/AppDeploySection";
