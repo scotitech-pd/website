@@ -36,7 +36,7 @@ export default function PainPointStory() {
 
   return (
     <section className="relative bg-white py-20 font-karla text-gray-900">
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-20">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         {/* Heading */}
         <div className="text-center mb-14 relative">
           <h2 className="text-3xl lg:text-5xl font-bold text-[#3D297A] relative z-10">

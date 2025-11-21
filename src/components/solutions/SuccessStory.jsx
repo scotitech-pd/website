@@ -28,107 +28,104 @@ export default function SuccessStory() {
           className="bg-white rounded-2xl border border-gray-100 shadow-md py-4 lg:py-7 px-8 md:px-10 lg:px-14 relative z-10 font-lora"
         >
           <h3 className="text-2xl font-semibold text-[#3D297A] mb-6 font-karla text-center lg:text-left">
-            The Journey — Swift’s Android Breakthrough
+            The Journey — From Rejection to Release
           </h3>
 
           <div className="space-y-6 text-gray-700 text-[15px] leading-relaxed">
             <p>
-              At first, it was chaos. I tried to cross-compile Swift manually
-              using old snapshots, custom paths, and partial NDK integrations.
-              Every step ended with the same frustrating error:
+              It started with a setback. When{" "}
+              <strong>Apple rejected our app ClarityPath</strong> under
+              Guideline{" "}
               <span className="italic text-[#7E1A8E]">
-                {" "}
-                “unable to load standard library for target
-                aarch64-unknown-linux-android33.”
+                4.3(b) “Design – Spam”
               </span>
+              , we faced the reality that getting an app approved or even
+              privately distributed has become increasingly difficult.
             </p>
 
             <p>
-              After hours of debugging paths, re-linking libraries, and reading
-              incomplete GitHub threads, I almost gave up. Most examples were
-              outdated, and official builds unstable. There were moments when I
-              thought,{" "}
-              <strong>“Maybe Swift just isn’t meant for Android yet.”</strong>
-            </p>
-
-            <p>
-              Then came the breakthrough — the official Swift SDK for Android,
-              backed by the newly formed Android Workgroup. For the first time,
-              it wasn’t an experiment but a structured approach by Swift.org.
+              Instead of quitting, we chose to build solutions that solve this
+              challenge not just for us, but for others facing the same
+              struggle.
+              <br />
+              <strong>That decision led to two major outcomes:</strong>
             </p>
 
             <div className="bg-[#F9F6FF] border-l-4 border-[#7E1A8E] p-5 rounded-md text-sm">
-              <p className="text-gray-800 font-mono text-xs whitespace-pre-wrap">
-                {`swiftly install main-snapshot-2025-10-16
-swiftly use main-snapshot-2025-10-16
-swift sdk install https://lnkd.in/eD9vAY-A
-
-export ANDROID_NDK_HOME=~/android-ndk/android-ndk-r27d
-./setup-android-sdk.sh
-
-swift package init --type executable
-swift build --swift-sdk aarch64-unknown-linux-android28 --static-swift-stdlib`}
-              </p>
-              <p className="text-xs text-gray-600 mt-2">
-                (Those lines marked the moment Swift officially compiled for
-                Android.)
+              <p className="text-gray-800 whitespace-pre-wrap">
+                👉 <strong className="font-karla">ClarityPath</strong> —
+                redesigned, improved, and successfully deployed via Apple
+                Business Manager.{"\n"}
+                👉 <strong className="font-karla">AppDeploy</strong> — a secure,
+                ABM-ready app distribution solution built to prevent teams from
+                ever hitting the same roadblock.
               </p>
             </div>
 
-            <p>
-              The success message confirmed the setup:
-              <span className="italic text-[#406E8F]">
-                “success: ndk-sysroot linked to Android NDK…”
-              </span>
-              That was the moment of realization — the future of cross-platform
-              Swift had arrived.
+            <p className="font-medium">
+              <strong className="font-karla">
+                AppDeploy was developed for real-world use cases where:
+              </strong>
+              <br />• Your app doesn't get App Store approval, <br />
+              • You don’t want to invest heavily into complex enterprise MDM
+              tools,
+              <br />• You simply need safe, private, and controlled app
+              deployment using Apple Business Manager.
             </p>
 
             <blockquote className="border-l-4 border-[#7E1A8E] bg-[#F5EDFF] p-6 rounded-lg italic text-gray-800">
-              “What started as a random experiment turned into a genuine
-              breakthrough — Swift can now build for Android officially. It’s
-              still early, but this opens a whole new chapter for cross-platform
-              Swift development.”
+              “Today, we help others get their apps live on Apple Business
+              Manager — because we’ve gone through that rejection, that
+              redesign, and that approval process ourselves.”
             </blockquote>
           </div>
 
-          {/* Images */}
-          <div className="mt-10 lg:grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 hidden  ">
-            <img
+          {/* Images with Motion */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-10 lg:grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 hidden"
+          >
+            <motion.img
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
               src="/images/products/appdeploy/1.jpeg"
-              alt="Code setup"
-              className="rounded-xl object-center  w-full shadow-sm hover:scale-[1.02] transition"
-            />
-            <img
-              src="/images/products/appdeploy/2.jpeg"
-              alt="Console output"
-              className="rounded-xl object-center  w-full shadow-sm hover:scale-[1.02] transition"
-            />
-            <img
-              src="/images/products/appdeploy/3.jpeg"
-              alt="App screenshot"
-              className="rounded-xl object-center  w-full shadow-sm hover:scale-[1.02] transition"
-            />
-            <img
-              src="/images/products/appdeploy/4.jpeg"
-              alt="Team working"
+              alt="Setup"
               className="rounded-xl object-center w-full shadow-sm hover:scale-[1.02] transition"
             />
-          </div>
+            <motion.img
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              src="/images/products/appdeploy/2.jpeg"
+              alt="Process"
+              className="rounded-xl object-center w-full shadow-sm hover:scale-[1.02] transition"
+            />
+            <motion.img
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              src="/images/products/appdeploy/3.jpeg"
+              alt="System"
+              className="rounded-xl object-center w-full shadow-sm hover:scale-[1.02] transition"
+            />
+            <motion.img
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              src="/images/products/appdeploy/4.jpeg"
+              alt="Team"
+              className="rounded-xl object-center w-full shadow-sm hover:scale-[1.02] transition"
+            />
+          </motion.div>
         </motion.div>
-
-        {/* Quote */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center max-w-3xl mx-auto bg-[#F5EDFF] border-l-[8px] border-[#7E1A8E] rounded-xl shadow-md p-10 font-lora"
-        >
-          <p className="text-gray-700 text-lg italic">
-            “Every challenge we faced shaped AppDeploy’s DNA — to simplify deployment and empower developers who refuse to stop innovating.”
-          </p>
-        </motion.div> */}
       </div>
     </section>
   );

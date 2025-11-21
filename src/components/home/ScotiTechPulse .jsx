@@ -2,6 +2,7 @@
 import { Rocket } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion"; // ⬅️ Animation added
 
 const carouselItems = [
   {
@@ -28,7 +29,7 @@ const carouselItems = [
     desc: "ScotiTech has been nominated for the Forttuna Global Excellence Awards® 2025 (Global Edition).",
     ctaButtonText: "Read on LinkedIn",
     ctaButtonLink:
-      "https://www.linkedin.com/feed/update/urn:li:activity:7313247079722541058/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7313247079722541058%29",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7313247079722541058/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali:activity%3A7313247079722541058%29",
   },
 ];
 
@@ -38,7 +39,6 @@ const ScotiTechPulse = () => {
   const [submitted, setSubmitted] = useState(false);
   const [current, setCurrent] = useState(0);
 
-  // Auto slide every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === carouselItems.length - 1 ? 0 : prev + 1));
@@ -59,7 +59,7 @@ const ScotiTechPulse = () => {
 
   return (
     <section
-      className="relative bg-[#f8fafc] py-12 md:py-16"
+      className="relative bg-[#f8fafc] py-12 md:py-16 overflow-hidden"
       style={{
         backgroundImage: "url('/images/home/pulsebg.png')",
         backgroundRepeat: "no-repeat",
@@ -81,7 +81,7 @@ const ScotiTechPulse = () => {
         </div>
 
         <div className="grid min-[990px]:grid-cols-[45%_53%] lg:w-[88%] mx-auto gap-6 text-black">
-          {/* Carousel Card */}
+          {/* 🟢 DO NOT TOUCH CAROUSEL */}
           <div className="bg-white rounded-xl overflow-hidden shadow-md relative min-h-[480px] sm:min-h-[450px]">
             {carouselItems.map((item, i) => (
               <div
@@ -102,17 +102,13 @@ const ScotiTechPulse = () => {
                     <span className="bg-[#BCB96A] px-4 py-1 rounded-full text-[11px] sm:text-[13px] font-karla font-semibold text-white mb-3 inline-block">
                       {item.tag}
                     </span>
-
                     <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 font-karla">
                       {item.title}
                     </h3>
-
                     <p className="text-black/90 text-sm sm:text-base md:text-lg mb-4 font-lora">
                       {item.desc}
                     </p>
                   </div>
-
-                  {/* CTA BUTTON UNIQUE PER SLIDE */}
                   <div className="w-full flex justify-end min-[990px]:justify-start mt-auto">
                     <a
                       href={item.ctaButtonLink}
@@ -128,22 +124,21 @@ const ScotiTechPulse = () => {
             ))}
           </div>
 
-          {/* Right Side */}
+          {/* 🟡 Only Animate These Two Cards */}
           <div className="grid grid-cols-1 gap-6">
-            {/* Dubai Event */}
-            <div className="bg-white rounded-xl drop-shadow-md shadow-md p-6">
+            <motion.div
+              initial={{ x: 80, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 100, damping: 14 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl drop-shadow-md shadow-md p-6"
+            >
               <div className="flex justify-between items-center mb-2 text-white">
                 <span className="bg-[#BCB96A] px-4 py-1.5 rounded-full text-[12px] sm:text-[14px] flex gap-1.5 sm:gap-3 items-center font-bold font-karla">
-                  <img
-                    src="/images/home/eventicon.png"
-                    alt="eventicon"
-                    className="size-5 sm:size-7"
-                  />
+                  <img src="/images/home/eventicon.png" alt="eventicon" className="size-5 sm:size-7" />
                   EVENT
                 </span>
-                <span className="text-sm text-gray-500 font-lora">
-                  25/Nov/2025
-                </span>
+                <span className="text-sm text-gray-500 font-lora">25/Nov/2025</span>
               </div>
               <h4 className="text-xl min-[650px]:text-2xl font-semibold font-karla mb-2 mt-4">
                 ScotiTech at Forttuna Global Excellence Awards®, Dubai
@@ -162,22 +157,21 @@ const ScotiTechPulse = () => {
                   </button>
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Opsly Early Access */}
-            <div className="bg-white rounded-xl drop-shadow-md shadow-md p-6">
+            <motion.div
+              initial={{ x: -80, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 100, damping: 14 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl drop-shadow-md shadow-md p-6"
+            >
               <div className="flex justify-between items-center mb-2">
                 <span className="bg-[#FFA662] font-karla px-4 py-1.5 items-center rounded-full text-[12px] sm:text-[14px] flex gap-1.5 sm:gap-3 font-bold text-white">
-                  <img
-                    src="/images/home/boxicon.png"
-                    alt="eventicon"
-                    className="size-5 sm:size-7"
-                  />
+                  <img src="/images/home/boxicon.png" alt="eventicon" className="size-5 sm:size-7" />
                   PRODUCT UPDATE
                 </span>
-                <span className="text-sm text-gray-500 font-lora">
-                  10/Dec/2025
-                </span>
+                <span className="text-sm text-gray-500 font-lora">10/Dec/2025</span>
               </div>
               <h4 className="text-xl min-[650px]:text-2xl font-semibold font-karla mb-2">
                 Opsly Launch — Get Early Access
@@ -195,19 +189,17 @@ const ScotiTechPulse = () => {
                   Join the Waitlist
                 </button>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
       {/* Modal */}
+      {/* Left untouched */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
           <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-[90%] sm:w-[400px] relative text-left">
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute top-3 right-3 text-gray-500 hover:text-black"
-            >
+            <button onClick={() => setIsModalOpen(false)} className="absolute top-3 right-3 text-gray-500 hover:text-black">
               ✕
             </button>
 
@@ -220,8 +212,7 @@ const ScotiTechPulse = () => {
                   </h3>
                 </div>
                 <p className="text-gray-600 text-sm mb-4 font-lora">
-                  Be the first to get early access updates as soon as Opsly
-                  launches.
+                  Be the first to get early access updates as soon as Opsly launches.
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-3">
                   <input
@@ -243,9 +234,7 @@ const ScotiTechPulse = () => {
             ) : (
               <div className="flex flex-col items-center text-center space-y-3 py-6">
                 <Rocket className="text-blue animate-pulse" size={42} />
-                <h4 className="text-lg font-semibold text-blue">
-                  Thank you for joining!
-                </h4>
+                <h4 className="text-lg font-semibold text-blue">Thank you for joining!</h4>
                 <p className="text-gray-600 text-sm font-lora">
                   We’ll notify you as soon as Opsly early access is available.
                 </p>

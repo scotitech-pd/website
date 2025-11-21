@@ -6,14 +6,14 @@ export default function ClarityPathSteps() {
   const steps = [
     {
       id: 1,
-      text: "Organizations can find ClarityPath in ABM under Custom Apps.",
+      text: "Organizations/Individuals can find ClarityPath under AppDeploy Dashboard.",
     },
+    // {
+    //   id: 2,
+    //   text: "Assign it to employees via MDM (Jamf, Intune, etc.) or directly by Apple ID.",
+    // },
     {
       id: 2,
-      text: "Assign it to employees via MDM (Jamf, Intune, etc.) or directly by Apple ID.",
-    },
-    {
-      id: 3,
       text: "Users can then download ClarityPath, with in-app premium features.",
     },
   ];
@@ -93,7 +93,7 @@ export default function ClarityPathSteps() {
           <div className=" absolute  bg-main-dark rounded-full -top-1 -translate-y-1/2 group-hover:scale-102 duration- group-hover:shadow-[0_0_15px_rgba(255,255,255,0.9)] transition-all">
             <img
               src="/images/products/claritypath/logo.png"
-              alt="logoscotytech"
+              alt="logoscotitech"
               className="h-7 "
             />
           </div>

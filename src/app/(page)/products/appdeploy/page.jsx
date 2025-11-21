@@ -1,3 +1,4 @@
+import AppDeployCTA from "@/components/products/appdeploy/AppDeployCTA";
 import AppDeployInfo from "@/components/products/appdeploy/AppDeployInfo";
 import AppDeploySection from "@/components/products/appdeploy/AppDeploySection";
 import CompetitorAnalysis from "@/components/products/appdeploy/CompetitorAnalysis";
@@ -20,6 +21,7 @@ const page = () => {
       <WhyChooseAppDeploy />
       <PricingAppDeploy />
       <HowAppDeployWorks />
+      <AppDeployCTA />
       <ComplianceSecurity />
     </>
   );

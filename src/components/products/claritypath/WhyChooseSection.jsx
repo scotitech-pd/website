@@ -21,7 +21,7 @@ export default function WhyChooseSection() {
     {
       icon: "/images/products/claritypath/expertise.png",
       title: "ScotiTech Expertise",
-      text: "Developed by ScotiTech Ltd, a UK-based innovation company focused on AI, productivity, and future-ready tools.",
+      text: "Developed by ScotiTech Limited, a UK-based innovation company focused on AI, productivity, and future-ready tools.",
     },
   ];
 

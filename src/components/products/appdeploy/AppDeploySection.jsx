@@ -13,9 +13,9 @@ export default function AppDeploySection() {
         {/* === Left Side (Text Section) === */}
         <div className="lg:w-2/3 space-y-6 z-20">
           {/* Main title with faint background text for depth */}
-          <div className="lg:text-5xl text-3xl font-semibold relative w-fit">
+          <div className="lg:text-5xl text-3xl font-semibold relative w-fit font-karla">
             AppDeploy
-            <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 -left-5 text-nowrap hidden md:block">
+            <p className="absolute text-[85px] opacity-10 top-1/2 -translate-y-1/2 font-karla -left-5 text-nowrap hidden md:block">
               AppDeploy
             </p>
           </div>

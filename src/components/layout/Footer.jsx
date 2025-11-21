@@ -21,7 +21,6 @@ const Footer = () => {
 
   return (
     <footer className="mx-auto bg-main-dark relative overflow-hidden">
-      {/* FIXED BACKGROUND WRAPPER */}
       <div className="absolute h-full w-full flex justify-center items-center text-4xl -z-10 pointer-events-none">
         <img src="/images/home/footerbg.png" alt="" className="max-w-[80%]" />
       </div>
@@ -41,9 +40,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* UPDATED SOCIAL ICONS */}
           <div className="flex gap-6 justify-center md:justify-end text-[30px] my-auto pt-7 z-10">
-            {/* WHATSAPP (IMAGE KEPT) */}
             <a
               href="https://wa.me/447424331001"
               target="_blank"
@@ -67,7 +64,6 @@ const Footer = () => {
               </div>
             </a>
 
-            {/* INSTAGRAM LUCIDE */}
             <a
               href="https://www.instagram.com/scotitechsolutions/"
               target="_blank"
@@ -77,7 +73,6 @@ const Footer = () => {
               <Instagram className="text-white" size={28} />
             </a>
 
-            {/* LINKEDIN LUCIDE */}
             <a
               href="https://www.linkedin.com/company/scotitech-ltd/?viewAsMember=true"
               target="_blank"
@@ -86,17 +81,14 @@ const Footer = () => {
             >
               <Linkedin className="text-white" size={28} />
             </a>
-
           </div>
         </div>
 
-        {/* Line */}
         <div className="bg-white/80 relative h-0.5 my-7">
           <div className="absolute left-0 bg-gradient-to-r from-main to-transparent w-[40%] h-1"></div>
           <div className="absolute right-0 bg-gradient-to-l from-main to-transparent w-[40%] h-1"></div>
         </div>
 
-        {/* About + Links */}
         <div className="grid grid-cols-1 min-[1047px]:grid-cols-[30%_70%] text-sm text-white min-[570px]:text-white/80 my-10">
           <div className="w-[80%] z-10 hidden min-[1047px]:block">
             <h5 className="font-bold pb-3 font-karla">
@@ -164,8 +156,13 @@ const Footer = () => {
               <h5 className="font-semibold font-karla pb-3">Contact Us</h5>
               <div className="w-[85%]">
                 <a href="tel:+441698708203">
-                  <p className="font-karla">Phone no:</p>
-                  <p className="font-lora">+44 (0) 1698 708203</p>
+                  <p className="font-karla inline">Ph : </p>
+                  <p className="font-lora inline"> +44 (0) 1698 708203</p>
+                </a>
+                <p></p>
+                <a href="tel:+447459444274">
+                  <p className="font-karla mt-2 inline ">O : </p>
+                  <p className="font-lora inline pl-[7px]"> +44 (0) 7459 444274</p>
                 </a>
 
                 <a href="mailto:info@scotitech.com">
@@ -175,9 +172,20 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* ADDRESS */}
+            {/* ADDRESSES */}
             <div className="max-[570px]:hidden pb-3 z-10 max-w-[237px]">
-              <h5 className="font-semibold pb-3 font-karla">Address</h5>
+             
+
+              <h5 className="font-semibold pb-2 font-karla ">
+                Registered Address
+              </h5>
+              <p className="font-lora">
+                ScotiTech Solutions Limited 11 Caldervale Drive, Motherwell ML1
+                2GB, United Kingdom
+              </p>
+               <h5 className="font-semibold pb-2 font-karla mt-4">
+                Corporate Address
+              </h5>
               <p className="font-lora">
                 Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business
                 Park, 1st, Motherwell ML1 4WR, United Kingdom
@@ -186,7 +194,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* MOBILE ADDRESS */}
+        {/* MOBILE ADDRESS SECTION */}
         <div className="w-full min-[570px]:hidden z-10">
           <div className="bg-white/80 relative h-0.5 my-7">
             <div className="absolute left-0 bg-gradient-to-r from-main to-transparent w-[40%] h-1"></div>
@@ -194,37 +202,47 @@ const Footer = () => {
           </div>
 
           <div className="max-w-[280px] mx-auto text-white z-10">
-            <h5 className="font-semibold pb-3 font-karla">Address</h5>
+            <h5 className="font-semibold pb-3 font-karla">Corporate Address</h5>
             <p className="font-lora">
               Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business
-              Park, 1st, Motherwell ML1 4WR, United Kingdom{" "}
+              Park, 1st, Motherwell ML1 4WR, United Kingdom
             </p>
-            <p className="mt-1 font-lora">+44 (0) 1698 708203</p>
+
+            <h5 className="font-semibold pb-3 font-karla mt-4">
+              Registered Address
+            </h5>
+            <p className="font-lora">
+              ScotiTech Solutions Limited 11 Caldervale Drive, Motherwell ML1
+              2GB, United Kingdom
+            </p>
+
+            <p className="mt-3 font-lora">
+              <strong>Ph:</strong> +44 (0) 1698 708203
+            </p>
+            <p className="font-lora">
+              <strong>O:</strong> +44 (0) 7459444274
+            </p>
             <p className="font-lora">info@scotitech.com</p>
           </div>
         </div>
 
-        {/* MOBILE PRIVACY */}
+        {/* Final Content */}
         <div className="pt-6 lg:hidden font-karla gap-3 flex justify-center text-[14px] z-10">
           <Link href="/privacy-policy">
             <p className="cursor-pointer">Privacy Policy</p>
           </Link>
-
           <Link href="/terms-and-conditions">
             <p className="cursor-pointer">Terms and Conditions</p>
           </Link>
         </div>
 
-        {/* LINE */}
         <div className="bg-white/80 relative h-0.5 my-4">
           <div className="absolute left-0 bg-gradient-to-r from-main to-transparent w-[40%] h-1"></div>
           <div className="absolute right-0 bg-gradient-to-l from-main to-transparent w-[40%] h-1"></div>
         </div>
 
-        {/* COPYRIGHT DESKTOP */}
         <div className="text-white z-10 mb-6 hidden md:block">
           <div className="hidden md:flex items-center w-full px-4 relative">
-            {/* CENTER */}
             <div className="absolute left-1/2 -translate-x-1/2 font-lora text-sm flex items-center gap-1">
               <span>Copyright</span>
               <Copyright className="size-3.5 inline" />
@@ -234,7 +252,6 @@ const Footer = () => {
               </span>
             </div>
 
-            {/* RIGHT */}
             <div className="ml-auto flex items-center font-karla text-sm breathe">
               <span>Powered by</span>
               <a
@@ -250,7 +267,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* COPYRIGHT MOBILE */}
         <div className="md:hidden text-center">
           <div className="flex justify-center items-center font-lora text-sm leading-relaxed flex-wrap gap-1 text-[12px]">
             <span>Copyright</span>

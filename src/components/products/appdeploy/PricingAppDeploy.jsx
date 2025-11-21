@@ -2,8 +2,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import { useModal } from "@/components/ModalContext";
 
 export default function PricingAppDeploy() {
+  const { setShowModal } = useModal();
+
   const plans = [
     // {
     //   name: "Starter",
@@ -55,13 +58,29 @@ export default function PricingAppDeploy() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-14 relative z-10 min-[1250px]:mx-100">
+        <div
+          className="
+            grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-14 relative z-10 
+            place-items-center 
+            /* 
+              NOTE: When uncommenting the other plans (Starter and Pro),
+              REMOVE 'place-items-center' and UPDATE grid classes to:
+              'sm:grid-cols-2 lg:grid-cols-3'
+              for proper multi-column alignment
+            */
+          "
+        >
           {plans.map((plan, i) => (
             <motion.div
               key={i}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.3 }}
-              className="bg-white text-gray-800 font-lora rounded-xl shadow-xl py-8 px-5 flex flex-col items-center text-center border-b-[12px] border-[#7E1A8E]/50 hover:shadow-[0_0_25px_rgba(126,26,142,0.4)] duration-300"
+              className="
+                bg-white text-gray-800 font-lora rounded-xl shadow-xl py-8 px-5 flex flex-col items-center text-center 
+                border-b-[12px] border-[#7E1A8E]/50 hover:shadow-[0_0_25px_rgba(126,26,142,0.4)] duration-300 
+                w-full sm:max-w-[400px] lg:max-w-[500px]  
+                /* Increased width for LG only, mobile and tablet remain unchanged */
+              "
             >
               <h4 className="text-2xl font-karla font-semibold mb-1 text-[#3D297A]">
                 {plan.name}
@@ -80,7 +99,10 @@ export default function PricingAppDeploy() {
                 ))}
               </ul>
 
-              <button className="mt-auto bg-[#7E1A8E] hover:bg-[#A52EB8] text-white font-semibold text-sm py-2.5 px-6 rounded-lg transition duration-300">
+              <button
+                onClick={() => setShowModal(true)} // <-- PRICE BUTTON REPLACED
+                className="mt-auto cursor-pointer bg-[#7E1A8E] hover:bg-[#A52EB8] text-white font-semibold text-sm py-2.5 px-6 rounded-lg transition duration-300"
+              >
                 {plan.btn}
               </button>
             </motion.div>

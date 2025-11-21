@@ -23,7 +23,7 @@ const features = [
     icon: "/images/products/aicaptionstudio/scotitech.png",
     className: "",
     title: "ScotiTech Expertise",
-    desc: "Developed by ScotiTech Ltd, an innovation company focused on AI, productivity, and future-ready tools.",
+    desc: "Developed by ScotiTech Limited, an innovation company focused on AI, productivity, and future-ready tools.",
   },
 ];
 

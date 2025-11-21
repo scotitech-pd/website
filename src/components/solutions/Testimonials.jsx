@@ -11,27 +11,27 @@ import {
 const testimonials1 = [
   {
     id: 1,
-    img: "https://i.pravatar.cc/150?img=12",
-    text: "Opsly showed us $10,000/year in wasted SaaS spend.",
-    name: "CFO, Startup",
+    img: "/images/solution/evan.jpg",
+    text: "ElderConnect was easy enough that my mother figured it out on her own, which says everything.",
+    name: "Evan",
   },
   {
     id: 2,
-    img: "https://i.pravatar.cc/150?img=32",
-    text: "AppDeploy cut our app deployment costs by 75%.",
+    img: "/images/solution/cto.jpg",
+    text: "AppDeploy made distributing our test app incredibly quick, and our team could install it without any technical setup.",
     name: "CTO, SaaS Company",
   },
   {
     id: 3,
-    img: "https://i.pravatar.cc/150?img=47",
+    img: "/images/solution/socialmedia.jpg",
     text: "AI Caption Studio saved my team 10 hours/week in caption writing.",
     name: "Social Media Manager",
   },
   {
     id: 4,
-    img: "https://i.pravatar.cc/150?img=47",
-    text: "AI Caption Studio saved my team 10 hours/week in caption writing.",
-    name: "Social Media Manager",
+    img: "/images/solution/brenda.jpg",
+    text: "ClarityPath helped me talk through decisions more clearly and gave me space to think before committing.",
+    name: "Brenda",
   },
 ];
 
@@ -55,10 +55,10 @@ export default function Testimonials() {
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
         <div>
           <Carousel
-            className="w-full relative px-6 sm:px-10"
+            className="w-full relative px-6 sm:px-10 "
             opts={{ loop: true }}
           >
-            <CarouselContent className="h-full">
+            <CarouselContent className="h-full ">
               {testimonials1.map((t, i) => (
                 <CarouselItem
                   key={i}
@@ -80,7 +80,6 @@ export default function Testimonials() {
                     {/* Quote Icon */}
                     <Quote className="absolute top-8 left-8 text-gray-200 w-12 h-12 rotate-180" />
 
-                    {/* Text */}
                     {/* Text */}
                     <p className="relative z-[60] text-main-dark mt-10 text-lg leading-relaxed font-medium font-karla">
                       “{t.text}”

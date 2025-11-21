@@ -1,5 +1,6 @@
 "use client";
 import { ExternalLink, Clock } from "lucide-react";
+import { motion } from "framer-motion"; // ⬅️ Added
 
 export default function DownloadDashboard() {
   const data = [
@@ -47,7 +48,7 @@ export default function DownloadDashboard() {
       items: [
         {
           name: "Download from App Store",
-          details: "Available on iOS             ",
+          details: "Available on iOS",
           bg: "bg-purple-300",
           link: "https://apps.apple.com/gb/app/ai-caption-studio/id6743449367",
           live: true,
@@ -74,23 +75,42 @@ export default function DownloadDashboard() {
   ];
 
   return (
-    <div className="bg-white text-black py-10">
+    <div className="bg-white text-black py-10 overflow-hidden">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
         {/* Section Heading */}
-        <div className="font-karla font-medium text-center mt-4 min-[570px]:my-4 min-[1000px]:my-10 relative w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="font-karla font-medium text-center mt-4 min-[570px]:my-4 min-[1000px]:my-10 relative w-full"
+        >
           <p className="text-[30px] min-[500px]:text-[3.5rem] min-[630px]:text-[4.5rem] font-bold text-black opacity-5 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             Explore Our Products
           </p>
           <h2 className="relative text-3xl min-[500px]:text-4xl sm:text-5xl z-10">
             Explore Our Products
           </h2>
-        </div>
+        </motion.div>
 
         {/* Product Cards */}
         <div className="grid min-[600px]:grid-cols-2 justify-center items-start gap-4 min-[740px]:gap-8 py-8">
-          {data.map((section) => (
-            <div
+          {data.map((section, index) => (
+            <motion.div
               key={section.title}
+              initial={{
+                opacity: 0,
+                x: index % 2 === 0 ? -60 : 60,
+                y: 30,
+              }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 14,
+                delay: index * 0.15,
+              }}
+              viewport={{ once: true }}
               className={`py-6 px-3 min-[830px]:px-6 rounded-2xl h-full ${section.shadow}`}
             >
               <h2
@@ -98,56 +118,71 @@ export default function DownloadDashboard() {
               >
                 {section.title}
               </h2>
-              <p className="text-gray-900 text-[16px] sm:text-[18px] font-lora mb-2">
+
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-gray-900 text-[16px] sm:text-[18px] font-lora mb-2"
+              >
                 {section.subtitle}
-              </p>
+              </motion.p>
 
               <div className="flex flex-col gap-4">
-                {section.items.map((item) => {
+                {section.items.map((item, i) => {
                   const Wrapper = item.live ? "a" : "div";
                   return (
-                    <Wrapper
+                    <motion.div
                       key={item.name}
-                      href={item.live ? item.link : undefined}
-                      target={item.live ? "_blank" : "_self"}
-                      rel="noopener noreferrer"
-                      className={`flex justify-between items-center ${
-                        item.bg
-                      } rounded-lg px-4 py-3 shadow-sm transition ${
-                        item.live
-                          ? "hover:shadow-md hover:bg-opacity-90 cursor-pointer"
-                          : "opacity-70 cursor-not-allowed"
-                      }`}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: i * 0.1,
+                        ease: "easeOut",
+                      }}
+                      viewport={{ once: true }}
                     >
-                      {/* Left Side */}
-                      <div>
-                        <p className="font-semibold font-karla text-gray-800">
-                          {item.name}
-                        </p>
-                        <p className="text-xs font-lora sm:text-sm text-gray-500">
-                          {item.details}
-                        </p>
-                      </div>
-
-                      {/* Right Icon */}
-                      <div
-                        className={`rounded-full p-2 shadow ${
+                      <Wrapper
+                        href={item.live ? item.link : undefined}
+                        target={item.live ? "_blank" : "_self"}
+                        rel="noopener noreferrer"
+                        className={`flex justify-between items-center ${
+                          item.bg
+                        } rounded-lg px-4 py-3 shadow-sm transition ${
                           item.live
-                            ? `${section.titleColor1} text-white`
-                            : `${section.titleColor1} opacity-70 text-white`
+                            ? "hover:shadow-md hover:bg-opacity-90 cursor-pointer"
+                            : "opacity-70 cursor-not-allowed"
                         }`}
                       >
-                        {item.live ? (
-                          <ExternalLink className="size-5" />
-                        ) : (
-                          <Clock className="size-5" />
-                        )}
-                      </div>
-                    </Wrapper>
+                        <div>
+                          <p className="font-semibold font-karla text-gray-800">
+                            {item.name}
+                          </p>
+                          <p className="text-xs font-lora sm:text-sm text-gray-500">
+                            {item.details}
+                          </p>
+                        </div>
+                        <div
+                          className={`rounded-full p-2 shadow ${
+                            item.live
+                              ? `${section.titleColor1} text-white`
+                              : `${section.titleColor1} opacity-70 text-white`
+                          }`}
+                        >
+                          {item.live ? (
+                            <ExternalLink className="size-5" />
+                          ) : (
+                            <Clock className="size-5" />
+                          )}
+                        </div>
+                      </Wrapper>
+                    </motion.div>
                   );
                 })}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

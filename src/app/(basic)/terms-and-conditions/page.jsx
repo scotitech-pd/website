@@ -1,7 +1,11 @@
-"use client";
+
 import React from "react";
 
-export default function TermsAndConditions() {
+export const metadata = {
+  title: "Terms and Conditions | ScotiTech Solutions Limited",
+};
+
+const TermsAndConditions = () => {
   return (
     <section className="max-w-5xl mx-auto px-5 min-[500px]:px-10 md:px-20 py-16 text-black font-lora">
       <div className="space-y-10 text-gray-800">
@@ -171,6 +175,27 @@ export default function TermsAndConditions() {
           </p>
         </div>
 
+        {/* 11. GDPR Compliance */}
+        <div className="space-y-4">
+          <h2 className="text-2xl font-karla font-semibold text-main-dark">
+            11. GDPR Compliance
+          </h2>
+          <p>
+            ScotiTech Solutions Limited follows GDPR-compliant data handling
+            practices. We process all personal data lawfully, fairly, and
+            transparently in accordance with the UK General Data Protection
+            Regulation and applicable privacy laws. Individuals have the right
+            to request access, correction, deletion, or restriction of their
+            personal data at any time.
+          </p>
+          <p>
+            We ensure appropriate technical and organisational measures to
+            protect data against unauthorised access, alteration, loss, or
+            misuse. For data-related queries or rights requests, please contact
+            us at <strong>privacy@scotitech.com</strong>.
+          </p>
+        </div>
+
         {/* Contact */}
         <div className="space-y-4">
           <h2 className="text-2xl font-karla font-semibold text-main-dark">
@@ -197,13 +222,11 @@ export default function TermsAndConditions() {
             United Kingdom
           </p>
           <div className="text-center font-karla text-wrap block text-red-600">
-            <a href="mailto: privacy@scotitech.com">
-              {" "}
-              <p className="inline-block pr-5">📧 privacy@scotitech.com</p>{" "}
+            <a href="mailto:privacy@scotitech.com">
+              <p className="inline-block pr-5">📧 privacy@scotitech.com</p>
             </a>
-
             <a href="tel:01698 708203">
-              <p className="inline-block">📞 01698 708203</p>{" "}
+              <p className="inline-block">📞 01698 708203</p>
             </a>
           </div>
         </div>
@@ -211,3 +234,4 @@ export default function TermsAndConditions() {
     </section>
   );
 }
+export default TermsAndConditions;
