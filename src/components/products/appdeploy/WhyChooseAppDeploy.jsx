@@ -18,10 +18,14 @@ export default function WhyChooseAppDeploy() {
       title: "Accelerate Your Workflow:",
       desc: "From startups needing to test a beta build to enterprises deploying a new internal tool, AppDeploy gets your application where it needs to be—now.",
     },
+     {
+      title: "Share with Ease:",
+      desc: "From Employees to Customers sharing is easy with AppDeploy.",
+    },
   ];
 
   return (
-    <section className="bg-[#F5F6FB] overflow-hidden py-6 lg:py-16">
+    <section className="bg-[#F5F6FB] overflow-hidden py-6 lg:py-16 lg:pb-36">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 ">
         <div className=" grid grid-cols-1 md:grid-cols-[60%_40%] justify-between items-center">
           {/* Left Section */}
@@ -38,9 +42,9 @@ export default function WhyChooseAppDeploy() {
                 <img
                   src="/images/products/appdeploy/phoneimg.png"
                   alt="AppDeploy"
-                  className="rounded-xl object-cover"
+                  className="rounded-xl object-cover "
                 />
-                <div className=" hidden lg:block absolute -right-25 top-1/2 -translate-y-1/2 translate-x-1/2 w-[110%]">
+                <div className=" hidden lg:block absolute -right-25 top-[250px] -translate-y-1/2 translate-x-1/2 w-[110%]">
                   <img
                     src="/images/products/appdeploy/logo.png"
                     alt="appdeploy logo"
@@ -52,7 +56,7 @@ export default function WhyChooseAppDeploy() {
                     </span>
                   </a>
                 </div>
-                <div className=" lg:hidden absolute -left-43 -bottom-5 translate-x-1/2 w-[110%]">
+                {/* <div className=" lg:hidden absolute -left-43 -bottom-5 translate-x-1/2 w-[110%]">
                   <img
                     src="/images/products/appdeploy/logo.png"
                     alt=""
@@ -61,15 +65,15 @@ export default function WhyChooseAppDeploy() {
                   <a href="https://appdeploy.scotitech.com:5173/">
                     <span className="absolute bg-white left-1/2 shadow-[0_0_10px_rgba(128,128,128,0.9)] -translate-1/2 py-3 px-5 text-[#696969] font-karla font-semibold rounded-xl text-shadow-2xs cursor-pointer hover:bg-main-dark hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300">Access Now </span>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
 
           {/* Right Section */}
-          <div className="relative h-full flex items-center">
+          <div className="relative h-full flex items-center mt-36 lg:mt-0">
             {/* Vertical line */}
-            <div className="absolute left-10 -top-15 overflow-hidden w-[2px] bg-[#7E1A8E]/50 hidden md:block h-[150%]"></div>
+            <div className="absolute left-10 -top-100 overflow-hidden w-[2px] bg-[#7E1A8E]/50 hidden md:block h-[2050px]"></div>
 
             <div className="flex flex-col gap-10">
               {features.map((f, i) => (

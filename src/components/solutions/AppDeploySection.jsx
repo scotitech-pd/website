@@ -10,7 +10,7 @@ export default function AppDeploySection() {
       //   // backgroundPosition: "center",
       // }}
     >
-      <div className="absulte inset-0 h-full w-full bg-black z-10"></div>
+      <div className=" inset-0 h-full w-full bg-black z-10"></div>
       <div className=" max-w-8xl relative mx-auto px-5 min-[500px]:px-10 md:px-20 w-full grid min-[1280px]:grid-cols-[70%_30%] items-center justify-between gap-16">
         {/* LEFT CONTENT */}
         <div className="space-y-6 z-10">

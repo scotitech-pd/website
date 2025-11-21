@@ -51,19 +51,19 @@ export default function AppDeploySection() {
         </div>
 
         {/* === Right Side (Phone Mockup) === */}
-        <div className="lg:w-1/4 flex justify-start items-center">
-          {/* Desktop version of the image */}
+       <div>
+          {/* Desktop version of the image — smaller for balance */}
           <img
             src="/images/products/appdeploy/phonepic.png"
-            alt="AppDeploy preview"
-            className="hidden lg:block w-[90%]"
+            alt="AI Caption Studio preview"
+            className="hidden lg:block w-[85%] max-h-[420px] object-contain"
           />
 
-          {/* Mobile floating image (semi-transparent background mockup) */}
+          {/* Mobile floating image (semi-transparent) */}
           <img
             src="/images/products/appdeploy/phonepic.png"
-            alt="AppDeploy preview mobile"
-            className="lg:hidden block absolute max-[579px]:-bottom-20 max-[620px]:-bottom-[120px] opacity-50 z-2 left-1/2 w-[200px]"
+            alt="AI Caption Studio mobile preview"
+            className="lg:hidden block absolute max-[579px]:-bottom-20 max-[620px]:-bottom-[120px] opacity-50 z-2 left-1/2 w-[180px]"
           />
         </div>
       </div>

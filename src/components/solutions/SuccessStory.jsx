@@ -8,7 +8,7 @@ export default function SuccessStory() {
         {/* Heading */}
         <div className="text-center mb-14 relative">
           <h2 className="text-3xl lg:text-5xl font-bold text-[#3D297A] relative z-10">
-            From Frustration to Breakthrough
+            Success Story of AppDeploy
           </h2>
           <p className="mt-3 text-gray-600 font-lora text-lg max-w-3xl mx-auto">
             A true story of resilience, technical depth, and the moment
