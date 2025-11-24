@@ -9,29 +9,29 @@ import {
 } from "@/components/ui/carousel";
 
 const testimonials1 = [
+  // {
+  //   id: 1,
+  //   img: "/images/solution/evan.jpg",
+  //   text: "ElderConnect was easy enough that my mother figured it out on her own, which says everything.",
+  //   name: "Evan",
+  // },
   {
     id: 1,
-    img: "/images/solution/evan.jpg",
-    text: "ElderConnect was easy enough that my mother figured it out on her own, which says everything.",
-    name: "Evan",
+    img: "/images/solution/rohit.jpeg",
+    text: "AppDeploy made distributing our test app incredibly quick, and our team could install it without any technical setup.",
+    name: "Rohit Ahlawat, AVISKAAR ENTERPRISES LTD",
   },
   {
     id: 2,
-    img: "/images/solution/cto.jpg",
-    text: "AppDeploy made distributing our test app incredibly quick, and our team could install it without any technical setup.",
-    name: "CTO, SaaS Company",
-  },
-  {
-    id: 3,
     img: "/images/solution/socialmedia.jpg",
-    text: "AI Caption Studio saved my team 10 hours/week in caption writing.",
+    text: "AI Caption Studio saved my team 10 hours/week in caption writing and helped us to grow our engagement over social media. ",
     name: "Social Media Manager",
   },
   {
-    id: 4,
-    img: "/images/solution/brenda.jpg",
+    id: 3,
+    img: "/images/solution/vijay.jpeg",
     text: "ClarityPath helped me talk through decisions more clearly and gave me space to think before committing.",
-    name: "Brenda",
+    name: "Vijay Rathee, Founder - Digital Entrepreneur Bizztor",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Testimonials() {
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
         <div>
           <Carousel
-            className="w-full relative px-6 sm:px-10 "
+            className="w-full relative px-6 sm:px-10  "
             opts={{ loop: true }}
           >
             <CarouselContent className="h-full ">
@@ -66,7 +66,7 @@ export default function Testimonials() {
                 >
                   <div
                     key={t.id}
-                    className={`bg-white rounded-2xl shadow-lg px-7 py-12 mx-5 relative transition-all duration-500 h-full ${""}`}
+                    className={` bg-white rounded-2xl shadow-lg px-7 py-12 mx-5 relative transition-all duration-500 h-full ${""}`}
                   >
                     {/* Avatar */}
                     <div className="absolute -top-10 left-1/2 -translate-x-1/2">
