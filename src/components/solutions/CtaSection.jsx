@@ -23,9 +23,20 @@ export default function CtaSection() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, [isModalOpen]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email.trim()) return;
+
+    // Web3Forms integration
+    const formData = new FormData();
+    formData.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77");
+    formData.append("Email", email);
+
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -122,11 +133,11 @@ export default function CtaSection() {
       {isModalOpen && (
         <div
           className="fixed inset-0 bg-black/60 flex justify-center items-center z-50"
-          onClick={() => setIsModalOpen(false)} // BACKDROP CLICK closes modal
+          onClick={() => setIsModalOpen(false)}
         >
           <div
             className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-[90%] sm:w-[400px] relative"
-            onClick={(e) => e.stopPropagation()} // Prevent modal click from closing
+            onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setIsModalOpen(false)}

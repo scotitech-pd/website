@@ -67,15 +67,27 @@ const ProductShowcase = () => {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Email submitted:", email);
+    if (!email.trim()) return;
+
+    // Web3Forms Integration
+    const formData = new FormData();
+    formData.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77"); // Add key here
+    formData.append("Email", email);
+
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
     setEmail("");
     setIsSubmitted(true);
+
     setTimeout(() => {
       setIsModalOpen(false);
       setIsSubmitted(false);
-    }, 2000); // Close after 2 seconds
+    }, 2000);
   };
 
   return (
@@ -124,10 +136,11 @@ const ProductShowcase = () => {
                 </p>
 
                 <div className="space-y-2 left-4 w-[90%] absolute bottom-2">
-                  {/* Read Details */}
+              
+
                   <div className="w-full">
                     {product.name === "Opsly" ? (
-                      <span className="bg-white px-3 font-medium font-karla py-0.5 rounded-lg text-[13px] text-gray-500 shadow-[0_0_25px_rgba(128,128,128,0.4)] cursor-none hover:bg-main-dark hover:text-white transition">
+                      <span className="bg-white px-3 font-medium font-karla py-0.5 rounded-lg text-[13px] text-gray-500 shadow-[0_0_25px_rgba(128,128,128,0.4)] cursor-none">
                         Coming Soon
                       </span>
                     ) : (
@@ -141,12 +154,12 @@ const ProductShowcase = () => {
                     <br />
                   </div>
 
-                  {/* Main CTA Button */}
+                  {/* CTA Button */}
                   <div className="flex justify-end w-full">
                     {product.name === "Opsly" ? (
                       <button
                         onClick={() => setIsModalOpen(true)}
-                        className={`px-3 w-fit py-[4px] cursor-pointer text-white text-sm rounded-lg flex font-karla ${product.buttonColor} shadow-[0_0_25px_rgba(128,128,128,0.4)]`}
+                        className={`px-3 w-fit py-[4px] cursor-pointer text-white text-sm rounded-lg flex font-karla ${product.buttonColor}`}
                       >
                         {product.buttonText}
                       </button>
@@ -154,7 +167,7 @@ const ProductShowcase = () => {
                       <Link
                         href={product.link}
                         target="_blank"
-                        className={`px-3 w-fit py-[4px] text-white text-sm rounded-lg flex font-karla ${product.buttonColor} shadow-[0_0_25px_rgba(128,128,128,0.4)]`}
+                        className={`px-3 w-fit py-[4px] text-white text-sm rounded-lg flex font-karla ${product.buttonColor}`}
                       >
                         {product.buttonText}
                       </Link>
@@ -184,8 +197,7 @@ const ProductShowcase = () => {
                   Join the Opsly Waitlist
                 </h3>
                 <p className="text-gray-600 text-sm mb-4 font-lora">
-                  Interested in Opsly? Enter your email to join our waitlist and
-                  get early access updates as soon as it launches.
+                  Enter your email to join our waitlist and get early access updates.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-3">
@@ -212,8 +224,7 @@ const ProductShowcase = () => {
                   Thank You!
                 </h4>
                 <p className="text-gray-600 text-sm font-lora">
-                  Thank you for your interest in Opsly! We’re working hard to
-                  bring it to you soon.
+                  You’re officially in the Opsly waitlist.
                 </p>
               </div>
             )}

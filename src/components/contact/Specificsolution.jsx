@@ -36,108 +36,199 @@ const SpecificSolution = () => {
     companyName: "",
   });
 
+  const [success, setSuccess] = useState(false);
+  const [phoneError, setPhoneError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [shake, setShake] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+    if (e.target.name === "email") {
+      validateEmail(e.target.value);
+    }
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
+  const validatePhone = (val) => {
+    if (!val.trim()) {
+      setPhoneError("Phone number is required");
+      return false;
+    }
+    const clean = val.replace(/\s+/g, "");
+    const ok = /^\+?[1-9]\d{7,14}$/.test(clean);
+
+    if (!ok) {
+      setPhoneError("Enter valid phone number with country code");
+      return false;
+    }
+
+    setPhoneError("");
+    return true;
+  };
+
+  const validateEmail = (val) => {
+    if (!val.trim()) {
+      setEmailError("Email is required");
+      return false;
+    }
+
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
+
+    if (!re.test(val.toLowerCase())) {
+      setEmailError("Enter a valid email address");
+      return false;
+    }
+
+    setEmailError("");
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const phoneOk = validatePhone(formData.contact);
+    const emailOk = validateEmail(formData.email);
+
+    if (!phoneOk || !emailOk) {
+      setShake(true);
+      setTimeout(() => setShake(false), 500);
+      return;
+    }
+
+    const fd = new FormData();
+    fd.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77");
+    fd.append("Name", formData.name);
+    fd.append("Contact", formData.contact);
+    fd.append("Email", formData.email);
+    fd.append("Company", formData.companyName);
+
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: fd,
+    });
+
+    setSuccess(true);
+
+    setTimeout(() => {
+      setSuccess(false);
+      setFormData({
+        name: "",
+        contact: "",
+        email: "",
+        companyName: "",
+      });
+    }, 2000);
   };
 
   return (
-    <section className="relative  bg-[url('/images/contact/pattern-bg.png')] bg-no-repeat bg-center bg-cover  overflow-hidden py-12  lg:py-20 ">
-      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20  ">
+    <section className="relative bg-[url('/images/contact/pattern-bg.png')] bg-no-repeat bg-center bg-cover overflow-hidden py-12 lg:py-20">
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <h2 className="text-2xl lg:text-[48px] font-bold font-karla text-purple-900 text-center mb-8 lg:mb-16">
           Looking for Specific Solutions?
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[45%_51%] gap-5 min-[1400px]:gap-12 ">
-          <div className="bg-gradient-to-br from-[#000] to-[#3A3287] rounded-3xl p-6 lg:p-8 shadow-2xl  ">
-            <div className="border-1 border-white p-6 border-opacity-20 rounded-md">
-              <h3 className="text-2xl lg:text-3xl  font-karla text-white mb-6 lg:mb-8 ">
+        <div className="grid grid-cols-1 lg:grid-cols-[45%_51%] gap-5 min-[1400px]:gap-12">
+          <div className="bg-gradient-to-br from-[#000] to-[#3A3287] rounded-3xl p-6 lg:p-8 shadow-2xl">
+            <div className="border-1 border-white p-6 border-opacity-20 rounded-md relative">
+              <h3 className="text-2xl lg:text-3xl font-karla text-white mb-6 lg:mb-8">
                 Send us a Message
               </h3>
 
-              <div className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-                  <div>
-                    <label className="block text-white font-lora text-sm font-medium mb-2">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Your Name"
-                      className="w-full  font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
-                    />
+              <form onSubmit={handleSubmit} className={shake ? "animate-shake" : ""}>
+                <div className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+                    <div>
+                      <label className="block text-white font-lora text-sm font-medium mb-2">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Your Name"
+                        className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-white text-sm font-lora font-medium mb-2">
+                        Contact
+                      </label>
+                      <input
+                        type="tel"
+                        name="contact"
+                        value={formData.contact}
+                        onBeforeInput={(e) => {
+                          if (!/[0-9+]/.test(e.data)) {
+                            e.preventDefault();
+                          }
+                        }}
+                        onChange={handleChange}
+                        placeholder="With Country Code"
+                        className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
+                      />
+                      {phoneError && (
+                        <p className="text-red-500 text-sm mt-1">{phoneError}</p>
+                      )}
+                    </div>
                   </div>
 
                   <div>
-                    <label className="block text-white text-sm font-lora font-medium mb-2">
-                      Contact
+                    <label className="block font-lora text-white text-sm font-medium mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Your Email"
+                      className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
+                    />
+                    {emailError && (
+                      <p className="text-red-500 text-sm mt-1">{emailError}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="block font-lora text-white text-sm font-medium mb-2">
+                      Company Name
                     </label>
                     <input
                       type="text"
-                      name="contact"
-                      value={formData.contact}
+                      name="companyName"
+                      value={formData.companyName}
                       onChange={handleChange}
-                      placeholder="Contact Number"
+                      placeholder="Company Name"
                       className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label className="block font-lora text-white text-sm font-medium mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Your Email"
-                    className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
-                  />
+                  <div className="flex justify-end pt-4">
+                    <button
+                      type="submit"
+                      className="bg-white hover:shadow-[0_0_15px_3px_rgba(255,255,255,1)] cursor-pointer font-lora text-purple-900 px-5 py-2 lg:text-lg rounded-full font-semibold hover:bg-purple-50 transition-all duration-500 ease-in-out text-sm"
+                    >
+                      {success ? "Sent" : "Send"}
+                    </button>
+                  </div>
                 </div>
-
-                <div>
-                  <label className="block font-lora text-white text-sm font-medium mb-2">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    name="companyName"
-                    value={formData.companyName}
-                    onChange={handleChange}
-                    placeholder="Company Name"
-                    className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
-                  />
-                </div>
-
-                <div className="flex justify-end pt-4">
-                  <button
-                    onClick={handleSubmit}
-                    className="bg-white hover:shadow-[0_0_15px_3px_rgba(255,255,255,1)] cursor-pointer font-lora text-purple-900 px-5 py-2 lg:text-lg rounded-full font-semibold hover:bg-purple-50 transition-all duration-500 ease-in-out text-sm"
-                  >
-                    Send
-                  </button>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
 
+          {/* RIGHT SIDE CARDS + LOCATION */}
           <div className="space-y-16 mt-5 lg:mt-0 lg:space-y-8 overflow-hidden">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 lg:gap-6">
               {productCards.map((card) => (
                 <div
                   key={card.id}
-                  className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition h-full flex flex-col  mb-0"
+                  className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition h-full flex flex-col mb-0"
                 >
                   <div className="flex bg-black rounded-t-2xl overflow-hidden items-center justify-center h-20">
                     <img
@@ -146,7 +237,7 @@ const SpecificSolution = () => {
                       className="w-full object-center"
                     />
                   </div>
-                  <div className="py-4  text-center ">
+                  <div className="py-4 text-center">
                     <h4 className="font-bold text-gray-800 mb-1 font-karla">
                       {card.name}
                     </h4>
@@ -163,8 +254,8 @@ const SpecificSolution = () => {
               ))}
             </div>
 
-            <div className="bg-[#641070] h-full  shadow-[0_0_5px_3px_rgba(180,100,255,0.6)] rounded-3xl relative overflow-hidden lg:h-[53%] mt-10">
-              <div className="grid lg:grid-cols-[28%_72%] lg:h-full ">
+            <div className="bg-[#641070] h-full shadow-[0_0_5px_3px_rgba(180,100,255,0.6)] rounded-3xl relative overflow-hidden lg:h-[53%] mt-10">
+              <div className="grid lg:grid-cols-[28%_72%] lg:h-full">
                 <div>
                   <h3 className="text-white text-xl font-bold p-4 px-7 font-lora">
                     Our Location
@@ -172,7 +263,7 @@ const SpecificSolution = () => {
                   <img
                     src="/images/contact/map.png"
                     alt=""
-                    className="w-[300px] absolute left-4 z-20 hidden lg:block "
+                    className="w-[300px] absolute left-4 z-20 hidden lg:block"
                   />
                 </div>
                 <div className="relative bg-yellow h-full w-full overflow-hidden lg:rounded-br-3xl lg:rounded-tr-3xl">
