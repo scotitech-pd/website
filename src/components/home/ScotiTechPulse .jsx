@@ -2,7 +2,7 @@
 import { Rocket } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion"; // ⬅️ Animation added
+import { motion } from "framer-motion";
 
 const carouselItems = [
   {
@@ -29,7 +29,7 @@ const carouselItems = [
     desc: "ScotiTech has been nominated for the Forttuna Global Excellence Awards® 2025 (Global Edition).",
     ctaButtonText: "Read on LinkedIn",
     ctaButtonLink:
-      "https://www.linkedin.com/feed/update/urn:li:activity:7313247079722541058/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali:activity%3A7313247079722541058%29",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7313247079722541058/?updateEntityUrn=urn%3Ali:fs_feedUpdate%3A%28V2%2Curn%3Ali:activity%3A7313247079722541058%29",
   },
 ];
 
@@ -46,10 +46,22 @@ const ScotiTechPulse = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email.trim()) return;
+
+    // Web3Forms Integration
+    const formData = new FormData();
+    formData.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77");
+    formData.append("Email", email);
+
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
     setSubmitted(true);
+
     setTimeout(() => {
       setSubmitted(false);
       setEmail("");
@@ -75,13 +87,12 @@ const ScotiTechPulse = () => {
             Stay connected with our latest{" "}
             <span className="text-main-dark font-medium">innovations</span>,{" "}
             <span className="text-main-dark font-medium">insights</span>, and{" "}
-            <span className="text-main-dark font-medium">community events</span>
-            .
+            <span className="text-main-dark font-medium">community events</span>.
           </p>
         </div>
 
         <div className="grid min-[990px]:grid-cols-[45%_53%] lg:w-[88%] mx-auto gap-6 text-black">
-          {/* 🟢 DO NOT TOUCH CAROUSEL */}
+          {/* Carousel left box untouched */}
           <div className="bg-white rounded-xl overflow-hidden shadow-md relative min-h-[480px] sm:min-h-[450px]">
             {carouselItems.map((item, i) => (
               <div
@@ -124,7 +135,7 @@ const ScotiTechPulse = () => {
             ))}
           </div>
 
-          {/* 🟡 Only Animate These Two Cards */}
+          {/* Two animated cards */}
           <div className="grid grid-cols-1 gap-6">
             <motion.div
               initial={{ x: 80, opacity: 0 }}
@@ -144,8 +155,7 @@ const ScotiTechPulse = () => {
                 ScotiTech at Forttuna Global Excellence Awards®, Dubai
               </h4>
               <p className="text-gray-600 mb-4 text-md font-lora">
-                Join our leadership team live in Dubai to discuss innovation and
-                enterprise technology.
+                Join our leadership team live in Dubai to discuss innovation and enterprise technology.
               </p>
               <div className="w-full flex justify-end">
                 <Link href="/contact">
@@ -177,8 +187,7 @@ const ScotiTechPulse = () => {
                 Opsly Launch — Get Early Access
               </h4>
               <p className="text-gray-600 mb-4 text-md font-lora">
-                Be among the first to explore our SaaS optimization suite with
-                exclusive early access.
+                Be among the first to explore our SaaS optimization suite with exclusive early access.
               </p>
               <div className="w-full flex justify-end">
                 <button
@@ -194,12 +203,14 @@ const ScotiTechPulse = () => {
         </div>
       </div>
 
-      {/* Modal */}
-      {/* Left untouched */}
+      {/* Modal untouched except API added */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
           <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-[90%] sm:w-[400px] relative text-left">
-            <button onClick={() => setIsModalOpen(false)} className="absolute top-3 right-3 text-gray-500 hover:text-black">
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-3 right-3 text-gray-500 hover:text-black"
+            >
               ✕
             </button>
 
@@ -211,9 +222,11 @@ const ScotiTechPulse = () => {
                     Join the Opsly Waitlist
                   </h3>
                 </div>
+
                 <p className="text-gray-600 text-sm mb-4 font-lora">
                   Be the first to get early access updates as soon as Opsly launches.
                 </p>
+
                 <form onSubmit={handleSubmit} className="space-y-3">
                   <input
                     type="email"
@@ -223,6 +236,7 @@ const ScotiTechPulse = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full border text-main-dark font-lora border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-blue"
                   />
+
                   <button
                     type="submit"
                     className="w-full bg-blue cursor-pointer text-white py-2 rounded-lg font-karla hover:bg-blue/90 transition"
@@ -234,7 +248,9 @@ const ScotiTechPulse = () => {
             ) : (
               <div className="flex flex-col items-center text-center space-y-3 py-6">
                 <Rocket className="text-blue animate-pulse" size={42} />
-                <h4 className="text-lg font-semibold text-blue">Thank you for joining!</h4>
+                <h4 className="text-lg font-semibold text-blue">
+                  Thank you for joining!
+                </h4>
                 <p className="text-gray-600 text-sm font-lora">
                   We’ll notify you as soon as Opsly early access is available.
                 </p>

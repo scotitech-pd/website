@@ -7,10 +7,22 @@ export default function ComingSoon() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email.trim()) return;
+
+    // ✅ Web3Forms API integration
+    const formData = new FormData();
+    formData.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77"); // <-- Put your key here
+    formData.append("Email", email);
+
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
     setSubmitted(true);
+
     setTimeout(() => {
       setSubmitted(false);
       setEmail("");
@@ -96,11 +108,11 @@ export default function ComingSoon() {
       {isModalOpen && (
         <div
           className="fixed inset-0 bg-black/50 flex justify-center items-center z-50"
-          onClick={() => setIsModalOpen(false)}  /* Close on outside click */
+          onClick={() => setIsModalOpen(false)}
         >
           <div
             className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 w-[90%] sm:w-[400px] relative text-left"
-            onClick={(e) => e.stopPropagation()} /* Prevent closing on inside click */
+            onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setIsModalOpen(false)}

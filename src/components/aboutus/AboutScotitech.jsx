@@ -158,7 +158,7 @@ const AboutScotiTech = () => {
               </div>
             </div>
 
-            {/* RIGHT SIDE */}
+        
             <div className="relative h-[100%] hidden min-[1300px]:flex">
               <div className="h-fit">
                 <img src="/images/aboutus/hero-tech.png" alt="" />
