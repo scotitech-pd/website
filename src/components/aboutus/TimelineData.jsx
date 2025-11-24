@@ -48,7 +48,7 @@ export default function Timeline() {
       title: "Official Incorporation",
       desc1: "A vision became a company in November 2024.",
       desc2:
-        "ScotiTech Ltd registered in the UK for people-centric technology.",
+        "ScotiTech Solutions Limited registered in the UK for people-centric technology.",
       side: "right",
       style: "text-center"
     },
