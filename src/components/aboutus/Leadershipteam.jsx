@@ -6,7 +6,7 @@ export default function LeadershipTeam() {
     {
       name: "Prachi Dwivedi",
       title: "Marketing & Content Manager",
-      location: "London, UK",
+      location: "Glasgow, UK",
       description:
         "Prachi is a strategic Marketing & Content Manager with over nine years of experience. She excels at crafting compelling narratives and data-driven campaigns that build brand presence and engage audiences.",
       img: "/images/aboutus/prachi.jpeg",
@@ -15,7 +15,7 @@ export default function LeadershipTeam() {
     {
       name: "Hitesh Dubey",
       title: "Head of DevOps & Infrastructure",
-      location: "London, UK",
+      location: "Gurgaon, India",
       description:
         "Hitesh architects the scalable and secure systems that power our platform. With over nine years of leadership, he ensures our technology backbone is robust, automated, and ready for future growth.",
       img: "/images/aboutus/hitesh.png",
@@ -24,7 +24,7 @@ export default function LeadershipTeam() {
     {
       name: "Anurag Parmar",
       title: "Client Engagement & Product Strategy Lead",
-      location: "London, UK",
+      location: "Gurgaon, India",
       description:
         "Anurag brings over eight years of experience translating client needs into innovative and effective product strategies. She excels at building lasting relationships and ensuring our solutions solve real-world challenges for our partners.",
       img: "/images/aboutus/anurag.jfif",
@@ -33,7 +33,7 @@ export default function LeadershipTeam() {
     {
       name: "Daniel Chapman",
       title: "Director and Co-founder",
-      location: "London, UK",
+      location: "Leeds, UK",
       description:
         "Daniel is the Co-founder and Director at ScotiTech, where he steers the company's strategic vision and innovation. His leadership is fundamental to our mission of delivering cutting-edge solutions and exceptional client value.",
       img: "/images/aboutus/daniel.jpeg",
