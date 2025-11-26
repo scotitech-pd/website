@@ -77,7 +77,7 @@ export default function OpslyOverview() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D297A] relative inline-block pb-2">
             What Opsly Actually Is
-            <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-[3px] bg-main-dark rounded-full"></span>
+            {/* <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-[3px] bg-main-dark rounded-full"></span> */}
           </h2>
           <p className="text-lg md:text-xl mt-6 max-w-3xl mx-auto text-gray-800 leading-relaxed">
             <span className="font-semibold text-main-dark">

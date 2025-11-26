@@ -13,7 +13,7 @@ export default function ComingSoon() {
 
     // ✅ Web3Forms API integration
     const formData = new FormData();
-    formData.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77"); // <-- Put your key here
+    formData.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77"); 
     formData.append("Email", email);
 
     await fetch("https://api.web3forms.com/submit", {
