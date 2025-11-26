@@ -4,9 +4,9 @@ import React, { useState } from "react";
 
 const NewsletterSubscription = () => {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState(""); // success, error, or empty
+  const [status, setStatus] = useState(""); // success or error
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!email) {
       setStatus("error");
       return;
@@ -18,7 +18,16 @@ const NewsletterSubscription = () => {
       return;
     }
 
-    console.log("Subscribing email:", email);
+    // WEB3FORMS API SUBMISSION
+    const fd = new FormData();
+    fd.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77");
+    fd.append("Email", email);
+
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: fd,
+    });
+
     setStatus("success");
     setEmail("");
 
@@ -37,26 +46,25 @@ const NewsletterSubscription = () => {
           "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80')",
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 md:px-20">
         <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-[0_0_25px_rgba(255,255,255,0.15)] p-6 md:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* LEFT SIDE */}
+            {/* LEFT */}
             <div>
               <h2 className="text-3xl font-karla font-bold mb-3">
                 Stay Updated with ScotiTech
               </h2>
               <p className="text-gray-200 font-lora text-sm md:text-base leading-relaxed max-w-md">
-                Get the latest updates on our technology breakthroughs, product launches, and insights.
-                Subscribe to our newsletter to never miss what’s next.
+                Get the latest updates on our technology breakthroughs, product launches,
+                and insights. Subscribe to our newsletter to never miss what’s next.
               </p>
             </div>
 
-            {/* RIGHT SIDE */}
+            {/* RIGHT */}
             <div className="flex flex-col gap-3">
-              {/* MOBILE/TABLET */}
+              {/* MOBILE */}
               <div className="lg:hidden flex flex-col gap-3">
                 <input
                   type="email"
@@ -72,7 +80,8 @@ const NewsletterSubscription = () => {
                   onClick={handleSubmit}
                   className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-main-dark hover:bg-white hover:text-black text-white font-karla font-semibold text-sm transition shadow-md hover:shadow-lg"
                 >
-                  Subscribe <ArrowRightCircle className="w-5 h-5" />
+                  {status === "success" ? "Subscribed" : "Subscribe"}
+                  <ArrowRightCircle className="w-5 h-5" />
                 </button>
               </div>
 
@@ -92,14 +101,14 @@ const NewsletterSubscription = () => {
                   onClick={handleSubmit}
                   className="absolute top-1/2 right-2 -translate-y-1/2 px-8 py-3 rounded-full bg-main-dark hover:bg-white hover:text-black text-white font-karla font-semibold text-base transition-all shadow-md hover:shadow-lg"
                 >
-                  Subscribe
+                  {status === "success" ? "Subscribed" : "Subscribe"}
                 </button>
               </div>
 
-              {/* STATUS MESSAGE */}
+              {/* STATUS */}
               {status === "success" && (
                 <p className="text-sm text-green-400 font-medium">
-                  ✓ Successfully subscribed! Welcome to the Scotitech community.
+                  ✓ Successfully subscribed. Welcome to the ScotiTech community.
                 </p>
               )}
               {status === "error" && (
