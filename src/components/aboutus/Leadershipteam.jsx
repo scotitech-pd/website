@@ -1,6 +1,6 @@
 "use client";
 import { MapPin } from "lucide-react";
-
+//ok trtretrertretrtrgrfg
 export default function LeadershipTeam() {
   const team = [
     {
