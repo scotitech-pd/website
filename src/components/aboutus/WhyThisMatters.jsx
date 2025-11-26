@@ -25,7 +25,6 @@ export default function WhyThisMatters() {
   ];
 
   return (
-    // ok
     <div className=" bg-white py-12 overflow-hidden">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-start">
