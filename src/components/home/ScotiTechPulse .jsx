@@ -32,7 +32,7 @@ const carouselItems = [
       "https://www.linkedin.com/posts/pradeepkumar2411_nextgeninnovator-forttunaglobal-dubai-activity-7404019164304285697-_t-y?utm_source=share&utm_medium=member_desktop&rcm=ACoAADK5_VgB9HnZ87qmvk8SMPWvOm_LBIgQt2g",
   },
 ];
-
+// fn to simulate fetching data from an API
 const ScotiTechPulse = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState("");
