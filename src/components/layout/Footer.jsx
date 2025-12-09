@@ -10,7 +10,10 @@ const Footer = () => {
     { id: 2, title: "Solutions", link: "/solutions" },
     { id: 5, title: "About Us", link: "/aboutus" },
     { id: 4, title: "Our Products", link: "/products/appdeploy" },
+    { id: 5, title: "ScotiTech Media", link: "/media" },
+
   ];
+
 
   const Services = [
     { id: 2, title: "Opsly", link: "/products/opsly" },

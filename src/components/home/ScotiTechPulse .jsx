@@ -147,21 +147,21 @@ const ScotiTechPulse = () => {
               <div className="flex justify-between items-center mb-2 text-white">
                 <span className="bg-[#BCB96A] px-4 py-1.5 rounded-full text-[12px] sm:text-[14px] flex gap-1.5 sm:gap-3 items-center font-bold font-karla">
                   <img src="/images/home/eventicon.png" alt="eventicon" className="size-5 sm:size-7" />
-                  EVENT
+                  Media
                 </span>
-                <span className="text-sm text-gray-500 font-lora">25/Nov/2025</span>
+                <span className="text-sm text-gray-500 font-lora">December 2025</span>
               </div>
               <h4 className="text-xl min-[650px]:text-2xl font-semibold font-karla mb-2 mt-4">
-                ScotiTech at Forttuna Global Excellence Awards®, Dubai
+                Pradeep wins NextGen Innovator of the Year, Dubai
               </h4>
               <p className="text-gray-600 mb-4 text-md font-lora">
-                Join our leadership team live in Dubai to discuss innovation and enterprise technology.
+                ScotiTech Solutions Limited is proud to announce that its Co-Founder and Director, Pradeep Dahiya, has been honored with the NextGen Innovator of the Year award at the Fortuna Global Excellence Awards 2025, held in Dubai, UAE.
               </p>
               <div className="w-full flex justify-end">
-                <Link href="/contact">
+                <Link href="/media">
                   <button className="relative overflow-hidden border border-blue cursor-pointer text-blue-700 font-lora px-5 py-2 rounded-full text-md transition-all duration-300 group">
                     <span className="relative z-10 group-hover:text-white transition-colors duration-300">
-                      Talk to Us
+                      Read More
                     </span>
                     <span className="absolute inset-0 bg-blue scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-300"></span>
                   </button>
