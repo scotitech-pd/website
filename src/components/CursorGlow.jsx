@@ -21,6 +21,7 @@ export default function CursorBall() {
   }, []);
 
   return (
+    // Cursor glow element
     <div
       className="hidden lg:block fixed top-0 left-0 pointer-events-none z-[9999] transition-transform duration-150 ease-out"
       style={{
