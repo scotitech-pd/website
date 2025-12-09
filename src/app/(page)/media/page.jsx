@@ -90,8 +90,10 @@ export default function PressRelease() {
               </div>
             </div>
           </div>
+          
 
           <h3 className="font-karla text-lg text-[#641171]">A Commitment to Innovation with Purpose</h3>
+          
 
           <p className="font-lora text-base text-gray-800">
             ScotiTech, headquartered in Scotland, focuses on developing technologies that solve real-world challenges
