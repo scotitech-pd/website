@@ -8,7 +8,7 @@ export default function LeadershipTeam() {
       title: "Marketing & Content Manager",
       location: "Glasgow, UK",
       description:
-        "Prachi is a strategic Marketing & Content Manager with over nine years of experience. She excels at crafting compelling narratives and data-driven campaigns that build brand presence and engage audiences.",
+        "Prachi is a strategic Marketing & Content Manager with vast experience. She excels at crafting compelling narratives and data-driven campaigns that build brand presence and engage audiences.",
       img: "/images/aboutus/prachi.jpeg",
       linkedin: "https://www.linkedin.com/in/prachi-dwivedi-5724a51b6/",
     },
