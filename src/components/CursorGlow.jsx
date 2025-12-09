@@ -19,7 +19,7 @@ export default function CursorBall() {
       window.removeEventListener("click", click);
     };
   }, []);
-
+//ok
   return (
     // Cursor glow element
     <div
