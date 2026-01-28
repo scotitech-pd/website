@@ -5,7 +5,7 @@ const AboutScotiTech = () => {
   const [hoveredCard, setHoveredCard] = useState(1);
   const [activeIndex, setActiveIndex] = useState(1);
   const [currentSlide, setCurrentSlide] = useState(0);
-
+// Card data
   const cards = [
     {
       img1: "/images/aboutus/team-icon-white.png",
