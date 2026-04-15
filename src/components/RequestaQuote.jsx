@@ -72,7 +72,7 @@ export default function RequestaQuote() {
     setSending(true);
 
     const formData = new FormData();
-    formData.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77");
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
     formData.append("Name", name);
     formData.append("Email", email);
     formData.append("Company", company);
@@ -101,7 +101,7 @@ export default function RequestaQuote() {
       onClick={closeModal}
     >
       <div
-        className="relative bg-white rounded-2xl w-full max-w-[420px] shadow-xl animate-scaleIn border border-gray-200"
+        className="relative bg-white rounded-2xl w-full max-w-[420px] shadow-xl animate-scale-in border border-gray-200"
         onClick={(e) => e.stopPropagation()}
       >
         {/* HEADER */}
@@ -125,8 +125,8 @@ export default function RequestaQuote() {
         {/* SUCCESS OVERLAY */}
         {success && (
           <div className="absolute inset-0 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-2xl z-50">
-            <div className="flex flex-col items-center gap-3 animate-fadeIn">
-              <div className="w-20 h-20 bg-[#641171] rounded-full flex items-center justify-center animate-scaleUp shadow-lg shadow-purple-300">
+            <div className="flex flex-col items-center gap-3 animate-fade-in">
+              <div className="w-20 h-20 bg-[#641171] rounded-full flex items-center justify-center animate-scale-up shadow-lg shadow-purple-300">
                 <Check className="w-10 h-10 text-white animate-pop" />
               </div>
               <p className="font-karla text-[#641171] text-lg font-semibold">
@@ -232,35 +232,6 @@ export default function RequestaQuote() {
           </button>
         </form>
       </div>
-
-      <style>{`
-        .phone-input-fix .react-international-phone-input-container {
-          width: 100%;
-        }
-        .phone-input-fix .react-international-phone-input {
-          width: 100%;
-        }
-        .phone-input-fix .react-international-phone-country-selector-button {
-          border: 1px solid #d1d5db;
-          border-radius: 0.5rem 0 0 0.5rem;
-          padding: 0.65rem;
-          background: white;
-          margin-right: 4px; /* ✅ GAP FIX */
-        }
-
-        /* Animations */
-        .animate-scaleIn { animation: scaleIn .25s ease-out; }
-        @keyframes scaleIn { from {transform:scale(.94);opacity:0;} to {transform:scale(1);opacity:1;} }
-
-        .animate-fadeIn { animation: fadeIn .3s ease-out; }
-        @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-
-        .animate-scaleUp { animation: scaleUp .35s ease-out; }
-        @keyframes scaleUp { from {transform:scale(0.6);} to {transform:scale(1);} }
-
-        .animate-pop { animation: pop .35s ease-out; }
-        @keyframes pop { from {transform:scale(.4);opacity:0;} to {transform:scale(1);opacity:1;} }
-      `}</style>
     </div>
   );
 }

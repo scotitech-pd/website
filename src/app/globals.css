@@ -40,27 +40,49 @@
   
   --spacing-8xl:1600px;
   --animate-spin-slow :  spin-slow 2.5s linear infinite;
+  --animate-scale-in: scaleIn 0.25s ease-out;
+  --animate-fade-in: fadeIn 0.3s ease-out;
+  --animate-scale-up: scaleUp 0.35s ease-out;
+  --animate-pop: pop 0.35s ease-out;
+  --animate-breathe-slow: breathe-slow 8s ease-in-out infinite;
+  --animate-breathe: breathe 2s ease-in-out infinite;
 
   --breakpoint-xxl: 98.125rem;
 }
 
 @keyframes spin-slow {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-@keyframes breathe {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+    to { transform: rotate(360deg); }
 }
-.breathe-animation {
-  animation: breathe 6s ease-in-out infinite;
+@keyframes scaleIn {
+    from { transform: scale(0.94); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes scaleUp {
+    from { transform: scale(0.6); }
+    to { transform: scale(1); }
+}
+@keyframes pop {
+    from { transform: scale(0.4); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+@keyframes breathe-slow {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
+@keyframes breathe {
+    0% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
+    50% { transform: scale(1.05); filter: drop-shadow(0 0 12px rgba(255,255,255,0.7)); }
+    100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: white;
+    --background: #0f0f0f;
     --foreground: #ededed;
   }
 }
@@ -101,3 +123,18 @@ html {
   scrollbar-width: auto;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
 } 
+
+/* Phone Input Fix */
+.phone-input-fix .react-international-phone-input-container {
+  width: 100%;
+}
+.phone-input-fix .react-international-phone-input {
+  width: 100% !important;
+}
+.phone-input-fix .react-international-phone-country-selector-button {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 0.65rem;
+  background: white;
+  margin-right: 4px;
+}

@@ -1,15 +1,15 @@
 const features = [
   {
     img: "/images/products/appdeploy/oneclick.png",
-    title: "One-Click Installation:",
+    title: "Guided app install experience:",
     description:
-      "Employees receive a simple link to install the app instantly. No confusing instructions or technical skills are required.",
+      "Employees follow a streamlined, guided flow to install the app. No confusing technical steps are required.",
   },
   {
     img: "/images/products/appdeploy/uploads.png",
-    title: "Direct .apk/ipa Uploads:",
+    title: "Upload and manage internal app releases:",
     description:
-      "Simply drag and drop your apk/ipa file into our dashboard. We handle the complex processes behind the scenes.",
+      "Simply upload your application build into our dashboard. We handle the distribution workflow behind the scenes.",
   },
   {
     img: "/images/products/appdeploy/analytics.png",

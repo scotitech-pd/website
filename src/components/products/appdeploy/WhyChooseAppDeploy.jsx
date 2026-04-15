@@ -1,4 +1,5 @@
 import { MoveRightIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function WhyChooseAppDeploy() {
   const features = [
@@ -7,8 +8,8 @@ export default function WhyChooseAppDeploy() {
       desc: "Drastically reduce your expenses. AppDeploy costs up to 80% less than leading MDM providers like Jamf or Intune, potentially saving your company over $60,000 annually.",
     },
     {
-      title: "Bypass the App Store Entirely:",
-      desc: "Say goodbye to long review queues and the risk of public rejection. Deploy updates and new apps on your own schedule, instantly.",
+      title: "Use a private distribution workflow instead of public App Store release:",
+      desc: "Avoid the public App Store process for your internal tools. Deploy updates and new apps on your own schedule securely.",
     },
     {
       title: "Eliminate Technical Hurdles:",
@@ -18,87 +19,90 @@ export default function WhyChooseAppDeploy() {
       title: "Accelerate Your Workflow:",
       desc: "From startups needing to test a beta build to enterprises deploying a new internal tool, AppDeploy gets your application where it needs to be—now.",
     },
-     {
+    {
       title: "Share with Ease:",
       desc: "From Employees to Customers sharing is easy with AppDeploy.",
     },
   ];
 
   return (
-    <section className="bg-[#F5F6FB] overflow-hidden py-6 lg:py-16 lg:pb-36">
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 ">
-        <div className=" grid grid-cols-1 md:grid-cols-[60%_40%] justify-between items-center">
-          {/* Left Section */}
-          <div className="lg:py-16 py-4 ">
-            <h2 className="lg:text-4xl text-3xl font-bold text-black mb-3 font-karla">
-              Why Choose <br /> AppDeploy app?
-            </h2>
-            <p className=" lg:text-[22px] text-lg mb-14 text-black font-lora">
-              Discover the clear advantages of a smarter distribution model.
-            </p>
+    <section className="relative bg-[#F9F9FB] py-10 lg:py-16 overflow-hidden font-karla">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        
+        {/* Top Heading */}
+        <div className="mb-16">
+          <h2 className="lg:text-5xl text-3xl font-bold text-[#3D297A] mb-4">
+            Why Choose AppDeploy?
+          </h2>
+          <p className="lg:text-xl text-lg text-gray-600 font-lora max-w-2xl">
+            Experience the most efficient and strategic way to manage internal iOS distribution.
+          </p>
+        </div>
 
-            <div className="flex flex-col items-center md:items-start">
-              <div className="relative w-72 h-76 mb-16 lg:mb-0">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          
+          {/* LEFT: Feature Groups (Spans 5 columns) */}
+          <div className="lg:col-span-5 space-y-8 relative">
+            {/* Vertical Line Connector */}
+            <div className="absolute left-6 top-8 bottom-8 w-[2px] bg-gradient-to-b from-[#7E1A8E]/40 via-[#3D297A]/20 to-transparent hidden lg:block" />
+
+            {features.map((f, i) => (
+              <div key={i} className="flex gap-6 relative group">
+                <div className="flex-shrink-0 relative z-10">
+                  <div className="bg-white border-4 border-[#3D297A] rounded-2xl size-14 flex items-center justify-center group-hover:bg-[#3D297A] transition-colors duration-300">
+                    <img
+                      src="/images/products/appdeploy/logoicon.png"
+                      alt=""
+                      className="size-6 group-hover:invert transition-all"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-[#3D297A] mb-2 leading-tight">
+                    {f.title}
+                  </h4>
+                  <p className="text-gray-600 text-sm lg:text-base font-lora leading-relaxed">
+                    {f.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* RIGHT: Laptop Mockup Showcase (Spans 7 columns) */}
+          <div className="lg:col-span-7 relative pt-10 lg:pt-0">
+            <div className="relative group">
+              {/* Background Glow */}
+              <div className="absolute -inset-4 bg-[#7E1A8E]/5 rounded-[40px] blur-2xl group-hover:bg-[#7E1A8E]/10 transition-all duration-500" />
+              
+              <div className="relative">
                 <img
                   src="/images/products/appdeploy/phoneimg.png"
-                  alt="AppDeploy"
-                  className="rounded-xl object-cover "
+                  alt="AppDeploy Dashboard"
+                  className="rounded-2xl w-full h-auto shadow-[0_30px_60px_rgba(61,41,122,0.15)] border border-gray-100"
                 />
-                <div className=" hidden lg:block absolute -right-25 top-[250px] -translate-y-1/2 translate-x-1/2 w-[110%]">
-                  <img
-                    src="/images/products/appdeploy/logo.png"
-                    alt="appdeploy logo"
-                    className=""
-                  />
-                  <a href="https://appdeploy.scotitech.com:5173/">
-                    <span className="absolute  bg-white left-1/2 shadow-[0_0_10px_rgba(128,128,128,0.9)] -translate-1/2 py-3 px-5 text-[#696969] font-karla font-semibold rounded-xl text-shadow-2xs cursor-pointer hover:bg-main-dark hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300">
-                      Access Now
-                    </span>
-                  </a>
+                
+                {/* Floating Branding / CTA Badge */}
+                <div className="absolute -bottom-16 -left-10 hidden lg:block w-[55%]">
+                  <div className="relative p-2 pb-6 bg-white rounded-3xl shadow-2xl border border-gray-100 transform hover:scale-105 transition-transform duration-300">
+                    <img
+                      src="/images/products/appdeploy/logo.png"
+                      alt="appdeploy logo"
+                      className="w-full h-auto rounded-2xl"
+                    />
+                    <Link 
+                      href="https://appdeploy.scotitech.com/request-access" 
+                      target="_blank"
+                      className="absolute bottom-[-8px] -right-8 bg-[#3D297A] text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-[#7E1A8E] transition-all whitespace-nowrap shadow-xl border-2 border-white"
+                    >
+                      Access Dashboard
+                    </Link>
+                  </div>
                 </div>
-                {/* <div className=" lg:hidden absolute -left-43 -bottom-5 translate-x-1/2 w-[110%]">
-                  <img
-                    src="/images/products/appdeploy/logo.png"
-                    alt=""
-                    className=""
-                  />
-                  <a href="https://appdeploy.scotitech.com:5173/">
-                    <span className="absolute bg-white left-1/2 shadow-[0_0_10px_rgba(128,128,128,0.9)] -translate-1/2 py-3 px-5 text-[#696969] font-karla font-semibold rounded-xl text-shadow-2xs cursor-pointer hover:bg-main-dark hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300">Access Now </span>
-                  </a>
-                </div> */}
               </div>
             </div>
           </div>
 
-          {/* Right Section */}
-          <div className="relative h-full flex items-center mt-36 lg:mt-0">
-            {/* Vertical line */}
-            <div className="absolute left-10 -top-100 overflow-hidden w-[2px] bg-[#7E1A8E]/50 hidden md:block h-[2050px]"></div>
-
-            <div className="flex flex-col gap-10">
-              {features.map((f, i) => (
-                <div key={i} className="flex gap-6 relative">
-                  <div className="flex-shrink-0">
-                    <div className="bg-white border-8 border-main-dark rounded-full size-20 p-3 flex items-center justify-center relative z-10">
-                      <img
-                        src="/images/products/appdeploy/logoicon.png"
-                        alt=""
-                        className=""
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="lg:text-2xl text-[20px]  font-semibold text-main-dark font-karla">
-                      {f.title}
-                    </h4>
-                    <p className="text-grey mt-1 lg:text-sm  text-[14px] font-lora leading-4">
-                      {f.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>

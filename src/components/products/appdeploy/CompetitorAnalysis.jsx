@@ -27,14 +27,14 @@ export default function CompetitorComparisonPremium() {
     {
       parameter: "Primary Focus",
       appdeploy:
-        "Secure, compliant private app deployment (ABM + APK hosting).",
+        "Secure, compliant private app deployment.",
       applivery: "Device management and enterprise control.",
       appcenter: "Continuous integration and app testing.",
     },
     {
       parameter: "Deployment Method",
       appdeploy:
-        "Apple Business Manager (Custom App) & direct APK hosting.",
+        "Apple Business Manager (Custom App).",
       applivery: "MDM & enterprise certificates.",
       appcenter: "CI/CD pipelines and manual install links.",
     },

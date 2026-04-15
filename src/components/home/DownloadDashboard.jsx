@@ -16,7 +16,14 @@ export default function DownloadDashboard() {
           name: "Access Portal",
           details: "Available for Everyone",
           bg: "bg-blue-100",
-          link: "https://appdeploy.scotitech.com:5173/",
+          link: "https://appdeploy.scotitech.com/",
+          live: true,
+        },
+        {
+          name: "Request Access",
+          details: "AppDeploy Access Portal",
+          bg: "bg-blue-100",
+          link: "https://appdeploy.scotitech.com/request-access",
           live: true,
         },
       ],
@@ -67,7 +74,7 @@ export default function DownloadDashboard() {
           name: "Access from AppDeploy",
           details: "Available for Everyone via AppDeploy",
           bg: "bg-yellow-100",
-          link: "https://appdeploy.scotitech.com:5173/claritypath",
+          link: "https://appdeploy.scotitech.com/claritypath",
           live: true,
         },
       ],
@@ -85,7 +92,7 @@ export default function DownloadDashboard() {
           viewport={{ once: true }}
           className="font-karla font-medium text-center mt-4 min-[570px]:my-4 min-[1000px]:my-10 relative w-full"
         >
-          <p className="text-[30px] min-[500px]:text-[3.5rem] min-[630px]:text-[4.5rem] font-bold text-black opacity-5 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <p className="text-[26px] min-[500px]:text-[3rem] min-[630px]:text-[4rem] font-bold text-black opacity-5 text-nowrap -z-0 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             Explore Our Products
           </p>
           <h2 className="relative text-3xl min-[500px]:text-4xl sm:text-5xl z-10">

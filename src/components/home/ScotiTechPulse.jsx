@@ -31,6 +31,14 @@ const carouselItems = [
     ctaButtonLink:
       "https://www.linkedin.com/posts/pradeepkumar2411_nextgeninnovator-forttunaglobal-dubai-activity-7404019164304285697-_t-y?utm_source=share&utm_medium=member_desktop&rcm=ACoAADK5_VgB9HnZ87qmvk8SMPWvOm_LBIgQt2g",
   },
+  {
+    img: "/images/home/p1.png",
+    tag: "EVENT",
+    title: "ScotiTech at Forttuna Global Excellence Awards®, Dubai",
+    desc: "Join our leadership team live in Dubai to discuss innovation and enterprise technology.",
+    ctaButtonText: "Talk to Us",
+    ctaButtonLink: "/media",
+  },
 ];
 // fn to simulate fetching data from an API
 const ScotiTechPulse = () => {
@@ -52,7 +60,7 @@ const ScotiTechPulse = () => {
 
     // Web3Forms Integration
     const formData = new FormData();
-    formData.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77");
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
     formData.append("Email", email);
 
     await fetch("https://api.web3forms.com/submit", {
@@ -155,7 +163,7 @@ const ScotiTechPulse = () => {
                 Scotitech wins "NextGen Innovator of the Year" , Dubai
               </h4>
               <p className="text-gray-600 mb-4 text-md font-lora">
-                ScotiTech Solutions Limited is proud to announce that its Co-Founder and Director, Pradeep Dahiya, has been honored with the NextGen Innovator of the Year award at the Fortuna Global Excellence Awards 2025, held in Dubai, UAE.
+                ScotiTech Solutions Limited is proud to announce that its Co-Founder and Director, Pradeep Dahiya, has been honored with the NextGen Innovator of the Year award at the Forttuna Global Excellence Awards 2025, held in Dubai, UAE.
               </p>
               <div className="w-full flex justify-end">
                 <Link href="/media">

@@ -1,6 +1,7 @@
 "use client";
 import { Copyright, Instagram, Facebook, Linkedin } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const current = new Date();
@@ -8,10 +9,9 @@ const Footer = () => {
   const footer_links = [
     { id: 1, title: "Home", link: "/" },
     { id: 2, title: "Solutions", link: "/solutions" },
-    { id: 5, title: "About Us", link: "/aboutus" },
+    { id: 3, title: "About Us", link: "/aboutus" },
     { id: 4, title: "Our Products", link: "/products/appdeploy" },
     { id: 5, title: "ScotiTech Media", link: "/media" },
-
   ];
 
 
@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer className="mx-auto bg-main-dark relative overflow-hidden">
       <div className="absolute h-full w-full flex justify-center items-center text-4xl -z-10 pointer-events-none">
-        <img src="/images/home/footerbg.png" alt="" className="max-w-[80%]" />
+        <Image src="/images/home/footerbg.png" alt="" width={800} height={400} className="max-w-[80%] object-contain" />
       </div>
 
       <div className="xl:px-16 p-5 pt-5 pb-1 z-10 relative">
@@ -33,11 +33,12 @@ const Footer = () => {
           <div className="py-2">
             <div className="w-[70%] lg:w-[40%] m-auto md:m-1 relative overflow-visible">
               <Link href="/">
-                <img
+                <Image
                   src="/logo/logo.png"
                   alt="Logo - Scotitech"
-                  loading="lazy"
-                  className="cursor-pointer w-[100%] h-auto"
+                  width={180}
+                  height={45}
+                  className="cursor-pointer w-full h-auto"
                 />
               </Link>
             </div>
@@ -255,15 +256,17 @@ const Footer = () => {
               </span>
             </div>
 
-            <div className="ml-auto flex items-center font-karla text-sm breathe">
-              <span>Powered by</span>
+            <div className="ml-auto flex items-center font-karla text-xs tracking-wider uppercase text-white/50 group">
+              <span className="mr-1.5 uppercase tracking-[0.15em]">Powered by</span>
               <a
-                href="https://www.spacelinkers.com/"
+                href="https://spacelinkers.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="relative overflow-hidden"
               >
-                <span className="ml-1 text-[#F58634] font-bold cursor-pointer">
+                <span className="text-white font-bold transition-all duration-300">
                   Spacelinkers Infotech
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#F58634] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
                 </span>
               </a>
             </div>
@@ -280,30 +283,20 @@ const Footer = () => {
             </span>
           </div>
 
-          <div className="flex justify-center items-center mt-2 font-karla text-sm breathe">
-            <span>Powered by</span>
+          <div className="flex justify-center items-center mt-4 font-karla text-[10px] tracking-widest uppercase text-white/40">
+            <span className="mr-1.5">Powered by</span>
             <a
-              href="https://www.spacelinkers.com/"
+              href="https://spacelinkers.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="ml-1 text-[#F58634] font-bold cursor-pointer">
+              <span className="text-white font-bold">
                 Spacelinkers Infotech
               </span>
             </a>
           </div>
         </div>
 
-        <style>{`
-          @keyframes breathe {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.06); }
-            100% { transform: scale(1); }
-          }
-          .breathe {
-            animation: breathe 8s ease-in-out infinite;
-          }
-        `}</style>
       </div>
     </footer>
   );

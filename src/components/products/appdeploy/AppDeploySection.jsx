@@ -21,33 +21,30 @@ export default function AppDeploySection() {
           </div>
 
           {/* Subtitle */}
-          <h2 className="lg:text-2xl text-xl font-medium font-karla mt-7">
-            The Smarter Way to Distribute
-            <span className="block"> iOS Apps</span>
+          <h2 className="lg:text-4xl text-2xl font-semibold font-karla mt-7 leading-tight">
+            Internal iOS app distribution built around Apple Business Manager.
           </h2>
 
-          {/* Description: full text for desktop, short version for mobile */}
-          <p className="hidden lg:block leading-6 font-lora text-white/80 max-w-[620px]">
-            AppDeploy simplifies internal, beta, and enterprise app deployment
-            when App Store submissions face rejection or undefined delays. It
-            ensures guaranteed distribution by allowing you to deliver, manage,
-            and update your apps securely for both internal teams and external
-            users, keeping everyone on the latest version with ease.
+          {/* Description */}
+          <p className="leading-relaxed font-lora text-white/80 max-w-[700px] text-lg">
+            AppDeploy gives organisations a branded, trackable layer on top of Apple Business Manager workflows, making private app delivery easier to manage, easier to control, and easier for employees to use.
           </p>
 
-          <p className="lg:hidden block leading-6 font-lora text-white/80 max-w-[620px]">
-            AppDeploy enables seamless internal and external app distribution
-            when App Store rejects or delays approval, ensuring secure, fast,
-            and reliable access to the latest builds.
-          </p>
-
-          {/* CTA Button */}
-          <a href="https://appdeploy.scotitech.com:5173/">
-            <button className="bg-white cursor-pointer text-gray-900 px-6 py-2.5 rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora">
-              Explore Now
-              <ExternalLink className="inline-block ml-2 h-5 w-5" />
-            </button>
-          </a>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4 mt-6">
+            <a href="https://appdeploy.scotitech.com/request-access" target="_blank" rel="noopener noreferrer">
+              <button className="bg-white cursor-pointer text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_15px_rgba(140,82,255,0.8)] duration-300 transition-all font-karla">
+                Request Access
+                <ExternalLink className="inline-block ml-2 h-5 w-5" />
+              </button>
+            </a>
+            
+            <a href="https://appdeploy.scotitech.com/pricing" target="_blank" rel="noopener noreferrer">
+              <button className="border-2 border-white/40 cursor-pointer text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 duration-300 transition-all font-karla">
+                View Pricing
+              </button>
+            </a>
+          </div>
         </div>
 
         {/* === Right Side (Phone Mockup) === */}

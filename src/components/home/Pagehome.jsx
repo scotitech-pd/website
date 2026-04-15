@@ -1,7 +1,7 @@
 
 import SubscribeSection from "./SubscribeSection";
-import ScotiTechPulse from "./ScotiTechPulse ";
-import TrustAndCompliance from "./TrustAndCompliance ";
+import ScotiTechPulse from "./ScotiTechPulse";
+import TrustAndCompliance from "./TrustAndCompliance";
 import UnlockSection from "./UnlockSection";
 import FaqSection from "./FaqSection";
 import DownloadDashboard from "./DownloadDashboard";

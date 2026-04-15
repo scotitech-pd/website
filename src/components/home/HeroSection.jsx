@@ -114,7 +114,7 @@ const HeroSection = () => {
       {/* MOBILE VIEW */}
       <section className="relative lg:hidden h-[84vh] px-6 py-20 flex flex-col justify-center text-white overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center breathe"
+          className="absolute inset-0 bg-cover bg-center animate-breathe-slow"
           style={{
             backgroundImage: "url('/images/home/herobg.png')",
           }}
@@ -146,17 +146,6 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* Breathing Animation */}
-      <style>{`
-        @keyframes breathe {
-          0% { transform: scale(1); }
-          50% { transform: scale(1.06); }
-          100% { transform: scale(1); }
-        }
-        .breathe {
-          animation: breathe 8s ease-in-out infinite;
-        }
-      `}</style>
     </>
   );
 };

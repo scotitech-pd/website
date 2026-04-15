@@ -116,7 +116,7 @@ export default function WhyChooseScotiTech() {
         <img
           src="/images/home/pic.png" // replace with your actual right side image
           alt="AI Tech Illustration"
-          className="hidden min-[1080]:flex drop-shadow-[0_0_40px_rgba(168,85,247,0.6)] animate-pulse-slow absolute bottom-0 right-0 w-[35%] max-w-[700px]"
+          className="hidden min-[1080px]:flex drop-shadow-[0_0_40px_rgba(168,85,247,0.6)] animate-pulse-slow absolute bottom-0 right-0 w-[35%] max-w-[700px]"
         />
       </div>
     </section>

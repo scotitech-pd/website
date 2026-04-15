@@ -23,9 +23,8 @@ export default function AppDeployInfo() {
             AppDeploy is your ultimate solution when the App Store rejects or
             delays your iOS app. It removes uncertainty by giving you complete
             control over internal and external app distribution. Skip review
-            times, bypass rejection risks, and eliminate the heavy costs of MDM
             tools. Upload your builds, create secure links, and deploy to teams,
-            clients, or testers within minutes—no approval required. Reliable,
+            clients, or testers within minutes. Reliable,
             compliant, and built for guaranteed delivery every time.
           </p>
 
@@ -55,17 +54,17 @@ export default function AppDeployInfo() {
               }}
             >
               <p className="-mt-5 text-[17px] leading-[21px]">
-                Deploy internal apps directly to your team&apos;s devices,
-                bypassing the public App Store and complex Mobile Device
-                Management (MDM) solutions.
+                Deploy internal apps directly to your team&apos;s devices using a
+                private distribution workflow instead of public App Store
+                release, avoiding complex MDM solutions.
               </p>
             </div>
             {/* Mobile View */}
             <div className="min-[580px]:hidden  w-[90%] absolute z-10 -top-18 min-[420px]:-top-14 left-1/2 -translate-x-1/2 text-white p-2 min-[376px]:pt-4 flex justify-center items-center  text-sm leading-relaxed shadow-lg rounded-2xl bg-[#641171]">
               <p className="text-[13px] min-[376px]:text-[15px] leading-[19px]">
-                Deploy internal apps directly to your team&apos;s devices,
-                bypassing the public App Store and complex Mobile Device
-                Management (MDM) solutions.
+                Deploy internal apps directly to your team&apos;s devices using a
+                private distribution workflow instead of public App Store
+                release.
               </p>
             </div>
             <div className="flex flex-col items-center">

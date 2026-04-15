@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { useModal } from "@/components/ModalContext";   // ✅ ADDED
@@ -43,18 +44,17 @@ const Navbar = () => {
 
       {/* MOBILE OVERLAY */}
       <div
-        className="black_overlay w-full h-full fixed lg:hidden z-40 duration-500 mt-[-10px]"
+        className="black_overlay w-full h-full fixed lg:hidden z-[60] duration-500 bg-black/60 backdrop-blur-sm"
         onClick={() => setToggle(false)}
         style={{ opacity: toggle ? 1 : 0, visibility: toggle ? "visible" : "hidden" }}
       >
-        {/* MOBILE NAV */}
+        {/* MOBILE NAV MENU */}
         <nav
           onClick={(e) => e.stopPropagation()}
-          className={"font-sans w-full h-fit bg-main-dark absolute duration-300 " + (toggle ? "top-[0%]" : "top-[-100%]")}
+          className={`font-sans w-full max-w-[300px] h-full bg-main-dark absolute right-0 shadow-2xl transition-transform duration-300 ${toggle ? "translate-x-0" : "translate-x-full"}`}
         >
-          <div className={(islength ? "mt-[80px]" : "mt-[70px]") + " h-fit py-10 flex flex-col items-end justify-start px-6"}>
-            
-            <ul className="text-[16px] font-semibold w-full font-karla text-right">
+          <div className="h-full py-16 flex flex-col items-center px-6">
+            <ul className="text-lg font-semibold w-full font-karla space-y-6">
               {nav_links.map((item, id) => {
                 if (item.title === "Our Products") {
                   return (
@@ -116,13 +116,13 @@ const Navbar = () => {
       </div>
 
       {/* DESKTOP NAVBAR */}
-      <nav className={(islength ? "h-[80px]" : "h-[70px]") + " w-full fixed bg-main-dark duration-500 z-40 shadow-2xl"}>
+      <nav className={(islength ? "h-[80px]" : "h-[70px]") + " w-full fixed bg-main-dark transition-all duration-300 z-50 shadow-xl"}>
         <div className="h-full mx-auto flex items-center justify-between pl-2 lg:px-5 xl:px-5">
 
           {/* LOGO */}
           <div className="max-w-[180px] lg:pl-1">
             <Link href="/">
-              <img src="/logo/logo.png" alt="Logo" className="cursor-pointer w-[100%]" />
+              <Image src="/logo/logo.png" alt="Logo" width={180} height={45} className="cursor-pointer" />
             </Link>
           </div>
 
@@ -163,7 +163,7 @@ const Navbar = () => {
                                 ${product.link === pathname && "border-[#641171] bg-[#2a1836]/70"}`}
                             >
                               <div className="flex items-center justify-between mb-3">
-                                <img src={product.icon} alt={product.title} className="w-10 h-10 object-contain rounded-lg" />
+                                <Image src={product.icon} alt={product.title} width={40} height={40} className="object-contain rounded-lg" />
                                 <ArrowRight className="w-5 h-5 text-white opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                               </div>
 
@@ -201,9 +201,9 @@ const Navbar = () => {
 
           </ul>
 
-          {/* MOBILE TOGGLE */}
-          <div className="cursor-pointer lg:hidden mr-4" onClick={() => setToggle(prev => !prev)}>
-            {toggle ? <X className="text-2xl text-white" /> : <Menu className="text-4xl text-white" />}
+          {/* MOBILE TOGGLE - Higher Z to stay on top */}
+          <div className="cursor-pointer lg:hidden mr-4 z-[70] transition-colors" onClick={() => setToggle(prev => !prev)}>
+            {toggle ? <X className="text-3xl text-white" /> : <Menu className="text-4xl text-white" />}
           </div>
 
         </div>

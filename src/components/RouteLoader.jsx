@@ -2,11 +2,12 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function RouteLoader({ children }) {
   const pathname = usePathname();
   const [loading, setLoading] = useState(true);
-  const LOADER_TIME = 2000;
+  const LOADER_TIME = 1200;
 
   useEffect(() => {
     if (!pathname) return;
@@ -71,11 +72,13 @@ export default function RouteLoader({ children }) {
           />
 
           {/* Logo */}
-          <img
+          <Image
             src="/logo/logo.png"
+            alt="Logo"
+            width={110}
+            height={28}
+            className="animate-breathe"
             style={{
-              width: 110,
-              animation: "breathe 2s ease-in-out infinite",
               zIndex: 3,
             }}
           />
