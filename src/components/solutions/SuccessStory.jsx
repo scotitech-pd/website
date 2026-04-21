@@ -8,11 +8,12 @@ export default function SuccessStory() {
         {/* Heading */}
         <div className="text-center mb-14 relative">
           <h2 className="text-3xl lg:text-5xl font-bold text-[#3D297A] relative z-10">
-            Success Story of AppDeploy
+            Why AppDeploy Was Built
           </h2>
           <p className="mt-3 text-gray-600 font-lora text-lg max-w-3xl mx-auto">
-            A true story of resilience, technical depth, and the moment
-            AppDeploy’s foundation was built.
+            The product direction came from a real internal distribution
+            problem and turned into a clearer operational model for private iOS
+            delivery.
           </p>
           <span className="absolute text-nowrap hidden lg:block text-[90px] font-bold text-gray-300/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none">
             Success Story
@@ -28,7 +29,7 @@ export default function SuccessStory() {
           className="bg-white rounded-2xl border border-gray-100 shadow-md py-4 lg:py-7 px-8 md:px-10 lg:px-14 relative z-10 font-lora"
         >
           <h3 className="text-2xl font-semibold text-[#3D297A] mb-6 font-karla text-center lg:text-left">
-            The Journey — From Rejection to Release
+            The Journey From Friction to a Better Workflow
           </h3>
 
           <div className="space-y-6 text-gray-700 text-[15px] leading-relaxed">
@@ -39,14 +40,14 @@ export default function SuccessStory() {
               <span className="italic text-[#7E1A8E]">
                 4.3(b) “Design – Spam”
               </span>
-              , we faced the reality that getting an app approved or even
-              privately distributed has become increasingly difficult.
+              , we saw how difficult internal distribution workflows could
+              become for small teams and organisations trying to ship private
+              iOS apps cleanly.
             </p>
 
             <p>
-              Instead of quitting, we chose to build solutions that solve this
-              challenge not just for us, but for others facing the same
-              struggle.
+              Instead of treating that as a one-off problem, we built a product
+              around the operational gaps we had experienced ourselves.
               <br />
               <strong>That decision led to two major outcomes:</strong>
             </p>
@@ -56,9 +57,10 @@ export default function SuccessStory() {
                 👉 <strong className="font-karla">ClarityPath</strong> —
                 redesigned, improved, and successfully deployed via Apple
                 Business Manager.{"\n"}
-                👉 <strong className="font-karla">AppDeploy</strong> — a secure,
-                ABM-ready app distribution solution built to prevent teams from
-                ever hitting the same roadblock.
+                👉 <strong className="font-karla">AppDeploy</strong> — a branded
+                internal distribution platform built around Apple Business
+                workflows so teams can manage private app delivery with more
+                clarity.
               </p>
             </div>
 
@@ -66,17 +68,17 @@ export default function SuccessStory() {
               <strong className="font-karla">
                 AppDeploy was developed for real-world use cases where:
               </strong>
-              <br />• Your app doesn't get App Store approval, <br />
-              • You don’t want to invest heavily into complex enterprise MDM
-              tools,
-              <br />• You simply need safe, private, and controlled app
-              deployment using Apple Business Manager.
+              <br />• You need a clearer route for internal iOS distribution,
+              <br />• You do not want to default every rollout to a full MDM
+              programme,
+              <br />• You need a branded operational layer around Apple
+              Business based app delivery.
             </p>
 
             <blockquote className="border-l-4 border-[#7E1A8E] bg-[#F5EDFF] p-6 rounded-lg italic text-gray-800">
-              “Today, we help others get their apps live on Apple Business
-              Manager — because we’ve gone through that rejection, that
-              redesign, and that approval process ourselves.”
+              “AppDeploy exists because internal app distribution needed a more
+              usable operational layer, not because organisations needed
+              another full mobility suite.”
             </blockquote>
           </div>
 

@@ -1,108 +1,63 @@
-import { MoveRightIcon } from "lucide-react";
-import Link from "next/link";
-
 export default function WhyChooseAppDeploy() {
-  const features = [
+  const reasons = [
     {
-      title: "Slash Your Costs:",
-      desc: "Drastically reduce your expenses. AppDeploy costs up to 80% less than leading MDM providers like Jamf or Intune, potentially saving your company over $60,000 annually.",
+      title: "Built around a real enterprise distribution path",
+      desc: "AppDeploy is positioned around private iOS distribution workflows organisations already need to manage, rather than around a generic app-hosting story.",
     },
     {
-      title: "Use a private distribution workflow instead of public App Store release:",
-      desc: "Avoid the public App Store process for your internal tools. Deploy updates and new apps on your own schedule securely.",
+      title: "Less friction for internal users",
+      desc: "The product improves the install and access experience for employees, partners, and testers who should not have to navigate a confusing rollout process.",
     },
     {
-      title: "Eliminate Technical Hurdles:",
-      desc: "Our platform is built for clarity. You don’t need a dedicated IT expert to manage deployments. If you can upload a file, you can use AppDeploy.",
+      title: "Operational clarity for release teams",
+      desc: "Distribution becomes easier to coordinate when builds, groups, rollout activity, and install visibility sit inside one controlled workspace.",
     },
     {
-      title: "Accelerate Your Workflow:",
-      desc: "From startups needing to test a beta build to enterprises deploying a new internal tool, AppDeploy gets your application where it needs to be—now.",
-    },
-    {
-      title: "Share with Ease:",
-      desc: "From Employees to Customers sharing is easy with AppDeploy.",
+      title: "A lighter alternative to heavier internal tooling",
+      desc: "For organisations that do not want to default every use case to a full MDM programme, AppDeploy provides a more focused operational model.",
     },
   ];
 
   return (
-    <section className="relative bg-[#F9F9FB] py-10 lg:py-16 overflow-hidden font-karla">
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-        
-        {/* Top Heading */}
-        <div className="mb-16">
-          <h2 className="lg:text-5xl text-3xl font-bold text-[#3D297A] mb-4">
-            Why Choose AppDeploy?
+    <section className="relative overflow-hidden py-16 sm:py-20 text-[#0F172A]">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_24%)]" />
+
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="max-w-4xl mb-12">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80 mb-3">
+            Why AppDeploy
+          </p>
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">
+            A more usable model for private iOS rollout
           </h2>
-          <p className="lg:text-xl text-lg text-gray-600 font-lora max-w-2xl">
-            Experience the most efficient and strategic way to manage internal iOS distribution.
+          <p className="text-base md:text-xl text-slate-700 font-lora leading-8">
+            The value of AppDeploy is not just technical distribution. It is
+            the operational structure it gives to enterprise teams that need a
+            better way to manage internal releases.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          
-          {/* LEFT: Feature Groups (Spans 5 columns) */}
-          <div className="lg:col-span-5 space-y-8 relative">
-            {/* Vertical Line Connector */}
-            <div className="absolute left-6 top-8 bottom-8 w-[2px] bg-gradient-to-b from-[#7E1A8E]/40 via-[#3D297A]/20 to-transparent hidden lg:block" />
-
-            {features.map((f, i) => (
-              <div key={i} className="flex gap-6 relative group">
-                <div className="flex-shrink-0 relative z-10">
-                  <div className="bg-white border-4 border-[#3D297A] rounded-2xl size-14 flex items-center justify-center group-hover:bg-[#3D297A] transition-colors duration-300">
-                    <img
-                      src="/images/products/appdeploy/logoicon.png"
-                      alt=""
-                      className="size-6 group-hover:invert transition-all"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-[#3D297A] mb-2 leading-tight">
-                    {f.title}
-                  </h4>
-                  <p className="text-gray-600 text-sm lg:text-base font-lora leading-relaxed">
-                    {f.desc}
-                  </p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {reasons.map((reason, index) => (
+            <div
+              key={reason.title}
+              className="rounded-[1.75rem] border border-slate-200 bg-white/90 backdrop-blur-sm px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.07)]"
+            >
+              <div className="flex items-center gap-4 mb-5">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-white font-karla font-bold">
+                  0{index + 1}
+                </span>
+                <div className="h-px flex-1 bg-gradient-to-r from-slate-300 to-transparent" />
               </div>
-            ))}
-          </div>
-
-          {/* RIGHT: Laptop Mockup Showcase (Spans 7 columns) */}
-          <div className="lg:col-span-7 relative pt-10 lg:pt-0">
-            <div className="relative group">
-              {/* Background Glow */}
-              <div className="absolute -inset-4 bg-[#7E1A8E]/5 rounded-[40px] blur-2xl group-hover:bg-[#7E1A8E]/10 transition-all duration-500" />
-              
-              <div className="relative">
-                <img
-                  src="/images/products/appdeploy/phoneimg.png"
-                  alt="AppDeploy Dashboard"
-                  className="rounded-2xl w-full h-auto shadow-[0_30px_60px_rgba(61,41,122,0.15)] border border-gray-100"
-                />
-                
-                {/* Floating Branding / CTA Badge */}
-                <div className="absolute -bottom-16 -left-10 hidden lg:block w-[55%]">
-                  <div className="relative p-2 pb-6 bg-white rounded-3xl shadow-2xl border border-gray-100 transform hover:scale-105 transition-transform duration-300">
-                    <img
-                      src="/images/products/appdeploy/logo.png"
-                      alt="appdeploy logo"
-                      className="w-full h-auto rounded-2xl"
-                    />
-                    <Link 
-                      href="https://appdeploy.scotitech.com/request-access" 
-                      target="_blank"
-                      className="absolute bottom-[-8px] -right-8 bg-[#3D297A] text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-[#7E1A8E] transition-all whitespace-nowrap shadow-xl border-2 border-white"
-                    >
-                      Access Dashboard
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-2xl font-semibold text-slate-900 mb-3 font-karla leading-8">
+                {reason.title}
+              </h3>
+              <p className="text-slate-600 font-lora leading-8">
+                {reason.desc}
+              </p>
             </div>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>

@@ -6,91 +6,75 @@ import { ChevronDown } from "lucide-react";
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
- 
   const faqs = [
     {
-      question: "How fast can I set up AppDeploy?",
+      question: "How do I know whether AppDeploy or AXOS is the better fit?",
       answer:
-        "In under 30 minutes - no coding, no MDM enrollment required.",
+        "Choose AppDeploy if your priority is private app distribution and release control. Choose AXOS if your priority is secure daily operations with mail, storage, coordination tools, and AI inside one controlled environment.",
     },
     {
-      question: "Is there a free trial?",
+      question: "Is AppDeploy intended to replace a full mobility platform?",
       answer:
-        "Yes! You can try AppDeploy for free with limited installs.",
+        "No. AppDeploy is positioned as a focused operational layer for internal app distribution rather than as a broad device-management platform.",
     },
     {
-      question: "What if my company grows?",
+      question: "Can AXOS support organisations that want more control over hosting?",
       answer:
-        "ScotiTech products scale with you - from 20 users to 5000+.",
+        "Yes. AXOS supports hosted, private cloud, and self-hosted models for teams that want more control over data boundaries, AI execution, and operational ownership.",
     },
     {
-      question: "Do I need a developer account?",
+      question: "Where does ClarityPath fit in the portfolio?",
       answer:
-        "AppDeploy works with Apple Business Manager, removing the need for enterprise-level accounts.",
+        "ClarityPath remains part of the wider portfolio as a focused product for structured planning, reflection, and guided decision support.",
     },
-
   ];
 
   return (
-    <section
-      className="relative overflow-hidden "
-      style={{
-        backgroundImage: "url('/images/solution/faqbg.png')", // replace with your image
-        backgroundSize: "cover",
-        backgroundPosition: "left",
-      }}
-    >
-      <div className="bg-white/90 min-[880px]:hidden absolute h-full w-full "></div>
-      <div className="max-[880px]:ml-0 max-[1250px]:ml-52 relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full grid min-[1250px]:grid-cols-[60%_40%] min-[1650px]:grid-cols-2 gap-4 min-[1650px]:gap-10 items-center text-black  py-10 min-[500px]:py-15 sm:py-20 ">
-        {/* Left Side */}
-        <div className=" w-fit min-[1370px]:mx-auto max-[1250px]:ml-0 max-[1370px]:ml-auto max-[1370px]:pr-4">
-          <h3 className="text-3xl md:text-4xl font-semibold text-black relative z-10 font-karla">
-            <p className="max-[475px]:hidden text-[5rem] font-karla font-medium text-black opacity-5 absolute select-none -z-10 top-1/2 transform -translate-y-1/2 -left-3">
-              FAQ
-            </p>
+    <section className="relative overflow-hidden bg-white py-16 md:py-20">
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 grid gap-10 xl:grid-cols-[0.8fr_1.2fr] items-start text-black">
+        <div className="max-w-3xl">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-3">
             Frequently Asked Questions
+          </p>
+          <h3 className="text-3xl md:text-5xl font-semibold text-[#0F172A] relative z-10 font-karla">
+            Questions about our solutions
           </h3>
-          <p className="mt-2 min-[475px]:mt-10 text-xl min-[390px]:text-2xl leading-7 z-10 font-medium font-lora">
-            FAQs about Our Products
+          <p className="mt-5 text-lg leading-8 text-slate-700 font-lora">
+            A quick overview of the main questions buyers may ask when
+            reviewing the current portfolio.
           </p>
         </div>
 
-        {/* Right Side - Accordion */}
-        <div className="space-y-4 h-[440px] min-[320px]:h-[350px] min-[500px]:h-[310px] min-[1259px]:h-[340px] max-[645px]:w-auto max-[1020px]:w-[570px] max-[1250px]:w-[700px]">
+        <div className="space-y-4">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className=" rounded-xl shadow-sm bg-gradient-to-r from-white to-purple-50 relative overflow-hidden"
+              className="rounded-[1.4rem] border border-slate-200 shadow-sm bg-[linear-gradient(180deg,#FFFFFF_0%,#F8FAFC_100%)] relative overflow-hidden"
             >
-              <div className=" absolute bg-[#7E1A8E]/70 w-4 h-full -z-0"></div>
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 tabIndex="-1"
-                className="w-full flex justify-between items-center text-left pr-5 py-2.5 font-medium text-black font-lora z-10 select-none"
+                className="w-full flex justify-between items-center text-left px-5 py-4 font-medium text-black font-lora z-10 select-none"
               >
-                <div className="flex items-center gap-3.5 text-[15px] pl-1.5 z-0 py-2 cursor-pointer">
-                  <div className=" bg-main-dark rounded-full size-[26px] flex items-center justify-center ">
-                    <img
-                      src="/images/home/faqicon.png"
-                      className="size-[21px]"
-                      alt="faqicon"
-                    />
+                <div className="flex items-center gap-3.5 text-[15px] z-0 cursor-pointer">
+                  <div className="bg-[#0F172A] rounded-full size-[30px] flex items-center justify-center text-white text-xs font-karla">
+                    0{i + 1}
                   </div>
-                  <span className="font-karla ">{faq.question}</span>
+                  <span className="font-karla">{faq.question}</span>
                 </div>
                 <ChevronDown
                   className={`transition-transform duration-300 size-5 ${
-                    openIndex === i ? "rotate-180 text-main-dark" : "text-main"
+                    openIndex === i ? "rotate-180 text-slate-900" : "text-slate-500"
                   }`}
                 />
               </button>
 
               <div
                 className={`transition-all duration-500 ${
-                  openIndex === i ? "max-h-40 pb-4 -mt-3" : "max-h-0"
+                  openIndex === i ? "max-h-44 pb-5" : "max-h-0"
                 }`}
               >
-                <p className="text-[#585858] text-sm leading-3.6 font-medium font-lora pl-11 pr-2  ml-0.5">
+                <p className="text-slate-600 text-sm leading-7 font-medium font-lora px-5 pl-[4.7rem] pr-6">
                   {faq.answer}
                 </p>
               </div>

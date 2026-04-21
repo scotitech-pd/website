@@ -24,10 +24,8 @@ export default function RequestaQuote() {
 
   const services = [
     "AppDeploy",
-    "Opsly",
+    "AXOS",
     "ClarityPath",
-    "Elder Connect+",
-    "AI Caption Studio",
     "Other",
   ];
 
@@ -105,14 +103,14 @@ export default function RequestaQuote() {
         onClick={(e) => e.stopPropagation()}
       >
         {/* HEADER */}
-        <div className="bg-[#641171] px-6 py-4 rounded-t-2xl">
+        <div className="bg-[#0F172A] px-6 py-4 rounded-t-2xl">
           <div className="flex justify-between">
             <div>
               <h2 className="text-white text-xl font-karla font-semibold">
-                Talk to Sales
+                Talk to Our Team
               </h2>
-              <p className="text-purple-200 text-xs font-karla">
-                Fill out the form and we will reach out shortly.
+              <p className="text-slate-300 text-xs font-karla">
+                Fill out the form and we will get back to you shortly.
               </p>
             </div>
 
@@ -126,10 +124,10 @@ export default function RequestaQuote() {
         {success && (
           <div className="absolute inset-0 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-2xl z-50">
             <div className="flex flex-col items-center gap-3 animate-fade-in">
-              <div className="w-20 h-20 bg-[#641171] rounded-full flex items-center justify-center animate-scale-up shadow-lg shadow-purple-300">
+              <div className="w-20 h-20 bg-[#0F172A] rounded-full flex items-center justify-center animate-scale-up shadow-lg shadow-slate-300">
                 <Check className="w-10 h-10 text-white animate-pop" />
               </div>
-              <p className="font-karla text-[#641171] text-lg font-semibold">
+              <p className="font-karla text-[#0F172A] text-lg font-semibold">
                 Message Sent!
               </p>
             </div>
@@ -149,7 +147,7 @@ export default function RequestaQuote() {
               placeholder="Enter your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-[#641171] outline-none focus:border-[#641171]"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-slate-900 outline-none focus:border-[#0F172A]"
             />
           </div>
 
@@ -161,7 +159,7 @@ export default function RequestaQuote() {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-[#641171] outline-none focus:border-[#641171]"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-slate-900 outline-none focus:border-[#0F172A]"
             />
           </div>
 
@@ -173,7 +171,7 @@ export default function RequestaQuote() {
               placeholder="Company name"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-[#641171] outline-none focus:border-[#641171]"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-slate-900 outline-none focus:border-[#0F172A]"
             />
           </div>
 
@@ -187,7 +185,7 @@ export default function RequestaQuote() {
                 name: "phone",
                 required: true,
                 className:
-                  "w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-[#641171] outline-none focus:border-[#641171]",
+                  "w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-slate-900 outline-none focus:border-[#0F172A]",
               }}
               className="w-full phone-input-fix"
             />
@@ -199,7 +197,7 @@ export default function RequestaQuote() {
               required
               value={service}
               onChange={(e) => setService(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-karla text-[#641171] outline-none focus:border-[#641171] bg-white"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-karla text-slate-900 outline-none focus:border-[#0F172A] bg-white"
             >
               <option value="">Select</option>
               {services.map((s) => (
@@ -218,14 +216,14 @@ export default function RequestaQuote() {
               placeholder="Write your message..."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-[#641171] outline-none resize-none focus:border-[#641171]"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-slate-900 outline-none resize-none focus:border-[#0F172A]"
             />
           </div>
 
           <button
             type="submit"
             disabled={sending}
-            className="w-full bg-[#641171] hover:bg-[#7c27a1] text-white text-sm py-2 rounded-lg font-semibold flex items-center justify-center gap-2"
+            className="w-full bg-[#0F172A] hover:bg-slate-900 text-white text-sm py-2 rounded-lg font-semibold flex items-center justify-center gap-2"
           >
             {sending ? "Sending..." : "Send Message"}
             {!sending && <ArrowRight className="w-4 h-4" />}

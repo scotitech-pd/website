@@ -24,12 +24,12 @@ export default function PainPointStory() {
     },
     {
       title: "Introducing AppDeploy",
-      text: "AppDeploy was built from that experience — a secure, ABM-ready app deployment platform designed to simplify private app releases for iOS and Android without expensive MDM setups.",
+      text: "AppDeploy was built from that experience as a branded internal distribution platform designed around Apple Business workflows and a clearer operational model for private iOS delivery.",
       img: "/images/products/appdeploy/3.jpeg",
     },
     {
-      title: "One Mission — Simplify Distribution, Empower Innovation",
-      text: "Today, AppDeploy helps developers, schools, and organizations distribute apps faster, safer, and smarter. Our mission is simple — make deployment easy so innovation never slows down.",
+      title: "One Mission — Make Internal Distribution More Usable",
+      text: "Today, AppDeploy helps organisations manage private iOS app delivery through a clearer workspace for releases, access, visibility, and employee install journeys.",
       img: "/images/products/appdeploy/2.jpeg",
     },
   ];
@@ -40,11 +40,11 @@ export default function PainPointStory() {
         {/* Heading */}
         <div className="text-center mb-14 relative">
           <h2 className="text-3xl lg:text-5xl font-bold text-[#3D297A] relative z-10">
-            From Rejection to Release — The Birth of AppDeploy
+            The Problem That Led to AppDeploy
           </h2>
           <p className="mt-3 text-gray-600 font-lora text-lg max-w-3xl mx-auto">
-            A journey that turned setbacks into solutions — built to empower
-            teams facing the same struggles we did.
+            A product story shaped by internal distribution friction and the
+            need for a more practical operational layer.
           </p>
           <span className="absolute hidden lg:block text-[90px] font-bold text-gray-300/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none">
             Our Story
@@ -105,12 +105,12 @@ export default function PainPointStory() {
           className="lg:mt-10 mt-8 text-center max-w-3xl mx-auto bg-[#F5EDFF] border-l-[8px] border-[#7E1A8E] rounded-xl shadow-md p-10 font-lora"
         >
           <p className="text-gray-700 text-md lg:text-lg italic">
-            “Every rejection hides a lesson — AppDeploy was born from ours, to
-            make sure no developer has to face the same roadblock again.”
+            “AppDeploy was shaped by a real operational problem: internal app
+            delivery needed more clarity, less friction, and a better
+            day-to-day workflow.”
           </p>
         </motion.div>
       </div>
     </section>
   );
 }
-`   `;

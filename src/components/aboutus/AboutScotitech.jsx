@@ -10,20 +10,20 @@ const AboutScotiTech = () => {
     {
       img1: "/images/aboutus/team-icon-white.png",
       img2: "/images/aboutus/team-icon.png",
-      title: "Small Team, Big Impact",
-      subtitle: "A growing team of engineers and creators across the UK and India.",
+      title: "Focused Team",
+      subtitle: "A product-led team working across the UK and India.",
     },
     {
       img1: "/images/aboutus/globe-icon-white.png",
       img2: "/images/aboutus/globe-icon.png",
-      title: "Global Mindset from Day One",
-      subtitle: "Our products are designed for worldwide compatibility and deployment.",
+      title: "Cross-Region Delivery",
+      subtitle: "Products shaped for teams, markets, and deployment models beyond one location.",
     },
     {
       img1: "/images/aboutus/users-icon-white.png",
       img2: "/images/aboutus/users-icon.png",
-      title: "Real Users, Real Problems Solved",
-      subtitle: "Our apps and tools already support users across multiple countries.",
+      title: "Real Product Direction",
+      subtitle: "The company is being built around defined products, real rollout paths, and clearer commercial focus.",
     },
   ];
 
@@ -59,10 +59,14 @@ const AboutScotiTech = () => {
                     <h2 className="relative z-10 font-bold text-4xl">About ScotiTech</h2>
                   </div>
                   <h2 className="text-xl lg:text-[18px] pr-9 font-karla 2xl:text-[25px] font-bold text-black mb-4 lg:mb-6">
-                  ScotiTech Solutions Limited is a UK-based technology company building secure, ethical, and scalable digital products.
+                    ScotiTech Solutions Limited is a UK-based software company building practical, privacy-conscious digital products.
                   </h2>
                   <p className="text-base lg:text-[15px] font-lora text-black leading-relaxed">
-                   Founded in Scotland, we help global businesses streamline app deployment, reduce SaaS dependence, and adopt trusted digital infrastructure through tools like AppDeploy, Opsly, and AI-powered solutions.s.
+                    Founded in Scotland, we build software that helps
+                    organisations improve internal app distribution, bring core
+                    daily tools into more controlled environments, and adopt
+                    more trusted digital infrastructure through products like
+                    AppDeploy, AXOS, and ClarityPath.
                   </p>
                 </div>
 
@@ -167,7 +171,7 @@ const AboutScotiTech = () => {
                     ScotiTech
                   </h2>
                   <p className="text-[#641171] font-karla text-center font-semibold px-5 lg:text-[13px]">
-                    Global Reach, Pioneering Solutions
+                    Practical software with clearer product focus
                   </p>
                 </div>
               </div>
@@ -183,12 +187,13 @@ const AboutScotiTech = () => {
             About ScotiTech
           </h2>
           <h3 className="text-lg font-karla font-semibold text-black mb-2">
-            ScotiTech: Pioneering Technology Solutions for Global Business
+            Practical software products with a clear operational focus
           </h3>
           <p className="text-[15px] text-gray-800 font-lora leading-relaxed mb-8">
-            We're a UK-based technology company with a global vision,
-            transforming how businesses leverage technology through innovative
-            products and solutions.
+            We are a UK-based software company building focused products for
+            modern teams, with a clearer product story around internal
+            distribution, private operational tooling, and supporting workflow
+            software.
           </p>
         </div>
 

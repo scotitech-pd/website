@@ -1,93 +1,69 @@
 "use client";
-import Link from "next/link";
+
 import { useModal } from "@/components/ModalContext";
+
+const problems = [
+  "Internal iOS distribution workflows often become fragmented across approvals, access, and user rollout.",
+  "Teams default to broader mobility tools even when they only need a cleaner delivery and visibility layer.",
+  "Operational work gets buried under disconnected tools, inconsistent release paths, and unclear ownership.",
+  "Software that should feel focused instead becomes noisy, harder to adopt, and harder to manage.",
+];
 
 export default function TechnologySection() {
   const { setShowModal } = useModal();
-  const problems = [
-    {
-      icon: "/images/solution/ii1.png",
-      text: "Private iOS apps often get rejected or stuck in long App Store review cycles, delaying internal releases.",
-    },
-    {
-      icon: "/images/solution/ii2.png",
-      text: "Traditional MDM tools are costly, complex, and slow down internal app deployment.",
-    },
-    {
-      icon: "/images/solution/ii3.png",
-      text: "Teams struggle to share and test internal app builds smoothly during development.",
-    },
-    {
-      icon: "/images/solution/ii4.png",
-      text: "Managing installs, updates, and access across teams is difficult without proper visibility.",
-    },
-  ];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-[#2b1f6e] to-[#3c99e5] text-white py-20">
-      <img
-        src="/images/solution/tabimg.png"
-        alt="Tech Devices"
-        className=" absolute left-0 w-[80%] lg:w-[40%]  top-30 min-[600px]:top-5 min-[1170px]:-top-5  min-[1400px]:-top-10  min-[1700px]:hidden opacity-20 lg:opacity-100"
-      />
-      <div className=" max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full ">
-        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] items-center justify-between gap-0">
-          {/* Left image */}
-          <div className="">
-            <img
-              src="/images/solution/tabimg1.png" // replace this with your actual image path
-              alt="Tech Devices"
-              className="w-[90%] hidden min-[1700px]:flex "
-            />
-          </div>
+    <section className="relative overflow-hidden bg-[#0F172A] py-16 md:py-20 text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.22),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.14),transparent_24%)]" />
+      <div className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-[size:56px_56px]" />
 
-          {/* Right content */}
-          <div className="text-center lg:text-left">
-            <p className="text-teal-300 font-lora font-medium text-base mb-3">
-              How ScotiTech Solves These
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="grid gap-10 xl:grid-cols-[0.95fr_1.05fr] items-start">
+          <div className="max-w-3xl">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-cyan-300/90 mb-4">
+              The Operational Gap
             </p>
-
-            <h2 className="text-2xl min-[380px]:text-3xl min-[450px]:text-4xl min-[1060px]:text-5xl font-karla font-medium ">
-              Technology <span className="text-pink-300">moves fast.</span>
-              <span className="block mt-0.5">
-                Problems keep <span className="text-pink-300">piling up</span>
-              </span>
+            <h2 className="text-3xl md:text-5xl font-karla font-semibold leading-tight">
+              Modern software problems rarely come from lack of tools
             </h2>
-
-            <p className="mb-9 min-[380px]:text-lg text-white max-w-2xl mx-auto lg:mx-0 font-lora my-4 leading-5">
-              Businesses, creators, and individuals are stuck between complexity
-              and cost.
+            <p className="mt-5 text-white/72 font-lora text-lg leading-8">
+              They come from unclear workflows, heavier systems than the job
+              actually requires, and interfaces that make daily operations
+              harder instead of simpler.
             </p>
+
+            <div className="mt-8 rounded-[1.6rem] border border-white/10 bg-white/5 p-6">
+              <p className="text-sm font-karla uppercase tracking-[0.16em] text-white/50 mb-3">
+                Our Approach
+              </p>
+              <p className="text-white/78 font-lora leading-8">
+                ScotiTech products are being shaped around practical workflows:
+                simpler internal distribution, calmer operations, and more
+                credible product experiences.
+              </p>
+            </div>
 
             <button
               onClick={() => setShowModal(true)}
-              className="bg-black/20 border cursor-pointer border-white text-white font-karla font-medium text-[16px] px-4 py-2 rounded-full"
+              className="mt-8 inline-flex items-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold font-karla text-white hover:bg-white/14 transition-colors cursor-pointer"
             >
-              Contact Sales
+              Talk Through Your Use Case
             </button>
           </div>
-        </div>
 
-        {/* Problem cards */}
-        <div className="mt-10 min-[1300px]:mt-20 min-[1700px]:mt-0 grid grid-cols-1 min-[590px]:grid-cols-2 min-[1115px]:grid-cols-4 gap-4 min-[1160px]:gap-6">
-          {problems.map((item, index) => (
-            <div
-              key={index}
-              className="relative flex py-2.5 pr-2 ml-7 min-[1160px]:ml-10 bg-transparent border-white/50 border-2 rounded-2xl group justify-start items-center transition"
-            >
-              <div className="h-16 w-12 min-[1400px]:w-14 shrink-0  min-[1160px]:h-20 bg-yel low"></div>
-              <div className="absolute left-0 top-1/2 bg-[#640D5F] size-16 min-[1160px]:size-20 flex justify-center items-center rounded-full border-4 border-[#a879db] group-hover:border-white transition duration-200 group-hover:scale-110 text-pink-100 transform -translate-x-1/2 -translate-y-1/2">
-                <img
-                  src={item.icon}
-                  alt={item.text}
-                  className="h-8 min-[1160px]:h-11"
-                />
+          <div className="grid gap-4 md:grid-cols-2">
+            {problems.map((text, index) => (
+              <div
+                key={text}
+                className="rounded-[1.6rem] border border-white/10 bg-white/[0.06] p-6 shadow-[0_18px_40px_rgba(2,6,23,0.22)]"
+              >
+                <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(79,70,229,0.35),rgba(14,165,233,0.22))] text-sm font-semibold font-karla text-white">
+                  0{index + 1}
+                </div>
+                <p className="text-white/78 font-lora leading-7">{text}</p>
               </div>
-              <p className="text-[13px] text-white font-lora text-left min-[1260px]:leading-relaxed tracking-wide flex justify-center items-center bg-red- 400">
-                {item.text}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,83 +1,79 @@
 const features = [
   {
     img: "/images/products/appdeploy/oneclick.png",
-    title: "Guided app install experience:",
+    title: "Guided install flow",
     description:
-      "Employees follow a streamlined, guided flow to install the app. No confusing technical steps are required.",
+      "Give employees and internal users a clearer path to install the right build without technical confusion.",
   },
   {
     img: "/images/products/appdeploy/uploads.png",
-    title: "Upload and manage internal app releases:",
+    title: "Release management workspace",
     description:
-      "Simply upload your application build into our dashboard. We handle the distribution workflow behind the scenes.",
+      "Upload builds, manage visibility, and control internal rollout actions from one operational surface.",
   },
   {
     img: "/images/products/appdeploy/analytics.png",
-    title: "Real-Time Analytics:",
+    title: "Install and rollout visibility",
     description:
-      "Track every installation in real-time. See who has downloaded the app and manage versions from one central hub.",
+      "Track release activity and monitor how distribution is progressing across teams and rollout groups.",
   },
   {
     img: "/images/products/appdeploy/redemption.png",
-    title: "Enterprise-Grade Security:",
+    title: "Private access control",
     description:
-      "Safeguard your app with advanced protection and controlled user access at every stage of distribution.",
+      "Support controlled distribution with a structure that fits internal access and enterprise governance expectations.",
   },
   {
     img: "/images/products/appdeploy/required.png",
-    title: "No MDM Required:",
+    title: "No unnecessary MDM barrier",
     description:
-      "Launch your internal apps without forcing employees to enroll their devices in a restrictive MDM profile, simplifying your workflow.",
+      "Avoid forcing every internal distribution scenario into a heavier device management route when it is not required.",
   },
   {
     img: "/images/products/appdeploy/scalable.png",
-    title: "Scalable by Design:",
+    title: "Built to scale with rollout needs",
     description:
-      "Whether you're deploying to a team of 10 or a workforce of 10,000, AppDeploy scales effortlessly with your business needs.",
+      "Support small pilots, internal departments, and larger enterprise distribution programmes through the same model.",
   },
 ];
 
 export default function KeyFeatures() {
   return (
-    <section className="relative bg-gradient-to-r from-[#3D297A] to-[#406E8F] text-white py-16  overflow-hidden">
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 ">
-        <div className="text-3xl lg:text-5xl font-semibold relative text-center font-karla lg:mb-6 mb-2">
-          Key Features
-          <p className="absolute hidden lg:block text-[83px] opacity-10 top-1/2  font-karla -translate-1/2 left-1/2 text-nowrap">
+    <section className="relative overflow-hidden py-16 sm:py-20 text-[#0F172A]">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_24%)]" />
+
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="max-w-4xl mb-12">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80 mb-3">
             Key Features
           </p>
-        </div>
-
-        <div className="relative z-10 text-center space-y-2 font-lora">
-          <h3 className="lg:text-2xl text-xl text-[#EABFFF]  lg:font-semibold font-karla text-nowrap lg:mb-2">
-            Powerful Features, Simple Interface
-          </h3>
-          <p className="max-w-3xl mx-auto lg:text-lg text-md">
-            Everything you need for seamless, secure, and scalable app
-            deployment.
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">
+            Product capabilities built for enterprise distribution teams
+          </h2>
+          <p className="text-base md:text-xl text-slate-700 font-lora leading-8">
+            AppDeploy focuses on the parts of internal distribution that become
+            painful in practice: release control, install experience,
+            visibility, and operational simplicity.
           </p>
         </div>
 
-        {/* Features grid */}
-        <div className="relative z-10 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white text-gray-800 font-lora rounded-xl shadow-xl py-8 px-3 flex flex-col items-center text-center relative border-b-[12px] border-[#7E1A8E]/50"
+              className="rounded-[1.75rem] border border-white/80 bg-white/85 backdrop-blur-sm px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.07)]"
             >
-              {/* Icon circle */}
-              <div className="absolute -top-10 bg-gray-100 w-20 h-20 flex items-center justify-center rounded-full border-[6px] border-gray-200 hover:border-[#A52EB8] hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-400 shadow-md">
-                <img src={feature.img} alt="" className="size-10" />
+              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-100 border border-slate-200">
+                <img src={feature.img} alt="" className="size-8" />
               </div>
 
-              <div className="mt-5">
-                <h4 className="font-semibold text-main-dark mb-2">
-                  {feature.title}
-                </h4>
-                <p className="text-gray-800 text-sm leading-[18px]">
-                  {feature.description}
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3 font-karla leading-7">
+                {feature.title}
+              </h3>
+              <p className="text-slate-600 font-lora leading-7">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

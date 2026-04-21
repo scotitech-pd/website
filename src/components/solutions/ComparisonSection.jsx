@@ -1,76 +1,97 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+
+const rows = [
+  {
+    label: "Primary job",
+    appdeploy:
+      "Internal app distribution built around Apple Business workflows.",
+    opsly:
+      "Private operational workspace for teams that want more control over day-to-day systems and internal tooling.",
+  },
+  {
+    label: "Core value",
+    appdeploy:
+      "Simplify private iOS delivery, release operations, access control, and install visibility.",
+    opsly:
+      "Reduce SaaS sprawl, keep operational workflows closer to the organisation, and support self-hosted control.",
+  },
+  {
+    label: "Environment model",
+    appdeploy:
+      "Cloud and Enterprise paths, with Apple Business aligned onboarding and rollout structure.",
+    opsly:
+      "Self-hosted and private-workspace direction for organisations that want greater infrastructure and workflow ownership.",
+  },
+  {
+    label: "Who it serves best",
+    appdeploy:
+      "Teams managing internal apps for employees, testers, partners, or controlled private rollout groups.",
+    opsly:
+      "Teams that need an internal workspace for operations, coordination, visibility, and admin-led control.",
+  },
+  {
+    label: "Buyer priority",
+    appdeploy:
+      "Teams looking to improve private iOS rollout, access, and release workflows.",
+    opsly:
+      "Teams looking to bring internal tooling, coordination, and operational control into a more private environment.",
+  },
+];
 
 export default function AppDeployComparison() {
   return (
-    <div className="bg-gradient-to-r from-[#202F5A] to-[#2A7559] text-white py-12 overflow-hidden">
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
-        <div className="text-left mb-12 font-karla text-3xl md:text-4xl ">
-          <h2 className="font-bold">AppDeploy vs Traditional MDM:</h2>
-          <p className="mt-2 font-bold">The Clear Winner</p>
+    <section className="relative overflow-hidden py-14 sm:py-20 text-[#0F172A]">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_24%)]" />
+
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="max-w-4xl mb-12">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80 mb-3">
+            Platform Comparison
+          </p>
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">
+            How AppDeploy and Opsly differ
+          </h2>
+          <p className="text-base md:text-xl text-slate-700 font-lora leading-8">
+            Both platforms are product-led, but they serve different operating
+            needs. This view helps buyers understand which path fits their
+            organisation more closely.
+          </p>
         </div>
 
-        <div className="bg-white rounded-xl rounded-br-none shadow-md text-gray-800 border-[1px] border-white">
-          <div className="grid grid-cols-3 items-center bg-white rounded-t-xl">
-            <div className="flex justify-center items-center">
-              <img
-                src="/images/solution/errow.png"
-                alt=""
-                className="w-6 min-[500px]:w-8 min-[850px]:w-12 py-6 min-[850px]:py-7"
-              />
-            </div>
-            <div className="flexr relative w-full h-full">
-              <div className="size-20 min-[500px]:size-24 min-[850px]:size-28 flex justify-center items-center rounded-full absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 bg-white shadow-2xl">
-                <img
-                  src="/images/solution/sett.png"
-                  alt="Traditional MDM"
-                  className="h-20 w-14 min-[500px]:h-22 min-[500px]:w-16 min-[850px]:h-26 min-[850px]:w-20"
-                />
-              </div>
-            </div>
-            <div className="flexr relative w-full h-full">
-              <div className="size-20 min-[500px]:size-24 min-[850px]:size-28 flex justify-center items-center rounded-full absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 bg-white shadow-2xl">
-                <img
-                  src="/images/solution/appdeploy.png"
-                  alt="Traditional MDM"
-                  className="size-10 min-[500px]:size-12 min-[850px]:size-14"
-                />
-              </div>
-            </div>
-          </div>
-
-          <table className="w-full text-sm min-[500px]:text-base min-[850px]:text-xl text-center overflow-hidden">
-            <thead className="bg-gradient-to-r from-[#223B5A] to-[#296D59]  text-white text-center font-karla">
-              <tr className="">
-                <th className="font-medium py-3">Feature / Cost</th>
-                <th className="font-medium">Jamf / Intune</th>
-                <th className="font-medium">AppDeploy</th>
+        <div className="hidden lg:block rounded-[2rem] border border-white/80 bg-white/85 backdrop-blur-sm overflow-hidden shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
+          <table className="min-w-full border-collapse text-left">
+            <thead>
+              <tr className="bg-[#0F172A] text-white">
+                <th className="w-[20%] px-6 py-5 font-semibold font-karla border-r border-white/10">
+                  Product Lens
+                </th>
+                <th className="w-[40%] px-6 py-5 font-semibold font-karla border-r border-white/10">
+                  AppDeploy
+                </th>
+                <th className="w-[40%] px-6 py-5 font-semibold font-karla">
+                  Opsly
+                </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200 text-black text-xs min-[500px]:text-sm min-[850px]:text-lg py-2 overflow-hidden font-karla">
-              {[
-                ["Cost per Device", "$6 - $12/month", "Flat monthly fee"],
-                ["Annual Cost (500 devices)", "$36k - $72k", "$6k"],
-                ["Setup Time", "Weeks", "<30 min"],
-                [
-                  "User Experience",
-                  "Complex (enrollment)",
-                  "One-click install",
-                ],
-                ["Tracking", "Limited", "Real-time tracking"],
-              ].map(([feature, jamf, appdeploy], idx) => (
-                <tr key={idx} className="hover:bg-gray-50 text-left overflow-hidden">
-                  <td className="px-0.5 min-[490px]:px-6 py-4 font-medium text-grey">{feature}</td>
-                  <td className="px-0.5 min-[490px]:px-6 py-4 text-grey">{jamf}</td>
-                  <td className="px-0.5 min-[490px]:px-6 py-4 text-grey flex min-[390px]:justify-between items-center min-[1011px]:w-[80%] max-[390px]:pr-4">
-                    {appdeploy}
-                    <img
-                      src="/images/solution/tick.png"
-                      alt=""
-                      className="h-3 max-[390px]:hidden shrink-0"
-                    />
+            <tbody>
+              {rows.map((row, index) => (
+                <tr
+                  key={row.label}
+                  className={`border-t border-slate-200 ${
+                    index % 2 === 0 ? "bg-white" : "bg-slate-50/70"
+                  }`}
+                >
+                  <td className="px-6 py-5 font-semibold font-karla text-slate-900 border-r border-slate-200">
+                    {row.label}
+                  </td>
+                  <td className="px-6 py-5 text-slate-700 font-lora leading-7 border-r border-slate-200 bg-indigo-50/40">
+                    {row.appdeploy}
+                  </td>
+                  <td className="px-6 py-5 bg-cyan-50/60 text-slate-800 font-lora leading-7 border-l-4 border-cyan-500">
+                    {row.opsly}
                   </td>
                 </tr>
               ))}
@@ -78,19 +99,61 @@ export default function AppDeployComparison() {
           </table>
         </div>
 
-        <div className="mt-2 flex justify-center items-center bg-white w-fit px-2 py-1 rounded-2xl rounded-tr-none ml-auto">
-         <Link href="/products/appdeploy">
-          <button className="bg-[#1C8BEA] cursor-pointer font-karla text-white  group px-4 py-1.5 rounded-3xl flex items-center gap-2 hover:bg-[#1C8BEA]/90 transition text-sm">
-            Know More 
-          
-          </button></Link>
-          <img
-            src="/images/solution/app.png"
-            alt=""
-            className="h-10 pr-6 pl-2"
-          />
+        <div className="grid grid-cols-1 gap-5 lg:hidden">
+          {rows.map((row) => (
+            <div
+              key={row.label}
+              className="rounded-[1.5rem] border border-slate-200 bg-white/90 backdrop-blur-sm p-6 shadow-[0_18px_40px_rgba(15,23,42,0.07)]"
+            >
+              <h3 className="text-xl font-semibold font-karla text-slate-900 mb-4">
+                {row.label}
+              </h3>
+
+              <div className="space-y-4">
+                <div className="rounded-2xl border border-indigo-200 bg-indigo-50/70 px-4 py-4">
+                  <p className="text-xs font-karla font-semibold uppercase tracking-[0.14em] text-[#4F46E5] mb-2">
+                    AppDeploy
+                  </p>
+                  <p className="text-slate-700 font-lora leading-7">
+                    {row.appdeploy}
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-cyan-200 bg-cyan-50/70 px-4 py-4">
+                  <p className="text-xs font-karla font-semibold uppercase tracking-[0.14em] text-cyan-700 mb-2">
+                    Opsly
+                  </p>
+                  <p className="text-slate-700 font-lora leading-7">
+                    {row.opsly}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 max-w-5xl rounded-[1.75rem] border border-white/80 bg-white/85 backdrop-blur-sm px-6 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.07)]">
+          <p className="text-slate-700 font-lora leading-8">
+            AppDeploy fits best when internal distribution is the immediate
+            problem. Opsly fits best when the organisation needs a more private
+            operational environment.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link
+              href="/products/appdeploy"
+              className="inline-flex items-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold font-karla text-white hover:bg-slate-900 transition-colors"
+            >
+              View AppDeploy
+            </Link>
+            <Link
+              href="/products/opsly"
+              className="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold font-karla text-slate-900 hover:border-slate-400 transition-colors"
+            >
+              View Opsly
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

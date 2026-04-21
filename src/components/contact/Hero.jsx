@@ -16,19 +16,18 @@ function Hero() {
         {/* Left Text Section */}
         <div className="flex flex-col justify-center w-full items-start text-left lg:items-start lg:text-left">
           <h2 className="text-white text-2xl font-bold font-karla lg:text-4xl max-[1040px]:text-3xl">
-            Let’s Build Something Meaningful Together
+            Talk to ScotiTech
           </h2>
 
           <p className="text-white hidden lg:block text-lg font-lora mt-5 leading-7.5 max-[1040px]:text-2xl md:text-left">
-            Whether you’re exploring digital transformation, secure app
-            deployment, or operational efficiency, our team is here to help.
-            Reach out to us for tailored solutions, technical guidance, and
-            long-term partnerships that support sustainable growth.
+            Whether you are exploring internal app distribution, private
+            operational tooling, or a broader product fit conversation, our
+            team can help you evaluate the right next step.
           </p>
 
           <p className="text-white lg:hidden text-sm font-lora mt-5 leading-6 max-[1040px]:text-base">
-            Precision data, proven success. Together, we'll redefine what's
-            possible.
+            Speak with our team about the product, rollout path, or commercial
+            fit that best matches your needs.
           </p>
 
           {/* Button */}

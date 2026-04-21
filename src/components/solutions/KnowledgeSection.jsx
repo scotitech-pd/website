@@ -15,10 +15,10 @@ const cards = [
     link: "/files/whitepaper.pdf", // PDF download
   },
   {
-    img: "/images/solution/appdeploy.png",
+    img: "/images/brand/appdeploy-logo-black.png",
     title: "App Deploy",
-    desc: "Instant Internal App Installs",
-    link: "https://appdeploy.scotitech.com:5173/", // Access Now
+    desc: "Explore the internal distribution workspace",
+    link: "https://appdeploy.scotitech.com/w/appdeploy-platform", // Access Now
   },
 ];
 
@@ -66,7 +66,7 @@ export default function KnowledgeSection() {
                 <div className="group relative bg-[#36454F]/80 p-5 min-[900px]:p-8 text-left w-full h-full">
                   <img
                     src={card.img}
-                    alt=""
+                    alt={card.title}
                     className="w-16 h-16 object-contain"
                   />
 

@@ -23,32 +23,31 @@ export default function AiCaptionHero() {
 
           {/* Subtitle */}
           <h2 className="lg:text-2xl font-xl font-medium font-karla mt-7">
-            AI-Powered Captions & Content
+            AI-powered captions and content support
             <span className="block">
-              Tools to Boost Engagement in Seconds.
+              for faster publishing workflows.
             </span>
           </h2>
 
           {/* Full description for desktop */}
           <p className="hidden lg:block leading-6 font-lora text-white/80 max-w-[620px]">
-            Stop staring at a blank screen. AI Caption Studio, by{" "}
+            AI Caption Studio, by{" "}
             <span className="text-[#EABFFF]">ScotiTech</span>, is a powerful
-            content creation tool designed for marketers, creators, and
-            businesses to generate captivating social media content instantly.
-            Move beyond generic text and create posts that resonate, connect,
-            and convert.
+            content-support tool designed for marketers, creators, and
+            businesses that need faster captioning and more consistent content
+            preparation.
           </p>
 
           {/* Short version for mobile */}
           <p className="lg:hidden block leading-6 font-lora text-white/80 max-w-[620px]">
-            AI Caption Studio helps marketers, creators, and businesses generate
-            engaging content instantly using AI.
+            AI Caption Studio helps marketers, creators, and businesses prepare
+            captions and social content more efficiently with AI support.
           </p>
 
           {/* CTA Button */}
           <a href="https://apps.apple.com/gb/app/ai-caption-studio/id6743449367">
           <button className="bg-white cursor-pointer text-gray-900 px-6 py-2.5 rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora">
-            Download Now
+            Download the App
             <DownloadCloudIcon className="inline-block ml-2 h-5 w-5" />
           </button></a>
         </div>

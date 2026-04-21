@@ -1,154 +1,70 @@
-import { UploadIcon } from "lucide-react";
 import Link from "next/link";
 
-export const securityItems = [
-  {
-    img: "/images/solution/security1.png",
-    text: "Officially supported by Apple",
-    ml: "ml-60",
-  },
-  {
-    img: "/images/solution/security2.png",
-    text: "Easy revocation to prevent misuse",
-    ml: "ml-40",
-  },
-  {
-    img: "/images/solution/security3.png",
-    text: "Audit-ready for compliance teams.",
-    ml: "ml-20",
-  },
-  {
-    img: "/images/solution/security4.png",
-    text: "Secure code signing & license management.",
-    ml: "",
-  },
-];
 export default function SecurityCompliance() {
+  const supportingProducts = [
+    {
+      name: "ClarityPath",
+      logo: "/images/brand/claritypath-logo.png",
+      description:
+        "A guided digital product for planning, reflection, and structured personal decision support.",
+      href: "/products/claritypath",
+    },
+  ];
+
   return (
-    <section className="bg-[#D4EFFF] py-2 min-[500px]:py-15 sm:py-20 lg:py-24 relative overflow-hidden">
-      {/* Background faint text */}
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
-        <div className="relative z-10 grid min-[1010px]:grid-cols-2 min-[1010px]:gap-12 items-center">
-          {/* Left Section */}
-          <div className="py-10 min-[1010px]:py-20">
-            <div className="relative ">
-              <p className="absolute max-[1210px]:hidden text-[3.3rem]  font-semibold text-black opacity-5 font-karla -left-3 top-1/2 -translate-y-1/2 text-nowrap select-none">
-                Security & Compliance
+    <section className="relative overflow-hidden py-16 md:py-20 text-[#0F172A]">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_22%)]" />
+
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="grid gap-8 xl:grid-cols-[0.9fr_1.1fr] items-center">
+          <div className="max-w-3xl">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-3">
+              Supporting Products
+            </p>
+            <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">
+              Additional products for guided planning workflows
+            </h2>
+            <p className="text-slate-700 font-lora text-lg leading-8">
+              Alongside our core platforms, ScotiTech also offers a focused
+              product for structured planning, reflection, and guided decision
+              support.
+            </p>
+
+            <div className="mt-8 rounded-[1.6rem] border border-white/80 bg-white/80 px-6 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)] backdrop-blur-sm">
+              <p className="text-slate-600 font-lora leading-8">
+                ClarityPath extends the portfolio into a more reflective use
+                case without trying to solve the same problems as the two main
+                platforms.
               </p>
-              <h2 className="text-2xl min-[850px]:text-3xl font-medium text-black font-karla">
-                Security & Compliance
-              </h2>
             </div>
-            <h3 className="text-3xl min-[850px]:text-4xl font-medium font-lora text-[#197188] mt-1 min-[1200px]:mt-5 leading-tight">
-              Built for Security. Backed by Apple.
-            </h3>
-            <p className="text-[#197188] text-base mt-4 leading-5 font-lora">
-              AppDeploy leverages Apple Business Manager for distribution,
-              ensuring compliance with Apple’s official guidelines.
-            </p>
-            <Link href="/products/appdeploy">
-              <button className="mt-6 bg-white text-md text-black font-medium font-lora pl-2 pr-5 py-1 rounded-lg shadow-sm transition relative">
-                Securely with AppDeploy
-                
-              </button>
-            </Link>
           </div>
 
-          <div className="space-y-9 min-[390px]:space-y-10 text-black ml-5 min-[1220px]:hidden sm:mt-5 pb-8">
-            {securityItems.map((item, index) => (
+          <div className="grid gap-4 max-w-xl">
+            {supportingProducts.map((item, index) => (
               <div
-                key={index}
-                className="flex items-center bg-white rounded-full shadow-md p-2 hover:shadow-lg transition relative w-full min-[500px]:w-[400px] mx-auto min-[1010px]:w-full "
+                key={item.name}
+                className="rounded-[1.5rem] border border-white/80 bg-white/85 px-6 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)] backdrop-blur-sm"
               >
-                <div className="p-3 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
-                  <img
-                    src={item.img}
-                    alt=""
-                    className="h-10 min-[1130px]:h-12"
-                  />
-                </div>
-                <p className="ml-12 min-[1130px]:ml-16 text-base font-medium font-lora">
-                  {item.text}
+                <img
+                  src={item.logo}
+                  alt={`${item.name} logo`}
+                  className="mb-5 h-16 w-auto rounded-[1.2rem] object-contain"
+                />
+                <h3 className="text-xl font-semibold font-karla text-slate-900 mb-3">
+                  {item.name}
+                </h3>
+                <p className="text-slate-700 font-lora leading-7 mb-5">
+                  {item.description}
                 </p>
+                <Link
+                  href={item.href}
+                  className="inline-flex items-center rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold font-karla text-slate-900 hover:border-slate-400 transition-colors"
+                >
+                  Read Details
+                </Link>
               </div>
             ))}
-          </div>
-
-          {/* Right Section */}
-
-          <div className="space-y-12 text-black hidden min-[1700px]:block">
-            {securityItems.map((item, index) => (
-              <div
-                key={index}
-                className={`flex items-center bg-white rounded-full shadow-md p-2 hover:shadow-lg transition relative ${item.ml}`}
-              >
-                <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
-                  <img src={item.img} alt="" className="h-12" />
-                </div>
-
-                <p className="ml-16 text-lg font-medium font-lora">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="space-y-16 text-black absolute right-0 top-32 w-[45%] max-[1220px]:hidden min-[1700px]:hidden">
-          {/* Item 1 */}
-          <div className="flex items-center bg-white rounded-l-full shadow-md p-2 hover:shadow-lg transition relative ml-60 ">
-            <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
-              <img
-                src="/images/solution/security1.png"
-                alt=""
-                className="h-12"
-              />
-            </div>
-            <p className="ml-16 text-lg  font-medium font-lora">
-              Officially supported by Apple
-            </p>
-          </div>
-
-          {/* Item 2 */}
-          <div className="flex items-center bg-white rounded-l-full shadow-md p-2 hover:shadow-lg transition relative ml-40">
-            <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
-              <img
-                src="/images/solution/security2.png"
-                alt=""
-                className="h-12"
-              />
-            </div>
-            <p className="ml-16 text-lg  font-medium font-lora">
-              Easy revocation to prevent misuse
-            </p>
-          </div>
-
-          {/* Item 3 */}
-          <div className="flex items-center bg-white rounded-l-full shadow-md p-2 hover:shadow-lg transition relative ml-20">
-            <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
-              <img
-                src="/images/solution/security3.png"
-                alt=""
-                className="h-12"
-              />
-            </div>
-            <p className="ml-16 text-lg  font-medium font-lora">
-              Audit-ready for compliance teams.
-            </p>
-          </div>
-
-          {/* Item 4 */}
-          <div className="flex items-center bg-white rounded-l-full shadow-md p-2 hover:shadow-lg transition relative">
-            <div className="p-4 rounded-full absolute bg-white -left-5 shadow-[0_0_10px_rgba(100,113,113,0.9)]">
-              <img
-                src="/images/solution/security4.png"
-                alt=""
-                className="h-12"
-              />
-            </div>
-            <p className="ml-16 text-lg  font-medium font-lora">
-              Secure code signing & license management.
-            </p>
           </div>
         </div>
       </div>

@@ -3,19 +3,19 @@ import Link from "next/link";
 export default function WhyThisMatters() {
   const benefits = [
     {
-      title: "Faster and safer app deployment for SMEs",
+      title: "A clearer route for private app distribution",
       iconSrc: "/images/aboutus/sun-productivity.png",
     },
     {
-      title: "Lower cost and zero reliance on heavy MDM systems",
+      title: "More viable paths for private workspaces and self-hosted operations",
       iconSrc: "/images/aboutus/faster-iterations.png",
     },
     {
-      title: "Clear, transparent digital infrastructure",
+      title: "More transparent digital infrastructure and rollout thinking",
       iconSrc: "/images/aboutus/partnerships.png",
     },
     {
-      title: "Responsible innovation aligned with UK and global standards",
+      title: "Evidence that some apps are better suited to approved private distribution than a public store listing",
       iconSrc: "/images/aboutus/communication.png",
     },
     {
@@ -45,7 +45,7 @@ export default function WhyThisMatters() {
                 rel="noopener noreferrer"
               >
                 <button className="px-12 py-2 font-karla cursor-pointer bg-white border rounded-xl border-gray-300   text-gray-900 font-medium hover:bg-gray-50 transition-colors text-base shadow-[0_0_15px_3px_rgba(139,42,214,0.3)] hover:shadow-[0_0_25px_6px_rgba(139,42,214,0.5)]">
-                  Book a 30-Min Consultation
+                  Book a 30-Minute Call
                 </button>
               </a>
             </div>

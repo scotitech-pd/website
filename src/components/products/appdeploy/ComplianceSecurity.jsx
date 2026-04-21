@@ -3,18 +3,18 @@ export default function ComplianceSecurity() {
   const items = [
     {
       icon: "/images/products/appdeploy/icon1.png",
-      title: "Official ABM Integration:",
-      desc: "Official ABM Integration: We use Apple's recommended protocols for private distribution, keeping your process legitimate and secure.",
+      title: "Built around Apple Business workflows:",
+      desc: "AppDeploy is positioned around Apple’s approved internal distribution path, giving organisations a clearer operational layer without replacing the underlying Apple route.",
     },
     {
       icon: "/images/products/appdeploy/icon2.png",
       title: "Private & Controlled Access:",
-      desc: "Your apps are never publicly listed. You control exactly who can download and install them through unique, managed links.",
+      desc: "Your internal apps can be presented through a controlled branded experience instead of a fragmented install process or public listing model.",
     },
     {
       icon: "/images/products/appdeploy/icon3.png",
       title: "Centralized Management:",
-      desc: "Maintain full oversight from your admin dashboard, with the ability to manage versions and track access in one secure location.",
+      desc: "Maintain release visibility, rollout coordination, and access tracking from one admin workspace built for internal distribution operations.",
     },
   ];
 
@@ -35,13 +35,12 @@ export default function ComplianceSecurity() {
             Compliance & Security
           </h2>
           <h3 className="text-2xl lg:mb-4 text-white/90 font-karla">
-            Enterprise-Grade Security & Compliance
+            Controlled internal distribution
           </h3>
           <p className="text-[#E2E2E2]  lg:text-xl font-light font-lora">
-            Security is at the core of AppDeploy. We utilize Apple's official
-            Business Manager for app distribution, which is the
-            industry standard for deploying internal apps securely. This ensures
-            you are fully compliant with Apple's terms of service.
+            AppDeploy is designed to work with Apple’s approved internal app
+            distribution path while giving organisations a clearer, more usable
+            operational model for release management and install delivery.
           </p>
         </div>
 

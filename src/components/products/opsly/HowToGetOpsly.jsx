@@ -1,154 +1,135 @@
 "use client";
 
+const steps = [
+  {
+    number: "01",
+    title: "Request Access",
+    description:
+      "Submit your organisation details and select the Enterprise path.",
+  },
+  {
+    number: "02",
+    title: "Discovery Call",
+    description:
+      "Confirm the use case, team structure, and deployment expectations.",
+  },
+  {
+    number: "03",
+    title: "Demo and Workflow Review",
+    description:
+      "Walk through the product and the internal workspace model your team needs.",
+  },
+  {
+    number: "04",
+    title: "Technical and Security Review",
+    description:
+      "Validate hosting preference, access controls, branding, and operational requirements.",
+  },
+  {
+    number: "05",
+    title: "Commercial Proposal",
+    description:
+      "Align on scope, onboarding model, and commercial terms.",
+  },
+  {
+    number: "06",
+    title: "Agreement and Payment",
+    description:
+      "Complete the required paperwork and payment arrangement for activation.",
+  },
+  {
+    number: "07",
+    title: "Deployment Planning",
+    description:
+      "Confirm rollout ownership, dependencies, and environment setup.",
+  },
+  {
+    number: "08",
+    title: "Workspace and Environment Setup",
+    description:
+      "Provision the hosted or self-hosted environment and configure the workspace.",
+  },
+  {
+    number: "09",
+    title: "Admin Onboarding",
+    description:
+      "Train the first admins on branding, releases, permissions, and user management.",
+  },
+  {
+    number: "10",
+    title: "Go-Live Support",
+    description:
+      "Support the initial rollout and stabilise the production handoff.",
+  },
+];
+
 export default function HowToGetOpsly() {
-  const steps = [
-    {
-      icon: "/images/products/opsly/schedule.png",
-      title: "Schedule a Demo",
-      description:
-        "Book a personalized walkthrough with our product experts to see how Opsly can address your specific challenges.",
-    },
-    {
-      icon: "/images/products/opsly/onboarding.png",
-      title: "Customized Onboarding",
-      description:
-        "Our dedicated support team will guide you through a seamless setup and integration process with your existing systems.",
-    },
-    {
-      icon: "/images/products/opsly/deploy.png",
-      title: "Deploy & Discover",
-      description:
-        "Connect your data sources and watch as Opsly automatically maps your SaaS environment and begins identifying savings opportunities in minutes.",
-    },
-  ];
-
   return (
-    <>
-      {/* -------------------- ORIGINAL (LG AND ABOVE) -------------------- */}
-      <section className="relative bg-white lg:py-20 overflow-hidden hidden lg:block">
-        <div className="absolute inset-0 bg-[url('/images/products/opsly/getopslybg.png')] bg-cover bg-center pointer-events-none"></div>
+    <section className="relative py-16 sm:py-20 overflow-hidden text-[#0F172A]">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(91,79,207,0.12),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.10),transparent_22%)]" />
 
-        <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-          <h2 className="lg:text-[40px] text-3xl font-semibold text-main-dark mb-1 drop-shadow-2xl font-karla">
-            How to Get Opsly app?
-          </h2>
-          <p className="text-black font-lora lg:text-xl text-md mb-16 pr-20">
-            Simple Steps to Smarter SaaS Management
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="max-w-4xl mb-12">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80 mb-3">
+            Enterprise Onboarding
           </p>
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5 text-[#0F172A]">
+            AXOS rollout is review-led, structured, and production-ready
+          </h2>
+          <p className="text-base md:text-xl font-lora leading-8 text-slate-700">
+            Enterprise onboarding is handled as a guided rollout. We work
+            through fit, technical requirements, commercial alignment, and
+            deployment planning before the environment goes live.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-2 items-center justify-between gap-12 mb-5">
-            {/* Left: App mockup */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-              <div className="relative">
-                <img
-                  src="/images/products/opsly/opslyapp.png"
-                  alt="Opsly Logo"
-                  className="rounded-xl shadow-2xl"
-                />
-                <div className="absolute z-20 top-2/3 translate-y-1/2 left-1/2 -translate-x-1/2 bg-gradient-to-br from-[#98F9FF]/80 via-[#8726B7]/50 to-[#EABFFF]/80 p-[1px] rounded-full cursor-pointer shadow-lg text-center backdrop-blur-md hover:scale-105 duration-300 hover:backdrop-blur-sm">
-                  <p className="text-lg font-medium text-white bg-[#23627a]/80 px-6 py-2 rounded-full">
-                    Download Now
-                  </p>
+        <div className="grid grid-cols-1 xl:grid-cols-[34%_66%] gap-8 items-start">
+          <div className="rounded-[2rem] border border-white/80 bg-white/85 backdrop-blur-md p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-4">
+              What We Review
+            </p>
+            <div className="space-y-4">
+              {[
+                "Use case and workspace fit",
+                "Hosting and deployment model",
+                "Access control and security expectations",
+                "Commercial scope and rollout ownership",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-slate-200 bg-white px-4 py-4"
+                >
+                  <p className="font-karla text-base text-slate-900">{item}</p>
                 </div>
-                <div className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 w-[85%] flex justify-between">
-                  <img
-                    src="/images/products/opsly/button2.png"
-                    alt=""
-                    className="w-[40%] h-auto cursor-pointer"
-                  />
-                  <img
-                    src="/images/products/opsly/button1.png"
-                    alt=""
-                    className="w-[40%] h-auto cursor-pointer"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Info card */}
-            <div className="bg-white rounded-2xl shadow-[0_0_10px_rgba(37,150,190,0.4)] w-full h-full p-6 relative">
-              <div className="absolute bg-purple-100 text-2xl text-main-dark font-karla font-semibold px-6 py-4 rounded-l-2xl rounded-tr-2xl rounded-br-2xl border-b border-gray-100 w-[100%] leading-7">
-                Getting started with Opsly is a straightforward process designed
-                for busy teams
-              </div>
-              <div className="pt-32 space-y-8 text-black">
-                {steps.map((step, i) => (
-                  <div key={i} className="flex items-center gap-4 relative">
-                    <div className="absolute bg-white rounded-full flex justify-center items-center shadow-[0_0_10px_rgba(140,82,255,0.7)] top-1/2 -translate-1/2 left-7 size-12">
-                      <img src={step.icon} alt="" className="size-6" />
-                    </div>
-                    <div className="pl-17 font-lora">
-                      <h4 className="font-semibold text-lg">{step.title}</h4>
-                      <p className="text-grey text-[15px] leading-5 mt-1">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* -------------------- NEW MOBILE/TABLET VERSION (BELOW LG) -------------------- */}
-      <section className="relative bg-white py-16 overflow-hidden block lg:hidden">
-        <div className="absolute inset-0 bg-[url('/images/products/opsly/getopslybg.png')] bg-cover bg-center opacity-90"></div>
-
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-[32px] font-semibold text-main-dark mb-3 font-karla">
-            How to Get Opsly app?
-          </h2>
-          <p className="text-[#3B3B3B] text-base md:text-lg font-lora leading-relaxed mb-10">
-            Simple Steps to Smarter SaaS Management
-          </p>
-
-          {/* Cards */}
-          <div className="grid sm:grid-cols-2 gap-8 mb-14">
-            {steps.map((step, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {steps.map((step) => (
               <div
-                key={i}
-                className="bg-white rounded-2xl shadow-[0_0_12px_rgba(140,82,255,0.25)] p-6 flex flex-col items-center text-center transition-all hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(140,82,255,0.6)] duration-300"
+                key={step.number}
+                className="group rounded-[1.75rem] border border-white/80 bg-white/85 backdrop-blur-md px-5 py-6 sm:px-6 sm:py-7 shadow-[0_18px_40px_rgba(15,23,42,0.06)] transition-transform duration-300 hover:-translate-y-1"
               >
-                <div className="flex justify-center items-center bg-[#F1E6FF] rounded-full size-16 shadow-[0_0_10px_rgba(140,82,255,0.4)] mb-4">
-                  <img
-                    src={step.icon}
-                    alt={step.title}
-                    className="size-7 object-contain"
-                  />
+                <div className="flex items-center justify-between gap-4 mb-5">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#5B4FCF] via-[#4F74F3] to-[#34D3FF] text-white font-karla font-bold">
+                    {step.number}
+                  </span>
+                  <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
                 </div>
-                <h3 className="text-lg font-semibold font-karla text-main-dark mb-2">
+
+                <h3 className="text-xl font-semibold font-karla text-slate-900 mb-3 leading-7">
                   {step.title}
                 </h3>
-                <p className="text-sm text-gray-700 font-lora leading-snug">
+                <p className="text-slate-600 font-lora leading-7 text-[15px]">
                   {step.description}
                 </p>
               </div>
             ))}
           </div>
-
-          {/* App mockup below cards */}
-          <div className="flex flex-col items-center justify-center relative">
-            <img
-              src="/images/products/opsly/opslyapp.png"
-              alt="Opsly App"
-              className="rounded-xl shadow-2xl w-[80%] sm:w-[65%] md:w-[55%] mb-8"
-            />
-            <div className="flex justify-center gap-5 w-[80%] sm:w-[60%]">
-              <img
-                src="/images/products/opsly/button2.png"
-                alt=""
-                className="w-[45%] h-auto cursor-pointer"
-              />
-              <img
-                src="/images/products/opsly/button1.png"
-                alt=""
-                className="w-[45%] h-auto cursor-pointer"
-              />
-            </div>
-          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

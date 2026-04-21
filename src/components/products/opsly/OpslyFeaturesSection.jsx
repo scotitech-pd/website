@@ -1,125 +1,114 @@
 "use client";
-import { LayoutGrid, ShieldCheck, Layers, CheckCircle } from "lucide-react";
 
-export default function OpslyFeaturesSection() {
-  const features = [
-    {
-      title: "Real-Time Usage Dashboard",
-      description:
-        "Instantly see your entire SaaS inventory in one place. Track active users, login frequency, and feature adoption to make data-driven decisions about your software stack.",
-      icon: "/images/products/opsly/dashboard.png",
-    },
-    {
-      title: "Security & Compliance Monitoring",
-      description:
-        "Mitigate risk by tracking which employees have access to which applications. Easily conduct security audits and streamline employee on-boarding and off-boarding.",
-      icon: "/images/products/opsly/security.png",
-    },
-    {
-      title: "Seamless Platform Integration",
-      description:
-        "Opsly connects with your existing ecosystem, including Single Sign-On (SSO), HR, and finance systems to provide a single source of truth for all your SaaS data.",
-      icon: "/images/products/opsly/platform.png",
-    },
-  ];
-
-  // const miniFeatures = [
-  //   {
-  //     title: "Redundancy Alerts",
-  //     description:
-  //       "Get notified of overlapping applications with similar functionality.",
-  //   },
-  //   {
-  //     title: "Renewal Management",
-  //     description:
-  //       "Never miss a renewal date with automated alerts and a 90-day timeline view.",
-  //   },
-  //   {
-  //     title: "Contract Intelligence",
-  //     description:
-  //       "Store all your contracts and payment details in a secure, centralized vault.",
-  //   },
-  // ];
-
-  const capabilities = [
-  { label: "Files", desc: "browse, sync, and manage documents" },
-  { label: "Talk", desc: "chat and call with your team" },
-  { label: "Tasks", desc: "create to-dos and kanban boards" },
-  { label: "Photos", desc: "organise your media" },
-  { label: "Mail", desc: "unified inbox for all email accounts" },
-  { label: "Notes", desc: "store ideas and documents" },
-  { label: "Calendar", desc: "manage events and reminders" },
-  { label: "Contacts", desc: "personal + team contacts" },
-  { label: "Deck", desc: "workflow boards" },
-  { label: "Settings", desc: "privacy & security tools" },
-  { label: "Meet / Video", desc: "instant video meetings" },
-  { label: "AI Assistant", desc: "ask anything, get instant answers" },
-  { label: "AI Chat About Files", desc: "read and summarise your documents" },
+const features = [
+  {
+    title: "One environment for core daily work",
+    description:
+      "AXOS is designed to bring mail, calendar, chat, tasks, notes, drive, and cloud storage into one controlled operating surface.",
+    icon: "/images/products/opsly/platform.png",
+  },
+  {
+    title: "AI built into the work layer",
+    description:
+      "Use AI for summaries, answers, document context, and routine support inside the environment teams already use every day.",
+    icon: "/images/products/opsly/dashboard.png",
+  },
+  {
+    title: "Private deployment options",
+    description:
+      "Run AXOS in hosted, private cloud, or self-hosted models depending on team maturity, budget, and data-control requirements.",
+    icon: "/images/products/opsly/security.png",
+  },
 ];
 
+const capabilityGroups = [
+  {
+    title: "Operational core",
+    items: ["Mail", "Calendar", "Tasks", "Notes"],
+  },
+  {
+    title: "Team coordination",
+    items: ["Chat", "Video", "Contacts", "Boards"],
+  },
+  {
+    title: "Storage and intelligence",
+    items: ["Drive", "Cloud storage", "AI assistant", "Document chat"],
+  },
+];
 
+export default function OpslyFeaturesSection() {
   return (
-    <section className="w-full pb-10 bg-white">
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 ">
-        {/* Section Header */}
-        <div className="lg:px-6 text-center">
-          <h2 className="text-[40px] font-semibold text-main-dark mb-1 drop-shadow-2xl font-karla">
-            What Opsly Actually Is
+    <section className="relative text-[#0F172A] py-16 sm:py-20">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(91,79,207,0.08),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(52,211,255,0.06),transparent_20%)]" />
+
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="max-w-4xl mb-12">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80 mb-3">
+            Core Environment
+          </p>
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5 text-[#0F172A]">
+            The strongest AXOS proof is the operating environment it brings together
           </h2>
-          <p className="text-black font-lora text-xl mb-14">
-Built for People Who Want Control — Not Complexity
+          <p className="text-base md:text-xl font-lora leading-8 text-slate-700">
+            AXOS makes the most sense when it is understood as one private
+            environment for the core tools teams use every day, with AI built
+            into that same work layer instead of bolted on elsewhere.
           </p>
         </div>
 
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center justify-center">
-          {/* Left column */}
-          <div className="flex flex-col space-y-5">
-            {features.map((feature, i) => (
+        <div className="grid grid-cols-1 xl:grid-cols-[48%_52%] gap-8 items-start">
+          <div className="space-y-5">
+            {features.map((feature) => (
               <div
-                key={i}
-                className="flex items-start ml-4 lg:ml-0 bg-white shadow-[0_0_5px_rgba(128,128,128,0.3)] rounded-2xl p-6 border border-gray-100 relative group
-                     hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] hover:scale-101 transform-gpu transition-all duration-300  text-black"
+                key={feature.title}
+                className="rounded-[1.75rem] border border-white/80 bg-white/85 px-6 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"
               >
-                <div className="absolute bg-white rounded-full flex justify-center items-center shadow-[0_0_5px_rgba(128,128,128,0.6)] group-hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] group-hover:scale-110 duration-300 top-1/2 -translate-1/2 left-0 size-12 transition-all">
-                  <img src={feature.icon} alt="" className="size-6" />
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900/5 border border-slate-200">
+                  <img src={feature.icon} alt="" className="size-8 object-contain" />
                 </div>
-                <div className=" pl-5">
-                  <h3 className="font-semibold text-xl font-karla">
-                    {feature.title}
-                  </h3>
-                  <p className=" mt-1 text-sm font-lora">
-                    {feature.description}
-                  </p>
-                </div>
+                <h3 className="text-2xl font-karla font-semibold text-slate-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-slate-600 font-lora leading-8">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
 
-          {/* Right column gradient box */}
-          <div className="bg-gradient-to-bl from-[#406E8F] to-[#3D297A] text-white rounded-xl p-10 shadow-lg">
-            <h3 className="font-medium text-2xl font-karla mb-2">
-      You get all your digital tools in one unified dashboard
-            </h3>
-            <p className="mb-6 font-lora leading-6">
-              Opsly brings together files, calendar, mail, notes, tasks, calls, contacts, workflows, and AI — all on a self-hosted cloud platform designed for privacy and productivity.
-
+          <div className="rounded-[2rem] border border-slate-900/80 bg-[#0F172A] backdrop-blur-md p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.18)]">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-400 mb-5">
+              What it brings together
             </p>
-            <div className="font-lora">
-              
- {capabilities.map((item, idx) => (
-  <p key={idx} className="block pb-1">
-    <CheckCircle className="inline size-4 text-green-400 mr-2" />
-    <span className="font-semibold font-karla">{item.label}</span>
-    {" — "}{item.desc}
-  </p>
-))}
 
-              
-
+            <div className="space-y-5">
+              {capabilityGroups.map((group, index) => (
+                <div
+                  key={group.title}
+                  className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#5B4FCF] via-[#4F74F3] to-[#34D3FF] text-sm font-karla font-bold text-white">
+                      0{index + 1}
+                    </span>
+                    <h3 className="text-xl font-karla font-semibold text-white">
+                      {group.title}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    {group.items.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm font-karla text-slate-200"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
-
-          
           </div>
         </div>
       </div>

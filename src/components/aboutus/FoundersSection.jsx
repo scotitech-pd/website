@@ -10,10 +10,10 @@ const founders = [
     color: "from-[#6D28D9] to-[#14B8A6]",
     linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
     desc: [
-      "Pradeep Dahiya leads ScotiTech as CEO and Lead Developer, bringing more than a decade of hands-on experience in app development, AI integration, and digital transformation.",
-      "He founded ScotiTech with a vision to create simpler, secure, and sustainable technology that empowers businesses, creators, and communities across markets.",
-      "Under his leadership, ScotiTech has delivered products like AppDeploy, Opsly, and AI Caption Studio. Pradeep holds an MSc from the University of Strathclyde and serves as a Digital Trustee with Third Sector Lab in Scotland.",
-      "Pradeep also supports charities and non-profits in Scotland in adopting secure digital systems and building confidence in technology.",
+      "Pradeep Dahiya leads ScotiTech as CEO and Lead Developer, with more than a decade of hands-on experience across app development, AI integration, and digital systems.",
+      "He founded ScotiTech to build simpler, more secure, and more practical software for real operational use.",
+      "Under his leadership, the company has developed products including AppDeploy, AXOS, and ClarityPath. Pradeep holds an MSc from the University of Strathclyde and serves as a Digital Trustee with Third Sector Lab in Scotland.",
+      "He also supports charities and non-profits in Scotland in adopting secure digital systems and building confidence in technology.",
     ],
   },
   {
@@ -23,10 +23,10 @@ const founders = [
     color: "from-[#0EA5E9] to-[#6366F1]",
     linkedin: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     desc: [
-      "Daniel Chapman is the Co-Founder and Chief Strategy Officer at ScotiTech, leading strategy, innovation, and sustainable growth. With a strong foundation in Computing and IT, he aligns the company with its mission of delivering intelligent and accessible digital solutions.",
-      "Pursuing his BSc with The Open University, Daniel brings skills in networking, Linux, and digital workflows.",
-      "As founder of WalLove, he applies creative thinking to ScotiTech’s products, guiding initiatives like AppDeploy and Opsly with a focus on ethics, clarity, and user centricity, driving long term value globally.",
-      "His leadership experience, including roles at Boss Kidz Inc, strengthens his operational insight.",
+      "Daniel Chapman is the Co-Founder and Chief Strategy Officer at ScotiTech, leading strategy, product direction, and long-term growth.",
+      "With a strong foundation in Computing and IT, he helps keep the company aligned around practical and accessible digital products.",
+      "Pursuing his BSc with The Open University, Daniel brings experience in networking, Linux, and digital workflows, alongside creative product thinking through initiatives such as WalLove.",
+      "His wider leadership experience strengthens ScotiTech’s operational and strategic perspective.",
     ],
   },
 ];
@@ -43,8 +43,8 @@ const FoundersSpotlight = () => {
             Meet Our Founders
           </h2>
           <p className="text-gray-600 text-lg md:text-xl font-lora mt-3 max-w-2xl mx-auto">
-            Leaders with vision, passion, and purpose — the force behind
-            ScotiTech’s journey toward innovation and ethical growth.
+            The people shaping ScotiTech’s product direction, company strategy,
+            and long-term operating principles.
           </p>
         </div>
 

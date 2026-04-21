@@ -1,97 +1,54 @@
-import Link from "next/link";
-
 export default function WhoUsesAppDeploy() {
   const businessSolutions = [
     {
-      bg: "bg-[#CEEAFF]",
-      icon: "/images/solution/smes.png",
-      title: "SMEs",
-      titleColor: "text-blue",
-      desc: "Affordable internal app distribution.",
+      title: "AppDeploy",
+      desc: "For internal app distribution teams that need clearer release, access, and rollout workflows.",
     },
     {
-      bg: "bg-[#DBFFE6]",
-      icon: "/images/solution/enter.png",
-      title: "Enterprises",
-      titleColor: "text-[#35BA54]",
-      desc: "Secure, scalable deployment across thousands of devices.",
+      title: "AXOS",
+      desc: "For organisations that want a more private operational workspace and stronger control over internal tooling.",
     },
     {
-      bg: "bg-[#FFE8D9]",
-      icon: "/images/solution/startup.png",
-      title: "Startups",
-      titleColor: "text-[#D39964]",
-      desc: "Fast, compliant delivery without Apple delays.",
-    },
-    {
-      bg: "bg-[#F9D5FF]",
-      icon: "/images/solution/agencies.png",
-      title: "Agencies",
-      titleColor: "text-[#B954CE]",
-      desc: "Simplify app deployment for clients & partners.",
+      title: "ClarityPath",
+      desc: "For users who want a more reflective and structured digital planning experience.",
     },
   ];
-  return (
-    <section className="bg-[#FAFAFA] py-10 min-[500px]:py-15 sm:py-20 lg:py-24 overflow-hidden">
-      {/* Heading */}
-      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
-        <div className="flex  justify-between items-center">
-          <div> 
-            <div className="relative mb-4">
-              <p className="absolute max-[450px]:hidden text-[4.3rem] font-semibold text-black font-karla opacity-5 -left-3 top-1/2 -translate-y-1/2 text-nowrap select-none">
-                Who It’s For
-              </p>
-              <p className="text-2xl min-[850px]:text-3xl font-medium text-black font-karla">
-                Who It’s For
-              </p>
-            </div>
 
-            <h2 className="text-4xl md:text-5xl font-serif font-medium mt-2 text-gray-900">
-              Who Uses <span className="text-blue">AppDeploy</span>?
+  return (
+    <section className="bg-[#0F172A] py-16 md:py-20 overflow-hidden relative">
+      <div className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-[size:56px_56px]" />
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10">
+        <div className="flex flex-col gap-6 mb-12">
+          <div className="max-w-4xl">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-cyan-300/85 mb-3">
+              Portfolio Structure
+            </p>
+            <h2 className="text-3xl md:text-5xl font-karla font-semibold text-white mb-5">
+              The portfolio should read in a clear order
             </h2>
-          </div>
-          {/* Button */}
-          <div className="mt-6 max-[950px]:hidden">
-            <Link
-              href="/contact"
-              className="cursor-pointer font-karla bg-gradient-to-r from-[#3D2C72] to-[#3D758C] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-[0_0_12px_rgba(61,44,114,0.9)] duration-300 transition"
-            >
-              Get Started Now
-            </Link>
+            <p className="text-white/72 font-lora text-lg leading-8">
+              The right hierarchy is simple: AppDeploy and AXOS first, then
+              ClarityPath as a supporting product.
+            </p>
           </div>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 min-[430px]:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-20 mt-10 lg:mt-16">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {businessSolutions.map((item, index) => (
             <div
-              key={index}
-              className={`${item.bg} rounded-2xl px-3 pt-5 pb-3.5 min-[1300px]:p-8 shadow-md hover:shadow-xl transition text-left`}
+              key={item.title}
+              className="rounded-[1.6rem] border border-white/10 bg-white/[0.05] p-6 shadow-[0_18px_40px_rgba(2,6,23,0.22)]"
             >
-              <div className="bg-white p-3 rounded-full inline-block shadow-sm">
-                <img src={item.icon} alt={item.title} className="size-12" />
+              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-white text-sm font-semibold font-karla">
+                0{index + 1}
               </div>
-
-              <h3
-                className={`mt-3.5 min-[1300px]:mt-6 text-xl font-semibold ${item.titleColor} font-karla`}
-              >
+              <h3 className="text-xl font-semibold text-white font-karla mb-3">
                 {item.title}
               </h3>
-
-              <p className="min-[1300px]:mt-3 text-black font-lora leading-relaxed">
-                {item.desc}
-              </p>
+              <p className="text-white/72 font-lora leading-7">{item.desc}</p>
             </div>
           ))}
         </div>
-        <div className="mt-10 min-[950px]:hidden mx-auto w-fit">
-            <Link
-              href="/contact"
-              className="cursor-pointer font-karla bg-gradient-to-r from-[#3D2C72] to-[#3D758C] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-[0_0_12px_rgba(61,44,114,0.9)] duration-300 transition"
-            >
-              Get Started Now
-            </Link>
-          </div>
       </div>
     </section>
   );

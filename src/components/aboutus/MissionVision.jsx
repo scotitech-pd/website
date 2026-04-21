@@ -20,15 +20,15 @@ const MissionVision = () => {
                 </div>
               </div>
               <h3 className="text-lg sm:text-xl lg:text-[20px] font-lora text-[#5E0B7B]">
-                Empowering Your Business Through Technology.
+                Practical technology built around trust and clarity.
               </h3>
 
               <p className="text-black text-sm sm:text-[15px] leading-5 font-lora">
-                Empowering organisations through trusted digital innovation. We
-                design products that simplify complex digital challenges — from
-                secure app deployment to private cloud infrastructure. Our
-                mission is to build technology that is transparent, sustainable,
-                and built for long-term digital trust.
+                We design products that simplify complex digital challenges,
+                from internal app distribution to private operational
+                infrastructure. Our mission is to build software that is
+                practical, transparent, and capable of supporting long-term
+                digital trust.
               </p>
             </div>
 
@@ -71,15 +71,14 @@ const MissionVision = () => {
               </h2>
 
               <h3 className="text-lg sm:text-xl lg:text-[20px] font-lora text-[#5E0B7B]">
-                Beyond Innovation, We Build Trust
+                Build software people can rely on
               </h3>
 
               <p className="text-black text-sm sm:text-[15px] leading-5 font-lora">
-                A future where secure, ethical technology is accessible to every
-                organisation. We aim to become a leading UK–India connector for
-                digital innovation — helping SMEs, enterprises, and communities
-                adopt reliable tools that empower growth while protecting
-                privacy. .
+                We want a future where secure and responsible technology feels
+                more accessible, more usable, and easier to trust. The long-term
+                goal is to help organisations adopt reliable digital tools
+                without losing sight of privacy, control, or clarity.
               </p>
             </div>
           </div>

@@ -57,8 +57,8 @@ const NewsletterSubscription = () => {
                 Stay Updated with ScotiTech
               </h2>
               <p className="text-gray-200 font-lora text-sm md:text-base leading-relaxed max-w-md">
-                Get the latest updates on our technology breakthroughs, product launches,
-                and insights. Subscribe to our newsletter to never miss what’s next.
+                Get product updates, company news, and selected insights from
+                ScotiTech.
               </p>
             </div>
 
@@ -108,7 +108,8 @@ const NewsletterSubscription = () => {
               {/* STATUS */}
               {status === "success" && (
                 <p className="text-sm text-green-400 font-medium">
-                  ✓ Successfully subscribed. Welcome to the ScotiTech community.
+                  ✓ Subscription confirmed. You will hear from us when there is
+                  something worth sharing.
                 </p>
               )}
               {status === "error" && (

@@ -1,20 +1,21 @@
 @import "tailwindcss"; 
 
 :root {
+  --background: #ffffff;
   --foreground: #ffffff;
-  --main-light: #9638E5;
-  --main: #7E1A8E;
-  --main-dark: #641171;
-  --blue:#2D64E6;
-  --orange: #FFA662;
-  --green: #059388;
-  --green-light: #BCB96A;
-  --grey:#595959;
-  --yellow: #BCB96A;
-  --blue-light:#02698C;
+  --main-light: #6b61d9;
+  --main: #5b4fcf;
+  --main-dark: #0f172a;
+  --blue:#2563eb;
+  --orange: #c08457;
+  --green: #0f766e;
+  --green-light: #cbd5e1;
+  --grey:#475569;
+  --yellow: #64748b;
+  --blue-light:#1d4ed8;
   /* about */
-  --greenblue: #34939B;
-  --seablue: #D2FAFF;
+  --greenblue: #0f766e;
+  --seablue: #e2e8f0;
 }
  
 @theme inline {
@@ -46,6 +47,7 @@
   --animate-pop: pop 0.35s ease-out;
   --animate-breathe-slow: breathe-slow 8s ease-in-out infinite;
   --animate-breathe: breathe 2s ease-in-out infinite;
+  --animate-logo-marquee: logo-marquee 28s linear infinite;
 
   --breakpoint-xxl: 98.125rem;
 }
@@ -79,6 +81,10 @@
     50% { transform: scale(1.05); filter: drop-shadow(0 0 12px rgba(255,255,255,0.7)); }
     100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
 }
+@keyframes logo-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-50% - 0.625rem)); }
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -89,13 +95,14 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #111827;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.5;
 }
 :root {
-  --scrollbar-bg: #f5e8f9;
-  --scrollbar-thumb: #641171;
-  --scrollbar-thumb-hover: #4d0d58;
+  --scrollbar-bg: #e2e8f0;
+  --scrollbar-thumb: #334155;
+  --scrollbar-thumb-hover: #1e293b;
 }
 
 /* Chrome, Edge, Safari */

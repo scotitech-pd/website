@@ -27,16 +27,16 @@ const SubscribeSection = () => {
   };
 
   return (
-    <div className="w-full py-16 px-4 bg-gradient-to-r from-teal-600/70 to-purple-800/70">
+    <div className="w-full py-16 px-4 bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-900">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-        <div className="rounded-3xl border border-white mx-auto bg-white/10 px-3 min-[630px]:px-8 xl:px-12 py-8 min-[630px]:py-10 md:py-14 text-white grid min-[1270px]:grid-cols-2 items-center gap-5">
+        <div className="rounded-3xl border border-white/15 mx-auto bg-white/6 px-3 min-[630px]:px-8 xl:px-12 py-8 min-[630px]:py-10 md:py-14 text-white grid min-[1270px]:grid-cols-2 items-center gap-5 backdrop-blur-sm">
           <div>
-            <h2 className="text-4xl min-[1550px]:text-5xl font-semibold font-karla mb-4 text-black">
-              Stay Ahead With ScotiTech
+            <h2 className="text-4xl min-[1550px]:text-5xl font-semibold font-karla mb-4 text-white">
+              Stay Updated With ScotiTech
             </h2>
-            <p className="text-lg font-lora min-[500px]:text-xl text-white sm:w-[90%] min-[1550px]:w-[70%] max-[650px]:leading-[22px]">
-              Get the latest insights, product updates, and exclusive offers
-              delivered straight to your inbox
+            <p className="text-lg font-lora min-[500px]:text-xl text-slate-200 sm:w-[90%] min-[1550px]:w-[70%] max-[650px]:leading-[22px]">
+              Get product updates, company news, and selected insights
+              delivered to your inbox.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ const SubscribeSection = () => {
               <input
                 type="email"
                 required
-                placeholder="Enter Your Email"
+                placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 px-6 py-3 rounded-md text-black w-full font-lora bg-white max-w-[600px]"
@@ -57,20 +57,20 @@ const SubscribeSection = () => {
               <div className="flex w-full justify-end md:w-auto md:justify-normal">
                 <button
                   type="submit"
-                  className="bg-white text-main-light px-6 py-2 rounded-md font-semibold font-karla hover:bg-purple-100 transition text-[17px] md:text-xl"
+                  className="bg-white text-main-dark px-6 py-2 rounded-md font-semibold font-karla hover:bg-slate-100 transition text-[17px] md:text-xl"
                 >
                   Subscribe
                 </button>
               </div>
             </form>
 
-            {status && <p className="mt-4 text-sm text-white">{status}</p>}
+            {status && <p className="mt-4 text-sm text-slate-200">{status}</p>}
 
-            <p className="text-sm min-[500px]:text-[15px] mt-4 text-white pl-3 font-lora">
-              We respect your privacy.. No spam, ever. Read our{" "}
+            <p className="text-sm min-[500px]:text-[15px] mt-4 text-slate-200 pl-3 font-lora">
+              We respect your privacy. No spam, ever. Read our{" "}
               <a
                 href="/privacy-policy"
-                className="font-bold underline text-black font-lora"
+                className="font-bold underline text-white font-lora"
               >
                 Privacy Policy
               </a>

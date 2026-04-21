@@ -1,4 +1,5 @@
 "use client";
+
 import { Quote } from "lucide-react";
 import {
   Carousel,
@@ -9,95 +10,69 @@ import {
 } from "@/components/ui/carousel";
 
 const testimonials1 = [
-  // {
-  //   id: 1,
-  //   img: "/images/solution/evan.jpg",
-  //   text: "ElderConnect was easy enough that my mother figured it out on her own, which says everything.",
-  //   name: "Evan",
-  // },
   {
     id: 1,
     img: "/images/solution/rohit.jpeg",
-    text: "AppDeploy made distributing our test app incredibly quick, and our team could install it without any technical setup.",
+    text: "AppDeploy gave our team a much clearer internal distribution flow, with a branded access path and less operational friction around releases.",
     name: "Rohit Ahlawat, AVISKAAR ENTERPRISES LTD",
   },
   {
     id: 2,
-    img: "/images/solution/socialmedia.jpg",
-    text: "AI Caption Studio saved my team 10 hours/week in caption writing and helped us to grow our engagement over social media. ",
-    name: "Social Media Manager",
-  },
-  {
-    id: 3,
     img: "/images/solution/vijay.jpeg",
-    text: "ClarityPath helped me talk through decisions more clearly and gave me space to think before committing.",
+    text: "AXOS gives teams one secure place for mail, storage, coordination, and AI-assisted work, with far less dependence on disconnected tools.",
     name: "Vijay Rathee, Founder - Digital Entrepreneur Bizztor",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="bg-[linear-gradient(to_bottom,#FFFFFF_0%,#E0F0F2_29%,#368F99_100%)] py-10 min-[500px]:py-15 sm:py-20 lg:py-24 text-center relative overflow-hidden">
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
-        <div className="font-karla font-medium text-4xl text-center min-[500px]:mb-5 relative w-fit mx-auto">
-          <p className="absolute max-[500px]:hidden text-[4.3rem] font-semibold text-black font-karla opacity-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  text-nowrap select-none">
-            Testimonials
+    <section className="bg-white py-16 md:py-20 text-center relative overflow-hidden">
+      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10">
+        <div className="max-w-3xl mx-auto mb-10">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-3">
+            Feedback
           </p>
-          <h2 className="text-2xl min-[850px]:text-3xl font-medium text-black font-karla">
-            Testimonials
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold text-[#0F172A] mb-5">
+            Signals from real users
           </h2>
+          <p className="text-slate-700 font-lora text-lg leading-8">
+            The strongest product stories come from clearer workflows and
+            easier day-to-day use, not just feature lists.
+          </p>
         </div>
-        <p className="text-xl min-[850px]:text-2xl text-main-dark font-medium mb-5 font-lora tracking-wide">
-          Hear From Our Customers
-        </p>
       </div>
 
-      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10 ">
-        <div>
-          <Carousel
-            className="w-full relative px-6 sm:px-10  "
-            opts={{ loop: true }}
-          >
-            <CarouselContent className="h-full ">
-              {testimonials1.map((t, i) => (
-                <CarouselItem
-                  key={i}
-                  className="basic-1/2 lg:basis-1/3 pt-14 pb-5 h-full"
-                >
-                  <div
-                    key={t.id}
-                    className={` bg-white rounded-2xl shadow-lg px-7 py-12 mx-5 relative transition-all duration-500 h-full ${""}`}
-                  >
-                    {/* Avatar */}
-                    <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                      <img
-                        src={t.img}
-                        alt={t.name}
-                        className="w-20 h-20 rounded-full border-4 border-main-dark object-cover"
-                      />
-                    </div>
-
-                    {/* Quote Icon */}
-                    <Quote className="absolute top-8 left-8 text-gray-200 w-12 h-12 rotate-180" />
-
-                    {/* Text */}
-                    <p className="relative z-[60] text-main-dark mt-10 text-lg leading-relaxed font-medium font-karla">
-                      “{t.text}”
-                    </p>
-                    <p className="relative z-[60] text-grey mt-6 text-lg italic font-lora">
-                      – {t.name}
-                    </p>
-
-                    {/* Closing quote */}
-                    <Quote className="absolute bottom-8 right-8 text-gray-200 w-12 h-12 " />
+      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10">
+        <Carousel className="w-full relative px-6 sm:px-10" opts={{ loop: true }}>
+          <CarouselContent className="h-full">
+            {testimonials1.map((t, i) => (
+              <CarouselItem key={i} className="md:basis-1/2 pt-6 pb-5 h-full">
+                <div className="bg-[linear-gradient(180deg,#FFFFFF_0%,#F8FAFC_100%)] rounded-[1.8rem] border border-slate-200 px-7 py-10 mx-3 relative transition-all duration-500 h-full shadow-[0_18px_40px_rgba(15,23,42,0.05)]">
+                  <div className="mx-auto mb-6 h-20 w-20 overflow-hidden rounded-full border-4 border-slate-900/10">
+                    <img
+                      src={t.img}
+                      alt={t.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="text-main hover:bg-purple-50  left-0 cursor-pointer z-10" />
-            <CarouselNext className="text-main hover:bg-purple-50 right-0 cursor-pointer z-10 " />
-          </Carousel>
-        </div>
+
+                  <Quote className="absolute top-8 left-8 text-slate-200 w-10 h-10 rotate-180" />
+
+                  <p className="relative z-10 text-slate-800 text-lg leading-8 font-medium font-karla">
+                    “{t.text}”
+                  </p>
+                  <p className="relative z-10 text-slate-500 mt-6 text-base italic font-lora">
+                    {t.name}
+                  </p>
+
+                  <Quote className="absolute bottom-8 right-8 text-slate-200 w-10 h-10" />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="text-slate-900 hover:bg-slate-50 left-0 cursor-pointer z-10" />
+          <CarouselNext className="text-slate-900 hover:bg-slate-50 right-0 cursor-pointer z-10" />
+        </Carousel>
       </div>
     </section>
   );

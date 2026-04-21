@@ -44,30 +44,30 @@ export default function WhatIsClarityPath() {
         <div className="w-full min-[1250px]:w-[50%] text-center min-[1250px]:text-left">
           <div className="relative w-fit py-5 lg:py-10 mx-auto min-[1250px]:mx-0 ">
             <p className="hidden lg:block absolute text-[4.5rem] font-semibold text-black font-karla opacity-5 left-3/4 -translate-x-1/2 top-1/2 -translate-y-1/2 text-nowrap select-none">
-              What is Clarity Path?
+              What is ClarityPath?
             </p>
             <h2 className="lg:text-5xl text-3xl font-bold text-black font-karla">
-              What is Clarity Path?
+              What is ClarityPath?
             </h2>
           </div>
 
           <p className="text-[18px] sm:text-[20px] md:text-[21px] text-black mb-4 lg:mb-6 font-karla leading-[22px]">
           {" "}
             <span className="text-main-dark font-semibold">ClarityPath</span> is an{" "}
-            <span className="text-main-dark font-semibold">AI-based application</span>{" "}
+            <span className="text-main-dark font-semibold">AI-supported application</span>{" "}
             built for{" "}
             <span className="text-main-dark font-semibold">
               professionals, students, and organizations
             </span>{" "}
-            who want to make smarter, data-backed, and meaningful life decisions.
+            who want a more structured way to think through decisions, plans,
+            and priorities.
           </p>
 
           <p className="text-gray-900 w-full min-[1250px]:w-[90%] leading-6 text-[14px] lg:text-[17px] font-lora mx-auto min-[1250px]:mx-0">
-            Powered by artificial intelligence, Clarity Path analyzes behavioral
-            patterns, goals, and progress to offer personalized insights and
-            recommendations. It helps you foster self-awareness, set meaningful
-            objectives, and maintain consistent momentum toward what matters most
-            to you and your organization.
+            ClarityPath uses AI to help users reflect more clearly on goals,
+            patterns, and direction. It is designed to support self-awareness,
+            more deliberate planning, and better continuity around what matters
+            most to the individual or team using it.
           </p>
         </div>
 

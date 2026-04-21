@@ -5,7 +5,7 @@ export default function CaseStudiesAppDeploy() {
   const caseStudies = [
     {
       title: "From Frustration to Breakthrough",
-      subtitle: "How persistence turned a technical dead-end into a Swift Android milestone.",
+      subtitle: "How technical experimentation and distribution friction shaped a more focused product direction.",
       image: "/images/products/appdeploy/1.jpeg",
       content: [
         "It began with endless compiler errors and a near-impossible goal: building Swift for Android.",
@@ -17,15 +17,15 @@ export default function CaseStudiesAppDeploy() {
     },
     {
       title: "The Birth of AppDeploy",
-      subtitle: "From rejection to revolutionizing private app deployment.",
+      subtitle: "From internal distribution friction to a clearer operational model.",
       image: "/images/products/appdeploy/3.jpeg",
       content: [
         "When Apple rejected our app ClarityPath under guideline 4.3(b), we faced the same pain as thousands of teams.",
-        "Instead of quitting, we built AppDeploy — a secure, Apple Business Manager-ready platform that makes private distribution simple.",
-        "No costly MDMs. No complex reviews. Just a streamlined, compliant way to deliver your apps to the right users.",
+        "Instead of quitting, we built AppDeploy as a branded internal distribution platform built around Apple Business workflows.",
+        "The goal was a clearer operational layer for private iOS delivery, release visibility, and employee-friendly access.",
       ],
       quote:
-        "“We built AppDeploy because we felt the pain ourselves — endless rejections, complex reviews, and overpriced MDMs just to get a simple app out.”",
+        "“We built AppDeploy because internal app distribution needed a more usable operational layer, not more complexity.”",
     },
   ];
 
@@ -38,7 +38,7 @@ export default function CaseStudiesAppDeploy() {
             Case Studies
           </h2>
           <p className="mt-3 text-gray-600 font-lora text-lg max-w-3xl mx-auto">
-            Real stories behind AppDeploy’s journey — from technical breakthroughs to real-world pain solved.
+            Real context behind AppDeploy’s direction, from technical experimentation to the operational problem it was built to solve.
           </p>
           <span className="absolute hidden lg:block text-[90px] font-bold text-gray-300/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none">
             Case Studies
@@ -97,7 +97,7 @@ export default function CaseStudiesAppDeploy() {
           className="mt-20 bg-[#F5EDFF] border-l-[8px] border-[#7E1A8E] rounded-xl shadow-md p-10 text-center font-lora"
         >
           <p className="text-gray-700 text-lg italic max-w-3xl mx-auto">
-            “Every story we lived became a feature in AppDeploy — turning real challenges into tools that simplify app deployment for teams everywhere.”
+            “The product direction behind AppDeploy came from real workflow friction and a need for a cleaner internal distribution experience.”
           </p>
         </motion.div>
       </div>

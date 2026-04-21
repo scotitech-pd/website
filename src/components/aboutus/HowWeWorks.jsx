@@ -7,7 +7,8 @@ const HowWeWorks = () => {
       icon: "/images/aboutus/building.png",
       title: "Glasgow Headquarters",
       description:
-"Serving clients worldwide with UK-based standards and compliance.",    },
+        "Operating from Scotland with UK-based standards, governance, and product discipline.",
+    },
     {
       icon: "/images/aboutus/global.png",
       title: "Global Engineered Network",
@@ -20,13 +21,13 @@ const HowWeWorks = () => {
       className: "",
       title: "Agile, User-Centred Delivery",
       description:
-        "Rapid iteration to solve real problems with clean, efficient technology.",
+        "Iterative delivery shaped by real use cases, product feedback, and practical implementation needs.",
     },
     {
       icon: "/images/aboutus/compliance.png",
-      title: "Compliance-Ready Operations",
+      title: "Governance-Aware Operations",
       description:
-        "All products follow GDPR, ABM, and Play Store guidelines for secure deployment.",
+        "Products are designed with privacy, platform policy, and deployment governance in mind.",
     },
   ];
 
@@ -42,7 +43,7 @@ const HowWeWorks = () => {
         {/* Title */}
         <div className="text-center ">
           <h2 className="text-3xl lg:text-[40px] font-karla 2xl:text-5xl font-bold text-white">
-            How We Works
+            How We Work
           </h2>
         </div>
 
@@ -87,7 +88,7 @@ const HowWeWorks = () => {
         <div className="flex justify-center lg:mt-3">
           <Link href="/contact">
             <button className="px-8 font-karla lg:px-6 py-3 lg:py-2 lg:mt-2.5 bg-white text-black font-semibold text-base lg:text-[15px]   cursor-pointer rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
-              Request a Global Delivery Plan
+              Start a Conversation
             </button>
           </Link>
         </div>

@@ -6,7 +6,8 @@ import Link from "next/link";
 export default function AppDeployProfileSection() {
   return (
     <section className="relative bg-white">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#F6F2FF] via-white to-[#E9F3F7]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_24%)]" />
 
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 py-10 lg:py-16">
         {/* CTA strip */}
@@ -23,8 +24,9 @@ export default function AppDeployProfileSection() {
                 Book a discovery call
               </p>
               <p className="font-lora text-xs sm:text-sm text-white/80 mt-1 max-w-md">
-                Talk to the ScotiTech team about private distribution, ABM
-                setup, and how AppDeploy can fit your deployment strategy.
+                Talk to the ScotiTech team about Apple Business based internal
+                distribution, rollout planning, and how AppDeploy can fit your
+                deployment model.
               </p>
             </div>
 

@@ -1,114 +1,92 @@
 "use client";
 
-export default function OpslyInfoSection() {
- const features = [
+const highlights = [
   {
     icon: "/images/products/opsly/clear.png",
-    title: "One login",
-    desc: "Access all apps with a single secure login without switching platforms.",
+    title: "One secure workspace identity",
+    desc: "Replace fragmented logins and disconnected tools with one operating environment for everyday work.",
   },
   {
     icon: "/images/products/opsly/optimize.png",
-    title: "All your apps in one place",
-    desc: "Get full visibility of every tool, user, and license in a single dashboard.",
+    title: "Operational visibility by default",
+    desc: "See communication, files, cloud storage, schedules, tasks, and internal coordination in one place.",
   },
   {
     icon: "/images/products/opsly/control.png",
-    title: "AI built in",
-    desc: "Use AI to highlight risks, forecast spends, and recommend cost-saving actions automatically.",
+    title: "AI built into the workspace",
+    desc: "Use AI inside the environment itself to summarise, answer, organise, and reduce routine effort without pushing sensitive context elsewhere.",
   },
   {
     icon: "/images/products/opsly/ssecurity.png",
-    title: "Your data stays private",
-    desc: "Data is safeguarded with enterprise-grade privacy and never shared or stored externally.",
+    title: "Data sovereignty that is actually practical",
+    desc: "Deploy in hosted, private cloud, or self-hosted models that give startups and enterprises more control over access, policy, and operations.",
   },
 ];
 
-
+export default function OpslyInfoSection() {
   return (
-    <>
-      {/* -------------------- ORIGINAL (LG AND ABOVE) -------------------- */}
-      <section className="relative w-full py-16  hidden lg:block mb-3 ">
-        <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-          <h2 className="text-[40px] font-semibold text-main-dark mb-6 drop-shadow-2xl font-karla">
-           Opsly — Your All-in-One Private Cloud Workspace
+    <section className="relative text-[#0F172A] py-16 sm:py-20">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(91,79,207,0.08),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(52,211,255,0.06),transparent_20%)]" />
+
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="max-w-4xl mb-12">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80 mb-3">
+            Product Positioning
+          </p>
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5 text-[#0F172A]">
+            AXOS replaces core work tools with one private workspace that has
+            AI built directly into the tools teams use every day.
           </h2>
-          <p className="text-black font-lora text-xl mb-16 pr-20">          
-Opsly gives you a secure, private, self-hosted digital workspace with powerful AI assistance — all connected through Private Smart WorkSpace, your personal cloud hub running on your own premises.
+          <p className="text-base md:text-xl font-lora leading-8 text-slate-700">
+            Built for teams that want a modern operating environment without
+            handing away control, AXOS combines mail, drive, cloud storage,
+            calendar, chat, tasks, notes, and AI into one deployment-ready
+            workspace architecture.
           </p>
         </div>
 
-        <div className="relative bg-yellow-200">
-          <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-r from-[#407691] to-[#3D2779] top-0"></div>
-
-          <div className="max-w-[1250px] mb-10 mx-auto grid md:grid-cols-[24%_76%] gap-2 mt-20 items-start font-lora px-6 min-[1190px]:px-0">
-            <div className="bg-transparent text-white z-10">
-              <p className="text-lg leading-relaxed font-medium my-5">
-                Integrate your tools. Protect your data. Run your work your way. <br /> <br />
-
+        <div className="grid grid-cols-1 lg:grid-cols-[42%_58%] gap-8 items-start">
+          <div className="rounded-[2rem] border border-white/80 bg-white/85 backdrop-blur-md p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-5">
+              Why it matters
+            </p>
+            <div className="space-y-5 text-slate-600 font-lora leading-8">
+              <p>
+                Most organisations are still operating through a patchwork of
+                email, file sharing, cloud storage, chat, task management,
+                notes, and AI tools that do not really belong to one system.
+              </p>
+              <p>
+                AXOS closes that gap with a private workspace model designed to
+                bring the core operating surface into one place while still
+                supporting governance, deployment flexibility, local AI
+                execution, and rollout discipline for startups as well as
+                enterprise teams.
               </p>
             </div>
-            <div className="relative">
-              <div className="absolute left-0 right-0 grid grid-cols-4 justify-center gap-9 z-10 text-black w-full">
-                {features.map((item, i) => (
-                  <div
-                    key={i}
-                    className="bg-white relative shadow-[0_0_15px_rgba(128,128,128,0.6)] group hover:shadow-[0_0_20px_rgba(140,82,255,0.9)] hover:scale-101 duration-300 py-10 px-5 text-left transition-all -mt-8"
-                  >
-                    <div className="absolute bg-white flex justify-center items-center shadow-[0_0_15px_rgba(128,128,128,0.6)] group-hover:shadow-[0_0_15px_rgba(140,82,255,0.9)] group-hover:scale-110 duration-300 -top-3 -left-3 size-14 transition-all">
-                      <img src={item.icon} alt="" className="size-8" />
-                    </div>
-                    <h3 className="font-semibold text-xl mb-2 mt-7 font-karla leading-5">
-                      {item.title}
-                    </h3>
-                    <p className="text-[15px] leading-4.5">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
 
-      {/* -------------------- NEW RESPONSIVE VERSION (BELOW LG) -------------------- */}
-      <section className="relative w-full py-16 bg-white lg:hidden block">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-[32px] font-semibold text-main-dark mb-4 drop-shadow-2xl font-karla">
-            Opsly — Your All-in-One Private Cloud Workspace
-          </h2>
-          <p className="text-[#2B2B2B] font-lora text-base md:text-lg mb-10 leading-relaxed">          
-Opsly gives you a secure, private, self-hosted digital workspace with powerful AI assistance — all connected through Private Smart WorkSpace, your personal cloud hub running on your own premises.
-          </p>
-        </div>
-
-        <div className="relative bg-gradient-to-r from-[#407691] to-[#3D2779] py-14">
-          <div className="max-w-6xl mx-auto px-6 text-white">
-            <p className="text-base md:text-lg mb-10 font-lora text-center">
-          Integrate your tools. Protect your data. Run your work your way.
-
-            </p>
-
-            <div className="grid sm:grid-cols-2 gap-6 justify-center items-center ">
-              {features.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white text-black rounded-2xl shadow-[0_0_15px_rgba(255,255,255,0.3)] py-8 px-5 flex flex-col items-center text-center transition-all hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(140,82,255,0.8)] duration-300"
-                >
-                  <div className="flex items-center justify-center bg-[#F1E6FF] shadow-[0_0_10px_rgba(140,82,255,0.4)] size-16 rounded-full mb-4">
-                    <img src={item.icon} alt={item.title} className="size-8" />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2 font-karla text-main-dark">
-                    {item.title}
-                  </h3>
-                  <p className=" text-sm text-gray-700 font-lora leading-snug">
-                    {item.desc}
-                  </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {highlights.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[1.75rem] border border-white/80 bg-white/85 backdrop-blur-md px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"
+              >
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900/5 border border-slate-200">
+                  <img src={item.icon} alt="" className="size-8 object-contain" />
                 </div>
-              ))}
-            </div>
+                <h3 className="text-xl font-semibold font-karla text-slate-900 mb-3 leading-7">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600 font-lora leading-7 text-[15px]">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

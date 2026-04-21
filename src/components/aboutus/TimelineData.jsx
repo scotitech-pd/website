@@ -24,47 +24,47 @@ export default function Timeline() {
     {
       year: "2022",
       title: "The Spark",
-      desc1: "Where frustration turned into innovation.",
+      desc1: "Where early friction began to shape the product direction.",
       desc2:
-        "Founders realised gaps in accessibility, app distribution, and digital care.",
+        "The founders identified recurring gaps across accessibility, internal app distribution, and digital workflows.",
       side: "left",
     },
     {
       year: "2023",
       title: "Exploration and Early Prototypes",
-      desc1: "Small experiments leading to big insights.",
-      desc2: "Built early prototypes and analysed real-world user problems.",
+      desc1: "Early experiments created clearer product insight.",
+      desc2: "The team built prototypes and tested them against real user and operational problems.",
       side: "right",
     },
     {
       year: "2024",
       title: "From Ideas to Working Solutions",
-      desc1: "When concepts began proving real value.",
-      desc2: "Internal AppDeploy version solved key distribution challenges.",
+      desc1: "Concepts started turning into working products.",
+      desc2: "ClarityPath’s App Store setback and the move toward Apple Business distribution helped shape AppDeploy, while broader operational needs also started informing the AXOS direction.",
       side: "left",
     },
     {
       year: "Nov 2024 ",
       title: "Official Incorporation",
-      desc1: "A vision became a company in November 2024.",
+      desc1: "The vision formally became a company in November 2024.",
       desc2:
-        "ScotiTech Solutions Limited registered in the UK for people-centric technology.",
+        "ScotiTech Solutions Limited was registered in the UK to build practical technology products with long-term relevance.",
       side: "right",
       style: "text-center"
     },
     {
       year: "2025",
       title: "Building the ScotiTech Ecosystem",
-      desc1: "A year of execution, expansion, and product growth.",
+      desc1: "A year of execution, expansion, and product refinement.",
       desc2:
-        "Major development across AppDeploy, ElderConnect+, Opsly, ClarityPath and more.",
+        "Major development continued across AppDeploy and AXOS as the two main platform directions, with ClarityPath supporting the wider product portfolio.",
       side: "left",
     },
     {
       year: "2026+",
-      title: "Looking Forward to the Future",
-      desc1: "Building technology that feels human.",
-      desc2: "Global expansion across secure cloud, AI automation, and digital care.",
+      title: "Looking Ahead",
+      desc1: "Building practical software with stronger trust and control.",
+      desc2: "The focus remains on product maturity, privacy-conscious infrastructure, and wider adoption across modern digital operations.",
       side: "right",
     },
     // {
@@ -107,9 +107,10 @@ export default function Timeline() {
               Our Story
             </h3>
             <p className="text-black font-lora text-[12px] py-2 lg:text-center min-[500px]:text-[16px] lg:p-6 lg:px-[70px] lg:text-[15px]">
-              From humble beginnings to global impact, ScotiTech evolved from a
-              boutique IT services company in London to a globally recognized
-              organization delivering cutting-edge, product-first solutions.
+              ScotiTech’s journey reflects a gradual move from early experimentation
+              toward a more focused product company built around practical software
+              and long-term digital trust. The old purple color has been replaced
+              with a modern, vibrant theme that aligns with our vision.
             </p>
           </div>
         </div>

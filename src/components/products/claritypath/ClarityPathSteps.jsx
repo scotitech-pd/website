@@ -92,13 +92,13 @@ export default function ClarityPathSteps() {
         <div className="absolute bottom-0  rounded-xl  translate-y-1/2 -translate-x-1/2 left-1/2 flex justify-center hover:scale-101 duration- group hover:shadow-[0_0_15px_rgba(255,255,255,0.9)] transition-all">
           <div className=" absolute  bg-main-dark rounded-full -top-1 -translate-y-1/2 group-hover:scale-102 duration- group-hover:shadow-[0_0_15px_rgba(255,255,255,0.9)] transition-all">
             <img
-              src="/images/products/claritypath/logo.png"
+              src="/images/brand/claritypath-logo.png"
               alt="logoscotitech"
               className="h-7 "
             />
           </div>
 
-          <a href="https://appdeploy.scotitech.com:5173/">
+          <a href="https://appdeploy.scotitech.com/w/appdeploy-platform" target="_blank" rel="noopener noreferrer">
             <button className="bg-white text-black font-karla  rounded-xl  text-[15px] px-3 lg:px-6 pt-3 lg:pb-3 pb-3 transition cursor-pointer">
               Download now From
               <span className="text-main-dark font-bold"> AppDeploy</span>{" "}

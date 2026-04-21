@@ -10,16 +10,15 @@ const Footer = () => {
     { id: 1, title: "Home", link: "/" },
     { id: 2, title: "Solutions", link: "/solutions" },
     { id: 3, title: "About Us", link: "/aboutus" },
-    { id: 4, title: "Our Products", link: "/products/appdeploy" },
+    { id: 4, title: "Products", link: "/products" },
     { id: 5, title: "ScotiTech Media", link: "/media" },
   ];
 
 
   const Services = [
-    { id: 2, title: "Opsly", link: "/products/opsly" },
+    { id: 2, title: "AXOS", link: "/products/axos" },
     { id: 1, title: "AppDeploy", link: "/products/appdeploy" },
     { id: 4, title: "ClarityPath", link: "/products/claritypath" },
-    { id: 3, title: "AI Caption Studio", link: "/products/aicaptionstudio" },
   ];
 
   return (
@@ -96,12 +95,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 min-[1047px]:grid-cols-[30%_70%] text-sm text-white min-[570px]:text-white/80 my-10">
           <div className="w-[80%] z-10 hidden min-[1047px]:block">
             <h5 className="font-bold pb-3 font-karla">
-              Mentorship, and Social Impact
+              Mentorship and Social Impact
             </h5>
             <p className="font-lora">
-              At ScotiTech, we believe innovation creates more value when
-              shared. Our founder mentors early-stage entrepreneurs through
-              NASSCOM, Startup India, and The Mentoring Club.
+              ScotiTech supports mentorship, entrepreneurship, and practical
+              knowledge-sharing beyond its products, including founder-led
+              contributions through networks such as NASSCOM, Startup India,
+              and The Mentoring Club.
             </p>
 
             <div className="pt-6 font-karla gap-8 flex">
@@ -140,7 +140,7 @@ const Footer = () => {
 
             {/* PRODUCTS */}
             <div className="z-10 max-[570px]:mx-auto">
-              <h5 className="font-semibold pb-3 font-karla">Our Products</h5>
+              <h5 className="font-semibold pb-3 font-karla">Products</h5>
               <ul>
                 {Services.map((item) => (
                   <li key={item.id} className="my-1.5">
@@ -184,15 +184,15 @@ const Footer = () => {
                 Registered Address
               </h5>
               <p className="font-lora">
-                ScotiTech Solutions Limited 11 Caldervale Drive, Motherwell ML1
-                2GB, United Kingdom
+                ScotiTech Solutions Limited, 11 Caldervale Drive, Motherwell
+                ML1 2GB, United Kingdom
               </p>
                <h5 className="font-semibold pb-2 font-karla mt-4">
                 Corporate Address
               </h5>
               <p className="font-lora">
-                Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business
-                Park, 1st, Motherwell ML1 4WR, United Kingdom
+                Eurocentral Scotland, Maxim 1, 2 Parklands Way, Maxim Business
+                Park, 1st Floor, Motherwell ML1 4WR, United Kingdom
               </p>
             </div>
           </div>
@@ -208,15 +208,15 @@ const Footer = () => {
           <div className="max-w-[280px] mx-auto text-white z-10">
             <h5 className="font-semibold pb-3 font-karla">Corporate Address</h5>
             <p className="font-lora">
-              Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business
-              Park, 1st, Motherwell ML1 4WR, United Kingdom
+              Eurocentral Scotland, Maxim 1, 2 Parklands Way, Maxim Business
+              Park, 1st Floor, Motherwell ML1 4WR, United Kingdom
             </p>
 
             <h5 className="font-semibold pb-3 font-karla mt-4">
               Registered Address
             </h5>
             <p className="font-lora">
-              ScotiTech Solutions Limited 11 Caldervale Drive, Motherwell ML1
+              ScotiTech Solutions Limited, 11 Caldervale Drive, Motherwell ML1
               2GB, United Kingdom
             </p>
 

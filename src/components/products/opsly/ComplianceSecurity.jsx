@@ -1,90 +1,62 @@
+const controls = [
+  {
+    title: "Encryption in transit and at rest",
+    description:
+      "Protect operational data, cloud storage, and internal AI context with strong baseline controls across storage and transfer layers.",
+  },
+  {
+    title: "Access and permission design",
+    description:
+      "Apply environment-level control over who can access what, how administrative rights are assigned, and how workspace roles are managed.",
+  },
+  {
+    title: "Hosting model alignment",
+    description:
+      "Choose a deployment path that supports startup agility or enterprise policy, infrastructure expectations, and operational ownership.",
+  },
+  {
+    title: "Rollout-ready governance",
+    description:
+      "Bring security review, workspace setup, and go-live planning into one implementation process instead of treating them as separate concerns.",
+  },
+];
+
 export default function ComplianceSecurity() {
-  const cards = [
-    {
-      title: "End-to-End Data Encryption:",
-      description:
-        "All data, both in transit and at rest, is secured with AES-256 encryption.",
-    },
-    {
-      title: "SOC 2 Type II Certified:",
-      description:
-        "Opsly is built within a SOC 2 compliant infrastructure, meeting rigorous standards for security, availability, and confidentiality.",
-    },
-  ];
-
-  const cards2 = [
-    {
-      title: "GDPR and CCPA Ready:",
-      description:
-        "Our platform is fully compliant with major international data privacy regulations.",
-    },
-    {
-      title: "Scalable for Your Enterprise:",
-      description:
-        "Our platform is designed to grow with you, from startup to global enterprise.",
-    },
-  ];
-
   return (
-    <section className="relative text-white lg:py-24 py-16 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-[url('/images/products/opsly/bgcompliance.png')] bg-cover bg-center"></div>
+    <section className="relative overflow-hidden bg-[#0F172A] text-white py-16 sm:py-20">
+      <div className="absolute inset-0 bg-[url('/images/products/opsly/bgcompliance.png')] bg-cover bg-center opacity-22" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A]/92 via-[#0F172A]/86 to-[#0B1220]/95" />
 
-      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Left Text Section */}
-        <div>
-          <div className="text-3xl lg:text-[42px] font-semibold relative w-fit  font-karla mb-5">
-            Compliance & Security
-            <p className="absolute hidden lg:block [65px] font-medium text-nowrap opacity-10 top-1/2 -translate-1/2 left-1/2">
-              Compliance & Security
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="grid grid-cols-1 xl:grid-cols-[38%_62%] gap-8 items-start">
+          <div className="max-w-2xl">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-400 mb-3">
+              Security and Compliance
             </p>
-          </div>
-
-          <h3 className="text-lg lg:text-text-3xl mb-1.5 font-lora">
-            Built on a Foundation of Trust
-          </h3>
-          <p className="text-md lg:text-text-lg max-w-lg font-lora leading-6">
-            We are committed to the highest standards of data security and
-            compliance to ensure your organization&apos;s information is always
-            protected.
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">
+            Built to support enterprise review, not bypass it
+          </h2>
+          <p className="text-base md:text-xl font-lora leading-8 text-slate-300">
+            AXOS is designed for organisations that care about how the
+            environment is deployed, governed, and controlled. That matters to
+            enterprise teams, but it also matters to startups that want AI and
+            operational tooling without giving away control of sensitive
+            internal data.
           </p>
-        </div>
-
-        {/* Right Cards Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-[1150px]:h-[600px] md:h-[500px]">
-          <div className="grid md:grid-rows-[40%_55%] gap-6">
-            {cards.map((card, i) => (
-              <div
-                key={i}
-                className={`rounded-3xl p-[1px] bg-gradient-to-r from-[#98F9FF]/70 via-white/70 to-main-light/70 text-white shadow-[0_0_20px_rgba(0,255,255,0.1)] hover:shadow-[0_0_25px_rgba(0,255,255,0.25)]
-                      transition-all duration-500 hover:scale-[1.02]`}
-              >
-                <div className="bg-gradient-to-br from-[#0B1220]/90 to-[#07101E]/90 p-6 h-full rounded-3xl">
-                  <h4 className="text-[#98F9FF] font-medium text-[22px] font-karla mb-2">
-                    {card.title}
-                  </h4>
-                  <p className="text-base leading-relaxed font-lora">
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            ))}
           </div>
-          <div className="grid md:grid-rows-[55%_40%] gap-6">
-            {cards2.map((card, i) => (
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {controls.map((item) => (
               <div
-                key={i}
-                className={`rounded-3xl p-[1px] bg-gradient-to-r from-[#98F9FF]/70 via-white/70 to-main-light/70 text-white shadow-[0_0_20px_rgba(0,255,255,0.1)] hover:shadow-[0_0_25px_rgba(0,255,255,0.25)]
-                      transition-all duration-500 hover:scale-[1.02]`}
+                key={item.title}
+                className="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/[0.03] px-6 py-7 shadow-[0_18px_40px_rgba(0,0,0,0.22)]"
               >
-                <div className="bg-gradient-to-br from-[#0B1220]/90 to-[#07101E]/90 p-6 h-full rounded-3xl">
-                  <h4 className="text-[#98F9FF] font-medium text-[22px] font-karla mb-2">
-                    {card.title}
-                  </h4>
-                  <p className="text-sm leading-relaxed font-lora">
-                    {card.description}
-                  </p>
-                </div>
+                <h3 className="text-2xl font-karla font-semibold text-white mb-3 leading-8">
+                  {item.title}
+                </h3>
+                <p className="text-slate-300 font-lora leading-8">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>

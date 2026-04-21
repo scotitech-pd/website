@@ -19,10 +19,10 @@ const contactDetails = [
 
 /* values section */
 const valueCards = [
-  { icon: "/images/contact/insights.png", text: "We turn insights into victories. Ready to achieve more.", bg: "bg-purple-100" },
-  { icon: "/images/contact/data.png", text: "Data-driven. Success delivered. Build with ScotiTech today.", bg: "bg-blue-100" },
-  { icon: "/images/contact/technology.png", text: "Expertise, Evolved. Technology simplified with us for growth", bg: "bg-teal-100" },
-  { icon: "/images/contact/growth.png", text: "Contact us to see how our technology drives business growth.", bg: "bg-purple-100" },
+  { icon: "/images/contact/insights.png", text: "Clear product conversations grounded in real use cases.", bg: "bg-purple-100" },
+  { icon: "/images/contact/data.png", text: "Practical guidance on rollout, onboarding, and product fit.", bg: "bg-blue-100" },
+  { icon: "/images/contact/technology.png", text: "A technical team focused on clarity, control, and usable software.", bg: "bg-teal-100" },
+  { icon: "/images/contact/growth.png", text: "Direct contact for partnerships, commercial discussions, and product access.", bg: "bg-purple-100" },
 ];
 
 /* lucide icon renderer */
@@ -89,7 +89,8 @@ const GetInTouch = () => {
                 Get in Touch
               </h1>
               <p className="text-sm lg:text-[16px] xxl:text-lg leading-relaxed max-w-2xl font-lora">
-                Ready to find reliable support and genuine companionship? We're here to answer all your questions & tailor services for you or your Business. Let's start the conversation.
+                Speak with ScotiTech about product access, rollout questions,
+                partnerships, or the solution that best fits your organisation.
               </p>
             </div>
 

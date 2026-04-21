@@ -27,7 +27,7 @@ const GlobalD = () => {
 
           {/* Description */}
           <p className="text-white font-lora lg:text-[15px] text-xs leading-5.5 min-[1670px]:py-[20px]">
-            ScotiTech operates with strategic leadership from London and a
+            ScotiTech operates with strategic leadership from Glasgow, UK and a
             remote-first engineering network spanning multiple regions. This
             hybrid model allows us to blend British innovation, global
             collaboration, and technical agility — delivering exceptional

@@ -1,153 +1,159 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
-const HeroSection = () => {
-  const slides = [
-    { src: "/images/home/hero-vid.mp4" },
-    { src: "/images/home/hero-vid2.mp4" },
-    { src: "/images/home/hero-vid3.mp4" },
-  ];
+const proofItems = [
+  "Internal app distribution with clearer rollout control",
+  "Private workspaces with AI built directly into daily tools",
+  "Deployment options shaped around real operational needs",
+];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [videosReady, setVideosReady] = useState(false);
-  const videoRefs = useRef([]);
+const surfaceCards = [
+  {
+    title: "AppDeploy",
+    subtitle: "Internal distribution built around Apple Business workflows",
+    meta: "Branded access, release visibility, controlled rollout",
+    accent: "from-[#4F74F3] via-[#5B4FCF] to-[#0EA5E9]",
+    logo: "/images/brand/appdeploy-logo-black.png",
+    theme: "light",
+  },
+  {
+    title: "AXOS",
+    subtitle: "Private workspace with AI built into the tools teams use every day",
+    meta: "Mail, drive, cloud storage, chat, tasks, notes, AI",
+    accent: "from-[#34D3FF] via-[#4F74F3] to-[#5B4FCF]",
+    logo: "/images/brand/axos-icon.png",
+    theme: "dark",
+  },
+];
 
-  // Preload videos BEFORE showing HeroSection
-  useEffect(() => {
-    let loaded = 0;
-
-    slides.forEach((slide) => {
-      const video = document.createElement("video");
-      video.src = slide.src;
-      video.preload = "auto";
-      video.muted = true;
-      video.playsInline = true;
-
-      video.addEventListener("loadeddata", () => {
-        loaded++;
-        if (loaded === slides.length) {
-          setVideosReady(true);
-        }
-      });
-    });
-  }, []);
-
-  // Auto slide after videos are ready
-  useEffect(() => {
-    if (!videosReady) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [videosReady]);
-
-  // Play correct video instantly
-  useEffect(() => {
-    if (!videosReady) return;
-
-    videoRefs.current.forEach((video, i) => {
-      if (!video) return;
-
-      if (i === currentIndex) {
-        video.currentTime = 0;
-        video.play().catch(() => {});
-      } else {
-        video.pause();
-      }
-    });
-  }, [currentIndex, videosReady]);
-
-  // Loader already handles initial delay, so return nothing until videos ready
-  if (!videosReady) return null;
-
+export default function HeroSection() {
   return (
-    <>
-      {/* DESKTOP VIEW */}
-      <section className="relative hidden lg:flex h-[93vh] w-full overflow-hidden items-center justify-center">
-        {slides.map((slide, i) => (
-          <video
-            key={i}
-            ref={(el) => (videoRefs.current[i] = el)}
-            src={slide.src}
-            muted
-            playsInline
-            preload="auto"
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
-              currentIndex === i ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
+    <section className="relative overflow-hidden bg-[#0F172A] pt-24 pb-16 md:pt-28 md:pb-20">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#0F172A_0%,#111827_52%,#0B1220_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.22),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.14),transparent_22%)]" />
+      <div className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_right,rgba(255,255,255,0.16)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.16)_1px,transparent_1px)] bg-[size:44px_44px]" />
 
-        {/* BLACK OVERLAY */}
-        <div className="absolute inset-0 bg-black/40 z-5" />
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="grid gap-10 xl:grid-cols-[54%_46%] items-center">
+          <div className="max-w-3xl">
+            <p className="inline-flex rounded-full border border-white/15 bg-white/8 px-4 py-2 text-sm font-semibold font-karla text-white shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
+              ScotiTech Solutions
+            </p>
 
-        <div className="relative z-10 max-w-8xl mx-auto px-5 md:px-20 w-full text-white flex flex-col justify-center h-full">
-          <p className="bg-main-dark font-semibold border border-white px-3 py-2 rounded-lg w-fit font-karla">
-            ScotiTech Solutions
-          </p>
+            <h1 className="mt-6 text-white text-4xl min-[1150px]:text-6xl font-karla font-semibold leading-[1.05]">
+              Building practical, privacy-focused technology for real-world use
+            </h1>
 
-          <h1 className="lg:text-[50px] text-4xl font-karla font-bold leading-[57px] mt-6">
-            Building Technology That
-            <br />
-            Empowers People
-          </h1>
+            <p className="mt-6 text-slate-300 font-lora text-lg md:text-xl leading-8 max-w-2xl">
+              From internal app distribution to private workspaces with AI
+              built directly into the tools teams use every day, we create
+              systems that give organisations more control, stronger data
+              boundaries, and simpler operations.
+            </p>
 
-          <p className="lg:text-xl text-md mt-4 mb-8 font-lora max-w-xl">
-            Building Trusted Technology for a Smarter, Safer Digital Future.
-          </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-7 py-3 text-sm font-semibold font-karla text-white hover:bg-slate-900 transition-colors"
+              >
+                Get Started
+              </Link>
+              <Link
+                href="/products"
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/8 px-7 py-3 text-sm font-semibold font-karla text-white hover:bg-white/12 transition-colors"
+              >
+                Explore Products
+              </Link>
+            </div>
 
-          <div className="p-1.5 border border-main-dark w-fit rounded-lg">
-            <Link
-              href="/contact"
-              className="bg-white text-black px-8 py-2 rounded-lg text-lg inline-flex items-center gap-2 font-karla"
-            >
-              Get Started →
-            </Link>
+            <div className="mt-10 grid gap-4">
+              {proofItems.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-[1.3rem] border border-white/10 bg-white/[0.05] px-5 py-4 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur-sm"
+                >
+                  <p className="text-slate-200 font-lora leading-7 text-[15px]">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(91,79,207,0.12),transparent_58%)] blur-2xl" />
+            <div className="relative rounded-[2rem] border border-slate-900/10 bg-white/65 p-5 sm:p-6 shadow-[0_28px_70px_rgba(15,23,42,0.12)] backdrop-blur-md">
+              <div className="grid gap-5">
+                {surfaceCards.map((card, index) => (
+                  <div
+                    key={card.title}
+                    className={`rounded-[1.8rem] overflow-hidden border ${
+                      card.theme === "dark"
+                        ? "border-slate-900/80 bg-[#0F172A]"
+                        : "border-slate-200 bg-white"
+                    } shadow-[0_18px_40px_rgba(15,23,42,0.08)]`}
+                  >
+                    <div className={`h-1.5 w-full bg-gradient-to-r ${card.accent}`} />
+                    <div className="p-5 sm:p-6">
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="max-w-[70%]">
+                          <p
+                            className={`text-xs font-karla uppercase tracking-[0.16em] ${
+                              card.theme === "dark"
+                                ? "text-slate-400"
+                                : "text-slate-500"
+                            } mb-3`}
+                          >
+                            {index === 0 ? "Core Product" : "Core Platform"}
+                          </p>
+                          <h2
+                            className={`text-2xl font-karla font-semibold ${
+                              card.theme === "dark"
+                                ? "text-white"
+                                : "text-slate-900"
+                            }`}
+                          >
+                            {card.title}
+                          </h2>
+                        </div>
+                        <img
+                          src={card.logo}
+                          alt={`${card.title} logo`}
+                          className={`h-14 w-auto rounded-[1.3rem] object-contain ${
+                            card.theme === "dark"
+                              ? "drop-shadow-[0_18px_28px_rgba(0,0,0,0.35)]"
+                              : "drop-shadow-[0_18px_28px_rgba(15,23,42,0.18)]"
+                          }`}
+                        />
+                      </div>
+
+                      <p
+                        className={`mt-4 text-base font-karla leading-7 ${
+                          card.theme === "dark"
+                            ? "text-slate-100"
+                            : "text-slate-800"
+                        }`}
+                      >
+                        {card.subtitle}
+                      </p>
+                      <p
+                        className={`mt-3 text-sm font-lora leading-7 ${
+                          card.theme === "dark"
+                            ? "text-slate-300"
+                            : "text-slate-600"
+                        }`}
+                      >
+                        {card.meta}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* MOBILE VIEW */}
-      <section className="relative lg:hidden h-[84vh] px-6 py-20 flex flex-col justify-center text-white overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center animate-breathe-slow"
-          style={{
-            backgroundImage: "url('/images/home/herobg.png')",
-          }}
-        />
-
-        <div className="relative z-10 flex flex-col justify-center h-full">
-          <p className="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-lg w-fit font-karla border border-white/50">
-            ScotiTech Solutions
-          </p>
-
-          <h2 className="text-3xl font-karla font-bold mt-5 leading-[46px]">
-            Building Technology
-            <br />
-            That Empowers People
-          </h2>
-
-          <p className="text-md mt-4 mb-6 font-lora max-w-sm">
-            Technology built to turn your ideas into action.
-          </p>
-
-          <div className="p-1.5 border border-white/60 w-fit rounded-lg">
-            <Link
-              href="/contact"
-              className="bg-white text-black px-6 py-2 rounded-lg text-base inline-flex items-center gap-2 font-karla"
-            >
-              Get Started →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-    </>
+      </div>
+    </section>
   );
-};
-
-export default HeroSection;
+}

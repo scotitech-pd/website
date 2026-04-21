@@ -9,23 +9,23 @@ const SpecificSolution = () => {
     {
       id: 1,
       name: "AppDeploy",
-      image: "/images/contact/appdeploy.png",
-      description: "Effortless iOS App Distribution",
-      link: "/appdeploy",
+      image: "/images/brand/appdeploy-logo-black.png",
+      description: "Internal app distribution built around Apple Business workflows",
+      link: "/products/appdeploy",
     },
     {
       id: 2,
-      name: "Opsly",
-      image: "/images/contact/opsly.png",
-      description: "All-in-One Operations Platform",
-      link: "/opsly",
+      name: "AXOS",
+      image: "/images/brand/axos-icon.png",
+      description: "Private workspace with AI built directly into daily tools",
+      link: "/products/axos",
     },
     {
       id: 3,
       name: "ClarityPath",
-      image: "/images/contact/claritypath.png",
+      image: "/images/brand/claritypath-logo.png",
       description: "Private decision-support app",
-      link: "/claritypath",
+      link: "/products/claritypath",
     },
   ];
 
@@ -128,7 +128,7 @@ const SpecificSolution = () => {
     <section className="relative bg-[url('/images/contact/pattern-bg.png')] bg-no-repeat bg-center bg-cover overflow-hidden py-12 lg:py-20">
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <h2 className="text-2xl lg:text-[48px] font-bold font-karla text-purple-900 text-center mb-8 lg:mb-16">
-          Looking for Specific Solutions?
+          Looking for a Specific Product?
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-[45%_51%] gap-5 min-[1400px]:gap-12">
@@ -244,9 +244,9 @@ const SpecificSolution = () => {
                     <p className="text-sm lg:text-[14px] text-gray-600 mb-7 font-lora">
                       {card.description}
                     </p>
-                    <Link href={`/products/${card.link}`}>
+                    <Link href={card.link}>
                       <button className="bg-purple-700 cursor-pointer font-karla shadow-[0_0_15px_3px_rgba(180,100,255,1)] text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs lg:px-4 px-6 py-2 rounded-full hover:bg-purple-800 transition-colors font-karlas">
-                        Read more
+                        Read More
                       </button>
                     </Link>
                   </div>

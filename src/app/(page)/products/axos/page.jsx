@@ -9,18 +9,18 @@ import OpslyInfoSection from "@/components/products/opsly/OpslyInfoSection";
 import OpslyOverview from "@/components/products/opsly/OpslyOverview";
 import WhyChooseOpsly from "@/components/products/opsly/WhyChooseOpsly";
 
-const Opsly = () => {
+const AXOS = () => {
   return (
     <>
       <OpslyHeroSection />
       <OpslyInfoSection />
       <OpslyOverview />
       <OpslyFeaturesSection />
-        <WhyChooseOpsly/>
-        <HowToGetOpsly/>
+      <WhyChooseOpsly />
+      <HowToGetOpsly />
       <ComplianceSecurity />
     </>
   );
 };
 
-export default Opsly;
+export default AXOS;

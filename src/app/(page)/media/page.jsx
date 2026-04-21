@@ -110,7 +110,7 @@ const PressRelease = () => {
               Press Release
             </div>
             <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
-              ScotiTech Founder Wins <span className="text-[#641171]">“NextGen Innovator of the Year”</span> at Global Excellence Awards
+              ScotiTech Founder Wins <span className="text-[#641171]">“NextGen Innovator of the Year”</span> at the Global Excellence Awards
             </h1>
             
             <div className="flex flex-wrap items-center justify-center gap-6 text-gray-500 font-lora text-sm">
@@ -171,7 +171,7 @@ const PressRelease = () => {
                 <p>
                   ScotiTech, headquartered in Scotland, focuses on developing technologies that solve real-world challenges
                   around digital trust, privacy, simplicity, and accessibility. Products like AppDeploy enable secure internal distribution
-                  without reliance on traditional app stores, while Opsly introduces a private-cloud workspace optimized for the future of work.
+                  through a clearer operational model, while AXOS introduces a private workspace with AI built directly into the tools teams use every day for secure operations and stronger data control.
                 </p>
 
                 <blockquote className="relative p-8 bg-purple-50 rounded-2xl border-none my-10">
@@ -194,8 +194,9 @@ const PressRelease = () => {
                 <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">Looking Ahead</h3>
                 <p>
                   With multiple products in active development and an ever-expanding global partner network, ScotiTech is 
-                  preparing for a landmark year in 2026. The company remains focused on its mission to create a leaner, 
-                  more empowered digital ecosystem.
+                  preparing for an important next stage of growth. The company
+                  remains focused on building practical digital products with a
+                  stronger emphasis on trust, clarity, and operational control.
                 </p>
               </div>
             </div>

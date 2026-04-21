@@ -1,95 +1,82 @@
+const highlights = [
+  {
+    title: "Branded organisation pages",
+    description:
+      "Present internal apps through organisation-specific branded access pages instead of relying on fragmented install instructions.",
+  },
+  {
+    title: "Request access and approval flow",
+    description:
+      "Support controlled onboarding with request-access flow, verification, legal acceptance, and approval steps.",
+  },
+  {
+    title: "Role-aware admin workspace",
+    description:
+      "Separate admin and superadmin responsibilities while keeping release, access, and branding workflows visible in one place.",
+  },
+  {
+    title: "Billing and rollout visibility",
+    description:
+      "Track rollout status, subscription state, and operational actions through one internal distribution workspace.",
+  },
+];
+
 export default function AppDeployInfo() {
   return (
-    <section
-      className="relative bg-white py-14 sm:py-28 bg-cover bg-center"
-      style={{
-        backgroundImage: "url('/images/products/appdeploy/bgimg.png')", // replace with your image
-      }}
-    >
-      {/* angled background */}
+    <section className="relative overflow-hidden py-16 sm:py-20 text-[#0F172A]">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_24%)]" />
 
-      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 grid grid-cols-1 lg:grid-cols-[40%_52%] gap-12 min-[420px]:gap-8 lg:gap-14 min-[1200px]:gap-24 items-center text-black font-lora overflow-y-visible">
-        {/* Left content */}
-        <div className="">
-          <h2 className="lg:text-5xl text-3xl font-semibold text-transparent bg-clip-text bg-main-dark drop-shadow-md font-karla mb-3.5">
-            What is AppDeploy?
-          </h2>
-
-          <h3 className="text-xl lg:text-2xl font-medium text-main-dark font-karla mb-2.5">
-            Effortless iOS App Distribution for Your Business
-          </h3>
-
-          <p className="max-[600px]:text-[15px] leading-[22px] font-grey max-[1150px]:hidden">
-            AppDeploy is your ultimate solution when the App Store rejects or
-            delays your iOS app. It removes uncertainty by giving you complete
-            control over internal and external app distribution. Skip review
-            tools. Upload your builds, create secure links, and deploy to teams,
-            clients, or testers within minutes. Reliable,
-            compliant, and built for guaranteed delivery every time.
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="max-w-4xl mb-12">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80 mb-3">
+            Current Live Scope
           </p>
-
-          <p className="leading-[22px] font-grey min-[1150px]:hidden">
-            AppDeploy helps you distribute iOS apps even when App Store reviews
-            or rejections slow you down. Avoid delays, skip costly MDM setups,
-            and deliver apps directly to your users or team securely. With an
-            intuitive dashboard, you can upload, generate secure links, and
-            share your apps in minutes—ensuring guaranteed, fast, and private
-            deployment every time.
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">
+            What AppDeploy already brings into one internal distribution flow
+          </h2>
+          <p className="text-base md:text-xl text-slate-700 font-lora leading-8">
+            AppDeploy is strongest when presented as the branded operational
+            layer around Apple Business based internal distribution. These are
+            the parts of that workflow the product already helps organise more
+            clearly.
           </p>
         </div>
 
-        {/* Right card */}
-        <div className="relative">
-          {/* Dark app card */}
-          <div className="rounded-2xl shadow-2xl flex flex-col items-center justify-center text-center mt-10 w-fit z-0 mx-auto relative">
-            <div
-              className="max-[580px]:hidden  w-[95%] absolute z-10 -top-14 sm:-top-10 -left-[30px] text-white p-4 pl-10 !h-[130px] flex justify-center items-center  text-sm leading-relaxed shadow-lg bg-cover rounded-t-2xl"
-              style={{
-                backgroundImage:
-                  "url('/images/products/appdeploy/boxdesign.png')",
-                backgroundSize: "cover", // ensures full coverage
-                backgroundRepeat: "no-repeat", // prevents tiling
-                backgroundPosition: "left", // centers the image
-                height: "114px",
-              }}
-            >
-              <p className="-mt-5 text-[17px] leading-[21px]">
-                Deploy internal apps directly to your team&apos;s devices using a
-                private distribution workflow instead of public App Store
-                release, avoiding complex MDM solutions.
+        <div className="grid grid-cols-1 lg:grid-cols-[38%_62%] gap-8 items-start">
+          <div className="rounded-[2rem] border border-slate-200 bg-white/80 backdrop-blur-sm p-6 sm:p-8 shadow-[0_18px_40px_rgba(15,23,42,0.07)]">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-5">
+              Why this matters
+            </p>
+            <div className="space-y-5 text-slate-700 font-lora leading-8">
+              <p>
+                Many internal app workflows are technically valid but
+                operationally awkward. Teams end up managing access, branding,
+                approvals, release updates, and install communication in
+                separate places.
+              </p>
+              <p>
+                AppDeploy proves its value when those steps are brought into a
+                more coherent product surface without pretending to replace the
+                underlying Apple route.
               </p>
             </div>
-            {/* Mobile View */}
-            <div className="min-[580px]:hidden  w-[90%] absolute z-10 -top-18 min-[420px]:-top-14 left-1/2 -translate-x-1/2 text-white p-2 min-[376px]:pt-4 flex justify-center items-center  text-sm leading-relaxed shadow-lg rounded-2xl bg-[#641171]">
-              <p className="text-[13px] min-[376px]:text-[15px] leading-[19px]">
-                Deploy internal apps directly to your team&apos;s devices using a
-                private distribution workflow instead of public App Store
-                release.
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="relative">
-                <div className="absolute inset-0 rounded-2xl bg-black w-full h-full"></div>
-                <img
-                  src="/images/products/appdeploy/logo.png"
-                  alt="AppDeploy Logo"
-                  className="opacity-40 w-full h-full"
-                />
+          </div>
 
-                {/* <div className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 w-[85%] flex justify-between">
-                  <img
-                    src="/images/products/opsly/button2.png"
-                    alt=""
-                    className="w-[40%] h-auto cursor-pointer"
-                  />
-                  <img
-                    src="/images/products/opsly/button1.png"
-                    alt=""
-                    className="w-[40%] h-auto cursor-pointer"
-                  />
-                </div> */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {highlights.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[1.75rem] border border-slate-200 bg-white/85 backdrop-blur-sm px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.07)]"
+              >
+                <h3 className="text-xl font-semibold font-karla text-slate-900 mb-3 leading-7">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600 font-lora leading-7 text-[15px]">
+                  {item.description}
+                </p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

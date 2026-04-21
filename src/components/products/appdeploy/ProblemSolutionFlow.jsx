@@ -1,74 +1,68 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+
 import { AlertCircle, ShieldCheck, Zap } from "lucide-react";
 
-const FlowSection = () => {
-  const data = [
-    {
-      icon: <AlertCircle className="w-8 h-8 text-[#7E1A8E]" />,
-      title: "Why internal app distribution becomes difficult",
-      body: "Apple supports private app distribution, but the operational workflow is often harder than it should be. Teams end up balancing compliance requirements, redemption-code spreadsheets, MDM complexity, and confusing install experiences for employees.",
-      accent: "bg-[#FDE2FF]",
-      border: "border-[#7E1A8E]/20"
-    },
-    {
-      icon: <ShieldCheck className="w-8 h-8 text-[#3D297A]" />,
-      title: "Apple Business Manager solves the compliance side",
-      body: "Apple Business Manager provides an approved path for private distribution through Custom Apps and managed redemption workflows. AppDeploy builds the branded, trackable experience around that workflow.",
-      accent: "bg-[#F3F0FF]",
-      border: "border-[#3D297A]/20"
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-[#C140D5]" />,
-      title: "Where AppDeploy fits",
-      body: "AppDeploy sits on top of Apple Business Manager and turns the underlying distribution workflow into a branded, usable internal experience. Admins manage releases, visibility, and tracking from one workspace. Employees get a simpler path to install the app on their device.",
-      accent: "bg-[#F9F6FF]",
-      border: "border-[#C140D5]/20"
-    }
-  ];
+const flow = [
+  {
+    icon: AlertCircle,
+    title: "The distribution path exists, but the experience is still fragmented",
+    body: "Private iOS distribution often creates operational overhead: app delivery instructions, redemption handling, rollout coordination, and install visibility all become separate tasks.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Apple Business Manager covers the approved distribution model",
+    body: "The compliance path is already there. What is usually missing is a clearer operational surface for teams that need a more manageable internal rollout experience.",
+  },
+  {
+    icon: Zap,
+    title: "AppDeploy adds the layer enterprise teams actually need",
+    body: "It wraps the underlying workflow in a branded, trackable environment so releases, groups, installs, and communication can be handled with much less friction.",
+  },
+];
 
+export default function FlowSection() {
   return (
-    <section className="relative bg-white py-14 lg:py-24 overflow-hidden">
-      {/* Background Decorative Text - matching the site's pattern */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] select-none pointer-events-none hidden lg:block">
-        <span className="text-[250px] font-bold text-[#3D297A] font-karla tracking-tighter">
-          DEPLOYMENT
-        </span>
-      </div>
+    <section className="relative overflow-hidden py-16 sm:py-20 text-[#0F172A]">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_24%)]" />
 
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-12 mt-12">
-          {data.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white text-gray-800 font-lora rounded-xl shadow-xl py-10 px-6 flex flex-col items-center text-center relative border-b-[12px] border-[#7E1A8E]/50 group hover:shadow-[0_20px_40px_rgba(61,41,122,0.15)] transition-all duration-300"
-            >
-              {/* Icon circle - matching the 'KeyFeatures' style */}
-              <div className="absolute -top-10 bg-gray-50 w-20 h-20 flex items-center justify-center rounded-full border-[6px] border-gray-100 group-hover:border-[#7E1A8E] group-hover:shadow-[0_0_15px_rgba(126,26,142,0.5)] duration-300 shadow-md">
-                {item.icon}
-              </div>
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="max-w-4xl mb-12">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80 mb-3">
+            Workflow Fit
+          </p>
+          <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">
+            Why AppDeploy exists in the enterprise distribution workflow
+          </h2>
+          <p className="text-base md:text-xl text-slate-700 font-lora leading-8">
+            AppDeploy is not a replacement for Apple’s approved route. It is
+            the operational layer that makes the route more usable for teams
+            that need control, clarity, and smoother rollout execution.
+          </p>
+        </div>
 
-              <div className="mt-6 flex flex-col h-full">
-                <h3 className="text-xl lg:text-2xl font-bold text-[#3D297A] mb-4 font-karla leading-tight">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {flow.map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={idx}
+                className="rounded-[1.75rem] border border-slate-200 bg-white/90 backdrop-blur-sm px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.07)]"
+              >
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0F172A] text-white">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3 font-karla leading-7">
                   {item.title}
                 </h3>
-                
-                <p className="text-gray-700 text-sm lg:text-base leading-relaxed font-lora">
+                <p className="text-slate-600 font-lora leading-7">
                   {item.body}
                 </p>
-                
-                {/* Subtle indicator line */}
-                <div className="mt-auto pt-6 opacity-20 group-hover:opacity-100 transition-opacity">
-                  <div className="h-1 w-12 bg-[#7E1A8E] mx-auto rounded-full"></div>
-                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   );
-};
-
-export default FlowSection;
+}
