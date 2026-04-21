@@ -1,6 +1,6 @@
 "use client";
 import { MapPin } from "lucide-react";
-//ok trtretrertretrtrgrfg
+
 export default function LeadershipTeam() {
   const team = [
     {
@@ -43,7 +43,7 @@ export default function LeadershipTeam() {
 
   return (
     <section className="relative py-8 ">
-      <div className="absolute w-full bg-gradient-to-r to-[#39327C] inset-0 from-[#34919B] lg:h-[70%] min-[650px]:h-full"></div>
+      <div className="absolute w-full bg-gradient-to-r from-[#0F172A] via-[#15676E] to-[#1E3A8A] inset-0 lg:h-[70%] min-[650px]:h-full"></div>
 
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 z-10 text-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 lg:my-12">
@@ -53,13 +53,13 @@ export default function LeadershipTeam() {
             </h2>
             <p className="text-[15px] text-gray-200 font-lora lg:text-xl lg:mt-5 max-[650px]:mt-0 max-[650px]:text-center">
               The Experience Behind Our{" "}
-              <span className="text-[#FFF600]">Success</span>
+              <span className="text-cyan-300">Success</span>
             </p>
           </div>
           <div>
             <p className="text-white text-[15px] max-[650px]:text-center lg:text-xl text-left font-lora">
               Meet the visionary leaders driving{" "}
-              <span className="text-[#EABFFF] font-semibold">ScotiTech</span>{" "}
+              <span className="text-cyan-200 font-semibold">ScotiTech</span>{" "}
               innovation and growth at the forefront of the industry.
             </p>
           </div>
@@ -71,9 +71,9 @@ export default function LeadershipTeam() {
         {team.map((member, index) => (
           <div
             key={index}
-            className="bg-white/95 shadow-[0_0_10px_3px_rgba(94,11,123,0.5)] rounded-full overflow-hidden text-center px-6 py-8 flex flex-col items-center backdrop-blur-sm transition-transform duration-300 border border-[#e9d5ff]"
+            className="bg-white/95 shadow-[0_18px_40px_rgba(15,23,42,0.12)] rounded-full overflow-hidden text-center px-6 py-8 flex flex-col items-center backdrop-blur-sm transition-transform duration-300 border border-slate-200"
           >
-            <div className="w-32 h-32 xl:w-[140px] xl:h-[140px] rounded-full overflow-hidden border-2 border-purple-200 mb-4">
+            <div className="w-32 h-32 xl:w-[140px] xl:h-[140px] rounded-full overflow-hidden border-2 border-cyan-100 mb-4">
               <img
                 src={member.img}
                 alt={member.name}
@@ -103,7 +103,7 @@ export default function LeadershipTeam() {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-black rounded-full bg-white hover:bg-[#5E0B7B] transition w-10 h-10 flex items-center justify-center shadow-sm"
+                className="group relative text-black rounded-full bg-white hover:bg-[#15676E] transition w-10 h-10 flex items-center justify-center shadow-sm"
               >
                 <img
                   src="/images/aboutus/linkedin.png"
@@ -143,9 +143,9 @@ export default function LeadershipTeam() {
         {team.map((member, index) => (
           <div
             key={index}
-            className="bg-white/95 shadow-[0_0_8px_2px_rgba(94,11,123,0.3)] rounded-2xl my-9 text-center px-3 py-5 flex flex-col items-center backdrop-blur-sm border border-[#e9d5ff]"
+            className="bg-white/95 shadow-[0_18px_40px_rgba(15,23,42,0.10)] rounded-2xl my-9 text-center px-3 py-5 flex flex-col items-center backdrop-blur-sm border border-slate-200"
           >
-            <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-purple-200 mb-4 absolute -top-15">
+            <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-cyan-100 mb-4 absolute -top-15">
               <img
                 src={member.img}
                 alt={member.name}
@@ -175,7 +175,7 @@ export default function LeadershipTeam() {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-black rounded-full bg-white hover:bg-[#5E0B7B] transition w-10 h-10 flex items-center justify-center shadow-sm"
+                className="group relative text-black rounded-full bg-white hover:bg-[#15676E] transition w-10 h-10 flex items-center justify-center shadow-sm"
               >
                 <img
                   src="/images/aboutus/linkedin.png"

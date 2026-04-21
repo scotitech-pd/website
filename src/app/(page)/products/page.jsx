@@ -12,12 +12,12 @@ const featuredProducts = [
     capabilities: ["Internal distribution", "Release control", "Enterprise rollout"],
   },
   {
-    name: "Opsly",
+    name: "AXOS",
     category: "Featured Product",
     tagline: "A private, self-hosted workspace that brings communication, files, tasks, and AI into one controlled environment.",
     description:
-      "Opsly is designed for organisations that want modern digital operations without giving up sovereignty, deployment control, or workflow clarity.",
-    href: "/products/opsly",
+      "AXOS is designed for organisations that want modern digital operations without giving up sovereignty, deployment control, or workflow clarity.",
+    href: "/products/axos",
     accent: "from-[#34D3FF] via-[#4F74F3] to-[#5B4FCF]",
     capabilities: ["Self-hosted workspace", "Operational visibility", "Private AI workflows"],
   },
@@ -41,7 +41,7 @@ const additionalProducts = [
 export const metadata = {
   title: "Products | ScotiTech Solutions",
   description:
-    "Explore ScotiTech products including AppDeploy, Opsly, ClarityPath, and AI Caption Studio.",
+    "Explore ScotiTech products including AppDeploy, AXOS, ClarityPath, and AI Caption Studio.",
 };
 
 export default function ProductsPage() {

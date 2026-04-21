@@ -166,11 +166,11 @@ const AboutScotiTech = () => {
             <div className="relative h-[100%] hidden min-[1300px]:flex">
               <div className="h-fit">
                 <img src="/images/aboutus/hero-tech.png" alt="" />
-                <div className="absolute bottom-[40px] flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_10px_25px_rgba(94,11,123,0.6)] bg-white rounded-2xl h-[90px] w-[200px] border-1 border-[#7E1A8E]">
-                  <h2 className="text-[#9638E5] font-karla font-bold lg:text-[20px]">
+                <div className="absolute bottom-[40px] flex justify-center items-center flex-col left-1/2 transform -translate-x-1/2 shadow-[0_18px_40px_rgba(15,23,42,0.14)] bg-white rounded-2xl h-[90px] w-[200px] border border-slate-200">
+                  <h2 className="text-[#0F172A] font-karla font-bold lg:text-[20px]">
                     ScotiTech
                   </h2>
-                  <p className="text-[#641171] font-karla text-center font-semibold px-5 lg:text-[13px]">
+                  <p className="text-[#15676E] font-karla text-center font-semibold px-5 lg:text-[13px]">
                     Practical software with clearer product focus
                   </p>
                 </div>

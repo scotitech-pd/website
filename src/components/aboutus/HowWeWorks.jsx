@@ -36,7 +36,7 @@ const HowWeWorks = () => {
       {/* Large Background Text */}
       <div className="absolute top-8 lg:top-2 left-1/2 -translate-x-1/2 pointer-events-none z-0">
         <h1 className="text-5xl sm:text-6xl font-karla md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white/5 leading-none whitespace-nowrap">
-          How We Works
+          How We Work
         </h1>
       </div>
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 relative z-10  ">
@@ -52,14 +52,14 @@ const HowWeWorks = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="relative group rounded-2xl  p-[1.5px] bg-gradient-to-bl from-[#14FBFD]/70 via-white/70 to-main-light/70 hover:scale-[1.01]  transition-transform duration-300 shadow-lg"
+              className="relative group rounded-2xl p-[1.5px] bg-gradient-to-bl from-[#34D3FF]/70 via-white/70 to-[#4F74F3]/55 hover:scale-[1.01] transition-transform duration-300 shadow-lg"
             >
               {/* Card */}
 
               <div className=" h-full  bg-gradient-to-br from-[#1f2d31] to-[#060a0d] backdrop-blur-sm rounded-2xl p-6 lg:p-6 flex flex-col justify-start">
                 {/* Icon on top */}
                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-20">
-                  <div className="w-20 h-20 border border-[#9c27b0]/60 shadow-[0_0_25px_3px_rgba(156,39,176,0.7)] hover:shadow-[0_0_35px_6px_rgba(156,39,176,0.8)]   lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-white/20 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 border border-cyan-200 shadow-[0_18px_35px_rgba(52,211,255,0.18)] hover:shadow-[0_20px_40px_rgba(79,116,243,0.18)] lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-white/20 group-hover:scale-110 transition-transform duration-300">
                     <img
                       src={card.icon}
                       alt={card.title}

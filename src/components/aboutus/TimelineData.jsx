@@ -107,10 +107,10 @@ export default function Timeline() {
               Our Story
             </h3>
             <p className="text-black font-lora text-[12px] py-2 lg:text-center min-[500px]:text-[16px] lg:p-6 lg:px-[70px] lg:text-[15px]">
-              ScotiTech’s journey reflects a gradual move from early experimentation
-              toward a more focused product company built around practical software
-              and long-term digital trust. The old purple color has been replaced
-              with a modern, vibrant theme that aligns with our vision.
+              ScotiTech’s journey reflects a gradual move from early
+              experimentation toward a more focused product company built
+              around practical software, stronger product clarity, and
+              long-term digital trust.
             </p>
           </div>
         </div>
@@ -121,11 +121,11 @@ export default function Timeline() {
             <div key={index} className="relative pl-18">
               {/* Vertical line */}
               {index < timelineData.length - 1 && (
-                <div className="absolute left-8 top-20 -bottom-15 w-1 bg-[#E38DF0]"></div>
+                <div className="absolute left-8 top-20 -bottom-15 w-1 bg-[#7DD3FC]"></div>
               )}
 
               {/* Year badge */}
-              <div className="absolute left-0 top-5 w-16 h-16 bg-[#641171] rounded-full flex items-center justify-center">
+              <div className="absolute left-0 top-5 w-16 h-16 bg-[#0F172A] rounded-full flex items-center justify-center">
                 <span className="text-white text-xl font-bold font-karla text-center">
                   {item.year}
                 </span>
@@ -133,7 +133,7 @@ export default function Timeline() {
 
               {/* Content card */}
               <motion.div
-                className="bg-[#FBDFFF] rounded-xl p-6"
+                className="bg-[linear-gradient(180deg,#F8FAFC_0%,#ECFEFF_100%)] rounded-xl border border-slate-200 p-6"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -171,7 +171,7 @@ export default function Timeline() {
                   <div className="relative">
                     <div className="flex items-start relative">
                       {/* Year Circle */}
-                      <div className="w-20 h-20 absolute -top-10 bg-[#641171] rounded-full flex items-center justify-center z-20">
+                      <div className="w-20 h-20 absolute -top-10 bg-[#0F172A] rounded-full flex items-center justify-center z-20">
                         <span className="text-white text-2xl font-bold font-karla">
                           {item.year}
                         </span>
@@ -179,7 +179,7 @@ export default function Timeline() {
 
                       {/* Content Card */}
                       <motion.div
-                        className="ml-8 bg-[#FBDFFF] z-10 rounded-2xl p-8 pl-16 min-w-[400px]"
+                        className="ml-8 bg-[linear-gradient(180deg,#F8FAFC_0%,#ECFEFF_100%)] border border-slate-200 z-10 rounded-2xl p-8 pl-16 min-w-[400px]"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
@@ -198,9 +198,9 @@ export default function Timeline() {
                     {hasNext && nextItem.side === "right" && (
                       <div className="absolute left-1/2 top-10">
                         <div className="relative">
-                          <div className="absolute -left-100 0 top-5 h-1 bg-[#E38DF0] w-[700px]"></div>
-                          <div className="absolute bg-[#368F99] rounded-full w-[15px] h-[15px] left-[295px] top-[14px] z-2"></div>
-                          <div className="absolute w-1 bg-[#E38DF0] left-[300px] top-4 h-[220px]"></div>
+                          <div className="absolute -left-100 0 top-5 h-1 bg-[#7DD3FC] w-[700px]"></div>
+                          <div className="absolute bg-[#15676E] rounded-full w-[15px] h-[15px] left-[295px] top-[14px] z-2"></div>
+                          <div className="absolute w-1 bg-[#7DD3FC] left-[300px] top-4 h-[220px]"></div>
                         </div>
                       </div>
                     )}

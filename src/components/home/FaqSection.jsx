@@ -38,12 +38,9 @@ export default function FaqSection() {
 
   return (
     <section
-      className="relative bg-[#F5F5F5] py-12 sm:py-20 overflow-hidden" >
-      <img
-        src="/images/home/tpurple.png"
-        alt="bg"
-        className="left-0 absolute w-auto h-[95%] bottom-0"
-      />
+      className="relative bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#ECFEFF_100%)] py-12 sm:py-20 overflow-hidden"
+    >
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(52,211,255,0.14),transparent_24%),radial-gradient(circle_at_right,rgba(79,70,229,0.08),transparent_22%)]" />
 
 
       <div className="relative z-10 grid min-[900px]:grid-cols-2 gap-7 sm:gap-10 items-center text-black max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
@@ -86,7 +83,7 @@ export default function FaqSection() {
                 </div>
                 <ChevronDown
                   className={`transition-transform duration-300 size-5 ${
-                    openIndex === i ? "rotate-180 text-main-dark" : "text-main"
+                    openIndex === i ? "rotate-180 text-main-dark" : "text-[#15676E]"
                   }`}
                 />
               </button>

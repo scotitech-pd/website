@@ -19,7 +19,7 @@ const MissionVision = () => {
                   </p>
                 </div>
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-[20px] font-lora text-[#5E0B7B]">
+              <h3 className="text-lg sm:text-xl lg:text-[20px] font-lora text-[#15676E]">
                 Practical technology built around trust and clarity.
               </h3>
 
@@ -70,7 +70,7 @@ const MissionVision = () => {
                 Our Vision
               </h2>
 
-              <h3 className="text-lg sm:text-xl lg:text-[20px] font-lora text-[#5E0B7B]">
+              <h3 className="text-lg sm:text-xl lg:text-[20px] font-lora text-[#15676E]">
                 Build software people can rely on
               </h3>
 

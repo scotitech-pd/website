@@ -15,14 +15,14 @@ const featuredProducts = [
     cta: "Explore AppDeploy",
   },
   {
-    name: "Opsly",
+    name: "AXOS",
     eyebrow: "Featured Product",
     tagline: "A private operational workspace built for control and clarity",
     description:
       "Reduce SaaS sprawl with self-hosted tools that support day-to-day operations, visibility, and collaboration in one environment.",
-    logo: "/images/home/opsly.png",
-    link: "/products/opsly",
-    cta: "Explore Opsly",
+    logo: "/images/brand/axos-icon.png",
+    link: "/products/axos",
+    cta: "Explore AXOS",
     status: "Coming Soon",
   },
 ];
@@ -59,7 +59,7 @@ export default function OurProducts() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Opsly and AppDeploy are at the centre of our product strategy
+          AXOS and AppDeploy are at the centre of our product strategy
         </motion.h3>
 
         <motion.p
@@ -70,7 +70,7 @@ export default function OurProducts() {
           viewport={{ once: true }}
         >
           We focus the homepage on the two products with the clearest business
-          value today: AppDeploy for controlled app distribution and Opsly for
+          value today: AppDeploy for controlled app distribution and AXOS for
           streamlined, private operational tooling.
         </motion.p>
 

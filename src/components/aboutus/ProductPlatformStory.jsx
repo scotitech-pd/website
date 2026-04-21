@@ -13,10 +13,10 @@ const platforms = [
     ],
   },
   {
-    name: "Opsly",
+    name: "AXOS",
     eyebrow: "Private operational workspace",
     description:
-      "Opsly reflects the company’s second major direction: helping teams reduce tool sprawl through a more controlled, self-hosted workspace for daily operations, collaboration, and internal coordination.",
+      "AXOS reflects the company’s second major direction: helping teams reduce tool sprawl through a more controlled, self-hosted workspace for daily operations, collaboration, and internal coordination.",
     bullets: [
       "Self-hosted workspace direction",
       "Focused on operational clarity and control",
@@ -45,7 +45,7 @@ export default function ProductPlatformStory() {
             ScotiTech is being shaped by two main platform directions
           </h2>
           <p className="font-lora text-lg leading-8 text-slate-700">
-            AppDeploy and Opsly represent the clearest commercial paths in the
+            AppDeploy and AXOS represent the clearest commercial paths in the
             portfolio. Around them, products like ClarityPath help explain why
             the company is taking a more practical, controlled approach to
             product design and distribution.
