@@ -63,10 +63,10 @@ const AboutScotiTech = () => {
                   </h2>
                   <p className="text-base lg:text-[15px] font-lora text-black leading-relaxed">
                     Founded in Scotland, we build software that helps
-                    organisations improve internal app distribution, bring core
-                    daily tools into more controlled environments, and adopt
-                    more trusted digital infrastructure through products like
-                    AppDeploy, AXOS, and ClarityPath.
+                    organisations improve internal app rollout, run core daily
+                    workflows in controlled environments, and strengthen digital
+                    infrastructure through products like AppDeploy, AXOS, and
+                    ClarityPath.
                   </p>
                 </div>
 
@@ -187,13 +187,13 @@ const AboutScotiTech = () => {
             About ScotiTech
           </h2>
           <h3 className="text-lg font-karla font-semibold text-black mb-2">
-            Practical software products with a clear operational focus
+            Practical software products with clear product boundaries
           </h3>
           <p className="text-[15px] text-gray-800 font-lora leading-relaxed mb-8">
             We are a UK-based software company building focused products for
-            modern teams, with a clearer product story around internal
-            distribution, private operational tooling, and supporting workflow
-            software.
+            modern teams, with a clear product story around internal
+            distribution, private workspace tooling, and supporting workflow
+            products.
           </p>
         </div>
 

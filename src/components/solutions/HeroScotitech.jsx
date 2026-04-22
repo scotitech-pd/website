@@ -5,9 +5,9 @@ import { ShieldCheck, Boxes, Sparkles } from "lucide-react";
 import { useModal } from "@/components/ModalContext";
 
 const highlights = [
-  "AppDeploy for controlled internal app distribution.",
-  "AXOS for private daily operations in one workspace.",
-  "A clearer path from evaluation to rollout.",
+  "AppDeploy for controlled internal app rollout.",
+  "AXOS for private day-to-day team workflows.",
+  "Clear buyer fit from evaluation to rollout.",
 ];
 
 const HeroScotitech = () => {
@@ -23,13 +23,13 @@ const HeroScotitech = () => {
               Solutions
             </p>
             <h1 className="text-[#0F172A] text-4xl min-[1150px]:text-6xl font-karla font-semibold leading-[1.05]">
-              Software solutions built for operational clarity
+              Software solutions with clear product fit
             </h1>
 
             <p className="mt-6 text-slate-700 font-lora text-lg md:text-xl leading-8 max-w-3xl">
-              ScotiTech focuses on two core directions: internal app
-              distribution and private operational tooling. The goal is simple:
-              practical products, clearer buyer fit, and smoother rollout.
+              ScotiTech focuses on two core directions: internal app rollout
+              and private workspace tooling. The goal is practical execution,
+              clearer buyer fit, and smoother onboarding.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-4">
@@ -94,8 +94,8 @@ const HeroScotitech = () => {
                   </div>
                 </div>
                 <p className="text-white/72 font-lora leading-7 text-[15px]">
-                  AppDeploy handles internal distribution while AXOS supports
-                  private day-to-day operations.
+                  AppDeploy handles internal app delivery while AXOS supports
+                  private day-to-day team workflows.
                 </p>
               </div>
 

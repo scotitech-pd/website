@@ -170,8 +170,8 @@ const PressRelease = () => {
                 <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">A Commitment to Innovation with Purpose</h3>
                 <p>
                   ScotiTech, headquartered in Scotland, focuses on developing technologies that solve real-world challenges
-                  around digital trust, privacy, simplicity, and accessibility. Products like AppDeploy enable secure internal distribution
-                  through a clearer operational model, while AXOS introduces a private workspace with AI built directly into the tools teams use every day for secure operations and stronger data control.
+                  around digital trust, privacy, simplicity, and accessibility. AppDeploy supports secure internal distribution,
+                  while AXOS provides a private workspace with AI integrated into everyday team tools.
                 </p>
 
                 <blockquote className="relative p-8 bg-purple-50 rounded-2xl border-none my-10">
@@ -186,17 +186,17 @@ const PressRelease = () => {
 
                 <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">Global Recognition for a UK-Based Vision</h3>
                 <p>
-                  The ceremony brought together visionary leaders and disruptive innovators from across the globe. 
-                  The "NextGen Innovator" category specifically highlights individuals who demonstrate exceptional creativity,
-                  forward-thinking leadership, and the potential to reshape their respective industries.
+                  The ceremony brought together founders, operators, and technology teams from different markets.
+                  The "NextGen Innovator" category recognises product builders showing practical execution,
+                  leadership, and consistent delivery.
                 </p>
 
                 <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">Looking Ahead</h3>
                 <p>
                   With multiple products in active development and an ever-expanding global partner network, ScotiTech is 
                   preparing for an important next stage of growth. The company
-                  remains focused on building practical digital products with a
-                  stronger emphasis on trust, clarity, and operational control.
+                  remains focused on practical digital products with emphasis on
+                  trust, clarity, and disciplined product execution.
                 </p>
               </div>
             </div>

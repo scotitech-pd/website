@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function CaseStudiesAppDeploy() {
   const caseStudies = [
     {
-      title: "From Frustration to Breakthrough",
+      title: "From Frustration to Validation",
       subtitle: "How technical experimentation and distribution friction shaped a more focused product direction.",
       image: "/images/products/appdeploy/1.jpeg",
       content: [
@@ -13,7 +13,7 @@ export default function CaseStudiesAppDeploy() {
         "What started as an experiment became a proof-of-concept that Swift could truly compile beyond Apple’s ecosystem.",
       ],
       quote:
-        "“What started as a random experiment turned into a genuine breakthrough — Swift can now build for Android officially.”",
+        "“What started as an experiment became a validated proof-of-concept — Swift could compile for Android through the official SDK path.”",
     },
     {
       title: "The Birth of AppDeploy",
@@ -38,7 +38,7 @@ export default function CaseStudiesAppDeploy() {
             Case Studies
           </h2>
           <p className="mt-3 text-gray-600 font-lora text-lg max-w-3xl mx-auto">
-            Real context behind AppDeploy’s direction, from technical experimentation to the operational problem it was built to solve.
+            Context behind AppDeploy’s direction, from technical experimentation to the workflow problem it was built to solve.
           </p>
           <span className="absolute hidden lg:block text-[90px] font-bold text-gray-300/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none">
             Case Studies
@@ -97,7 +97,7 @@ export default function CaseStudiesAppDeploy() {
           className="mt-20 bg-[#F5EDFF] border-l-[8px] border-[#7E1A8E] rounded-xl shadow-md p-10 text-center font-lora"
         >
           <p className="text-gray-700 text-lg italic max-w-3xl mx-auto">
-            “The product direction behind AppDeploy came from real workflow friction and a need for a cleaner internal distribution experience.”
+            “AppDeploy’s direction came from real workflow friction and a need for a simpler internal distribution experience.”
           </p>
         </motion.div>
       </div>
