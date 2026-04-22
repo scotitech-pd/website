@@ -31,8 +31,7 @@ const founders = [
 
 const FoundersSpotlight = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-b from-[#f8fafc] via-white to-[#f9fafc] overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/aboutus/pattern.svg')] opacity-5 pointer-events-none"></div>
+    <section className="relative py-20 bg-[#f7f7f5] overflow-hidden">
 
       <div className="max-w-8xl mx-auto px-6 md:px-20 relative z-10">
         {/* Section Header */}
@@ -51,7 +50,7 @@ const FoundersSpotlight = () => {
           {founders.map((f, index) => (
             <div
               key={index}
-              className={`relative rounded-3xl overflow-hidden  shadow-2xl bg-white/5 backdrop-blur-sm hover:scale-[1.02] transition-all duration-700 border border-gray-200/30 group`}
+              className={`relative rounded-3xl overflow-hidden shadow-2xl bg-white hover:scale-[1.02] transition-all duration-700 border border-slate-200 group`}
             >
               {/* Gradient border layer */}
               <div

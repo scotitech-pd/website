@@ -17,10 +17,7 @@ const points = [
 
 export default function AppDeploySection() {
   return (
-    <section className="relative overflow-hidden text-[#0F172A] py-16 sm:py-20 lg:py-24">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#f8fafc_0%,#eef2ff_42%,#e0f2fe_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(91,79,207,0.12),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.10),transparent_24%)]" />
-      <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(15,23,42,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.05)_1px,transparent_1px)] [background-size:44px_44px]" />
+    <section className="relative overflow-hidden bg-[#f7f7f5] text-[#0F172A] py-16 sm:py-20 lg:py-24">
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 grid grid-cols-1 xl:grid-cols-[54%_46%] gap-10 items-center">
         <div className="max-w-3xl">
@@ -58,7 +55,7 @@ export default function AppDeploySection() {
 
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/80 px-7 py-3 text-sm font-semibold font-karla text-slate-900 hover:bg-white transition-colors"
+              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-semibold font-karla text-slate-900 hover:bg-slate-50 transition-colors"
             >
               View Pricing
             </a>
@@ -70,7 +67,7 @@ export default function AppDeploySection() {
               return (
                 <div
                   key={point.label}
-                  className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/70 backdrop-blur-sm px-4 py-4 shadow-[0_12px_30px_rgba(15,23,42,0.06)]"
+                  className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-[0_12px_30px_rgba(15,23,42,0.06)]"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0F172A] text-white">
                     <Icon className="h-5 w-5" />
@@ -82,7 +79,7 @@ export default function AppDeploySection() {
           </div>
         </div>
 
-        <div className="rounded-[2rem] border border-white/80 bg-white/75 backdrop-blur-md overflow-hidden shadow-[0_28px_70px_rgba(15,23,42,0.12)]">
+        <div className="rounded-[2rem] border border-slate-200 bg-white overflow-hidden shadow-[0_28px_70px_rgba(15,23,42,0.12)]">
           <div className="grid grid-cols-[32%_68%] min-h-[520px]">
             <div className="hidden md:block border-r border-slate-200 bg-slate-50 px-5 py-6">
               <div className="mb-8">
@@ -129,7 +126,7 @@ export default function AppDeploySection() {
                   </p>
                 </div>
                 <div className="hidden sm:flex gap-3">
-                  <div className="h-11 w-11 rounded-2xl border border-slate-200 bg-white/80 flex items-center justify-center overflow-hidden">
+                  <div className="h-11 w-11 rounded-2xl border border-slate-200 bg-white flex items-center justify-center overflow-hidden">
                     <img
                       src="/images/brand/appdeploy-logo-black.png"
                       alt="AppDeploy mark"

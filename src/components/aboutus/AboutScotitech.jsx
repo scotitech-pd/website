@@ -38,7 +38,7 @@ const AboutScotiTech = () => {
   return (
     <>
       {/* ---------------- 1300PX AND ABOVE (ORIGINAL DESIGN) ---------------- */}
-      <section className="relative justify-center bg-white py-12 lg:py-14 overflow-hidden min-[1300px]:flex hidden">
+      <section className="relative justify-center bg-[#f7f7f5] py-12 lg:py-14 overflow-hidden min-[1300px]:flex hidden">
         <img
           src="/images/aboutus/pattern-lines.png"
           alt="Pattern lines behind the photo"
@@ -181,7 +181,7 @@ const AboutScotiTech = () => {
       </section>
 
       {/* ---------------- BELOW 1300PX AUTO CAROUSEL ---------------- */}
-      <section className="block min-[1300px]:hidden bg-white py-10 text-center relative overflow-hidden">
+      <section className="block min-[1300px]:hidden bg-[#f7f7f5] py-10 text-center relative overflow-hidden">
         <div className="px-5 mb-6">
           <h2 className="text-3xl font-karla font-bold text-main-dark mb-2">
             About ScotiTech

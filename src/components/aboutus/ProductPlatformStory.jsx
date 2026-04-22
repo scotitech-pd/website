@@ -33,8 +33,7 @@ const caseStudySteps = [
 
 export default function ProductPlatformStory() {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_46%,#E0F2FE_100%)] py-14 md:py-20">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_24%)]" />
+    <section className="relative overflow-hidden bg-[#f7f7f5] py-14 md:py-20">
 
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="mx-auto mb-10 max-w-3xl text-center">
@@ -56,7 +55,7 @@ export default function ProductPlatformStory() {
           {platforms.map((platform) => (
             <div
               key={platform.name}
-              className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-8 shadow-[0_22px_60px_rgba(15,23,42,0.08)] backdrop-blur"
+              className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_22px_60px_rgba(15,23,42,0.08)]"
             >
               <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80">
                 {platform.eyebrow}

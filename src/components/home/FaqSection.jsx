@@ -38,9 +38,9 @@ export default function FaqSection() {
 
   return (
     <section
-      className="relative bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#ECFEFF_100%)] py-12 sm:py-20 overflow-hidden"
+      className="relative bg-[#f7f7f5] py-12 sm:py-20 overflow-hidden"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(52,211,255,0.14),transparent_24%),radial-gradient(circle_at_right,rgba(79,70,229,0.08),transparent_22%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(52,211,255,0.08),transparent_26%),radial-gradient(circle_at_right,rgba(79,70,229,0.05),transparent_24%)]" />
 
 
       <div className="relative z-10 grid min-[900px]:grid-cols-2 gap-7 sm:gap-10 items-center text-black max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
@@ -65,7 +65,7 @@ export default function FaqSection() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className=" border border-gray-200 rounded-xl shadow-sm bg-gradient-to-r from-white to-slate-50 relative"
+              className="border border-slate-200 rounded-xl shadow-[0_10px_25px_rgba(15,23,42,0.06)] bg-white relative"
             >
               <div className="absolute  bg-main-dark rounded-full size-[26px] flex items-center justify-center -left-[13px] top-[12px] min-[500px]:top-[8px]">
                 <img

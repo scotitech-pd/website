@@ -42,8 +42,7 @@ export default function LeadershipTeam() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_46%,#E0F2FE_100%)] py-14 md:py-20">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_24%)]" />
+    <section className="relative overflow-hidden bg-[#f7f7f5] py-14 md:py-20">
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="max-w-4xl mb-10">
@@ -63,7 +62,7 @@ export default function LeadershipTeam() {
           {team.map((member) => (
             <article
               key={member.name}
-              className="rounded-[1.6rem] border border-slate-200 bg-white/90 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-sm"
+              className="rounded-[1.6rem] border border-slate-200 bg-white p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)]"
             >
               <div className="mb-4 overflow-hidden rounded-2xl border border-slate-200">
                 <img

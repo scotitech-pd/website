@@ -65,9 +65,7 @@ const steps = [
 
 export default function HowToGetOpsly() {
   return (
-    <section className="relative py-16 sm:py-20 overflow-hidden text-[#0F172A]">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(91,79,207,0.12),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.10),transparent_22%)]" />
+    <section className="relative bg-[#f7f7f5] py-16 sm:py-20 overflow-hidden text-[#0F172A]">
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="max-w-4xl mb-12">
@@ -85,7 +83,7 @@ export default function HowToGetOpsly() {
         </div>
 
         <div className="grid grid-cols-1 xl:grid-cols-[34%_66%] gap-8 items-start">
-          <div className="rounded-[2rem] border border-white/80 bg-white/85 backdrop-blur-md p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
             <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-4">
               What We Review
             </p>
@@ -110,13 +108,13 @@ export default function HowToGetOpsly() {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="group rounded-[1.75rem] border border-white/80 bg-white/85 backdrop-blur-md px-5 py-6 sm:px-6 sm:py-7 shadow-[0_18px_40px_rgba(15,23,42,0.06)] transition-transform duration-300 hover:-translate-y-1"
+                className="group rounded-[1.75rem] border border-slate-200 bg-white px-5 py-6 sm:px-6 sm:py-7 shadow-[0_18px_40px_rgba(15,23,42,0.06)] transition-transform duration-300 hover:-translate-y-1"
               >
                 <div className="flex items-center justify-between gap-4 mb-5">
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#5B4FCF] via-[#4F74F3] to-[#34D3FF] text-white font-karla font-bold">
                     {step.number}
                   </span>
-                  <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
+                  <div className="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent" />
                 </div>
 
                 <h3 className="text-xl font-semibold font-karla text-slate-900 mb-3 leading-7">

@@ -29,7 +29,7 @@ const SubscribeSection = () => {
   return (
     <div className="w-full py-16 px-4 bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-900">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-        <div className="rounded-3xl border border-white/15 mx-auto bg-white/6 px-3 min-[630px]:px-8 xl:px-12 py-8 min-[630px]:py-10 md:py-14 text-white grid min-[1270px]:grid-cols-2 items-center gap-5 backdrop-blur-sm">
+        <div className="rounded-3xl border border-slate-600/70 mx-auto bg-[#0F172A]/88 px-3 min-[630px]:px-8 xl:px-12 py-8 min-[630px]:py-10 md:py-14 text-white grid min-[1270px]:grid-cols-2 items-center gap-5 shadow-[0_20px_50px_rgba(2,6,23,0.30)]">
           <div>
             <h2 className="text-4xl min-[1550px]:text-5xl font-semibold font-karla mb-4 text-white">
               Stay Updated With ScotiTech

@@ -9,7 +9,7 @@ import HeroSection from "./HeroSection";
 const Pagehome = () => {
   return (
     <>
-      <div className=" bg-white">
+      <div className="bg-[#f7f7f5]">
         <HeroSection/>
         <OurProducts/>
         <WhyChooseScotiTech/>

@@ -26,7 +26,7 @@ const testimonials1 = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-white py-16 md:py-20 text-center relative overflow-hidden">
+    <section className="bg-[#f7f7f5] py-16 md:py-20 text-center relative overflow-hidden">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10">
         <div className="max-w-3xl mx-auto mb-10">
           <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-3">
@@ -47,7 +47,7 @@ export default function Testimonials() {
           <CarouselContent className="h-full">
             {testimonials1.map((t, i) => (
               <CarouselItem key={i} className="md:basis-1/2 pt-6 pb-5 h-full">
-                <div className="bg-[linear-gradient(180deg,#FFFFFF_0%,#F8FAFC_100%)] rounded-[1.8rem] border border-slate-200 px-7 py-10 mx-3 relative transition-all duration-500 h-full shadow-[0_18px_40px_rgba(15,23,42,0.05)]">
+                <div className="bg-white rounded-[1.8rem] border border-slate-200 px-7 py-10 mx-3 relative transition-all duration-500 h-full shadow-[0_18px_40px_rgba(15,23,42,0.05)]">
                   <div className="mx-auto mb-6 h-20 w-20 overflow-hidden rounded-full border-4 border-slate-900/10">
                     <img
                       src={t.img}

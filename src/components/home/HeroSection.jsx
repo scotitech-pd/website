@@ -81,8 +81,8 @@ export default function HeroSection() {
           </div>
 
           <div className="relative">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(91,79,207,0.12),transparent_58%)] blur-2xl" />
-            <div className="relative rounded-[2rem] border border-slate-900/10 bg-white/65 p-5 sm:p-6 shadow-[0_28px_70px_rgba(15,23,42,0.12)] backdrop-blur-md">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(52,211,255,0.12),transparent_58%),radial-gradient(circle_at_top_right,rgba(79,70,229,0.10),transparent_46%)] blur-2xl" />
+            <div className="relative rounded-[2rem] border border-white/12 bg-[linear-gradient(160deg,rgba(15,23,42,0.52),rgba(30,41,59,0.36))] p-5 sm:p-6 shadow-[0_28px_70px_rgba(2,6,23,0.30)] backdrop-blur-md">
               <div className="grid gap-5">
                 {surfaceCards.map((card, index) => (
                   <div

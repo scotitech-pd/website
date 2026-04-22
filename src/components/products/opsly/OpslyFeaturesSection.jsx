@@ -38,9 +38,7 @@ const capabilityGroups = [
 
 export default function OpslyFeaturesSection() {
   return (
-    <section className="relative text-[#0F172A] py-16 sm:py-20">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(91,79,207,0.08),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(52,211,255,0.06),transparent_20%)]" />
+    <section className="relative bg-[#f7f7f5] text-[#0F172A] py-16 sm:py-20">
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="max-w-4xl mb-12">
@@ -62,7 +60,7 @@ export default function OpslyFeaturesSection() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-[1.75rem] border border-white/80 bg-white/85 px-6 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"
+                className="rounded-[1.75rem] border border-slate-200 bg-white px-6 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"
               >
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900/5 border border-slate-200">
                   <img src={feature.icon} alt="" className="size-8 object-contain" />
@@ -77,7 +75,7 @@ export default function OpslyFeaturesSection() {
             ))}
           </div>
 
-          <div className="rounded-[2rem] border border-slate-900/80 bg-[#0F172A] backdrop-blur-md p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.18)]">
+          <div className="rounded-[2rem] border border-slate-900/80 bg-[#0F172A] p-6 sm:p-8 shadow-[0_20px_50px_rgba(15,23,42,0.18)]">
             <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-400 mb-5">
               What it brings together
             </p>

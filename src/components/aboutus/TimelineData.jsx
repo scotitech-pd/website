@@ -93,7 +93,7 @@ export default function Timeline() {
   ];
 
   return (
-    <div className="bg-white py-12 overflow-hidden">
+    <div className="bg-[#f7f7f5] py-12 overflow-hidden">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         {/* Section Title */}
         <div className="relative">
@@ -133,7 +133,7 @@ export default function Timeline() {
 
               {/* Content card */}
               <motion.div
-                className="bg-[linear-gradient(180deg,#F8FAFC_0%,#ECFEFF_100%)] rounded-xl border border-slate-200 p-6"
+                className="bg-white rounded-xl border border-slate-200 p-6 shadow-[0_12px_30px_rgba(15,23,42,0.06)]"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -179,7 +179,7 @@ export default function Timeline() {
 
                       {/* Content Card */}
                       <motion.div
-                        className="ml-8 bg-[linear-gradient(180deg,#F8FAFC_0%,#ECFEFF_100%)] border border-slate-200 z-10 rounded-2xl p-8 pl-16 min-w-[400px]"
+                        className="ml-8 bg-white border border-slate-200 z-10 rounded-2xl p-8 pl-16 min-w-[400px] shadow-[0_14px_34px_rgba(15,23,42,0.06)]"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
@@ -210,7 +210,7 @@ export default function Timeline() {
                   <div className="relative flex justify-end">
                     <div className="flex items-start flex-row-reverse">
                       {/* Year Circle */}
-                      <div className="w-20 h-20 absolute -top-10 bg-[#641171] rounded-full flex items-center justify-center z-20">
+                      <div className="w-20 h-20 absolute -top-10 bg-[#0F172A] rounded-full flex items-center justify-center z-20">
                         <span className= "text-center text-white text-2xl font-bold font-karla " >
                           {item.year} 
                         </span>
@@ -218,7 +218,7 @@ export default function Timeline() {
 
                       {/* Content Card */}
                       <motion.div
-                        className="mr-8 bg-[#FBDFFF] rounded-2xl p-8 max-w-md z-10"
+                        className="mr-8 bg-white border border-slate-200 rounded-2xl p-8 max-w-md z-10 shadow-[0_14px_34px_rgba(15,23,42,0.06)]"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
@@ -237,9 +237,9 @@ export default function Timeline() {
                     {hasNext && nextItem.side === "left" && (
                       <div className="absolute right-1/2 top-10">
                         <div className="relative">
-                          <div className="absolute -right-97 top-5 bg-[#E38DF0] w-[700px] h-1"></div>
+                          <div className="absolute -right-97 top-5 bg-[#7DD3FC] w-[700px] h-1"></div>
                           <div className="absolute bg-[#368F99] rounded-full w-[15px] h-[15px] right-[302px] top-[15px] z-2"></div>
-                          <div className="absolute w-1 bg-[#E38DF0] right-[308px] top-4 h-[220px]"></div>
+                          <div className="absolute w-1 bg-[#7DD3FC] right-[308px] top-4 h-[220px]"></div>
                         </div>
                       </div>
                     )}

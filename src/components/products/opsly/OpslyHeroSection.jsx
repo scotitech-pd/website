@@ -30,9 +30,7 @@ const proofPoints = [
 
 export default function OpslyHeroSection() {
   return (
-    <section className="relative overflow-hidden text-white py-16 sm:py-20 lg:py-24">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_52%,#E0F2FE_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(91,79,207,0.12),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(52,211,255,0.10),transparent_22%)]" />
+    <section className="relative overflow-hidden bg-[#f7f7f5] text-white py-16 sm:py-20 lg:py-24">
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 grid grid-cols-1 xl:grid-cols-[54%_46%] gap-10 items-center">
         <div className="max-w-3xl">
@@ -61,7 +59,7 @@ export default function OpslyHeroSection() {
             {modules.map((module) => (
               <span
                 key={module}
-                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-karla text-slate-700 backdrop-blur-sm"
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-karla text-slate-700"
               >
                 {module}
               </span>
@@ -78,7 +76,7 @@ export default function OpslyHeroSection() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/85 px-7 py-3 text-sm font-semibold font-karla text-slate-900 hover:border-slate-400 transition-colors backdrop-blur-sm"
+              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-semibold font-karla text-slate-900 hover:border-slate-400 transition-colors"
             >
               Book a walkthrough
             </Link>

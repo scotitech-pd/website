@@ -64,7 +64,7 @@ const getContactHref = (item) => {
 /* main section */
 const GetInTouch = () => {
   return (
-    <section className="relative overflow-hidden bg-[url('/images/contact/get_bg.png')] py-12 lg:py-20">
+    <section className="relative overflow-hidden bg-[#f7f7f5] py-12 lg:py-20">
       {/* background decorative images */}
       <div>
         <img
@@ -83,12 +83,12 @@ const GetInTouch = () => {
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 xxl:grid-cols-[60%_40%] gap-8 lg:gap-14">
           {/* left side */}
-          <div className="text-white space-y-8">
+          <div className="text-[#0F172A] space-y-8">
             <div>
               <h1 className="text-3xl lg:text-4xl xxl:text-5xl font-karla font-bold mb-4 lg:mb-6">
                 Get in Touch
               </h1>
-              <p className="text-sm lg:text-[16px] xxl:text-lg leading-relaxed max-w-2xl font-lora">
+              <p className="text-sm lg:text-[16px] xxl:text-lg leading-relaxed max-w-2xl font-lora text-slate-700">
                 Speak with ScotiTech about product access, rollout questions,
                 partnerships, or the solution that best fits your organisation.
               </p>
@@ -133,11 +133,11 @@ const ContactCard = ({ type, title, subtitle }) => {
   const href = getContactHref({ type, title });
   // if href exists wrap in anchor, else render plain div
   const Content = (
-    <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-2xl hover:bg-white/20 transition-all duration-300">
+    <div className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-[0_10px_25px_rgba(15,23,42,0.06)] hover:bg-slate-50 transition-all duration-300">
       <div className="bg-indigo-800 p-3 rounded-full flex-shrink-0 flex items-center justify-center shadow-[0_0_10px_rgba(99,102,241,0.6)] hover:shadow-[0_0_20px_rgba(99,102,241,0.9)] transition-shadow duration-300">
         {renderIcon(type, 22)}
       </div>
-      <div className="text-sm">
+      <div className="text-sm text-slate-800">
         <p className="font-semibold font-lora">{title}</p>
         {subtitle && <p className="font-lora">{subtitle}</p>}
       </div>
@@ -174,7 +174,7 @@ const ContactCardDesktop = ({ type, title, subtitle }) => {
       </div>
 
       {/* fixed white text under icon */}
-      <div className="text-[12px] text-center xxl:text-[16px] leading-tight font-karla text-white">
+      <div className="text-[12px] text-center xxl:text-[16px] leading-tight font-karla text-slate-700">
         <p className="">{title}</p>
         {subtitle && <p>{subtitle}</p>}
       </div>

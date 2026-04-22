@@ -32,20 +32,20 @@ const HowWeWorks = () => {
   ];
 
   return (
-    <section className="relative bg-[#0F172A] py-14 md:py-20 overflow-hidden">
+    <section className="relative bg-[#f7f7f5] py-14 md:py-20 overflow-hidden">
       {/* Large Background Text */}
       <div className="absolute top-8 lg:top-2 left-1/2 -translate-x-1/2 pointer-events-none z-0">
-        <h1 className="text-5xl sm:text-6xl font-karla md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white/5 leading-none whitespace-nowrap">
+        <h1 className="text-5xl sm:text-6xl font-karla md:text-7xl lg:text-8xl xl:text-9xl font-bold text-slate-300/35 leading-none whitespace-nowrap">
           How We Work
         </h1>
       </div>
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 relative z-10">
         {/* Title */}
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl lg:text-[40px] font-karla 2xl:text-5xl font-semibold text-white">
+          <h2 className="text-3xl lg:text-[40px] font-karla 2xl:text-5xl font-semibold text-[#0F172A]">
             How We Work
           </h2>
-          <p className="text-slate-300 font-lora text-base md:text-lg leading-8 mt-4">
+          <p className="text-slate-700 font-lora text-base md:text-lg leading-8 mt-4">
             We keep delivery practical: clear ownership, strong engineering
             standards, and product decisions tied to real operating conditions.
           </p>
@@ -56,14 +56,14 @@ const HowWeWorks = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="relative group rounded-2xl p-[1.5px] bg-gradient-to-bl from-[#34D3FF]/65 via-white/60 to-[#4F74F3]/55 hover:scale-[1.01] transition-transform duration-300 shadow-lg"
+              className="relative group rounded-2xl border border-slate-200 bg-white p-6 hover:scale-[1.01] transition-transform duration-300 shadow-[0_16px_38px_rgba(15,23,42,0.06)]"
             >
               {/* Card */}
 
-              <div className="h-full bg-gradient-to-br from-[#162338] to-[#0B1220] backdrop-blur-sm rounded-2xl p-6 lg:p-6 flex flex-col justify-start">
+              <div className="h-full rounded-2xl flex flex-col justify-start">
                 {/* Icon on top */}
-                <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-20">
-                  <div className="w-20 h-20 border border-cyan-200 shadow-[0_18px_35px_rgba(52,211,255,0.18)] hover:shadow-[0_20px_40px_rgba(79,116,243,0.18)] lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="absolute -top-10 left-1/2 -translate-x-1/2 z-20">
+                  <div className="w-20 h-20 border border-slate-200 shadow-[0_12px_30px_rgba(15,23,42,0.08)] lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <img
                       src={card.icon}
                       alt={card.title}
@@ -74,13 +74,13 @@ const HowWeWorks = () => {
 
                 {/* Card Title */}
                 <h3
-                  className={`text-2xl lg:text-[20px] px-[25px] md:text-3xl font-karla font-semibold mt-[40px] text-white text-center mb-4 ${card.className}`}
+                  className={`text-2xl lg:text-[20px] px-[25px] md:text-3xl font-karla font-semibold mt-[50px] text-slate-900 text-center mb-4 ${card.className}`}
                 >
                   {card.title}
                 </h3>
 
                 {/* Card Description */}
-                <p className="text-[14px] lg:text-[15px] md:text-[16px] font-lora text-slate-300 text-center leading-relaxed flex-grow">
+                <p className="text-[14px] lg:text-[15px] md:text-[16px] font-lora text-slate-700 text-center leading-relaxed flex-grow">
                   {card.description}
                 </p>
               </div>
@@ -91,7 +91,7 @@ const HowWeWorks = () => {
         {/* CTA Button */}
         <div className="flex justify-center lg:mt-3">
           <Link href="/contact">
-            <button className="px-8 font-karla lg:px-6 py-3 lg:py-2 lg:mt-2.5 bg-white text-black font-semibold text-base lg:text-[15px] cursor-pointer rounded-xl hover:bg-slate-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+            <button className="px-8 font-karla lg:px-6 py-3 lg:py-2 lg:mt-2.5 bg-[#0F172A] text-white font-semibold text-base lg:text-[15px] cursor-pointer rounded-xl hover:bg-slate-900 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
               Start a Conversation
             </button>
           </Link>

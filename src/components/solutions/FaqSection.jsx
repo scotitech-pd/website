@@ -30,7 +30,7 @@ export default function FaqSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-16 md:py-20">
+    <section className="relative overflow-hidden bg-[#f7f7f5] py-16 md:py-20">
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 grid gap-10 xl:grid-cols-[0.8fr_1.2fr] items-start text-black">
         <div className="max-w-3xl">
           <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-3">
@@ -48,7 +48,7 @@ export default function FaqSection() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="rounded-[1.4rem] border border-slate-200 shadow-sm bg-[linear-gradient(180deg,#FFFFFF_0%,#F8FAFC_100%)] relative overflow-hidden"
+              className="rounded-[1.4rem] border border-slate-200 shadow-sm bg-white relative overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}

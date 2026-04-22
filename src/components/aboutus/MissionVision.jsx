@@ -3,7 +3,7 @@ import React from "react";
 const MissionVision = () => {
   return (
     <div>
-      <section className="relative bg-white py-7 overflow-hidden lg:w-[100%]">
+      <section className="relative bg-[#f7f7f5] py-7 overflow-hidden lg:w-[100%]">
         <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
           {/* Mission */}
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center mb-[90px] ">

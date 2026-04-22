@@ -39,9 +39,7 @@ const features = [
 
 export default function KeyFeatures() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 text-[#0F172A]">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_24%)]" />
+    <section className="relative overflow-hidden bg-[#f7f7f5] py-16 sm:py-20 text-[#0F172A]">
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="max-w-4xl mb-12">
@@ -62,7 +60,7 @@ export default function KeyFeatures() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="rounded-[1.75rem] border border-white/80 bg-white/85 backdrop-blur-sm px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.07)]"
+              className="rounded-[1.75rem] border border-slate-200 bg-white px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.07)]"
             >
               <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-100 border border-slate-200">
                 <img src={feature.img} alt="" className="size-8" />

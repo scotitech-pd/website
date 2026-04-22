@@ -14,9 +14,7 @@ const HeroScotitech = () => {
   const { setShowModal } = useModal();
 
   return (
-    <section className="relative overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_55%,#E0F2FE_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.12),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.10),transparent_20%)]" />
+    <section className="relative overflow-hidden bg-[#f7f7f5] pt-24 pb-16 md:pt-28 md:pb-20">
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="grid gap-10 xl:grid-cols-[minmax(0,1.1fr)_minmax(420px,0.9fr)] items-center">
@@ -43,7 +41,7 @@ const HeroScotitech = () => {
               </Link>
               <button
                 onClick={() => setShowModal(true)}
-                className="inline-flex items-center rounded-full border border-slate-300 bg-white/85 px-6 py-3 text-sm font-semibold font-karla text-slate-900 shadow-[0_10px_30px_rgba(15,23,42,0.08)] hover:border-slate-400 transition-colors cursor-pointer"
+                className="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold font-karla text-slate-900 shadow-[0_10px_30px_rgba(15,23,42,0.08)] hover:border-slate-400 transition-colors cursor-pointer"
               >
                 Request a Call
               </button>
@@ -53,7 +51,7 @@ const HeroScotitech = () => {
               {highlights.map((item) => (
                 <div
                   key={item}
-                  className="rounded-[1.4rem] border border-white/80 bg-white/75 px-5 py-5 shadow-[0_18px_40px_rgba(15,23,42,0.06)] backdrop-blur-sm"
+                  className="rounded-[1.4rem] border border-slate-200 bg-white px-5 py-5 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"
                 >
                   <p className="text-slate-700 font-lora leading-7 text-[15px]">
                     {item}

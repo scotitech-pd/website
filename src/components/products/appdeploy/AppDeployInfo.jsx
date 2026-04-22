@@ -23,9 +23,7 @@ const highlights = [
 
 export default function AppDeployInfo() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 text-[#0F172A]">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_24%)]" />
+    <section className="relative overflow-hidden bg-[#f7f7f5] py-16 sm:py-20 text-[#0F172A]">
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="max-w-4xl mb-12">
@@ -44,7 +42,7 @@ export default function AppDeployInfo() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[38%_62%] gap-8 items-start">
-          <div className="rounded-[2rem] border border-slate-200 bg-white/80 backdrop-blur-sm p-6 sm:p-8 shadow-[0_18px_40px_rgba(15,23,42,0.07)]">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 sm:p-8 shadow-[0_18px_40px_rgba(15,23,42,0.07)]">
             <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-5">
               Why this matters
             </p>
@@ -67,7 +65,7 @@ export default function AppDeployInfo() {
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="rounded-[1.75rem] border border-slate-200 bg-white/85 backdrop-blur-sm px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.07)]"
+                className="rounded-[1.75rem] border border-slate-200 bg-white px-6 py-7 shadow-[0_18px_40px_rgba(15,23,42,0.07)]"
               >
                 <h3 className="text-xl font-semibold font-karla text-slate-900 mb-3 leading-7">
                   {item.title}

@@ -16,7 +16,7 @@ const marqueeLogos = [...logos, ...logos];
 
 const LogoTile = ({ logo }) => {
   const content = (
-    <div className="flex min-w-[220px] items-center justify-center rounded-[1.5rem] border border-slate-200/80 bg-white/85 px-8 py-6 shadow-[0_18px_45px_rgba(15,23,42,0.06)] backdrop-blur">
+    <div className="flex min-w-[220px] items-center justify-center rounded-[1.5rem] border border-slate-200 bg-white px-8 py-6 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
       {logo.image ? (
         <img
           src={logo.image}
@@ -50,8 +50,7 @@ const LogoTile = ({ logo }) => {
 
 export default function ClientLogoStrip() {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_45%,#E0F2FE_100%)] py-14 md:py-18">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_24%)]" />
+    <section className="relative overflow-hidden bg-[#f7f7f5] py-14 md:py-18">
 
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="mx-auto mb-8 max-w-3xl text-center">
