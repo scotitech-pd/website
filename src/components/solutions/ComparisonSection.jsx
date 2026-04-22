@@ -4,39 +4,39 @@ import Link from "next/link";
 
 const rows = [
   {
-    label: "Primary job",
+    label: "Primary goal",
     appdeploy:
       "Internal app distribution built around Apple Business workflows.",
     axos:
       "Private operational workspace for teams that want more control over day-to-day systems and internal tooling.",
   },
   {
-    label: "Core value",
+    label: "Best for",
     appdeploy:
-      "Simplify private iOS delivery, release operations, access control, and install visibility.",
+      "IT and admin teams managing internal app rollout, release cadence, and controlled access.",
     axos:
-      "Reduce SaaS sprawl, keep operational workflows closer to the organisation, and support self-hosted control.",
+      "Cross-functional teams running internal operations, coordination, and execution inside a private workspace.",
   },
   {
-    label: "Environment model",
+    label: "Core outcome",
     appdeploy:
-      "Cloud and Enterprise paths, with Apple Business aligned onboarding and rollout structure.",
+      "Faster, clearer internal app delivery with better release and install visibility.",
     axos:
-      "Self-hosted and private-workspace direction for organisations that want greater infrastructure and workflow ownership.",
+      "Stronger collaboration, accountability, and operational clarity across internal teams.",
   },
   {
-    label: "Who it serves best",
+    label: "Governance and control",
     appdeploy:
-      "Teams managing internal apps for employees, testers, partners, or controlled private rollout groups.",
+      "Emphasises release/version governance, distribution control, and access management for internal apps.",
     axos:
-      "Teams that need an internal workspace for operations, coordination, visibility, and admin-led control.",
+      "Emphasises workspace-level governance, role-based structure, and operational transparency.",
   },
   {
-    label: "Buyer priority",
+    label: "Time-to-value",
     appdeploy:
-      "Teams looking to improve private iOS rollout, access, and release workflows.",
+      "Quick impact when internal app distribution is the immediate priority.",
     axos:
-      "Teams looking to bring internal tooling, coordination, and operational control into a more private environment.",
+      "Compounding value as teams standardise daily coordination and internal workflows.",
   },
 ];
 
@@ -50,12 +50,12 @@ export default function AppDeployComparison() {
             Platform Comparison
           </p>
           <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">
-            How AppDeploy and AXOS differ
+            Which product fits your workflow: AppDeploy or AXOS?
           </h2>
           <p className="text-base md:text-xl text-slate-700 font-lora leading-8">
-            Both platforms are product-led, but they serve different operating
-            needs. This view helps buyers understand which path fits their
-            organisation more closely.
+            Both platforms improve internal operations. AppDeploy focuses on
+            secure internal app distribution, while AXOS focuses on private
+            operational workspace workflows.
           </p>
         </div>
 
@@ -132,22 +132,22 @@ export default function AppDeployComparison() {
 
         <div className="mt-10 max-w-5xl rounded-[1.75rem] border border-slate-200 bg-white px-6 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.07)]">
           <p className="text-slate-700 font-lora leading-8">
-            AppDeploy fits best when internal distribution is the immediate
-            problem. AXOS fits best when the organisation needs a more private
-            operational environment.
+            Many organisations use AppDeploy and AXOS together: AppDeploy
+            handles secure app delivery, while AXOS manages the operational
+            workflows around rollout, adoption, and internal execution.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <Link
               href="/products/appdeploy"
               className="inline-flex items-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold font-karla text-white hover:bg-slate-900 transition-colors"
             >
-              View AppDeploy
+              Need internal app distribution? → Explore AppDeploy
             </Link>
             <Link
               href="/products/axos"
               className="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold font-karla text-slate-900 hover:border-slate-400 transition-colors"
             >
-              View AXOS
+              Need a secure operational workspace? → Explore AXOS
             </Link>
           </div>
         </div>
