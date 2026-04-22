@@ -42,16 +42,14 @@ export default function PricingAppDeploy() {
   return (
     <section
       id="pricing"
-      className="relative overflow-hidden bg-[#F9F9FB] py-10 font-karla lg:py-16 scroll-mt-28"
+      className="relative overflow-hidden bg-[#f7f7f5] py-10 font-karla lg:py-16 scroll-mt-28"
     >
-      <div className="absolute top-0 right-0 h-full w-1/3 bg-gradient-to-l from-[#F5EDFF] to-transparent -z-1" />
-      <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-[#7E1A8E]/5 blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold leading-tight text-[#3D297A] lg:text-5xl">
+              <h2 className="text-3xl font-bold leading-tight text-slate-900 lg:text-5xl">
                 Choose the deployment model that fits your organisation
               </h2>
               <p className="max-w-xl text-lg leading-relaxed text-gray-600 font-lora lg:text-xl">
@@ -69,9 +67,9 @@ export default function PricingAppDeploy() {
                 "Branded employee distribution experience",
                 "Enterprise onboarding and rollout support",
               ].map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3">
-                  <div className="rounded-full bg-[#7E1A8E]/10 p-1">
-                    <CheckCircle className="h-5 w-5 text-[#7E1A8E]" />
+                <div className="flex items-center gap-3">
+                  <div className="rounded-full bg-blue-100/50 p-1">
+                    <CheckCircle className="h-5 w-5 text-slate-700" />
                   </div>
                   <span className="font-medium text-gray-700">{item}</span>
                 </div>
@@ -93,14 +91,13 @@ export default function PricingAppDeploy() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-[#3D297A] to-[#7E1A8E] opacity-15 blur" />
-                <div className="relative rounded-3xl border border-gray-100 bg-white p-8 text-left text-gray-900 shadow-2xl">
-                  <div className="mb-5 inline-flex rounded-full bg-[#F5EDFF] px-4 py-1.5">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#3D297A]">
+                <div className="relative rounded-3xl border border-slate-200 bg-white p-8 text-left text-gray-900 shadow-[0_4px_6px_rgba(15,23,42,0.1)]">
+                  <div className="mb-5 inline-flex rounded-full bg-slate-100 px-4 py-1.5">
+                    <span className="text-xs font-bold uppercase tracking-widest text-slate-700">
                       {plan.name}
                     </span>
                   </div>
-                  <h3 className="mb-2 text-2xl font-bold text-[#3D297A]">{plan.price}</h3>
+                  <h3 className="mb-2 text-2xl font-bold text-slate-900">{plan.price}</h3>
                   {"secondaryPrice" in plan ? (
                     <p className="mb-2 text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
                       {plan.secondaryPrice}
@@ -110,7 +107,7 @@ export default function PricingAppDeploy() {
                   <ul className="mb-6 space-y-3 text-sm text-gray-700">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[#7E1A8E]" />
+                        <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-slate-600" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -120,14 +117,14 @@ export default function PricingAppDeploy() {
                       href="https://appdeploy.scotitech.com/request-access"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-full rounded-xl bg-[#3D297A] py-4 text-center font-bold text-white shadow-lg transition duration-300 hover:bg-[#7E1A8E]"
+                      className="block w-full rounded-xl bg-[#0F172A] py-4 text-center font-bold text-white shadow-lg transition duration-300 hover:bg-slate-800"
                     >
                       {plan.cta}
                     </a>
                   ) : (
                     <button
                       onClick={() => setShowModal(true)}
-                      className="w-full rounded-xl bg-[#3D297A] py-4 font-bold text-white shadow-lg transition duration-300 hover:bg-[#7E1A8E]"
+                      className="w-full rounded-xl bg-[#0F172A] py-4 font-bold text-white shadow-lg transition duration-300 hover:bg-slate-800"
                     >
                       {plan.cta}
                     </button>

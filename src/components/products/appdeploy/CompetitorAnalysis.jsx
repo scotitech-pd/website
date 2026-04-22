@@ -46,10 +46,10 @@ export default function CompetitorComparisonPremium() {
   ];
 
   return (
-    <section className="relative bg-white py-20 font-karla text-gray-900">
+    <section className="relative bg-[#f7f7f5] py-20 font-karla text-gray-900">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="relative mb-14 text-center">
-          <h2 className="relative z-10 text-3xl font-bold text-[#3D297A] lg:text-5xl">
+          <h2 className="relative z-10 text-3xl font-bold text-slate-900 lg:text-5xl">
             How AppDeploy Stands Apart
           </h2>
 
@@ -67,14 +67,14 @@ export default function CompetitorComparisonPremium() {
         <div className="hidden overflow-x-auto rounded-2xl border border-gray-200 shadow-lg lg:block">
           <table className="min-w-full border-collapse text-left text-sm font-lora md:text-base">
             <thead>
-              <tr className="bg-gradient-to-r from-[#3D297A] to-[#7E1A8E] text-white font-karla">
-                <th className="w-[18%] border-r border-white/20 px-6 py-5 font-semibold">
+              <tr className="bg-[#0F172A] text-white font-karla">
+                <th className="w-[18%] border-r border-slate-700 px-6 py-5 font-semibold">
                   Parameter
                 </th>
-                <th className="relative w-[28%] border-r border-white/20 px-6 py-5 font-semibold">
+                <th className="relative w-[28%] border-r border-slate-700 px-6 py-5 font-semibold">
                   AppDeploy (ScotiTech)
                 </th>
-                <th className="w-[27%] border-r border-white/20 px-6 py-5 font-semibold">
+                <th className="w-[27%] border-r border-slate-700 px-6 py-5 font-semibold">
                   Applivery
                 </th>
                 <th className="w-[27%] px-6 py-5 font-semibold">
@@ -87,15 +87,15 @@ export default function CompetitorComparisonPremium() {
               {data.map((row, i) => (
                 <tr
                   key={i}
-                  className={`border-t border-gray-200 transition duration-300 hover:bg-[#F9F6FF] ${
-                    i % 2 === 1 ? "bg-[#FAFAFA]" : "bg-white"
+                  className={`border-t border-gray-200 transition duration-300 hover:bg-slate-50 ${
+                    i % 2 === 1 ? "bg-slate-50" : "bg-white"
                   }`}
                 >
-                  <td className="border-r border-gray-200 px-6 py-5 font-semibold text-[#3D297A]">
+                  <td className="border-r border-gray-200 px-6 py-5 font-semibold text-slate-900">
                     {row.parameter}
                   </td>
 
-                  <td className="border-r border-gray-200 border-l-4 border-[#7E1A8E] bg-[#F5EDFF] px-6 py-5 font-medium text-[#1A1A1A]">
+                  <td className="border-r border-gray-200 border-l-4 border-slate-400 bg-slate-100 px-6 py-5 font-medium text-slate-900">
                     {row.appdeploy}
                   </td>
 
@@ -114,15 +114,15 @@ export default function CompetitorComparisonPremium() {
           {data.map((item, index) => (
             <div
               key={index}
-              className="rounded-xl border border-gray-200 bg-white p-6 shadow-md transition duration-300 hover:shadow-lg"
+              className="rounded-xl border border-slate-200 bg-white p-6 shadow-[0_2px_4px_rgba(15,23,42,0.05)] transition duration-300 hover:shadow-[0_4px_12px_rgba(15,23,42,0.1)]"
             >
-              <h4 className="mb-4 text-lg font-bold text-[#3D297A] font-karla">
+              <h4 className="mb-4 text-lg font-bold text-slate-900 font-karla">
                 {item.parameter}
               </h4>
 
               <div className="space-y-4">
-                <div className="rounded-md border-l-4 border-[#7E1A8E] bg-[#F5EDFF] p-4">
-                  <p className="mb-1 font-semibold text-[#7E1A8E] font-karla">
+                <div className="rounded-md border-l-4 border-slate-400 bg-slate-100 p-4">
+                  <p className="mb-1 font-semibold text-slate-700 font-karla">
                     AppDeploy (ScotiTech)
                   </p>
                   <p className="text-gray-800">{item.appdeploy}</p>
@@ -146,7 +146,7 @@ export default function CompetitorComparisonPremium() {
           ))}
         </div>
 
-        <div className="mx-auto mt-16 hidden max-w-5xl rounded-xl border-l-[8px] border-[#7E1A8E] bg-[#F5EDFF] p-10 text-center shadow-md lg:block">
+        <div className="mx-auto mt-16 hidden max-w-5xl rounded-xl border-l-[8px] border-slate-400 bg-slate-100 p-10 text-center shadow-[0_2px_4px_rgba(15,23,42,0.05)] lg:block">
           <p className="text-md leading-relaxed text-gray-700 font-lora">
             “AppDeploy is designed for organisations that want a clearer
             operational layer around Apple Business based app delivery without
