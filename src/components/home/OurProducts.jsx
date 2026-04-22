@@ -9,7 +9,7 @@ const featuredProducts = [
     eyebrow: "Featured Product",
     tagline: "Internal app distribution built around Apple Business workflows",
     description:
-      "A branded operational layer for private iOS app delivery, with clearer release visibility, simpler employee access, and a more usable internal distribution workflow.",
+      "Private iOS app delivery with branded access, controlled release visibility, and a simpler employee install experience.",
     logo: "/images/brand/appdeploy-logo-black.png",
     link: "/products/appdeploy",
     cta: "Explore AppDeploy",
@@ -17,9 +17,9 @@ const featuredProducts = [
   {
     name: "AXOS",
     eyebrow: "Featured Product",
-    tagline: "A private operational workspace built for control and clarity",
+    tagline: "A private workspace built for team control and daily clarity",
     description:
-      "Reduce SaaS sprawl with self-hosted tools that support day-to-day operations, visibility, and collaboration in one environment.",
+      "Reduce SaaS sprawl with self-hosted tools for day-to-day collaboration, visibility, and task coordination in one environment.",
     logo: "/images/brand/axos-icon.png",
     link: "/products/axos",
     cta: "Explore AXOS",
@@ -69,9 +69,8 @@ export default function OurProducts() {
           transition={{ duration: 0.65, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          We focus the homepage on the two products with the clearest business
-          value today: AppDeploy for controlled app distribution and AXOS for
-          streamlined, private operational tooling.
+          AppDeploy handles internal app distribution. AXOS handles private
+          team workspace and daily tooling. Both are ready for real rollout.
         </motion.p>
 
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-stretch">

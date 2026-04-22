@@ -1,17 +1,17 @@
 const trustSignals = [
   "Privacy-conscious product design",
   "Review-led onboarding for commercial rollout",
-  "Focused products with clearer operational scope",
+  "Focused products with defined scope",
 ];
 
 const TrustAndCompliance = () => {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)] py-16 md:py-20">
+    <section className="relative overflow-hidden bg-[#f7f7f5] py-16 md:py-20">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_24%)]" />
 
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="rounded-[2rem] border border-slate-200/80 bg-white/80 p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)] backdrop-blur">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
             <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80">
               Trust and Delivery
             </p>
@@ -19,11 +19,10 @@ const TrustAndCompliance = () => {
               Practical products need a practical trust model.
             </h2>
             <p className="max-w-2xl font-lora text-lg leading-8 text-slate-700">
-              ScotiTech is building focused products for internal distribution,
-              private operational tooling, accessibility workflows, and
-              structured decision support. The trust layer should feel equally
-              focused: clear scope, measured claims, and product choices shaped
-              by real operational needs.
+              ScotiTech builds focused products for internal distribution,
+              private workspace tooling, accessibility workflows, and structured
+              decision support. The trust model is equally focused: clear scope,
+              measured claims, and product choices shaped by real needs.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -48,8 +47,7 @@ const TrustAndCompliance = () => {
             <div className="space-y-4 font-lora text-base leading-7 text-slate-300">
               <p>
                 We do not position every product as a universal platform. Each
-                one is framed around the operational problem it is actually
-                designed to solve.
+                one is scoped to the problem it is designed to solve.
               </p>
               <p>
                 That discipline matters commercially. It creates clearer buyer
