@@ -22,7 +22,7 @@ const coreProducts = [
     id: 2,
     name: "AXOS",
     description:
-      "A private operational workspace for organisations that want more control, less SaaS sprawl, and clearer day-to-day tooling.",
+      "A private workspace for organisations that want stronger control, less SaaS sprawl, and better day-to-day tooling.",
     buttonText: "View AXOS",
     link: "/products/axos",
     details: "/products/axos",
@@ -59,9 +59,9 @@ const ProductShowcase = () => {
             One company, a tighter set of software products
           </h2>
           <p className="text-white/74 font-lora text-lg leading-8">
-            The portfolio is clearer when each product has a defined role.
-            AppDeploy and AXOS lead the commercial story, while ClarityPath
-            remains available as a focused supporting product.
+            The portfolio works best when each product has a clear role.
+            AppDeploy and AXOS are the two lead platforms, while ClarityPath
+            remains available for its specific use case.
           </p>
         </div>
 
@@ -162,9 +162,9 @@ const ProductShowcase = () => {
                 />
               </div>
               <p className="text-slate-700 font-lora leading-7">
-                ClarityPath stays visible within the portfolio, but it supports
-                a different use case from the two lead platforms and is
-                presented more lightly here.
+                ClarityPath remains part of the portfolio, but serves a
+                different use case from the two lead platforms and is presented
+                more lightly here.
               </p>
 
               <div className="flex flex-wrap gap-3">

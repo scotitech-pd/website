@@ -10,12 +10,12 @@ export default function FaqSection() {
     {
       question: "How do I know whether AppDeploy or AXOS is the better fit?",
       answer:
-        "Use AppDeploy when internal app distribution and release control are the immediate priority. Use AXOS when your priority is private daily operations across mail, storage, coordination, and AI.",
+        "Choose AppDeploy when internal app rollout and release control are the immediate priority. Choose AXOS when your team needs a private workspace for mail, storage, coordination, and AI-assisted work.",
     },
     {
       question: "Is AppDeploy intended to replace a full mobility platform?",
       answer:
-        "No. AppDeploy is positioned as a focused operational layer for internal app distribution rather than as a broad device-management platform.",
+        "No. AppDeploy is a focused internal app delivery product, not a broad device-management platform.",
     },
     {
       question: "Can AXOS support organisations that want more control over hosting?",
