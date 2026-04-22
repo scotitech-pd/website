@@ -21,16 +21,16 @@ const Navbar = () => {
 
   const [isAtTop, setIsAtTop] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [announcementVisible, setAnnouncementVisible] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const listenToTop = () => {
       const winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;
       setIsAtTop(winScroll <= 10);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", listenToTop);
+    return () => window.removeEventListener("scroll", listenToTop);
   }, []);
 
   useEffect(() => {
@@ -40,41 +40,10 @@ const Navbar = () => {
   const isActiveLink = (link) =>
     link === "/products" ? pathname.startsWith("/products") : pathname === link;
 
-  const announcementHeight = announcementVisible ? "36px" : "0px";
-  const navHeight = "64px";
-
   return (
-    <div style={{ paddingTop: `calc(${announcementHeight} + ${navHeight})` }}>
-      {/* Announcement bar */}
+    <div className={isAtTop ? "pb-[80px] bg-main-dark" : "pb-[70px] bg-main-dark"}>
       <div
-        className="w-full fixed top-0 left-0 z-[55] bg-[#0F172A] text-white text-sm overflow-hidden transition-all duration-300"
-        style={{ height: announcementHeight }}
-      >
-        {announcementVisible && (
-          <div className="h-full flex items-center justify-center gap-3 px-4">
-            <span className="bg-white/15 text-white text-xs font-semibold px-2 py-0.5 rounded-full tracking-wide">
-              NEW
-            </span>
-            <span className="text-white/90 font-karla text-sm">
-              AppDeploy + AXOS — both available for rollout.{" "}
-              <Link href="/products" className="underline underline-offset-2 hover:text-white transition-colors">
-                See what&apos;s ready
-              </Link>
-            </span>
-            <button
-              onClick={() => setAnnouncementVisible(false)}
-              className="absolute right-4 text-white/60 hover:text-white transition-colors cursor-pointer"
-              aria-label="Dismiss"
-            >
-              <X size={14} />
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Mobile drawer overlay */}
-      <div
-        className="black_overlay w-full h-full fixed lg:hidden z-[60] duration-500 bg-black/40"
+        className="black_overlay w-full h-full fixed lg:hidden z-[60] duration-500 bg-black/60 backdrop-blur-sm"
         onClick={() => setMenuOpen(false)}
         style={{
           opacity: menuOpen ? 1 : 0,
@@ -83,105 +52,92 @@ const Navbar = () => {
       >
         <nav
           onClick={(e) => e.stopPropagation()}
-          className={`font-sans w-full max-w-[280px] h-full bg-white absolute right-0 shadow-2xl transition-transform duration-300 ${
+          className={`font-sans w-full max-w-[300px] h-full bg-main-dark absolute right-0 shadow-2xl transition-transform duration-300 ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="h-full pt-20 pb-10 flex flex-col px-8">
-            <ul className="text-base font-medium w-full font-karla space-y-1 text-slate-700">
+          <div className="h-full py-16 flex flex-col items-center px-6">
+            <ul className="text-lg font-semibold w-full font-karla space-y-6 text-white">
               {navLinks.map((item) => (
-                <li key={item.id}>
+                <li key={item.id} className="m-4 text-right">
                   <Link
                     href={item.link}
-                    className={`block px-3 py-2.5 rounded-lg transition-colors ${
-                      isActiveLink(item.link)
-                        ? "bg-slate-100 text-slate-900 font-semibold"
-                        : "hover:bg-slate-50 hover:text-slate-900"
+                    className={`px-4 py-1 rounded-lg duration-300 text-white ${
+                      isActiveLink(item.link) ? "border-white border-2" : ""
                     }`}
                   >
                     {item.title}
                   </Link>
                 </li>
               ))}
+
+              <li className="m-4 text-right">
+                <button
+                  onClick={() => {
+                    setShowModal(true);
+                    setMenuOpen(false);
+                  }}
+                  className="bg-white/20 cursor-pointer px-5 py-2 rounded-3xl text-white border border-white duration-500 font-medium"
+                >
+                  Talk to Our Team
+                </button>
+              </li>
             </ul>
-            <div className="mt-8">
-              <button
-                onClick={() => {
-                  setShowModal(true);
-                  setMenuOpen(false);
-                }}
-                className="w-full bg-[#0F172A] cursor-pointer px-5 py-2.5 rounded-lg text-white font-medium font-karla hover:bg-slate-800 transition-colors"
-              >
-                Talk to Our Team
-              </button>
-            </div>
           </div>
         </nav>
       </div>
 
-      {/* Main navbar */}
       <nav
-        className="w-full fixed left-0 bg-white transition-all duration-300 z-50"
-        style={{
-          top: announcementHeight,
-          height: navHeight,
-          borderBottom: isAtTop ? "1px solid #e2e8f0" : "1px solid #e2e8f0",
-          boxShadow: isAtTop ? "none" : "0 1px 12px rgba(15,23,42,0.07)",
-        }}
+        className={(isAtTop ? "h-[80px]" : "h-[70px]") +
+          " w-full fixed bg-main-dark transition-all duration-300 z-50 shadow-xl"}
       >
-        <div className="h-full max-w-7xl mx-auto flex items-center justify-between px-5 lg:px-8">
-          {/* Logo */}
-          <div className="flex-shrink-0">
+        <div className="h-full mx-auto flex items-center justify-between pl-2 lg:px-5 xl:px-5">
+          <div className="max-w-[180px] lg:pl-1">
             <Link href="/">
               <Image
                 src="/logo/logo.png"
-                alt="ScotiTech"
-                width={160}
-                height={40}
+                alt="Logo"
+                width={180}
+                height={45}
                 className="cursor-pointer"
               />
             </Link>
           </div>
 
-          {/* Desktop nav links */}
-          <ul className="list-none hidden lg:flex items-center gap-1 font-karla text-[14.5px] font-medium text-slate-600">
+          <ul className="list-none ml-auto gap-5 text-[15px] hidden lg:flex font-karla text-white">
             {navLinks.map((item) => (
-              <li key={item.id}>
+              <li key={item.id} className="my-auto">
                 <Link
                   href={item.link}
-                  className={`relative px-3 py-1.5 rounded-md transition-colors hover:text-slate-900 hover:bg-slate-50 ${
-                    isActiveLink(item.link)
-                      ? "text-slate-900 font-semibold"
-                      : ""
+                  className={`px-2 py-1 rounded-lg duration-300 text-white ${
+                    isActiveLink(item.link) ? "border-white border-2" : ""
                   }`}
                 >
                   {item.title}
-                  {isActiveLink(item.link) && (
-                    <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-[#0F172A] rounded-full" />
-                  )}
                 </Link>
               </li>
             ))}
+
+            <li>
+              <button
+                onClick={() => setShowModal(true)}
+                className="bg-white cursor-pointer px-5 py-1.5 rounded-3xl text-main-dark border border-white duration-500 font-medium hover:bg-slate-100"
+              >
+                Talk to Our Team
+              </button>
+            </li>
           </ul>
 
-          {/* CTA */}
-          <div className="hidden lg:flex items-center gap-3">
-            <button
-              onClick={() => setShowModal(true)}
-              className="bg-[#0F172A] cursor-pointer px-4 py-2 rounded-lg text-white text-[14px] font-medium font-karla hover:bg-slate-800 transition-colors"
-            >
-              Talk to Our Team
-            </button>
-          </div>
-
-          {/* Mobile hamburger */}
-          <button
-            className="cursor-pointer lg:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100 transition-colors z-[70]"
+          <div
+            className="cursor-pointer lg:hidden mr-4 z-[70] transition-colors"
             onClick={() => setMenuOpen((prev) => !prev)}
-            aria-label="Toggle menu"
           >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+            {menuOpen ? (
+              <X className="text-3xl text-white" />
+            ) : (
+              <Menu className="text-4xl text-white" />
+            )}
+          </div>
         </div>
       </nav>
     </div>
