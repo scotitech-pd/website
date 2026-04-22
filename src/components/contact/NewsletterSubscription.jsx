@@ -39,24 +39,17 @@ const NewsletterSubscription = () => {
   };
 
   return (
-    <section
-      className="relative text-white py-14 md:py-20 bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80')",
-      }}
-    >
-      <div className="absolute inset-0 bg-black/70"></div>
+    <section className="relative bg-[#f7f7f5] text-[#0F172A] py-14 md:py-20">
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 md:px-20">
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-[0_0_25px_rgba(255,255,255,0.15)] p-6 md:p-10">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_20px_50px_rgba(15,23,42,0.10)] p-6 md:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* LEFT */}
             <div>
-              <h2 className="text-3xl font-karla font-bold mb-3">
+              <h2 className="text-3xl font-karla font-bold mb-3 text-[#0F172A]">
                 Stay Updated with ScotiTech
               </h2>
-              <p className="text-gray-200 font-lora text-sm md:text-base leading-relaxed max-w-md">
+              <p className="text-slate-700 font-lora text-sm md:text-base leading-relaxed max-w-md">
                 Get product updates, company news, and selected insights from
                 ScotiTech.
               </p>
@@ -73,12 +66,12 @@ const NewsletterSubscription = () => {
                   onKeyPress={handleKeyPress}
                   placeholder="Enter your email address"
                   className={`px-4 py-3 rounded-full bg-white text-gray-800 font-lora font-medium text-sm text-center focus:outline-none border-2 ${
-                    status === "error" ? "border-red-400" : "border-white/30"
+                    status === "error" ? "border-red-400" : "border-slate-300"
                   }`}
                 />
                 <button
                   onClick={handleSubmit}
-                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-main-dark hover:bg-white hover:text-black text-white font-karla font-semibold text-sm transition shadow-md hover:shadow-lg"
+                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#0F172A] hover:bg-slate-900 text-white font-karla font-semibold text-sm transition shadow-md hover:shadow-lg"
                 >
                   {status === "success" ? "Subscribed" : "Subscribe"}
                   <ArrowRightCircle className="w-5 h-5" />
@@ -94,12 +87,12 @@ const NewsletterSubscription = () => {
                   onKeyPress={handleKeyPress}
                   placeholder="Enter your email address"
                   className={`w-full py-4 pl-6 pr-[140px] rounded-full bg-white text-gray-800 font-lora font-medium text-base focus:outline-none border-2 ${
-                    status === "error" ? "border-red-400" : "border-white/30"
+                    status === "error" ? "border-red-400" : "border-slate-300"
                   }`}
                 />
                 <button
                   onClick={handleSubmit}
-                  className="absolute top-1/2 right-2 -translate-y-1/2 px-8 py-3 rounded-full bg-main-dark hover:bg-white hover:text-black text-white font-karla font-semibold text-base transition-all shadow-md hover:shadow-lg"
+                  className="absolute top-1/2 right-2 -translate-y-1/2 px-8 py-3 rounded-full bg-[#0F172A] hover:bg-slate-900 text-white font-karla font-semibold text-base transition-all shadow-md hover:shadow-lg"
                 >
                   {status === "success" ? "Subscribed" : "Subscribe"}
                 </button>

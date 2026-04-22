@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
-import { MoveRightIcon, Send } from "lucide-react";
 import Link from "next/link";
 
 const SpecificSolution = () => {
@@ -125,16 +123,16 @@ const SpecificSolution = () => {
   };
 
   return (
-    <section className="relative bg-[url('/images/contact/pattern-bg.png')] bg-no-repeat bg-center bg-cover overflow-hidden py-12 lg:py-20">
+    <section className="relative bg-[#f7f7f5] overflow-hidden py-12 lg:py-20">
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-        <h2 className="text-2xl lg:text-[48px] font-bold font-karla text-purple-900 text-center mb-8 lg:mb-16">
+        <h2 className="text-2xl lg:text-[48px] font-bold font-karla text-[#0F172A] text-center mb-8 lg:mb-16">
           Looking for a Specific Product?
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-[45%_51%] gap-5 min-[1400px]:gap-12">
-          <div className="bg-gradient-to-br from-[#000] to-[#3A3287] rounded-3xl p-6 lg:p-8 shadow-2xl">
-            <div className="border-1 border-white p-6 border-opacity-20 rounded-md relative">
-              <h3 className="text-2xl lg:text-3xl font-karla text-white mb-6 lg:mb-8">
+          <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-[0_22px_55px_rgba(15,23,42,0.10)] border border-slate-200">
+            <div className="border border-slate-200 p-6 rounded-2xl relative bg-slate-50/80">
+              <h3 className="text-2xl lg:text-3xl font-karla text-[#0F172A] mb-6 lg:mb-8">
                 Send us a Message
               </h3>
 
@@ -142,7 +140,7 @@ const SpecificSolution = () => {
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                     <div>
-                      <label className="block text-white font-lora text-sm font-medium mb-2">
+                      <label className="block text-slate-700 font-lora text-sm font-medium mb-2">
                         Name
                       </label>
                       <input
@@ -151,12 +149,12 @@ const SpecificSolution = () => {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Your Name"
-                        className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
+                        className="w-full font-lora bg-transparent border-b-2 border-slate-300 focus:border-slate-500 text-slate-900 placeholder-slate-400 py-2 px-1 outline-none transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-white text-sm font-lora font-medium mb-2">
+                      <label className="block text-slate-700 text-sm font-lora font-medium mb-2">
                         Contact
                       </label>
                       <input
@@ -170,7 +168,7 @@ const SpecificSolution = () => {
                         }}
                         onChange={handleChange}
                         placeholder="With Country Code"
-                        className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
+                        className="w-full font-lora bg-transparent border-b-2 border-slate-300 focus:border-slate-500 text-slate-900 placeholder-slate-400 py-2 px-1 outline-none transition-colors"
                       />
                       {phoneError && (
                         <p className="text-red-500 text-sm mt-1">{phoneError}</p>
@@ -179,7 +177,7 @@ const SpecificSolution = () => {
                   </div>
 
                   <div>
-                    <label className="block font-lora text-white text-sm font-medium mb-2">
+                    <label className="block font-lora text-slate-700 text-sm font-medium mb-2">
                       Email
                     </label>
                     <input
@@ -188,7 +186,7 @@ const SpecificSolution = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Your Email"
-                      className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
+                      className="w-full font-lora bg-transparent border-b-2 border-slate-300 focus:border-slate-500 text-slate-900 placeholder-slate-400 py-2 px-1 outline-none transition-colors"
                     />
                     {emailError && (
                       <p className="text-red-500 text-sm mt-1">{emailError}</p>
@@ -196,7 +194,7 @@ const SpecificSolution = () => {
                   </div>
 
                   <div>
-                    <label className="block font-lora text-white text-sm font-medium mb-2">
+                    <label className="block font-lora text-slate-700 text-sm font-medium mb-2">
                       Company Name
                     </label>
                     <input
@@ -205,14 +203,14 @@ const SpecificSolution = () => {
                       value={formData.companyName}
                       onChange={handleChange}
                       placeholder="Company Name"
-                      className="w-full font-lora bg-transparent border-b-2 border-white/50 focus:border-white text-white placeholder-white/60 py-2 px-1 outline-none transition-colors"
+                      className="w-full font-lora bg-transparent border-b-2 border-slate-300 focus:border-slate-500 text-slate-900 placeholder-slate-400 py-2 px-1 outline-none transition-colors"
                     />
                   </div>
 
                   <div className="flex justify-end pt-4">
                     <button
                       type="submit"
-                      className="bg-white hover:shadow-[0_0_15px_3px_rgba(255,255,255,1)] cursor-pointer font-lora text-purple-900 px-5 py-2 lg:text-lg rounded-full font-semibold hover:bg-purple-50 transition-all duration-500 ease-in-out text-sm"
+                      className="bg-[#0F172A] cursor-pointer font-lora text-white px-5 py-2 lg:text-lg rounded-full font-semibold hover:bg-slate-900 transition-all duration-300 ease-in-out text-sm"
                     >
                       {success ? "Sent" : "Send"}
                     </button>
@@ -230,11 +228,11 @@ const SpecificSolution = () => {
                   key={card.id}
                   className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition h-full flex flex-col mb-0"
                 >
-                  <div className="flex bg-black rounded-t-2xl overflow-hidden items-center justify-center h-20">
+                  <div className="flex bg-slate-100 rounded-t-2xl overflow-hidden items-center justify-center h-20 border-b border-slate-200">
                     <img
                       src={card.image}
                       alt={card.name}
-                      className="w-full object-center"
+                      className="h-14 w-auto object-contain"
                     />
                   </div>
                   <div className="py-4 text-center">
@@ -245,7 +243,7 @@ const SpecificSolution = () => {
                       {card.description}
                     </p>
                     <Link href={card.link}>
-                      <button className="bg-purple-700 cursor-pointer font-karla shadow-[0_0_15px_3px_rgba(180,100,255,1)] text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs lg:px-4 px-6 py-2 rounded-full hover:bg-purple-800 transition-colors font-karlas">
+                      <button className="bg-[#0F172A] cursor-pointer font-karla text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs lg:px-4 px-6 py-2 rounded-full hover:bg-slate-900 transition-colors shadow-[0_8px_20px_rgba(15,23,42,0.22)]">
                         Read More
                       </button>
                     </Link>
@@ -254,10 +252,10 @@ const SpecificSolution = () => {
               ))}
             </div>
 
-            <div className="bg-[#641070] h-full shadow-[0_0_5px_3px_rgba(180,100,255,0.6)] rounded-3xl relative overflow-hidden lg:h-[53%] mt-10">
+            <div className="bg-white h-full border border-slate-200 rounded-3xl relative overflow-hidden lg:h-[53%] mt-10 shadow-[0_20px_50px_rgba(15,23,42,0.10)]">
               <div className="grid lg:grid-cols-[28%_72%] lg:h-full">
                 <div>
-                  <h3 className="text-white text-xl font-bold p-4 px-7 font-lora">
+                  <h3 className="text-[#0F172A] text-xl font-bold p-4 px-7 font-lora">
                     Our Location
                   </h3>
                   <img
