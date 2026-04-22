@@ -3,10 +3,10 @@
 import { useModal } from "@/components/ModalContext";
 
 const problems = [
-  "Internal iOS distribution workflows often become fragmented across approvals, access, and user rollout.",
-  "Teams default to broader mobility tools even when they only need a cleaner delivery and visibility layer.",
-  "Operational work gets buried under disconnected tools, inconsistent release paths, and unclear ownership.",
-  "Software that should feel focused instead becomes noisy, harder to adopt, and harder to manage.",
+  "Internal iOS distribution often fragments across approvals, access, and rollout.",
+  "Teams adopt broader tooling when they actually need a focused delivery layer.",
+  "Operational work gets buried under disconnected systems and unclear ownership.",
+  "Products become harder to adopt when day-to-day workflows feel noisy.",
 ];
 
 export default function TechnologySection() {
@@ -24,12 +24,11 @@ export default function TechnologySection() {
               The Operational Gap
             </p>
             <h2 className="text-3xl md:text-5xl font-karla font-semibold leading-tight">
-              Modern software problems rarely come from lack of tools
+              Most software problems come from workflow fragmentation
             </h2>
             <p className="mt-5 text-white/72 font-lora text-lg leading-8">
-              They come from unclear workflows, heavier systems than the job
-              actually requires, and interfaces that make daily operations
-              harder instead of simpler.
+              The issue is usually not tool availability. It is unclear process
+              ownership, heavier systems than needed, and rollout friction.
             </p>
 
             <div className="mt-8 rounded-[1.6rem] border border-white/10 bg-white/5 p-6">
@@ -37,9 +36,8 @@ export default function TechnologySection() {
                 Our Approach
               </p>
               <p className="text-white/78 font-lora leading-8">
-                ScotiTech products are being shaped around practical workflows:
-                simpler internal distribution, calmer operations, and more
-                credible product experiences.
+                Our approach is to narrow scope around high-value workflows:
+                cleaner internal distribution and more controlled operations.
               </p>
             </div>
 

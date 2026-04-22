@@ -31,7 +31,7 @@ export default function OurProducts() {
   return (
     <section
       id="products"
-      className="pt-8 pb-20 text-center relative w-full overflow-hidden"
+      className="pt-16 pb-20 text-center relative w-full overflow-hidden"
     >
       <div className="absolute bottom-0 w-screen -left-0.5">
         <img

@@ -35,9 +35,8 @@ export default function CtaSection() {
               Choose the product path that fits your use case
             </h2>
             <p className="text-white/75 text-lg font-lora leading-8">
-              The portfolio is structured to make the next action clearer,
-              whether you want AppDeploy access, an AXOS review, or direct
-              entry into ClarityPath.
+              Pick the next step directly: AppDeploy access, an AXOS review,
+              or ClarityPath entry.
             </p>
           </div>
 

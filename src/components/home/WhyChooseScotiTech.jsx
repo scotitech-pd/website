@@ -3,18 +3,18 @@ import Link from "next/link";
 const features = [
   {
     img: "/images/home/whyaccessible.png",
-    title: "Practical by Design",
-    desc: "We focus on products that solve clear operational problems without adding unnecessary complexity.",
+    title: "Focused product scope",
+    desc: "The portfolio is narrower on purpose, so buyers can understand what each product does without sorting through inflated platform claims.",
   },
   {
     img: "/images/home/whyrocket.png",
-    title: "Start Lean, Grow Clearly",
-    desc: "We ship focused products, learn from real usage, and improve them with a clearer long-term direction.",
+    title: "Clearer rollout conversations",
+    desc: "AppDeploy and AXOS are positioned around real operational use cases, making evaluation and onboarding conversations easier to follow.",
   },
   {
     img: "/images/home/whyprivacy.png",
-    title: "Privacy and Control",
-    desc: "Products are shaped with practical privacy, responsible data handling, and stronger deployment control in mind.",
+    title: "Control without the noise",
+    desc: "The strongest recurring theme across the portfolio is practical control: clearer data boundaries, deployment options, and buyer expectations.",
   },
 ];
 
@@ -41,16 +41,17 @@ export default function WhyChooseScotiTech() {
         {/* Left Content */}
         <div className="space-y-6 py-10 sm:py-20">
           <div className="relative  mt-5">
-            <p className="hidden font-karla min-[1100px]:flex text-[6rem] font-semibold text-gray-100/8 text-nowrap -z-0 w-fit absolute -left-4  -top-1 transform -translate-y-1/2">
-              Why Choose ScotiTech
+            <p className="hidden font-karla min-[1100px]:flex text-[6rem] font-semibold text-gray-100/8 text-nowrap -z-0 w-fit absolute -left-4 -top-1 transform -translate-y-1/2">
+              Why Teams Consider ScotiTech
             </p>
             <h2 className="lg:text-5xl text-3xl font-karla font-semibold text-white">
-              Why Choose ScotiTech
+              Why teams take a closer look
             </h2>
           </div>
           <p className="lg:text-lg text-md text-white max-w-2xl font-lora">
-            We build products that are easier to understand, easier to trust,
-            and better aligned with real operational needs.
+            The site works best when it stays grounded in product fit. These
+            are the signals that make the portfolio feel more credible to a
+            first-time buyer.
           </p>
 
           <div className="grid grid-cols-1 min-[600px]:grid-cols-[48%_41%] mt-5 sm:mt-10 gap-8 min-[900px]:gap-20 w-[100%] min-[900px]:w-[90%] min-[1080px]:w-[72%] text-black">

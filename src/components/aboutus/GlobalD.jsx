@@ -1,52 +1,37 @@
 "use client";
 
 import React from "react";
-import { useModal } from "@/components/ModalContext"; // ✅ Global modal context import
+import { useModal } from "@/components/ModalContext";
 
 const GlobalD = () => {
-  const { setShowModal } = useModal(); // ✅ modal context function
+  const { setShowModal } = useModal();
 
   return (
-    <section
-      className="relative bg-center bg-cover bg-no-repeat py-9"
-      style={{
-        backgroundImage: "url('/images/aboutus/lead-bg.png')",
-      }}
-    >
-      <div className="text-center px-4 sm:px-8 md:px-16 min-[1670px]:w-7xl min-[1670px]:mx-auto lg:px-[180px] flex justify-center items-center mt-[4px] h-auto py-8 lg:py-0 overflow-hidden">
-        <div className="relative">
-          {/* Heading */}
-          <h3 className="text-2xl relative font-karla mb-5 lg:text-[35px] min-[1670px]:py-[20px] font-semibold text-white 2xl:text-[45px]">
-            Global Delivery. Local Trust
-            <div className="absolute hidden lg:block left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none z-0">
-              <p className="text-5xl sm:text-6xl tracking-wider font-karla md:text-5xl lg:text-7xl font-bold text-gray-300/20 leading-none whitespace-nowrap">
-                Global Delivery. Local Trust
-              </p>
-            </div>
+    <section className="relative overflow-hidden py-14 md:py-18">
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,#0F172A_0%,#111827_52%,#0B1220_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.24),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.16),transparent_24%)]" />
+
+      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-white/[0.05] px-6 py-10 sm:px-10 text-center backdrop-blur-md shadow-[0_30px_80px_rgba(0,0,0,0.28)]">
+          <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300/90">
+            Global Delivery Model
+          </p>
+          <h3 className="text-3xl md:text-5xl font-karla font-semibold text-white mb-5">
+            UK-led direction with cross-region execution
           </h3>
 
-          {/* Description */}
-          <p className="text-white font-lora lg:text-[15px] text-xs leading-5.5 min-[1670px]:py-[20px]">
-            ScotiTech operates with strategic leadership from Glasgow, UK and a
-            remote-first engineering network spanning multiple regions. This
-            hybrid model allows us to blend British innovation, global
-            collaboration, and technical agility — delivering exceptional
-            products and enterprise solutions worldwide.
+          <p className="text-slate-300 font-lora text-base md:text-lg leading-8 max-w-3xl mx-auto">
+            Strategic leadership is based in Glasgow, with a distributed
+            engineering and product team spanning key regions. The result is a
+            practical delivery model that balances governance, speed, and
+            product quality.
           </p>
 
-          {/* CTA Button */}
           <button
-            onClick={() => setShowModal(true)} // ✅ Opens global Request Quote modal
-            className="cursor-pointer relative w-[250px] mx-auto mt-5 border border-white/20 shadow-xl rounded-4xl overflow-hidden group"
+            onClick={() => setShowModal(true)}
+            className="mt-8 inline-flex cursor-pointer items-center justify-center rounded-full border border-white/20 bg-white px-7 py-3 font-karla font-semibold text-[#0F172A] hover:bg-slate-100 transition-colors"
           >
-            <img
-              src="/images/aboutus/globalbutton.png"
-              alt="Talk to Us Button Background"
-              className="w-full h-full object-cover"
-            />
-            <p className="absolute inset-0 flex items-center justify-center text-black font-semibold text-[18px] lg:text-[20px] min-[1670px]:text-[25px] group-hover:text-[#5E0B7B] transition">
-              Talk to Us!
-            </p>
+            Talk to Our Team
           </button>
         </div>
       </div>

@@ -10,7 +10,7 @@ export default function FaqSection() {
     {
       question: "How do I know whether AppDeploy or AXOS is the better fit?",
       answer:
-        "Choose AppDeploy if your priority is private app distribution and release control. Choose AXOS if your priority is secure daily operations with mail, storage, coordination tools, and AI inside one controlled environment.",
+        "Use AppDeploy when internal app distribution and release control are the immediate priority. Use AXOS when your priority is private daily operations across mail, storage, coordination, and AI.",
     },
     {
       question: "Is AppDeploy intended to replace a full mobility platform?",
@@ -20,7 +20,7 @@ export default function FaqSection() {
     {
       question: "Can AXOS support organisations that want more control over hosting?",
       answer:
-        "Yes. AXOS supports hosted, private cloud, and self-hosted models for teams that want more control over data boundaries, AI execution, and operational ownership.",
+        "Yes. AXOS supports hosted, private cloud, and self-hosted models so organisations can choose the right level of infrastructure and data control.",
     },
     {
       question: "Where does ClarityPath fit in the portfolio?",
@@ -40,8 +40,7 @@ export default function FaqSection() {
             Questions about our solutions
           </h3>
           <p className="mt-5 text-lg leading-8 text-slate-700 font-lora">
-            A quick overview of the main questions buyers may ask when
-            reviewing the current portfolio.
+            Short answers to the most common product-fit and rollout questions.
           </p>
         </div>
 

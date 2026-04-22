@@ -3,9 +3,9 @@
 import Link from "next/link";
 
 const proofItems = [
-  "Internal app distribution with clearer rollout control",
-  "Private workspaces with AI built directly into daily tools",
-  "Deployment options shaped around real operational needs",
+  "Internal app distribution built for controlled rollout",
+  "Private workspaces with AI inside everyday team tools",
+  "Deployment options that fit real operational environments",
 ];
 
 const surfaceCards = [
@@ -46,10 +46,9 @@ export default function HeroSection() {
             </h1>
 
             <p className="mt-6 text-slate-300 font-lora text-lg md:text-xl leading-8 max-w-2xl">
-              From internal app distribution to private workspaces with AI
-              built directly into the tools teams use every day, we create
-              systems that give organisations more control, stronger data
-              boundaries, and simpler operations.
+              We build software for internal app distribution and private daily
+              operations, with stronger control over rollout, deployment, and
+              data boundaries.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">

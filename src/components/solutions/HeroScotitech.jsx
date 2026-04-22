@@ -5,9 +5,9 @@ import { ShieldCheck, Boxes, Sparkles } from "lucide-react";
 import { useModal } from "@/components/ModalContext";
 
 const highlights = [
-  "Product-led software with clearer commercial positioning.",
-  "Structured onboarding and rollout paths for serious buyers.",
-  "Calmer interfaces designed to support trust and clarity.",
+  "AppDeploy for controlled internal app distribution.",
+  "AXOS for private daily operations in one workspace.",
+  "A clearer path from evaluation to rollout.",
 ];
 
 const HeroScotitech = () => {
@@ -25,14 +25,13 @@ const HeroScotitech = () => {
               Solutions
             </p>
             <h1 className="text-[#0F172A] text-4xl min-[1150px]:text-6xl font-karla font-semibold leading-[1.05]">
-              Software solutions with a more practical operating model
+              Software solutions built for operational clarity
             </h1>
 
             <p className="mt-6 text-slate-700 font-lora text-lg md:text-xl leading-8 max-w-3xl">
-              ScotiTech builds focused product platforms for internal app
-              distribution, private operational tooling, accessibility support,
-              and guided digital workflows. The direction is deliberate:
-              clearer products, calmer interfaces, and less operational noise.
+              ScotiTech focuses on two core directions: internal app
+              distribution and private operational tooling. The goal is simple:
+              practical products, clearer buyer fit, and smoother rollout.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-4">
@@ -97,8 +96,8 @@ const HeroScotitech = () => {
                   </div>
                 </div>
                 <p className="text-white/72 font-lora leading-7 text-[15px]">
-                  Internal app distribution on one side and private operational
-                  tooling on the other.
+                  AppDeploy handles internal distribution while AXOS supports
+                  private day-to-day operations.
                 </p>
               </div>
 
@@ -117,8 +116,8 @@ const HeroScotitech = () => {
                   </div>
                 </div>
                 <p className="text-white/72 font-lora leading-7 text-[15px]">
-                  Built to support product evaluation, rollout conversations,
-                  and a more serious buyer experience.
+                  Designed for real buyer conversations, onboarding checks, and
+                  production rollout planning.
                 </p>
               </div>
 
@@ -150,7 +149,8 @@ const HeroScotitech = () => {
                       Portfolio Role
                     </p>
                     <p className="text-white/80 font-lora leading-6 text-sm">
-                      A more focused product set with clearer positioning.
+                      Supporting products are positioned around specific
+                      secondary use cases.
                     </p>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-black/15 px-4 py-4">
@@ -158,7 +158,7 @@ const HeroScotitech = () => {
                       Outcome
                     </p>
                     <p className="text-white/80 font-lora leading-6 text-sm">
-                      A tighter portfolio with clearer product roles.
+                      A tighter portfolio with clearer product boundaries.
                     </p>
                   </div>
                 </div>
