@@ -3,7 +3,6 @@ import Link from "next/link";
 const featuredProducts = [
   {
     name: "AppDeploy",
-    category: "Featured Product",
     tagline: "Controlled internal iOS app distribution for teams that need speed without losing oversight.",
     description:
       "AppDeploy gives organisations a cleaner path to internal distribution, tester access, release control, and enterprise rollout management.",
@@ -13,7 +12,6 @@ const featuredProducts = [
   },
   {
     name: "AXOS",
-    category: "Featured Product",
     tagline: "A private, self-hosted workspace that brings communication, files, tasks, and AI into one controlled environment.",
     description:
       "AXOS is designed for organisations that want modern digital operations without giving up sovereignty, deployment control, or workflow clarity.",
@@ -30,25 +28,18 @@ const additionalProducts = [
       "Private decision-support tools designed for structured, sensitive user journeys.",
     href: "/products/claritypath",
   },
-  {
-    name: "AI Caption Studio",
-    description:
-      "AI-assisted captioning and content support for faster publishing workflows.",
-    href: "/products/aicaptionstudio",
-  },
 ];
 
 export const metadata = {
   title: "Products | ScotiTech Solutions",
   description:
-    "Explore ScotiTech products including AppDeploy, AXOS, ClarityPath, and AI Caption Studio.",
+    "Explore ScotiTech products including AppDeploy, AXOS, and ClarityPath.",
 };
 
 export default function ProductsPage() {
   return (
-    <section className="relative overflow-hidden bg-white text-[#0F172A] py-14 sm:py-20">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_52%,#E0F2FE_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(91,79,207,0.10),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(52,211,255,0.08),transparent_22%)]" />
+    <section className="relative overflow-hidden bg-[#f7f7f5] text-[#0F172A] py-14 sm:py-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(91,79,207,0.06),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(52,211,255,0.05),transparent_24%)]" />
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="grid grid-cols-1 xl:grid-cols-[58%_42%] gap-10 items-end mb-14">
@@ -60,27 +51,28 @@ export default function ProductsPage() {
               ScotiTech products built for control, rollout, and operational clarity
             </h1>
             <p className="text-lg text-slate-700 font-lora leading-8 max-w-3xl">
-              Our portfolio is organised around practical software with a clear
-              operating model: modern product experiences, stronger privacy, and
-              deployment approaches that fit real organisations.
+              The portfolio is centred on two flagship products with distinct
+              operating roles: AppDeploy for controlled internal distribution,
+              and AXOS for private day-to-day work across communication, files,
+              planning, and AI-assisted execution.
             </p>
           </div>
 
           <div className="rounded-[2rem] border border-white/80 bg-white/80 backdrop-blur-md px-6 py-7 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-            <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-5">
-              Portfolio Focus
-            </p>
+              <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-5">
+                Portfolio Focus
+              </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-1 gap-4">
               <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4">
                 <p className="text-2xl font-karla font-semibold text-slate-900">2</p>
                 <p className="text-sm text-slate-600 font-lora mt-1">
-                  core products featured across the site
+                  flagship products lead the portfolio
                 </p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4">
                 <p className="text-2xl font-karla font-semibold text-slate-900">Private</p>
                 <p className="text-sm text-slate-600 font-lora mt-1">
-                  deployment and operational control as a recurring theme
+                  controlled deployment and data ownership remain a recurring theme
                 </p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white px-4 py-4">
@@ -114,10 +106,6 @@ export default function ProductsPage() {
                 <div className={`h-1.5 w-full bg-gradient-to-r ${product.accent}`} />
 
                 <div className="p-7 sm:p-9">
-                  <p className="inline-flex rounded-full border border-white/10 bg-white/8 text-slate-200 px-3 py-1 text-xs font-karla font-semibold uppercase tracking-[0.14em] mb-5">
-                    {product.category}
-                  </p>
-
                   <h3 className="text-3xl sm:text-4xl font-karla font-semibold text-white mb-4">
                     {product.name}
                   </h3>
@@ -153,15 +141,74 @@ export default function ProductsPage() {
           </div>
         </div>
 
+        <div className="mb-16 rounded-[2rem] border border-slate-200 bg-white/90 p-6 sm:p-8 lg:p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+          <div className="max-w-4xl mb-8">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-2">
+              Product Fit
+            </p>
+            <h2 className="text-3xl font-karla font-semibold text-[#0F172A] mb-4">
+              Choose the product that matches the operating problem
+            </h2>
+            <p className="text-slate-700 font-lora leading-8">
+              AppDeploy and AXOS solve different jobs. AppDeploy is for
+              controlled internal app delivery. AXOS is for teams that want one
+              private environment for mail, files, cloud storage, calendar,
+              chat, tasks, notes, and AI built directly into daily work.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+            <div className="rounded-[1.6rem] border border-indigo-200 bg-indigo-50/60 p-6">
+              <p className="text-xs font-karla font-semibold uppercase tracking-[0.16em] text-[#4F46E5] mb-3">
+                AppDeploy
+              </p>
+              <h3 className="text-2xl font-karla font-semibold text-slate-900 mb-4">
+                Best when internal app distribution is the priority
+              </h3>
+              <div className="space-y-3 text-slate-700 font-lora leading-7">
+                <p>Built around Apple Business based internal distribution workflows.</p>
+                <p>Helps teams control releases, access, branded distribution pages, and rollout visibility.</p>
+                <p>Best fit for IT and admin teams managing private iOS app delivery.</p>
+              </div>
+              <Link
+                href="/products/appdeploy"
+                className="mt-6 inline-flex items-center rounded-full bg-[#0F172A] px-5 py-3 text-sm font-semibold font-karla text-white hover:bg-slate-900 transition-colors"
+              >
+                Explore AppDeploy
+              </Link>
+            </div>
+
+            <div className="rounded-[1.6rem] border border-cyan-200 bg-cyan-50/60 p-6">
+              <p className="text-xs font-karla font-semibold uppercase tracking-[0.16em] text-cyan-800 mb-3">
+                AXOS
+              </p>
+              <h3 className="text-2xl font-karla font-semibold text-slate-900 mb-4">
+                Best when the goal is a private AI-assisted workspace
+              </h3>
+              <div className="space-y-3 text-slate-700 font-lora leading-7">
+                <p>Brings core daily tools into one controlled environment for startups and enterprise teams.</p>
+                <p>Supports private deployment, stronger data control, and AI built directly into everyday workflows.</p>
+                <p>Best fit for organisations that want secure operations without relying on disconnected tools.</p>
+              </div>
+              <Link
+                href="/products/axos"
+                className="mt-6 inline-flex items-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold font-karla text-slate-900 hover:border-slate-400 transition-colors"
+              >
+                Explore AXOS
+              </Link>
+            </div>
+          </div>
+        </div>
+
         <div className="rounded-[2rem] border border-white/80 bg-white/85 backdrop-blur-md p-6 sm:p-8 lg:p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
           <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-2">
-            Additional Products
+            Supporting Product
           </p>
           <h2 className="text-3xl font-karla font-semibold text-[#0F172A] mb-8">
-            Supporting solutions
+            ClarityPath
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl">
+          <div className="grid grid-cols-1 gap-5 max-w-3xl">
             {additionalProducts.map((product) => (
               <Link
                 key={product.name}

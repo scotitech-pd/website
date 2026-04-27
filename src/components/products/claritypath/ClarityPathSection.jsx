@@ -45,7 +45,7 @@ export default function ClarityPathSection() {
           </p>
 
           <div className="flex flex-wrap gap-6 pt-2">
-            <a href="https://appdeploy.scotitech.com/w/appdeploy-platform" target="_blank" rel="noopener noreferrer">
+            <a href="http://appdeploy.scotitech.com/w/scotitech" target="_blank" rel="noopener noreferrer">
               <button className="bg-white cursor-pointer text-gray-900 px-6 py-2.5 rounded-lg font-medium hover:bg-[#C140D5] hover:text-white hover:shadow-[0_0_10px_rgba(140,82,255,0.9)] duration-300 transition-all font-lora flex items-center gap-2">
                 <DownloadCloudIcon className="h-5 w-5" />
                 Access ClarityPath

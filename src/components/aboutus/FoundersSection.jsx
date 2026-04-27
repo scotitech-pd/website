@@ -10,9 +10,9 @@ const founders = [
     color: "from-[#6D28D9] to-[#14B8A6]",
     linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
     desc: [
-      "Pradeep Dahiya leads ScotiTech as CEO and Lead Developer, with hands-on experience across app development, AI integration, and digital systems.",
-      "He founded ScotiTech to build practical software for real operational use, and now leads delivery across AppDeploy, AXOS, and supporting portfolio products.",
-      "Pradeep holds an MSc from the University of Strathclyde and serves as a Digital Trustee with Third Sector Lab in Scotland.",
+      "Pradeep Dahiya leads ScotiTech as CEO and product builder, with hands-on delivery experience across mobile systems, internal platforms, and AI-assisted software.",
+      "He drives product direction across AppDeploy and AXOS, with a focus on practical deployment models, privacy-conscious design, and commercially usable software.",
+      "He holds an MSc from the University of Strathclyde and has received recognition including the Forttuna Global Excellence Awards and the Indian Tech Society.",
     ],
   },
   {
@@ -22,9 +22,9 @@ const founders = [
     color: "from-[#0EA5E9] to-[#6366F1]",
     linkedin: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     desc: [
-      "Daniel Chapman is Co-Founder and Chief Strategy Officer, leading strategy, product positioning, and long-term growth direction.",
-      "With a background in Computing and IT, he helps keep ScotiTech aligned around practical, commercially clear digital products.",
-      "His experience across networking, Linux, and digital workflow systems strengthens the company’s strategic and operational decision-making.",
+      "Daniel Chapman is Co-Founder and Chief Strategy Officer, shaping company positioning, long-term direction, and product-market clarity.",
+      "With a background in Computing and IT, he supports ScotiTech’s operating discipline across strategy, infrastructure thinking, and commercial focus.",
+      "His experience across networking, Linux, and digital systems strengthens the company’s practical approach to platform design and execution.",
     ],
   },
 ];
@@ -40,8 +40,8 @@ const FoundersSpotlight = () => {
             Meet Our Founders
           </h2>
           <p className="text-gray-600 text-lg md:text-xl font-lora mt-3 max-w-2xl mx-auto">
-            The people shaping ScotiTech’s product direction, company strategy,
-            and long-term operating principles.
+            The founders shaping ScotiTech’s product direction, delivery model,
+            and long-term company focus.
           </p>
         </div>
 

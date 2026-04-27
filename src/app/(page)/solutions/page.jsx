@@ -1,24 +1,7 @@
-export const metadata = {
-  title: "Solutions | ScotiTech Solutions Limited",
-};
-import ComparisonSection from "@/components/solutions/ComparisonSection";
-import CtaSection from "@/components/solutions/CtaSection";
-import FaqSection from "@/components/solutions/FaqSection";
-import HeroScotitech from "@/components/solutions/HeroScotitech";
-import TechnologySection from "@/components/solutions/TechnologySection";
-import Testimonials from "@/components/solutions/Testimonials";
+import { redirect } from "next/navigation";
 
 const page = () => {
-  return (
-    <>
-      <HeroScotitech />
-      <TechnologySection />
-      <ComparisonSection />
-      <Testimonials />
-      <FaqSection />
-      <CtaSection />
-    </>
-  );
+  redirect("/products");
 };
 
 export default page;

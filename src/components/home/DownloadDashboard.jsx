@@ -16,7 +16,7 @@ export default function DownloadDashboard() {
           name: "Access Portal",
           details: "Cloud workspace and branded distribution access",
           bg: "bg-blue-100",
-          link: "https://appdeploy.scotitech.com/w/appdeploy-platform",
+          link: "http://appdeploy.scotitech.com/w/scotitech",
           live: true,
         },
         {
@@ -67,7 +67,7 @@ export default function DownloadDashboard() {
           name: "Access from AppDeploy",
           details: "Available for Everyone via AppDeploy",
           bg: "bg-slate-100",
-          link: "https://appdeploy.scotitech.com/w/appdeploy-platform",
+          link: "http://appdeploy.scotitech.com/w/scotitech",
           live: true,
         },
       ],

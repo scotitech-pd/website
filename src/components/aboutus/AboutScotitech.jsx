@@ -10,20 +10,20 @@ const AboutScotiTech = () => {
     {
       img1: "/images/aboutus/team-icon-white.png",
       img2: "/images/aboutus/team-icon.png",
-      title: "Focused Team",
-      subtitle: "A product-led team working across the UK and India.",
+      title: "UK-Registered Company",
+      subtitle: "ScotiTech operates from Scotland with product, engineering, and delivery coordination across the UK and India.",
     },
     {
       img1: "/images/aboutus/globe-icon-white.png",
       img2: "/images/aboutus/globe-icon.png",
       title: "Cross-Region Delivery",
-      subtitle: "Products shaped for teams, markets, and deployment models beyond one location.",
+      subtitle: "The delivery model combines UK-led direction with distributed execution across product, engineering, and infrastructure.",
     },
     {
       img1: "/images/aboutus/users-icon-white.png",
       img2: "/images/aboutus/users-icon.png",
-      title: "Real Product Direction",
-      subtitle: "The company is being built around defined products, real rollout paths, and clearer commercial focus.",
+      title: "Defined Product Portfolio",
+      subtitle: "The company is organised around AppDeploy, AXOS, and ClarityPath, with clearer commercial roles for each product.",
     },
   ];
 
@@ -59,14 +59,15 @@ const AboutScotiTech = () => {
                     <h2 className="relative z-10 font-bold text-4xl">About ScotiTech</h2>
                   </div>
                   <h2 className="text-xl lg:text-[18px] pr-9 font-karla 2xl:text-[25px] font-bold text-black mb-4 lg:mb-6">
-                    ScotiTech Solutions Limited is a UK-based software company building practical, privacy-conscious digital products.
+                    ScotiTech Solutions Limited is a UK software company building practical digital products with clearer deployment, rollout, and operational control.
                   </h2>
                   <p className="text-base lg:text-[15px] font-lora text-black leading-relaxed">
-                    Founded in Scotland, we build software that helps
-                    organisations improve internal app rollout, run core daily
-                    workflows in controlled environments, and strengthen digital
-                    infrastructure through products like AppDeploy, AXOS, and
-                    ClarityPath.
+                    Founded in Scotland, ScotiTech focuses on product-led
+                    software rather than general services. The current company
+                    portfolio centres on AppDeploy for controlled internal app
+                    distribution, AXOS for private AI-assisted team workflows,
+                    and ClarityPath as a focused supporting product shaped by
+                    real distribution and usability constraints.
                   </p>
                 </div>
 
@@ -171,7 +172,7 @@ const AboutScotiTech = () => {
                     ScotiTech
                   </h2>
                   <p className="text-[#15676E] font-karla text-center font-semibold px-5 lg:text-[13px]">
-                    Practical software with clearer product focus
+                    Product-led software with clearer operating focus
                   </p>
                 </div>
               </div>
@@ -187,13 +188,12 @@ const AboutScotiTech = () => {
             About ScotiTech
           </h2>
           <h3 className="text-lg font-karla font-semibold text-black mb-2">
-            Practical software products with clear product boundaries
+            A UK software company with a focused product portfolio
           </h3>
           <p className="text-[15px] text-gray-800 font-lora leading-relaxed mb-8">
-            We are a UK-based software company building focused products for
-            modern teams, with a clear product story around internal
-            distribution, private workspace tooling, and supporting workflow
-            products.
+            ScotiTech builds practical digital products with clearer
+            deployment, rollout, and operational control, led from Scotland
+            and delivered across a cross-region team structure.
           </p>
         </div>
 

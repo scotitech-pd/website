@@ -16,7 +16,7 @@ const coreProducts = [
     accent: "from-indigo-500/15 to-cyan-500/10",
     logo: "/images/brand/appdeploy-logo-black.png",
     secondaryCta: "Open Platform",
-    secondaryLink: "https://appdeploy.scotitech.com/w/appdeploy-platform",
+    secondaryLink: "http://appdeploy.scotitech.com/w/scotitech",
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ const supportingProduct = {
   description:
     "A guided digital tool for planning, reflection, and more structured personal decision support.",
   buttonText: "Access",
-  link: "https://appdeploy.scotitech.com/w/appdeploy-platform",
+  link: "http://appdeploy.scotitech.com/w/scotitech",
   details: "/products/claritypath",
   accent: "from-violet-500/15 to-indigo-500/10",
   logo: "/images/brand/claritypath-logo.png",

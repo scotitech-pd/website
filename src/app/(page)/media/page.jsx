@@ -6,7 +6,6 @@ import { useModal } from "@/components/ModalContext";
 import { 
   Calendar, 
   MapPin, 
-  Share2, 
   ChevronLeft, 
   ChevronRight, 
   X,
@@ -27,6 +26,36 @@ const IMAGES = [
 ];
 
 const VIDEO_SRC = "/images/home/pv1.mp4";
+
+const recognitionStories = [
+  {
+    label: "Recognition",
+    title: "Indian Tech Society 2024",
+    summary:
+      "Recognised in London by the Indian Tech Society as a leading Indian talent in the UK digital technology sector.",
+    date: "July 2024",
+    location: "London, UK",
+    tone: "amber",
+  },
+  {
+    label: "Award",
+    title: "NextGen Innovator of the Year",
+    summary:
+      "Pradeep Dahiya was recognised at the Forttuna Global Excellence Awards 2025 in Dubai.",
+    date: "December 2025",
+    location: "Dubai, UAE",
+    tone: "purple",
+  },
+  {
+    label: "Shortlist",
+    title: "Scotland StartUp Awards 2026",
+    summary:
+      "ScotiTech was shortlisted in the Digital StartUp of the Year category at the Scotland regional final.",
+    date: "June 2026",
+    location: "Scotland, UK",
+    tone: "teal",
+  },
+];
 
 const PressRelease = () => {
   const { setShowModal } = useModal();
@@ -74,7 +103,7 @@ const PressRelease = () => {
   return (
     <main className="min-h-screen font-karla relative isolate">
       {/* BASE BACKGROUND */}
-      <div className="fixed inset-0 bg-white -z-20" />
+      <div className="fixed inset-0 bg-[#f7f7f5] -z-20" />
 
       {/* DYNAMIC BACKGROUND DECOR - HERO ONLY */}
       <div className="absolute top-0 left-0 w-full h-[650px] -z-10 pointer-events-none overflow-hidden select-none">
@@ -107,27 +136,66 @@ const PressRelease = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="inline-flex items-center gap-2 bg-purple-100 text-[#641171] px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase mb-6">
-              Press Release
+              Media and Recognition
             </div>
             <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
-              ScotiTech Founder Wins <span className="text-[#641171]">“NextGen Innovator of the Year”</span> at the Global Excellence Awards
+              Company milestones, awards, and public recognition from the ScotiTech journey
             </h1>
+            <p className="max-w-3xl mx-auto text-base md:text-xl text-gray-600 font-lora leading-8 mb-8">
+              A focused view of the recognitions and public milestones that have
+              marked ScotiTech’s early product journey.
+            </p>
             
             <div className="flex flex-wrap items-center justify-center gap-6 text-gray-500 font-lora text-sm">
               <div className="flex items-center gap-2">
                 <Calendar className="size-4 text-[#641171]" />
-                <span>December 2025</span>
+                <span>2025 - 2026</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="size-4 text-[#641171]" />
-                <span>Dubai, UAE</span>
-              </div>
-              <div className="flex items-center gap-2 cursor-pointer hover:text-[#641171] transition-colors">
-                <Share2 className="size-4" />
-                <span>Share Story</span>
+                <span>UK and international milestones</span>
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-5 md:px-10 pb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {recognitionStories.map((story) => (
+            <div
+              key={story.title}
+              className="rounded-[1.8rem] border border-slate-200 bg-white p-6 sm:p-7 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+            >
+              <span
+                className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${
+                  story.tone === "purple"
+                    ? "bg-purple-100 text-[#641171]"
+                    : story.tone === "teal"
+                    ? "bg-cyan-100 text-[#0F766E]"
+                    : "bg-amber-100 text-amber-800"
+                }`}
+              >
+                {story.label}
+              </span>
+              <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-slate-900">
+                {story.title}
+              </h2>
+              <p className="mt-3 text-slate-600 font-lora leading-8">
+                {story.summary}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-5 text-sm text-slate-500 font-lora">
+                <div className="flex items-center gap-2">
+                  <Calendar className="size-4" />
+                  <span>{story.date}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="size-4" />
+                  <span>{story.location}</span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -167,11 +235,9 @@ const PressRelease = () => {
               </motion.div>
 
               <div className="space-y-6 text-base md:text-lg">
-                <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">A Commitment to Innovation with Purpose</h3>
+                <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">Recognition for practical execution</h3>
                 <p>
-                  ScotiTech, headquartered in Scotland, focuses on developing technologies that solve real-world challenges
-                  around digital trust, privacy, simplicity, and accessibility. AppDeploy supports secure internal distribution,
-                  while AXOS provides a private workspace with AI integrated into everyday team tools.
+                  The award recognised practical product-building, disciplined execution, and founder-led progress from a young UK software company operating out of Scotland.
                 </p>
 
                 <blockquote className="relative p-8 bg-purple-50 rounded-2xl border-none my-10">
@@ -184,19 +250,16 @@ const PressRelease = () => {
                   <footer className="mt-4 font-karla font-bold text-[#641171]">— Pradeep Dahiya</footer>
                 </blockquote>
 
-                <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">Global Recognition for a UK-Based Vision</h3>
+                <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">Global Recognition for a UK-Based Company</h3>
                 <p>
                   The ceremony brought together founders, operators, and technology teams from different markets.
                   The "NextGen Innovator" category recognises product builders showing practical execution,
                   leadership, and consistent delivery.
                 </p>
 
-                <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">Looking Ahead</h3>
+                <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">Why it matters</h3>
                 <p>
-                  With multiple products in active development and an ever-expanding global partner network, ScotiTech is 
-                  preparing for an important next stage of growth. The company
-                  remains focused on practical digital products with emphasis on
-                  trust, clarity, and disciplined product execution.
+                  For ScotiTech, the recognition marks an early milestone rather than a change in direction. The company remains focused on steady product execution, disciplined delivery, and building from Scotland with an international outlook.
                 </p>
               </div>
             </div>
@@ -213,6 +276,71 @@ const PressRelease = () => {
 
           {/* SIDEBAR: GALLERY & INFO */}
           <aside className="lg:col-span-4 space-y-10">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-3xl border border-slate-200 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+            >
+              <span className="inline-flex rounded-full bg-amber-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-amber-800">
+                Recognition
+              </span>
+              <h4 className="mt-4 font-karla font-bold text-2xl text-gray-900 leading-tight">
+                Indian Tech Society 2024
+              </h4>
+              <p className="mt-3 text-slate-600 font-lora leading-8">
+                Public recognition in London from the Indian Tech Society,
+                highlighting Pradeep Dahiya as a leading Indian talent in the
+                UK digital technology sector.
+              </p>
+              <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4">
+                <div className="flex items-center gap-2 text-sm text-slate-600 font-lora">
+                  <Calendar className="size-4 text-amber-700" />
+                  <span>July 2024</span>
+                </div>
+                <div className="mt-2 flex items-center gap-2 text-sm text-slate-600 font-lora">
+                  <MapPin className="size-4 text-amber-700" />
+                  <span>London, UK</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-3xl border border-slate-200 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+            >
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 mb-5">
+                <img
+                  src="/images/home/startup-awards-2026-shortlist.jpg"
+                  alt="ScotiTech shortlisted for the Scotland StartUp Awards 2026"
+                  className="w-full h-[240px] object-contain p-3"
+                />
+              </div>
+              <span className="inline-flex rounded-full bg-cyan-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#0F766E]">
+                Shortlist
+              </span>
+              <h4 className="mt-4 font-karla font-bold text-2xl text-gray-900 leading-tight">
+                Scotland StartUp Awards 2026
+              </h4>
+              <p className="mt-3 text-slate-600 font-lora leading-8">
+                ScotiTech was shortlisted in the Digital StartUp of the Year
+                category, reflecting the company’s early product traction and
+                recognition within Scotland’s startup ecosystem.
+              </p>
+              <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4">
+                <div className="flex items-center gap-2 text-sm text-slate-600 font-lora">
+                  <Calendar className="size-4 text-[#0F766E]" />
+                  <span>Tue 23 Jun 2026</span>
+                </div>
+                <div className="mt-2 flex items-center gap-2 text-sm text-slate-600 font-lora">
+                  <MapPin className="size-4 text-[#0F766E]" />
+                  <span>Scotland regional final</span>
+                </div>
+              </div>
+            </motion.div>
+
             {/* GALLERY CARD */}
             <motion.div 
               initial={{ opacity: 0, x: 20 }}
@@ -269,10 +397,10 @@ const PressRelease = () => {
                 </div>
                 <button 
                   onClick={() => setShowModal(true)}
-                  className="w-full mt-4 bg-[#641171] text-white font-bold py-3 rounded-xl hover:bg-[#4d0d57] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full mt-4 bg-[#0F172A] text-white font-bold py-3 rounded-xl hover:bg-slate-900 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Phone className="size-4" />
-                  Contact Sales
+                  Contact Our Team
                 </button>
               </div>
             </motion.div>

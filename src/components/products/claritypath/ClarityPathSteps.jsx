@@ -98,7 +98,7 @@ export default function ClarityPathSteps() {
             />
           </div>
 
-          <a href="https://appdeploy.scotitech.com/w/appdeploy-platform" target="_blank" rel="noopener noreferrer">
+          <a href="http://appdeploy.scotitech.com/w/scotitech" target="_blank" rel="noopener noreferrer">
             <button className="bg-white text-black font-karla  rounded-xl  text-[15px] px-3 lg:px-6 pt-3 lg:pb-3 pb-3 transition cursor-pointer">
               Download now From
               <span className="text-main-dark font-bold"> AppDeploy</span>{" "}

@@ -38,16 +38,16 @@ export default function ProductPlatformStory() {
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80">
-            Product Story
+            Product Portfolio
           </p>
           <h2 className="mb-4 font-karla text-3xl font-semibold text-[#0F172A] md:text-5xl">
-            ScotiTech is being shaped by two main platform directions
+            The company is organised around two flagship products
           </h2>
           <p className="font-lora text-lg leading-8 text-slate-700">
-            AppDeploy and AXOS represent the clearest commercial paths in the
-            portfolio. Around them, products like ClarityPath help explain why
-            the company is taking a more practical, controlled approach to
-            product design and distribution.
+            AppDeploy and AXOS carry the clearest commercial focus in the
+            portfolio. ClarityPath remains visible as a supporting product and
+            as a case study in why controlled distribution and product fit
+            matter.
           </p>
         </div>
 

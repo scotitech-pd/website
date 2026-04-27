@@ -18,7 +18,7 @@ const cards = [
     img: "/images/brand/appdeploy-logo-black.png",
     title: "App Deploy",
     desc: "Explore the internal distribution workspace",
-    link: "https://appdeploy.scotitech.com/w/appdeploy-platform", // Access Now
+    link: "http://appdeploy.scotitech.com/w/scotitech", // Access Now
   },
 ];
 

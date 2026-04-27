@@ -6,6 +6,16 @@ const logos = [
     image: "/images/home/aviskaar-logo.jpg",
     href: "https://aviskaar.co.uk",
   },
+  {
+    name: "Growthcart",
+    image: "/images/aboutus/growthcart-logo.png",
+    href: null,
+  },
+  {
+    name: "No94oo",
+    image: "/images/aboutus/no94oo-logo.png",
+    href: null,
+  },
   { name: "Northfield Group", image: null, href: null },
   { name: "Harbour Works", image: null, href: null },
   { name: "Crestline Health", image: null, href: null },

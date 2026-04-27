@@ -16,7 +16,7 @@ export default function CtaSection() {
     },
     {
       title: "Open ClarityPath",
-      link: "https://appdeploy.scotitech.com/w/appdeploy-platform",
+      link: "http://appdeploy.scotitech.com/w/scotitech",
       note: "Direct access through AppDeploy",
     },
   ];
