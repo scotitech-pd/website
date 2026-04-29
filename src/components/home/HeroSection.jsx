@@ -56,7 +56,7 @@ export default function HeroSection() {
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-7 py-3 text-sm font-semibold font-karla text-white hover:bg-slate-900 transition-colors"
               >
-                Get Started
+                Speak with Our Team
               </Link>
               <Link
                 href="/products"

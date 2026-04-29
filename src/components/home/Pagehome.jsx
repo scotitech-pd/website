@@ -1,5 +1,6 @@
 
 import SubscribeSection from "./SubscribeSection";
+import InsightsSection from "./InsightsSection";
 import ScotiTechPulse from "./ScotiTechPulse";
 import FaqSection from "./FaqSection";
 import WhyChooseScotiTech from "./WhyChooseScotiTech";
@@ -15,6 +16,7 @@ const Pagehome = () => {
         <WhyChooseScotiTech/>
         <FaqSection />
         <ScotiTechPulse />   
+        <InsightsSection />
         <SubscribeSection />
       </div>
     </>

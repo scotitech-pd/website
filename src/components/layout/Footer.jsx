@@ -9,9 +9,10 @@ const Footer = () => {
   const footer_links = [
     { id: 1, title: "Home", link: "/" },
     { id: 2, title: "Products", link: "/products" },
-    { id: 3, title: "About Us", link: "/aboutus" },
-    { id: 4, title: "ScotiTech Media", link: "/media" },
-    { id: 5, title: "Contact", link: "/contact" },
+    { id: 3, title: "Insights", link: "/insights" },
+    { id: 4, title: "About Us", link: "/aboutus" },
+    { id: 5, title: "ScotiTech Media", link: "/media" },
+    { id: 6, title: "Contact", link: "/contact" },
   ];
 
 

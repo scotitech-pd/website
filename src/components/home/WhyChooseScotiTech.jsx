@@ -34,7 +34,7 @@ export default function WhyChooseScotiTech() {
           href="/contact"
           className="bg-white font-karla  font-semibold text-main-dark px-8 py-2 rounded-lg text-sm hover:text-white hover:bg-main/90 absolute top-0 transform -translate-y-1/2 left-1/2 -translate-x-1/2"
         >
-          Get in touch
+          Speak with Our Team
         </Link>
       </div>
       <div className="relative grid gap-16 items-center max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">

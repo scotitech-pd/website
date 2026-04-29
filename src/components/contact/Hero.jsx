@@ -37,7 +37,7 @@ function Hero() {
             rel="noopener noreferrer"
             className="group inline-flex items-center justify-center lg:gap-2 gap-1 bg-white text-black lg:px-5 px-3 py-2.5 rounded-lg font-karla lg:text-[16px] font-semibold hover:bg-main-dark hover:text-white transition-all shadow-lg mt-6 sm:mt-8 w-fit text-[12px]"
           >
-            Schedule a Call
+            Speak with Our Team
             <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </div>

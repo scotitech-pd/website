@@ -23,12 +23,12 @@ const coreProducts = [
     name: "AXOS",
     description:
       "A private workspace for organisations that want stronger control, less SaaS sprawl, and better day-to-day tooling.",
-    buttonText: "View AXOS",
+    buttonText: "Explore AXOS",
     link: "/products/axos",
     details: "/products/axos",
     accent: "from-emerald-500/15 to-cyan-500/10",
     logo: "/images/brand/axos-icon.png",
-    secondaryCta: "Contact Team",
+    secondaryCta: "Speak with Our Team",
     secondaryLink: "/contact",
   },
 ];

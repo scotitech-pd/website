@@ -23,7 +23,7 @@ const featuredProducts = [
     logo: "/images/brand/axos-icon.png",
     link: "/products/axos",
     cta: "Explore AXOS",
-    status: "Coming Soon",
+    status: "Early Access",
   },
 ];
 
@@ -70,7 +70,8 @@ export default function OurProducts() {
           viewport={{ once: true }}
         >
           AppDeploy handles internal app distribution. AXOS handles private
-          team workspace and daily tooling. Both are ready for real rollout.
+          team workspace and daily tooling. AppDeploy is live for rollout, and
+          AXOS is available through staged access.
         </motion.p>
 
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-stretch">

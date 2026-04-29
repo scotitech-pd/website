@@ -10,9 +10,10 @@ import { useModal } from "@/components/ModalContext";
 const navLinks = [
   { id: 1, title: "Home", link: "/" },
   { id: 2, title: "Products", link: "/products" },
-  { id: 3, title: "About Us", link: "/aboutus" },
-  { id: 4, title: "Media", link: "/media" },
-  { id: 5, title: "Contact", link: "/contact" },
+  { id: 3, title: "Insights", link: "/insights" },
+  { id: 4, title: "About Us", link: "/aboutus" },
+  { id: 5, title: "Media", link: "/media" },
+  { id: 6, title: "Contact", link: "/contact" },
 ];
 
 const Navbar = () => {
@@ -37,8 +38,12 @@ const Navbar = () => {
     setMenuOpen(false);
   }, [pathname]);
 
-  const isActiveLink = (link) =>
-    link === "/products" ? pathname.startsWith("/products") : pathname === link;
+  const isActiveLink = (link) => {
+    if (link === "/products" || link === "/insights") {
+      return pathname.startsWith(link);
+    }
+    return pathname === link;
+  };
 
   return (
     <div className={isAtTop ? "pb-[80px] bg-main-dark" : "pb-[70px] bg-main-dark"}>
@@ -89,7 +94,7 @@ const Navbar = () => {
 
       <nav
         className={(isAtTop ? "h-[80px]" : "h-[70px]") +
-          " w-full fixed bg-main-dark transition-all duration-300 z-50 shadow-xl"}
+          " w-full fixed bg-main-dark transition-all duration-300 z-50 shadow-[0_8px_20px_rgba(15,23,42,0.18)]"}
       >
         <div className="h-full mx-auto flex items-center justify-between pl-2 lg:px-5 xl:px-5">
           <div className="max-w-[180px] lg:pl-1">

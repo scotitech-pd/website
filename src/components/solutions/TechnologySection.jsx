@@ -43,7 +43,7 @@ export default function TechnologySection() {
               onClick={() => setShowModal(true)}
               className="mt-8 inline-flex items-center rounded-full border border-slate-300 bg-[#0F172A] px-6 py-3 text-sm font-semibold font-karla text-white hover:bg-slate-900 transition-colors cursor-pointer"
             >
-              Talk Through Your Use Case
+              Speak with Our Team
             </button>
           </div>
 

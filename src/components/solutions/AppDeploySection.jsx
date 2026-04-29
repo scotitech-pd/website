@@ -12,7 +12,7 @@ const coreSolutions = [
       "Cloud and Enterprise paths with defined onboarding direction",
     ],
     href: "/products/appdeploy",
-    cta: "View AppDeploy",
+    cta: "Explore AppDeploy",
   },
   {
     name: "AXOS",
@@ -25,7 +25,7 @@ const coreSolutions = [
       "A clearer environment for internal coordination and admin workflows",
     ],
     href: "/products/axos",
-    cta: "View AXOS",
+    cta: "Explore AXOS",
   },
 ];
 

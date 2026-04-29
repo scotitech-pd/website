@@ -1,24 +1,20 @@
-// components/FeaturesCarousel.jsx
 "use client";
 import React, { useRef, useState } from "react";
 
-// Import Swiper React components and modules
-// In your project, install: npm install swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Keyboard } from "swiper/modules";
 import "swiper/css";
 
 const FeaturesCarousel = () => {
   const swiperRef = useRef(null);
-  const [visible,setVisible] = useState(0);
-
+  const [visible, setVisible] = useState(0);
 
   const features = [
     {
       title: "Instant AI Caption Generation",
       icon: "/images/products/aicaptionstudio/instant.png",
       description:
-        "Upload an image or describe a topic, and our AI generates a variety of engaging captions tailored to your needs—from witty to professional.",
+        "Upload an image or describe a topic, and our AI generates a range of captions aligned to your needs, from conversational to professional.",
       gradient: "from-[#E9A74E] to-[#835E2C]",
       showButtons: true,
     },
@@ -26,7 +22,7 @@ const FeaturesCarousel = () => {
       title: "Content Scheduler Integration (Premium)",
       icon: "/images/products/aicaptionstudio/integration.png",
       description:
-        "Plan and schedule your posts directly from the app, creating a seamless workflow from idea to publication.",
+        "Plan and schedule posts directly from the app, creating a clear workflow from draft to publication.",
       gradient: "from-[#F58356] to-[#8F4C32]",
       showButtons: true,
     },
@@ -42,15 +38,15 @@ const FeaturesCarousel = () => {
       title: "Content Repurposing Tools",
       icon: "/images/products/aicaptionstudio/content.png",
       description:
-        "Turn blog posts, video scripts, or key points into perfectly sized, platform-optimized social media updates.",
+        "Turn blog posts, video scripts, or key points into appropriately sized, platform-optimised social media updates.",
       gradient: "from-[#EB4F5B] to-[#852D33]",
       showButtons: false,
     },
     {
-      title: "Tone & Style Customization",
+      title: "Tone & Style Customisation",
       icon: "/images/products/aicaptionstudio/tone.png",
       description:
-        "Select from tones like 'Inspirational', 'Humorous', 'Professional', or 'Casual' to maintain perfect brand consistency.",
+        "Select tones such as 'Inspirational', 'Humorous', 'Professional', or 'Casual' to maintain consistent brand voice.",
       gradient: "from-[#548BC3] to-[#28425D]",
       showButtons: false,
     },

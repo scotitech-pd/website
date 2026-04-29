@@ -45,7 +45,7 @@ export default function UnlockSection() {
               href="/contact"
               className="px-6 py-2 text-lg rounded-full shadow-sm transition font-lora text-white bg-gray-800/80 border border-white/70 hover:bg-gray-800"
             >
-              Talk to Our Team
+              Speak with Our Team
             </Link>
           </div>
         </div>

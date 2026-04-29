@@ -10,12 +10,12 @@ export default function CtaSection() {
       note: "Cloud and Enterprise onboarding",
     },
     {
-      title: "View AXOS",
+      title: "Explore AXOS",
       link: "/products/axos",
       note: "Private operational workspace overview",
     },
     {
-      title: "Open ClarityPath",
+      title: "Explore ClarityPath",
       link: "http://appdeploy.scotitech.com/w/scotitech",
       note: "Direct access through AppDeploy",
     },

@@ -16,7 +16,6 @@ const PricingSection = () => {
         "Compliance-friendly setup",
       ],
       tip: "Perfect for testing or small team use.",
-      icon: "🟢",
     },
     {
       color: "from-blue-400 to-blue-600",
@@ -31,7 +30,6 @@ const PricingSection = () => {
         "Team access (3 users)",
       ],
       tip: "Ideal for growing teams and internal app management.",
-      icon: "🔵",
     },
     {
       color: "from-gray-700 to-gray-900",
@@ -46,7 +44,6 @@ const PricingSection = () => {
         "Dedicated onboarding & integration help",
       ],
       tip: "For organisations needing full control, scale, and compliance.",
-      icon: "⚫",
     },
   ];
 
@@ -87,7 +84,7 @@ const PricingSection = () => {
 
               <div className="relative z-10 text-left">
                 <h3 className="text-2xl font-karla font-bold mb-1">
-                  {plan.icon} {plan.name}
+                  {plan.name}
                 </h3>
                 <p className="text-gray-300 font-lora mb-4">{plan.price}</p>
                 <p className="text-sm font-semibold text-[#FFF600] mb-3">
@@ -98,15 +95,15 @@ const PricingSection = () => {
                     <li key={i}>• {item}</li>
                   ))}
                 </ul>
-                <p className="italic text-gray-400 text-sm">💡 {plan.tip}</p>
+                <p className="italic text-gray-400 text-sm">{plan.tip}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Coming Soon */}
+        {/* Planned Add-ons */}
         <div className="relative z-10 mt-14 text-center text-white font-lora">
-          <h3 className="text-2xl font-semibold mb-3">🚀 Coming Soon (Add-ons)</h3>
+          <h3 className="text-2xl font-semibold mb-3">Planned Add-ons</h3>
           <ul className="space-y-1 text-gray-300 text-sm md:text-base">
             <li>• Automated App Store & Play Store compliance reports</li>
             <li>• AppDeploy Cloud white-label version</li>
@@ -116,9 +113,7 @@ const PricingSection = () => {
 
         {/* Custom Solutions */}
         <div className="relative z-10 mt-14 text-center">
-          <h3 className="text-2xl font-semibold mb-3 text-white">
-            💬 Need something custom?
-          </h3>
+          <h3 className="text-2xl font-semibold mb-3 text-white">Need something custom?</h3>
           <p className="text-gray-300 font-lora text-sm md:text-base mb-4 max-w-2xl mx-auto">
             We also offer tailored enterprise packages and consulting for
             organisations needing secure private app deployment solutions.

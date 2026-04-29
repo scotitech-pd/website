@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import GotoTop from "@/components/GotoTop";
 import RouteLoader from "@/components/RouteLoader";
 import { ModalProvider } from "@/components/ModalContext";
-import RequestaQuote from "@/components/RequestaQuote";   // ✅ MUST ADD THIS
+import RequestaQuote from "@/components/RequestaQuote";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,16 +42,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${karla.variable} ${lora.variable} antialiased`}
       >
-        {/* ✅ Provider ALWAYS wraps body children */}
         <ModalProvider>
           <Navbar />
-
-          {/* ✅ GLOBAL MODAL Mount (always present but hidden) */}
           <RequestaQuote />
 
           <GotoTop />
 
-           <RouteLoader>{children}</RouteLoader>
+          <RouteLoader>{children}</RouteLoader>
           <Footer />
         </ModalProvider>
       </body>

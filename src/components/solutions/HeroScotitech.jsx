@@ -43,7 +43,7 @@ const HeroScotitech = () => {
                 onClick={() => setShowModal(true)}
                 className="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold font-karla text-slate-900 shadow-[0_10px_30px_rgba(15,23,42,0.08)] hover:border-slate-400 transition-colors cursor-pointer"
               >
-                Request a Call
+                Speak with Our Team
               </button>
             </div>
 

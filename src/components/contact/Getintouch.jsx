@@ -86,7 +86,7 @@ const GetInTouch = () => {
           <div className="text-[#0F172A] space-y-8">
             <div>
               <h1 className="text-3xl lg:text-4xl xxl:text-5xl font-karla font-bold mb-4 lg:mb-6">
-                Get in Touch
+                Speak with Our Team
               </h1>
               <p className="text-sm lg:text-[16px] xxl:text-lg leading-relaxed max-w-2xl font-lora text-slate-700">
                 Speak with ScotiTech about product access, rollout questions,

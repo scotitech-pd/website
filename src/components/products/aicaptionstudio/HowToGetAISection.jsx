@@ -12,7 +12,7 @@ const HowToGetAISection = () => {
           How to Get AI Caption Studio?
         </h2>
         <p className="text-base sm:text-lg text-black mt-3 font-lora mb-12">
-          Getting started is simple. AI Caption Studio is available directly for
+          Getting started is straightforward. AI Caption Studio is available directly for
           individuals and teams.
         </p>
 
@@ -81,8 +81,7 @@ const HowToGetAISection = () => {
         <div className="mt-14">
           <a href="https://apps.apple.com/gb/app/ai-caption-studio/id6743449367">
             <button className="bg-gradient-to-r font-lora from-[#2593F6] to-[#1ACCC8] cursor-pointer text-white font-medium px-10 py-3 rounded-full shadow-lg hover:opacity-90 transition">
-              Download Now 
-               
+              Download AI Caption Studio
             </button>
           </a>
         </div>

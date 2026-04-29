@@ -11,29 +11,28 @@ export default function FaqSection() {
     {
       question: "What makes ScotiTech different?",
       answer:
-        "We design products that solve real problems using trusted methods—no hype, just practical innovation.",
+        "We design products around real operational problems, with practical delivery and measurable outcomes.",
     },
     {
       question: "How does AppDeploy simplify app distribution?",
       answer:
-        "It gives organisations a clearer operational layer around Apple Business based internal distribution, with simpler access, release visibility, and branded delivery workflows.",
+        "It provides organisations with a clearer operational layer for Apple Business-based internal distribution, including simpler access, release visibility, and branded delivery workflows.",
     },
     {
       question: "Can AXOS replace SaaS tools?",
       answer:
-        "Yes. AXOS is designed to reduce tool sprawl by bringing mail, drive, cloud storage, calendar, chat, tasks, notes, and AI into one more controlled environment.",
-
+        "AXOS is designed to reduce tool sprawl by bringing mail, drive, cloud storage, calendar, chat, tasks, notes, and AI into one controlled environment.",
     },
     {
       question: "How do I get started with ScotiTech?",
       answer:
-"Contact us, and we’ll guide you through the best product for your needs.",    },
+        "Contact us and we will guide you to the product path that best matches your requirements.",
+    },
     {
       question: "How do you approach privacy and governance?",
       answer:
-        "We design products with practical privacy, governance, and deployment considerations in mind, while keeping the messaging grounded in what each product genuinely supports.",
+        "We design products with practical privacy, governance, and deployment controls in mind, while keeping messaging aligned to proven product capability.",
     },
-   
   ];
 
   return (
