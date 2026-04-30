@@ -16,7 +16,7 @@ export const insights = [
     sourceName: "Apple Newsroom",
     sourceUrl:
       "https://www.apple.com/newsroom/2026/03/introducing-apple-business-a-new-all-in-one-platform-for-businesses-of-all-sizes/",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    image: "/images/insights/team-discussion.jpg",
     tags: ["Apple Business", "MDM", "SME technology", "AppDeploy"],
     highlights: [
       {

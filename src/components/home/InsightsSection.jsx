@@ -12,10 +12,10 @@ export default function InsightsSection() {
             <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(79,116,243,0.34),transparent_52%),linear-gradient(315deg,rgba(188,185,106,0.22),transparent_46%)]" />
             <Image
               src={featuredInsight.image}
-              alt="AppDeploy product context for Apple Business based app distribution"
+              alt={`${featuredInsight.title} cover image`}
               fill
               sizes="(min-width: 1024px) 38vw, 100vw"
-              className="object-contain p-8"
+              className="object-cover"
             />
           </div>
 

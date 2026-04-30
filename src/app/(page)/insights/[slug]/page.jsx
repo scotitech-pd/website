@@ -148,7 +148,7 @@ export default async function InsightArticlePage({ params }) {
                 <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(79,116,243,0.34),transparent_52%),linear-gradient(315deg,rgba(188,185,106,0.22),transparent_46%)]" />
                 <Image
                   src={insight.image}
-                  alt="AppDeploy product context for Apple Business based distribution"
+                  alt={`${insight.title} cover image`}
                   fill
                   sizes="(min-width: 1280px) 42vw, 100vw"
                   className="object-cover"
