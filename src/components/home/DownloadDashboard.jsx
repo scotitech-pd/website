@@ -6,7 +6,7 @@ export default function DownloadDashboard() {
   const coreProducts = [
     {
       title: "AppDeploy",
-      subtitle: "Internal iOS distribution built around Apple Business workflows",
+      subtitle: "Branded workspace for private iOS releases and install visibility",
       color: "from-slate-50 to-blue-50",
       shadow: "shadow-[0_0_15px_rgba(45,100,230,0.2)]",
       titleColor: "text-blue",
@@ -16,7 +16,7 @@ export default function DownloadDashboard() {
           name: "Access Portal",
           details: "Cloud workspace and branded distribution access",
           bg: "bg-blue-100",
-          link: "http://appdeploy.scotitech.com/w/scotitech",
+          link: "https://appdeploy.scotitech.com/w/scotitech",
           live: true,
         },
         {
@@ -38,7 +38,7 @@ export default function DownloadDashboard() {
       items: [
         {
           name: "Explore AXOS",
-          details: "View the product overview, module scope, and deployment direction",
+          details: "View the product overview, modules, and deployment options",
           bg: "bg-teal-100",
           link: "/products/axos",
           live: true,
@@ -65,9 +65,9 @@ export default function DownloadDashboard() {
       items: [
         {
           name: "Access from AppDeploy",
-          details: "Available for Everyone via AppDeploy",
+          details: "Distributed through a branded AppDeploy workspace",
           bg: "bg-slate-100",
-          link: "http://appdeploy.scotitech.com/w/scotitech",
+          link: "https://appdeploy.scotitech.com/w/scotitech",
           live: true,
         },
       ],
@@ -92,9 +92,8 @@ export default function DownloadDashboard() {
             Explore Our Products
           </h2>
           <p className="relative z-10 mt-4 max-w-3xl mx-auto text-slate-700 text-lg font-lora leading-8">
-            AppDeploy and AXOS lead the main commercial story, with
-            ClarityPath presented as a supporting product for a more specific
-            use case.
+            AppDeploy, AXOS, and ClarityPath cover private app rollout, owned
+            workspace operations, and focused decision-support use cases.
           </p>
         </motion.div>
 
@@ -198,7 +197,7 @@ export default function DownloadDashboard() {
 
           <div className="rounded-[1.8rem] border border-gray-200/80 bg-[linear-gradient(180deg,#FFFFFF_0%,#F8FAFC_100%)] p-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
             <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-4">
-              Supporting Product
+              Private Product
             </p>
             {supportingProducts.map((section) => (
               <motion.div

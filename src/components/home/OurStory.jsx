@@ -18,15 +18,14 @@ const OurStory = () => {
           <div className="">
             <h2 className="text-4xl font-bold mb-6 font-karla">Our Story</h2>
             <h3 className="text-3xl font-semibold font-lora mb-4 sm:mb-6">
-              A focused software company built around real operational needs
+              A focused software company built around practical product needs
             </h3>
             <p className="text-lg leading-7 font-lora min-[1160px]:w-[80%] mx-auto text-justify sm:text-center text-black/80">
               <span className="text-main-dark font-semibold">ScotiTech </span>
-              started with a simple goal: build practical software that solves
-              real problems without inflated platform claims. Today the company
-              is focused on a tighter product story built around internal app
-              distribution, private operational tooling, and a small set of
-              supporting workflow products.
+              started with a practical goal: build software that makes product
+              rollout, team execution, and private digital work easier to
+              manage. The company now focuses on AppDeploy, AXOS, and a small
+              set of focused product experiences.
             </p>
           </div>
 
@@ -39,14 +38,14 @@ const OurStory = () => {
             />
             <div className="hidden min-[1225px]:flex absolute -top-10 left-1/2 -translate-x-1/2 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.1)] rounded-xl px-6 py-4 w-[90%] md:w-[80%] text-center border border-gray-200">
               <p className="text-black text-[15px] leading-6">
-                ScotiTech is being shaped around focused products, clearer
-                rollout paths, and more credible software for everyday work.
+                ScotiTech builds focused products, clear rollout paths, and
+                dependable software for everyday work.
               </p>
             </div>
             <div className="min-[1186px]:hidden mt-3 flex shadow-[0_18px_40px_rgba(15,23,42,0.1)] bg-white rounded-xl px-2 sm:px-6 py-4 max-w-[780px]  mx-auto text-center border border-gray-200">
               <p className="text-black text-lg leading-6">
-                ScotiTech is being shaped around focused products, clearer
-                rollout paths, and more credible software for everyday work.
+                ScotiTech builds focused products, clear rollout paths, and
+                dependable software for everyday work.
               </p>
             </div>
           </div>
@@ -76,15 +75,15 @@ const OurStory = () => {
 const cards = [
   {
     title: "Founder-Led Direction",
-    text: "The company is still shaped closely around product focus, buyer clarity, and practical execution.",
+    text: "Product decisions stay close to buyer needs, delivery quality, and practical execution.",
   },
   {
     title: "Focused Product Scope",
-    text: "ScotiTech is concentrating on a small set of products with clearer roles instead of trying to look like a broad platform company.",
+    text: "The portfolio concentrates on products with clear roles across app delivery, workspaces, and guided decision support.",
   },
   {
     title: "Practical Rollout Thinking",
-    text: "Each product is being positioned with more disciplined onboarding, delivery, and commercial expectations.",
+    text: "Onboarding, deployment, and commercial expectations are built into each product path.",
   },
 ];
 

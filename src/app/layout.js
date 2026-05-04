@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Karla, Lora } from "next/font/google";
+import { Geist_Mono, Karla, Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -6,11 +6,6 @@ import GotoTop from "@/components/GotoTop";
 import RouteLoader from "@/components/RouteLoader";
 import { ModalProvider } from "@/components/ModalContext";
 import RequestaQuote from "@/components/RequestaQuote";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const karla = Karla({
   subsets: ["latin"],
@@ -31,16 +26,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ScotiTech Solutions | Practical Digital Products for Modern Teams",
+  title: "ScotiTech Solutions | Focused Software Products",
   description:
-    "ScotiTech Solutions builds practical digital products across internal app distribution, private operational tooling, accessibility, and privacy-conscious software.",
+    "ScotiTech builds focused software products for private app rollout, team operations, and policy-aligned AI-assisted work.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${karla.variable} ${lora.variable} antialiased`}
+        className={`${geistMono.variable} ${karla.variable} ${lora.variable} antialiased`}
       >
         <ModalProvider>
           <Navbar />

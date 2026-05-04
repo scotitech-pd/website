@@ -1,5 +1,7 @@
 "use client";
-import React, { useState } from "react";
+
+import { useState } from "react";
+import Reveal from "@/components/Reveal";
 
 const SubscribeSection = () => {
   const [email, setEmail] = useState("");
@@ -9,7 +11,7 @@ const SubscribeSection = () => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77"); // <-- Put your key here
+    formData.append("access_key", "cc28a946-1d7c-46a4-aa9f-0bbaa38e5c77");
     formData.append("Email", email);
 
     const res = await fetch("https://api.web3forms.com/submit", {
@@ -19,23 +21,23 @@ const SubscribeSection = () => {
 
     const result = await res.json();
     if (result.success) {
-      setStatus("Thanks for subscribing!");
+      setStatus("Thanks for subscribing.");
       setEmail("");
     } else {
-      setStatus("Oops! Something went wrong.");
+      setStatus("Something went wrong. Please try again.");
     }
   };
 
   return (
-    <div className="w-full py-16 px-4 bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-900">
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-        <div className="rounded-3xl border border-slate-600/70 mx-auto bg-[#0F172A]/88 px-3 min-[630px]:px-8 xl:px-12 py-8 min-[630px]:py-10 md:py-14 text-white grid min-[1270px]:grid-cols-2 items-center gap-5 shadow-[0_20px_50px_rgba(2,6,23,0.30)]">
+    <div className="w-full bg-[#F7F7F5] px-4 py-16">
+      <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+        <Reveal className="mx-auto grid items-center gap-5 rounded-[1.15rem] border border-[#d9ded7] bg-[#0E1116] px-5 py-8 text-white shadow-[0_24px_70px_rgba(14,17,22,0.22)] min-[630px]:px-8 min-[630px]:py-10 md:py-14 xl:px-12 min-[1270px]:grid-cols-2" variant="soft">
           <div>
-            <h2 className="text-4xl min-[1550px]:text-5xl font-semibold font-karla mb-4 text-white">
-              Stay Updated With ScotiTech
+            <h2 className="mb-4 text-4xl font-semibold text-white min-[1550px]:text-5xl">
+              Stay updated with ScotiTech
             </h2>
-            <p className="text-lg font-lora min-[500px]:text-xl text-slate-200 sm:w-[90%] min-[1550px]:w-[70%] max-[650px]:leading-[22px]">
-              Get product updates, company news, and selected insights
+            <p className="font-lora text-lg text-slate-200 min-[500px]:text-xl min-[1550px]:w-[70%] sm:w-[90%]">
+              Get product updates, company news, and selected briefings
               delivered to your inbox.
             </p>
           </div>
@@ -43,7 +45,7 @@ const SubscribeSection = () => {
           <div>
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col md:flex-row gap-3 md:gap-4 w-full max-[500px]:mt-1"
+              className="flex w-full flex-col gap-3 md:flex-row md:gap-4"
             >
               <input
                 type="email"
@@ -51,32 +53,30 @@ const SubscribeSection = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-6 py-3 rounded-md text-black w-full font-lora bg-white max-w-[600px]"
+                className="w-full flex-1 rounded-full bg-white px-6 py-3 font-lora text-black outline-none ring-1 ring-transparent transition focus:ring-[#B7A84D] md:max-w-[600px]"
               />
 
-              <div className="flex w-full justify-end md:w-auto md:justify-normal">
-                <button
-                  type="submit"
-                  className="bg-white text-main-dark px-6 py-2 rounded-md font-semibold font-karla hover:bg-slate-100 transition text-[17px] md:text-xl"
-                >
-                  Subscribe
-                </button>
-              </div>
+              <button
+                type="submit"
+                className="rounded-full bg-white px-6 py-3 text-base font-semibold text-[#0E1116] transition hover:bg-slate-100"
+              >
+                Subscribe
+              </button>
             </form>
 
             {status && <p className="mt-4 text-sm text-slate-200">{status}</p>}
 
-            <p className="text-sm min-[500px]:text-[15px] mt-4 text-slate-200 pl-3 font-lora">
-              We respect your privacy. No spam, ever. Read our{" "}
+            <p className="mt-4 font-lora text-sm text-slate-300">
+              We respect your privacy. Read our{" "}
               <a
                 href="/privacy-policy"
-                className="font-bold underline text-white font-lora"
+                className="font-bold text-white underline"
               >
                 Privacy Policy
               </a>
             </p>
           </div>
-        </div>
+        </Reveal>
       </div>
     </div>
   );

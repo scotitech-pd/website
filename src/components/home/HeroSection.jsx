@@ -1,156 +1,202 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, CheckCircle2, Layers3, ShieldCheck } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import { portfolioHighlights } from "@/lib/products";
 
-const proofItems = [
-  "Controlled internal app rollout for teams and partners",
-  "Private workspace tools with integrated AI support",
-  "Deployment paths aligned to team and policy needs",
+const heroSignals = [
+  "Controlled internal app rollout",
+  "Private workspace tools",
+  "Policy-aligned deployment",
 ];
 
-const surfaceCards = [
+const heroProofPoints = [
   {
-    title: "AppDeploy",
-    subtitle: "Internal distribution built around Apple Business workflows",
-    meta: "Branded access, release visibility, controlled rollout",
-    accent: "from-[#4F74F3] via-[#5B4FCF] to-[#0EA5E9]",
-    logo: "/images/brand/appdeploy-logo-black.png",
-    theme: "light",
+    icon: Layers3,
+    label: "Product suite",
+    detail: "Three focused products",
   },
   {
-    title: "AXOS",
-    subtitle: "Private workspace with AI built into the tools teams use every day",
-    meta: "Mail, drive, cloud storage, chat, tasks, notes, AI",
-    accent: "from-[#34D3FF] via-[#4F74F3] to-[#5B4FCF]",
-    logo: "/images/brand/axos-icon.png",
-    theme: "dark",
+    icon: ShieldCheck,
+    label: "Private routes",
+    detail: "Controlled access paths",
+  },
+  {
+    icon: CheckCircle2,
+    label: "Product clarity",
+    detail: "Real product screens",
   },
 ];
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#0F172A] pt-24 pb-16 md:pt-28 md:pb-20">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#0F172A_0%,#111827_52%,#0B1220_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.22),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.14),transparent_22%)]" />
-      <div className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_right,rgba(255,255,255,0.16)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.16)_1px,transparent_1px)] bg-[size:44px_44px]" />
+    <section className="relative overflow-hidden bg-[#F7F7F5] pt-24 pb-16 md:pt-[7.5rem] md:pb-[5.5rem]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(15,118,110,0.14),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(37,99,235,0.12),transparent_26%),linear-gradient(135deg,rgba(255,255,255,0.85),rgba(246,245,240,0.4))]" />
+      <div className="absolute left-1/2 top-12 h-[520px] w-[920px] -translate-x-1/2 rounded-full border border-white/70 bg-white/20 blur-3xl" />
 
-      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-        <div className="grid gap-10 xl:grid-cols-[54%_46%] items-center">
-          <div className="max-w-3xl">
-            <p className="inline-flex rounded-full border border-white/15 bg-white/8 px-4 py-2 text-sm font-semibold font-karla text-white shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
-              ScotiTech Solutions
-            </p>
-
-            <h1 className="mt-6 text-white text-4xl min-[1150px]:text-6xl font-karla font-semibold leading-[1.05]">
-              Building practical, privacy-focused technology for real-world use
-            </h1>
-
-            <p className="mt-6 text-slate-300 font-lora text-lg md:text-xl leading-8 max-w-2xl">
-              We build focused software for internal app rollout and private
-              team workflows, with practical control over deployment and data
-              access.
-            </p>
-
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-7 py-3 text-sm font-semibold font-karla text-white hover:bg-slate-900 transition-colors"
-              >
-                Speak with Our Team
-              </Link>
-              <Link
-                href="/products"
-                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/8 px-7 py-3 text-sm font-semibold font-karla text-white hover:bg-white/12 transition-colors"
-              >
-                Explore Products
-              </Link>
-            </div>
-
-            <div className="mt-10 grid gap-4">
-              {proofItems.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-[1.3rem] border border-white/10 bg-white/[0.05] px-5 py-4 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur-sm"
+      <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+        <div className="grid items-center gap-12 xl:grid-cols-[52%_48%]">
+          <Reveal className="max-w-3xl" variant="soft">
+            <div className="flex flex-wrap gap-2">
+              {heroSignals.map((signal) => (
+                <span
+                  key={signal}
+                  className="inline-flex rounded-full border border-[#d9ded7] bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-slate-700"
                 >
-                  <p className="text-slate-200 font-lora leading-7 text-[15px]">
-                    {item}
-                  </p>
-                </div>
+                  {signal}
+                </span>
               ))}
             </div>
-          </div>
 
-          <div className="relative">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(52,211,255,0.12),transparent_58%),radial-gradient(circle_at_top_right,rgba(79,70,229,0.10),transparent_46%)] blur-2xl" />
-            <div className="relative rounded-[2rem] border border-white/12 bg-[linear-gradient(160deg,rgba(15,23,42,0.52),rgba(30,41,59,0.36))] p-5 sm:p-6 shadow-[0_28px_70px_rgba(2,6,23,0.30)] backdrop-blur-md">
-              <div className="grid gap-5">
-                {surfaceCards.map((card, index) => (
+            <h1 className="mt-6 text-4xl font-semibold leading-[1.05] text-[#111827] min-[700px]:text-5xl min-[1150px]:text-6xl">
+              Practical software for internal app rollout and private team workflows.
+            </h1>
+
+            <p className="mt-6 max-w-2xl font-lora text-lg leading-8 text-slate-700 md:text-xl">
+              ScotiTech builds focused products for controlled app
+              distribution, private workspace operations, and deployment paths
+              aligned with how teams manage access, data, and policy.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="/products"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E1116] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(14,17,22,0.18)] transition-colors hover:bg-[#1C2530]"
+              >
+                Explore Products
+                <ArrowRight className="size-4" />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-[#cfd7cf] bg-white/80 px-7 py-3 text-sm font-semibold text-slate-900 transition-colors hover:border-slate-400 hover:bg-white"
+              >
+                Speak with our team
+              </Link>
+            </div>
+
+            <div className="mt-10 grid gap-3 sm:grid-cols-3">
+              {portfolioHighlights.map((item, index) => (
+                <Reveal key={item.label} delay={120 + index * 70} variant="soft">
+                  <div className="h-full rounded-2xl border border-[#d9ded7] bg-white/70 px-4 py-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                      {item.label}
+                    </p>
+                    <p className="mt-2 text-lg font-semibold text-slate-950">
+                      {item.value}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal
+            className="relative mx-auto w-full max-w-[680px] motion-safe:animate-[hero-float_9s_ease-in-out_infinite]"
+            delay={160}
+            variant="soft"
+          >
+            <div className="absolute -inset-4 rounded-[2.5rem] bg-[radial-gradient(circle_at_28%_18%,rgba(15,118,110,0.22),transparent_34%),radial-gradient(circle_at_78%_76%,rgba(37,99,235,0.18),transparent_30%)] blur-2xl" />
+            <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-1 rounded-[2rem] bg-[#d9ded7]/70" />
+
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-white/80 bg-[#0E1116] p-3 shadow-[0_32px_90px_rgba(15,23,42,0.2)] sm:p-4">
+              <div className="flex items-center justify-between gap-4 px-2 pb-4">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                    Product portfolio
+                  </p>
+                  <p className="mt-1 text-lg font-semibold text-white">
+                    One product portfolio, three focused use cases
+                  </p>
+                </div>
+                <span className="hidden rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-semibold text-slate-200 sm:inline-flex">
+                  Private by design
+                </span>
+              </div>
+
+              <div className="relative min-h-[510px] overflow-hidden rounded-[1.35rem] border border-white/10 bg-[linear-gradient(145deg,#111827,#071014)] p-3 sm:min-h-[560px]">
+                <div className="absolute left-4 right-4 top-4 h-[225px] overflow-hidden rounded-[1.1rem] border border-white/15 bg-white shadow-[0_22px_50px_rgba(0,0,0,0.28)] sm:h-[285px]">
+                  <Image
+                    src="/images/products/appdeploy/dashboard.png"
+                    alt="AppDeploy workspace dashboard"
+                    fill
+                    priority
+                    sizes="(min-width: 1280px) 560px, 88vw"
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#061014]/90 to-transparent p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-teal-100">
+                      AppDeploy
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-white">
+                      Internal app rollout dashboard
+                    </p>
+                  </div>
+                </div>
+
+                <div className="absolute left-4 top-[250px] z-10 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur sm:top-[318px]">
+                  Policy-aligned rollout
+                </div>
+
+                <div className="absolute bottom-24 left-4 z-10 w-[66%] max-w-[390px] overflow-hidden rounded-[1rem] border border-white/15 bg-black shadow-[0_24px_60px_rgba(0,0,0,0.34)] sm:bottom-20">
+                  <div className="relative aspect-[1.58]">
+                    <Image
+                      src="/images/products/axos/dashboard.jpg"
+                      alt="AXOS private workspace dashboard"
+                      fill
+                      sizes="(min-width: 1280px) 390px, 58vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-3">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-100">
+                      AXOS
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-white">
+                      Private AI workspace
+                    </p>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-5 right-4 z-20 w-[34%] max-w-[180px] overflow-hidden rounded-[1.65rem] border-[6px] border-[#111827] bg-[#080B18] shadow-[0_28px_70px_rgba(0,0,0,0.42)]">
+                  <div className="relative aspect-[9/18.8]">
+                    <Image
+                      src="/images/products/claritypath/focus.png"
+                      alt="ClarityPath mobile decision support screen"
+                      fill
+                      sizes="(min-width: 1280px) 180px, 32vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                </div>
+
+                <div className="absolute bottom-5 left-4 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-300">
+                    ClarityPath
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-white">
+                    Private decision support
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                {heroProofPoints.map((item) => (
                   <div
-                    key={card.title}
-                    className={`rounded-[1.8rem] overflow-hidden border ${
-                      card.theme === "dark"
-                        ? "border-slate-900/80 bg-[#0F172A]"
-                        : "border-slate-200 bg-white"
-                    } shadow-[0_18px_40px_rgba(15,23,42,0.08)]`}
+                    key={item.label}
+                    className="rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3"
                   >
-                    <div className={`h-1.5 w-full bg-gradient-to-r ${card.accent}`} />
-                    <div className="p-5 sm:p-6">
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="max-w-[70%]">
-                          <p
-                            className={`text-xs font-karla uppercase tracking-[0.16em] ${
-                              card.theme === "dark"
-                                ? "text-slate-400"
-                                : "text-slate-500"
-                            } mb-3`}
-                          >
-                            {index === 0 ? "Core Product" : "Core Platform"}
-                          </p>
-                          <h2
-                            className={`text-2xl font-karla font-semibold ${
-                              card.theme === "dark"
-                                ? "text-white"
-                                : "text-slate-900"
-                            }`}
-                          >
-                            {card.title}
-                          </h2>
-                        </div>
-                        <img
-                          src={card.logo}
-                          alt={`${card.title} logo`}
-                          className={`h-14 w-auto rounded-[1.3rem] object-contain ${
-                            card.theme === "dark"
-                              ? "drop-shadow-[0_18px_28px_rgba(0,0,0,0.35)]"
-                              : "drop-shadow-[0_18px_28px_rgba(15,23,42,0.18)]"
-                          }`}
-                        />
-                      </div>
-
-                      <p
-                        className={`mt-4 text-base font-karla leading-7 ${
-                          card.theme === "dark"
-                            ? "text-slate-100"
-                            : "text-slate-800"
-                        }`}
-                      >
-                        {card.subtitle}
-                      </p>
-                      <p
-                        className={`mt-3 text-sm font-lora leading-7 ${
-                          card.theme === "dark"
-                            ? "text-slate-300"
-                            : "text-slate-600"
-                        }`}
-                      >
-                        {card.meta}
-                      </p>
-                    </div>
+                    <item.icon className="mb-2 size-4 text-[#5EEAD4]" />
+                    <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-400">
+                      {item.label}
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-white">
+                      {item.detail}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

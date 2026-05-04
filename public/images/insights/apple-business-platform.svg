@@ -1,0 +1,22 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="48" fill="#0E1116"/>
+  <circle cx="260" cy="172" r="240" fill="#2563EB" fill-opacity=".20"/>
+  <circle cx="932" cy="604" r="260" fill="#0F766E" fill-opacity=".20"/>
+  <rect x="126" y="134" width="948" height="520" rx="44" fill="#F7F7F5"/>
+  <rect x="172" y="190" width="216" height="408" rx="32" fill="#111827"/>
+  <rect x="424" y="190" width="604" height="86" rx="28" fill="#E2E8F0"/>
+  <rect x="466" y="222" width="230" height="20" rx="10" fill="#0F172A"/>
+  <rect x="424" y="322" width="178" height="118" rx="28" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <rect x="636" y="322" width="178" height="118" rx="28" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <rect x="848" y="322" width="178" height="118" rx="28" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <rect x="424" y="482" width="602" height="116" rx="28" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <rect x="210" y="236" width="138" height="22" rx="11" fill="#F7F7F5"/>
+  <rect x="210" y="304" width="108" height="16" rx="8" fill="#94A3B8"/>
+  <rect x="210" y="352" width="130" height="16" rx="8" fill="#94A3B8"/>
+  <rect x="210" y="400" width="84" height="16" rx="8" fill="#94A3B8"/>
+  <path d="M486 383h58M698 383h58M910 383h58" stroke="#0F766E" stroke-width="14" stroke-linecap="round"/>
+  <path d="M474 538h420" stroke="#0F172A" stroke-width="18" stroke-linecap="round"/>
+  <path d="M474 570h282" stroke="#64748B" stroke-width="14" stroke-linecap="round"/>
+  <text x="138" y="710" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="38" font-weight="700">Apple business platform shift</text>
+  <text x="138" y="754" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Device, app, access and support workflows in one operating view</text>
+</svg>

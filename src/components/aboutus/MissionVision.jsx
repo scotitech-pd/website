@@ -75,10 +75,10 @@ const MissionVision = () => {
               </h3>
 
               <p className="text-black text-sm sm:text-[15px] leading-5 font-lora">
-                We want a future where secure and responsible technology feels
-                more accessible, more usable, and easier to trust. The long-term
-                goal is to help organisations adopt reliable digital tools
-                without losing sight of privacy, control, or clarity.
+                Our vision is secure, responsible technology that feels
+                accessible, usable, and easy to trust. ScotiTech helps
+                organisations adopt reliable digital tools while keeping
+                privacy, ownership, and clarity at the centre.
               </p>
             </div>
           </div>

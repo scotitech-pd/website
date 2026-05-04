@@ -16,6 +16,17 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Meeting scheduling links
+
+The contact and booking CTAs support self-scheduling links via environment variables.
+
+Copy `.env.example` to `.env.local` and set:
+
+- `NEXT_PUBLIC_APPDEPLOY_CALENDLY_URL` (optional): AppDeploy session URL. Defaults to the AppDeploy session link.
+- `NEXT_PUBLIC_AXOS_CALENDLY_URL` (optional): AXOS session URL for `/products/axos` and Talk to Sales flows.
+- `NEXT_PUBLIC_CALENDLY_URL` (optional): Backward-compatible fallback if `NEXT_PUBLIC_APPDEPLOY_CALENDLY_URL` is not set.
+- `NEXT_PUBLIC_GOOGLE_SCHEDULING_URL` (optional): Reserved for future use.
+
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

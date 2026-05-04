@@ -8,14 +8,14 @@ const SpecificSolution = () => {
       id: 1,
       name: "AppDeploy",
       image: "/images/brand/appdeploy-logo-black.png",
-      description: "Internal app distribution built around Apple Business workflows",
+      description: "Private iOS release portals and install visibility",
       link: "/products/appdeploy",
     },
     {
       id: 2,
       name: "AXOS",
       image: "/images/brand/axos-icon.png",
-      description: "Private workspace with AI built directly into daily tools",
+      description: "Private workspace for daily team execution",
       link: "/products/axos",
     },
     {
@@ -32,6 +32,7 @@ const SpecificSolution = () => {
     contact: "",
     email: "",
     companyName: "",
+    message: "",
   });
 
   const [success, setSuccess] = useState(false);
@@ -103,6 +104,7 @@ const SpecificSolution = () => {
     fd.append("Contact", formData.contact);
     fd.append("Email", formData.email);
     fd.append("Company", formData.companyName);
+    fd.append("Message", formData.message || "No message provided");
 
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -118,6 +120,7 @@ const SpecificSolution = () => {
         contact: "",
         email: "",
         companyName: "",
+        message: "",
       });
     }, 2000);
   };
@@ -204,6 +207,20 @@ const SpecificSolution = () => {
                       onChange={handleChange}
                       placeholder="Company Name"
                       className="w-full font-lora bg-transparent border-b-2 border-slate-300 focus:border-slate-500 text-slate-900 placeholder-slate-400 py-2 px-1 outline-none transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block font-lora text-slate-700 text-sm font-medium mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={4}
+                      placeholder="Tell us what you would like to discuss"
+                      className="w-full resize-none font-lora bg-transparent border-b-2 border-slate-300 focus:border-slate-500 text-slate-900 placeholder-slate-400 py-2 px-1 outline-none transition-colors"
                     />
                   </div>
 

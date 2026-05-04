@@ -1,140 +1,116 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-
-const featuredProducts = [
-  {
-    name: "AppDeploy",
-    eyebrow: "Featured Product",
-    tagline: "Internal app distribution built around Apple Business workflows",
-    description:
-      "Private iOS app delivery with branded access, controlled release visibility, and a simpler employee install experience.",
-    logo: "/images/brand/appdeploy-logo-black.png",
-    link: "/products/appdeploy",
-    cta: "Explore AppDeploy",
-  },
-  {
-    name: "AXOS",
-    eyebrow: "Featured Product",
-    tagline: "A private workspace built for team control and daily clarity",
-    description:
-      "Reduce SaaS sprawl with self-hosted tools for day-to-day collaboration, visibility, and task coordination in one environment.",
-    logo: "/images/brand/axos-icon.png",
-    link: "/products/axos",
-    cta: "Explore AXOS",
-    status: "Early Access",
-  },
-];
+import { ArrowRight } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import { flagshipProducts, supportingProducts } from "@/lib/products";
 
 export default function OurProducts() {
   return (
     <section
       id="products"
-      className="pt-16 pb-20 text-center relative w-full overflow-hidden bg-[#f7f7f5]"
+      className="relative w-full overflow-hidden bg-[#F7F7F5] py-16 md:py-[5.5rem]"
     >
-      <div className="absolute bottom-0 w-screen -left-0.5">
-        <img
-          src="/images/home/bgjoint.png"
-          alt="background"
-          className="object-cover w-screen"
-        />
-      </div>
+      <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+        <Reveal className="mb-10 max-w-4xl" variant="soft">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+            Product Portfolio
+          </p>
+          <h2 className="text-3xl font-semibold leading-tight text-[#111827] sm:text-5xl">
+            Focused products for app access, private workspaces, and decision support.
+          </h2>
+          <p className="mt-5 max-w-3xl font-lora text-lg leading-8 text-slate-700">
+            Each product is built around a distinct user, use case, and
+            rollout path, making it easier for teams to compare fit quickly.
+          </p>
+        </Reveal>
 
-      <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full relative z-10">
-        <motion.h2
-          className="text-main font-karla text-4xl sm:text-5xl font-semibold mb-3 sm:mb-5"
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          Featured Products
-        </motion.h2>
-
-        <motion.h3
-          className="text-xl sm:text-3xl min-[1170px]:text-4xl lg:text-2xl font-semibold font-karla text-gray-900 mb-4"
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          AXOS and AppDeploy are at the centre of our product strategy
-        </motion.h3>
-
-        <motion.p
-          className="text-black/80 max-w-4xl mx-auto mb-12 font-lora leading-7"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          AppDeploy handles internal app distribution. AXOS handles private
-          team workspace and daily tooling. AppDeploy is live for rollout, and
-          AXOS is available through staged access.
-        </motion.p>
-
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-stretch">
-          {featuredProducts.map((product, index) => (
-            <motion.div
+        <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
+          {flagshipProducts.map((product, index) => (
+            <Reveal
+              as="article"
               key={product.name}
-              initial={{ opacity: 0, x: index === 0 ? -60 : 60, y: 30 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 110,
-                damping: 14,
-                delay: index * 0.1,
-              }}
-              viewport={{ once: true }}
-              className="bg-white rounded-3xl border border-gray-200 shadow-[0_18px_40px_rgba(15,23,42,0.08)] overflow-hidden text-left h-full"
+              delay={index * 100}
+              className="group overflow-hidden rounded-[1.25rem] border border-[#d9ded7] bg-white text-left shadow-[0_18px_48px_rgba(15,23,42,0.07)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.10)]"
             >
-              <div className="grid grid-cols-1 md:grid-cols-[44%_56%] h-full">
-                <div className="bg-slate-50 flex items-center justify-center p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-200">
-                  <img
+              <div className="grid h-full grid-cols-1 md:grid-cols-[38%_62%]">
+                <div className="flex items-center justify-center border-b border-[#d9ded7] bg-[#f8fafc] p-7 md:border-b-0 md:border-r">
+                  <Image
                     src={product.logo}
                     alt={product.name}
-                    className="w-full max-w-[340px] h-auto object-contain"
+                    width={280}
+                    height={180}
+                    className="h-auto max-h-[150px] w-full max-w-[280px] object-contain"
                   />
                 </div>
 
-                <div className="p-8 md:p-10 flex flex-col">
-                  <div className="flex items-center justify-between gap-4 mb-5">
-                    <span className="inline-flex items-center rounded-full bg-slate-100 text-main-dark px-3 py-1 text-xs font-semibold font-karla uppercase tracking-[0.14em]">
-                      {product.eyebrow}
+                <div className="flex flex-col p-7 md:p-9">
+                  <div className="mb-5 flex items-center justify-between gap-4">
+                    <span
+                      className="inline-flex items-center rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.14em]"
+                      style={{
+                        backgroundColor: product.theme.soft,
+                        color: product.theme.color,
+                      }}
+                    >
+                      {product.status}
                     </span>
-                    {product.status ? (
-                      <span className="inline-flex items-center rounded-full bg-main/10 text-main px-3 py-1 text-xs font-semibold font-karla uppercase tracking-[0.12em]">
-                        {product.status}
-                      </span>
-                    ) : null}
                   </div>
 
-                  <h4 className="text-3xl font-semibold font-karla text-main-dark mb-3">
+                  <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
+                    {product.eyebrow}
+                  </p>
+                  <h3 className="mb-4 text-3xl font-semibold text-[#111827]">
                     {product.name}
-                  </h4>
+                  </h3>
 
-                  <p className="text-lg font-semibold text-slate-800 font-karla mb-4 leading-7">
-                    {product.tagline}
+                  <p className="mb-5 text-xl font-semibold leading-8 text-slate-900">
+                    {product.headline}
                   </p>
 
-                  <p className="text-black/75 font-lora leading-7 mb-8 max-w-xl">
-                    {product.description}
+                  <p className="mb-8 max-w-xl font-lora leading-8 text-slate-700">
+                    {product.summary}
                   </p>
 
-                  <div className="mt-auto">
+                  <div className="mt-auto flex flex-wrap items-center justify-between gap-4">
+                    <p className="text-sm font-semibold text-slate-500">
+                      For {product.buyer}
+                    </p>
                     <Link
-                      href={product.link}
-                      className="inline-flex items-center rounded-full bg-main text-white px-6 py-3 text-sm font-semibold font-karla tracking-[0.04em] hover:bg-main/90 transition-colors"
+                      href={product.href}
+                      className="inline-flex items-center gap-2 rounded-full bg-[#0E1116] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1C2530]"
                     >
-                      {product.cta}
+                      View product
+                      <ArrowRight className="size-4 transition group-hover:translate-x-1" />
                     </Link>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </Reveal>
           ))}
         </div>
+
+        <Reveal delay={160}>
+          <Link
+            href={supportingProducts[0].href}
+            className="mt-6 flex flex-col gap-4 rounded-[1.25rem] border border-[#d9ded7] bg-[#fbfaf6] p-6 transition hover:border-slate-300 sm:flex-row sm:items-center sm:justify-between"
+          >
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#B7A84D]">
+                Private product
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold text-slate-950">
+                {supportingProducts[0].name}
+              </h3>
+              <p className="mt-2 max-w-2xl font-lora leading-7 text-slate-700">
+                {supportingProducts[0].summary}
+              </p>
+            </div>
+            <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-slate-900">
+              Learn where it fits
+              <ArrowRight className="size-4" />
+            </span>
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

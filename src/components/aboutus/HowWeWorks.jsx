@@ -21,7 +21,7 @@ const HowWeWorks = () => {
       className: "",
       title: "Iterative Product Execution",
       description:
-        "Roadmap decisions are informed by real usage, operational feedback, and commercially relevant priorities.",
+        "Roadmap decisions are informed by customer usage, rollout feedback, and commercially relevant priorities.",
     },
     {
       icon: "/images/aboutus/compliance.png",
@@ -47,7 +47,8 @@ const HowWeWorks = () => {
           </h2>
           <p className="text-slate-700 font-lora text-base md:text-lg leading-8 mt-4">
             We keep delivery practical: clear ownership, strong engineering
-            standards, and product decisions tied to real operating conditions.
+            standards, and product decisions tied to customer operating
+            conditions.
           </p>
         </div>
 

@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function RouteLoader({ children }) {
   const pathname = usePathname();
   const [loading, setLoading] = useState(true);
-  const LOADER_TIME = 1200;
+  const LOADER_TIME = 700;
 
   useEffect(() => {
     if (!pathname) return;
@@ -39,7 +39,7 @@ export default function RouteLoader({ children }) {
           style={{
             position: "fixed",
             inset: 0,
-            background: "black",
+            background: "#0E1116",
             zIndex: 999999,
             display: "flex",
             justifyContent: "center",
@@ -51,23 +51,34 @@ export default function RouteLoader({ children }) {
           <div
             style={{
               position: "absolute",
-              width: 180,
-              height: 180,
+              width: 170,
+              height: 170,
               borderRadius: "50%",
-              border: "2px solid rgba(255,255,255,0.2)",
-              animation: "rotate 5s linear infinite",
+              border: "1px solid rgba(255,255,255,0.16)",
+              boxShadow: "inset 0 0 32px rgba(255,255,255,0.03)",
+              animation: "loaderPulse 1.7s ease-in-out infinite",
             }}
           />
 
-          {/* Scan-line */}
+          <div
+            style={{
+              position: "absolute",
+              width: 96,
+              height: 96,
+              borderRadius: "50%",
+              background:
+                "radial-gradient(circle, rgba(255,255,255,0.08), transparent 68%)",
+            }}
+          />
+
           <div
             style={{
               position: "absolute",
               width: "100%",
-              height: 80,
+              height: 64,
               background:
-                "linear-gradient(to bottom, transparent, rgba(0,255,255,0.25), transparent)",
-              animation: "scan 2s ease-in-out infinite",
+                "linear-gradient(to bottom, transparent, rgba(94,234,212,0.16), transparent)",
+              animation: "scan 1.9s ease-in-out infinite",
             }}
           />
 
@@ -75,11 +86,14 @@ export default function RouteLoader({ children }) {
           <Image
             src="/logo/logo.png"
             alt="Logo"
-            width={110}
-            height={28}
+            width={132}
+            height={49}
             className="animate-breathe"
+            priority
             style={{
               zIndex: 3,
+              width: 132,
+              height: "auto",
             }}
           />
         </div>
@@ -90,21 +104,22 @@ export default function RouteLoader({ children }) {
       </div>
 
       <style>{`
-        @keyframes rotate {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+        @keyframes loaderPulse {
+          0% { transform:scale(0.96); opacity:0.45; }
+          50% { transform:scale(1); opacity:0.9; }
+          100% { transform:scale(0.96); opacity:0.45; }
         }
         @keyframes scan {
-          0% { top:-20%; opacity:0;}
-          40% {opacity:0.6;}
-          50% {top:40%; opacity:1;}
-          60% {opacity:0.6;}
-          100% {top:120%; opacity:0;}
+          0% { top:-18%; opacity:0; }
+          42% { opacity:0.42; }
+          50% { top:42%; opacity:0.72; }
+          58% { opacity:0.42; }
+          100% { top:118%; opacity:0; }
         }
         @keyframes breathe {
-          0% { transform:scale(1); filter:drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
-          50% { transform:scale(1.05); filter:drop-shadow(0 0 12px rgba(255,255,255,0.7)); }
-          100% { transform:scale(1); filter:drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
+          0% { transform:scale(1); filter:drop-shadow(0 0 4px rgba(255,255,255,0.18)); opacity:0.88; }
+          50% { transform:scale(1.025); filter:drop-shadow(0 0 12px rgba(255,255,255,0.34)); opacity:1; }
+          100% { transform:scale(1); filter:drop-shadow(0 0 4px rgba(255,255,255,0.18)); opacity:0.88; }
         }
       `}</style>
     </>
