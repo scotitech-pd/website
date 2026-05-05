@@ -89,7 +89,7 @@ const GetInTouch = () => {
                 Speak with Our Team
               </h1>
               <p className="text-sm lg:text-[16px] xxl:text-lg leading-relaxed max-w-2xl font-lora text-slate-700">
-                Speak with ScotiTech about product access, rollout questions,
+                We can help with product access, rollout questions,
                 partnerships, or the solution that best fits your organisation.
               </p>
             </div>

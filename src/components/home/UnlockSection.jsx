@@ -31,9 +31,9 @@ export default function UnlockSection() {
           </h2>
           <p className="text-white/90 font-lora mb-4 text-lg leading-7 max-w-2xl">
             Teams work better when daily operations are clearer and technology
-            feels easier to trust. ScotiTech builds focused products that help
-            organisations improve internal distribution, reduce tool sprawl,
-            and support more efficient digital workflows.
+            feels easier to trust. ScotiTech builds focused software products
+            that help organisations improve internal distribution, reduce tool
+            sprawl, and support more efficient digital workflows.
           </p>
 
           <p className="text-sm md:text-lg bg-main/90 inline-block px-2 sm:px-4 py-1 font-karla rounded-md">

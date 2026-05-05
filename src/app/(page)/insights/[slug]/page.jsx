@@ -63,6 +63,10 @@ export default async function InsightArticlePage({ params }) {
   }
 
   const articleUrl = `${SITE_URL}/insights/${insight.slug}`;
+  const contentSections = Array.isArray(insight.sections) ? insight.sections : [];
+  const actionItems = Array.isArray(insight.actionItems)
+    ? insight.actionItems.filter(Boolean)
+    : [];
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -183,15 +187,15 @@ export default async function InsightArticlePage({ params }) {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
             <article className="rounded-[1.15rem] border border-[#d9ded7] bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.06)] sm:p-8 lg:p-10">
               <div className="space-y-10">
-                {insight.sections.map((section) => (
-                  <section key={section.heading}>
+                {contentSections.map((section, sectionIndex) => (
+                  <section key={`${section.heading}-${sectionIndex}`}>
                     <h2 className="text-2xl sm:text-3xl font-karla font-semibold text-slate-900 mb-4">
                       {section.heading}
                     </h2>
                     <div className="space-y-5">
-                      {section.paragraphs.map((paragraph) => (
+                      {section.paragraphs.map((paragraph, paragraphIndex) => (
                         <p
-                          key={paragraph}
+                          key={`${section.heading}-${paragraphIndex}`}
                           className="text-slate-700 font-lora leading-8 text-base sm:text-lg"
                         >
                           {paragraph}
@@ -202,27 +206,27 @@ export default async function InsightArticlePage({ params }) {
                 ))}
               </div>
 
-              <div className="mt-12 rounded-[1.75rem] border border-slate-200 bg-[#F8FAFC] p-6 sm:p-8">
-                <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#0F766E] mb-3">
-                  Practical takeaways
-                </p>
-                <h2 className="text-2xl sm:text-3xl font-karla font-semibold text-slate-900 mb-6">
-                  How to apply this insight
-                </h2>
-                <div className="grid grid-cols-1 gap-4">
-                  {insight.actionItems.map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4"
-                    >
-                      <CheckCircle2 className="mt-1 size-5 shrink-0 text-[#0F766E]" />
-                      <p className="font-lora leading-7 text-slate-700">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
+              {actionItems.length > 0 && (
+                <div className="mt-12 rounded-[1.75rem] border border-slate-200 bg-[#F8FAFC] p-6 sm:p-8">
+                  <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#0F766E] mb-3">
+                    Practical takeaways
+                  </p>
+                  <h2 className="text-2xl sm:text-3xl font-karla font-semibold text-slate-900 mb-6">
+                    How to apply this insight
+                  </h2>
+                  <ul className="grid grid-cols-1 gap-4" aria-label="Practical takeaways">
+                    {actionItems.map((item, index) => (
+                      <li
+                        key={`takeaway-${index}`}
+                        className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4"
+                      >
+                        <CheckCircle2 className="mt-1 size-5 shrink-0 text-[#0F766E]" />
+                        <p className="font-lora leading-7 text-slate-700">{item}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              )}
             </article>
 
             <aside className="lg:sticky lg:top-28 space-y-5">

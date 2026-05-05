@@ -31,11 +31,11 @@ function Hero() {
               Contact ScotiTech
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-[#111827] sm:text-5xl lg:text-6xl">
-              Talk to the team building the product portfolio.
+              Talk to our product team.
             </h1>
             <p className="mt-6 max-w-3xl font-lora text-lg leading-8 text-slate-700">
-              Speak with ScotiTech about product access, rollout fit,
-              commercial evaluation, partnerships, or company enquiries.
+              We can help with product access, rollout fit, commercial
+              evaluation, partnerships, or company enquiries.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a

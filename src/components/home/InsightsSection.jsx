@@ -2,11 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarDays } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import { featuredInsight, insights } from "@/lib/insights";
+import { featuredInsight } from "@/lib/insights";
 
 export default function InsightsSection() {
-  const relevantInsights = insights.slice(1, 4);
-
   return (
     <section className="relative overflow-hidden bg-[#F7F7F5] py-12 md:py-16">
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
@@ -51,51 +49,14 @@ export default function InsightsSection() {
               </Link>
               <Link
                 href="/insights"
-                className="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition-colors hover:border-slate-400"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition-colors hover:border-slate-400"
               >
-                View insights
+                Read all insights
+                <ArrowRight className="size-4" />
               </Link>
             </div>
           </div>
         </Reveal>
-
-        <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
-          {relevantInsights.map((insight, index) => (
-            <Reveal
-              key={insight.slug}
-              delay={index * 90}
-              className="h-full"
-              variant="soft"
-            >
-              <Link
-                href={`/insights/${insight.slug}`}
-                className="group flex h-full flex-col justify-between rounded-[1.1rem] border border-[#d9ded7] bg-white p-5 shadow-[0_14px_35px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_18px_45px_rgba(15,23,42,0.08)]"
-              >
-                <div>
-                  <div className="mb-4 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-[#ECFDF5] px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#0F766E]">
-                      {insight.category}
-                    </span>
-                    <span className="rounded-full border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-500">
-                      {insight.readTime}
-                    </span>
-                  </div>
-                  <h3 className="mb-3 text-xl font-semibold leading-snug text-slate-900">
-                    {insight.title}
-                  </h3>
-                  <p className="font-lora text-sm leading-7 text-slate-600">
-                    {insight.summary}
-                  </p>
-                </div>
-
-                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-slate-900">
-                  Read briefing
-                  <ArrowRight className="size-4 transition group-hover:translate-x-1" />
-                </span>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );

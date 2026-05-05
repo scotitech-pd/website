@@ -6,7 +6,7 @@ export const insights = [
     title:
       "Private Apple app rollout needs more than App Store approval",
     summary:
-      "Apple gives organisations a strong private distribution route through Custom Apps and Apple Business Manager. The business gap is usually not approval; it is controlled access, rollout communication, install readiness, and support ownership.",
+      "Apple gives organisations a strong private distribution route through Custom Apps and Apple Business. The business gap is usually not approval; it is controlled access, rollout communication, install readiness, and support ownership.",
     seoDescription:
       "A practical ScotiTech briefing on Apple Custom Apps, private distribution, and why internal iOS rollout needs a controlled operating layer after approval.",
     date: "2026-05-04",
@@ -15,8 +15,8 @@ export const insights = [
     readTime: "5 min read",
     sourceName: "Apple Developer",
     sourceUrl: "https://developer.apple.com/support/volume-purchase-and-custom-apps/",
-    image: "/images/insights/private-apple-rollout.svg",
-    tags: ["Custom Apps", "Apple Business Manager", "Private rollout", "AppDeploy"],
+    image: "/images/insights/private-app-rollout.jpg",
+    tags: ["Custom Apps", "Apple Business", "Private rollout", "AppDeploy"],
     relatedProduct: {
       name: "AppDeploy",
       href: "/products/appdeploy",
@@ -29,7 +29,7 @@ export const insights = [
         label: "Primary route",
         value: "Custom Apps",
         description:
-          "Apple supports private app availability for selected organisations through Apple Business Manager or Apple School Manager.",
+          "Apple supports private app availability for selected organisations through Apple Business.",
       },
       {
         label: "Key timing",
@@ -48,7 +48,7 @@ export const insights = [
       {
         heading: "What Apple provides",
         paragraphs: [
-          "Apple supports private app distribution for businesses through Custom Apps, where an approved app can be made available to specific organisations in Apple Business Manager or Apple School Manager.",
+          "Apple supports private app distribution for businesses through Custom Apps, where an approved app can be made available to specific organisations in Apple Business.",
           "This is a strong platform route for proprietary apps, partner apps, internal workflow tools, and controlled audience releases. Apple explains that organisations can distribute approved Custom Apps through Mobile Device Management or redemption codes.",
         ],
       },
@@ -69,16 +69,16 @@ export const insights = [
       {
         heading: "The ScotiTech view",
         paragraphs: [
-          "Private Apple distribution works best when the technical route is matched with a clear business workflow. AppDeploy is positioned around that gap: branded access, install guidance, request handling, and rollout visibility for private or internal iOS apps.",
-          "The goal is not to replace Apple Business Manager. The goal is to make private rollout easier for real teams who need control, clarity, and fewer manual handoffs.",
+          "Private Apple distribution works best when the technical route is matched with a clear business workflow. AppDeploy supports that workflow with branded access, install guidance, request handling, and rollout visibility for private or internal iOS apps.",
+          "This complements Apple Business with a clearer rollout experience for teams that need control, clarity, and fewer manual handoffs.",
         ],
       },
     ],
     actionItems: [
-      "Confirm the intended audience and distribution route before submission, so launch decisions do not move late in review.",
-      "Use a clear access model that shows who can request the app, who approves access, and where support sits.",
-      "Give users one branded install path with current instructions, eligibility guidance, and contact details.",
-      "Keep rollout records visible enough to understand which audience has access to each approved version.",
+      "Confirm your audience and distribution route before submission to prevent late rollout changes.",
+      "Define app access ownership for requests, approvals, and support accountability.",
+      "Provide one branded install path with current instructions, eligibility guidance, and support contact.",
+      "Track rollout status clearly by approved version and eligible audience.",
     ],
   },
   {
@@ -98,7 +98,7 @@ export const insights = [
     sourceName: "GOV.UK",
     sourceUrl:
       "https://www.gov.uk/government/publications/ai-cyber-security-code-of-practice/code-of-practice-for-the-cyber-security-of-ai",
-    image: "/images/insights/secure-ai-governance.svg",
+    image: "/images/insights/secure-ai-governance.jpg",
     tags: ["AI security", "Governance", "Secure deployment", "AXOS"],
     relatedProduct: {
       name: "AXOS",
@@ -152,16 +152,16 @@ export const insights = [
       {
         heading: "The ScotiTech view",
         paragraphs: [
-          "AXOS should be positioned as a private workspace approach for teams that want useful AI support without losing control over access, files, tasks, and operating boundaries.",
-          "This keeps the core ScotiTech positioning intact: practical software for private workflows, now with a clearer secure AI angle for teams that need governance without unnecessary complexity.",
+          "AXOS gives teams a private workspace for useful AI support without losing control over access, files, tasks, and operating boundaries.",
+          "It reflects ScotiTech’s practical software approach for private workflows, with a clear secure AI path for teams that need governance without unnecessary complexity.",
         ],
       },
     ],
     actionItems: [
-      "Start with the workflows where AI already touches business data, customer information, or decision-support outputs.",
-      "Separate user access, file access, and AI assistance so each workspace has clear boundaries.",
-      "Make data use, output review, and accountability visible before expanding AI availability.",
-      "Include monitoring, incident response, and data disposal in the operating model, not as later add-ons.",
+      "Start with workflows where AI already touches business data or decision-support outputs.",
+      "Separate user access, file access, and AI assistance to set clear workspace boundaries.",
+      "Make data use, output review, and accountability visible before expanding AI access.",
+      "Include monitoring, incident response, and data disposal in the operating model from day one.",
     ],
   },
   {
@@ -181,7 +181,7 @@ export const insights = [
     sourceName: "GOV.UK",
     sourceUrl:
       "https://www.gov.uk/government/publications/software-security-code-of-practice",
-    image: "/images/insights/software-security-code.svg",
+    image: "/images/insights/software-security.jpg",
     tags: ["Software security", "Vendor assurance", "Secure by design", "Governance"],
     relatedProduct: {
       name: "ScotiTech product portfolio",
@@ -235,28 +235,28 @@ export const insights = [
       {
         heading: "The ScotiTech view",
         paragraphs: [
-          "ScotiTech should continue presenting its products as focused and practical, while making the security posture explicit: controlled deployment, private workflow boundaries, clear product ownership, and data-aware operating paths.",
-          "That is stronger than broad claims. It gives buyers a credible reason to engage and a clear set of questions to take into a product-fit conversation.",
+          "ScotiTech products stay strongest when security posture is explicit: controlled deployment, private workflow boundaries, clear ownership, and data-aware operating paths.",
+          "This gives buyers practical confidence and a clear set of questions for product-fit conversations.",
         ],
       },
     ],
     actionItems: [
-      "Present security as part of the product experience, covering development, deployment, maintenance, and support.",
-      "Explain how customer-impacting issues, vulnerabilities, incidents, and end-of-support changes are communicated.",
-      "Make control, access, data handling, and rollout ownership easy for buyers to understand from the product page.",
-      "Use recognised guidance to support enterprise conversations without overstating maturity or adding unnecessary complexity.",
+      "Present security as part of the product experience across development, deployment, maintenance, and support.",
+      "Explain how vulnerabilities, incidents, and end-of-support changes are communicated to customers.",
+      "Show control, access, data handling, and rollout ownership clearly on product pages.",
+      "Use recognised guidance in enterprise conversations without overstating maturity or adding complexity.",
     ],
   },
   {
-    slug: "apple-business-replaces-apple-business-manager",
+    slug: "apple-business-sme-impact",
     category: "Industry Update",
     topic: "Apple ecosystem",
     title:
-      "Apple Business replaces Apple Business Manager: the SME impact",
+      "Apple Business: the SME impact",
     summary:
       "Apple is consolidating device management, employee access, app distribution, brand presence, and support into Apple Business. For SMEs, the shift creates a clearer platform foundation for rollout, governance, and day-to-day operations.",
     seoDescription:
-      "A practical ScotiTech briefing on Apple Business replacing Apple Business Manager, what changed on 14 April 2026, and how SMEs should approach device deployment, MDM, access governance, and app rollout.",
+      "A practical ScotiTech briefing on Apple Business, what changed on 14 April 2026, and how SMEs should approach device deployment, MDM, access governance, and app rollout.",
     date: "2026-03-24",
     updated: "2026-04-29",
     displayDate: "24 March 2026",
@@ -264,7 +264,7 @@ export const insights = [
     sourceName: "Apple Newsroom",
     sourceUrl:
       "https://www.apple.com/newsroom/2026/03/introducing-apple-business-a-new-all-in-one-platform-for-businesses-of-all-sizes/",
-    image: "/images/insights/apple-business-platform.svg",
+    image: "/images/insights/team-discussion.jpg",
     tags: ["Apple Business", "MDM", "SME technology", "AppDeploy"],
     relatedProduct: {
       name: "AppDeploy",
@@ -284,7 +284,7 @@ export const insights = [
         label: "What is changing",
         value: "One platform",
         description:
-          "Apple Business brings together capabilities previously spread across Business Manager, Business Essentials, and Business Connect.",
+          "Apple Business brings together device, employee-access, app distribution, brand presence, and support capabilities.",
       },
       {
         label: "Why it matters",
@@ -298,7 +298,7 @@ export const insights = [
         heading: "What Apple announced",
         paragraphs: [
           "On 24 March 2026, Apple announced Apple Business as a new all-in-one platform for organisations. Apple said the platform would be available from 14 April 2026 in more than 200 countries and regions.",
-          "The important change is consolidation. Apple Business Manager, Apple Business Essentials, and Apple Business Connect are being folded into Apple Business, creating one place for device management, employee access, app distribution, business identity, location details, and support options.",
+          "The important change is consolidation. Apple Business creates one place for device management, employee access, app distribution, business identity, location details, and support options.",
         ],
       },
       {
@@ -318,16 +318,16 @@ export const insights = [
       {
         heading: "The ScotiTech view",
         paragraphs: [
-          "This announcement strengthens the case for a professional access layer around internal app distribution. Apple can simplify the platform foundation, while products such as AppDeploy help organisations present branded access, manage requests, coordinate rollout steps, and support non-technical stakeholders.",
-          "The strongest outcome is a clearer path from employee onboarding to secure app access, with fewer manual handoffs and less uncertainty for administrators and users.",
+          "This update strengthens the case for a professional access layer around internal app distribution. Apple can simplify the platform foundation, while AppDeploy helps organisations present branded access, manage requests, coordinate rollout steps, and support non-technical stakeholders.",
+          "The outcome is a clearer path from employee onboarding to secure app access, with fewer manual handoffs and less uncertainty for administrators and users.",
         ],
       },
     ],
     actionItems: [
       "Treat Apple Business as a chance to simplify device, app, employee-access, and support ownership.",
-      "Translate existing Apple Business Manager, Business Essentials, and Business Connect activity into the new operating structure.",
-      "Remove fragmented app rollout steps that still rely on manual messages, email approvals, or disconnected support routes.",
-      "Create a clearer access process around requests, release communication, governance, and user support.",
+      "Map existing device, app, and access activity into one Apple Business operating structure.",
+      "Remove rollout steps that still rely on manual messages, email approvals, or disconnected support routes.",
+      "Create a clear access workflow for requests, release communication, governance, and user support.",
     ],
   },
 ];

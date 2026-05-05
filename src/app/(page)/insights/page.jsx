@@ -4,7 +4,6 @@ import {
   ArrowRight,
   CalendarDays,
   Clock3,
-  FileText,
   SearchCheck,
 } from "lucide-react";
 import { featuredInsight, insights } from "@/lib/insights";
@@ -14,24 +13,6 @@ export const metadata = {
   description:
     "Evidence-led ScotiTech briefings on platform changes, rollout decisions, and technology shifts that matter to growing businesses.",
 };
-
-const principles = [
-  {
-    title: "Business relevance",
-    description:
-      "Briefings focus on platform, security, AI, and operational changes that affect product rollout, device strategy, and digital workflows.",
-  },
-  {
-    title: "Decision-ready context",
-    description:
-      "Each article explains what changed, why it matters, and how teams can turn the update into practical next steps.",
-  },
-  {
-    title: "Named-source analysis",
-    description:
-      "Every briefing is grounded in credible sources and written to support clear, informed business decisions.",
-  },
-];
 
 export default function InsightsPage() {
   return (
@@ -144,26 +125,7 @@ export default function InsightsPage() {
 
       <section className="pb-16 sm:pb-20">
         <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {principles.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[1.15rem] border border-[#d9ded7] bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.05)]"
-              >
-                <div className="size-10 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center mb-5">
-                  <FileText className="size-5" />
-                </div>
-                <h3 className="text-xl font-karla font-semibold text-slate-900 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600 font-lora leading-7">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12">
+          <div>
             <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-5">
               Latest briefings
             </p>
