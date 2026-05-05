@@ -3,7 +3,7 @@ import Pagehome from "@/components/home/Pagehome";
 export const metadata = {
   title: "ScotiTech Solutions | Focused Software Products",
   description:
-    "ScotiTech builds AppDeploy, AXOS, and focused product software for private app rollout, controlled workspaces, and policy-aligned AI-assisted operations.",
+    "ScotiTech builds focused software products for private app rollout, secure AI workflows, and practical team operations.",
 };
 
 export default function Page() {

@@ -53,9 +53,8 @@ export default function HeroSection() {
             </h1>
 
             <p className="mt-6 max-w-2xl font-lora text-lg leading-8 text-slate-700 md:text-xl">
-              ScotiTech builds focused products for controlled app
-              distribution, private workspace operations, and deployment paths
-              aligned with how teams manage access, data, and policy.
+              ScotiTech builds focused software products for private app
+              rollout, secure AI workflows, and practical team operations.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">

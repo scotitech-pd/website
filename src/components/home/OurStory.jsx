@@ -38,14 +38,14 @@ const OurStory = () => {
             />
             <div className="hidden min-[1225px]:flex absolute -top-10 left-1/2 -translate-x-1/2 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.1)] rounded-xl px-6 py-4 w-[90%] md:w-[80%] text-center border border-gray-200">
               <p className="text-black text-[15px] leading-6">
-                ScotiTech builds focused products, clear rollout paths, and
-                dependable software for everyday work.
+                ScotiTech builds focused software products, clear rollout
+                paths, and dependable tools for everyday work.
               </p>
             </div>
             <div className="min-[1186px]:hidden mt-3 flex shadow-[0_18px_40px_rgba(15,23,42,0.1)] bg-white rounded-xl px-2 sm:px-6 py-4 max-w-[780px]  mx-auto text-center border border-gray-200">
               <p className="text-black text-lg leading-6">
-                ScotiTech builds focused products, clear rollout paths, and
-                dependable software for everyday work.
+                ScotiTech builds focused software products, clear rollout
+                paths, and dependable tools for everyday work.
               </p>
             </div>
           </div>

@@ -28,7 +28,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "ScotiTech Solutions | Focused Software Products",
   description:
-    "ScotiTech builds focused software products for private app rollout, team operations, and policy-aligned AI-assisted work.",
+    "ScotiTech builds focused software products for private app rollout, secure AI workflows, and practical team operations.",
 };
 
 export default function RootLayout({ children }) {
