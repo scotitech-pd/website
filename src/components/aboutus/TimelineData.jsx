@@ -24,7 +24,7 @@ export default function Timeline() {
     {
       year: "2022",
       title: "The Spark",
-      desc1: "Where early friction began to shape the product direction.",
+      desc1: "Where early friction began to shape the product strategy.",
       desc2:
         "The founders identified recurring gaps across accessibility, internal app distribution, and digital workflows.",
       side: "left",
@@ -33,14 +33,14 @@ export default function Timeline() {
       year: "2023",
       title: "Exploration and Early Prototypes",
       desc1: "Early experiments created clearer product insight.",
-      desc2: "The team built prototypes and tested them against real user and operational problems.",
+      desc2: "The team built prototypes and tested them against customer and rollout problems.",
       side: "right",
     },
     {
       year: "2024",
       title: "From Ideas to Working Solutions",
       desc1: "Concepts started turning into working products.",
-      desc2: "ClarityPath’s App Store setback and the move toward Apple Business distribution helped shape AppDeploy, while broader operational needs also started informing the AXOS direction.",
+      desc2: "ClarityPath’s move toward Apple Business distribution helped shape AppDeploy, while broader operational needs also started informing AXOS.",
       side: "left",
     },
     {
@@ -57,13 +57,13 @@ export default function Timeline() {
       title: "Building the ScotiTech Ecosystem",
       desc1: "A year of execution, expansion, and product refinement.",
       desc2:
-        "Major development continued across AppDeploy and AXOS as the two main platform directions, with ClarityPath supporting the wider product portfolio.",
+        "Major development continued across AppDeploy and AXOS, with ClarityPath adding a focused decision-support product to the portfolio.",
       side: "left",
     },
     {
       year: "2026+",
       title: "Looking Ahead",
-      desc1: "Building practical software with stronger trust and control.",
+      desc1: "Building practical software with stronger trust and ownership.",
       desc2: "The focus remains on product maturity, privacy-conscious infrastructure, and wider adoption across modern digital operations.",
       side: "right",
     },

@@ -84,7 +84,7 @@ export default async function InsightArticlePage({ params }) {
   };
 
   return (
-    <main className="bg-[#f7f7f5] text-[#0F172A]">
+    <main className="bg-[#F7F7F5] text-[#0F172A]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -93,7 +93,7 @@ export default async function InsightArticlePage({ params }) {
       />
 
       <section className="relative overflow-hidden py-12 sm:py-16">
-        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(79,70,229,0.08),transparent_34%),linear-gradient(315deg,rgba(15,118,110,0.07),transparent_30%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.08),transparent_34%),linear-gradient(315deg,rgba(15,118,110,0.07),transparent_30%)]" />
 
         <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
           <Link
@@ -107,7 +107,7 @@ export default async function InsightArticlePage({ params }) {
           <div className="grid grid-cols-1 xl:grid-cols-[58%_42%] gap-10 items-start">
             <div>
               <div className="mb-5 flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-[#BCB96A] px-4 py-1.5 text-xs font-karla font-bold uppercase tracking-[0.14em] text-white">
+                <span className="rounded-full bg-[#B7A84D] px-4 py-1.5 text-xs font-karla font-bold uppercase tracking-[0.14em] text-white">
                   {insight.category}
                 </span>
                 <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 text-xs font-karla font-semibold uppercase tracking-[0.14em] text-slate-500">
@@ -143,7 +143,7 @@ export default async function InsightArticlePage({ params }) {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.10)]">
+            <div className="overflow-hidden rounded-[1.15rem] border border-[#d9ded7] bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
               <div className="relative min-h-[260px] bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(79,116,243,0.34),transparent_52%),linear-gradient(315deg,rgba(188,185,106,0.22),transparent_46%)]" />
                 <Image
@@ -181,7 +181,7 @@ export default async function InsightArticlePage({ params }) {
       <section className="pb-16 sm:pb-24">
         <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
-            <article className="rounded-[2rem] border border-slate-200 bg-white p-6 sm:p-8 lg:p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+            <article className="rounded-[1.15rem] border border-[#d9ded7] bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.06)] sm:p-8 lg:p-10">
               <div className="space-y-10">
                 {insight.sections.map((section) => (
                   <section key={section.heading}>
@@ -203,11 +203,11 @@ export default async function InsightArticlePage({ params }) {
               </div>
 
               <div className="mt-12 rounded-[1.75rem] border border-slate-200 bg-[#F8FAFC] p-6 sm:p-8">
-                <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5] mb-3">
-                  SME checklist
+                <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#0F766E] mb-3">
+                  Practical takeaways
                 </p>
                 <h2 className="text-2xl sm:text-3xl font-karla font-semibold text-slate-900 mb-6">
-                  What to review next
+                  How to apply this insight
                 </h2>
                 <div className="grid grid-cols-1 gap-4">
                   {insight.actionItems.map((item) => (
@@ -226,12 +226,12 @@ export default async function InsightArticlePage({ params }) {
             </article>
 
             <aside className="lg:sticky lg:top-28 space-y-5">
-              <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+              <div className="rounded-[1.15rem] border border-[#d9ded7] bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.05)]">
                 <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-3">
                   Original source
                 </p>
                 <h2 className="text-xl font-karla font-semibold text-slate-900 mb-4">
-                  Apple announcement
+                  {insight.sourceName}
                 </h2>
                 <a
                   href={insight.sourceUrl}
@@ -244,22 +244,21 @@ export default async function InsightArticlePage({ params }) {
                 </a>
               </div>
 
-              <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+              <div className="rounded-[1.15rem] border border-[#d9ded7] bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.05)]">
                 <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-3">
                   Related product
                 </p>
                 <h2 className="text-xl font-karla font-semibold text-slate-900 mb-3">
-                  AppDeploy
+                  {insight.relatedProduct.name}
                 </h2>
                 <p className="text-slate-600 font-lora leading-7 mb-5">
-                  A branded operational layer for controlled internal iOS app
-                  distribution and rollout workflows.
+                  {insight.relatedProduct.description}
                 </p>
                 <Link
-                  href="/products/appdeploy"
+                  href={insight.relatedProduct.href}
                   className="inline-flex items-center gap-2 text-sm font-karla font-semibold text-slate-900"
                 >
-                  Explore AppDeploy
+                  {insight.relatedProduct.cta}
                   <ArrowRight className="size-4" />
                 </Link>
               </div>

@@ -1,9 +1,9 @@
 import Pagehome from "@/components/home/Pagehome";
 
 export const metadata = {
-  title: "ScotiTech Solutions | Trusted Digital Products and Technology",
+  title: "ScotiTech Solutions | Focused Software Products",
   description:
-    "ScotiTech Solutions builds practical digital products across app distribution, operations, AI, and privacy-conscious software.",
+    "ScotiTech builds AppDeploy, AXOS, and focused product software for private app rollout, controlled workspaces, and policy-aligned AI-assisted operations.",
 };
 
 export default function Page() {

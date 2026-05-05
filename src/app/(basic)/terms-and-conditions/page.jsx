@@ -205,21 +205,7 @@ const TermsAndConditions = () => {
             ScotiTech Solutions Limited
           </p>
           <p>
-            179 ResCo-work 04 LANARKSHIRE, Eurocentral
-            <br />
-            Maxim Business Park
-            <br />
-            Maxim 1 – 1st Floor
-            <br />
-            2 Parklands Way, Eurocentral
-            <br />
-            LANARKSHIRE
-            <br />
-            Dumfries & Galloway Region
-            <br />
-            ML1 4WR
-            <br />
-            United Kingdom
+            Eurocentral, 2 Parklands Way Maxim 1, Maxim Business Park, 1st, Motherwell ML1 4WR, UK
           </p>
           <div className="text-center font-karla text-wrap block text-red-600">
             <a href="mailto:privacy@scotitech.com">

@@ -16,17 +16,13 @@ const logos = [
     image: "/images/aboutus/no94oo-logo.png",
     href: null,
   },
-  { name: "Northfield Group", image: null, href: null },
-  { name: "Harbour Works", image: null, href: null },
-  { name: "Crestline Health", image: null, href: null },
-  { name: "Westbridge Studio", image: null, href: null },
 ];
 
 const marqueeLogos = [...logos, ...logos];
 
 const LogoTile = ({ logo }) => {
   const content = (
-    <div className="flex min-w-[220px] items-center justify-center rounded-[1.5rem] border border-slate-200 bg-white px-8 py-6 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
+    <div className="flex min-w-[220px] items-center justify-center rounded-[1.15rem] border border-[#d9ded7] bg-white px-8 py-6 shadow-[0_18px_45px_rgba(15,23,42,0.05)]">
       {logo.image ? (
         <img
           src={logo.image}
@@ -60,20 +56,19 @@ const LogoTile = ({ logo }) => {
 
 export default function ClientLogoStrip() {
   return (
-    <section className="relative overflow-hidden bg-[#f7f7f5] py-14 md:py-18">
+    <section className="relative overflow-hidden bg-[#F7F7F5] py-14 md:py-[4.5rem]">
 
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="mx-auto mb-8 max-w-3xl text-center">
-          <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80">
-            Trusted by Early Clients and Partners
+          <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.2em] text-[#0F766E]">
+            Early Relationships
           </p>
           <h2 className="mb-4 font-karla text-3xl font-semibold text-[#0F172A] md:text-5xl">
-            Trusted relationships across client and partner work
+            Client and partner signals from real delivery work
           </h2>
           <p className="font-lora text-lg leading-8 text-slate-700">
-            This section highlights the organisations represented across the
-            current portfolio story, with client and partner identities shown
-            in a clean, restrained format that fits the wider site.
+            A concise view of early relationships connected to ScotiTech’s
+            product development, implementation, and delivery activity.
           </p>
         </div>
 

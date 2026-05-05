@@ -1,57 +1,91 @@
-import { ArrowRight } from "lucide-react";
-import React from "react";
+import Link from "next/link";
+import { ArrowRight, CalendarCheck2, Mail, MessageSquareText } from "lucide-react";
+import { meetingLinks } from "@/lib/scheduling";
+
+const contactRoutes = [
+  {
+    title: "Product access",
+    description: "Discuss AppDeploy, AXOS, or private product evaluation.",
+    icon: MessageSquareText,
+  },
+  {
+    title: "Commercial fit",
+    description: "Review buyer fit, rollout size, and next-step timing.",
+    icon: CalendarCheck2,
+  },
+  {
+    title: "General contact",
+    description: "Reach the team for partnerships, media, or company queries.",
+    icon: Mail,
+  },
+];
 
 function Hero() {
   return (
-    <div className="relative w-full h-[400px] lg:h-[600px] bg-center bg-cover bg-no-repeat flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:items-center overflow-hidden bg-[url('/images/contact/herobg-m.png')]">
-      {/* Background Image for Mobile */}
-      <img
-        src="/images/contact/herobrain.png"
-        alt="Contact Hero Background"
-        className="absolute lg:hidden opacity-30 w-[350px] sm:w-[400px] max-w-full top-[100px] right-0 left-0 mx-auto"
-      />
+    <section className="relative overflow-hidden bg-[#F7F7F5] py-14 sm:py-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_8%,rgba(15,118,110,0.13),transparent_30%),radial-gradient(circle_at_86%_12%,rgba(37,99,235,0.10),transparent_26%)]" />
+      <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+        <div className="grid items-center gap-10 lg:grid-cols-[52%_48%]">
+          <div>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+              Contact ScotiTech
+            </p>
+            <h1 className="text-4xl font-semibold leading-tight text-[#111827] sm:text-5xl lg:text-6xl">
+              Talk to the team building the product portfolio.
+            </h1>
+            <p className="mt-6 max-w-3xl font-lora text-lg leading-8 text-slate-700">
+              Speak with ScotiTech about product access, rollout fit,
+              commercial evaluation, partnerships, or company enquiries.
+            </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href={meetingLinks.appdeploy}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E1116] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(14,17,22,0.18)] transition hover:bg-[#1C2530]"
+              >
+                Book AppDeploy session
+                <ArrowRight className="size-4" />
+              </a>
+              <a
+                href={meetingLinks.axos}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#cfd7cf] bg-white px-7 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-white"
+              >
+                Book AXOS session
+                <ArrowRight className="size-4" />
+              </a>
+              <Link
+                href="/products"
+                className="inline-flex items-center justify-center rounded-full border border-[#cfd7cf] bg-white/80 px-7 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-white"
+              >
+                Review products first
+              </Link>
+            </div>
+          </div>
 
-      {/* Content Container */}
-      <div className="relative z-10 w-full max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 flex flex-col lg:flex-row justify-between items-center lg:items-center">
-        {/* Left Text Section */}
-        <div className="flex flex-col justify-center w-full items-start text-left lg:items-start lg:text-left">
-          <h2 className="text-white text-2xl font-bold font-karla lg:text-4xl max-[1040px]:text-3xl">
-            Talk to ScotiTech
-          </h2>
-
-          <p className="text-white hidden lg:block text-lg font-lora mt-5 leading-7.5 max-[1040px]:text-2xl md:text-left">
-            Whether you are exploring internal app distribution, private
-            operational tooling, or a broader product fit conversation, our
-            team can help you evaluate the right next step.
-          </p>
-
-          <p className="text-white lg:hidden text-sm font-lora mt-5 leading-6 max-[1040px]:text-base">
-            Speak with our team about the product, rollout path, or commercial
-            fit that best matches your needs.
-          </p>
-
-          {/* Button */}
-          <a
-            href="https://calendly.com/pradeepdahiya2411/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center lg:gap-2 gap-1 bg-white text-black lg:px-5 px-3 py-2.5 rounded-lg font-karla lg:text-[16px] font-semibold hover:bg-main-dark hover:text-white transition-all shadow-lg mt-6 sm:mt-8 w-fit text-[12px]"
-          >
-            Speak with Our Team
-            <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1" />
-          </a>
-        </div>
-
-        {/* Right Image Section for Desktop */}
-        <div className="hidden lg:flex relative justify-end">
-          <img
-            src="/images/contact/herobrain.png"
-            alt="Contact Hero"
-            className="max-w-[500px]"
-          />
+          <div className="rounded-[1.2rem] border border-[#d9ded7] bg-white p-4 shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
+            <div className="grid gap-3">
+              {contactRoutes.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-[1rem] border border-[#d9ded7] bg-[#f8fafc] p-5"
+                >
+                  <item.icon className="mb-4 size-5 text-[#0F766E]" />
+                  <h2 className="text-xl font-semibold text-slate-950">
+                    {item.title}
+                  </h2>
+                  <p className="mt-2 font-lora leading-7 text-slate-700">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

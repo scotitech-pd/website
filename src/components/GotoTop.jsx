@@ -31,14 +31,14 @@ const GotoTop = () => {
     <>
       {Visible && (
         <div
-          className="z-50 fixed right-4 bottom-6 shadow-2xl bg-[#641171] rounded-full duration-300 hover:bg-[#E38DF0] text-white"
+          className="z-50 fixed right-4 bottom-6 rounded-full border border-white/30 bg-[#0E1116] text-white shadow-[0_18px_36px_rgba(14,17,22,0.22)] duration-300 hover:bg-[#1C2530]"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           <div
             className="
               relative 
-              h-15 w-15 
+              h-[3.75rem] w-[3.75rem] 
               overflow-hidden 
               max-sm:h-12 max-sm:w-12    /* Smaller button on mobile */
             "
@@ -78,7 +78,7 @@ const GotoTop = () => {
                   size-14 
                   max-sm:size-10   /* Smaller arrow on mobile */
                   p-[2px] rounded-full 
-                  duration-300 text-black
+                  duration-300 text-white
                 "
                 onClick={scrollToTop}
               />

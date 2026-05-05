@@ -8,21 +8,21 @@ const contactDetails = [
   {
     icon: "location",
     title:
-      "Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business Park, 1st, Motherwell ML1 4WR, UK",
+      "Eurocentral, 2 Parklands Way Maxim 1, Maxim Business Park, 1st, Motherwell ML1 4WR, UK",
     type: "location",
     style: "text-left",
   },
-  { icon: "phone", title: "+44 20 7946 0958", type: "phone" },
+  { icon: "phone", title: "+44 (0) 1698 708203", type: "phone" },
   { icon: "email", title: "info@scotitech.com", type: "email" },
   { icon: "time", title: "Mon-Fri", subtitle: "9:00 AM - 5:30 PM GMT", type: "time" },
 ];
 
 /* values section */
 const valueCards = [
-  { icon: "/images/contact/insights.png", text: "Clear product conversations grounded in real use cases.", bg: "bg-purple-100" },
+  { icon: "/images/contact/insights.png", text: "Clear product conversations grounded in practical use cases.", bg: "bg-emerald-100" },
   { icon: "/images/contact/data.png", text: "Practical guidance on rollout, onboarding, and product fit.", bg: "bg-blue-100" },
-  { icon: "/images/contact/technology.png", text: "A technical team focused on clarity, control, and usable software.", bg: "bg-teal-100" },
-  { icon: "/images/contact/growth.png", text: "Direct contact for partnerships, commercial discussions, and product access.", bg: "bg-purple-100" },
+  { icon: "/images/contact/technology.png", text: "A technical team focused on clarity, ownership, and usable software.", bg: "bg-teal-100" },
+  { icon: "/images/contact/growth.png", text: "Direct contact for partnerships, commercial discussions, and product access.", bg: "bg-amber-100" },
 ];
 
 /* lucide icon renderer */
@@ -64,7 +64,7 @@ const getContactHref = (item) => {
 /* main section */
 const GetInTouch = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f7f7f5] py-12 lg:py-20">
+    <section className="relative overflow-hidden bg-[#F7F7F5] py-12 lg:py-20">
       {/* background decorative images */}
       <div>
         <img
@@ -134,7 +134,7 @@ const ContactCard = ({ type, title, subtitle }) => {
   // if href exists wrap in anchor, else render plain div
   const Content = (
     <div className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-[0_10px_25px_rgba(15,23,42,0.06)] hover:bg-slate-50 transition-all duration-300">
-      <div className="bg-indigo-800 p-3 rounded-full flex-shrink-0 flex items-center justify-center shadow-[0_0_10px_rgba(99,102,241,0.6)] hover:shadow-[0_0_20px_rgba(99,102,241,0.9)] transition-shadow duration-300">
+      <div className="bg-[#0E1116] p-3 rounded-full flex-shrink-0 flex items-center justify-center shadow-[0_10px_20px_rgba(14,17,22,0.18)] transition-shadow duration-300">
         {renderIcon(type, 22)}
       </div>
       <div className="text-sm text-slate-800">
@@ -167,7 +167,7 @@ const ContactCardDesktop = ({ type, title, subtitle }) => {
   const Inner = (
     <div className="group flex flex-col items-center text-center min-h-[120px] justify-start cursor-pointer transition-all duration-300">
       {/* background and icon hover behavior */}
-      <div className="bg-black group-hover:bg-white p-4 rounded-full mb-3 flex items-center justify-center shadow-[0_0_10px_rgba(255,255,255,0.3)] group-hover:shadow-[0_0_18px_rgba(99,102,241,0.8)] transition-all duration-300">
+      <div className="bg-[#0E1116] group-hover:bg-white p-4 rounded-full mb-3 flex items-center justify-center shadow-[0_10px_20px_rgba(14,17,22,0.16)] transition-all duration-300">
         <div className="text-white group-hover:text-black transition-colors duration-300">
           {renderIcon(type, 18)}
         </div>
@@ -199,8 +199,8 @@ const ContactCardDesktop = ({ type, title, subtitle }) => {
 
 /* value cards desktop */
 const ValueCard = ({ icon, text }) => (
-  <div className="bg-white w-[450px] h-[60px] xxl:w-[500px] xxl:h-[70px] lg:shadow-xl lg:hover:shadow-2xl transition-shadow relative rounded-lg flex items-center p-4 pl-16">
-    <div className="absolute shadow-[0_0_15px_3px_rgba(180,100,255,1)] bg-purple-100 p-5 -left-4 rounded-full flex-shrink-0 flex items-center justify-center">
+  <div className="bg-white w-[450px] h-[60px] xxl:w-[500px] xxl:h-[70px] lg:shadow-[0_16px_36px_rgba(15,23,42,0.08)] lg:hover:shadow-[0_20px_46px_rgba(15,23,42,0.12)] transition-shadow relative rounded-2xl flex items-center p-4 pl-16 border border-[#d9ded7]">
+    <div className="absolute shadow-[0_12px_24px_rgba(15,118,110,0.18)] bg-[#ECFDF5] p-5 -left-4 rounded-full flex-shrink-0 flex items-center justify-center">
       <img src={icon} alt="icon" className="w-8 h-8" />
     </div>
     <p className="text-gray-800 font-lora font-semibold xxl:text-[15px] lg:pl-2 text-base">{text}</p>

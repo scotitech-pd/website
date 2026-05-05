@@ -1,20 +1,33 @@
-@import "tailwindcss"; 
+@import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #ffffff;
-  --main-light: #6b61d9;
-  --main: #5b4fcf;
-  --main-dark: #0f172a;
-  --blue:#2563eb;
-  --orange: #c08457;
-  --green: #0f766e;
+  --background: #F7F7F5;
+  --foreground: #111827;
+  --paper: #F7F7F5;
+  --paper-deep: #ebe8dc;
+  --surface: #ffffff;
+  --surface-muted: #f8fafc;
+  --ink: #111827;
+  --charcoal: #0e1116;
+  --muted: #475569;
+  --line: #d9ded7;
+  --appdeploy: #2563eb;
+  --appdeploy-dark: #1d4ed8;
+  --axos: #0f766e;
+  --axos-dark: #115e59;
+  --gold: #b7a84d;
+  --gold-soft: #f9f6e7;
+  --main-light: var(--appdeploy);
+  --main: var(--axos);
+  --main-dark: var(--charcoal);
+  --blue: var(--appdeploy);
+  --orange: var(--gold);
+  --green: var(--axos);
   --green-light: #cbd5e1;
-  --grey:#475569;
+  --grey: var(--muted);
   --yellow: #64748b;
-  --blue-light:#1d4ed8;
-  /* about */
-  --greenblue: #0f766e;
+  --blue-light: var(--appdeploy-dark);
+  --greenblue: var(--axos);
   --seablue: #e2e8f0;
 }
  
@@ -30,11 +43,11 @@
   --color-grey: var(--grey);
   --color-green: var(--green);
   --color-green-light: var(--green-light);
-  --color-seablue : var(--seablue);
+  --color-seablue: var(--seablue);
   --color-greenblue: var(--greenblue);
   
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-karla);
   --font-mono: var(--font-geist-mono);
   --font-lora: var(--font-lora); 
   --font-karla: var(--font-karla);
@@ -85,24 +98,32 @@
     from { transform: translateX(0); }
     to { transform: translateX(calc(-50% - 0.625rem)); }
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f0f0f;
-    --foreground: #ededed;
-  }
+@keyframes hero-float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+@keyframes sales-scan {
+    0% { transform: translateX(-120%); opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateX(120%); opacity: 0; }
 }
 
 body {
   background: var(--background);
-  color: #111827;
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  color: var(--foreground);
+  font-family: var(--font-karla), "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+main {
+  background: var(--background);
 }
 :root {
-  --scrollbar-bg: #e2e8f0;
-  --scrollbar-thumb: #334155;
-  --scrollbar-thumb-hover: #1e293b;
+  --scrollbar-bg: #e5e0d3;
+  --scrollbar-thumb: #64748b;
+  --scrollbar-thumb-hover: #334155;
 }
 
 /* Chrome, Edge, Safari */

@@ -1,100 +1,89 @@
-"use client";
-
-const platforms = [
-  {
-    name: "AppDeploy",
-    eyebrow: "Operational distribution layer",
-    description:
-      "AppDeploy grew out of a real internal distribution problem. It is now positioned as the branded operational layer around Apple Business based internal app delivery, giving teams clearer release control, access paths, and visibility.",
-    bullets: [
-      "Built around Apple Business workflows",
-      "Branded internal distribution experience",
-      "Designed for controlled private rollout",
-    ],
-  },
-  {
-    name: "AXOS",
-    eyebrow: "Private operational workspace",
-    description:
-      "AXOS reflects the company’s second major direction: helping teams reduce tool sprawl through a more controlled, self-hosted workspace for daily operations, collaboration, and internal coordination.",
-    bullets: [
-      "Self-hosted workspace direction",
-      "Focused on operational clarity and control",
-      "Designed for organisations that need more ownership of their stack",
-    ],
-  },
-];
+import Link from "next/link";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { flagshipProducts, supportingProducts } from "@/lib/products";
 
 const caseStudySteps = [
-  "ClarityPath was originally intended as a public app, but that route proved to be the wrong fit for the product.",
-  "After rejection from the public App Store, the team intentionally reframed distribution around Apple Business workflows instead of forcing a public-store outcome.",
-  "That experience became practical evidence for why some apps are better suited to controlled internal or approved private distribution than a broad public listing.",
+  "ClarityPath exposed the need for a deliberate private distribution route.",
+  "AppDeploy turns that route into a branded app delivery workspace with clearer access and install guidance.",
+  "AXOS expands the portfolio into private workspaces for daily operations, communication, and policy-aligned AI support.",
 ];
 
 export default function ProductPlatformStory() {
   return (
-    <section className="relative overflow-hidden bg-[#f7f7f5] py-14 md:py-20">
-
+    <section className="relative overflow-hidden bg-[#F7F7F5] py-14 md:py-20">
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80">
-            Product Portfolio
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#0F766E]">
+            Product Company
           </p>
-          <h2 className="mb-4 font-karla text-3xl font-semibold text-[#0F172A] md:text-5xl">
-            The company is organised around two flagship products
+          <h2 className="mb-4 text-3xl font-semibold text-[#111827] md:text-5xl">
+            A portfolio shaped by real rollout and workspace problems.
           </h2>
           <p className="font-lora text-lg leading-8 text-slate-700">
-            AppDeploy and AXOS carry the clearest commercial focus in the
-            portfolio. ClarityPath remains visible as a supporting product and
-            as a case study in why controlled distribution and product fit
-            matter.
+            AppDeploy, AXOS, and ClarityPath each serve a defined product job:
+            controlled app delivery, private team workspaces, and guided
+            decision support.
           </p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">
-          {platforms.map((platform) => (
+          {flagshipProducts.map((platform) => (
             <div
               key={platform.name}
-              className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_22px_60px_rgba(15,23,42,0.08)]"
+              className="rounded-[1.15rem] border border-[#d9ded7] bg-white p-7 shadow-[0_22px_60px_rgba(15,23,42,0.06)]"
             >
-              <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80">
+              <p
+                className="mb-3 text-sm font-semibold uppercase tracking-[0.18em]"
+                style={{ color: platform.theme.color }}
+              >
                 {platform.eyebrow}
               </p>
-              <h3 className="mb-4 font-karla text-3xl font-semibold text-[#0F172A]">
+              <h3 className="mb-4 text-3xl font-semibold text-[#111827]">
                 {platform.name}
               </h3>
               <p className="font-lora text-base leading-8 text-slate-700">
-                {platform.description}
+                {platform.summary}
               </p>
 
               <div className="mt-6 grid gap-3">
-                {platform.bullets.map((bullet) => (
+                {platform.outcomes.slice(0, 3).map((bullet) => (
                   <div
                     key={bullet}
-                    className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 font-karla text-sm font-medium text-slate-700"
+                    className="flex items-center gap-3 rounded-2xl border border-[#d9ded7] bg-[#f8fafc] px-4 py-3 text-sm font-medium text-slate-700"
                   >
+                    <CheckCircle2
+                      className="size-4 shrink-0"
+                      style={{ color: platform.theme.color }}
+                    />
                     {bullet}
                   </div>
                 ))}
               </div>
+
+              <Link
+                href={platform.href}
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-slate-950"
+              >
+                View {platform.name}
+                <ArrowRight className="size-4" />
+              </Link>
             </div>
           ))}
         </div>
 
-        <div className="mt-8 rounded-[2rem] border border-slate-800 bg-[#0F172A] p-8 text-white shadow-[0_30px_80px_rgba(15,23,42,0.22)] md:p-10">
+        <div className="mt-8 rounded-[1.15rem] border border-[#d9ded7] bg-[#0E1116] p-7 text-white shadow-[0_30px_80px_rgba(14,17,22,0.22)] md:p-10">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300/90">
-                Case Study Angle
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#FDE68A]">
+                Private Product
               </p>
-              <h3 className="mb-4 font-karla text-2xl font-semibold md:text-4xl">
-                ClarityPath helped prove that some apps are not meant for the public App Store
+              <h3 className="mb-4 text-2xl font-semibold md:text-4xl">
+                {supportingProducts[0].name} shows how focused products reach the right users.
               </h3>
               <p className="font-lora text-base leading-8 text-slate-300">
-                That outcome became part of the company’s product reasoning.
-                Instead of treating rejection as failure, ScotiTech used it to
-                validate a more appropriate distribution path through Apple
-                Business and to sharpen the reason AppDeploy exists.
+                {supportingProducts[0].summary} Its review and distribution
+                journey helped shape a more deliberate product approach around
+                access, context, and user expectations.
               </p>
             </div>
 
@@ -102,7 +91,7 @@ export default function ProductPlatformStory() {
               {caseStudySteps.map((step) => (
                 <div
                   key={step}
-                  className="rounded-[1.5rem] border border-white/10 bg-white/5 px-5 py-5 font-lora text-base leading-7 text-slate-200"
+                  className="rounded-[1rem] border border-white/10 bg-white/5 px-5 py-5 font-lora text-base leading-7 text-slate-200"
                 >
                   {step}
                 </div>
