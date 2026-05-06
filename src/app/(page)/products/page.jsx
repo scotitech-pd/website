@@ -79,7 +79,7 @@ export default function ProductsPage() {
               href="/contact"
               className="rounded-full bg-[#0E1116] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1C2530]"
             >
-              Discuss product fit
+              Book a session
             </Link>
           </div>
 
@@ -222,7 +222,7 @@ export default function ProductsPage() {
           >
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#B7A84D]">
-                Private Product
+                Supporting Product — included with AppDeploy
               </p>
               <h3 className="mt-2 text-2xl font-semibold text-slate-950">
                 {supportingProducts[0].name}
@@ -232,7 +232,7 @@ export default function ProductsPage() {
               </p>
             </div>
             <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-slate-900">
-              View ClarityPath
+              Access via AppDeploy
               <ArrowRight className="size-4" />
             </span>
           </Link>

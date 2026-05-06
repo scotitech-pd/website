@@ -3,14 +3,23 @@ import Link from "next/link";
 import {
   ArrowRight,
   Bot,
+  Building2,
   CalendarCheck2,
   CheckCircle2,
   CloudCog,
+  Database,
+  Factory,
   FileLock2,
+  HeartPulse,
+  Landmark,
+  LockKeyhole,
   MessageSquareText,
+  Network,
   ServerCog,
   ShieldCheck,
   SquareKanban,
+  Store,
+  Truck,
 } from "lucide-react";
 import { flagshipProducts } from "@/lib/products";
 import { meetingLinks } from "@/lib/scheduling";
@@ -86,6 +95,78 @@ const operatingPrinciples = [
   "Give teams a private workspace model that can mature with privacy needs",
 ];
 
+const onPremAiBenefits = [
+  {
+    title: "Keep sensitive knowledge closer",
+    description:
+      "Run AI-assisted search, drafting, and summarisation against internal data without pushing core operating context into broad public SaaS workflows.",
+    icon: LockKeyhole,
+  },
+  {
+    title: "Connect to business systems",
+    description:
+      "Use approved internal sources such as policies, files, case records, tickets, CRM exports, or operational documents as the knowledge base for team assistance.",
+    icon: Database,
+  },
+  {
+    title: "Control access by role",
+    description:
+      "Shape AI outputs around team permissions so employees only work with information they are already allowed to access.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Operate with deployment ownership",
+    description:
+      "Align hosting, audit expectations, network boundaries, backup posture, and data residency with existing IT and security practices.",
+    icon: Network,
+  },
+];
+
+const industryExamples = [
+  {
+    title: "Healthcare and care providers",
+    description:
+      "Help staff find approved policies, care procedures, shift notes, and internal guidance faster while keeping sensitive records inside the organisation’s controlled environment.",
+    example: "Example: summarise internal care procedures for a manager preparing staff handover notes.",
+    icon: HeartPulse,
+  },
+  {
+    title: "Financial services and accounting",
+    description:
+      "Support secure knowledge retrieval across client files, compliance notes, onboarding documents, and internal operating procedures.",
+    example: "Example: prepare a draft client onboarding checklist from approved internal templates.",
+    icon: Landmark,
+  },
+  {
+    title: "Manufacturing and logistics",
+    description:
+      "Give operations teams controlled access to SOPs, maintenance logs, quality documents, supplier notes, and incident records.",
+    example: "Example: surface relevant maintenance steps for a recurring equipment issue.",
+    icon: Factory,
+  },
+  {
+    title: "Legal and professional services",
+    description:
+      "Assist teams with internal matter context, document review notes, engagement templates, and knowledge-base retrieval under stricter access boundaries.",
+    example: "Example: draft a project status brief using only approved matter notes and templates.",
+    icon: Building2,
+  },
+  {
+    title: "Retail and multi-site operations",
+    description:
+      "Centralise branch procedures, training material, inventory guidance, escalation paths, and service standards for distributed teams.",
+    example: "Example: answer store-policy questions from internal guidance without searching multiple tools.",
+    icon: Store,
+  },
+  {
+    title: "Transport and field services",
+    description:
+      "Support mobile teams with controlled access to job instructions, safety documents, service history, and operational updates.",
+    example: "Example: generate a field-service summary from job notes and approved safety requirements.",
+    icon: Truck,
+  },
+];
+
 export default function AxosPage() {
   return (
     <main className="bg-[#F7F7F5] text-[#111827]">
@@ -132,10 +213,10 @@ export default function AxosPage() {
                   <ArrowRight className="size-4" />
                 </a>
                 <Link
-                  href="/contact"
+                  href="/products/axos/deployment-discovery"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-[#cfd7cf] bg-white/80 px-7 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-white"
                 >
-                  Request AXOS access
+                  Plan AXOS rollout
                 </Link>
                 <Link
                   href="/products"
@@ -282,6 +363,130 @@ export default function AxosPage() {
 
       <section className="pb-16">
         <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+          <div className="mb-8 grid gap-6 lg:grid-cols-[44%_56%] lg:items-end">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+                On-premises AI benefits
+              </p>
+              <h2 className="text-3xl font-semibold leading-tight text-[#111827] md:text-5xl">
+                Practical AI for business data that cannot be treated casually.
+              </h2>
+            </div>
+            <p className="font-lora text-lg leading-8 text-slate-700">
+              AXOS positions AI as a controlled workspace capability. Teams can
+              use AI for knowledge search, document drafting, summaries, and
+              operational guidance while planning deployment around data
+              residency, access rules, and infrastructure ownership.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {onPremAiBenefits.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-[1.15rem] border border-[#d9ded7] bg-white p-6 shadow-[0_18px_42px_rgba(15,23,42,0.05)]"
+              >
+                <div className="mb-5 flex size-12 items-center justify-center rounded-2xl bg-[#ECFDF5] text-[#0F766E]">
+                  <item.icon className="size-6" />
+                </div>
+                <h3 className="mb-3 text-xl font-semibold text-slate-950">
+                  {item.title}
+                </h3>
+                <p className="font-lora leading-7 text-slate-700">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-16">
+        <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+          <div className="rounded-[1.25rem] border border-[#d9ded7] bg-white p-6 shadow-[0_24px_70px_rgba(15,23,42,0.07)] sm:p-8">
+            <div className="mb-8 max-w-4xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#2563EB]">
+                Business use cases
+              </p>
+              <h2 className="text-3xl font-semibold leading-tight text-[#111827] md:text-5xl">
+                Where controlled AI can help real teams.
+              </h2>
+              <p className="mt-5 font-lora text-lg leading-8 text-slate-700">
+                AXOS is designed for practical assistance around internal
+                knowledge and daily operations. The strongest starting point is
+                usually a high-value workflow where teams already spend time
+                searching, summarising, checking, or preparing internal work.
+              </p>
+            </div>
+
+            <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+              {industryExamples.map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-[1.1rem] border border-[#d9ded7] bg-[#f8fafc] p-5"
+                >
+                  <div className="mb-5 flex size-11 items-center justify-center rounded-2xl bg-white text-[#0F766E] shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
+                    <item.icon className="size-5" />
+                  </div>
+                  <h3 className="mb-3 text-xl font-semibold text-slate-950">
+                    {item.title}
+                  </h3>
+                  <p className="font-lora leading-7 text-slate-700">
+                    {item.description}
+                  </p>
+                  <p className="mt-4 rounded-2xl border border-[#d9ded7] bg-white p-4 text-sm font-semibold leading-6 text-slate-800">
+                    {item.example}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Private Evaluation Explainer */}
+      <section className="pb-0 pt-2">
+        <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+          <div className="rounded-[1.25rem] border border-[#0F766E]/20 bg-[#ECFDF5] p-6 sm:p-8">
+            <div className="grid gap-6 lg:grid-cols-[56%_44%] lg:items-center">
+              <div>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#0F766E]">
+                  What &ldquo;Private evaluation&rdquo; means
+                </p>
+                <h2 className="text-2xl font-semibold text-[#111827]">
+                  AXOS is actively deployable — evaluation is structured, not a waiting list.
+                </h2>
+                <p className="mt-4 font-lora leading-7 text-slate-700">
+                  Private evaluation means access is scoped per team, not open-sign-up. You book a
+                  session, we review your operating context (team size, data posture, deployment
+                  preference), and map the right path. Most evaluations reach a clear recommendation
+                  within the first session.
+                </p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {[
+                  { label: "How to qualify", value: "Book a 45-min strategy session" },
+                  { label: "What happens next", value: "We map deployment fit and next steps" },
+                  { label: "Pricing", value: "Discussed in session based on deployment model" },
+                  { label: "Timeline", value: "Evaluation to access in days, not months" },
+                ].map((item) => (
+                  <div key={item.label} className="rounded-2xl border border-[#0F766E]/15 bg-white p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#0F766E]">
+                      {item.label}
+                    </p>
+                    <p className="mt-1.5 font-semibold leading-6 text-slate-900">
+                      {item.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-16 pt-16">
+        <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
           <div className="mb-8 max-w-3xl">
             <p className="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
               Core modules
@@ -340,6 +545,46 @@ export default function AxosPage() {
                   <p className="font-lora leading-7 text-slate-700">{item}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-16">
+        <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+          <div className="overflow-hidden rounded-[1.5rem] border border-[#111827]/10 bg-[#0E1116] p-7 text-white shadow-[0_28px_80px_rgba(14,17,22,0.20)] sm:p-10">
+            <div className="grid gap-8 lg:grid-cols-[58%_42%] lg:items-center">
+              <div>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#5EEAD4]">
+                  AXOS rollout review
+                </p>
+                <h2 className="text-3xl font-semibold leading-tight md:text-5xl">
+                  Move from product interest to a real deployment conversation.
+                </h2>
+                <p className="mt-5 max-w-3xl font-lora text-lg leading-8 text-slate-300">
+                  Complete a focused rollout brief for your business workflow,
+                  deployment model, identity setup, data sources, and first AI
+                  use case. The result is a sharper AXOS session and a clearer
+                  path to evaluation.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 rounded-[1.15rem] border border-white/10 bg-white/[0.06] p-5 sm:flex-row lg:flex-col">
+                <Link
+                  href="/products/axos/deployment-discovery"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-[#ECFDF5]"
+                >
+                  Complete rollout brief
+                  <ArrowRight className="size-4" />
+                </Link>
+                <a
+                  href={meetingLinks.axos}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Book AXOS session
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -404,10 +649,10 @@ export default function AxosPage() {
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
                 <Link
-                  href="/contact"
+                  href="/products/axos/deployment-discovery"
                   className="inline-flex items-center justify-center rounded-full bg-[#0E1116] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1C2530]"
                 >
-                  Request access
+                  Plan AXOS rollout
                 </Link>
                 <Link
                   href="/products/appdeploy"

@@ -34,11 +34,12 @@ const SubscribeSection = () => {
         <Reveal className="mx-auto grid items-center gap-5 rounded-[1.15rem] border border-[#d9ded7] bg-[#0E1116] px-5 py-8 text-white shadow-[0_24px_70px_rgba(14,17,22,0.22)] min-[630px]:px-8 min-[630px]:py-10 md:py-14 xl:px-12 min-[1270px]:grid-cols-2" variant="soft">
           <div>
             <h2 className="mb-4 text-4xl font-semibold text-white min-[1550px]:text-5xl">
-              Stay updated with ScotiTech
+              Product updates, straight to your inbox
             </h2>
             <p className="font-lora text-lg text-slate-200 min-[500px]:text-xl min-[1550px]:w-[70%] sm:w-[90%]">
-              Get product updates, company news, and selected briefings
-              delivered to your inbox.
+              Get early access news, AppDeploy and AXOS product updates, and
+              selected briefings on private app delivery and secure workspace
+              operations — sent when there is something worth reading.
             </p>
           </div>
 

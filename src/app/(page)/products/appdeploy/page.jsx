@@ -615,6 +615,34 @@ export default function AppDeployPage() {
         </div>
       </section>
 
+      {/* ClarityPath included callout */}
+      <section className="pb-8">
+        <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+          <div className="flex flex-col gap-5 rounded-[1.25rem] border border-[#B7A84D]/30 bg-[#F9F6E7] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+            <div className="max-w-2xl">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#8A7A21]">
+                Included with AppDeploy
+              </p>
+              <h2 className="text-2xl font-semibold text-[#111827]">
+                ClarityPath comes with your AppDeploy workspace.
+              </h2>
+              <p className="mt-3 font-lora leading-7 text-slate-700">
+                ClarityPath is a guided decision and planning tool available to AppDeploy
+                subscribers. No separate purchase — access it directly from your workspace to
+                run structured reviews and build your rollout roadmap.
+              </p>
+            </div>
+            <Link
+              href="/products/claritypath"
+              className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#B7A84D]/40 bg-white px-5 py-3 text-sm font-semibold text-[#8A7A21] transition hover:border-[#B7A84D] hover:bg-[#F9F6E7]"
+            >
+              Learn about ClarityPath
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="pb-16">
         <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
           <div className="rounded-[1.25rem] border border-[#d9ded7] bg-[#0E1116] p-7 text-white shadow-[0_28px_80px_rgba(14,17,22,0.22)] sm:p-10">

@@ -10,8 +10,9 @@ import { useModal } from "@/components/ModalContext";
 const navLinks = [
   { id: 1, title: "Products", link: "/products" },
   { id: 2, title: "Insights", link: "/insights" },
-  { id: 3, title: "About", link: "/aboutus" },
-  { id: 4, title: "Contact", link: "/contact" },
+  { id: 3, title: "Media", link: "/media" },
+  { id: 4, title: "About", link: "/aboutus" },
+  { id: 5, title: "Contact", link: "/contact" },
 ];
 
 export default function Navbar() {

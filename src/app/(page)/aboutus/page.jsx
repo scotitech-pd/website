@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   Building2,
+  CalendarCheck2,
   CheckCircle2,
   Globe2,
   Linkedin,
@@ -18,7 +19,7 @@ import ProductPlatformStory from "@/components/aboutus/ProductPlatformStory";
 export const metadata = {
   title: "About ScotiTech | Product Company from Scotland",
   description:
-    "ScotiTech Solutions is a Scotland-based product company building AppDeploy, AXOS, and ClarityPath for controlled app rollout, private workspaces, and structured decision support.",
+    "ScotiTech Solutions is a UK-based product company building AppDeploy, AXOS, and ClarityPath for controlled app rollout, private workspaces, and structured decision support.",
 };
 
 const companyFacts = [
@@ -94,13 +95,12 @@ export default function AboutPage() {
                 About ScotiTech
               </p>
               <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-                A Scotland-based product company building software for controlled digital work.
+                A UK-based product company building software for controlled digital work.
               </h1>
               <p className="mt-6 max-w-3xl font-lora text-lg leading-8 text-slate-700 md:text-xl">
                 ScotiTech Solutions Limited builds and operates a focused
                 product portfolio: AppDeploy for private app rollout, AXOS for
-                workspace operations, and ClarityPath for structured decision
-                support.
+                workspace operations.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Link
@@ -109,6 +109,13 @@ export default function AboutPage() {
                 >
                   View products
                   <ArrowRight className="size-4" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-[#cfd7cf] bg-white/80 px-7 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-white"
+                >
+                  <CalendarCheck2 className="size-4" />
+                  Book a session
                 </Link>
                 <Link
                   href="/media"

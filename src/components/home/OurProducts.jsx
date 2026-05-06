@@ -54,6 +54,16 @@ export default function OurProducts() {
                     >
                       {product.status}
                     </span>
+                    {product.slug === "appdeploy" && (
+                      <span className="rounded-full border border-[#d9ded7] bg-[#f8fafc] px-3 py-1 text-xs font-semibold text-slate-600">
+                        From £79 / mo
+                      </span>
+                    )}
+                    {product.slug === "axos" && (
+                      <span className="rounded-full border border-[#d9ded7] bg-[#f8fafc] px-3 py-1 text-xs font-semibold text-slate-600">
+                        Book a session
+                      </span>
+                    )}
                   </div>
 
                   <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
@@ -96,7 +106,7 @@ export default function OurProducts() {
           >
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#B7A84D]">
-                Private product
+                Supporting product — included with AppDeploy
               </p>
               <h3 className="mt-2 text-2xl font-semibold text-slate-950">
                 {supportingProducts[0].name}
@@ -106,7 +116,7 @@ export default function OurProducts() {
               </p>
             </div>
             <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-slate-900">
-              Learn where it fits
+              Access via AppDeploy
               <ArrowRight className="size-4" />
             </span>
           </Link>

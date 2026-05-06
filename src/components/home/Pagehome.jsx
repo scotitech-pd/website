@@ -1,4 +1,5 @@
 import HeroSection from "./HeroSection";
+import HomeSocialProof from "./HomeSocialProof";
 import OurProducts from "./OurProducts";
 import InsideProducts from "./InsideProducts";
 import WhyChooseScotiTech from "./WhyChooseScotiTech";
@@ -10,6 +11,7 @@ const Pagehome = () => {
   return (
     <div className="bg-[#F7F7F5]">
       <HeroSection />
+      <HomeSocialProof />
       <OurProducts />
       <InsideProducts />
       <WhyChooseScotiTech />

@@ -51,19 +51,19 @@ export const flagshipProducts = [
     href: "/products/axos",
     logo: "/images/brand/axos-icon.png",
     status: "Private evaluation",
-    buyer: "Founders, operators, and teams handling sensitive work",
-    headline: "A private workspace for communication, files, tasks, and practical AI.",
+    buyer: "Founders, operators, IT leaders, and regulated teams planning controlled AI adoption",
+    headline: "A private workspace for secure operations and on-premises AI.",
     summary:
-      "AXOS brings communication, files, tasks, planning, and policy-aligned AI into one private workspace with hosted, private-cloud, self-hosted, and on-premises deployment paths.",
+      "AXOS brings communication, files, tasks, planning, and policy-aligned AI into one private workspace with hosted, private-cloud, self-hosted, and on-premises deployment paths for organisations that need stronger control.",
     bestFor:
-      "Organisations that want less tool sprawl and more ownership over where everyday work happens.",
+      "Organisations that want less tool sprawl, controlled access to business knowledge, and a practical path to private or on-premises AI.",
     details:
-      "Designed for teams that want daily work software with stronger ownership over context, deployment, data posture, and AI assistance.",
+      "Designed for teams that want daily work software with stronger ownership over context, identity, data sources, deployment model, and AI-assisted operations.",
     outcomes: [
       "Mail, files, chat, tasks, and notes",
       "Workspace-level roles and permissions",
-      "Deployment choices for different maturity levels",
-      "Governance-first AI assistance inside operational context",
+      "Deployment choices from hosted evaluation to on-premises rollout",
+      "Governance-first AI assistance connected to approved business context",
     ],
     modules: ["Workspace", "Files", "Tasks", "AI"],
     theme: productThemes.axos,
@@ -97,19 +97,19 @@ export const allProducts = [...flagshipProducts, ...supportingProducts];
 
 export const portfolioHighlights = [
   {
-    label: "Product portfolio",
-    value: "Focused product suite",
-    detail: "AppDeploy, AXOS, and ClarityPath serve defined product jobs.",
+    label: "Cloud pricing",
+    value: "From £79 / month",
+    detail: "AppDeploy Cloud plan — no hardware, no MDM, live in days.",
   },
   {
     label: "Recognition",
     value: "UK StartUp Awards 2026",
-    detail: "Shortlisted in the Digital StartUp of the Year category.",
+    detail: "Shortlisted in Digital StartUp of the Year, Scotland.",
   },
   {
-    label: "Operating base",
-    value: "Scotland, UK",
-    detail: "Building focused software products with international ambition.",
+    label: "Distribution channel",
+    value: "Apple Custom Apps",
+    detail: "AppDeploy distributes via Apple Business Manager — no App Store required.",
   },
 ];
 
@@ -125,6 +125,24 @@ export const productComparison = [
     appdeploy: "IT, release, and operations teams",
     axos: "Founders, operators, and privacy-aware teams",
     claritypath: "Leaders and individuals reviewing important choices",
+  },
+  {
+    label: "Pricing",
+    appdeploy: "From £79/mo Cloud · £600/yr · Custom Enterprise",
+    axos: "Private evaluation — book a session to discuss",
+    claritypath: "Accessed via AppDeploy",
+  },
+  {
+    label: "Platform",
+    appdeploy: "Web admin + iOS app delivery",
+    axos: "Web workspace (all modules)",
+    claritypath: "iOS mobile app",
+  },
+  {
+    label: "Deployment",
+    appdeploy: "Hosted (cloud)",
+    axos: "Hosted · Private-cloud · Self-hosted · On-premises",
+    claritypath: "Hosted via AppDeploy",
   },
   {
     label: "Status",
