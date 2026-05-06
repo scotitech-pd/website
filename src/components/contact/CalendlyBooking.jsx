@@ -9,7 +9,7 @@ const CalendlySection = () => {
       className="relative bg-cover bg-center text-white py-16 md:py-20"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1920&q=80')",
+          "url('/images/contact/product-strategy-session.jpg')",
       }}
     >
       {/* Overlay */}

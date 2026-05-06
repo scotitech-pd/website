@@ -206,7 +206,7 @@ export default function RequestaQuote() {
                 </article>
               ))}
               <p className="pt-1 text-center text-xs leading-5 text-slate-500">
-                Need help deciding first? Email info@scotitech.com and we’ll
+                Need help deciding first? Email info@scotitech.com and we'll
                 guide you to the right product session.
               </p>
             </div>

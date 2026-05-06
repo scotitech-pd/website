@@ -1,5 +1,7 @@
-import Link from "next/link";
+"use client";
+
 import Reveal from "@/components/Reveal";
+import { useModal } from "@/components/ModalContext";
 
 const points = [
   {
@@ -21,6 +23,8 @@ const points = [
 ];
 
 export default function WhyChooseScotiTech() {
+  const { setShowModal } = useModal();
+
   return (
     <section className="bg-[#ECE8DA] py-14 md:py-20">
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
@@ -33,12 +37,12 @@ export default function WhyChooseScotiTech() {
               Built for clear product fit and practical delivery.
             </h2>
           </div>
-          <Link
-            href="/contact"
-            className="rounded-full bg-[#0E1116] px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_32px_rgba(14,17,22,0.16)] hover:bg-[#1C2530]"
+          <button
+            onClick={() => setShowModal(true)}
+            className="rounded-full bg-[#0E1116] px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_32px_rgba(14,17,22,0.16)] transition hover:bg-[#1C2530]"
           >
             Talk to sales
-          </Link>
+          </button>
         </Reveal>
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">

@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 export default function ScotiTechPulse() {
@@ -32,6 +34,15 @@ export default function ScotiTechPulse() {
                 <p className="mt-1 font-lora text-sm text-slate-600">
                   Tue 23 Jun 2026 • 6:00 PM - 9:30 PM
                 </p>
+              </div>
+              <div className="mt-6">
+                <Link
+                  href="/media"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#d9ded7] bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50"
+                >
+                  See our recognition
+                  <ArrowRight className="size-4" />
+                </Link>
               </div>
             </div>
           </div>
