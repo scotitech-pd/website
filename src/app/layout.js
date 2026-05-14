@@ -6,7 +6,9 @@ import GotoTop from "@/components/GotoTop";
 import RouteLoader from "@/components/RouteLoader";
 import { ModalProvider } from "@/components/ModalContext";
 import RequestaQuote from "@/components/RequestaQuote";
-import CookieConsent from "@/components/CookieConsent";
+import { CookieConsentProvider } from "@/components/cookie/CookieConsentContext";
+import CookieBanner from "@/components/cookie/CookieBanner";
+import CookiePreferencesModal from "@/components/cookie/CookiePreferencesModal";
 
 const karla = Karla({
   subsets: ["latin"],
@@ -39,13 +41,16 @@ export default function RootLayout({ children }) {
         className={`${geistMono.variable} ${karla.variable} ${lora.variable} antialiased`}
       >
         <ModalProvider>
+          <CookieConsentProvider>
           <Navbar />
           <RequestaQuote />
-          <CookieConsent />
+          <CookieBanner />
+          <CookiePreferencesModal />
           <GotoTop />
 
           <RouteLoader>{children}</RouteLoader>
           <Footer />
+          </CookieConsentProvider>
         </ModalProvider>
       </body>
     </html>
