@@ -65,7 +65,7 @@ export default function InsideProducts() {
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <Reveal className="mb-10 grid gap-6 lg:grid-cols-[48%_52%] lg:items-end" variant="soft">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#8C7A5E]">
               Inside the Products
             </p>
             <h2 className="text-3xl font-semibold leading-tight text-[#111827] sm:text-5xl">

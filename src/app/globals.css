@@ -17,6 +17,7 @@
   --axos-dark: #115e59;
   --gold: #b7a84d;
   --gold-soft: #f9f6e7;
+  --scotitech: #8C7A5E;
   --main-light: var(--appdeploy);
   --main: var(--axos);
   --main-dark: var(--charcoal);
@@ -33,6 +34,7 @@
  
 @theme inline {
   --color-background: var(--background);
+  --color-scotitech: var(--scotitech);
   --color-main: var(--main);
   --color-main-light: var(--main-light);
   --color-main-dark: var(--main-dark);

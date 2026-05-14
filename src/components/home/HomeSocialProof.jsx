@@ -59,7 +59,7 @@ export default function HomeSocialProof() {
   return (
     <section className="relative overflow-hidden border-y border-[#e4e8e3] bg-white py-12 md:py-14">
       {/* Soft top-edge gradient */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#0F766E]/20 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8C7A5E]/20 to-transparent" />
 
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         {/* Label */}

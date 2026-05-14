@@ -30,7 +30,7 @@ export default function WhyChooseScotiTech() {
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <Reveal className="mb-8 flex flex-wrap items-center justify-between gap-4" variant="soft">
           <div className="max-w-3xl">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#0F766E]">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#8C7A5E]">
               Why ScotiTech
             </p>
             <h2 className="text-3xl font-semibold text-[#111827] md:text-5xl">
