@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Linkedin, Instagram } from "lucide-react";
+import CookiePreferencesButton from "@/components/cookie/CookiePreferencesButton";
 
 const quickLinks = [
   { id: 1, title: "Products", link: "/products" },
@@ -98,13 +99,17 @@ export default function Footer() {
               </a>
               <p>Eurocentral, 2 Parklands Way Maxim 1, Maxim Business Park, 1st, Motherwell ML1 4WR, UK</p>
             </div>
-            <div className="mt-6 flex gap-5 font-karla text-sm">
+            <div className="mt-6 flex flex-wrap gap-5 font-karla text-sm">
               <Link href="/privacy-policy" className="text-slate-400 transition hover:text-white">
                 Privacy
+              </Link>
+              <Link href="/cookie-policy" className="text-slate-400 transition hover:text-white">
+                Cookies
               </Link>
               <Link href="/terms-and-conditions" className="text-slate-400 transition hover:text-white">
                 Terms
               </Link>
+              <CookiePreferencesButton className="text-slate-400 transition hover:text-white" />
             </div>
           </div>
         </div>

@@ -364,12 +364,12 @@ export default function AxosPage() {
       </section>
 
       <section className="pb-16">
-              </p>
+        <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+          <div className="mb-10 max-w-4xl">
               <h2 className="text-3xl font-semibold leading-tight text-[#111827] md:text-5xl">
                 One environment instead of multiple disconnected tools.
               </h2>
-            </div>
-            <p className="font-lora text-lg leading-8 text-slate-700">
+            <p className="mt-5 font-lora text-lg leading-8 text-slate-700">
               Most teams run communication, files, tasks, and knowledge across
               Slack, Notion, Google Drive, and Outlook. Sensitive context leaks
               across all of them. AXOS brings these into one controlled workspace
