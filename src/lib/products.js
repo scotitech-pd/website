@@ -51,8 +51,8 @@ export const flagshipProducts = [
     href: "/products/axos",
     logo: "/images/brand/axos-icon.png",
     status: "Private evaluation",
-    buyer: "Founders, operators, IT leaders, and regulated teams planning controlled AI adoption",
-    headline: "A private workspace for secure operations and on-premises AI.",
+    buyer: "Founders, operators, IT leads, and compliance officers who want to consolidate scattered tools into one controlled environment.",
+    headline: "One private workspace for your team's daily work, files, and AI.",
     summary:
       "AXOS brings communication, files, tasks, planning, and policy-aligned AI into one private workspace with hosted, private-cloud, self-hosted, and on-premises deployment paths for organisations that need stronger control.",
     bestFor:

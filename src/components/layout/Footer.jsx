@@ -6,10 +6,11 @@ import { Linkedin, Instagram } from "lucide-react";
 
 const quickLinks = [
   { id: 1, title: "Products", link: "/products" },
-  { id: 2, title: "Insights", link: "/insights" },
-  { id: 3, title: "About", link: "/aboutus" },
-  { id: 4, title: "Contact", link: "/contact" },
-  { id: 5, title: "Media", link: "/media" },
+  { id: 2, title: "Pricing", link: "/products/appdeploy#pricing" },
+  { id: 3, title: "Insights", link: "/insights" },
+  { id: 4, title: "About", link: "/aboutus" },
+  { id: 5, title: "Contact", link: "/contact" },
+  { id: 6, title: "Media", link: "/media" },
 ];
 
 const products = [
@@ -108,8 +109,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-400">
-          <p className="font-lora">Copyright {new Date().getFullYear()} ScotiTech Solutions Limited. All rights reserved.</p>
+        <div className="mt-10 border-t border-white/10 pt-6">
+          <div className="mb-4 flex flex-wrap items-center gap-3">
+            <span className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 font-karla text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-400">
+              UK StartUp Awards 2026 — Shortlisted
+            </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 font-karla text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-400">
+              Apple Custom Apps
+            </span>
+            <span className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 font-karla text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-400">
+              GDPR Aligned
+            </span>
+          </div>
+          <p className="font-lora text-sm text-slate-400">Copyright {new Date().getFullYear()} ScotiTech Solutions Limited. All rights reserved.</p>
         </div>
       </div>
     </footer>

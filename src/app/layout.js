@@ -6,6 +6,7 @@ import GotoTop from "@/components/GotoTop";
 import RouteLoader from "@/components/RouteLoader";
 import { ModalProvider } from "@/components/ModalContext";
 import RequestaQuote from "@/components/RequestaQuote";
+import CookieConsent from "@/components/CookieConsent";
 
 const karla = Karla({
   subsets: ["latin"],
@@ -40,7 +41,7 @@ export default function RootLayout({ children }) {
         <ModalProvider>
           <Navbar />
           <RequestaQuote />
-
+          <CookieConsent />
           <GotoTop />
 
           <RouteLoader>{children}</RouteLoader>
