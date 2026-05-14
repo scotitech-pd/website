@@ -105,7 +105,7 @@ export default function AboutPage() {
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/products"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E1116] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(14,17,22,0.18)] transition hover:bg-[#1C2530]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#100E0C] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(16,14,12,0.18)] transition hover:bg-[#1C1714]"
                 >
                   View products
                   <ArrowRight className="size-4" />

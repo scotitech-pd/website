@@ -52,7 +52,7 @@ export default function WhyThisMatters() {
                 href={meetingLinks.axos}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-12 py-2 font-karla cursor-pointer bg-[#0E1116] border rounded-xl border-[#0E1116] text-white font-medium hover:bg-[#1C2530] transition-colors text-base"
+                className="px-12 py-2 font-karla cursor-pointer bg-[#100E0C] border rounded-xl border-[#100E0C] text-white font-medium hover:bg-[#1C1714] transition-colors text-base"
               >
                 Book AXOS session
               </a>

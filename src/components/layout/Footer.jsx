@@ -21,7 +21,7 @@ const products = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#0E1116] text-white">
+    <footer className="border-t border-white/10 bg-[#100E0C] text-white">
       <div className="mx-auto max-w-8xl px-5 py-12 min-[500px]:px-10 md:px-20">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1.2fr]">
           <div>

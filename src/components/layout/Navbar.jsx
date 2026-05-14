@@ -90,7 +90,7 @@ export default function Navbar() {
       >
         <nav
           onClick={(e) => e.stopPropagation()}
-          className={`h-full w-full max-w-[320px] border-l border-white/10 bg-[#0E1116] px-6 py-14 shadow-[0_28px_80px_rgba(0,0,0,0.35)] transition-transform duration-300 ${
+          className={`h-full w-full max-w-[320px] border-l border-white/10 bg-[#100E0C] px-6 py-14 shadow-[0_28px_80px_rgba(0,0,0,0.35)] transition-transform duration-300 ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           } ml-auto`}
         >
@@ -125,7 +125,7 @@ export default function Navbar() {
             <li className="pt-3">
               <button
                 onClick={() => { setShowModal(true); setMenuOpen(false); }}
-                className="rounded-full bg-white px-5 py-2.5 font-karla text-sm font-semibold text-[#0E1116] shadow-[0_12px_24px_rgba(0,0,0,0.22)]"
+                className="rounded-full bg-white px-5 py-2.5 font-karla text-sm font-semibold text-[#100E0C] shadow-[0_12px_24px_rgba(0,0,0,0.22)]"
               >
                 Talk to sales
               </button>
@@ -135,7 +135,7 @@ export default function Navbar() {
       </div>
 
       <nav
-        className={`fixed z-50 w-full border-b border-white/10 bg-[#0E1116]/95 backdrop-blur-xl transition-all ${
+        className={`fixed z-50 w-full border-b border-white/10 bg-[#100E0C]/95 backdrop-blur-xl transition-all ${
           isAtTop ? "h-[82px]" : "h-[74px] shadow-[0_16px_36px_rgba(0,0,0,0.22)]"
         }`}
       >
@@ -174,7 +174,7 @@ export default function Navbar() {
                   {productMenuOpen && (
                     <div
                       onMouseLeave={() => setProductMenuOpen(false)}
-                      className="absolute left-1/2 top-full z-50 mt-3 w-[340px] -translate-x-1/2 overflow-hidden rounded-[1.15rem] border border-white/10 bg-[#0E1116] shadow-[0_24px_60px_rgba(0,0,0,0.35)]"
+                      className="absolute left-1/2 top-full z-50 mt-3 w-[340px] -translate-x-1/2 overflow-hidden rounded-[1.15rem] border border-white/10 bg-[#100E0C] shadow-[0_24px_60px_rgba(0,0,0,0.35)]"
                     >
                       <div className="p-2">
                         {productLinks.map((p) => (
@@ -229,7 +229,7 @@ export default function Navbar() {
             <li>
               <button
                 onClick={() => setShowModal(true)}
-                className="rounded-full bg-white px-5 py-2.5 font-karla text-sm font-semibold text-[#0E1116] shadow-[0_12px_24px_rgba(0,0,0,0.22)] transition-colors hover:bg-slate-100"
+                className="rounded-full bg-white px-5 py-2.5 font-karla text-sm font-semibold text-[#100E0C] shadow-[0_12px_24px_rgba(0,0,0,0.22)] transition-colors hover:bg-slate-100"
               >
                 Talk to sales
               </button>

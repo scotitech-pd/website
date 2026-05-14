@@ -42,7 +42,7 @@ function Hero() {
                 href={meetingLinks.appdeploy}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E1116] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(14,17,22,0.18)] transition hover:bg-[#1C2530]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#100E0C] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(16,14,12,0.18)] transition hover:bg-[#1C1714]"
               >
                 Book AppDeploy session
                 <ArrowRight className="size-4" />

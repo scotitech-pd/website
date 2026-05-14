@@ -39,7 +39,7 @@ export default function RouteLoader({ children }) {
           style={{
             position: "fixed",
             inset: 0,
-            background: "#0E1116",
+            background: "#100E0C",
             zIndex: 999999,
             display: "flex",
             justifyContent: "center",

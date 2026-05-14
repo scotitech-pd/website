@@ -25,7 +25,7 @@ export default function CookieConsent() {
 
   return (
     <div className="fixed bottom-4 left-4 right-4 z-[999] mx-auto max-w-2xl">
-      <div className="flex flex-col gap-4 rounded-[1.15rem] border border-white/10 bg-[#0E1116] p-5 shadow-[0_24px_60px_rgba(0,0,0,0.4)] sm:flex-row sm:items-center sm:gap-6">
+      <div className="flex flex-col gap-4 rounded-[1.15rem] border border-white/10 bg-[#100E0C] p-5 shadow-[0_24px_60px_rgba(0,0,0,0.4)] sm:flex-row sm:items-center sm:gap-6">
         <p className="font-lora text-sm leading-6 text-slate-300">
           We use essential cookies to keep the site working.{" "}
           <Link href="/privacy-policy" className="underline underline-offset-2 hover:text-white">
@@ -42,7 +42,7 @@ export default function CookieConsent() {
           </button>
           <button
             onClick={accept}
-            className="rounded-full bg-white px-4 py-2 font-karla text-xs font-semibold text-[#0E1116] transition hover:bg-slate-100"
+            className="rounded-full bg-white px-4 py-2 font-karla text-xs font-semibold text-[#100E0C] transition hover:bg-slate-100"
           >
             Accept
           </button>

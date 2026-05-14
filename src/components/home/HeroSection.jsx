@@ -61,7 +61,7 @@ export default function HeroSection() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E1116] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(14,17,22,0.18)] transition-colors hover:bg-[#1C2530]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#100E0C] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(16,14,12,0.18)] transition-colors hover:bg-[#1C1714]"
               >
                 Explore Products
                 <ArrowRight className="size-4" />
@@ -98,7 +98,7 @@ export default function HeroSection() {
             <div className="absolute -inset-4 rounded-[2.5rem] bg-[radial-gradient(circle_at_28%_18%,rgba(15,118,110,0.22),transparent_34%),radial-gradient(circle_at_78%_76%,rgba(37,99,235,0.18),transparent_30%)] blur-2xl" />
             <div className="absolute inset-0 translate-x-3 translate-y-3 rotate-1 rounded-[2rem] bg-[#d9ded7]/70" />
 
-            <div className="relative overflow-hidden rounded-[1.75rem] border border-white/80 bg-[#0E1116] p-3 shadow-[0_32px_90px_rgba(15,23,42,0.2)] sm:p-4">
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-white/80 bg-[#100E0C] p-3 shadow-[0_32px_90px_rgba(15,23,42,0.2)] sm:p-4">
               <div className="flex items-center justify-between gap-4 px-2 pb-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">

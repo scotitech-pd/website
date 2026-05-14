@@ -87,7 +87,7 @@ export default function OurProducts() {
                     </p>
                     <Link
                       href={product.href}
-                      className="inline-flex items-center gap-2 rounded-full bg-[#0E1116] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1C2530]"
+                      className="inline-flex items-center gap-2 rounded-full bg-[#100E0C] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1C1714]"
                     >
                       View product
                       <ArrowRight className="size-4 transition group-hover:translate-x-1" />

@@ -213,7 +213,7 @@ export default function AxosPage() {
                   href={meetingLinks.axos}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E1116] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(14,17,22,0.18)] transition hover:bg-[#1C2530]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#100E0C] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(16,14,12,0.18)] transition hover:bg-[#1C1714]"
                 >
                   Book AXOS strategy session
                   <ArrowRight className="size-4" />
@@ -236,7 +236,7 @@ export default function AxosPage() {
               </div>
             </div>
 
-            <div className="rounded-[1.25rem] border border-[#111827]/15 bg-[#0E1116] p-3 shadow-[0_28px_80px_rgba(14,17,22,0.24)]">
+            <div className="rounded-[1.25rem] border border-[#111827]/15 bg-[#100E0C] p-3 shadow-[0_28px_80px_rgba(16,14,12,0.24)]">
               <div className="overflow-hidden rounded-[1rem] border border-white/10 bg-slate-950">
                 <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
                   <span className="size-2.5 rounded-full bg-[#FF6467]" />
@@ -258,7 +258,7 @@ export default function AxosPage() {
                 </div>
                 <div className="grid gap-px bg-white/10 text-white sm:grid-cols-5">
                   {["Mail", "Calendar", "Tasks", "Files", "AI"].map((item) => (
-                    <div key={item} className="bg-[#0E1116] px-3 py-3">
+                    <div key={item} className="bg-[#100E0C] px-3 py-3">
                       <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/40">
                         Module
                       </p>
@@ -275,7 +275,7 @@ export default function AxosPage() {
       <section className="pb-16">
         <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
           <div className="grid gap-8 rounded-[1.25rem] border border-[#d9ded7] bg-white p-5 shadow-[0_24px_70px_rgba(15,23,42,0.07)] lg:grid-cols-[48%_52%] lg:p-8">
-            <div className="overflow-hidden rounded-[1rem] border border-[#111827]/10 bg-[#0E1116]">
+            <div className="overflow-hidden rounded-[1rem] border border-[#111827]/10 bg-[#100E0C]">
               <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
                 <span className="size-2.5 rounded-full bg-[#FF6467]" />
                 <span className="size-2.5 rounded-full bg-[#F7C948]" />
@@ -517,7 +517,7 @@ export default function AxosPage() {
 
       <section className="pb-16">
         <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
-          <div className="overflow-hidden rounded-[1.5rem] border border-[#111827]/10 bg-[#0E1116] p-7 text-white shadow-[0_28px_80px_rgba(14,17,22,0.20)] sm:p-10">
+          <div className="overflow-hidden rounded-[1.5rem] border border-[#111827]/10 bg-[#100E0C] p-7 text-white shadow-[0_28px_80px_rgba(16,14,12,0.20)] sm:p-10">
             <div className="grid gap-8 lg:grid-cols-[58%_42%] lg:items-center">
               <div>
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#5EEAD4]">

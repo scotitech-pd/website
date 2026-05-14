@@ -42,7 +42,7 @@ export default function InsightsSection() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href={`/insights/${featuredInsight.slug}`}
-                className="inline-flex items-center gap-2 rounded-full bg-[#0E1116] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1C2530]"
+                className="inline-flex items-center gap-2 rounded-full bg-[#100E0C] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1C1714]"
               >
                 Read briefing
                 <ArrowRight className="size-4" />
