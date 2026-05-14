@@ -49,12 +49,13 @@ export default function HeroSection() {
             </div>
 
             <h1 className="mt-6 text-4xl font-semibold leading-[1.05] text-[#111827] min-[700px]:text-5xl min-[1150px]:text-6xl">
-              Practical software for internal app rollout and private team workflows.
+              Your team's apps, files, and AI — inside infrastructure you control.
             </h1>
 
             <p className="mt-6 max-w-2xl font-lora text-lg leading-8 text-slate-700 md:text-xl">
-              ScotiTech builds focused software products for private app
-              rollout, secure AI workflows, and practical team operations.
+              ScotiTech builds focused products for teams that take data
+              ownership seriously — private app rollout with AppDeploy, and a
+              full private workspace for daily work with AXOS.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
