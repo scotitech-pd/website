@@ -12,7 +12,7 @@ export default function OurProducts() {
     >
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <Reveal className="mb-10 max-w-4xl" variant="soft">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#8C7A5E]">
             Product Portfolio
           </p>
           <h2 className="text-3xl font-semibold leading-tight text-[#111827] sm:text-5xl">

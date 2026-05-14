@@ -21,7 +21,7 @@ export default function InsightsSection() {
           </div>
 
           <div className="p-6 sm:p-8 lg:p-10">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#8C7A5E]">
               Latest briefing
             </p>
             <h2 className="mb-4 text-3xl font-semibold leading-tight text-slate-900 md:text-4xl">

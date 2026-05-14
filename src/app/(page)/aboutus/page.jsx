@@ -91,7 +91,7 @@ export default function AboutPage() {
         <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
           <div className="grid items-end gap-10 xl:grid-cols-[58%_42%]">
             <div className="max-w-4xl">
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#8C7A5E]">
                 About ScotiTech
               </p>
               <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
@@ -133,7 +133,7 @@ export default function AboutPage() {
                     key={item.title}
                     className="rounded-[1rem] border border-[#d9ded7] bg-[#f8fafc] p-5"
                   >
-                    <item.icon className="mb-4 size-5 text-[#0F766E]" />
+                    <item.icon className="mb-4 size-5 text-[#8C7A5E]" />
                     <h2 className="text-xl font-semibold text-slate-950">
                       {item.title}
                     </h2>
@@ -152,7 +152,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
           <div className="grid gap-10 lg:grid-cols-[40%_60%] lg:items-start">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#8C7A5E]">
                 Operating Model
               </p>
               <h2 className="text-3xl font-semibold leading-tight text-[#111827] md:text-5xl">
@@ -173,7 +173,7 @@ export default function AboutPage() {
                   key={item.title}
                   className="rounded-[1.15rem] border border-[#d9ded7] bg-[#f8fafc] p-6 shadow-[0_16px_36px_rgba(15,23,42,0.05)]"
                 >
-                  <div className="mb-5 flex size-11 items-center justify-center rounded-2xl bg-white text-[#0F766E]">
+                  <div className="mb-5 flex size-11 items-center justify-center rounded-2xl bg-white text-[#8C7A5E]">
                     <item.icon className="size-5" />
                   </div>
                   <h3 className="text-xl font-semibold text-slate-950">
@@ -194,7 +194,7 @@ export default function AboutPage() {
       <section className="bg-[#ECE8DA] py-14 md:py-20">
         <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
           <div className="mx-auto mb-10 max-w-3xl text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#8C7A5E]">
               Founders
             </p>
             <h2 className="text-3xl font-semibold text-[#111827] md:text-5xl">
@@ -222,7 +222,7 @@ export default function AboutPage() {
                     <h3 className="text-2xl font-semibold text-slate-950">
                       {founder.name}
                     </h3>
-                    <p className="mt-1 text-sm font-semibold text-[#0F766E]">
+                    <p className="mt-1 text-sm font-semibold text-[#8C7A5E]">
                       {founder.title}
                     </p>
                     <p className="mt-5 font-lora leading-8 text-slate-700">
@@ -232,7 +232,7 @@ export default function AboutPage() {
                       href={founder.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-[#0F766E] hover:text-[#0F766E]"
+                      className="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-[#8C7A5E] hover:text-[#8C7A5E]"
                     >
                       <Linkedin className="size-4" />
                       View LinkedIn
