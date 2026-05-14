@@ -94,7 +94,7 @@ export default function ClarityPathPage() {
                   href="https://appdeploy.scotitech.com/w/scotitech"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E1116] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(14,17,22,0.16)] transition hover:bg-[#1C2530]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#100E0C] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(16,14,12,0.16)] transition hover:bg-[#1C1714]"
                 >
                   Access from AppDeploy
                   <ArrowRight className="size-4" />
@@ -109,7 +109,7 @@ export default function ClarityPathPage() {
             </div>
 
             <div className="relative mx-auto min-h-[560px] w-full max-w-[560px]">
-              <div className="absolute right-0 top-8 w-[48%] rotate-3 rounded-[2rem] border border-white/20 bg-[#0E1116] p-2 shadow-[0_28px_70px_rgba(14,17,22,0.24)]">
+              <div className="absolute right-0 top-8 w-[48%] rotate-3 rounded-[2rem] border border-white/20 bg-[#100E0C] p-2 shadow-[0_28px_70px_rgba(16,14,12,0.24)]">
                 <div className="relative aspect-[9/19] overflow-hidden rounded-[1.5rem] bg-slate-950">
                   <Image
                     src="/images/products/claritypath/focus.png"
@@ -121,7 +121,7 @@ export default function ClarityPathPage() {
                 </div>
               </div>
 
-              <div className="absolute left-0 top-0 w-[54%] -rotate-3 rounded-[2rem] border border-white/20 bg-[#0E1116] p-2 shadow-[0_32px_80px_rgba(14,17,22,0.30)]">
+              <div className="absolute left-0 top-0 w-[54%] -rotate-3 rounded-[2rem] border border-white/20 bg-[#100E0C] p-2 shadow-[0_32px_80px_rgba(16,14,12,0.30)]">
                 <div className="relative aspect-[9/19] overflow-hidden rounded-[1.5rem] bg-slate-950">
                   <Image
                     src="/images/products/claritypath/explore.png"
@@ -187,7 +187,7 @@ export default function ClarityPathPage() {
               ))}
             </div>
 
-            <div className="mt-6 rounded-[1rem] border border-[#d9ded7] bg-[#0E1116] p-6 text-white">
+            <div className="mt-6 rounded-[1rem] border border-[#d9ded7] bg-[#100E0C] p-6 text-white">
               <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
                 <LockKeyhole className="size-7 shrink-0 text-[#FDE68A]" />
                 <div>
@@ -257,7 +257,7 @@ export default function ClarityPathPage() {
                   public distribution. The image is cropped to keep review and
                   submission details private.
                 </p>
-                <figure className="mt-4 overflow-hidden rounded-2xl border border-[#d9ded7] bg-[#0E1116]">
+                <figure className="mt-4 overflow-hidden rounded-2xl border border-[#d9ded7] bg-[#100E0C]">
                   <Image
                     src="/images/products/claritypath/milestones/app-store-approved.jpg"
                     alt="Cropped App Store review approval notice confirming distribution eligibility"
@@ -272,14 +272,14 @@ export default function ClarityPathPage() {
                 href="https://appdeploy.scotitech.com/w/scotitech"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#0E1116] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1C2530]"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#100E0C] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1C1714]"
               >
                 Access from AppDeploy
                 <ArrowRight className="size-4" />
               </Link>
             </div>
 
-            <div className="rounded-[1.25rem] border border-[#d9ded7] bg-[#0E1116] p-6 text-white shadow-[0_26px_70px_rgba(14,17,22,0.20)] sm:p-8">
+            <div className="rounded-[1.25rem] border border-[#d9ded7] bg-[#100E0C] p-6 text-white shadow-[0_26px_70px_rgba(16,14,12,0.20)] sm:p-8">
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#5EEAD4]">
                 Planning modules
               </p>

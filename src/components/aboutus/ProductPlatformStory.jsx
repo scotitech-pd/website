@@ -71,7 +71,7 @@ export default function ProductPlatformStory() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-[1.15rem] border border-[#d9ded7] bg-[#0E1116] p-7 text-white shadow-[0_30px_80px_rgba(14,17,22,0.22)] md:p-10">
+        <div className="mt-8 rounded-[1.15rem] border border-[#d9ded7] bg-[#100E0C] p-7 text-white shadow-[0_30px_80px_rgba(16,14,12,0.22)] md:p-10">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#FDE68A]">

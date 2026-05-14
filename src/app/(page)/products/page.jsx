@@ -77,7 +77,7 @@ export default function ProductsPage() {
             </div>
             <Link
               href="/contact"
-              className="rounded-full bg-[#0E1116] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1C2530]"
+              className="rounded-full bg-[#100E0C] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1C1714]"
             >
               Book a session
             </Link>
@@ -158,7 +158,7 @@ export default function ProductsPage() {
 
                   <Link
                     href={product.href}
-                    className="inline-flex items-center gap-2 rounded-full bg-[#0E1116] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1C2530]"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#100E0C] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1C1714]"
                   >
                     View {product.name}
                     <ArrowRight className="size-4 transition group-hover:translate-x-1" />

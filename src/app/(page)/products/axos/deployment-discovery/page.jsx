@@ -70,7 +70,7 @@ export default function AxosDeploymentDiscoveryPage() {
                   href={meetingLinks.axos}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E1116] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(14,17,22,0.18)] transition hover:bg-[#1C2530]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#100E0C] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(16,14,12,0.18)] transition hover:bg-[#1C1714]"
                 >
                   Book AXOS session
                   <ArrowRight className="size-4" />
@@ -85,7 +85,7 @@ export default function AxosDeploymentDiscoveryPage() {
             </div>
 
             <div className="rounded-[1.5rem] border border-[#111827]/10 bg-white p-5 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-6">
-              <div className="mb-5 rounded-[1.15rem] bg-[#0E1116] p-5 text-white">
+              <div className="mb-5 rounded-[1.15rem] bg-[#100E0C] p-5 text-white">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#5EEAD4]">
                   After you submit
                 </p>

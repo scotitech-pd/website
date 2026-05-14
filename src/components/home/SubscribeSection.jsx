@@ -31,7 +31,7 @@ const SubscribeSection = () => {
   return (
     <div className="w-full bg-[#F7F7F5] px-4 py-16">
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
-        <Reveal className="mx-auto grid items-center gap-5 rounded-[1.15rem] border border-[#d9ded7] bg-[#0E1116] px-5 py-8 text-white shadow-[0_24px_70px_rgba(14,17,22,0.22)] min-[630px]:px-8 min-[630px]:py-10 md:py-14 xl:px-12 min-[1270px]:grid-cols-2" variant="soft">
+        <Reveal className="mx-auto grid items-center gap-5 rounded-[1.15rem] border border-[#d9ded7] bg-[#100E0C] px-5 py-8 text-white shadow-[0_24px_70px_rgba(16,14,12,0.22)] min-[630px]:px-8 min-[630px]:py-10 md:py-14 xl:px-12 min-[1270px]:grid-cols-2" variant="soft">
           <div>
             <h2 className="mb-4 text-4xl font-semibold text-white min-[1550px]:text-5xl">
               Product updates, straight to your inbox
@@ -59,7 +59,7 @@ const SubscribeSection = () => {
 
               <button
                 type="submit"
-                className="rounded-full bg-white px-6 py-3 text-base font-semibold text-[#0E1116] transition hover:bg-slate-100"
+                className="rounded-full bg-white px-6 py-3 text-base font-semibold text-[#100E0C] transition hover:bg-slate-100"
               >
                 Subscribe
               </button>

@@ -183,7 +183,7 @@ export default function AxosDeploymentDiscovery() {
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="grid gap-8 xl:grid-cols-[34%_66%]">
           <aside className="space-y-5">
-            <div className="rounded-[1.5rem] border border-[#111827]/10 bg-[#0E1116] p-7 text-white shadow-[0_28px_80px_rgba(14,17,22,0.18)] sm:p-8 xl:sticky xl:top-28">
+            <div className="rounded-[1.5rem] border border-[#111827]/10 bg-[#100E0C] p-7 text-white shadow-[0_28px_80px_rgba(16,14,12,0.18)] sm:p-8 xl:sticky xl:top-28">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#5EEAD4]">
                 AXOS rollout review
               </p>
@@ -427,7 +427,7 @@ export default function AxosDeploymentDiscovery() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E1116] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1C2530] disabled:cursor-not-allowed disabled:opacity-70"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#100E0C] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1C1714] disabled:cursor-not-allowed disabled:opacity-70"
                 >
                   {status === "submitting" ? "Sending..." : "Request rollout review"}
                   {status === "submitting" ? (

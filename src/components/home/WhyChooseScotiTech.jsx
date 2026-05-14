@@ -39,7 +39,7 @@ export default function WhyChooseScotiTech() {
           </div>
           <button
             onClick={() => setShowModal(true)}
-            className="rounded-full bg-[#0E1116] px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_32px_rgba(14,17,22,0.16)] transition hover:bg-[#1C2530]"
+            className="rounded-full bg-[#100E0C] px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_32px_rgba(16,14,12,0.16)] transition hover:bg-[#1C1714]"
           >
             Talk to sales
           </button>

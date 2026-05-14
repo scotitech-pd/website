@@ -102,7 +102,7 @@ export default function MediaPage() {
         <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
           <div className="grid gap-8 lg:grid-cols-[62%_38%]">
             <article className="overflow-hidden rounded-[1.15rem] border border-[#d9ded7] bg-white shadow-[0_22px_60px_rgba(15,23,42,0.07)]">
-              <div className="relative aspect-video bg-[#0E1116]">
+              <div className="relative aspect-video bg-[#100E0C]">
                 <video
                   src="/images/home/pv1.mp4"
                   controls
@@ -130,7 +130,7 @@ export default function MediaPage() {
               </div>
             </article>
 
-            <aside className="rounded-[1.15rem] border border-[#d9ded7] bg-[#0E1116] p-6 text-white shadow-[0_22px_60px_rgba(14,17,22,0.18)]">
+            <aside className="rounded-[1.15rem] border border-[#d9ded7] bg-[#100E0C] p-6 text-white shadow-[0_22px_60px_rgba(16,14,12,0.18)]">
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#FDE68A]">
                 Media Contact
               </p>
@@ -155,7 +155,7 @@ export default function MediaPage() {
               </div>
               <Link
                 href="/contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#0E1116] transition hover:bg-slate-100"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#100E0C] transition hover:bg-slate-100"
               >
                 Contact our team
                 <ArrowRight className="size-4" />

@@ -271,7 +271,7 @@ export default function AppDeployPage() {
                 <Link
                   href="https://appdeploy.scotitech.com/w/scotitech"
                   target="_blank"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0E1116] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(14,17,22,0.18)] transition hover:bg-[#1C2530]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#100E0C] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(16,14,12,0.18)] transition hover:bg-[#1C1714]"
                 >
                   View workspace preview
                   <ArrowRight className="size-4" />
@@ -388,7 +388,7 @@ export default function AppDeployPage() {
 
       <section className="pb-16">
         <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
-          <div className="rounded-[1.25rem] border border-[#111827]/10 bg-[#0E1116] p-7 text-white shadow-[0_28px_80px_rgba(14,17,22,0.20)] sm:p-10">
+          <div className="rounded-[1.25rem] border border-[#111827]/10 bg-[#100E0C] p-7 text-white shadow-[0_28px_80px_rgba(16,14,12,0.20)] sm:p-10">
             <div className="mb-8 grid gap-6 lg:grid-cols-[42%_58%] lg:items-end">
               <div>
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#93C5FD]">
@@ -559,7 +559,7 @@ export default function AppDeployPage() {
                   target={plan.href.startsWith("http") ? "_blank" : undefined}
                   className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition ${
                     plan.featured
-                      ? "bg-[#0E1116] text-white hover:bg-[#1C2530]"
+                      ? "bg-[#100E0C] text-white hover:bg-[#1C1714]"
                       : "border border-[#cfd7cf] bg-white text-slate-950 hover:border-slate-400"
                   }`}
                 >
@@ -645,7 +645,7 @@ export default function AppDeployPage() {
 
       <section className="pb-16">
         <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
-          <div className="rounded-[1.25rem] border border-[#d9ded7] bg-[#0E1116] p-7 text-white shadow-[0_28px_80px_rgba(14,17,22,0.22)] sm:p-10">
+          <div className="rounded-[1.25rem] border border-[#d9ded7] bg-[#100E0C] p-7 text-white shadow-[0_28px_80px_rgba(16,14,12,0.22)] sm:p-10">
             <div className="grid gap-8 lg:grid-cols-[62%_38%] lg:items-center">
               <div>
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#93C5FD]">
@@ -664,7 +664,7 @@ export default function AppDeployPage() {
                 <Link
                   href="https://appdeploy.scotitech.com/request-access"
                   target="_blank"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0E1116] transition hover:bg-slate-100"
+                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#100E0C] transition hover:bg-slate-100"
                 >
                   Request access
                 </Link>

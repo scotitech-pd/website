@@ -134,7 +134,7 @@ const ContactCard = ({ type, title, subtitle }) => {
   // if href exists wrap in anchor, else render plain div
   const Content = (
     <div className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-[0_10px_25px_rgba(15,23,42,0.06)] hover:bg-slate-50 transition-all duration-300">
-      <div className="bg-[#0E1116] p-3 rounded-full flex-shrink-0 flex items-center justify-center shadow-[0_10px_20px_rgba(14,17,22,0.18)] transition-shadow duration-300">
+      <div className="bg-[#100E0C] p-3 rounded-full flex-shrink-0 flex items-center justify-center shadow-[0_10px_20px_rgba(16,14,12,0.18)] transition-shadow duration-300">
         {renderIcon(type, 22)}
       </div>
       <div className="text-sm text-slate-800">
@@ -167,7 +167,7 @@ const ContactCardDesktop = ({ type, title, subtitle }) => {
   const Inner = (
     <div className="group flex flex-col items-center text-center min-h-[120px] justify-start cursor-pointer transition-all duration-300">
       {/* background and icon hover behavior */}
-      <div className="bg-[#0E1116] group-hover:bg-white p-4 rounded-full mb-3 flex items-center justify-center shadow-[0_10px_20px_rgba(14,17,22,0.16)] transition-all duration-300">
+      <div className="bg-[#100E0C] group-hover:bg-white p-4 rounded-full mb-3 flex items-center justify-center shadow-[0_10px_20px_rgba(16,14,12,0.16)] transition-all duration-300">
         <div className="text-white group-hover:text-black transition-colors duration-300">
           {renderIcon(type, 18)}
         </div>

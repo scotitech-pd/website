@@ -92,7 +92,7 @@ export default function InsideProducts() {
               >
                 <div className={`h-1.5 ${tone.line}`} />
                 <div className="p-5">
-                  <div className="overflow-hidden rounded-[1rem] border border-slate-200 bg-[#0E1116] shadow-[0_18px_45px_rgba(15,23,42,0.12)]">
+                  <div className="overflow-hidden rounded-[1rem] border border-slate-200 bg-[#100E0C] shadow-[0_18px_45px_rgba(15,23,42,0.12)]">
                     <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
                       <span className="size-2.5 rounded-full bg-[#FF6467]" />
                       <span className="size-2.5 rounded-full bg-[#F7C948]" />

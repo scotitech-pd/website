@@ -89,7 +89,7 @@ export default function RequestaQuote() {
         </button>
 
         <div className="grid max-h-[91vh] overflow-y-auto lg:grid-cols-[0.95fr_1.05fr]">
-          <aside className="relative overflow-hidden bg-[#0E1116] px-6 py-8 text-white sm:px-8 lg:min-h-[560px] lg:py-10">
+          <aside className="relative overflow-hidden bg-[#100E0C] px-6 py-8 text-white sm:px-8 lg:min-h-[560px] lg:py-10">
             <div className="absolute -left-24 top-12 h-64 w-64 rounded-full bg-teal-400/20 blur-3xl" />
             <div className="absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
 
@@ -152,7 +152,7 @@ export default function RequestaQuote() {
                       key={item}
                       className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.07] p-3"
                     >
-                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-xs font-bold text-[#0E1116]">
+                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-xs font-bold text-[#100E0C]">
                         {index + 1}
                       </span>
                       <p className="font-karla text-sm leading-6 text-slate-200">

@@ -31,7 +31,7 @@ const GotoTop = () => {
     <>
       {Visible && (
         <div
-          className="z-50 fixed right-4 bottom-6 rounded-full border border-white/30 bg-[#0E1116] text-white shadow-[0_18px_36px_rgba(14,17,22,0.22)] duration-300 hover:bg-[#1C2530]"
+          className="z-50 fixed right-4 bottom-6 rounded-full border border-white/30 bg-[#100E0C] text-white shadow-[0_18px_36px_rgba(16,14,12,0.22)] duration-300 hover:bg-[#1C1714]"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
