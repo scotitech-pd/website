@@ -16,6 +16,22 @@
   /* about */
   --greenblue: #0f766e;
   --seablue: #e2e8f0;
+  --st-ink: #0f172a;
+  --st-brand-900: #002d35;
+  --st-brand-800: #003b46;
+  --st-brand-700: #0f4c5c;
+  --st-teal: #00c9a7;
+  --st-teal-dark: #00b396;
+  --st-accent-soft: #d9f3ef;
+  --st-gold: #bcb96a;
+  --st-bg: #f8fafc;
+  --st-bg-warm: #f5f4f1;
+  --st-surface: #ffffff;
+  --st-surface-muted: #f8fafc;
+  --st-border: #e2e8f0;
+  --st-border-strong: #cbd5e1;
+  --st-text: #334155;
+  --st-muted: #64748b;
 }
  
 @theme inline {
@@ -129,6 +145,8 @@ body {
 html {
   scrollbar-width: auto;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 } 
 
 /* Phone Input Fix */

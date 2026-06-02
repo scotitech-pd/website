@@ -66,8 +66,8 @@ export default function PricingAppDeploy() {
                 "Built around Apple Business workflows",
                 "Branded employee distribution experience",
                 "Enterprise onboarding and rollout support",
-              ].map((item, idx) => (
-                <div className="flex items-center gap-3">
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3">
                   <div className="rounded-full bg-blue-100/50 p-1">
                     <CheckCircle className="h-5 w-5 text-slate-700" />
                   </div>

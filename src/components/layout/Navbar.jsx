@@ -8,12 +8,11 @@ import { Menu, X } from "lucide-react";
 import { useModal } from "@/components/ModalContext";
 
 const navLinks = [
-  { id: 1, title: "Home", link: "/" },
-  { id: 2, title: "Products", link: "/products" },
-  { id: 3, title: "Insights", link: "/insights" },
-  { id: 4, title: "About Us", link: "/aboutus" },
-  { id: 5, title: "Media", link: "/media" },
-  { id: 6, title: "Contact", link: "/contact" },
+  { id: 1, title: "Products", link: "/#products", sectionId: "products" },
+  { id: 2, title: "How It Works", link: "/#approach", sectionId: "approach" },
+  { id: 3, title: "Proof", link: "/#proof", sectionId: "proof" },
+  { id: 4, title: "Insights", link: "/#insights", sectionId: "insights" },
+  { id: 5, title: "Contact", link: "/#contact", sectionId: "contact" },
 ];
 
 const Navbar = () => {
@@ -38,11 +37,16 @@ const Navbar = () => {
     setMenuOpen(false);
   }, [pathname]);
 
-  const isActiveLink = (link) => {
-    if (link === "/products" || link === "/insights") {
-      return pathname.startsWith(link);
-    }
-    return pathname === link;
+  const handleSectionClick = (e, item) => {
+    if (pathname !== "/") return;
+
+    const target = document.getElementById(item.sectionId);
+    if (!target) return;
+
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.replaceState({}, "", `#${item.sectionId}`);
+    setMenuOpen(false);
   };
 
   return (
@@ -67,9 +71,8 @@ const Navbar = () => {
                 <li key={item.id} className="m-4 text-right">
                   <Link
                     href={item.link}
-                    className={`px-4 py-1 rounded-lg duration-300 text-white ${
-                      isActiveLink(item.link) ? "border-white border-2" : ""
-                    }`}
+                    onClick={(e) => handleSectionClick(e, item)}
+                    className="px-4 py-2 rounded-xl duration-300 text-white hover:bg-white/10"
                   >
                     {item.title}
                   </Link>
@@ -82,7 +85,7 @@ const Navbar = () => {
                     setShowModal(true);
                     setMenuOpen(false);
                   }}
-                  className="bg-white/20 cursor-pointer px-5 py-2 rounded-3xl text-white border border-white duration-500 font-medium"
+                  className="bg-white/20 cursor-pointer px-5 py-2 rounded-xl text-white border border-white/20 duration-300 font-medium hover:bg-white/28"
                 >
                   Talk to Our Team
                 </button>
@@ -109,14 +112,13 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <ul className="list-none ml-auto gap-5 text-[15px] hidden lg:flex font-karla text-white">
+          <ul className="list-none ml-auto items-center gap-2 text-[15px] hidden lg:flex font-karla text-white">
             {navLinks.map((item) => (
               <li key={item.id} className="my-auto">
                 <Link
                   href={item.link}
-                  className={`px-2 py-1 rounded-lg duration-300 text-white ${
-                    isActiveLink(item.link) ? "border-white border-2" : ""
-                  }`}
+                  onClick={(e) => handleSectionClick(e, item)}
+                  className="px-3 py-2 rounded-full duration-300 text-white/86 hover:text-white hover:bg-white/10"
                 >
                   {item.title}
                 </Link>
@@ -126,7 +128,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => setShowModal(true)}
-                className="bg-white cursor-pointer px-5 py-1.5 rounded-3xl text-main-dark border border-white duration-500 font-medium hover:bg-slate-100"
+                className="bg-[#00C9A7] cursor-pointer px-5 py-2 rounded-xl text-white border border-[#00C9A7] duration-300 font-semibold hover:bg-[#00B396]"
               >
                 Talk to Our Team
               </button>
