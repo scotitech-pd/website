@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
 
 /* contact info */
@@ -67,15 +68,21 @@ const GetInTouch = () => {
     <section className="relative overflow-hidden bg-[#f7f7f5] py-12 lg:py-20">
       {/* background decorative images */}
       <div>
-        <img
-          src="images/contact/get_b1.png"
+        <Image
+          src="/images/contact/get_b1.png"
           alt=""
-          className="absolute left-0 lg:block hidden z-0 pointer-events-none"
+          aria-hidden="true"
+          width={1434}
+          height={844}
+          className="absolute left-0 lg:block hidden z-0 pointer-events-none h-auto"
         />
-        <img
-          src="images/contact/get_b2.png"
+        <Image
+          src="/images/contact/get_b2.png"
           alt=""
-          className="absolute right-0 lg:block hidden z-0 pointer-events-none"
+          aria-hidden="true"
+          width={1421}
+          height={854}
+          className="absolute right-0 lg:block hidden z-0 pointer-events-none h-auto"
         />
       </div>
 
@@ -201,7 +208,7 @@ const ContactCardDesktop = ({ type, title, subtitle }) => {
 const ValueCard = ({ icon, text }) => (
   <div className="bg-white w-[450px] h-[60px] xxl:w-[500px] xxl:h-[70px] lg:shadow-xl lg:hover:shadow-2xl transition-shadow relative rounded-lg flex items-center p-4 pl-16">
     <div className="absolute shadow-[0_0_15px_3px_rgba(180,100,255,1)] bg-purple-100 p-5 -left-4 rounded-full flex-shrink-0 flex items-center justify-center">
-      <img src={icon} alt="icon" className="w-8 h-8" />
+      <Image src={icon} alt="" aria-hidden="true" width={32} height={32} className="w-8 h-8 object-contain" />
     </div>
     <p className="text-gray-800 font-lora font-semibold xxl:text-[15px] lg:pl-2 text-base">{text}</p>
   </div>
@@ -217,7 +224,7 @@ const ValueSection = ({ valueCards }) => (
     {valueCards.map((item, i) => (
       <div key={i} className="bg-white rounded-2xl mb-2 p-6 flex items-start gap-4 shadow-xl hover:shadow-2xl transition-shadow">
         <div className={`${item.bg} p-4 rounded-full flex-shrink-0 flex items-center justify-center`}>
-          <img src={item.icon} alt={item.text} className="w-9 h-9" />
+          <Image src={item.icon} alt="" aria-hidden="true" width={36} height={36} className="w-9 h-9 object-contain" />
         </div>
         <p className="text-gray-800 font-medium text-base font-lora">{item.text}</p>
       </div>
@@ -227,7 +234,7 @@ const ValueSection = ({ valueCards }) => (
       {valueCards.map((item, i) => (
         <div key={i} className="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-xl hover:shadow-2xl transition-shadow">
           <div className={`${item.bg} p-4 rounded-full mb-4`}>
-            <img src={item.icon} alt={item.text} className="w-9 h-9" />
+            <Image src={item.icon} alt="" aria-hidden="true" width={36} height={36} className="w-9 h-9 object-contain" />
           </div>
           <p className="text-gray-800 font-medium text-base font-lora">{item.text}</p>
         </div>

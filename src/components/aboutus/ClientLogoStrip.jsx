@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const logos = [
   {
     name: "Aviskaar Enterprises Ltd",
@@ -24,9 +26,11 @@ const LogoTile = ({ logo }) => {
   const content = (
     <div className="flex min-w-[220px] items-center justify-center rounded-[1.5rem] border border-slate-200 bg-white px-8 py-6 shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
       {logo.image ? (
-        <img
+        <Image
           src={logo.image}
           alt={logo.name}
+          width={160}
+          height={64}
           className="h-16 w-auto max-w-[160px] object-contain saturate-0 transition duration-300 hover:saturate-100"
         />
       ) : (

@@ -1,14 +1,18 @@
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 function Hero() {
   return (
     <div className="relative w-full h-[400px] lg:h-[600px] bg-center bg-cover bg-no-repeat flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:items-center overflow-hidden bg-[url('/images/contact/herobg-m.png')]">
       {/* Background Image for Mobile */}
-      <img
+      <Image
         src="/images/contact/herobrain.png"
-        alt="Contact Hero Background"
-        className="absolute lg:hidden opacity-30 w-[350px] sm:w-[400px] max-w-full top-[100px] right-0 left-0 mx-auto"
+        alt=""
+        aria-hidden="true"
+        width={689}
+        height={619}
+        className="absolute lg:hidden opacity-30 w-[350px] sm:w-[400px] max-w-full h-auto top-[100px] right-0 left-0 mx-auto"
       />
 
       {/* Content Container */}
@@ -44,10 +48,12 @@ function Hero() {
 
         {/* Right Image Section for Desktop */}
         <div className="hidden lg:flex relative justify-end">
-          <img
+          <Image
             src="/images/contact/herobrain.png"
-            alt="Contact Hero"
-            className="max-w-[500px]"
+            alt="Contact ScotiTech"
+            width={500}
+            height={449}
+            className="max-w-[500px] h-auto"
           />
         </div>
       </div>

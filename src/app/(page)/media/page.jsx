@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useModal } from "@/components/ModalContext";
 import { 
@@ -312,9 +313,11 @@ const PressRelease = () => {
               className="bg-white rounded-3xl border border-slate-200 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
             >
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 mb-5">
-                <img
+                <Image
                   src="/images/home/startup-awards-2026-shortlist.jpg"
                   alt="ScotiTech shortlisted for the Scotland StartUp Awards 2026"
+                  width={800}
+                  height={800}
                   className="w-full h-[240px] object-contain p-3"
                 />
               </div>
@@ -364,10 +367,12 @@ const PressRelease = () => {
                     className="aspect-square rounded-xl overflow-hidden cursor-pointer group relative"
                     onClick={() => openLightbox(idx)}
                   >
-                    <img
+                    <Image
                       src={img.src}
                       alt={img.alt}
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full scale-50 group-hover:scale-100 transition-transform">

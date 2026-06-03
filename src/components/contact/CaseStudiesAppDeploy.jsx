@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function CaseStudiesAppDeploy() {
@@ -57,11 +58,13 @@ export default function CaseStudiesAppDeploy() {
               className="grid lg:grid-cols-2 gap-10 bg-[#F9F6FF] rounded-2xl border border-gray-100 shadow-lg p-6 md:p-10"
             >
               {/* Image */}
-              <div className="relative flex items-center justify-center">
-                <img
+              <div className="relative h-72 md:h-96 w-full">
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="rounded-xl object-cover w-full h-72 md:h-96 shadow-md hover:scale-[1.02] transition"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="rounded-xl object-cover shadow-md transition hover:scale-[1.02]"
                 />
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/10 to-transparent"></div>
               </div>

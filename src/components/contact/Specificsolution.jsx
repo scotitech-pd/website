@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const SpecificSolution = () => {
@@ -229,9 +230,11 @@ const SpecificSolution = () => {
                   className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition h-full flex flex-col mb-0"
                 >
                   <div className="flex bg-slate-100 rounded-t-2xl overflow-hidden items-center justify-center h-20 border-b border-slate-200">
-                    <img
+                    <Image
                       src={card.image}
                       alt={card.name}
+                      width={160}
+                      height={56}
                       className="h-14 w-auto object-contain"
                     />
                   </div>
@@ -258,10 +261,13 @@ const SpecificSolution = () => {
                   <h3 className="text-[#0F172A] text-xl font-bold p-4 px-7 font-lora">
                     Our Location
                   </h3>
-                  <img
+                  <Image
                     src="/images/contact/map.png"
                     alt=""
-                    className="w-[300px] absolute left-4 z-20 hidden lg:block"
+                    aria-hidden="true"
+                    width={448}
+                    height={238}
+                    className="w-[300px] h-auto absolute left-4 z-20 hidden lg:block"
                   />
                 </div>
                 <div className="relative bg-yellow h-full w-full overflow-hidden lg:rounded-br-3xl lg:rounded-tr-3xl">

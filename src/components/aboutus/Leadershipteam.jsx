@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { Linkedin, MapPin } from "lucide-react";
 
 export default function LeadershipTeam() {
@@ -64,11 +65,13 @@ export default function LeadershipTeam() {
               key={member.name}
               className="rounded-[1.6rem] border border-slate-200 bg-white p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)]"
             >
-              <div className="mb-4 overflow-hidden rounded-2xl border border-slate-200">
-                <img
+              <div className="relative mb-4 h-[220px] overflow-hidden rounded-2xl border border-slate-200">
+                <Image
                   src={member.img}
                   alt={member.name}
-                  className="h-[220px] w-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  className="object-cover"
                 />
               </div>
 
