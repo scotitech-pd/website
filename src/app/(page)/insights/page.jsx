@@ -37,7 +37,7 @@ export default function InsightsPage() {
   return (
     <main className="bg-[#f7f7f5] text-[#0F172A]">
       <section className="relative overflow-hidden py-14 sm:py-20">
-        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(79,70,229,0.08),transparent_34%),linear-gradient(315deg,rgba(15,118,110,0.07),transparent_30%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(50%_45%_at_85%_-5%,rgba(91,79,207,0.10),transparent_60%)]" />
 
         <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
           <div className="grid grid-cols-1 xl:grid-cols-[56%_44%] gap-10 items-end mb-14">
@@ -82,7 +82,7 @@ export default function InsightsPage() {
             className="group grid grid-cols-1 lg:grid-cols-[40%_60%] overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.10)] transition hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(15,23,42,0.14)]"
           >
             <div className="relative min-h-[280px] bg-[#0F172A]">
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(79,116,243,0.32),transparent_52%),linear-gradient(315deg,rgba(188,185,106,0.22),transparent_46%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(91,79,207,0.32),transparent_52%),linear-gradient(315deg,rgba(79,116,243,0.22),transparent_46%)]" />
               <Image
                 src={featuredInsight.image}
                 alt={`${featuredInsight.title} cover image`}
@@ -95,7 +95,7 @@ export default function InsightsPage() {
 
             <article className="p-6 sm:p-8 lg:p-10">
               <div className="mb-5 flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-[#BCB96A] px-4 py-1.5 text-xs font-karla font-bold uppercase tracking-[0.14em] text-white">
+                <span className="rounded-full bg-brand px-4 py-1.5 text-xs font-karla font-bold uppercase tracking-[0.14em] text-white">
                   {featuredInsight.category}
                 </span>
                 <span className="rounded-full border border-slate-200 px-4 py-1.5 text-xs font-karla font-semibold uppercase tracking-[0.14em] text-slate-500">

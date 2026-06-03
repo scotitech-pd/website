@@ -75,7 +75,7 @@ export default function LeadershipTeam() {
               <h3 className="text-xl font-karla font-semibold text-slate-900 mb-1">
                 {member.name}
               </h3>
-              <p className="text-sm font-karla font-semibold text-[#15676E] mb-2">
+              <p className="text-sm font-karla font-semibold text-brand-strong mb-2">
                 {member.title}
               </p>
 
@@ -92,7 +92,7 @@ export default function LeadershipTeam() {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-karla font-semibold text-slate-800 hover:border-[#15676E] hover:text-[#15676E] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-karla font-semibold text-slate-800 hover:border-brand hover:text-brand-strong transition-colors"
               >
                 <Linkedin size={15} />
                 View LinkedIn
