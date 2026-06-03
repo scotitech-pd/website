@@ -16,10 +16,6 @@ const logos = [
     image: "/images/aboutus/no94oo-logo.png",
     href: null,
   },
-  { name: "Northfield Group", image: null, href: null },
-  { name: "Harbour Works", image: null, href: null },
-  { name: "Crestline Health", image: null, href: null },
-  { name: "Westbridge Studio", image: null, href: null },
 ];
 
 const marqueeLogos = [...logos, ...logos];
@@ -65,15 +61,15 @@ export default function ClientLogoStrip() {
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="mx-auto mb-8 max-w-3xl text-center">
           <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80">
-            Trusted by Early Clients and Partners
+            Trusted by early clients and partners
           </p>
           <h2 className="mb-4 font-karla text-3xl font-semibold text-[#0F172A] md:text-5xl">
-            Trusted relationships across client and partner work
+            Working relationships that put our products to real use
           </h2>
           <p className="font-lora text-lg leading-8 text-slate-700">
-            This section highlights the organisations represented across the
-            current portfolio story, with client and partner identities shown
-            in a clean, restrained format that fits the wider site.
+            We partner closely with the organisations adopting AppDeploy and
+            AXOS — building, refining, and supporting products against real
+            operational needs.
           </p>
         </div>
 

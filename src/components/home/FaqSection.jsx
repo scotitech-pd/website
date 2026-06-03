@@ -2,104 +2,96 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import Section from "@/components/ui/Section";
+import Reveal from "@/components/ui/Reveal";
+import Eyebrow from "@/components/ui/Eyebrow";
+
+const faqs = [
+  {
+    q: "What does ScotiTech actually build?",
+    a: "Focused software products — not general services. AppDeploy handles internal iOS app distribution; AXOS is a private, self-hostable team workspace with AI; ClarityPath supports structured, sensitive user journeys.",
+  },
+  {
+    q: "Is AppDeploy ready to use today?",
+    a: "Yes. AppDeploy is live and running in production, with branded internal distribution pages, release control, and access management for teams and partners.",
+  },
+  {
+    q: "When can we use AXOS?",
+    a: "AXOS is in early access. You can join the waitlist or talk to us about a private preview and a deployment that fits your data and control requirements.",
+  },
+  {
+    q: "How do you handle data and privacy?",
+    a: "Privacy is a default, not an upgrade. We build for clear data boundaries and deployment control — including self-hosting options for AXOS — so you can reason about where data lives and who can reach it.",
+  },
+  {
+    q: "Who is ScotiTech?",
+    a: "A UK-registered product company operating from Scotland, with product, engineering, and infrastructure delivery across the UK and India. Shortlisted for the Scotland StartUp Awards 2026.",
+  },
+];
+
+function FaqItem({ faq, isOpen, onToggle }) {
+  const reduce = useReducedMotion();
+  return (
+    <div className="border-b border-hairline">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={isOpen}
+        className="flex w-full items-center justify-between gap-4 py-5 text-left"
+      >
+        <span className="font-karla text-lg font-semibold text-strong">{faq.q}</span>
+        <ChevronDown
+          size={20}
+          className={`shrink-0 text-muted transition-transform duration-300 ${
+            isOpen ? "rotate-180 text-brand-strong" : ""
+          }`}
+        />
+      </button>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={reduce ? false : { height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={reduce ? undefined : { height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden"
+          >
+            <p className="t-body pb-5 pr-8">{faq.a}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export default function FaqSection() {
-  const [openIndex, setOpenIndex] = useState(0);
-
-  const faqs = [
-    {
-      question: "What makes ScotiTech different?",
-      answer:
-        "We design products around real operational problems, with practical delivery and measurable outcomes.",
-    },
-    {
-      question: "How does AppDeploy simplify app distribution?",
-      answer:
-        "It provides organisations with a clearer operational layer for Apple Business-based internal distribution, including simpler access, release visibility, and branded delivery workflows.",
-    },
-    {
-      question: "Can AXOS replace SaaS tools?",
-      answer:
-        "AXOS is designed to reduce tool sprawl by bringing mail, drive, cloud storage, calendar, chat, tasks, notes, and AI into one controlled environment.",
-    },
-    {
-      question: "How do I get started with ScotiTech?",
-      answer:
-        "Contact us and we will guide you to the product path that best matches your requirements.",
-    },
-    {
-      question: "How do you approach privacy and governance?",
-      answer:
-        "We design products with practical privacy, governance, and deployment controls in mind, while keeping messaging aligned to proven product capability.",
-    },
-  ];
+  const [open, setOpen] = useState(0);
 
   return (
-    <section
-      className="relative bg-[#f7f7f5] py-12 sm:py-20 overflow-hidden"
-    >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(52,211,255,0.08),transparent_26%),radial-gradient(circle_at_right,rgba(79,70,229,0.05),transparent_24%)]" />
-
-
-      <div className="relative z-10 grid min-[900px]:grid-cols-2 gap-7 sm:gap-10 items-center text-black max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
-        {/* Left Side */}
-        <div>
-          <h3 className="text-[24px] min-[450px]:text-3xl min-[1050px]:text-4xl font-bold text-black relative z-10 font-karla mb-6 flex items-center">
-            <p className="hidden min-[460px]:felx text-[5rem] min-[450px]:text-[6rem] min-[650px]:text-[7rem] font-bold text-black opacity-[0.04] absolute select-none -z-10 top-1/2 transform -translate-y-1/2 font-karla">
-              FAQ
-            </p>
-            <p className="font-karla text-[32px] min-[610px]:text-[40px] leading-[33px]">
-              Frequently Asked Questions
-            </p>
-          </h3>
-          <p className=" sm:mt-8 text-lg leading-7  z-10 font-lora text-black/75">
-            Short answers to the questions visitors most often ask about our
-            products, approach, and operating model.
+    <Section surface="muted" spacing="lg">
+      <div className="grid gap-10 lg:grid-cols-[36%_64%] lg:gap-16">
+        <Reveal>
+          <Eyebrow>FAQ</Eyebrow>
+          <h2 className="t-h1 mt-3">Questions, answered plainly.</h2>
+          <p className="t-lead mt-5">
+            The essentials buyers and partners ask before a conversation.
           </p>
-        </div>
+        </Reveal>
 
-        {/* Right Side - Accordion */}
-        <div className="space-y-4 min-[1340px]:h-[485px] pl-4 flex flex-col justify-center">
-          {faqs.map((faq, i) => (
-            <div
-              key={i}
-              className="border border-slate-200 rounded-xl shadow-[0_10px_25px_rgba(15,23,42,0.06)] bg-white relative"
-            >
-              <div className="absolute  bg-main-dark rounded-full size-[26px] flex items-center justify-center -left-[13px] top-[12px] min-[500px]:top-[8px]">
-                <img
-                  src="/images/home/faqicon.png"
-                  className="size-[21px]"
-                  alt="faqicon"
-                />
-              </div>
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex justify-between items-center text-left px-5 py-3 font-medium text-main-dark"
-              >
-                <div className="flex items-center gap-3 text-[17px] sm:text-[18px] font-karla">
-                  <span>{faq.question}</span>
-                </div>
-                <ChevronDown
-                  className={`transition-transform duration-300 size-5 ${
-                    openIndex === i ? "rotate-180 text-main-dark" : "text-[#15676E]"
-                  }`}
-                />
-              </button>
-
-              <div
-                className={`transition-all duration-500 overflow-hidden ${
-                  openIndex === i ? "max-h-40 pb-4" : "max-h-0"
-                }`}
-              >
-                <p className="text-black/80 text-[16px] sm:text-[18px] leading-7 font-lora px-5">
-                  {faq.answer}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Reveal delay={0.08}>
+          <div className="rounded-3xl border border-hairline bg-surface px-6 shadow-soft md:px-8">
+            {faqs.map((faq, i) => (
+              <FaqItem
+                key={faq.q}
+                faq={faq}
+                isOpen={open === i}
+                onToggle={() => setOpen(open === i ? -1 : i)}
+              />
+            ))}
+          </div>
+        </Reveal>
       </div>
-    </section>
+    </Section>
   );
 }
