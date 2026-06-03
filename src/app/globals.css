@@ -208,7 +208,10 @@ body {
 /* ---------------------------------------------------------------
    TYPOGRAPHY SCALE — confident, restrained
    Use display/h-* utility classes to stop ad-hoc per-file sizing.
+   Defined in @layer components so Tailwind color utilities
+   (e.g. text-on-ink, text-appdeploy) can override the default color.
 --------------------------------------------------------------- */
+@layer components {
 .t-eyebrow {
   font-family: var(--font-karla), sans-serif;
   font-size: 0.8125rem;
@@ -266,6 +269,7 @@ body {
   font-size: 0.875rem;
   line-height: 1.6;
   color: var(--muted);
+}
 }
 
 /* ---------------------------------------------------------------
