@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -13,6 +13,7 @@ const flagships = [
   {
     name: "AppDeploy",
     href: "/products/appdeploy",
+    externalUrl: "https://appdeploy.scotitech.com",
     accent: "bg-appdeploy",
     status: { variant: "live", dot: true, label: "Live" },
     tagline: "Internal app distribution, fully under your control.",
@@ -113,16 +114,29 @@ export default function OurProducts() {
                   ))}
                 </div>
 
-                <Link
-                  href={product.href}
-                  className="mt-7 inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong transition-colors hover:text-brand"
-                >
-                  Explore {product.name}
-                  <ArrowRight
-                    size={16}
-                    className="transition-transform group-hover:translate-x-0.5"
-                  />
-                </Link>
+                <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2">
+                  <Link
+                    href={product.href}
+                    className="inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong transition-colors hover:text-brand"
+                  >
+                    Explore {product.name}
+                    <ArrowRight
+                      size={16}
+                      className="transition-transform group-hover:translate-x-0.5"
+                    />
+                  </Link>
+                  {product.externalUrl && (
+                    <a
+                      href={product.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 font-karla text-sm font-semibold text-muted transition-colors hover:text-strong"
+                    >
+                      Visit {product.name}
+                      <ArrowUpRight size={15} />
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           </Reveal>

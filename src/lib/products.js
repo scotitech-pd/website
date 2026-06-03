@@ -8,6 +8,7 @@ export const products = {
     slug: "appdeploy",
     name: "AppDeploy",
     accent: "appdeploy", // bg-appdeploy / text-appdeploy
+    externalUrl: "https://appdeploy.scotitech.com",
     status: { variant: "live", dot: true, label: "Live" },
     eyebrow: "Internal app distribution",
     tagline: "Internal app distribution, fully under your control.",

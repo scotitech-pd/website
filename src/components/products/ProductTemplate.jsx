@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  ArrowUpRight,
   Check,
   Quote,
   ShieldCheck,
@@ -96,14 +97,43 @@ export default function ProductTemplate({ product }) {
               <p className="t-h3 mt-4 font-karla !font-semibold text-strong">{product.tagline}</p>
               <p className="t-lead mt-5 max-w-xl">{product.description}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button size="lg" onClick={() => setShowModal(true)}>
-                  {product.cta.primary}
-                  <ArrowRight size={17} />
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link href={product.cta.secondary.href}>{product.cta.secondary.label}</Link>
-                </Button>
+                {product.externalUrl ? (
+                  <>
+                    <Button asChild size="lg">
+                      <a href={product.externalUrl} target="_blank" rel="noopener noreferrer">
+                        Visit {product.name}
+                        <ArrowUpRight size={17} />
+                      </a>
+                    </Button>
+                    <Button size="lg" variant="outline" onClick={() => setShowModal(true)}>
+                      {product.cta.primary}
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button size="lg" onClick={() => setShowModal(true)}>
+                      {product.cta.primary}
+                      <ArrowRight size={17} />
+                    </Button>
+                    <Button asChild size="lg" variant="outline">
+                      <Link href={product.cta.secondary.href}>{product.cta.secondary.label}</Link>
+                    </Button>
+                  </>
+                )}
               </div>
+              {product.externalUrl && (
+                <p className="mt-3 font-karla text-sm text-muted">
+                  Live at{" "}
+                  <a
+                    href={product.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-brand-strong hover:text-brand"
+                  >
+                    appdeploy.scotitech.com
+                  </a>
+                </p>
+              )}
             </Reveal>
             <Reveal immediate delay={0.1} className="relative">
               <ProductMedia media={product.hero.media} accentBg={accentBg} />
@@ -292,13 +322,29 @@ export default function ProductTemplate({ product }) {
                 <h2 className="t-h1 text-on-ink">{product.cta.title}</h2>
                 <p className="mt-4 font-karla text-lg text-on-ink-muted">{product.cta.body}</p>
                 <div className="mt-8 flex flex-wrap justify-center gap-3">
-                  <Button size="lg" variant="onInkSolid" onClick={() => setShowModal(true)}>
-                    {product.cta.primary}
-                    <ArrowRight size={17} />
-                  </Button>
-                  <Button asChild size="lg" variant="onInk">
-                    <Link href={product.cta.secondary.href}>{product.cta.secondary.label}</Link>
-                  </Button>
+                  {product.externalUrl ? (
+                    <>
+                      <Button asChild size="lg" variant="onInkSolid">
+                        <a href={product.externalUrl} target="_blank" rel="noopener noreferrer">
+                          Visit {product.name}
+                          <ArrowUpRight size={17} />
+                        </a>
+                      </Button>
+                      <Button size="lg" variant="onInk" onClick={() => setShowModal(true)}>
+                        {product.cta.primary}
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <Button size="lg" variant="onInkSolid" onClick={() => setShowModal(true)}>
+                        {product.cta.primary}
+                        <ArrowRight size={17} />
+                      </Button>
+                      <Button asChild size="lg" variant="onInk">
+                        <Link href={product.cta.secondary.href}>{product.cta.secondary.label}</Link>
+                      </Button>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
