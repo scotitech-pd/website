@@ -1,26 +1,12 @@
+import ProductTemplate from "@/components/products/ProductTemplate";
+import { getProduct } from "@/lib/products";
+
 export const metadata = {
-  title: "AXOS | ScotiTech Solutions Limited",
-};
-import ComplianceSecurity from "@/components/products/opsly/ComplianceSecurity";
-import HowToGetOpsly from "@/components/products/opsly/HowToGetOpsly";
-import OpslyFeaturesSection from "@/components/products/opsly/OpslyFeaturesSection";
-import OpslyHeroSection from "@/components/products/opsly/OpslyHeroSection";
-import OpslyInfoSection from "@/components/products/opsly/OpslyInfoSection";
-import OpslyOverview from "@/components/products/opsly/OpslyOverview";
-import WhyChooseOpsly from "@/components/products/opsly/WhyChooseOpsly";
-
-const AXOS = () => {
-  return (
-    <>
-      <OpslyHeroSection />
-      <OpslyInfoSection />
-      <OpslyOverview />
-      <OpslyFeaturesSection />
-      <WhyChooseOpsly />
-      <HowToGetOpsly />
-      <ComplianceSecurity />
-    </>
-  );
+  title: "AXOS — Private Team Workspace with AI | ScotiTech Solutions",
+  description:
+    "AXOS is a private, self-hostable workspace bringing mail, drive, chat, tasks, notes and AI into one controlled environment. Now in early access.",
 };
 
-export default AXOS;
+export default function AxosPage() {
+  return <ProductTemplate product={getProduct("axos")} />;
+}

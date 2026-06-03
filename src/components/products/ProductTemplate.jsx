@@ -1,0 +1,310 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Check,
+  Quote,
+  ShieldCheck,
+  Sparkles,
+  // feature icons (referenced by name in product config)
+  Palette,
+  MousePointerClick,
+  GitBranch,
+  Users,
+  BarChart3,
+  Building2,
+  Mail,
+  HardDrive,
+  MessageSquare,
+  CheckSquare,
+  ServerCog,
+  Route,
+  Lock,
+  Compass,
+} from "lucide-react";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
+import Reveal from "@/components/ui/Reveal";
+import Eyebrow from "@/components/ui/Eyebrow";
+import Badge from "@/components/ui/Badge";
+import { Button } from "@/components/ui/button";
+import { useModal } from "@/components/ModalContext";
+import { cn } from "@/lib/utils";
+
+const icons = {
+  Palette, MousePointerClick, GitBranch, Users, BarChart3, Building2,
+  Mail, HardDrive, MessageSquare, CheckSquare, ServerCog, Route, Lock, Compass,
+  Sparkles,
+};
+
+function ProductMedia({ media, accentBg }) {
+  if (media?.type === "image") {
+    return (
+      <div className="relative rounded-[1.5rem] border border-hairline bg-surface p-3 shadow-lift">
+        <div className="flex items-center gap-1.5 px-2 py-1.5">
+          <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
+          <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
+          <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
+          {media.chrome && (
+            <span className="ml-3 rounded-md bg-surface-sunken px-3 py-1 font-mono text-[11px] text-muted">
+              {media.chrome}
+            </span>
+          )}
+        </div>
+        <div className="overflow-hidden rounded-[1rem] border border-hairline bg-surface-muted">
+          <Image src={media.src} alt={media.alt} width={1200} height={760} priority className="h-auto w-full" />
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className="relative flex aspect-[16/11] flex-col items-center justify-center gap-3 overflow-hidden rounded-[1.5rem] border border-hairline bg-surface shadow-lift">
+      <span className={cn("absolute inset-0 -z-0 opacity-10", accentBg)} />
+      {media?.icon && (
+        <Image src={media.icon} alt="" width={72} height={72} className="relative z-10 h-16 w-16 object-contain opacity-90" />
+      )}
+      <span className="relative z-10 inline-flex items-center gap-1.5 rounded-full border border-hairline bg-surface px-3 py-1 font-karla text-xs font-medium text-muted">
+        <Sparkles size={13} className="text-brand-strong" />
+        {media?.label || "Preview coming soon"}
+      </span>
+    </div>
+  );
+}
+
+export default function ProductTemplate({ product }) {
+  const { setShowModal } = useModal();
+  const accentBg = `bg-${product.accent}`;
+  const accentText = `text-${product.accent}`;
+
+  return (
+    <>
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-surface pt-28 pb-16 md:pt-32 md:pb-24">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_50%_at_85%_-5%,rgba(91,79,207,0.10),transparent_60%)]" />
+        <Container className="relative z-10">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <Reveal immediate>
+              <div className="flex items-center gap-3">
+                <Eyebrow className={accentText}>{product.eyebrow}</Eyebrow>
+                <Badge variant={product.status.variant} dot={product.status.dot}>
+                  {product.status.label}
+                </Badge>
+              </div>
+              <h1 className="t-display mt-5">{product.name}</h1>
+              <p className="t-h3 mt-4 font-karla !font-semibold text-strong">{product.tagline}</p>
+              <p className="t-lead mt-5 max-w-xl">{product.description}</p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button size="lg" onClick={() => setShowModal(true)}>
+                  {product.cta.primary}
+                  <ArrowRight size={17} />
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link href={product.cta.secondary.href}>{product.cta.secondary.label}</Link>
+                </Button>
+              </div>
+            </Reveal>
+            <Reveal immediate delay={0.1} className="relative">
+              <ProductMedia media={product.hero.media} accentBg={accentBg} />
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* PROBLEM / SOLUTION */}
+      {product.problem && product.solution && (
+        <Section surface="muted" spacing="lg">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <Reveal>
+              <div className="h-full rounded-3xl border border-hairline bg-surface p-7 shadow-soft md:p-9">
+                <p className="font-karla text-xs font-semibold uppercase tracking-[0.14em] text-muted">The problem</p>
+                <h2 className="t-h3 mt-3">{product.problem.title}</h2>
+                <ul className="mt-6 space-y-3">
+                  {product.problem.points.map((p) => (
+                    <li key={p} className="flex gap-3 t-body">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <div className="h-full rounded-3xl border border-hairline bg-surface p-7 shadow-soft md:p-9">
+                <p className={cn("font-karla text-xs font-semibold uppercase tracking-[0.14em]", accentText)}>
+                  With {product.name}
+                </p>
+                <h2 className="t-h3 mt-3">{product.solution.title}</h2>
+                <ul className="mt-6 space-y-3">
+                  {product.solution.points.map((p) => (
+                    <li key={p} className="flex gap-3 t-body text-strong">
+                      <Check size={18} className={cn("mt-0.5 shrink-0", accentText)} />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          </div>
+        </Section>
+      )}
+
+      {/* FEATURES */}
+      {product.features && (
+        <Section surface="base" spacing="lg">
+          <Reveal className="max-w-3xl">
+            <Eyebrow className={accentText}>Capabilities</Eyebrow>
+            <h2 className="t-h1 mt-3">What {product.name} gives your team.</h2>
+          </Reveal>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {product.features.map((f, i) => {
+              const Icon = icons[f.icon] || Sparkles;
+              return (
+                <Reveal key={f.title} delay={(i % 3) * 0.06}>
+                  <div className="flex h-full flex-col rounded-2xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface-sunken">
+                      <Icon size={20} className={accentText} />
+                    </span>
+                    <h3 className="mt-5 font-karla text-lg font-semibold text-strong">{f.title}</h3>
+                    <p className="t-small mt-2 leading-6">{f.body}</p>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+        </Section>
+      )}
+
+      {/* HOW IT WORKS */}
+      {product.howItWorks && (
+        <Section surface="muted" spacing="lg">
+          <Reveal className="max-w-3xl">
+            <Eyebrow className={accentText}>How it works</Eyebrow>
+            <h2 className="t-h1 mt-3">From setup to rollout in a few clear steps.</h2>
+          </Reveal>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {product.howItWorks.map((s, i) => (
+              <Reveal key={s.title} delay={i * 0.06}>
+                <div className="relative h-full rounded-2xl border border-hairline bg-surface p-6 shadow-soft">
+                  <span className={cn("font-mono text-sm font-semibold", accentText)}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-3 font-karla text-lg font-semibold text-strong">{s.title}</h3>
+                  <p className="t-small mt-2 leading-6">{s.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* PROOF + SECURITY */}
+      {(product.proof || product.security) && (
+        <Section surface="base" spacing="lg">
+          <div className="grid gap-6 lg:grid-cols-2">
+            {product.proof && (
+              <Reveal>
+                <figure className="flex h-full flex-col rounded-3xl bg-ink p-8 shadow-lift md:p-10">
+                  <Quote size={30} className="text-white/30" />
+                  <blockquote className="mt-4 flex-1 font-karla text-xl leading-relaxed text-on-ink">
+                    {product.proof.quote}
+                  </blockquote>
+                  <figcaption className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
+                    <Image src={product.proof.img} alt={product.proof.name} width={48} height={48} className="h-12 w-12 rounded-full object-cover" />
+                    <div>
+                      <p className="font-karla font-semibold text-on-ink">{product.proof.name}</p>
+                      <p className="text-sm text-on-ink-muted">{product.proof.role}</p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            )}
+            {product.security && (
+              <Reveal delay={0.08}>
+                <div className="flex h-full flex-col rounded-3xl border border-hairline bg-surface-muted p-8 shadow-soft md:p-10">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand-strong">
+                    <ShieldCheck size={20} />
+                  </span>
+                  <h2 className="t-h3 mt-5">{product.security.title}</h2>
+                  <ul className="mt-6 space-y-3">
+                    {product.security.points.map((p) => (
+                      <li key={p} className="flex gap-3 t-body">
+                        <Check size={18} className="mt-0.5 shrink-0 text-brand-strong" />
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            )}
+          </div>
+        </Section>
+      )}
+
+      {/* PRICING */}
+      {product.pricing && (
+        <Section surface="muted" spacing="md">
+          <Reveal>
+            <div className="flex flex-col items-start justify-between gap-5 rounded-3xl border border-hairline bg-surface p-8 shadow-soft sm:flex-row sm:items-center md:p-10">
+              <div>
+                <Eyebrow className={accentText}>Pricing</Eyebrow>
+                <p className="t-h3 mt-2">{product.pricing.note}</p>
+              </div>
+              <Button size="lg" onClick={() => setShowModal(true)}>
+                {product.pricing.cta}
+                <ArrowRight size={17} />
+              </Button>
+            </div>
+          </Reveal>
+        </Section>
+      )}
+
+      {/* FAQ */}
+      {product.faqs && (
+        <Section surface="base" spacing="lg">
+          <div className="grid gap-10 lg:grid-cols-[36%_64%] lg:gap-16">
+            <Reveal>
+              <Eyebrow className={accentText}>FAQ</Eyebrow>
+              <h2 className="t-h1 mt-3">Good to know.</h2>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <div className="rounded-3xl border border-hairline bg-surface px-6 shadow-soft md:px-8">
+                {product.faqs.map((f) => (
+                  <div key={f.q} className="border-b border-hairline py-5 last:border-b-0">
+                    <p className="font-karla text-lg font-semibold text-strong">{f.q}</p>
+                    <p className="t-body mt-2">{f.a}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </Section>
+      )}
+
+      {/* CTA */}
+      <section className="bg-surface py-16 md:py-24">
+        <Container>
+          <Reveal>
+            <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 text-center shadow-lift md:px-14 md:py-16">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(91,79,207,0.25),transparent_60%)]" />
+              <div className="relative z-10 mx-auto max-w-2xl">
+                <h2 className="t-h1 text-on-ink">{product.cta.title}</h2>
+                <p className="mt-4 font-karla text-lg text-on-ink-muted">{product.cta.body}</p>
+                <div className="mt-8 flex flex-wrap justify-center gap-3">
+                  <Button size="lg" variant="onInkSolid" onClick={() => setShowModal(true)}>
+                    {product.cta.primary}
+                    <ArrowRight size={17} />
+                  </Button>
+                  <Button asChild size="lg" variant="onInk">
+                    <Link href={product.cta.secondary.href}>{product.cta.secondary.label}</Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+    </>
+  );
+}

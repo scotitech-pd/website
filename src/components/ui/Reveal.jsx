@@ -15,6 +15,7 @@ export default function Reveal({
   duration = 0.5,
   once = true,
   amount = 0.2,
+  immediate = false, // use for above-the-fold content (animates on mount, no flash)
   className,
   children,
   ...props
@@ -31,12 +32,15 @@ export default function Reveal({
     );
   }
 
+  const trigger = immediate
+    ? { animate: { opacity: 1, y: 0 } }
+    : { whileInView: { opacity: 1, y: 0 }, viewport: { once, amount } };
+
   return (
     <MotionTag
       className={className}
       initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once, amount }}
+      {...trigger}
       transition={{ duration, ease: [0.22, 1, 0.36, 1], delay }}
       {...props}
     >

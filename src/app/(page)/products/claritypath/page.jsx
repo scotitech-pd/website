@@ -1,26 +1,12 @@
+import ProductTemplate from "@/components/products/ProductTemplate";
+import { getProduct } from "@/lib/products";
+
 export const metadata = {
-  title: "ClarityPath | ScotiTech Solutions Limited",
-}
-import AboutSection from "@/components/products/claritypath/AboutSection"
-import ClarityPathSection from "@/components/products/claritypath/ClarityPathSection"
-import ClarityPathSteps from "@/components/products/claritypath/ClarityPathSteps"
-import ComplianceSecurity from "@/components/products/claritypath/ComplianceSecurity"
-import KeyFeaturesSection from "@/components/products/claritypath/KeyFeaturesSection"
-import WhatIsClarityPath from "@/components/products/claritypath/WhatIsClarityPath"
-import WhyChooseSection from "@/components/products/claritypath/WhyChooseSection"
+  title: "ClarityPath — Decision-Support Tools | ScotiTech Solutions",
+  description:
+    "ClarityPath provides private, structured decision-support for sensitive, high-stakes user journeys where a generic form or chatbot isn't enough.",
+};
 
-const claritypath = () => {
-  return (
-    <>
-        <ClarityPathSection/>
-        <WhatIsClarityPath/>
-        <KeyFeaturesSection/> 
-        <WhyChooseSection/>
-        <ClarityPathSteps/>
-        <ComplianceSecurity/> 
-        <AboutSection/>
-    </>
-  )
+export default function ClarityPathPage() {
+  return <ProductTemplate product={getProduct("claritypath")} />;
 }
-
-export default claritypath

@@ -1,30 +1,12 @@
+import ProductTemplate from "@/components/products/ProductTemplate";
+import { getProduct } from "@/lib/products";
+
 export const metadata = {
-  title: "AppDeploy | ScotiTech Solutions Limited",
-};
-import AppDeployCTA from "@/components/products/appdeploy/AppDeployCTA";
-import AppDeployInfo from "@/components/products/appdeploy/AppDeployInfo";
-import AppDeploySection from "@/components/products/appdeploy/AppDeploySection";
-import CompetitorAnalysis from "@/components/products/appdeploy/CompetitorAnalysis";
-import ComplianceSecurity from "@/components/products/appdeploy/ComplianceSecurity";
-import KeyFeatures from "@/components/products/appdeploy/KeyFeatures";
-import PricingAppDeploy from "@/components/products/appdeploy/PricingAppDeploy";
-import WhyChooseAppDeploy from "@/components/products/appdeploy/WhyChooseAppDeploy";
-import ProblemSolutionFlow from "@/components/products/appdeploy/ProblemSolutionFlow";
-
-const page = () => {
-  return (
-    <>
-      <AppDeploySection />
-      <AppDeployInfo />
-      <ProblemSolutionFlow />
-      <CompetitorAnalysis />
-      <KeyFeatures />
-      <WhyChooseAppDeploy />
-      <PricingAppDeploy />
-      <AppDeployCTA />
-      <ComplianceSecurity />
-    </>
-  );
+  title: "AppDeploy — Internal iOS App Distribution | ScotiTech Solutions",
+  description:
+    "AppDeploy is live internal iOS app distribution: branded access pages, one-tap install, release control, and rollout visibility for teams and partners.",
 };
 
-export default page;
+export default function AppDeployPage() {
+  return <ProductTemplate product={getProduct("appdeploy")} />;
+}
