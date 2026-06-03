@@ -247,29 +247,14 @@ const Footer = () => {
         </div>
 
         <div className="text-white z-10 mb-6 hidden md:block">
-          <div className="hidden md:flex items-center w-full px-4 relative">
-            <div className="absolute left-1/2 -translate-x-1/2 font-lora text-sm flex items-center gap-1">
+          <div className="hidden md:flex items-center justify-center w-full px-4">
+            <div className="font-lora text-sm flex items-center gap-1">
               <span>Copyright</span>
               <Copyright className="size-3.5 inline" />
               <span>
                 {new Date().getFullYear()} ScotiTech Solutions, All Rights
                 Reserved.
               </span>
-            </div>
-
-            <div className="ml-auto flex items-center font-karla text-xs tracking-wider uppercase text-white/50 group">
-              <span className="mr-1.5 uppercase tracking-[0.15em]">Powered by</span>
-              <a
-                href="https://spacelinkers.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative overflow-hidden"
-              >
-                <span className="text-white font-bold transition-all duration-300">
-                  Spacelinkers Infotech
-                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#F58634] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-                </span>
-              </a>
             </div>
           </div>
         </div>
@@ -282,19 +267,6 @@ const Footer = () => {
               {new Date().getFullYear()} ScotiTech Solutions, All Rights
               Reserved.
             </span>
-          </div>
-
-          <div className="flex justify-center items-center mt-4 font-karla text-[10px] tracking-widest uppercase text-white/40">
-            <span className="mr-1.5">Powered by</span>
-            <a
-              href="https://spacelinkers.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="text-white font-bold">
-                Spacelinkers Infotech
-              </span>
-            </a>
           </div>
         </div>
 
