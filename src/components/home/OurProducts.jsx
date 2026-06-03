@@ -16,10 +16,10 @@ const flagships = [
     externalUrl: "https://appdeploy.scotitech.com",
     accent: "bg-appdeploy",
     status: { variant: "live", dot: true, label: "Live" },
-    tagline: "Internal app distribution, fully under your control.",
+    tagline: "Your apps. Your brand. Enterprise-ready in 14 days.",
     description:
-      "Private iOS delivery with branded access pages, release visibility, and a one-tap install experience for employees and partners.",
-    capabilities: ["Branded access", "Release control", "Enterprise rollout"],
+      "A branded workspace for private iOS and Android app delivery, with Apple Business-aligned workflows and clearer install guidance — without forcing full MDM adoption.",
+    capabilities: ["Branded portal", "Apple Business", "iOS & Android"],
     media: {
       type: "image",
       src: "/images/products/appdeploy/phonepic.png",

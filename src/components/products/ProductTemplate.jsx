@@ -142,6 +142,22 @@ export default function ProductTemplate({ product }) {
         </Container>
       </section>
 
+      {/* METRICS */}
+      {product.metrics && (
+        <section className="border-y border-hairline bg-surface-muted py-10">
+          <Container>
+            <dl className="grid grid-cols-2 gap-6 md:grid-cols-4">
+              {product.metrics.map((m, i) => (
+                <Reveal as="div" key={m.label} delay={i * 0.05} className="text-center md:text-left">
+                  <dt className="t-h2 !text-strong">{m.value}</dt>
+                  <dd className="t-small mt-1">{m.label}</dd>
+                </Reveal>
+              ))}
+            </dl>
+          </Container>
+        </section>
+      )}
+
       {/* PROBLEM / SOLUTION */}
       {product.problem && product.solution && (
         <Section surface="muted" spacing="lg">
@@ -273,20 +289,65 @@ export default function ProductTemplate({ product }) {
       )}
 
       {/* PRICING */}
-      {product.pricing && (
-        <Section surface="muted" spacing="md">
-          <Reveal>
-            <div className="flex flex-col items-start justify-between gap-5 rounded-3xl border border-hairline bg-surface p-8 shadow-soft sm:flex-row sm:items-center md:p-10">
-              <div>
-                <Eyebrow className={accentText}>Pricing</Eyebrow>
-                <p className="t-h3 mt-2">{product.pricing.note}</p>
-              </div>
-              <Button size="lg" onClick={() => setShowModal(true)}>
-                {product.pricing.cta}
-                <ArrowRight size={17} />
-              </Button>
-            </div>
+      {product.pricing?.plans && (
+        <Section surface="muted" spacing="lg">
+          <Reveal className="max-w-3xl">
+            <Eyebrow className={accentText}>Pricing</Eyebrow>
+            <h2 className="t-h1 mt-3">Simple, transparent pricing.</h2>
+            {product.pricing.trial && (
+              <p className="t-lead mt-4">{product.pricing.trial}</p>
+            )}
           </Reveal>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {product.pricing.plans.map((plan, i) => {
+              const featured = i === 0;
+              return (
+                <Reveal key={plan.name} delay={i * 0.08}>
+                  <div
+                    className={cn(
+                      "flex h-full flex-col rounded-3xl border p-8 shadow-soft md:p-10",
+                      featured ? "border-brand bg-surface ring-1 ring-brand/20" : "border-hairline bg-surface"
+                    )}
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <p className="font-karla text-sm font-semibold uppercase tracking-[0.14em] text-muted">
+                        {plan.name}
+                      </p>
+                      {plan.tag && <Badge variant="brand">{plan.tag}</Badge>}
+                    </div>
+                    <div className="mt-4 flex items-baseline gap-1">
+                      <span className="t-h1 !text-strong">{plan.price}</span>
+                      {plan.period && <span className="t-body">{plan.period}</span>}
+                    </div>
+                    {plan.note && <p className="t-small mt-1">{plan.note}</p>}
+                    <p className="t-body mt-4">{plan.desc}</p>
+                    <ul className="mt-6 space-y-3">
+                      {plan.features.map((f) => (
+                        <li key={f} className="flex gap-3 t-body">
+                          <Check size={18} className={cn("mt-0.5 shrink-0", accentText)} />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-8 pt-2">
+                      {plan.cta.external ? (
+                        <Button asChild size="lg" variant={featured ? "default" : "outline"} className="w-full">
+                          <a href={plan.cta.href} target="_blank" rel="noopener noreferrer">
+                            {plan.cta.label}
+                            <ArrowUpRight size={17} />
+                          </a>
+                        </Button>
+                      ) : (
+                        <Button asChild size="lg" variant={featured ? "default" : "outline"} className="w-full">
+                          <Link href={plan.cta.href}>{plan.cta.label}</Link>
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
         </Section>
       )}
 

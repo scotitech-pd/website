@@ -27,9 +27,9 @@ const clients = [
 const testimonials = [
   {
     img: "/images/solution/rohit.jpeg",
-    text: "AppDeploy gave our team a much clearer internal distribution flow, with a branded access path and far less operational friction around releases.",
+    text: "We replaced three different manual processes with a single AppDeploy workspace. Our IT team now ships updates to 40+ employees faster, and install-related support is much easier to manage.",
     name: "Rohit Ahlawat",
-    role: "Aviskaar Enterprises Ltd",
+    role: "Director, Aviskaar Enterprises",
   },
   {
     img: "/images/solution/vijay.jpeg",
