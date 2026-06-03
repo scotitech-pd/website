@@ -31,9 +31,57 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ScotiTech Solutions | Practical Digital Products for Modern Teams",
+  metadataBase: new URL("https://scotitech.com"),
+  title: {
+    default: "ScotiTech Solutions | Practical Digital Products for Modern Teams",
+    template: "%s | ScotiTech Solutions",
+  },
   description:
-    "ScotiTech Solutions builds practical digital products across internal app distribution, private operational tooling, accessibility, and privacy-conscious software.",
+    "ScotiTech Solutions builds focused, privacy-conscious products for internal app distribution and private team operations — AppDeploy, AXOS and ClarityPath.",
+  keywords: [
+    "ScotiTech",
+    "AppDeploy",
+    "AXOS",
+    "internal app distribution",
+    "private workspace",
+    "Apple Business",
+    "self-hosted",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: "ScotiTech Solutions",
+    title: "ScotiTech Solutions | Practical Digital Products for Modern Teams",
+    description:
+      "Focused, privacy-conscious products for internal app distribution and private team operations.",
+    url: "https://scotitech.com",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ScotiTech Solutions",
+    description:
+      "Focused, privacy-conscious products for internal app distribution and private team operations.",
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "ScotiTech Solutions Limited",
+  url: "https://scotitech.com",
+  logo: "https://scotitech.com/logo/logo.png",
+  email: "info@scotitech.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Maxim Business Park, 2 Parklands Way",
+    addressLocality: "Motherwell",
+    postalCode: "ML1 4WR",
+    addressCountry: "GB",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/scotitech-ltd/",
+    "https://www.instagram.com/scotitechsolutions/",
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -42,6 +90,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${karla.variable} ${lora.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <ModalProvider>
           <Navbar />
           <RequestaQuote />
