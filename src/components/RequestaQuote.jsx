@@ -1,234 +1,174 @@
 "use client";
 
 import { useModal } from "@/components/ModalContext";
-import { useState, useEffect } from "react";
-import { PhoneInput } from "react-international-phone";
-import "react-international-phone/style.css";
-import { ArrowRight, X, Check } from "lucide-react";
+import { useEffect } from "react";
+import { ArrowRight, Clock, ShieldCheck, Sparkles, X } from "lucide-react";
+
+/* Single scheduling link used for both product sessions */
+const CALENDLY_URL =
+  "https://calendly.com/pradeepdahiya2411/axos-private-workspace-strategy-session";
+
+const chips = [
+  { icon: Clock, label: "45-min session" },
+  { icon: ShieldCheck, label: "Security aligned" },
+  { icon: Sparkles, label: "Product-specific guidance" },
+];
+
+const agenda = [
+  "Select the product session that matches your use case",
+  "Review deployment, control, and rollout expectations",
+  "Leave with a clear next-step plan",
+];
+
+const sessions = [
+  {
+    name: "AppDeploy session",
+    body: "For teams distributing private or internal iOS apps through Apple Business, with controlled installs and clear rollout governance.",
+    cta: "Book AppDeploy session",
+  },
+  {
+    name: "AXOS session",
+    body: "For teams planning a private workspace for communication, files, tasks, and governance-aligned AI operations.",
+    cta: "Book AXOS session",
+  },
+];
 
 export default function RequestaQuote() {
   const { showModal, setShowModal } = useModal();
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
-  const [phone, setPhone] = useState("");
-  const [service, setService] = useState("");
-  const [message, setMessage] = useState("");
+  const closeModal = () => setShowModal(false);
 
-  const [sending, setSending] = useState(false);
-  const [success, setSuccess] = useState(false);
-
-  const isPhoneValid = (val) =>
-    /^\+?[1-9]\d{7,14}$/.test(val.replace(/\s+/g, ""));
-
-  const services = [
-    "AppDeploy",
-    "AXOS",
-    "ClarityPath",
-    "Other",
-  ];
-
-  // ✅ Close modal and reset all fields
-  const closeModal = () => {
-    setShowModal(false);
-    setTimeout(() => {
-      setName("");
-      setEmail("");
-      setCompany("");
-      setPhone("");
-      setService("");
-      setMessage("");
-      setSending(false);
-      setSuccess(false);
-    }, 250);
-  };
-
-  // ✅ BACK BUTTON FIX FOR MOBILE + DESKTOP
+  // Back button + ESC + scroll lock while open
   useEffect(() => {
-    if (showModal) {
-      window.history.pushState({ modalOpen: true }, "");
-    }
+    if (!showModal) return;
 
-    const handleBack = () => {
-      if (showModal) {
-        closeModal();
-      }
-    };
+    window.history.pushState({ modalOpen: true }, "");
+    const onPop = () => setShowModal(false);
+    const onKey = (e) => e.key === "Escape" && setShowModal(false);
 
-    window.addEventListener("popstate", handleBack);
+    window.addEventListener("popstate", onPop);
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
 
     return () => {
-      window.removeEventListener("popstate", handleBack);
+      window.removeEventListener("popstate", onPop);
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
     };
-  }, [showModal]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!isPhoneValid(phone) || !service) return;
-
-    setSending(true);
-
-    const formData = new FormData();
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
-    formData.append("Name", name);
-    formData.append("Email", email);
-    formData.append("Company", company);
-    formData.append("phone", phone);
-    formData.append("Service", service);
-    formData.append("Message", message);
-
-    await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    setSuccess(true);
-    setSending(false);
-
-    setTimeout(() => {
-      closeModal();
-    }, 1200);
-  };
+  }, [showModal, setShowModal]);
 
   if (!showModal) return null;
 
   return (
     <div
-      className="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
+      className="fixed inset-0 z-[999] flex items-center justify-center bg-ink/55 p-4 backdrop-blur-sm"
       onClick={closeModal}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Book a product session"
     >
       <div
-        className="relative bg-white rounded-2xl w-full max-w-[420px] shadow-xl animate-scale-in border border-gray-200"
+        className="relative grid max-h-[92vh] w-full max-w-5xl overflow-hidden rounded-[1.75rem] border border-hairline bg-surface shadow-lift animate-scale-in lg:grid-cols-2"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* HEADER */}
-        <div className="bg-[#0F172A] px-6 py-4 rounded-t-2xl">
-          <div className="flex justify-between">
-            <div>
-              <h2 className="text-white text-xl font-karla font-semibold">
-                Talk to Our Team
-              </h2>
-              <p className="text-slate-300 text-xs font-karla">
-                Fill out the form and we will get back to you shortly.
-              </p>
+        {/* LEFT — dark context panel */}
+        <div className="relative hidden flex-col overflow-y-auto bg-ink p-8 lg:flex lg:p-10">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_0%,rgba(91,79,207,0.28),transparent_60%)]" />
+          <div className="relative z-10 flex h-full flex-col">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 font-karla text-xs font-semibold uppercase tracking-[0.14em] text-on-ink">
+              <Sparkles size={14} className="text-brand-soft" />
+              Talk to sales
+            </span>
+
+            <h2 className="t-h2 mt-6 text-on-ink">Book a focused product session.</h2>
+            <p className="mt-4 font-karla leading-relaxed text-on-ink-muted">
+              Choose AppDeploy or AXOS and schedule the right session. We'll cover
+              product fit, deployment approach, and practical next steps for your team.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-2.5">
+              {chips.map((c) => (
+                <span
+                  key={c.label}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-white/[0.06] px-3 py-1.5 font-karla text-xs font-medium text-on-ink"
+                >
+                  <c.icon size={13} className="text-brand-soft" />
+                  {c.label}
+                </span>
+              ))}
             </div>
 
-            <button onClick={closeModal}>
-              <X className="text-white w-5 h-5" />
-            </button>
+            <div className="mt-auto rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+              <div className="flex items-center justify-between">
+                <p className="font-karla text-sm font-semibold text-on-ink">Meeting agenda</p>
+                <span className="rounded-full bg-emerald-400/15 px-2.5 py-0.5 font-karla text-[11px] font-semibold uppercase tracking-wide text-emerald-300">
+                  Prepared
+                </span>
+              </div>
+              <ol className="mt-4 space-y-3">
+                {agenda.map((step, i) => (
+                  <li key={step} className="flex gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 font-karla text-xs font-semibold text-on-ink">
+                      {i + 1}
+                    </span>
+                    <span className="font-karla text-sm leading-snug text-on-ink-muted">{step}</span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-4 border-t border-white/10 pt-3 font-karla text-xs leading-relaxed text-on-ink-muted">
+                No generic pitch. Each session is aligned to the product and rollout
+                context you choose.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* SUCCESS OVERLAY */}
-        {success && (
-          <div className="absolute inset-0 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-2xl z-50">
-            <div className="flex flex-col items-center gap-3 animate-fade-in">
-              <div className="w-20 h-20 bg-[#0F172A] rounded-full flex items-center justify-center animate-scale-up shadow-lg shadow-slate-300">
-                <Check className="w-10 h-10 text-white animate-pop" />
-              </div>
-              <p className="font-karla text-[#0F172A] text-lg font-semibold">
-                Message Sent!
-              </p>
-            </div>
-          </div>
-        )}
-
-        {/* FORM */}
-        <form
-          onSubmit={handleSubmit}
-          className="px-6 py-5 space-y-4 max-h-[75vh] overflow-y-auto font-karla"
-        >
-          <div>
-            <label className="text-sm text-gray-700 font-semibold">Full Name *</label>
-            <input
-              type="text"
-              required
-              placeholder="Enter your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-slate-900 outline-none focus:border-[#0F172A]"
-            />
-          </div>
-
-          <div>
-            <label className="text-sm text-gray-700 font-semibold">Email *</label>
-            <input
-              type="email"
-              required
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-slate-900 outline-none focus:border-[#0F172A]"
-            />
-          </div>
-
-          <div>
-            <label className="text-sm text-gray-700 font-semibold">Company *</label>
-            <input
-              type="text"
-              required
-              placeholder="Company name"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-slate-900 outline-none focus:border-[#0F172A]"
-            />
-          </div>
-
-          <div>
-            <label className="text-sm text-gray-700 font-semibold">Phone *</label>
-            <PhoneInput
-              defaultCountry="gb"
-              value={phone}
-              onChange={setPhone}
-              inputProps={{
-                name: "phone",
-                required: true,
-                className:
-                  "w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-slate-900 outline-none focus:border-[#0F172A]",
-              }}
-              className="w-full phone-input-fix"
-            />
-          </div>
-
-          <div>
-            <label className="text-sm text-gray-700 font-semibold">Product *</label>
-            <select
-              required
-              value={service}
-              onChange={(e) => setService(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-karla text-slate-900 outline-none focus:border-[#0F172A] bg-white"
-            >
-              <option value="">Select</option>
-              {services.map((s) => (
-                <option key={s} value={s}>
-                  {s}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label className="text-sm text-gray-700 font-semibold">Message *</label>
-            <textarea
-              rows={3}
-              required
-              placeholder="Write your message..."
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-lora text-slate-900 outline-none resize-none focus:border-[#0F172A]"
-            />
-          </div>
-
+        {/* RIGHT — booking panel */}
+        <div className="relative flex flex-col overflow-y-auto bg-surface p-7 sm:p-9">
           <button
-            type="submit"
-            disabled={sending}
-            className="w-full bg-[#0F172A] hover:bg-slate-900 text-white text-sm py-2 rounded-lg font-semibold flex items-center justify-center gap-2"
+            onClick={closeModal}
+            aria-label="Close"
+            className="absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full border border-hairline text-muted transition-colors hover:bg-surface-sunken hover:text-strong"
           >
-            {sending ? "Sending..." : "Send Message"}
-            {!sending && <ArrowRight className="w-4 h-4" />}
+            <X size={17} />
           </button>
-        </form>
+
+          <span className="t-eyebrow">Schedule a meeting</span>
+          <h2 className="t-h3 mt-2 pr-8">Book the session that fits your goals.</h2>
+          <p className="t-body mt-3">
+            Choose AppDeploy for private iOS rollout or AXOS for secure workspace
+            planning, then book instantly with the right team.
+          </p>
+
+          <div className="mt-6 space-y-4">
+            {sessions.map((s) => (
+              <div
+                key={s.name}
+                className="rounded-2xl border border-hairline bg-surface-muted p-5 shadow-soft transition-shadow hover:shadow-card"
+              >
+                <h3 className="font-karla text-lg font-semibold text-strong">{s.name}</h3>
+                <p className="t-small mt-1.5 leading-6">{s.body}</p>
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 font-karla text-sm font-semibold text-on-ink transition-colors hover:bg-ink-soft"
+                >
+                  {s.cta}
+                  <ArrowRight size={16} />
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-6 text-center font-karla text-xs leading-relaxed text-muted">
+            Need help deciding first? Email{" "}
+            <a href="mailto:info@scotitech.com" className="font-semibold text-brand-strong hover:text-brand">
+              info@scotitech.com
+            </a>{" "}
+            and we'll guide you to the right product session.
+          </p>
+        </div>
       </div>
     </div>
   );

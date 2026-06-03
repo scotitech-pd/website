@@ -36,7 +36,7 @@ function Hero() {
 
           {/* Button */}
           <a
-            href="https://calendly.com/pradeepdahiya2411/30min"
+            href="https://calendly.com/pradeepdahiya2411/axos-private-workspace-strategy-session"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center justify-center lg:gap-2 gap-1 bg-white text-black lg:px-5 px-3 py-2.5 rounded-lg font-karla lg:text-[16px] font-semibold hover:bg-main-dark hover:text-white transition-all shadow-lg mt-6 sm:mt-8 w-fit text-[12px]"

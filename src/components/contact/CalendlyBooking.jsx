@@ -25,7 +25,7 @@ const CalendlySection = () => {
 
         {/* CTA Button */}
         <a
-          href="https://calendly.com/pradeepdahiya2411/30min"
+          href="https://calendly.com/pradeepdahiya2411/axos-private-workspace-strategy-session"
           target="_blank"
           rel="noopener noreferrer"
           className="group inline-flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-karla font-semibold hover:bg-main-dark hover:text-white transition-all shadow-lg"
