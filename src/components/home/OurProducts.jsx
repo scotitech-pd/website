@@ -29,8 +29,9 @@ const flagships = [
   {
     name: "AXOS",
     href: "/products/axos",
+    externalUrl: "https://axos.scotitech.com",
     accent: "bg-axos",
-    status: { variant: "live", dot: true, label: "Live" },
+    status: { variant: "early", label: "Enterprise" },
     tagline: "Governance-first AI, grounded in your own knowledge.",
     description:
       "A private AI workspace trained on your documents — internal knowledge search and secure document AI, deployed hosted, in your private cloud, or fully self-hosted.",
@@ -158,11 +159,12 @@ export default function OurProducts() {
                 <h3 className="font-karla text-xl font-semibold text-strong">
                   ClarityPath
                 </h3>
-                <Badge variant="supporting">Included with AppDeploy</Badge>
+                <Badge variant="supporting">Accessed via AppDeploy</Badge>
               </div>
               <p className="t-body mt-1 max-w-2xl">
                 Guided decision support — private review sessions, structured
-                planning, and next-step recommendations, included with AppDeploy.
+                planning, and next-step recommendations, accessed through the
+                AppDeploy portal.
               </p>
             </div>
           </div>

@@ -129,7 +129,8 @@ export const products = {
     slug: "axos",
     name: "AXOS",
     accent: "axos",
-    status: { variant: "live", dot: true, label: "Live" },
+    externalUrl: "https://axos.scotitech.com",
+    status: { variant: "early", label: "Enterprise" },
     eyebrow: "Private AI workspace",
     tagline: "Governance-first AI, grounded in your own knowledge.",
     description:
@@ -206,11 +207,14 @@ export const products = {
     slug: "claritypath",
     name: "ClarityPath",
     accent: "claritypath",
-    status: { variant: "supporting", label: "Included with AppDeploy" },
+    externalUrl: "https://appdeploy.scotitech.com/w/scotitech-solutions",
+    externalLabel: "Open in AppDeploy",
+    externalNote: "Access it in the AppDeploy portal at",
+    status: { variant: "supporting", label: "Accessed via AppDeploy" },
     eyebrow: "Guided decision support",
     tagline: "Structured support for sensitive, high-stakes journeys.",
     description:
-      "A focused decision-support product for private review sessions, structured planning, and guided next-step recommendations — included with AppDeploy, for considered journeys where a generic form or chatbot isn't enough.",
+      "A focused decision-support product for private review sessions, structured planning, and guided next-step recommendations — accessed through the AppDeploy portal, for considered journeys where a generic form or chatbot isn't enough.",
     hero: {
       media: { type: "placeholder", label: "Product preview coming soon", icon: "/images/brand/claritypath-logo.png" },
     },

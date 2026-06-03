@@ -86,6 +86,8 @@ export default function ProductTemplate({ product }) {
   const { setShowModal } = useModal();
   const accentBg = `bg-${product.accent}`;
   const accentText = `text-${product.accent}`;
+  const extHost = product.externalUrl ? new URL(product.externalUrl).hostname : null;
+  const extLabel = product.externalLabel || `Visit ${product.name}`;
 
   return (
     <>
@@ -109,7 +111,7 @@ export default function ProductTemplate({ product }) {
                   <>
                     <Button asChild size="lg">
                       <a href={product.externalUrl} target="_blank" rel="noopener noreferrer">
-                        Visit {product.name}
+                        {extLabel}
                         <ArrowUpRight size={17} />
                       </a>
                     </Button>
@@ -131,14 +133,14 @@ export default function ProductTemplate({ product }) {
               </div>
               {product.externalUrl && (
                 <p className="mt-3 font-karla text-sm text-muted">
-                  Live at{" "}
+                  {product.externalNote || "Live at"}{" "}
                   <a
                     href={product.externalUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-brand-strong hover:text-brand"
                   >
-                    appdeploy.scotitech.com
+                    {extHost}
                   </a>
                 </p>
               )}
@@ -421,7 +423,7 @@ export default function ProductTemplate({ product }) {
                     <>
                       <Button asChild size="lg" variant="onInkSolid">
                         <a href={product.externalUrl} target="_blank" rel="noopener noreferrer">
-                          Visit {product.name}
+                          {extLabel}
                           <ArrowUpRight size={17} />
                         </a>
                       </Button>
