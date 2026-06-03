@@ -24,6 +24,12 @@ import {
   Route,
   Lock,
   Compass,
+  Bot,
+  FileSearch,
+  FileText,
+  Layers3,
+  Cloud,
+  Server,
 } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
@@ -37,8 +43,10 @@ import { cn } from "@/lib/utils";
 const icons = {
   Palette, MousePointerClick, GitBranch, Users, BarChart3, Building2,
   Mail, HardDrive, MessageSquare, CheckSquare, ServerCog, Route, Lock, Compass,
-  Sparkles,
+  Sparkles, Bot, FileSearch, FileText, Layers3,
 };
+
+const deployIcons = [Cloud, Server, ServerCog];
 
 function ProductMedia({ media, accentBg }) {
   if (media?.type === "image") {
@@ -214,6 +222,32 @@ export default function ProductTemplate({ product }) {
                     </span>
                     <h3 className="mt-5 font-karla text-lg font-semibold text-strong">{f.title}</h3>
                     <p className="t-small mt-2 leading-6">{f.body}</p>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+        </Section>
+      )}
+
+      {/* DEPLOYMENT OPTIONS */}
+      {product.deployment && (
+        <Section surface="base" spacing="lg">
+          <Reveal className="max-w-3xl">
+            <Eyebrow className={accentText}>Deployment</Eyebrow>
+            <h2 className="t-h1 mt-3">{product.deployment.title}</h2>
+          </Reveal>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {product.deployment.options.map((opt, i) => {
+              const Icon = deployIcons[i] || ServerCog;
+              return (
+                <Reveal key={opt.name} delay={i * 0.06}>
+                  <div className="flex h-full flex-col rounded-2xl border border-hairline bg-surface-muted p-6 shadow-soft">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface">
+                      <Icon size={20} className={accentText} />
+                    </span>
+                    <h3 className="mt-5 font-karla text-lg font-semibold text-strong">{opt.name}</h3>
+                    <p className="t-small mt-2 leading-6">{opt.body}</p>
                   </div>
                 </Reveal>
               );

@@ -107,8 +107,10 @@ export default function HeroSection() {
               {...rise(0.34)}
               className="absolute -left-4 bottom-8 hidden rounded-2xl border border-hairline bg-surface px-4 py-3 shadow-card sm:block"
             >
-              <p className="font-karla text-2xl font-semibold text-strong">1-tap</p>
-              <p className="t-small">internal install</p>
+              <p className="font-karla text-2xl font-semibold text-strong">
+                From £79<span className="text-base font-medium text-muted">/mo</span>
+              </p>
+              <p className="t-small">AppDeploy cloud</p>
             </motion.div>
 
             <motion.div

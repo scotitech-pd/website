@@ -30,11 +30,11 @@ const flagships = [
     name: "AXOS",
     href: "/products/axos",
     accent: "bg-axos",
-    status: { variant: "early", label: "Early access" },
-    tagline: "A private workspace with AI built into daily work.",
+    status: { variant: "live", dot: true, label: "Live" },
+    tagline: "Governance-first AI, grounded in your own knowledge.",
     description:
-      "Mail, drive, chat, tasks and notes in one self-hostable environment — less SaaS sprawl, more data control, AI where teams actually work.",
-    capabilities: ["Self-hosted option", "Unified workspace", "Private AI"],
+      "A private AI workspace trained on your documents — internal knowledge search and secure document AI, deployed hosted, in your private cloud, or fully self-hosted.",
+    capabilities: ["Internal-knowledge AI", "Hosted · cloud · self-hosted", "Data stays private"],
     media: { type: "placeholder" },
   },
 ];
@@ -48,9 +48,9 @@ export default function OurProducts() {
           Two flagship products, one operating principle: real control.
         </h2>
         <p className="t-lead mt-5">
-          AppDeploy handles internal app distribution. AXOS brings everyday team
-          tools into one private environment. Each is built for clarity, not
-          sprawl.
+          AppDeploy handles private app distribution. AXOS brings governance-first
+          AI to your internal knowledge. Both keep control — and your data — where
+          they belong.
         </p>
       </Reveal>
 
@@ -81,7 +81,7 @@ export default function OurProducts() {
                     />
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-hairline bg-surface px-3 py-1 font-karla text-xs font-medium text-muted">
                       <Sparkles size={13} className="text-axos" />
-                      Preview coming soon
+                      Private AI workspace
                     </span>
                   </div>
                 )}
@@ -158,11 +158,11 @@ export default function OurProducts() {
                 <h3 className="font-karla text-xl font-semibold text-strong">
                   ClarityPath
                 </h3>
-                <Badge variant="supporting">Supporting</Badge>
+                <Badge variant="supporting">Included with AppDeploy</Badge>
               </div>
               <p className="t-body mt-1 max-w-2xl">
-                Private decision-support tools for structured, sensitive user
-                journeys.
+                Guided decision support — private review sessions, structured
+                planning, and next-step recommendations, included with AppDeploy.
               </p>
             </div>
           </div>
