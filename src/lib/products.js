@@ -8,6 +8,7 @@ export const products = {
     slug: "appdeploy",
     name: "AppDeploy",
     accent: "appdeploy", // bg-appdeploy / text-appdeploy
+    logo: "/images/brand/appdeploy-logo-black.png",
     externalUrl: "https://appdeploy.scotitech.com",
     status: { variant: "live", dot: true, label: "Live" },
     eyebrow: "Private app distribution",
@@ -163,6 +164,7 @@ export const products = {
     slug: "axos",
     name: "AXOS",
     accent: "axos",
+    logo: "/images/brand/axos-icon.png",
     externalUrl: "https://axos.scotitech.com",
     status: { variant: "early", label: "Enterprise" },
     eyebrow: "Private AI workspace",
@@ -246,6 +248,7 @@ export const products = {
     slug: "claritypath",
     name: "ClarityPath",
     accent: "claritypath",
+    logo: "/images/brand/claritypath-logo.png",
     externalUrl: "https://appdeploy.scotitech.com/w/scotitech-solutions",
     externalLabel: "Open in AppDeploy",
     externalNote: "Access it in the AppDeploy portal at",

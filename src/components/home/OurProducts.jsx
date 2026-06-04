@@ -14,6 +14,7 @@ const flagships = [
     name: "AppDeploy",
     href: "/products/appdeploy",
     externalUrl: "https://appdeploy.scotitech.com",
+    logo: "/images/brand/appdeploy-logo-black.png",
     accent: "bg-appdeploy",
     status: { variant: "live", dot: true, label: "Live" },
     tagline: "Your apps. Your brand. Enterprise-ready in 14 days.",
@@ -30,6 +31,7 @@ const flagships = [
     name: "AXOS",
     href: "/products/axos",
     externalUrl: "https://axos.scotitech.com",
+    logo: "/images/brand/axos-icon.png",
     accent: "bg-axos",
     status: { variant: "early", label: "Enterprise" },
     tagline: "Your entire workspace — self-hosted.",
@@ -95,9 +97,22 @@ export default function OurProducts() {
               {/* Body */}
               <div className="flex flex-1 flex-col p-7 md:p-8">
                 <div className="mb-4 flex items-center justify-between gap-3">
-                  <h3 className="font-karla text-2xl font-semibold text-strong">
-                    {product.name}
-                  </h3>
+                  <div className="flex items-center gap-3">
+                    {product.logo && (
+                      <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-hairline bg-surface">
+                        <Image
+                          src={product.logo}
+                          alt={`${product.name} logo`}
+                          width={44}
+                          height={44}
+                          className="h-8 w-8 object-contain"
+                        />
+                      </span>
+                    )}
+                    <h3 className="font-karla text-2xl font-semibold text-strong">
+                      {product.name}
+                    </h3>
+                  </div>
                   <Badge variant={product.status.variant} dot={product.status.dot}>
                     {product.status.label}
                   </Badge>
@@ -155,8 +170,14 @@ export default function OurProducts() {
           className="group mt-6 flex flex-col items-start gap-5 rounded-3xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-card sm:flex-row sm:items-center sm:justify-between md:p-8"
         >
           <div className="flex items-center gap-5">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-claritypath/10">
-              <span className="h-3 w-3 rounded-full bg-claritypath" />
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-hairline bg-surface">
+              <Image
+                src="/images/brand/claritypath-logo.png"
+                alt="ClarityPath logo"
+                width={48}
+                height={48}
+                className="h-9 w-9 object-contain"
+              />
             </span>
             <div>
               <div className="flex items-center gap-3">
