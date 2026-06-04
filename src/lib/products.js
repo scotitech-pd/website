@@ -193,7 +193,7 @@ export const products = {
       title: "One self-hosted suite — with AI — that never leaves your environment.",
       points: [
         "Mail, drive, calendar, chat, video, and tasks in a single private workspace.",
-        "NexaAgent, an AI agent built in and running on your own infrastructure.",
+        "A governance-first AI agent built in and running on your own infrastructure.",
         "100% on-premise: zero external calls and complete data sovereignty.",
       ],
     },
@@ -202,7 +202,7 @@ export const products = {
       { icon: "HardDrive", title: "Drive & storage", body: "Files and shared storage, controlled end to end on your infrastructure." },
       { icon: "Video", title: "Chat & video", body: "Team messaging and calls without routing through a third-party tool." },
       { icon: "CheckSquare", title: "Tasks", body: "Plan and coordinate work alongside everything else in the suite." },
-      { icon: "Bot", title: "Governance-first AI (NexaAgent)", body: "Policy-aligned AI built into the workspace — shaped by your access rules, team policy, and data posture. Not bolted on." },
+      { icon: "Bot", title: "Governance-first AI", body: "Policy-aligned AI built into the workspace — shaped by your access rules, team policy, and data posture. Not bolted on." },
       { icon: "ServerCog", title: "100% on-premise", body: "Zero external calls and complete data sovereignty by design." },
     ],
     audiences: {
@@ -324,7 +324,7 @@ export const products = {
     },
     faqs: [
       { q: "Is AXOS really self-hosted?", a: "Yes. AXOS runs 100% on your own infrastructure (or private cloud), with zero external calls and complete data sovereignty." },
-      { q: "What's included in the suite?", a: "Mail, drive, calendar, chat, video, and tasks — plus NexaAgent, an AI agent built directly into the workspace." },
+      { q: "What's included in the suite?", a: "Mail, drive, calendar, chat, video, and tasks — plus a governance-first AI agent built directly into the workspace." },
       { q: "How do people sign in?", a: "SSO (SAML) on the web, with biometric login available on mobile." },
       { q: "Can we test AXOS before adopting it?", a: "Yes. AXOS is enterprise-only, so we first review your business information and intended use case. Suitable organisations receive a limited testing platform to evaluate AXOS before deciding on employee adoption." },
     ],

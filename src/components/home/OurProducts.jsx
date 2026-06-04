@@ -36,8 +36,8 @@ const flagships = [
     status: { variant: "early", label: "Enterprise only" },
     tagline: "Your entire workspace — self-hosted.",
     description:
-      "A completed enterprise workspace for employees — mail, drive, chat, video, tasks — with NexaAgent AI built in and a limited testing platform for qualified organisations.",
-    capabilities: ["Enterprise evaluation", "NexaAgent AI built in", "100% on-premise"],
+      "A completed enterprise workspace for employees — mail, drive, chat, video, tasks — with governance-first AI built in and a limited testing platform for qualified organisations.",
+    capabilities: ["Enterprise evaluation", "Governance-first AI", "100% on-premise"],
     media: {
       type: "image",
       src: "/images/products/axos/workspace.png",
