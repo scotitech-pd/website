@@ -1,254 +1,173 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useModal } from "@/components/ModalContext";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-const productLinks = [
-  {
-    title: "AppDeploy",
-    description: "Private iOS app rollout with redemption-code delivery",
-    href: "/products/appdeploy",
-    status: "Available · From £79/mo",
-    logo: "/images/brand/appdeploy-logo-black.png",
-    logoBg: "bg-[#EFF6FF]",
-  },
-  {
-    title: "AXOS",
-    description: "Mail, Calendar, Tasks, Files & AI in one private workspace",
-    href: "/products/axos",
-    status: "Private evaluation",
-    logo: "/images/brand/axos-icon.png",
-    logoBg: "bg-[#ECFDF5]",
-  },
-  {
-    title: "ClarityPath",
-    description: "Mobile decision-support for complex choices",
-    href: "/products/claritypath",
-    status: "Delivered via AppDeploy",
-    logo: "/images/brand/claritypath-logo.png",
-    logoBg: "bg-[#FEFCE8]",
-  },
-];
-
+/**
+ * Hybrid scroll-first nav:
+ *  - "anchor" items smooth-scroll to a homepage section when on "/",
+ *    and resolve to "/#section" from any other page.
+ *  - "route" items (About) are real pages for depth + SEO. The /insights
+ *    route still exists for SEO but the nav scrolls to the homepage section.
+ */
 const navLinks = [
-  { id: 1, title: "Products", link: "/products", hasMenu: true },
-  { id: 2, title: "Insights", link: "/insights" },
-  { id: 3, title: "Media", link: "/media" },
-  { id: 4, title: "About", link: "/aboutus" },
-  { id: 5, title: "Contact", link: "/contact" },
+  { id: 1, title: "Products", type: "anchor", target: "products" },
+  { id: 2, title: "How We Work", type: "anchor", target: "approach" },
+  { id: 3, title: "Credibility", type: "anchor", target: "proof" },
+  { id: 4, title: "Insights", type: "anchor", target: "insights" },
+  { id: 5, title: "About", type: "route", link: "/aboutus" },
+  { id: 6, title: "Contact", type: "anchor", target: "contact" },
 ];
 
-export default function Navbar() {
+const Navbar = () => {
   const pathname = usePathname();
   const { setShowModal } = useModal();
-  const [isAtTop, setIsAtTop] = useState(true);
+
+  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [productMenuOpen, setProductMenuOpen] = useState(false);
-  const productMenuRef = useRef(null);
+
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      setIsAtTop(winScroll <= 8);
+      const top = document.body.scrollTop || document.documentElement.scrollTop;
+      setScrolled(top > 8);
     };
-    window.addEventListener("scroll", onScroll);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
     setMenuOpen(false);
-    setProductMenuOpen(false);
   }, [pathname]);
 
-  useEffect(() => {
-    const handleClick = (e) => {
-      if (productMenuRef.current && !productMenuRef.current.contains(e.target)) {
-        setProductMenuOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, []);
+  const hrefFor = (item) =>
+    item.type === "route"
+      ? item.link
+      : isHome
+        ? `#${item.target}`
+        : `/#${item.target}`;
 
-  const isActiveLink = (link) => pathname === link || pathname.startsWith(`${link}/`);
+  const isActive = (item) =>
+    item.type === "route" && pathname.startsWith(item.link);
 
   return (
-    <div className={isAtTop ? "pb-[82px]" : "pb-[74px]"}>
-      {/* Mobile overlay */}
+    <div className="h-[72px]">
+      {/* Mobile overlay + panel */}
       <div
-        className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-[3px] lg:hidden"
+        className={cn(
+          "fixed inset-0 z-[60] bg-ink/40 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
+          menuOpen ? "visible opacity-100" : "invisible opacity-0"
+        )}
         onClick={() => setMenuOpen(false)}
-        style={{
-          opacity: menuOpen ? 1 : 0,
-          visibility: menuOpen ? "visible" : "hidden",
-          transition: "opacity 220ms ease",
-        }}
       >
         <nav
           onClick={(e) => e.stopPropagation()}
-          className={`h-full w-full max-w-[320px] border-l border-white/10 bg-[#100E0C] px-6 py-14 shadow-[0_28px_80px_rgba(0,0,0,0.35)] transition-transform duration-300 ${
+          className={cn(
+            "absolute right-0 h-full w-full max-w-[320px] bg-surface shadow-lift transition-transform duration-300",
             menuOpen ? "translate-x-0" : "translate-x-full"
-          } ml-auto`}
+          )}
         >
-          <ul className="space-y-6 text-right">
-            {navLinks.map((item) => (
-              <li key={item.id}>
-                <Link
-                  href={item.link}
-                  className={`font-karla text-lg font-semibold ${
-                    isActiveLink(item.link) ? "text-white" : "text-slate-300"
-                  }`}
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-            {/* Mobile product sub-links */}
-            <li>
-              <p className="mb-3 text-right font-karla text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-                Products
-              </p>
-              <ul className="space-y-3">
-                {productLinks.map((p) => (
-                  <li key={p.href}>
-                    <Link href={p.href} className="block text-right font-karla text-base font-semibold text-slate-300 hover:text-white">
-                      {p.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-            <li className="pt-3">
-              <button
-                onClick={() => { setShowModal(true); setMenuOpen(false); }}
-                className="rounded-full bg-white px-5 py-2.5 font-karla text-sm font-semibold text-[#100E0C] shadow-[0_12px_24px_rgba(0,0,0,0.22)]"
-              >
-                Talk to sales
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <nav
-        className={`fixed z-50 w-full border-b border-white/10 bg-[#100E0C]/95 backdrop-blur-xl transition-all ${
-          isAtTop ? "h-[82px]" : "h-[74px] shadow-[0_16px_36px_rgba(0,0,0,0.22)]"
-        }`}
-      >
-        <div className="mx-auto flex h-full max-w-8xl items-center justify-between px-4 min-[500px]:px-10 md:px-20">
-          <Link href="/" className="flex items-center" aria-label="ScotiTech home">
-            <Image
-              src="/logo/logo.png"
-              alt="ScotiTech logo"
-              width={180}
-              height={67}
-              className="h-auto w-[150px] min-[450px]:w-[168px]"
-              priority
-            />
-          </Link>
-
-          <ul className="ml-auto hidden items-center gap-6 lg:flex">
-            {navLinks.map((item) =>
-              item.hasMenu ? (
-                <li key={item.id} className="relative" ref={productMenuRef}>
-                  <button
-                    onClick={() => setProductMenuOpen((v) => !v)}
-                    onMouseEnter={() => setProductMenuOpen(true)}
-                    className={`inline-flex items-center gap-1 rounded-full px-3 py-2 font-karla text-[15px] font-semibold transition-colors ${
-                      isActiveLink(item.link)
-                        ? "bg-white/10 text-white"
-                        : "text-slate-300 hover:bg-white/10 hover:text-white"
-                    }`}
-                  >
-                    {item.title}
-                    <ChevronDown
-                      className={`size-3.5 transition-transform ${productMenuOpen ? "rotate-180" : ""}`}
-                    />
-                  </button>
-
-                  {/* Product dropdown */}
-                  {productMenuOpen && (
-                    <div
-                      onMouseLeave={() => setProductMenuOpen(false)}
-                      className="absolute left-1/2 top-full z-50 mt-3 w-[340px] -translate-x-1/2 overflow-hidden rounded-[1.15rem] border border-white/10 bg-[#100E0C] shadow-[0_24px_60px_rgba(0,0,0,0.35)]"
-                    >
-                      <div className="p-2">
-                        {productLinks.map((p) => (
-                          <Link
-                            key={p.href}
-                            href={p.href}
-                            className="group flex items-start gap-3 rounded-[0.85rem] p-3 transition hover:bg-white/[0.06]"
-                          >
-                            <div className={`mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-xl ${p.logoBg}`}>
-                              <Image src={p.logo} alt={p.title} width={28} height={28} className="h-7 w-7 object-contain" />
-                            </div>
-                            <div>
-                              <p className="font-karla text-sm font-semibold text-white">
-                                {p.title}
-                              </p>
-                              <p className="mt-0.5 font-lora text-xs leading-5 text-slate-400">
-                                {p.description}
-                              </p>
-                              <span className="mt-1.5 inline-block rounded-full border border-white/10 px-2 py-0.5 font-karla text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
-                                {p.status}
-                              </span>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                      <div className="border-t border-white/10 px-4 py-3">
-                        <Link
-                          href="/products"
-                          className="font-karla text-xs font-semibold text-slate-400 transition hover:text-white"
-                        >
-                          View all products →
-                        </Link>
-                      </div>
-                    </div>
-                  )}
-                </li>
-              ) : (
+          <div className="flex h-full flex-col px-7 pt-24 pb-10">
+            <ul className="space-y-1">
+              {navLinks.map((item) => (
                 <li key={item.id}>
                   <Link
-                    href={item.link}
-                    className={`rounded-full px-3 py-2 font-karla text-[15px] font-semibold transition-colors ${
-                      isActiveLink(item.link)
-                        ? "bg-white/10 text-white"
-                        : "text-slate-300 hover:bg-white/10 hover:text-white"
-                    }`}
+                    href={hrefFor(item)}
+                    className={cn(
+                      "block rounded-xl px-4 py-3 font-karla text-lg font-medium transition-colors",
+                      isActive(item)
+                        ? "bg-brand-soft text-brand-strong"
+                        : "text-strong hover:bg-surface-sunken"
+                    )}
                   >
                     {item.title}
                   </Link>
                 </li>
-              )
-            )}
-            <li>
-              <button
-                onClick={() => setShowModal(true)}
-                className="rounded-full bg-white px-5 py-2.5 font-karla text-sm font-semibold text-[#100E0C] shadow-[0_12px_24px_rgba(0,0,0,0.22)] transition-colors hover:bg-slate-100"
+              ))}
+            </ul>
+            <div className="mt-auto">
+              <Button
+                className="w-full"
+                size="lg"
+                onClick={() => {
+                  setShowModal(true);
+                  setMenuOpen(false);
+                }}
               >
-                Talk to sales
-              </button>
-            </li>
-          </ul>
+                Talk to our team
+              </Button>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      {/* Bar */}
+      <header
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+          scrolled
+            ? "border-b border-hairline bg-surface/85 shadow-soft backdrop-blur-md"
+            : "border-b border-transparent bg-surface/60 backdrop-blur-sm"
+        )}
+      >
+        <div className="mx-auto flex h-[72px] max-w-8xl items-center justify-between px-5 min-[500px]:px-10 md:px-20">
+          <Link href="/" className="flex items-center" aria-label="ScotiTech home">
+            <Image
+              src="/logo/logo.png"
+              alt="ScotiTech"
+              width={168}
+              height={42}
+              priority
+              className="h-9 w-auto brightness-0"
+            />
+          </Link>
+
+          <nav className="hidden items-center gap-1 lg:flex">
+            {navLinks.map((item) => (
+              <Link
+                key={item.id}
+                href={hrefFor(item)}
+                className={cn(
+                  "relative rounded-full px-4 py-2 font-karla text-[15px] font-medium transition-colors",
+                  isActive(item)
+                    ? "text-brand-strong"
+                    : "text-body hover:text-strong"
+                )}
+              >
+                {item.title}
+                {isActive(item) && (
+                  <span className="absolute inset-x-4 -bottom-px h-0.5 rounded-full bg-brand" />
+                )}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden lg:block">
+            <Button size="sm" onClick={() => setShowModal(true)}>
+              Talk to our team
+            </Button>
+          </div>
 
           <button
-            className="mr-1 lg:hidden"
-            onClick={() => setMenuOpen((prev) => !prev)}
+            type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
+            className="z-[70] rounded-lg p-1 text-strong lg:hidden"
+            onClick={() => setMenuOpen((p) => !p)}
           >
-            {menuOpen ? (
-              <X className="size-7 text-white" />
-            ) : (
-              <Menu className="size-7 text-white" />
-            )}
+            {menuOpen ? <X size={28} /> : <Menu size={30} />}
           </button>
         </div>
-      </nav>
+      </header>
     </div>
   );
-}
+};
+
+export default Navbar;

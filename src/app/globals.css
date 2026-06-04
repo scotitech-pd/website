@@ -1,40 +1,110 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F7F7F5;
-  --foreground: #111827;
-  --paper: #F7F7F5;
-  --paper-deep: #ebe8dc;
+  /* ---------------------------------------------------------------
+     SEMANTIC DESIGN TOKENS — "Clean Light Enterprise"
+     One canvas, one accent, soft elevation. Used sitewide.
+  --------------------------------------------------------------- */
+
+  /* Surfaces */
   --surface: #ffffff;
-  --surface-muted: #f8fafc;
-  --ink: #111827;
-  --charcoal: #100E0C;
-  --muted: #475569;
-  --line: #d9ded7;
-  --appdeploy: #2563eb;
-  --appdeploy-dark: #1d4ed8;
-  --axos: #0f766e;
-  --axos-dark: #115e59;
-  --gold: #b7a84d;
-  --gold-soft: #f9f6e7;
-  --scotitech: #8C7A5E;
-  --main-light: var(--appdeploy);
-  --main: var(--axos);
-  --main-dark: var(--charcoal);
-  --blue: var(--appdeploy);
-  --orange: var(--gold);
-  --green: var(--axos);
+  --surface-muted: #f7f8fa;
+  --surface-sunken: #eef1f5;
+  --ink: #0b1220; /* inverse / rare high-impact bands */
+  --ink-soft: #111a2e;
+
+  /* Text */
+  --strong: #0b1220;
+  --body: #334155;
+  --muted: #64748b;
+  --on-ink: #e8ecf4;
+  --on-ink-muted: #93a0b8;
+
+  /* Borders */
+  --border: #e5e9f0;
+  --border-strong: #cbd5e1;
+  --hairline-ink: rgba(255, 255, 255, 0.1);
+
+  /* Brand — single accent (orange) */
+  --brand: #e2580e;
+  --brand-strong: #b8430b;
+  --brand-soft: #fdebdd;
+  --brand-contrast: #ffffff;
+
+  /* Per-product accents (warm, distinct; chips / hairlines only) */
+  --accent-appdeploy: #c2410c;
+  --accent-axos: #ea580c;
+  --accent-claritypath: #b45309;
+
+  /* Elevation — soft, low-spread */
+  --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.04),
+    0 8px 24px rgba(15, 23, 42, 0.05);
+  --shadow-card: 0 2px 4px rgba(15, 23, 42, 0.04),
+    0 18px 40px rgba(15, 23, 42, 0.08);
+  --shadow-lift: 0 8px 16px rgba(15, 23, 42, 0.06),
+    0 30px 60px rgba(15, 23, 42, 0.12);
+
+  /* ---------------------------------------------------------------
+     LEGACY ALIASES — keep existing pages rendering during migration
+  --------------------------------------------------------------- */
+  --background: #ffffff;
+  --foreground: #ffffff;
+  --main-light: #6b61d9;
+  --main: #e2580e;
+  --main-dark: #0f172a;
+  --blue: #2563eb;
+  --orange: #c08457;
+  --green: #0f766e;
   --green-light: #cbd5e1;
-  --grey: var(--muted);
+  --grey: #475569;
   --yellow: #64748b;
-  --blue-light: var(--appdeploy-dark);
-  --greenblue: var(--axos);
+  --blue-light: #1d4ed8;
+  --greenblue: #0f766e;
   --seablue: #e2e8f0;
+
+  /* Scrollbar */
+  --scrollbar-bg: #eef1f5;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
 }
- 
+
 @theme inline {
+  /* Surfaces → bg-surface, bg-surface-muted, bg-surface-sunken, bg-ink */
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+
+  /* Text → text-strong, text-body, text-muted, text-on-ink */
+  --color-strong: var(--strong);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-on-ink: var(--on-ink);
+  --color-on-ink-muted: var(--on-ink-muted);
+
+  /* Borders → border-hairline, border-hairline-strong */
+  --color-hairline: var(--border);
+  --color-hairline-strong: var(--border-strong);
+
+  /* Brand → bg-brand, text-brand, bg-brand-soft */
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-contrast: var(--brand-contrast);
+
+  /* Per-product accents */
+  --color-appdeploy: var(--accent-appdeploy);
+  --color-axos: var(--accent-axos);
+  --color-claritypath: var(--accent-claritypath);
+
+  /* Elevation → shadow-soft, shadow-card, shadow-lift */
+  --shadow-soft: var(--shadow-soft);
+  --shadow-card: var(--shadow-card);
+  --shadow-lift: var(--shadow-lift);
+
+  /* Legacy color aliases (so text-main, bg-main-dark, etc. still work) */
   --color-background: var(--background);
-  --color-scotitech: var(--scotitech);
   --color-main: var(--main);
   --color-main-light: var(--main-light);
   --color-main-dark: var(--main-dark);
@@ -47,15 +117,20 @@
   --color-green-light: var(--green-light);
   --color-seablue: var(--seablue);
   --color-greenblue: var(--greenblue);
-  
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-karla);
+
+  /* Fonts */
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-lora: var(--font-lora); 
+  --font-lora: var(--font-lora);
   --font-karla: var(--font-karla);
-  
-  --spacing-8xl:1600px;
-  --animate-spin-slow :  spin-slow 2.5s linear infinite;
+
+  /* Layout */
+  --spacing-8xl: 1600px;
+  --breakpoint-xxl: 98.125rem;
+
+  /* Animations */
+  --animate-spin-slow: spin-slow 2.5s linear infinite;
   --animate-scale-in: scaleIn 0.25s ease-out;
   --animate-fade-in: fadeIn 0.3s ease-out;
   --animate-scale-up: scaleUp 0.35s ease-out;
@@ -63,98 +138,162 @@
   --animate-breathe-slow: breathe-slow 8s ease-in-out infinite;
   --animate-breathe: breathe 2s ease-in-out infinite;
   --animate-logo-marquee: logo-marquee 28s linear infinite;
-
-  --breakpoint-xxl: 98.125rem;
+  --animate-shimmer: shimmer 2.4s linear infinite;
 }
 
 @keyframes spin-slow {
-    to { transform: rotate(360deg); }
+  to { transform: rotate(360deg); }
 }
 @keyframes scaleIn {
-    from { transform: scale(0.94); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+  from { transform: scale(0.94); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes scaleUp {
-    from { transform: scale(0.6); }
-    to { transform: scale(1); }
+  from { transform: scale(0.6); }
+  to { transform: scale(1); }
 }
 @keyframes pop {
-    from { transform: scale(0.4); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+  from { transform: scale(0.4); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 @keyframes breathe-slow {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.06); }
-    100% { transform: scale(1); }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
 }
 @keyframes breathe {
-    0% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
-    50% { transform: scale(1.05); filter: drop-shadow(0 0 12px rgba(255,255,255,0.7)); }
-    100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
+  0% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 12px rgba(255,255,255,0.7)); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
 }
 @keyframes logo-marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(calc(-50% - 0.625rem)); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
-@keyframes hero-float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
 }
-@keyframes sales-scan {
-    0% { transform: translateX(-120%); opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { transform: translateX(120%); opacity: 0; }
+
+/* ---------------------------------------------------------------
+   BASE
+--------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  /* offset anchored sections below the fixed navbar */
+  scroll-padding-top: 96px;
+  scrollbar-width: auto;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-karla), "Helvetica Neue", Arial, sans-serif;
+  background: var(--surface-muted);
+  color: var(--body);
+  font-family: var(--font-karla), var(--font-geist-sans), Arial, Helvetica,
+    sans-serif;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-main {
-  background: var(--background);
-}
-:root {
-  --scrollbar-bg: #e5e0d3;
-  --scrollbar-thumb: #64748b;
-  --scrollbar-thumb-hover: #334155;
+
+/* anchored sections also get individual scroll-margin as a safety net */
+[id] {
+  scroll-margin-top: 96px;
 }
 
-/* Chrome, Edge, Safari */
+/* ---------------------------------------------------------------
+   TYPOGRAPHY SCALE — confident, restrained
+   Use display/h-* utility classes to stop ad-hoc per-file sizing.
+   Defined in @layer components so Tailwind color utilities
+   (e.g. text-on-ink, text-appdeploy) can override the default color.
+--------------------------------------------------------------- */
+@layer components {
+.t-eyebrow {
+  font-family: var(--font-karla), sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brand-strong);
+}
+.t-display {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  font-size: clamp(2.5rem, 1.6rem + 3.8vw, 4.5rem);
+  color: var(--strong);
+}
+.t-h1 {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  font-size: clamp(2rem, 1.4rem + 2.6vw, 3.25rem);
+  color: var(--strong);
+}
+.t-h2 {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+  font-size: clamp(1.75rem, 1.3rem + 1.9vw, 2.75rem);
+  color: var(--strong);
+}
+.t-h3 {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.625rem);
+  color: var(--strong);
+}
+.t-lead {
+  font-family: var(--font-karla), sans-serif;
+  font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--body);
+}
+.t-body {
+  font-family: var(--font-karla), sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--body);
+}
+.t-small {
+  font-family: var(--font-karla), sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+}
+
+/* ---------------------------------------------------------------
+   SCROLLBAR
+--------------------------------------------------------------- */
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
-
 ::-webkit-scrollbar-track {
   background: var(--scrollbar-bg);
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb);
   border-radius: 8px;
   border: 3px solid var(--scrollbar-bg);
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-thumb-hover);
 }
 
-/* Firefox */
-html {
-  scrollbar-width: auto;
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
-} 
-
-/* Phone Input Fix */
+/* ---------------------------------------------------------------
+   PHONE INPUT FIX
+--------------------------------------------------------------- */
 .phone-input-fix .react-international-phone-input-container {
   width: 100%;
 }
@@ -167,4 +306,20 @@ html {
   padding: 0.65rem;
   background: white;
   margin-right: 4px;
+}
+
+/* ---------------------------------------------------------------
+   MOTION — respect reduced motion globally
+--------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

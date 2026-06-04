@@ -1,22 +1,12 @@
 export const metadata = {
-  title: "Contact Us | ScotiTech Solutions Limited",
+  title: "Contact | ScotiTech Solutions Limited",
+  description:
+    "Contact ScotiTech for AppDeploy access, AXOS enterprise evaluation, partnerships, and product-fit conversations.",
 };
-import Hero from "@/components/contact/Hero";
-import GetInTouch from "@/components/contact/Getintouch";
-import SpecificSolution from "@/components/contact/Specificsolution";
-import NewsletterSubscription from "@/components/contact/NewsletterSubscription";
-import CalendlyBooking from "@/components/contact/CalendlyBooking";
+import ContactExperience from "@/components/contact/ContactExperience";
 
 const page = () => {
-  return (
-    <>
-      <Hero />
-      <GetInTouch />
-      <CalendlyBooking/>
-      <SpecificSolution />
-      <NewsletterSubscription />
-    </>
-  );
+  return <ContactExperience />;
 };  
 
 export default page;

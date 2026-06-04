@@ -1,127 +1,203 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Reveal from "@/components/Reveal";
-import { flagshipProducts, supportingProducts } from "@/lib/products";
+import Image from "next/image";
+import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
+import Section from "@/components/ui/Section";
+import Reveal from "@/components/ui/Reveal";
+import Eyebrow from "@/components/ui/Eyebrow";
+import Badge from "@/components/ui/Badge";
+import { cn } from "@/lib/utils";
+
+const flagships = [
+  {
+    name: "AppDeploy",
+    href: "/products/appdeploy",
+    externalUrl: "https://appdeploy.scotitech.com",
+    logo: "/images/brand/appdeploy-logo-black.png",
+    accent: "bg-appdeploy",
+    status: { variant: "live", dot: true, label: "Live" },
+    tagline: "Your apps. Your brand. Enterprise-ready in 14 days.",
+    description:
+      "A branded workspace for private iOS and Android app delivery, with Apple Business-aligned workflows and clearer install guidance — without forcing full MDM adoption.",
+    capabilities: ["Branded portal", "Apple Business", "iOS & Android"],
+    media: {
+      type: "image",
+      src: "/images/products/appdeploy/phonepic.png",
+      alt: "AppDeploy workspace dashboard",
+    },
+  },
+  {
+    name: "AXOS",
+    href: "/products/axos",
+    externalUrl: "https://axos.scotitech.com",
+    logo: "/images/brand/axos-icon.png",
+    accent: "bg-axos",
+    status: { variant: "early", label: "Enterprise only" },
+    tagline: "Your entire workspace — self-hosted.",
+    description:
+      "A completed enterprise workspace for employees — mail, drive, chat, video, tasks — with governance-first AI built in and a limited testing platform for qualified organisations.",
+    capabilities: ["Enterprise evaluation", "Governance-first AI", "100% on-premise"],
+    media: {
+      type: "image",
+      src: "/images/products/axos/workspace.png",
+      alt: "AXOS self-hosted workspace",
+    },
+  },
+];
 
 export default function OurProducts() {
   return (
-    <section
-      id="products"
-      className="relative w-full overflow-hidden bg-[#F7F7F5] py-16 md:py-[5.5rem]"
-    >
-      <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
-        <Reveal className="mb-10 max-w-4xl" variant="soft">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#8C7A5E]">
-            Product Portfolio
-          </p>
-          <h2 className="text-3xl font-semibold leading-tight text-[#111827] sm:text-5xl">
-            Focused products for app access, private workspaces, and decision support.
-          </h2>
-          <p className="mt-5 max-w-3xl font-lora text-lg leading-8 text-slate-700">
-            Each product is built around a distinct user, use case, and
-            rollout path, making it easier for teams to compare fit quickly.
-          </p>
-        </Reveal>
+    <Section id="products" surface="muted" spacing="lg">
+      <Reveal className="max-w-3xl">
+        <Eyebrow>Products</Eyebrow>
+        <h2 className="t-h1 mt-3">
+          Two flagship products, one operating principle: real control.
+        </h2>
+        <p className="t-lead mt-5">
+          AppDeploy handles private app distribution. AXOS is an
+          enterprise-only, self-hosted workspace suite with AI built in. Both
+          keep control — and your data — where they belong.
+        </p>
+      </Reveal>
 
-        <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
-          {flagshipProducts.map((product, index) => (
-            <Reveal
-              as="article"
-              key={product.name}
-              delay={index * 100}
-              className="group overflow-hidden rounded-[1.25rem] border border-[#d9ded7] bg-white text-left shadow-[0_18px_48px_rgba(15,23,42,0.07)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.10)]"
-            >
-              <div className="grid h-full grid-cols-1 md:grid-cols-[38%_62%]">
-                <div className="flex items-center justify-center border-b border-[#d9ded7] bg-[#f8fafc] p-7 md:border-b-0 md:border-r">
+      <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        {flagships.map((product, i) => (
+          <Reveal key={product.name} delay={i * 0.08}>
+            <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-hairline bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
+              <span className={cn("block h-1 w-full", product.accent)} />
+
+              {/* Media */}
+              <div className="relative aspect-[16/9] overflow-hidden border-b border-hairline bg-surface-sunken">
+                {product.media.type === "image" ? (
                   <Image
-                    src={product.logo}
-                    alt={product.name}
-                    width={280}
-                    height={180}
-                    className="h-auto max-h-[150px] w-full max-w-[280px] object-contain"
+                    src={product.media.src}
+                    alt={product.media.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                   />
+                ) : (
+                  <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-[radial-gradient(circle_at_50%_30%,rgba(251,146,60,0.12),transparent_60%)]">
+                    <Image
+                      src="/images/brand/axos-icon.png"
+                      alt="AXOS"
+                      width={64}
+                      height={64}
+                      className="h-14 w-14 object-contain opacity-90"
+                    />
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-hairline bg-surface px-3 py-1 font-karla text-xs font-medium text-muted">
+                      <Sparkles size={13} className="text-axos" />
+                      Private AI workspace
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Body */}
+              <div className="flex flex-1 flex-col p-7 md:p-8">
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    {product.logo && (
+                      <Image
+                        src={product.logo}
+                        alt={`${product.name} logo`}
+                        width={44}
+                        height={44}
+                        className="h-10 w-10 rounded-xl object-contain"
+                      />
+                    )}
+                    <h3 className="font-karla text-2xl font-semibold text-strong">
+                      {product.name}
+                    </h3>
+                  </div>
+                  <Badge variant={product.status.variant} dot={product.status.dot}>
+                    {product.status.label}
+                  </Badge>
                 </div>
 
-                <div className="flex flex-col p-7 md:p-9">
-                  <div className="mb-5 flex items-center justify-between gap-4">
+                <p className="font-karla text-lg font-semibold text-strong">
+                  {product.tagline}
+                </p>
+                <p className="t-body mt-3">{product.description}</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {product.capabilities.map((c) => (
                     <span
-                      className="inline-flex items-center rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.14em]"
-                      style={{
-                        backgroundColor: product.theme.soft,
-                        color: product.theme.color,
-                      }}
+                      key={c}
+                      className="rounded-full bg-surface-sunken px-3 py-1 font-karla text-xs font-medium text-body"
                     >
-                      {product.status}
+                      {c}
                     </span>
-                    {product.slug === "appdeploy" && (
-                      <span className="rounded-full border border-[#d9ded7] bg-[#f8fafc] px-3 py-1 text-xs font-semibold text-slate-600">
-                        From £79 / mo
-                      </span>
-                    )}
-                    {product.slug === "axos" && (
-                      <span className="rounded-full border border-[#d9ded7] bg-[#f8fafc] px-3 py-1 text-xs font-semibold text-slate-600">
-                        Book a session
-                      </span>
-                    )}
-                  </div>
+                  ))}
+                </div>
 
-                  <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
-                    {product.eyebrow}
-                  </p>
-                  <h3 className="mb-4 text-3xl font-semibold text-[#111827]">
-                    {product.name}
-                  </h3>
-
-                  <p className="mb-5 text-xl font-semibold leading-8 text-slate-900">
-                    {product.headline}
-                  </p>
-
-                  <p className="mb-8 max-w-xl font-lora leading-8 text-slate-700">
-                    {product.summary}
-                  </p>
-
-                  <div className="mt-auto flex flex-wrap items-center justify-between gap-4">
-                    <p className="text-sm font-semibold text-slate-500">
-                      For {product.buyer}
-                    </p>
-                    <Link
-                      href={product.href}
-                      className="inline-flex items-center gap-2 rounded-full bg-[#100E0C] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1C1714]"
+                <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2">
+                  <Link
+                    href={product.href}
+                    className="inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong transition-colors hover:text-brand"
+                  >
+                    Explore {product.name}
+                    <ArrowRight
+                      size={16}
+                      className="transition-transform group-hover:translate-x-0.5"
+                    />
+                  </Link>
+                  {product.externalUrl && (
+                    <a
+                      href={product.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 font-karla text-sm font-semibold text-muted transition-colors hover:text-strong"
                     >
-                      View product
-                      <ArrowRight className="size-4 transition group-hover:translate-x-1" />
-                    </Link>
-                  </div>
+                      Visit {product.name}
+                      <ArrowUpRight size={15} />
+                    </a>
+                  )}
                 </div>
               </div>
-            </Reveal>
-          ))}
-        </div>
+            </article>
+          </Reveal>
+        ))}
+      </div>
 
-        <Reveal delay={160}>
-          <Link
-            href={supportingProducts[0].href}
-            className="mt-6 flex flex-col gap-4 rounded-[1.25rem] border border-[#d9ded7] bg-[#fbfaf6] p-6 transition hover:border-slate-300 sm:flex-row sm:items-center sm:justify-between"
-          >
+      {/* Supporting product */}
+      <Reveal delay={0.1}>
+        <Link
+          href="/products/claritypath"
+          className="group mt-6 flex flex-col items-start gap-5 rounded-3xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-card sm:flex-row sm:items-center sm:justify-between md:p-8"
+        >
+          <div className="flex items-center gap-5">
+            <Image
+              src="/images/brand/claritypath-logo.png"
+              alt="ClarityPath logo"
+              width={48}
+              height={48}
+              className="h-12 w-12 shrink-0 rounded-2xl object-contain"
+            />
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#B7A84D]">
-                Supporting product — included with AppDeploy
-              </p>
-              <h3 className="mt-2 text-2xl font-semibold text-slate-950">
-                {supportingProducts[0].name}
-              </h3>
-              <p className="mt-2 max-w-2xl font-lora leading-7 text-slate-700">
-                {supportingProducts[0].summary}
+              <div className="flex items-center gap-3">
+                <h3 className="font-karla text-xl font-semibold text-strong">
+                  ClarityPath
+                </h3>
+                <Badge variant="supporting">Accessed via AppDeploy</Badge>
+              </div>
+              <p className="t-body mt-1 max-w-2xl">
+                Daily strategic focus and tailored insight for relocation, career,
+                property, and financial decisions — accessed through the AppDeploy
+                portal.
               </p>
             </div>
-            <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-slate-900">
-              Access via AppDeploy
-              <ArrowRight className="size-4" />
-            </span>
-          </Link>
-        </Reveal>
-      </div>
-    </section>
+          </div>
+          <span className="inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong">
+            Learn more
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover:translate-x-0.5"
+            />
+          </span>
+        </Link>
+      </Reveal>
+    </Section>
   );
 }

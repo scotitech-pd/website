@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { Linkedin, MapPin } from "lucide-react";
 
 export default function LeadershipTeam() {
@@ -8,7 +9,7 @@ export default function LeadershipTeam() {
       title: "Marketing & Content Manager",
       location: "Glasgow, UK",
       description:
-        "Leads content strategy and product communication, translating technical strategy into clear buyer-facing narratives.",
+        "Leads content strategy and product communication, translating technical direction into clear buyer-facing narratives.",
       img: "/images/aboutus/prachi.jpeg",
       linkedin: "https://www.linkedin.com/in/prachi-dwivedi-5724a51b6/",
     },
@@ -26,7 +27,7 @@ export default function LeadershipTeam() {
       title: "Client Engagement & Product Strategy Lead",
       location: "Gurgaon, India",
       description:
-        "Connects client requirements to roadmap decisions, keeping product strategy aligned with practical deployment realities.",
+        "Connects client requirements to roadmap decisions, keeping product direction aligned with practical deployment realities.",
       img: "/images/aboutus/anurag.jfif",
       linkedin: "https://www.linkedin.com/in/anuragparmar/",
     },
@@ -42,20 +43,19 @@ export default function LeadershipTeam() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#F7F7F5] py-14 md:py-20">
+    <section className="relative overflow-hidden bg-[#f7f7f5] py-14 md:py-20">
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="max-w-4xl mb-10">
-          <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+          <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.18em] text-[#b8430b]/80">
             Leadership Team
           </p>
           <h2 className="text-3xl md:text-5xl font-karla font-semibold text-[#0F172A] mb-4">
-            The team behind product strategy and delivery
+            The team behind product direction and delivery
           </h2>
           <p className="font-lora text-lg leading-8 text-slate-700">
-            ScotiTech combines product strategy, engineering, infrastructure,
-            product communication, and client-focused execution across the UK
-            and India.
+            ScotiTech combines worldwide product strategy, engineering,
+            infrastructure, AI, and client-focused digital delivery.
           </p>
         </div>
 
@@ -63,20 +63,22 @@ export default function LeadershipTeam() {
           {team.map((member) => (
             <article
               key={member.name}
-              className="rounded-[1.15rem] border border-[#d9ded7] bg-white p-5 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"
+              className="rounded-[1.6rem] border border-slate-200 bg-white p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)]"
             >
-              <div className="mb-4 overflow-hidden rounded-2xl border border-slate-200">
-                <img
+              <div className="relative mb-4 h-[220px] overflow-hidden rounded-2xl border border-slate-200">
+                <Image
                   src={member.img}
                   alt={member.name}
-                  className="h-[220px] w-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  className="object-cover"
                 />
               </div>
 
               <h3 className="text-xl font-karla font-semibold text-slate-900 mb-1">
                 {member.name}
               </h3>
-              <p className="text-sm font-karla font-semibold text-[#15676E] mb-2">
+              <p className="text-sm font-karla font-semibold text-brand-strong mb-2">
                 {member.title}
               </p>
 
@@ -93,7 +95,7 @@ export default function LeadershipTeam() {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-karla font-semibold text-slate-800 hover:border-[#15676E] hover:text-[#15676E] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-karla font-semibold text-slate-800 hover:border-brand hover:text-brand-strong transition-colors"
               >
                 <Linkedin size={15} />
                 View LinkedIn

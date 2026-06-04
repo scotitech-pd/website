@@ -1,24 +1,26 @@
 import HeroSection from "./HeroSection";
-import HomeSocialProof from "./HomeSocialProof";
 import OurProducts from "./OurProducts";
-import InsideProducts from "./InsideProducts";
-import WhyChooseScotiTech from "./WhyChooseScotiTech";
-import ScotiTechPulse from "./ScotiTechPulse";
+import ProblemsSolved from "./ProblemsSolved";
+import HowWeWork from "./HowWeWork";
+import Credibility from "./Credibility";
+import LeadershipStrip from "./LeadershipStrip";
 import InsightsSection from "./InsightsSection";
-import SubscribeSection from "./SubscribeSection";
+import FaqSection from "./FaqSection";
+import ContactCta from "./ContactCta";
 
 const Pagehome = () => {
   return (
-    <div className="bg-[#F7F7F5]">
+    <>
       <HeroSection />
-      <HomeSocialProof />
       <OurProducts />
-      <InsideProducts />
-      <WhyChooseScotiTech />
-      <ScotiTechPulse />
+      <ProblemsSolved />
+      <HowWeWork />
+      <Credibility />
+      <LeadershipStrip />
       <InsightsSection />
-      <SubscribeSection />
-    </div>
+      <FaqSection />
+      <ContactCta />
+    </>
   );
 };
 

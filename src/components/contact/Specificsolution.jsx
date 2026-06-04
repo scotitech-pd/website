@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const SpecificSolution = () => {
@@ -8,14 +9,14 @@ const SpecificSolution = () => {
       id: 1,
       name: "AppDeploy",
       image: "/images/brand/appdeploy-logo-black.png",
-      description: "Private iOS release portals and install visibility",
+      description: "Internal app distribution built around Apple Business workflows",
       link: "/products/appdeploy",
     },
     {
       id: 2,
       name: "AXOS",
       image: "/images/brand/axos-icon.png",
-      description: "Private workspace for daily team execution",
+      description: "Enterprise-only employee workspace with AI built directly in",
       link: "/products/axos",
     },
     {
@@ -32,7 +33,6 @@ const SpecificSolution = () => {
     contact: "",
     email: "",
     companyName: "",
-    message: "",
   });
 
   const [success, setSuccess] = useState(false);
@@ -104,7 +104,6 @@ const SpecificSolution = () => {
     fd.append("Contact", formData.contact);
     fd.append("Email", formData.email);
     fd.append("Company", formData.companyName);
-    fd.append("Message", formData.message || "No message provided");
 
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -120,7 +119,6 @@ const SpecificSolution = () => {
         contact: "",
         email: "",
         companyName: "",
-        message: "",
       });
     }, 2000);
   };
@@ -210,20 +208,6 @@ const SpecificSolution = () => {
                     />
                   </div>
 
-                  <div>
-                    <label className="block font-lora text-slate-700 text-sm font-medium mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      placeholder="Tell us what you would like to discuss"
-                      className="w-full resize-none font-lora bg-transparent border-b-2 border-slate-300 focus:border-slate-500 text-slate-900 placeholder-slate-400 py-2 px-1 outline-none transition-colors"
-                    />
-                  </div>
-
                   <div className="flex justify-end pt-4">
                     <button
                       type="submit"
@@ -246,9 +230,11 @@ const SpecificSolution = () => {
                   className="bg-white relative rounded-2xl shadow-xl hover:shadow-2xl transition h-full flex flex-col mb-0"
                 >
                   <div className="flex bg-slate-100 rounded-t-2xl overflow-hidden items-center justify-center h-20 border-b border-slate-200">
-                    <img
+                    <Image
                       src={card.image}
                       alt={card.name}
+                      width={160}
+                      height={56}
                       className="h-14 w-auto object-contain"
                     />
                   </div>
@@ -275,10 +261,13 @@ const SpecificSolution = () => {
                   <h3 className="text-[#0F172A] text-xl font-bold p-4 px-7 font-lora">
                     Our Location
                   </h3>
-                  <img
+                  <Image
                     src="/images/contact/map.png"
                     alt=""
-                    className="w-[300px] absolute left-4 z-20 hidden lg:block"
+                    aria-hidden="true"
+                    width={448}
+                    height={238}
+                    className="w-[300px] h-auto absolute left-4 z-20 hidden lg:block"
                   />
                 </div>
                 <div className="relative bg-yellow h-full w-full overflow-hidden lg:rounded-br-3xl lg:rounded-tr-3xl">

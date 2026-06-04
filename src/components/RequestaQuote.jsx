@@ -2,215 +2,172 @@
 
 import { useModal } from "@/components/ModalContext";
 import { useEffect } from "react";
-import { meetingLinks } from "@/lib/scheduling";
-import {
-  ArrowRight,
-  Clock3,
-  ShieldCheck,
-  Sparkles,
-  X,
-} from "lucide-react";
+import { ArrowRight, Clock, ShieldCheck, Sparkles, X } from "lucide-react";
 
-const productSessions = [
+/* Single scheduling link used for both product sessions */
+const CALENDLY_URL =
+  "https://calendly.com/pradeepdahiya2411/axos-private-workspace-strategy-session";
+
+const chips = [
+  { icon: Clock, label: "45-min session" },
+  { icon: ShieldCheck, label: "Security aligned" },
+  { icon: Sparkles, label: "Product-specific guidance" },
+];
+
+const agenda = [
+  "Select the product session that matches your use case",
+  "Review deployment, control, and rollout expectations",
+  "Leave with a clear next-step plan",
+];
+
+const sessions = [
   {
-    key: "appdeploy",
-    title: "AppDeploy session",
-    description:
-      "For teams distributing private or internal iOS apps through ABM with controlled installs and clear rollout governance.",
+    name: "AppDeploy session",
+    body: "For teams distributing private or internal iOS apps through Apple Business, with controlled installs and clear rollout governance.",
     cta: "Book AppDeploy session",
-    href: meetingLinks.appdeploy,
   },
   {
-    key: "axos",
-    title: "AXOS session",
-    description:
-      "For teams planning a private workspace for communication, files, tasks, and governance-aligned AI operations.",
+    name: "AXOS session",
+    body: "For teams planning a private workspace for communication, files, tasks, and governance-aligned AI operations.",
     cta: "Book AXOS session",
-    href: meetingLinks.axos,
   },
 ];
 
 export default function RequestaQuote() {
   const { showModal, setShowModal } = useModal();
 
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  const closeModal = () => setShowModal(false);
 
+  // Back button + ESC + scroll lock while open
   useEffect(() => {
-    if (showModal) {
-      window.history.pushState({ modalOpen: true }, "");
-      document.body.style.overflow = "hidden";
-    }
+    if (!showModal) return;
 
-    const handleBack = () => {
-      if (showModal) {
-        closeModal();
-      }
-    };
+    window.history.pushState({ modalOpen: true }, "");
+    const onPop = () => setShowModal(false);
+    const onKey = (e) => e.key === "Escape" && setShowModal(false);
 
-    const handleEscape = (event) => {
-      if (event.key === "Escape" && showModal) {
-        closeModal();
-      }
-    };
-
-    window.addEventListener("popstate", handleBack);
-    window.addEventListener("keydown", handleEscape);
+    window.addEventListener("popstate", onPop);
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
 
     return () => {
-      window.removeEventListener("popstate", handleBack);
-      window.removeEventListener("keydown", handleEscape);
+      window.removeEventListener("popstate", onPop);
+      window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [showModal]);
+  }, [showModal, setShowModal]);
 
   if (!showModal) return null;
 
   return (
     <div
-      className="fixed inset-0 z-[999] flex items-center justify-center bg-black/55 p-3 backdrop-blur-md sm:p-5"
+      className="fixed inset-0 z-[999] flex items-center justify-center bg-ink/55 p-4 backdrop-blur-sm"
       onClick={closeModal}
-      role="presentation"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Book a product session"
     >
       <div
-        className="relative w-full max-w-5xl overflow-hidden rounded-[28px] border border-white/15 bg-white shadow-[0_32px_90px_rgba(0,0,0,0.35)]"
+        className="relative grid max-h-[92vh] w-full max-w-5xl overflow-hidden rounded-[1.75rem] border border-hairline bg-surface shadow-lift animate-scale-in lg:grid-cols-2"
         onClick={(e) => e.stopPropagation()}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="sales-dialog-title"
       >
-        <button
-          onClick={closeModal}
-          className="absolute right-4 top-4 z-[60] rounded-full border border-white/20 bg-white/90 p-2 text-slate-700 shadow-sm transition hover:bg-white hover:text-slate-950"
-          aria-label="Close sales meeting request"
-        >
-          <X className="h-5 w-5" />
-        </button>
+        {/* LEFT — dark context panel */}
+        <div className="relative hidden flex-col overflow-y-auto bg-ink p-8 lg:flex lg:p-10">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_0%,rgba(226,88,14,0.28),transparent_60%)]" />
+          <div className="relative z-10 flex h-full flex-col">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 font-karla text-xs font-semibold uppercase tracking-[0.14em] text-on-ink">
+              <Sparkles size={14} className="text-brand-soft" />
+              Talk to sales
+            </span>
 
-        <div className="grid max-h-[91vh] overflow-y-auto lg:grid-cols-[0.95fr_1.05fr]">
-          <aside className="relative overflow-hidden bg-[#100E0C] px-6 py-8 text-white sm:px-8 lg:min-h-[560px] lg:py-10">
-            <div className="absolute -left-24 top-12 h-64 w-64 rounded-full bg-teal-400/20 blur-3xl" />
-            <div className="absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
+            <h2 className="t-h2 mt-6 text-on-ink">Book a focused product session.</h2>
+            <p className="mt-4 font-karla leading-relaxed text-on-ink-muted">
+              Choose AppDeploy or AXOS and schedule the right session. We'll cover
+              product fit, deployment approach, and practical next steps for your team.
+            </p>
 
-            <div className="relative z-10 flex h-full flex-col justify-between gap-8">
-              <div>
-                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 font-karla text-xs font-semibold uppercase tracking-[0.24em] text-slate-200">
-                  <Sparkles className="h-3.5 w-3.5 text-[#B7A84D]" />
-                  Talk to sales
-                </div>
-
-                <h2
-                  id="sales-dialog-title"
-                  className="max-w-md font-karla text-3xl font-semibold leading-tight text-white sm:text-4xl"
+            <div className="mt-6 flex flex-wrap gap-2.5">
+              {chips.map((c) => (
+                <span
+                  key={c.label}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-white/[0.06] px-3 py-1.5 font-karla text-xs font-medium text-on-ink"
                 >
-                  Book a focused product session.
-                </h2>
-                <p className="mt-4 max-w-md font-karla text-base leading-7 text-slate-300">
-                  Choose AppDeploy or AXOS and schedule the right session.
-                  We will cover product fit, deployment approach, and practical
-                  next steps for your team.
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {[
-                    { icon: Clock3, text: "45-min session" },
-                    { icon: ShieldCheck, text: "Security aligned" },
-                    { icon: Sparkles, text: "Product-specific guidance" },
-                  ].map(({ icon: Icon, text }) => (
-                    <span
-                      key={text}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 font-karla text-sm text-slate-100"
-                    >
-                      <Icon className="h-4 w-4 text-[#B7A84D]" />
-                      {text}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="relative rounded-3xl border border-white/15 bg-white/[0.08] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.25)] backdrop-blur">
-                <div
-                  className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent"
-                  aria-hidden="true"
-                />
-                <div className="mb-4 flex items-center justify-between">
-                  <p className="font-karla text-sm font-semibold text-white">
-                    Meeting agenda
-                  </p>
-                  <span className="rounded-full bg-emerald-400/15 px-2.5 py-1 font-karla text-xs font-semibold text-emerald-200">
-                    Prepared
-                  </span>
-                </div>
-                <div className="space-y-3">
-                  {[
-                    "Select the product session that matches your use case",
-                    "Review deployment, control, and rollout expectations",
-                    "Leave with a clear next-step plan",
-                  ].map((item, index) => (
-                    <div
-                      key={item}
-                      className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.07] p-3"
-                    >
-                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-xs font-bold text-[#100E0C]">
-                        {index + 1}
-                      </span>
-                      <p className="font-karla text-sm leading-6 text-slate-200">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-4 border-t border-white/10 pt-4 font-karla text-sm leading-6 text-slate-300">
-                  No generic pitch. Each session is aligned to the product and
-                  rollout context you choose.
-                </p>
-              </div>
-            </div>
-          </aside>
-
-          <section className="bg-[#F7F7F5] px-5 py-8 sm:px-8 lg:px-9 lg:py-10">
-            <div className="mb-6 pr-10">
-              <p className="font-karla text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
-                Schedule a meeting
-              </p>
-              <h3 className="mt-2 font-karla text-2xl font-semibold text-[#0F172A]">
-                Book the session that fits your goals.
-              </h3>
-              <p className="mt-2 font-karla text-sm leading-6 text-slate-600">
-                Choose AppDeploy for private iOS rollout or AXOS for secure
-                workspace planning, then book instantly with the right team.
-              </p>
-            </div>
-
-            <div className="space-y-4 font-karla">
-              {productSessions.map((item) => (
-                <article
-                  key={item.key}
-                  className="rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_16px_35px_rgba(15,23,42,0.06)]"
-                >
-                  <h4 className="text-xl font-semibold text-[#0F172A]">{item.title}</h4>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    {item.description}
-                  </p>
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={closeModal}
-                    className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-900"
-                  >
-                    {item.cta}
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
-                </article>
+                  <c.icon size={13} className="text-brand-soft" />
+                  {c.label}
+                </span>
               ))}
-              <p className="pt-1 text-center text-xs leading-5 text-slate-500">
-                Need help deciding first? Email info@scotitech.com and we'll
-                guide you to the right product session.
+            </div>
+
+            <div className="mt-auto rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+              <div className="flex items-center justify-between">
+                <p className="font-karla text-sm font-semibold text-on-ink">Meeting agenda</p>
+                <span className="rounded-full bg-emerald-400/15 px-2.5 py-0.5 font-karla text-[11px] font-semibold uppercase tracking-wide text-emerald-300">
+                  Prepared
+                </span>
+              </div>
+              <ol className="mt-4 space-y-3">
+                {agenda.map((step, i) => (
+                  <li key={step} className="flex gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 font-karla text-xs font-semibold text-on-ink">
+                      {i + 1}
+                    </span>
+                    <span className="font-karla text-sm leading-snug text-on-ink-muted">{step}</span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-4 border-t border-white/10 pt-3 font-karla text-xs leading-relaxed text-on-ink-muted">
+                No generic pitch. Each session is aligned to the product and rollout
+                context you choose.
               </p>
             </div>
-          </section>
+          </div>
+        </div>
+
+        {/* RIGHT — booking panel */}
+        <div className="relative flex flex-col overflow-y-auto bg-surface p-7 sm:p-9">
+          <button
+            onClick={closeModal}
+            aria-label="Close"
+            className="absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full border border-hairline text-muted transition-colors hover:bg-surface-sunken hover:text-strong"
+          >
+            <X size={17} />
+          </button>
+
+          <span className="t-eyebrow">Schedule a meeting</span>
+          <h2 className="t-h3 mt-2 pr-8">Book the session that fits your goals.</h2>
+          <p className="t-body mt-3">
+            Choose AppDeploy for private iOS rollout or AXOS for secure workspace
+            planning, then book instantly with the right team.
+          </p>
+
+          <div className="mt-6 space-y-4">
+            {sessions.map((s) => (
+              <div
+                key={s.name}
+                className="rounded-2xl border border-hairline bg-surface-muted p-5 shadow-soft transition-shadow hover:shadow-card"
+              >
+                <h3 className="font-karla text-lg font-semibold text-strong">{s.name}</h3>
+                <p className="t-small mt-1.5 leading-6">{s.body}</p>
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 font-karla text-sm font-semibold text-on-ink transition-colors hover:bg-ink-soft"
+                >
+                  {s.cta}
+                  <ArrowRight size={16} />
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-6 text-center font-karla text-xs leading-relaxed text-muted">
+            Need help deciding first? Email{" "}
+            <a href="mailto:info@scotitech.com" className="font-semibold text-brand-strong hover:text-brand">
+              info@scotitech.com
+            </a>{" "}
+            and we'll guide you to the right product session.
+          </p>
         </div>
       </div>
     </div>
