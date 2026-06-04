@@ -73,10 +73,12 @@ export const products = {
       { icon: "BarChart3", title: "Enterprise audit surface", body: "Give Enterprise workspaces a reviewable trail for admin actions, sync activity, and delivery events." },
     ],
     howItWorks: [
-      { title: "Discovery", body: "Days 1–3 — kickoff, requirements review, and workspace + branding planning." },
-      { title: "Deployment", body: "Days 4–7 — hosted or self-hosted setup, domain and SSL, and security hardening." },
-      { title: "Configuration", body: "Days 8–12 — organisation branding, portal setup, and access controls." },
-      { title: "Go-live", body: "Days 13–14 — full admin handover, live on schedule with zero downtime." },
+      { title: "Request a workspace", body: "Business requests move through email verification, billing, and activation; Enterprise requests move into review-led onboarding." },
+      { title: "Configure the brand", body: "Set the organisation slug, display name, logo, accent colour, public-page status, and enabled platforms." },
+      { title: "Publish releases", body: "Upload iOS release assets and redemption data; Android APK distribution is reserved for Enterprise deployments." },
+      { title: "Share one portal", body: "Employees, testers, or client teams use a branded app page rather than scattered install messages." },
+      { title: "Track usage", body: "Monitor install counts, remaining iOS codes, active users, app inventory, and distribution activity." },
+      { title: "Review operations", body: "Audit logs and member permissions give larger teams a cleaner way to review sensitive release actions." },
     ],
     proof: {
       quote:

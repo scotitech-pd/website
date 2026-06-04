@@ -345,7 +345,7 @@ export default function ProductTemplate({ product }) {
             <Eyebrow className={accentText}>How it works</Eyebrow>
             <h2 className="t-h1 mt-3">{product.howItWorksTitle || "From setup to rollout in a few clear steps."}</h2>
           </Reveal>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {product.howItWorks.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.06}>
                 <div className="relative h-full rounded-2xl border border-hairline bg-surface p-6 shadow-soft">
