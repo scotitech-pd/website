@@ -23,7 +23,7 @@ const flagships = [
     capabilities: ["Branded portal", "Apple Business", "iOS & Android"],
     media: {
       type: "image",
-      src: "/images/products/appdeploy/phonepic.png",
+      src: "/images/products/appdeploy/dashboard.png",
       alt: "AppDeploy workspace dashboard",
     },
   },
