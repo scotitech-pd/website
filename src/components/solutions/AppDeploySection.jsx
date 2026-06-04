@@ -32,7 +32,7 @@ const coreSolutions = [
 export default function AppDeploySection() {
   return (
     <section className="relative overflow-hidden bg-[#0F172A] py-16 md:py-20 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.18),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.12),transparent_22%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(226,88,14,0.18),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.12),transparent_22%)]" />
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="max-w-4xl mb-10">

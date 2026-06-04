@@ -22,7 +22,7 @@ export default function ProductsPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-surface pt-28 pb-12 md:pt-32 md:pb-16">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_85%_-5%,rgba(91,79,207,0.10),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
         <Container className="relative z-10">
           <Reveal immediate className="max-w-3xl">
             <Eyebrow>Products</Eyebrow>

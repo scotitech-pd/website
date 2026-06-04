@@ -23,7 +23,7 @@ export default function CtaSection() {
 
   return (
     <section className="relative bg-[#0F172A] text-white py-16 md:py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.22),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.16),transparent_22%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(226,88,14,0.22),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.16),transparent_22%)]" />
 
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10">
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.05] py-8 px-6 md:px-10 md:py-10 shadow-[0_24px_60px_rgba(2,6,23,0.22)]">

@@ -25,16 +25,16 @@
   --border-strong: #cbd5e1;
   --hairline-ink: rgba(255, 255, 255, 0.1);
 
-  /* Brand — single accent (indigo) */
-  --brand: #5b4fcf;
-  --brand-strong: #4f46e5;
-  --brand-soft: #eef0fe;
+  /* Brand — single accent (orange) */
+  --brand: #e2580e;
+  --brand-strong: #b8430b;
+  --brand-soft: #fdebdd;
   --brand-contrast: #ffffff;
 
-  /* Per-product accents (chips / hairlines only) */
-  --accent-appdeploy: #4f74f3;
-  --accent-axos: #34d3ff;
-  --accent-claritypath: #7c3aed;
+  /* Per-product accents (warm, distinct; chips / hairlines only) */
+  --accent-appdeploy: #c2410c;
+  --accent-axos: #ea580c;
+  --accent-claritypath: #b45309;
 
   /* Elevation — soft, low-spread */
   --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.04),
@@ -50,7 +50,7 @@
   --background: #ffffff;
   --foreground: #ffffff;
   --main-light: #6b61d9;
-  --main: #5b4fcf;
+  --main: #e2580e;
   --main-dark: #0f172a;
   --blue: #2563eb;
   --orange: #c08457;

@@ -26,7 +26,7 @@ const WhyScotitech = () => {
     <section className="relative bg-white py-16 md:py-20">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 text-[#0F172A]">
         <div className="max-w-4xl mb-12">
-          <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-3">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#b8430b]/80 mb-3">
             What To Expect
           </p>
           <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">

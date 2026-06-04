@@ -32,10 +32,10 @@ const flagships = [
     externalUrl: "https://axos.scotitech.com",
     accent: "bg-axos",
     status: { variant: "early", label: "Enterprise" },
-    tagline: "Governance-first AI, grounded in your own knowledge.",
+    tagline: "Your entire workspace — self-hosted.",
     description:
-      "A private AI workspace trained on your documents — internal knowledge search and secure document AI, deployed hosted, in your private cloud, or fully self-hosted.",
-    capabilities: ["Internal-knowledge AI", "Hosted · cloud · self-hosted", "Data stays private"],
+      "An enterprise productivity suite — mail, drive, chat, video, tasks — with the NexaAgent AI agent built in, running 100% on your own infrastructure.",
+    capabilities: ["Mail · drive · chat · tasks", "NexaAgent AI built in", "100% on-premise"],
     media: { type: "placeholder" },
   },
 ];
@@ -49,9 +49,9 @@ export default function OurProducts() {
           Two flagship products, one operating principle: real control.
         </h2>
         <p className="t-lead mt-5">
-          AppDeploy handles private app distribution. AXOS brings governance-first
-          AI to your internal knowledge. Both keep control — and your data — where
-          they belong.
+          AppDeploy handles private app distribution. AXOS is a self-hosted
+          workspace suite with AI built in. Both keep control — and your data —
+          where they belong.
         </p>
       </Reveal>
 
@@ -72,7 +72,7 @@ export default function OurProducts() {
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 ) : (
-                  <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-[radial-gradient(circle_at_50%_30%,rgba(52,211,255,0.12),transparent_60%)]">
+                  <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-[radial-gradient(circle_at_50%_30%,rgba(251,146,60,0.12),transparent_60%)]">
                     <Image
                       src="/images/brand/axos-icon.png"
                       alt="AXOS"
@@ -162,9 +162,9 @@ export default function OurProducts() {
                 <Badge variant="supporting">Accessed via AppDeploy</Badge>
               </div>
               <p className="t-body mt-1 max-w-2xl">
-                Guided decision support — private review sessions, structured
-                planning, and next-step recommendations, accessed through the
-                AppDeploy portal.
+                Daily strategic focus and tailored insight for relocation, career,
+                property, and financial decisions — accessed through the AppDeploy
+                portal.
               </p>
             </div>
           </div>

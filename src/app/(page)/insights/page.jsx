@@ -37,12 +37,12 @@ export default function InsightsPage() {
   return (
     <main className="bg-[#f7f7f5] text-[#0F172A]">
       <section className="relative overflow-hidden py-14 sm:py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(50%_45%_at_85%_-5%,rgba(91,79,207,0.10),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(50%_45%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
 
         <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
           <div className="grid grid-cols-1 xl:grid-cols-[56%_44%] gap-10 items-end mb-14">
             <div className="max-w-4xl">
-              <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80 mb-3">
+              <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b]/80 mb-3">
                 Insights
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-karla font-semibold leading-tight mb-5">
@@ -82,7 +82,7 @@ export default function InsightsPage() {
             className="group grid grid-cols-1 lg:grid-cols-[40%_60%] overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.10)] transition hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(15,23,42,0.14)]"
           >
             <div className="relative min-h-[280px] bg-[#0F172A]">
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(91,79,207,0.32),transparent_52%),linear-gradient(315deg,rgba(79,116,243,0.22),transparent_46%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(226,88,14,0.32),transparent_52%),linear-gradient(315deg,rgba(194,65,12,0.22),transparent_46%)]" />
               <Image
                 src={featuredInsight.image}
                 alt={`${featuredInsight.title} cover image`}
@@ -175,7 +175,7 @@ export default function InsightsPage() {
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div>
-                      <p className="text-xs font-karla font-semibold uppercase tracking-[0.16em] text-[#4F46E5] mb-2">
+                      <p className="text-xs font-karla font-semibold uppercase tracking-[0.16em] text-[#b8430b] mb-2">
                         {insight.category}
                       </p>
                       <h2 className="text-xl font-karla font-semibold text-slate-900">

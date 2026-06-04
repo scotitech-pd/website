@@ -26,7 +26,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-surface pt-28 pb-12 md:pt-32 md:pb-16">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_85%_-5%,rgba(91,79,207,0.10),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
         <Container className="relative z-10">
           <Reveal immediate className="max-w-3xl">
             <Eyebrow>About ScotiTech</Eyebrow>
@@ -108,7 +108,7 @@ export default function AboutPage() {
         <Container>
           <Reveal>
             <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 text-center shadow-lift md:px-14 md:py-16">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(91,79,207,0.25),transparent_60%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(226,88,14,0.25),transparent_60%)]" />
               <div className="relative z-10 mx-auto max-w-2xl">
                 <h2 className="t-h1 text-on-ink">Let's build something credible together.</h2>
                 <p className="mt-4 font-karla text-lg text-on-ink-muted">

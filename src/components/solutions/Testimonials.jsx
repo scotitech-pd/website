@@ -29,7 +29,7 @@ export default function Testimonials() {
     <section className="bg-[#f7f7f5] py-16 md:py-20 text-center relative overflow-hidden">
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full z-10">
         <div className="max-w-3xl mx-auto mb-10">
-          <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-3">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#b8430b]/80 mb-3">
             Feedback
           </p>
           <h2 className="text-3xl md:text-5xl font-karla font-semibold text-[#0F172A] mb-5">

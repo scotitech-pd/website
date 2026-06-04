@@ -46,7 +46,7 @@ export default function AppDeployComparison() {
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="max-w-4xl mb-12">
-          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#4F46E5]/80 mb-3">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b]/80 mb-3">
             Platform Comparison
           </p>
           <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">
@@ -109,7 +109,7 @@ export default function AppDeployComparison() {
 
               <div className="space-y-4">
                 <div className="rounded-2xl border border-indigo-200 bg-indigo-50/70 px-4 py-4">
-                  <p className="text-xs font-karla font-semibold uppercase tracking-[0.14em] text-[#4F46E5] mb-2">
+                  <p className="text-xs font-karla font-semibold uppercase tracking-[0.14em] text-[#b8430b] mb-2">
                     AppDeploy
                   </p>
                   <p className="text-slate-700 font-lora leading-7">

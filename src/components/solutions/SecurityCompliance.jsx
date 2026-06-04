@@ -14,12 +14,12 @@ export default function SecurityCompliance() {
   return (
     <section className="relative overflow-hidden py-16 md:py-20 text-[#0F172A]">
       <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8FAFC_0%,#EEF2FF_48%,#E0F2FE_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.08),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_22%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(226,88,14,0.08),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_22%)]" />
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="grid gap-8 xl:grid-cols-[0.9fr_1.1fr] items-center">
           <div className="max-w-3xl">
-            <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-3">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#b8430b]/80 mb-3">
               Supporting Products
             </p>
             <h2 className="text-3xl md:text-5xl font-karla font-semibold mb-5">

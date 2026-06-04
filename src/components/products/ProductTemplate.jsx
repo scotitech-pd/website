@@ -30,6 +30,14 @@ import {
   Layers3,
   Cloud,
   Server,
+  Video,
+  Calendar,
+  Plane,
+  Briefcase,
+  Home,
+  Coins,
+  CalendarRange,
+  TrendingUp,
 } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
@@ -43,7 +51,8 @@ import { cn } from "@/lib/utils";
 const icons = {
   Palette, MousePointerClick, GitBranch, Users, BarChart3, Building2,
   Mail, HardDrive, MessageSquare, CheckSquare, ServerCog, Route, Lock, Compass,
-  Sparkles, Bot, FileSearch, FileText, Layers3,
+  Sparkles, Bot, FileSearch, FileText, Layers3, Video, Calendar,
+  Plane, Briefcase, Home, Coins, CalendarRange, TrendingUp,
 };
 
 const deployIcons = [Cloud, Server, ServerCog];
@@ -93,7 +102,7 @@ export default function ProductTemplate({ product }) {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-surface pt-28 pb-16 md:pt-32 md:pb-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_50%_at_85%_-5%,rgba(91,79,207,0.10),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_50%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
         <Container className="relative z-10">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <Reveal immediate>
@@ -414,7 +423,7 @@ export default function ProductTemplate({ product }) {
         <Container>
           <Reveal>
             <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 text-center shadow-lift md:px-14 md:py-16">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(91,79,207,0.25),transparent_60%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(226,88,14,0.25),transparent_60%)]" />
               <div className="relative z-10 mx-auto max-w-2xl">
                 <h2 className="t-h1 text-on-ink">{product.cta.title}</h2>
                 <p className="mt-4 font-karla text-lg text-on-ink-muted">{product.cta.body}</p>

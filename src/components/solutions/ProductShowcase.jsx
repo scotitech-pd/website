@@ -49,7 +49,7 @@ const ProductShowcase = () => {
   return (
     <section className="relative overflow-hidden bg-white py-16 md:py-20">
       <div className="absolute inset-x-0 top-0 h-[360px] bg-[#0F172A]" />
-      <div className="absolute inset-x-0 top-0 h-[360px] bg-[radial-gradient(circle_at_top_left,rgba(79,70,229,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.12),transparent_22%)]" />
+      <div className="absolute inset-x-0 top-0 h-[360px] bg-[radial-gradient(circle_at_top_left,rgba(226,88,14,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.12),transparent_22%)]" />
       <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 w-full">
         <div className="relative z-10 max-w-4xl mb-12">
           <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-cyan-300/90 mb-3">

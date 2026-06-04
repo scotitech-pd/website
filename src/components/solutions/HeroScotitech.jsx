@@ -19,7 +19,7 @@ const HeroScotitech = () => {
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="grid gap-10 xl:grid-cols-[minmax(0,1.1fr)_minmax(420px,0.9fr)] items-center">
           <div className="max-w-4xl">
-            <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-4">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#b8430b]/80 mb-4">
               Solutions
             </p>
             <h1 className="text-[#0F172A] text-4xl min-[1150px]:text-6xl font-karla font-semibold leading-[1.05]">
@@ -119,7 +119,7 @@ const HeroScotitech = () => {
                 </p>
               </div>
 
-              <div className="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(135deg,rgba(79,70,229,0.16),rgba(14,165,233,0.10))] p-5 md:col-span-2">
+              <div className="rounded-[1.5rem] border border-white/10 bg-[linear-gradient(135deg,rgba(226,88,14,0.16),rgba(14,165,233,0.10))] p-5 md:col-span-2">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="rounded-2xl bg-white/10 p-3 text-white">
                     <Sparkles size={22} />

@@ -18,7 +18,7 @@ export default function TechnologySection() {
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="grid gap-10 xl:grid-cols-[0.95fr_1.05fr] items-start">
           <div className="max-w-3xl">
-            <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-4">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#b8430b]/80 mb-4">
               The Operational Gap
             </p>
             <h2 className="text-3xl md:text-5xl font-karla font-semibold leading-tight">

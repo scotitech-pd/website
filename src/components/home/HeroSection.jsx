@@ -25,7 +25,7 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-surface pt-28 pb-16 md:pt-32 md:pb-24">
       {/* soft brand wash */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_55%_at_85%_-5%,rgba(91,79,207,0.10),transparent_60%),radial-gradient(45%_40%_at_-5%_10%,rgba(52,211,255,0.06),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_55%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%),radial-gradient(45%_40%_at_-5%_10%,rgba(251,146,60,0.06),transparent_55%)]" />
       {/* faint grid */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.4] [mask-image:radial-gradient(70%_60%_at_50%_0%,black,transparent)] bg-[linear-gradient(to_right,rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:48px_48px]" />
 
@@ -79,7 +79,7 @@ export default function HeroSection() {
 
           {/* Product preview */}
           <motion.div {...rise(0.12)} className="relative">
-            <div className="pointer-events-none absolute -inset-6 bg-[radial-gradient(circle_at_60%_30%,rgba(91,79,207,0.14),transparent_60%)] blur-2xl" />
+            <div className="pointer-events-none absolute -inset-6 bg-[radial-gradient(circle_at_60%_30%,rgba(226,88,14,0.14),transparent_60%)] blur-2xl" />
 
             <div className="relative rounded-[1.75rem] border border-hairline bg-surface p-3 shadow-lift">
               <div className="flex items-center gap-1.5 px-3 py-2">

@@ -64,7 +64,7 @@ export default function ClientLogoStrip() {
 
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="mx-auto mb-8 max-w-3xl text-center">
-          <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80">
+          <p className="mb-3 font-karla text-sm font-semibold uppercase tracking-[0.2em] text-[#b8430b]/80">
             Trusted by early clients and partners
           </p>
           <h2 className="mb-4 font-karla text-3xl font-semibold text-[#0F172A] md:text-5xl">

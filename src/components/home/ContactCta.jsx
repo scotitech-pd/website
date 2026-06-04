@@ -16,7 +16,7 @@ export default function ContactCta() {
       <Container>
         <Reveal>
           <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 shadow-lift md:px-14 md:py-16">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_85%_0%,rgba(91,79,207,0.25),transparent_60%),radial-gradient(40%_50%_at_-5%_100%,rgba(52,211,255,0.12),transparent_60%)]" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_85%_0%,rgba(226,88,14,0.25),transparent_60%),radial-gradient(40%_50%_at_-5%_100%,rgba(251,146,60,0.12),transparent_60%)]" />
 
             <div className="relative z-10 grid gap-10 lg:grid-cols-[55%_45%] lg:items-center">
               <div>

@@ -33,7 +33,7 @@ export default function FaqSection() {
     <section className="relative overflow-hidden bg-[#f7f7f5] py-16 md:py-20">
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 grid gap-10 xl:grid-cols-[0.8fr_1.2fr] items-start text-black">
         <div className="max-w-3xl">
-          <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#4F46E5]/80 mb-3">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.2em] text-[#b8430b]/80 mb-3">
             Frequently Asked Questions
           </p>
           <h3 className="text-3xl md:text-5xl font-semibold text-[#0F172A] relative z-10 font-karla">

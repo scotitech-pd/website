@@ -73,7 +73,7 @@ export default function RequestaQuote() {
       >
         {/* LEFT — dark context panel */}
         <div className="relative hidden flex-col overflow-y-auto bg-ink p-8 lg:flex lg:p-10">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_0%,rgba(91,79,207,0.28),transparent_60%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_0%,rgba(226,88,14,0.28),transparent_60%)]" />
           <div className="relative z-10 flex h-full flex-col">
             <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 font-karla text-xs font-semibold uppercase tracking-[0.14em] text-on-ink">
               <Sparkles size={14} className="text-brand-soft" />
