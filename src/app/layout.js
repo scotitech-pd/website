@@ -6,6 +6,9 @@ import GotoTop from "@/components/GotoTop";
 import RouteLoader from "@/components/RouteLoader";
 import { ModalProvider } from "@/components/ModalContext";
 import RequestaQuote from "@/components/RequestaQuote";
+import { CookieConsentProvider } from "@/components/cookie/CookieConsentContext";
+import CookieBanner from "@/components/cookie/CookieBanner";
+import CookiePreferencesModal from "@/components/cookie/CookiePreferencesModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -95,13 +98,18 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <ModalProvider>
-          <Navbar />
-          <RequestaQuote />
+          <CookieConsentProvider>
+            <Navbar />
+            <RequestaQuote />
 
-          <GotoTop />
+            <GotoTop />
 
-          <RouteLoader>{children}</RouteLoader>
-          <Footer />
+            <RouteLoader>{children}</RouteLoader>
+            <Footer />
+
+            <CookieBanner />
+            <CookiePreferencesModal />
+          </CookieConsentProvider>
         </ModalProvider>
       </body>
     </html>
