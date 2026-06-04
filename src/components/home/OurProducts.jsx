@@ -36,7 +36,11 @@ const flagships = [
     description:
       "An enterprise productivity suite — mail, drive, chat, video, tasks — with the NexaAgent AI agent built in, running 100% on your own infrastructure.",
     capabilities: ["Mail · drive · chat · tasks", "NexaAgent AI built in", "100% on-premise"],
-    media: { type: "placeholder" },
+    media: {
+      type: "image",
+      src: "/images/products/axos/workspace.png",
+      alt: "AXOS self-hosted workspace",
+    },
   },
 ];
 

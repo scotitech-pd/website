@@ -77,6 +77,35 @@ function ProductMedia({ media, accentBg }) {
       </div>
     );
   }
+  if (media?.type === "phone") {
+    const screens = media.screens || (media.src ? [media.src] : []);
+    return (
+      <div className="relative flex items-end justify-center gap-0 py-4">
+        <span className={cn("pointer-events-none absolute inset-x-8 bottom-6 top-10 -z-0 rounded-[3rem] opacity-10 blur-2xl", accentBg)} />
+        {screens.slice(0, 2).map((src, i) => (
+          <div
+            key={src}
+            className={cn(
+              "relative z-10 w-[200px] shrink-0 rounded-[2.2rem] border-[7px] border-ink bg-ink shadow-lift sm:w-[225px]",
+              screens.length > 1 && i === 0 && "rotate-[-4deg]",
+              screens.length > 1 && i === 1 && "-ml-12 mb-8 hidden rotate-[4deg] sm:block"
+            )}
+          >
+            <span className="absolute left-1/2 top-2 z-20 h-1.5 w-14 -translate-x-1/2 rounded-full bg-white/25" />
+            <div className="overflow-hidden rounded-[1.6rem]">
+              <Image
+                src={src}
+                alt={media.alt || ""}
+                width={1242}
+                height={2688}
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
   return (
     <div className="relative flex aspect-[16/11] flex-col items-center justify-center gap-3 overflow-hidden rounded-[1.5rem] border border-hairline bg-surface shadow-lift">
       <span className={cn("absolute inset-0 -z-0 opacity-10", accentBg)} />

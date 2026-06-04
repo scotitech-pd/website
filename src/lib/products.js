@@ -136,7 +136,12 @@ export const products = {
     description:
       "An enterprise-grade productivity suite with an AI agent built in: mail, drive, calendar, chat, video, and tasks, running 100% on your own infrastructure with zero external calls and complete data sovereignty.",
     hero: {
-      media: { type: "placeholder", label: "Private AI workspace", icon: "/images/brand/axos-icon.png" },
+      media: {
+        type: "image",
+        src: "/images/products/axos/workspace.png",
+        alt: "AXOS self-hosted workspace sign-in with mail, drive, calendar, chat, video and tasks",
+        chrome: "axos.scotitech.com",
+      },
     },
     problem: {
       title: "Modern productivity suites put your data in someone else's cloud.",
@@ -216,7 +221,14 @@ export const products = {
     description:
       "A mobile decision-support companion that turns considered, high-stakes choices — relocation, career, property, and finances — into a clear daily focus and a structured plan. Accessed through the AppDeploy portal.",
     hero: {
-      media: { type: "placeholder", label: "Product preview coming soon", icon: "/images/brand/claritypath-logo.png" },
+      media: {
+        type: "phone",
+        screens: [
+          "/images/products/claritypath/app-insights.png",
+          "/images/products/claritypath/app-focus.png",
+        ],
+        alt: "ClarityPath app showing deeper insights and today's strategic focus",
+      },
     },
     problem: {
       title: "Big decisions rarely come with a clear plan.",
