@@ -404,6 +404,51 @@ export default function ProductTemplate({ product }) {
         </Section>
       )}
 
+      {/* CASE STUDY */}
+      {product.caseStudy && (
+        <Section surface="muted" spacing="lg">
+          <Reveal>
+            <div className="overflow-hidden rounded-[2rem] border border-hairline bg-brand-soft/50 shadow-soft">
+              <div className="grid lg:grid-cols-2">
+                <div className="p-8 md:p-12">
+                  <Eyebrow className={accentText}>{product.caseStudy.eyebrow}</Eyebrow>
+                  <h2 className="t-h2 mt-3">{product.caseStudy.title}</h2>
+                  <p className="t-body mt-4">{product.caseStudy.body}</p>
+                  <ul className="mt-6 space-y-3">
+                    {product.caseStudy.points.map((p) => (
+                      <li key={p} className="flex gap-3 t-body">
+                        <Check size={18} className={cn("mt-0.5 shrink-0", accentText)} />
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                  {product.caseStudy.link && (
+                    <Link
+                      href={product.caseStudy.link.href}
+                      className="mt-7 inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong transition-colors hover:text-brand"
+                    >
+                      {product.caseStudy.link.label}
+                      <ArrowRight size={16} />
+                    </Link>
+                  )}
+                </div>
+                {product.caseStudy.image && (
+                  <div className="relative min-h-[280px] border-t border-hairline bg-surface lg:border-l lg:border-t-0">
+                    <Image
+                      src={product.caseStudy.image}
+                      alt={product.caseStudy.imageAlt || product.caseStudy.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          </Reveal>
+        </Section>
+      )}
+
       {/* PRICING */}
       {product.pricing?.plans && (
         <Section surface="muted" spacing="lg">

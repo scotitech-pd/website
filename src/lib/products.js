@@ -130,6 +130,19 @@ export const products = {
         },
       ],
     },
+    caseStudy: {
+      eyebrow: "AppDeploy release story",
+      title: "A focused planning app needed a focused launch path.",
+      body: 'ClarityPath was built around a clear promise — "Plan your life. Align with time." But public App Store submissions showed how hard it is for a specialised planning product to stand out in a saturated category. AppDeploy gives it a branded route where its purpose, access model, disclaimers, and install journey are presented with clarity.',
+      points: [
+        "Public App Store submissions were rejected — life-planning and guidance apps sit in a crowded category.",
+        "ClarityPath needed a launch path to explain its purpose, boundaries, disclaimers, and access experience before installation.",
+        "With AppDeploy it gets a branded product page, managed access, install guidance, and clearer user expectations.",
+      ],
+      image: "/images/products/appdeploy/1.jpeg",
+      imageAlt: "App Store rejection notice for a specialised planning app",
+      link: { label: "Explore ClarityPath", href: "/products/claritypath" },
+    },
     faqs: [
       { q: "Does AppDeploy replace Apple Business?", a: "No — and that's the point. Apple Business handles the compliant distribution layer; AppDeploy adds the branded portal, user management, and rollout workflow on top." },
       { q: "Is Android included in the Business plan?", a: "Android is available on Enterprise plans. If you need iOS and Android from day one, get in touch and we'll find the right fit." },
