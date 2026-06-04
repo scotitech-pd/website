@@ -11,9 +11,28 @@ export const products = {
     externalUrl: "https://appdeploy.scotitech.com",
     status: { variant: "live", dot: true, label: "Live" },
     eyebrow: "Private app distribution",
-    tagline: "Your apps. Your brand. Enterprise-ready in 14 days.",
+    tagline: "MDM-free private app distribution, built around Apple Business.",
     description:
-      "A polished, branded workspace for private iOS and Android app delivery — with Apple Business-aligned workflows and clearer install guidance, without forcing full MDM adoption.",
+      "AppDeploy turns private iOS rollout into a branded workspace: admins publish releases and manage entitlement-led organisation access, while employees and partners get one clear place to install approved apps.",
+    heroSpecs: [
+      { label: "Access model", value: "Entitlement-led" },
+      { label: "Releases", value: "Versions + roles" },
+      { label: "Business", value: "From £79/mo" },
+      { label: "Enterprise", value: "Custom" },
+    ],
+    featuresTitle: "Publish, guide, and review app access from one place.",
+    howItWorksTitle: "One path from request to release review.",
+    statement: {
+      eyebrow: "Rollout architecture",
+      title: "Built for controlled rollout, not broad device control.",
+      body: "AppDeploy keeps Apple Business as the compliant distribution foundation and adds the branded workspace teams actually use — access, releases, and rollout visibility — without the weight of full device management.",
+      points: [
+        { title: "Entitlement-led access", body: "App availability managed per organisation and user, not per device." },
+        { title: "Apple Business aligned", body: "Apps & Books token sync and Managed Apple ID workflows underneath." },
+        { title: "Rollout audit trail", body: "Admin actions, sync, and delivery events visible in one place." },
+        { title: "Hosted or tailored", body: "Start on Business; move to Enterprise for deeper control." },
+      ],
+    },
     hero: {
       media: {
         type: "image",
@@ -118,7 +137,7 @@ export const products = {
       { q: "What happens after I start a free trial?", a: "Your branded workspace is live within minutes. Billing only starts after your 14 days, with priority email support from day one." },
     ],
     cta: {
-      title: "Modernise private app delivery without full MDM overhead.",
+      title: "Give private app delivery a product-grade front door.",
       body: "Start a 14-day free trial — no card required — or talk to our team about an Enterprise rollout.",
       primary: "Talk to our team",
       secondary: { label: "Book a call", href: "/contact" },

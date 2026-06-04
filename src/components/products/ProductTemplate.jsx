@@ -187,6 +187,19 @@ export default function ProductTemplate({ product }) {
               <ProductMedia media={product.hero.media} accentBg={accentBg} />
             </Reveal>
           </div>
+
+          {product.heroSpecs && (
+            <Reveal className="mt-12 grid grid-cols-2 gap-3 border-t border-hairline pt-8 sm:gap-4 md:grid-cols-4">
+              {product.heroSpecs.map((s) => (
+                <div key={s.label} className="rounded-2xl border border-hairline bg-surface-muted px-4 py-4">
+                  <p className={cn("font-karla text-[11px] font-semibold uppercase tracking-[0.14em]", accentText)}>
+                    {s.label}
+                  </p>
+                  <p className="mt-1 font-karla text-base font-semibold text-strong">{s.value}</p>
+                </div>
+              ))}
+            </Reveal>
+          )}
         </Container>
       </section>
 
@@ -244,12 +257,41 @@ export default function ProductTemplate({ product }) {
         </Section>
       )}
 
+      {/* STATEMENT BAND (the single dark moment) */}
+      {product.statement && (
+        <section className="bg-ink py-16 md:py-24">
+          <Container>
+            <Reveal className="max-w-3xl">
+              {product.statement.eyebrow && (
+                <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-brand-soft">
+                  {product.statement.eyebrow}
+                </p>
+              )}
+              <h2 className="t-h1 mt-4 text-on-ink">{product.statement.title}</h2>
+              <p className="mt-5 font-karla text-lg leading-relaxed text-on-ink-muted">
+                {product.statement.body}
+              </p>
+            </Reveal>
+            {product.statement.points && (
+              <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                {product.statement.points.map((p, i) => (
+                  <Reveal as="div" key={p.title} delay={i * 0.06} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                    <h3 className="font-karla text-base font-semibold text-on-ink">{p.title}</h3>
+                    <p className="mt-2 font-karla text-sm leading-6 text-on-ink-muted">{p.body}</p>
+                  </Reveal>
+                ))}
+              </div>
+            )}
+          </Container>
+        </section>
+      )}
+
       {/* FEATURES */}
       {product.features && (
         <Section surface="base" spacing="lg">
           <Reveal className="max-w-3xl">
             <Eyebrow className={accentText}>Capabilities</Eyebrow>
-            <h2 className="t-h1 mt-3">What {product.name} gives your team.</h2>
+            <h2 className="t-h1 mt-3">{product.featuresTitle || `What ${product.name} gives your team.`}</h2>
           </Reveal>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {product.features.map((f, i) => {
@@ -301,7 +343,7 @@ export default function ProductTemplate({ product }) {
         <Section surface="muted" spacing="lg">
           <Reveal className="max-w-3xl">
             <Eyebrow className={accentText}>How it works</Eyebrow>
-            <h2 className="t-h1 mt-3">From setup to rollout in a few clear steps.</h2>
+            <h2 className="t-h1 mt-3">{product.howItWorksTitle || "From setup to rollout in a few clear steps."}</h2>
           </Reveal>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {product.howItWorks.map((s, i) => (
