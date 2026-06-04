@@ -37,7 +37,7 @@ export const products = {
     hero: {
       media: {
         type: "image",
-        src: "/images/products/appdeploy/dashboard.png",
+        src: "/images/products/appdeploy/phonepic.png",
         alt: "AppDeploy workspace dashboard showing apps, installs and access",
         chrome: "appdeploy.scotitech.com/admin — Workspace",
       },
@@ -142,8 +142,8 @@ export const products = {
         "ClarityPath needed a launch path to explain its purpose, boundaries, disclaimers, and access experience before installation.",
         "With AppDeploy it gets a branded product page, managed access, install guidance, and clearer user expectations.",
       ],
-      image: "/images/solution/appdeployf.png",
-      imageAlt: "AppDeploy mobile workspace login screen",
+      image: "/images/products/appdeploy/1.jpeg",
+      imageAlt: "App Store rejection notice for a specialised planning app",
       link: { label: "Explore ClarityPath", href: "/products/claritypath" },
     },
     faqs: [

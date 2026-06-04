@@ -92,7 +92,7 @@ export default function HeroSection() {
               </div>
               <div className="overflow-hidden rounded-[1.25rem] border border-hairline bg-surface-muted">
                 <Image
-                  src="/images/products/appdeploy/dashboard.png"
+                  src="/images/products/appdeploy/phonepic.png"
                   alt="AppDeploy workspace dashboard showing app releases, installs and access"
                   width={1200}
                   height={760}
