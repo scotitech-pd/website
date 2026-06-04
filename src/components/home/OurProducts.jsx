@@ -99,15 +99,13 @@ export default function OurProducts() {
                 <div className="mb-4 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
                     {product.logo && (
-                      <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-hairline bg-surface">
-                        <Image
-                          src={product.logo}
-                          alt={`${product.name} logo`}
-                          width={44}
-                          height={44}
-                          className="h-8 w-8 object-contain"
-                        />
-                      </span>
+                      <Image
+                        src={product.logo}
+                        alt={`${product.name} logo`}
+                        width={44}
+                        height={44}
+                        className="h-10 w-10 rounded-xl object-contain"
+                      />
                     )}
                     <h3 className="font-karla text-2xl font-semibold text-strong">
                       {product.name}
@@ -170,15 +168,13 @@ export default function OurProducts() {
           className="group mt-6 flex flex-col items-start gap-5 rounded-3xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-card sm:flex-row sm:items-center sm:justify-between md:p-8"
         >
           <div className="flex items-center gap-5">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-hairline bg-surface">
-              <Image
-                src="/images/brand/claritypath-logo.png"
-                alt="ClarityPath logo"
-                width={48}
-                height={48}
-                className="h-9 w-9 object-contain"
-              />
-            </span>
+            <Image
+              src="/images/brand/claritypath-logo.png"
+              alt="ClarityPath logo"
+              width={48}
+              height={48}
+              className="h-12 w-12 shrink-0 rounded-2xl object-contain"
+            />
             <div>
               <div className="flex items-center gap-3">
                 <h3 className="font-karla text-xl font-semibold text-strong">

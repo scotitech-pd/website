@@ -136,15 +136,13 @@ export default function ProductTemplate({ product }) {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <Reveal immediate>
               {product.logo && (
-                <div className="mb-6 flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-hairline bg-surface shadow-soft">
-                  <Image
-                    src={product.logo}
-                    alt={`${product.name} logo`}
-                    width={64}
-                    height={64}
-                    className="h-12 w-12 object-contain"
-                  />
-                </div>
+                <Image
+                  src={product.logo}
+                  alt={`${product.name} logo`}
+                  width={64}
+                  height={64}
+                  className="mb-6 h-14 w-14 rounded-2xl object-contain"
+                />
               )}
               <div className="flex items-center gap-3">
                 <Eyebrow className={accentText}>{product.eyebrow}</Eyebrow>
