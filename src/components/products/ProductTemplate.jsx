@@ -38,6 +38,12 @@ import {
   Coins,
   CalendarRange,
   TrendingUp,
+  HeartPulse,
+  Landmark,
+  Factory,
+  BriefcaseBusiness,
+  Store,
+  Truck,
 } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
@@ -53,9 +59,11 @@ const icons = {
   Mail, HardDrive, MessageSquare, CheckSquare, ServerCog, Route, Lock, Compass,
   Sparkles, Bot, FileSearch, FileText, Layers3, Video, Calendar,
   Plane, Briefcase, Home, Coins, CalendarRange, TrendingUp,
+  HeartPulse, Landmark, Factory, BriefcaseBusiness, Store, Truck,
+  Cloud, Server, ShieldCheck,
 };
 
-const deployIcons = [Cloud, Server, ServerCog];
+const deployIcons = [Cloud, Server, ServerCog, ShieldCheck];
 
 function ProductMedia({ media, accentBg }) {
   if (media?.type === "image") {
@@ -321,23 +329,90 @@ export default function ProductTemplate({ product }) {
         </Section>
       )}
 
-      {/* DEPLOYMENT OPTIONS */}
+      {/* AUDIENCES — who is this for */}
+      {product.audiences && (
+        <Section surface="muted" spacing="lg">
+          <Reveal className="max-w-3xl">
+            <Eyebrow className={accentText}>
+              {product.audiences.eyebrow || "Who it's for"}
+            </Eyebrow>
+            <h2 className="t-h1 mt-3">{product.audiences.title}</h2>
+            {product.audiences.body && (
+              <p className="t-lead mt-4">{product.audiences.body}</p>
+            )}
+          </Reveal>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {product.audiences.items.map((a, i) => {
+              const Icon = icons[a.icon] || Building2;
+              return (
+                <Reveal key={a.title} delay={(i % 3) * 0.05}>
+                  <article className="flex h-full flex-col rounded-2xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface-sunken">
+                      <Icon size={20} className={accentText} />
+                    </span>
+                    <h3 className="mt-5 font-karla text-lg font-semibold text-strong">
+                      {a.title}
+                    </h3>
+                    <p className="t-small mt-2 leading-6">{a.body}</p>
+                    {a.example && (
+                      <div className="mt-5 rounded-xl border border-hairline bg-surface-muted px-4 py-3">
+                        <p className="font-karla text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
+                          Example
+                        </p>
+                        <p className="font-karla mt-1 text-sm leading-6 text-body">
+                          {a.example}
+                        </p>
+                      </div>
+                    )}
+                  </article>
+                </Reveal>
+              );
+            })}
+          </div>
+        </Section>
+      )}
+
+      {/* DEPLOYMENT OPTIONS — ladder framing */}
       {product.deployment && (
         <Section surface="base" spacing="lg">
           <Reveal className="max-w-3xl">
-            <Eyebrow className={accentText}>Deployment</Eyebrow>
+            <Eyebrow className={accentText}>
+              {product.deployment.eyebrow || "Deployment"}
+            </Eyebrow>
             <h2 className="t-h1 mt-3">{product.deployment.title}</h2>
+            {product.deployment.body && (
+              <p className="t-lead mt-4">{product.deployment.body}</p>
+            )}
           </Reveal>
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div
+            className={cn(
+              "mt-12 grid gap-5",
+              product.deployment.options.length === 4
+                ? "sm:grid-cols-2 lg:grid-cols-4"
+                : "md:grid-cols-3"
+            )}
+          >
             {product.deployment.options.map((opt, i) => {
-              const Icon = deployIcons[i] || ServerCog;
+              const Icon = opt.icon ? icons[opt.icon] : deployIcons[i] || ServerCog;
               return (
                 <Reveal key={opt.name} delay={i * 0.06}>
-                  <div className="flex h-full flex-col rounded-2xl border border-hairline bg-surface-muted p-6 shadow-soft">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface">
-                      <Icon size={20} className={accentText} />
-                    </span>
-                    <h3 className="mt-5 font-karla text-lg font-semibold text-strong">{opt.name}</h3>
+                  <div className="relative flex h-full flex-col rounded-2xl border border-hairline bg-surface-muted p-6 shadow-soft">
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface">
+                        <Icon size={20} className={accentText} />
+                      </span>
+                      <span
+                        className={cn(
+                          "font-mono text-xs font-semibold tabular-nums",
+                          accentText
+                        )}
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <h3 className="mt-5 font-karla text-lg font-semibold text-strong">
+                      {opt.name}
+                    </h3>
                     <p className="t-small mt-2 leading-6">{opt.body}</p>
                   </div>
                 </Reveal>
@@ -458,6 +533,45 @@ export default function ProductTemplate({ product }) {
         </Section>
       )}
 
+      {/* QUALIFYING — sets expectations for enterprise eval */}
+      {product.qualifying && (
+        <Section surface="muted" spacing="lg">
+          <Reveal>
+            <div className="rounded-3xl border border-hairline bg-surface p-8 shadow-soft md:p-12">
+              <div className="grid gap-8 lg:grid-cols-[36%_64%] lg:gap-16">
+                <div>
+                  <Eyebrow className={accentText}>
+                    {product.qualifying.eyebrow || "Private evaluation"}
+                  </Eyebrow>
+                  <h2 className="t-h2 mt-3">{product.qualifying.title}</h2>
+                  {product.qualifying.body && (
+                    <p className="t-body mt-4">{product.qualifying.body}</p>
+                  )}
+                </div>
+                <div className="grid gap-x-6 gap-y-7 sm:grid-cols-2">
+                  {product.qualifying.columns.map((c, i) => (
+                    <Reveal as="div" key={c.label} delay={i * 0.05}>
+                      <p
+                        className={cn(
+                          "font-karla text-[10px] font-semibold uppercase tracking-[0.16em]",
+                          accentText
+                        )}
+                      >
+                        {c.label}
+                      </p>
+                      <h3 className="mt-2 font-karla text-base font-semibold text-strong">
+                        {c.title}
+                      </h3>
+                      <p className="t-small mt-2 leading-6">{c.body}</p>
+                    </Reveal>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </Section>
+      )}
+
       {/* PRICING */}
       {product.pricing?.plans && (
         <Section surface="muted" spacing="lg">
@@ -543,45 +657,130 @@ export default function ProductTemplate({ product }) {
         </Section>
       )}
 
-      {/* CTA */}
-      <section className="bg-surface py-16 md:py-24">
-        <Container>
-          <Reveal>
-            <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 text-center shadow-lift md:px-14 md:py-16">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(226,88,14,0.25),transparent_60%)]" />
-              <div className="relative z-10 mx-auto max-w-2xl">
-                <h2 className="t-h1 text-on-ink">{product.cta.title}</h2>
-                <p className="mt-4 font-karla text-lg text-on-ink-muted">{product.cta.body}</p>
-                <div className="mt-8 flex flex-wrap justify-center gap-3">
-                  {product.externalUrl ? (
-                    <>
-                      <Button asChild size="lg" variant="onInkSolid">
-                        <a href={product.externalUrl} target="_blank" rel="noopener noreferrer">
-                          {extLabel}
-                          <ArrowUpRight size={17} />
-                        </a>
-                      </Button>
-                      <Button size="lg" variant="onInk" onClick={() => setShowModal(true)}>
-                        {product.cta.primary}
-                      </Button>
-                    </>
-                  ) : (
-                    <>
-                      <Button size="lg" variant="onInkSolid" onClick={() => setShowModal(true)}>
-                        {product.cta.primary}
-                        <ArrowRight size={17} />
-                      </Button>
-                      <Button asChild size="lg" variant="onInk">
-                        <Link href={product.cta.secondary.href}>{product.cta.secondary.label}</Link>
-                      </Button>
-                    </>
-                  )}
+      {/* CTA / ROLLOUT PATHS */}
+      {product.rolloutPaths ? (
+        <section className="bg-surface py-16 md:py-24">
+          <Container>
+            <Reveal>
+              <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 shadow-lift md:px-14 md:py-16">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_50%_0%,rgba(226,88,14,0.28),transparent_62%)]" />
+                <div className="relative z-10">
+                  <div className="max-w-2xl">
+                    <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-brand-soft">
+                      {product.rolloutPaths.eyebrow || "Next step"}
+                    </p>
+                    <h2 className="t-h1 mt-3 text-on-ink">
+                      {product.rolloutPaths.title}
+                    </h2>
+                    {product.rolloutPaths.body && (
+                      <p className="mt-4 font-karla text-lg leading-relaxed text-on-ink-muted">
+                        {product.rolloutPaths.body}
+                      </p>
+                    )}
+                  </div>
+                  <div className="mt-10 grid gap-5 md:grid-cols-3">
+                    {product.rolloutPaths.paths.map((p, i) => (
+                      <Reveal as="div" key={p.label} delay={i * 0.06}>
+                        <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+                          <p className="font-karla text-[10px] font-semibold uppercase tracking-[0.14em] text-brand-soft">
+                            {p.label}
+                          </p>
+                          <h3 className="mt-2 font-karla text-lg font-semibold text-on-ink">
+                            {p.title}
+                          </h3>
+                          <p className="mt-2 font-karla text-sm leading-6 text-on-ink-muted">
+                            {p.body}
+                          </p>
+                          <div className="mt-auto pt-6">
+                            {p.action.type === "external" ? (
+                              <Button
+                                asChild
+                                size="default"
+                                variant={i === 0 ? "onInkSolid" : "onInk"}
+                                className="w-full"
+                              >
+                                <a
+                                  href={p.action.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {p.action.label}
+                                  <ArrowUpRight size={15} />
+                                </a>
+                              </Button>
+                            ) : p.action.type === "modal" ? (
+                              <Button
+                                size="default"
+                                variant={i === 0 ? "onInkSolid" : "onInk"}
+                                className="w-full"
+                                onClick={() => setShowModal(true)}
+                              >
+                                {p.action.label}
+                                <ArrowRight size={15} />
+                              </Button>
+                            ) : (
+                              <Button
+                                asChild
+                                size="default"
+                                variant={i === 0 ? "onInkSolid" : "onInk"}
+                                className="w-full"
+                              >
+                                <Link href={p.action.href}>
+                                  {p.action.label}
+                                  <ArrowRight size={15} />
+                                </Link>
+                              </Button>
+                            )}
+                          </div>
+                        </div>
+                      </Reveal>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
+            </Reveal>
+          </Container>
+        </section>
+      ) : (
+        <section className="bg-surface py-16 md:py-24">
+          <Container>
+            <Reveal>
+              <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 text-center shadow-lift md:px-14 md:py-16">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(226,88,14,0.25),transparent_60%)]" />
+                <div className="relative z-10 mx-auto max-w-2xl">
+                  <h2 className="t-h1 text-on-ink">{product.cta.title}</h2>
+                  <p className="mt-4 font-karla text-lg text-on-ink-muted">{product.cta.body}</p>
+                  <div className="mt-8 flex flex-wrap justify-center gap-3">
+                    {product.externalUrl ? (
+                      <>
+                        <Button asChild size="lg" variant="onInkSolid">
+                          <a href={product.externalUrl} target="_blank" rel="noopener noreferrer">
+                            {extLabel}
+                            <ArrowUpRight size={17} />
+                          </a>
+                        </Button>
+                        <Button size="lg" variant="onInk" onClick={() => setShowModal(true)}>
+                          {product.cta.primary}
+                        </Button>
+                      </>
+                    ) : (
+                      <>
+                        <Button size="lg" variant="onInkSolid" onClick={() => setShowModal(true)}>
+                          {product.cta.primary}
+                          <ArrowRight size={17} />
+                        </Button>
+                        <Button asChild size="lg" variant="onInk">
+                          <Link href={product.cta.secondary.href}>{product.cta.secondary.label}</Link>
+                        </Button>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </Container>
+        </section>
+      )}
     </>
   );
 }

@@ -202,15 +202,104 @@ export const products = {
       { icon: "HardDrive", title: "Drive & storage", body: "Files and shared storage, controlled end to end on your infrastructure." },
       { icon: "Video", title: "Chat & video", body: "Team messaging and calls without routing through a third-party tool." },
       { icon: "CheckSquare", title: "Tasks", body: "Plan and coordinate work alongside everything else in the suite." },
-      { icon: "Bot", title: "NexaAgent — AI built in", body: "An integrated AI agent that runs entirely on your own infrastructure." },
+      { icon: "Bot", title: "Governance-first AI (NexaAgent)", body: "Policy-aligned AI built into the workspace — shaped by your access rules, team policy, and data posture. Not bolted on." },
       { icon: "ServerCog", title: "100% on-premise", body: "Zero external calls and complete data sovereignty by design." },
     ],
+    audiences: {
+      eyebrow: "Who AXOS is for",
+      title: "Built for teams that can't afford to leak.",
+      body: "Regulated, sensitive, or simply serious about data ownership — these are the teams AXOS was made for. The clearer fit is usually one that already knows its current tools spread it thin.",
+      items: [
+        {
+          icon: "HeartPulse",
+          title: "Healthcare & care providers",
+          body: "Approved protocols, internal guidance, and shift handovers — searchable in seconds, without sending notes to a public model.",
+          example: "Summarise a discharge policy for a manager preparing the handover.",
+        },
+        {
+          icon: "Landmark",
+          title: "Financial services & accounting",
+          body: "Compliance knowledge, client files, and working memos in one controlled environment — no copy-paste into someone else's chatbot.",
+          example: "Pull an internal compliance check from approved policies without leaving the workspace.",
+        },
+        {
+          icon: "Factory",
+          title: "Manufacturing & logistics",
+          body: "Maintenance manuals, supplier documents, and shift summaries that operators can actually find when they need them.",
+          example: "Ask a maintenance log a question and get an answer with its source attached.",
+        },
+        {
+          icon: "BriefcaseBusiness",
+          title: "Legal & professional services",
+          body: "Privileged work stays privileged. Internal precedent and matter notes available to your team — not to the open internet.",
+          example: "Draft from a partner's matter notes without routing through a third-party drive.",
+        },
+        {
+          icon: "Store",
+          title: "Retail & multi-site operations",
+          body: "One playbook across every site. Store managers ask once; the answer comes from your real, approved guidance — never scattered shared drives.",
+          example: "Answer store-by-store policy questions from internal guidance, not multiple inboxes.",
+        },
+        {
+          icon: "Truck",
+          title: "Transport & field services",
+          body: "Operational know-how on the road. Field teams query approved procedures, safety records, and job notes from a controlled workspace.",
+          example: "Generate a field-service summary from job notes and approved safety records.",
+        },
+      ],
+    },
     deployment: {
-      title: "Evaluate AXOS first, then deploy the way your data policy requires.",
+      eyebrow: "Deployment model",
+      title: "Start lean. Mature toward deeper ownership.",
+      body: "Begin where evaluation is fastest. Move to private cloud, self-hosted, or fully on-premises as your data posture demands. Same product, different perimeter.",
       options: [
-        { name: "Limited testing platform", body: "After business review, we provide a working AXOS environment so decision-makers can test the product before adoption." },
-        { name: "Private cloud", body: "Run AXOS inside your own cloud tenancy when your policy requires tighter control." },
-        { name: "Self-hosted", body: "Deploy fully on-prem on your own servers for employee use — data never leaves." },
+        {
+          icon: "Cloud",
+          name: "Hosted evaluation",
+          body: "The fastest path to a working private evaluation. We run AXOS so your security review can start in days, not quarters.",
+        },
+        {
+          icon: "Server",
+          name: "Private cloud",
+          body: "Run AXOS inside your own cloud tenancy. Same product, your perimeter, your keys.",
+        },
+        {
+          icon: "ServerCog",
+          name: "Self-hosted",
+          body: "Deploy AXOS on infrastructure you operate. Zero external dependence, complete data residency.",
+        },
+        {
+          icon: "ShieldCheck",
+          name: "On-premises",
+          body: "Behind your firewall, on your hardware. For teams whose policy doesn't permit anything else.",
+        },
+      ],
+    },
+    qualifying: {
+      eyebrow: "Private evaluation",
+      title: "Days, not months. Scoped per team.",
+      body: "AXOS is in active deployment. Access is granted per team and moves at the pace of your security review — not the other way round.",
+      columns: [
+        {
+          label: "How to qualify",
+          title: "Book a 45-min strategy session",
+          body: "A short call where we learn your data posture and you see whether AXOS genuinely fits before either side commits.",
+        },
+        {
+          label: "What happens next",
+          title: "We map deployment fit and next steps",
+          body: "Within the same session we sketch the deployment model that fits your governance — and write the next two steps with you.",
+        },
+        {
+          label: "Pricing",
+          title: "Scoped to your deployment",
+          body: "Discussed openly in the same call, based on team size and deployment model. No SKU games, no surprise tiers.",
+        },
+        {
+          label: "Timeline",
+          title: "Evaluation to access in days",
+          body: "Most qualifying teams reach a private evaluation inside the first two weeks. Production follows the pace of your review.",
+        },
       ],
     },
     howItWorks: [
@@ -244,6 +333,31 @@ export const products = {
       body: "Share your business information and we'll provide the right AXOS evaluation route, including a limited testing platform for qualified enterprise teams.",
       primary: "Request AXOS evaluation",
       secondary: { label: "Book a call", href: "/contact" },
+    },
+    rolloutPaths: {
+      eyebrow: "AXOS rollout review",
+      title: "Move from product interest to a real deployment conversation.",
+      body: "Three entry points, depending on where you are right now — exploring, evaluating, or ready to talk specifics.",
+      paths: [
+        {
+          label: "See it live",
+          title: "Open the AXOS workspace",
+          body: "Visit axos.scotitech.com to see how the product presents to a real team — sign-in, modules, and AI surfaced in one place.",
+          action: { type: "external", href: "https://axos.scotitech.com", label: "Go to AXOS" },
+        },
+        {
+          label: "Send a brief",
+          title: "Complete a rollout brief",
+          body: "Share your governance, scale, and timeline. We respond with a deployment fit and the next two steps — no scheduling required.",
+          action: { type: "link", href: "/contact", label: "Brief our team" },
+        },
+        {
+          label: "Talk to the team",
+          title: "Book an AXOS session",
+          body: "A 45-minute call to map your data posture, deployment model, and a private evaluation if AXOS fits.",
+          action: { type: "modal", label: "Book AXOS session" },
+        },
+      ],
     },
   },
 
