@@ -16,7 +16,7 @@ const SpecificSolution = () => {
       id: 2,
       name: "AXOS",
       image: "/images/brand/axos-icon.png",
-      description: "Private workspace with AI built directly into daily tools",
+      description: "Enterprise-only employee workspace with AI built directly in",
       link: "/products/axos",
     },
     {

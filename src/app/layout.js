@@ -37,7 +37,7 @@ export const metadata = {
     template: "%s | ScotiTech Solutions",
   },
   description:
-    "ScotiTech Solutions builds focused, privacy-conscious products for internal app distribution and private team operations — AppDeploy, AXOS and ClarityPath.",
+    "ScotiTech Solutions builds focused, privacy-conscious products for internal app distribution and private enterprise operations — AppDeploy, AXOS and ClarityPath.",
   keywords: [
     "ScotiTech",
     "AppDeploy",
@@ -52,7 +52,7 @@ export const metadata = {
     siteName: "ScotiTech Solutions",
     title: "ScotiTech Solutions | Practical Digital Products for Modern Teams",
     description:
-      "Focused, privacy-conscious products for internal app distribution and private team operations.",
+      "Focused, privacy-conscious products for internal app distribution and private enterprise operations.",
     url: "https://scotitech.com",
     locale: "en_GB",
   },
@@ -60,7 +60,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "ScotiTech Solutions",
     description:
-      "Focused, privacy-conscious products for internal app distribution and private team operations.",
+      "Focused, privacy-conscious products for internal app distribution and private enterprise operations.",
   },
 };
 

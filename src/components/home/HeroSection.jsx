@@ -51,8 +51,8 @@ export default function HeroSection() {
 
             <motion.p {...rise(0.12)} className="t-lead mt-6 max-w-xl">
               ScotiTech builds focused, privacy-conscious products for internal
-              app distribution and private team operations — live today with
-              AppDeploy, and expanding with AXOS.
+              app distribution and private enterprise operations — live today
+              with AppDeploy and AXOS.
             </motion.p>
 
             <motion.div {...rise(0.18)} className="mt-8 flex flex-wrap gap-3">

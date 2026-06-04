@@ -12,7 +12,7 @@ export default function InsightsSection() {
   const others = insights.filter((i) => i.slug !== featuredInsight.slug).slice(0, 3);
 
   return (
-    <Section surface="base" spacing="lg">
+    <Section id="insights" surface="base" spacing="lg">
       <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
         <Reveal className="max-w-2xl">
           <Eyebrow>Insights</Eyebrow>

@@ -6,7 +6,7 @@ import { useModal } from "@/components/ModalContext";
 
 const highlights = [
   "AppDeploy for controlled internal app rollout.",
-  "AXOS for private day-to-day team workflows.",
+  "AXOS for enterprise employee workspaces.",
   "Clear buyer fit from evaluation to rollout.",
 ];
 
@@ -28,8 +28,8 @@ const HeroScotitech = () => {
 
             <p className="mt-6 text-slate-700 font-lora text-lg md:text-xl leading-8 max-w-3xl">
               ScotiTech focuses on two core directions: internal app rollout
-              and private workspace tooling. The goal is practical execution,
-              clearer buyer fit, and smoother onboarding.
+              and private enterprise workspace tooling. The goal is practical
+              execution, clearer buyer fit, and smoother onboarding.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-4">
@@ -95,7 +95,7 @@ const HeroScotitech = () => {
                 </div>
                 <p className="text-white/72 font-lora leading-7 text-[15px]">
                   AppDeploy handles internal app delivery while AXOS supports
-                  private day-to-day team workflows.
+                  private enterprise employee workspaces.
                 </p>
               </div>
 

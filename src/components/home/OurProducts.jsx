@@ -33,11 +33,11 @@ const flagships = [
     externalUrl: "https://axos.scotitech.com",
     logo: "/images/brand/axos-icon.png",
     accent: "bg-axos",
-    status: { variant: "early", label: "Enterprise" },
+    status: { variant: "early", label: "Enterprise only" },
     tagline: "Your entire workspace — self-hosted.",
     description:
-      "An enterprise productivity suite — mail, drive, chat, video, tasks — with the NexaAgent AI agent built in, running 100% on your own infrastructure.",
-    capabilities: ["Mail · drive · chat · tasks", "NexaAgent AI built in", "100% on-premise"],
+      "A completed enterprise workspace for employees — mail, drive, chat, video, tasks — with NexaAgent AI built in and a limited testing platform for qualified organisations.",
+    capabilities: ["Enterprise evaluation", "NexaAgent AI built in", "100% on-premise"],
     media: {
       type: "image",
       src: "/images/products/axos/workspace.png",
@@ -55,9 +55,9 @@ export default function OurProducts() {
           Two flagship products, one operating principle: real control.
         </h2>
         <p className="t-lead mt-5">
-          AppDeploy handles private app distribution. AXOS is a self-hosted
-          workspace suite with AI built in. Both keep control — and your data —
-          where they belong.
+          AppDeploy handles private app distribution. AXOS is an
+          enterprise-only, self-hosted workspace suite with AI built in. Both
+          keep control — and your data — where they belong.
         </p>
       </Reveal>
 

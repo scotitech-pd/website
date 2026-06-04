@@ -10,7 +10,7 @@ export default function FaqSection() {
     {
       question: "How do I know whether AppDeploy or AXOS is the better fit?",
       answer:
-        "Choose AppDeploy when internal app rollout and release control are the immediate priority. Choose AXOS when your team needs a private workspace for mail, storage, coordination, and AI-assisted work.",
+        "Choose AppDeploy when internal app rollout and release control are the immediate priority. Choose AXOS when an enterprise team needs a private employee workspace for mail, storage, coordination, and AI-assisted work.",
     },
     {
       question: "Is AppDeploy intended to replace a full mobility platform?",
@@ -20,7 +20,7 @@ export default function FaqSection() {
     {
       question: "Can AXOS support organisations that want more control over hosting?",
       answer:
-        "Yes. AXOS supports hosted, private cloud, and self-hosted models so organisations can choose the right level of infrastructure and data control.",
+        "Yes. AXOS is enterprise-only and supports private-cloud or self-hosted deployment. Qualified organisations first share business information and can receive a limited testing platform before deciding on employee adoption.",
     },
     {
       question: "Where does ClarityPath fit in the portfolio?",

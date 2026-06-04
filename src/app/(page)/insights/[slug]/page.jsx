@@ -63,6 +63,13 @@ export default async function InsightArticlePage({ params }) {
   }
 
   const articleUrl = `${SITE_URL}/insights/${insight.slug}`;
+  const relatedProduct = insight.relatedProduct || {
+    name: "AppDeploy",
+    href: "/products/appdeploy",
+    description:
+      "A branded operational layer for controlled internal iOS app distribution and rollout workflows.",
+    cta: "Explore AppDeploy",
+  };
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -231,7 +238,7 @@ export default async function InsightArticlePage({ params }) {
                   Original source
                 </p>
                 <h2 className="text-xl font-karla font-semibold text-slate-900 mb-4">
-                  Apple announcement
+                  {insight.sourceName}
                 </h2>
                 <a
                   href={insight.sourceUrl}
@@ -249,17 +256,16 @@ export default async function InsightArticlePage({ params }) {
                   Related product
                 </p>
                 <h2 className="text-xl font-karla font-semibold text-slate-900 mb-3">
-                  AppDeploy
+                  {relatedProduct.name}
                 </h2>
                 <p className="text-slate-600 font-lora leading-7 mb-5">
-                  A branded operational layer for controlled internal iOS app
-                  distribution and rollout workflows.
+                  {relatedProduct.description}
                 </p>
                 <Link
-                  href="/products/appdeploy"
+                  href={relatedProduct.href}
                   className="inline-flex items-center gap-2 text-sm font-karla font-semibold text-slate-900"
                 >
-                  Explore AppDeploy
+                  {relatedProduct.cta}
                   <ArrowRight className="size-4" />
                 </Link>
               </div>

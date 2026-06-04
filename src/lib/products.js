@@ -166,11 +166,13 @@ export const products = {
     accent: "axos",
     logo: "/images/brand/axos-icon.png",
     externalUrl: "https://axos.scotitech.com",
-    status: { variant: "early", label: "Enterprise" },
-    eyebrow: "Private AI workspace",
+    externalLabel: "Request AXOS access",
+    externalNote: "Enterprise access starts at",
+    status: { variant: "early", label: "Enterprise only" },
+    eyebrow: "Enterprise AI workspace",
     tagline: "Your entire workspace — self-hosted.",
     description:
-      "An enterprise-grade productivity suite with an AI agent built in: mail, drive, calendar, chat, video, and tasks, running 100% on your own infrastructure with zero external calls and complete data sovereignty.",
+      "A completed enterprise-only workspace with AI built in: mail, drive, calendar, chat, video, and tasks. Organisations share their business profile first, then receive a limited testing platform before adopting AXOS for employees.",
     hero: {
       media: {
         type: "image",
@@ -204,17 +206,17 @@ export const products = {
       { icon: "ServerCog", title: "100% on-premise", body: "Zero external calls and complete data sovereignty by design." },
     ],
     deployment: {
-      title: "Deploy AXOS the way your data policy requires.",
+      title: "Evaluate AXOS first, then deploy the way your data policy requires.",
       options: [
-        { name: "Hosted", body: "We run a dedicated AXOS instance for you — the fastest way to start." },
-        { name: "Private cloud", body: "Run AXOS inside your own cloud tenancy for tighter control." },
-        { name: "Self-hosted", body: "Deploy fully on-prem on your own servers — data never leaves." },
+        { name: "Limited testing platform", body: "After business review, we provide a working AXOS environment so decision-makers can test the product before adoption." },
+        { name: "Private cloud", body: "Run AXOS inside your own cloud tenancy when your policy requires tighter control." },
+        { name: "Self-hosted", body: "Deploy fully on-prem on your own servers for employee use — data never leaves." },
       ],
     },
     howItWorks: [
-      { title: "Deploy on your infrastructure", body: "Stand up AXOS self-hosted, in your private cloud, or hosted by us." },
-      { title: "Connect your team", body: "Onboard with SSO (SAML) on web and biometric login on mobile." },
-      { title: "Work with AI built in", body: "Use mail, drive, chat, video, and tasks — with NexaAgent alongside." },
+      { title: "Share your business profile", body: "Tell us your industry, team size, workflows, data requirements, and infrastructure preferences." },
+      { title: "Test AXOS for a limited time", body: "We provide a working testing platform so your decision-makers can evaluate the real product." },
+      { title: "Adopt for employees", body: "If AXOS fits, we scope the employee rollout across self-hosted or private-cloud deployment." },
     ],
     proof: {
       quote:
@@ -235,11 +237,12 @@ export const products = {
       { q: "Is AXOS really self-hosted?", a: "Yes. AXOS runs 100% on your own infrastructure (or private cloud), with zero external calls and complete data sovereignty." },
       { q: "What's included in the suite?", a: "Mail, drive, calendar, chat, video, and tasks — plus NexaAgent, an AI agent built directly into the workspace." },
       { q: "How do people sign in?", a: "SSO (SAML) on the web, with biometric login available on mobile." },
+      { q: "Can we test AXOS before adopting it?", a: "Yes. AXOS is enterprise-only, so we first review your business information and intended use case. Suitable organisations receive a limited testing platform to evaluate AXOS before deciding on employee adoption." },
     ],
     cta: {
       title: "Run your entire workspace on your own terms.",
-      body: "Book an AXOS session and we'll map a self-hosted, private-cloud, or hosted deployment to fit your data and compliance needs.",
-      primary: "Talk to our team",
+      body: "Share your business information and we'll provide the right AXOS evaluation route, including a limited testing platform for qualified enterprise teams.",
+      primary: "Request AXOS evaluation",
       secondary: { label: "Book a call", href: "/contact" },
     },
   },

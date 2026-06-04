@@ -8,21 +8,21 @@ const rows = [
     appdeploy:
       "Internal app distribution built around Apple Business workflows.",
     axos:
-      "Private operational workspace for teams that want more control over day-to-day systems and internal tooling.",
+      "Enterprise employee workspace for organisations that need private AI, controlled operations, and stronger data ownership.",
   },
   {
     label: "Best for",
     appdeploy:
       "IT and admin teams managing internal app rollout, release cadence, and controlled access.",
     axos:
-      "Cross-functional teams running internal operations, coordination, and execution inside a private workspace.",
+      "Enterprise teams evaluating a private workspace before adopting it across employees.",
   },
   {
     label: "Core outcome",
     appdeploy:
       "Faster, clearer internal app delivery with better release and install visibility.",
     axos:
-      "Stronger collaboration, accountability, and operational clarity across internal teams.",
+      "Stronger collaboration, accountability, and operational clarity inside a controlled employee workspace.",
   },
   {
     label: "Governance and control",
@@ -36,7 +36,7 @@ const rows = [
     appdeploy:
       "Quick impact when internal app distribution is the immediate priority.",
     axos:
-      "Compounding value as teams standardise daily coordination and internal workflows.",
+      "Compounding value after business review, limited testing, and controlled employee rollout.",
   },
 ];
 
@@ -54,8 +54,8 @@ export default function AppDeployComparison() {
           </h2>
           <p className="text-base md:text-xl text-slate-700 font-lora leading-8">
             Both platforms improve internal operations. AppDeploy focuses on
-            secure internal app distribution, while AXOS focuses on private
-            operational workspace workflows.
+            secure internal app distribution, while AXOS focuses on
+            enterprise-only employee workspace adoption.
           </p>
         </div>
 
@@ -134,7 +134,8 @@ export default function AppDeployComparison() {
           <p className="text-slate-700 font-lora leading-8">
             Many organisations use AppDeploy and AXOS together: AppDeploy
             handles secure app delivery, while AXOS manages the operational
-            workflows around rollout, adoption, and internal execution.
+            workspace for employee adoption, coordination, and internal
+            execution.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <Link
@@ -147,7 +148,7 @@ export default function AppDeployComparison() {
               href="/products/axos"
               className="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold font-karla text-slate-900 hover:border-slate-400 transition-colors"
             >
-              Need a secure operational workspace? → Explore AXOS
+              Need an enterprise workspace? → Review AXOS
             </Link>
           </div>
         </div>

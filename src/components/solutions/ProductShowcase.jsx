@@ -22,8 +22,8 @@ const coreProducts = [
     id: 2,
     name: "AXOS",
     description:
-      "A private workspace for organisations that want stronger control, less SaaS sprawl, and better day-to-day tooling.",
-    buttonText: "Explore AXOS",
+      "A completed enterprise-only workspace for employee operations, private AI, and controlled adoption after a limited testing period.",
+    buttonText: "Review AXOS",
     link: "/products/axos",
     details: "/products/axos",
     accent: "from-emerald-500/15 to-cyan-500/10",

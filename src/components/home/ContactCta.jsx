@@ -25,8 +25,9 @@ export default function ContactCta() {
                   Let's talk about how your team ships and operates.
                 </h2>
                 <p className="mt-5 max-w-xl font-karla text-lg leading-relaxed text-on-ink-muted">
-                  Whether you're evaluating AppDeploy, exploring AXOS early
-                  access, or partnering with us — start a conversation.
+                  Whether you're evaluating AppDeploy, requesting an AXOS
+                  enterprise testing platform, or partnering with us — start a
+                  conversation.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">

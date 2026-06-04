@@ -10,9 +10,9 @@ export default function CtaSection() {
       note: "Cloud and Enterprise onboarding",
     },
     {
-      title: "Explore AXOS",
+      title: "Review AXOS",
       link: "/products/axos",
-      note: "Private operational workspace overview",
+      note: "Enterprise workspace evaluation",
     },
     {
       title: "Explore ClarityPath",
@@ -35,8 +35,8 @@ export default function CtaSection() {
               Choose the product path that fits your use case
             </h2>
             <p className="text-white/75 text-lg font-lora leading-8">
-              Pick the next step directly: AppDeploy access, an AXOS review,
-              or ClarityPath entry.
+              Pick the next step directly: AppDeploy access, an AXOS
+              enterprise review, or ClarityPath entry.
             </p>
           </div>
 

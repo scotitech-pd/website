@@ -15,7 +15,7 @@ const metrics = [
   { value: 2, suffix: "", label: "Flagship products in market" },
   { value: 2026, label: "Scotland StartUp Awards shortlist", raw: true },
   { value: 3, suffix: "+", label: "Client & partner relationships" },
-  { value: 2, label: "Delivery regions — UK & India", raw: true, display: "UK·IN" },
+  { value: 2, label: "Worldwide delivery and customers", raw: true, display: "Global" },
 ];
 
 const clients = [
@@ -23,6 +23,8 @@ const clients = [
   { name: "Growthcart", image: "/images/aboutus/growthcart-logo.png", href: null },
   { name: "No94oo", image: "/images/aboutus/no94oo-logo.png", href: null },
 ];
+
+const logoMarquee = [...clients, ...clients, ...clients, ...clients];
 
 const testimonials = [
   {
@@ -38,6 +40,40 @@ const testimonials = [
     role: "Founder, Bizztor",
   },
 ];
+
+function LogoMark({ client }) {
+  const logo = (
+    <span className="flex h-16 w-[190px] shrink-0 items-center justify-center rounded-2xl border border-hairline bg-surface-muted px-6 shadow-soft">
+      <Image
+        src={client.image}
+        alt={client.name}
+        width={150}
+        height={52}
+        className="h-9 w-auto max-w-[145px] object-contain opacity-70 grayscale transition duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
+      />
+    </span>
+  );
+
+  if (client.href) {
+    return (
+      <a
+        href={client.href}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={client.name}
+        className="group/logo block"
+      >
+        {logo}
+      </a>
+    );
+  }
+
+  return (
+    <span className="group/logo block" aria-label={client.name}>
+      {logo}
+    </span>
+  );
+}
 
 export default function Credibility() {
   return (
@@ -127,29 +163,19 @@ export default function Credibility() {
 
           {/* Client logos */}
           <Reveal delay={0.1}>
-            <div className="rounded-3xl border border-hairline bg-surface p-6 shadow-soft">
-              <p className="t-small mb-4 font-karla font-semibold uppercase tracking-[0.14em] text-muted">
+            <div className="rounded-3xl border border-hairline bg-surface py-6 shadow-soft">
+              <p className="t-small mb-4 px-6 font-karla font-semibold uppercase tracking-[0.14em] text-muted">
                 Trusted by early clients & partners
               </p>
-              <div className="flex flex-wrap items-center gap-8">
-                {clients.map((c) => {
-                  const logo = (
-                    <Image
-                      src={c.image}
-                      alt={c.name}
-                      width={140}
-                      height={48}
-                      className="h-9 w-auto object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+              <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+                <div className="animate-logo-marquee flex w-max gap-4 pl-6 group-hover:[animation-play-state:paused]">
+                  {logoMarquee.map((client, index) => (
+                    <LogoMark
+                      key={`${client.name}-${index}`}
+                      client={client}
                     />
-                  );
-                  return c.href ? (
-                    <a key={c.name} href={c.href} target="_blank" rel="noreferrer" aria-label={c.name}>
-                      {logo}
-                    </a>
-                  ) : (
-                    <span key={c.name}>{logo}</span>
-                  );
-                })}
+                  ))}
+                </div>
               </div>
             </div>
           </Reveal>

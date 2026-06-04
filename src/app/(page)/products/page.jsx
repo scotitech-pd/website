@@ -11,7 +11,7 @@ import { products } from "@/lib/products";
 export const metadata = {
   title: "Products | ScotiTech Solutions",
   description:
-    "Explore ScotiTech products: AppDeploy for internal app distribution, AXOS for a private team workspace, and ClarityPath for decision-support.",
+    "Explore ScotiTech products: AppDeploy for internal app distribution, AXOS for enterprise employee workspaces, and ClarityPath for decision-support.",
 };
 
 const order = ["appdeploy", "axos", "claritypath"];
@@ -31,7 +31,7 @@ export default function ProductsPage() {
             </h1>
             <p className="t-lead mt-5 max-w-2xl">
               Two flagship products lead the portfolio — AppDeploy for internal
-              app distribution and AXOS for private team operations — supported
+              app distribution and AXOS for private enterprise operations — supported
               by ClarityPath for sensitive decision journeys.
             </p>
           </Reveal>

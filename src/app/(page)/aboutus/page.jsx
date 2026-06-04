@@ -11,13 +11,13 @@ import ClientLogoStrip from "@/components/aboutus/ClientLogoStrip";
 export const metadata = {
   title: "About | ScotiTech Solutions",
   description:
-    "ScotiTech Solutions is a UK-registered product company building focused, privacy-conscious software — AppDeploy, AXOS and ClarityPath — across the UK and India.",
+    "ScotiTech Solutions is a UK-registered technology and product company building privacy-conscious software, infrastructure, AI, and digital delivery for teams worldwide.",
 };
 
 const facts = [
   { icon: Building2, value: "UK-registered", label: "Operated from Scotland" },
-  { icon: Layers, value: "2 flagship products", label: "AppDeploy & AXOS, plus ClarityPath" },
-  { icon: Globe2, value: "UK + India", label: "Cross-region delivery" },
+  { icon: Layers, value: "Broad technology focus", label: "Products, platforms, AI, and delivery" },
+  { icon: Globe2, value: "Worldwide", label: "Global reach, clients, and partnerships" },
   { icon: Trophy, value: "2026 shortlist", label: "Scotland StartUp Awards" },
 ];
 
@@ -31,13 +31,13 @@ export default function AboutPage() {
           <Reveal immediate className="max-w-3xl">
             <Eyebrow>About ScotiTech</Eyebrow>
             <h1 className="t-display mt-3">
-              A UK product company building software teams can actually control.
+              A UK-registered technology company building for teams worldwide.
             </h1>
             <p className="t-lead mt-5 max-w-2xl">
               ScotiTech Solutions Limited is a product-led company founded in
-              Scotland. We build focused, privacy-conscious software — not general
-              services — with clearer deployment, rollout, and operational control
-              at the centre of every product.
+              Scotland. We build privacy-conscious products, platforms, AI
+              capabilities, and delivery solutions with clearer deployment,
+              rollout, and operational control at the centre.
             </p>
           </Reveal>
         </Container>
@@ -83,9 +83,10 @@ export default function AboutPage() {
               in. ClarityPath supports structured, sensitive decision journeys.
             </p>
             <p className="t-body">
-              We work across the UK and India, combining UK-led product direction
-              with distributed engineering and infrastructure — building close to
-              the real operational problems our clients face.
+              We're UK-registered and led from Scotland, with a distributed team
+              and customers worldwide — combining product direction, engineering,
+              infrastructure, AI, and digital delivery around the real operational
+              problems our clients face.
             </p>
             <div className="pt-2">
               <Button asChild variant="outline">

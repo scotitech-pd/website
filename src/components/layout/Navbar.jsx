@@ -13,13 +13,14 @@ import { cn } from "@/lib/utils";
  * Hybrid scroll-first nav:
  *  - "anchor" items smooth-scroll to a homepage section when on "/",
  *    and resolve to "/#section" from any other page.
- *  - "route" items (Insights, About) are real pages for depth + SEO.
+ *  - "route" items (About) are real pages for depth + SEO. The /insights
+ *    route still exists for SEO but the nav scrolls to the homepage section.
  */
 const navLinks = [
   { id: 1, title: "Products", type: "anchor", target: "products" },
   { id: 2, title: "How We Work", type: "anchor", target: "approach" },
   { id: 3, title: "Credibility", type: "anchor", target: "proof" },
-  { id: 4, title: "Insights", type: "route", link: "/insights" },
+  { id: 4, title: "Insights", type: "anchor", target: "insights" },
   { id: 5, title: "About", type: "route", link: "/aboutus" },
   { id: 6, title: "Contact", type: "anchor", target: "contact" },
 ];

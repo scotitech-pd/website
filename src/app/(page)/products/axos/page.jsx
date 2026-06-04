@@ -2,9 +2,9 @@ import ProductTemplate from "@/components/products/ProductTemplate";
 import { getProduct } from "@/lib/products";
 
 export const metadata = {
-  title: "AXOS — Private Team Workspace with AI | ScotiTech Solutions",
+  title: "AXOS — Enterprise AI Workspace | ScotiTech Solutions",
   description:
-    "AXOS is a private, self-hostable workspace bringing mail, drive, chat, tasks, notes and AI into one controlled environment. Now in early access.",
+    "AXOS is a completed enterprise-only, self-hostable workspace with AI. Organisations share business requirements and receive a limited testing platform before adoption.",
 };
 
 export default function AxosPage() {

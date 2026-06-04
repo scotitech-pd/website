@@ -54,8 +54,8 @@ export default function LeadershipTeam() {
             The team behind product direction and delivery
           </h2>
           <p className="font-lora text-lg leading-8 text-slate-700">
-            ScotiTech combines product strategy, engineering, infrastructure,
-            and client-focused execution across the UK and India.
+            ScotiTech combines worldwide product strategy, engineering,
+            infrastructure, AI, and client-focused digital delivery.
           </p>
         </div>
 

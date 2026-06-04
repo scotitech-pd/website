@@ -10,7 +10,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 const faqs = [
   {
     q: "What does ScotiTech actually build?",
-    a: "Focused software products — not general services. AppDeploy handles internal iOS app distribution; AXOS is a private, self-hostable team workspace with AI; ClarityPath supports structured, sensitive user journeys.",
+    a: "Practical technology products and delivery solutions. AppDeploy handles internal iOS app distribution; AXOS is an enterprise-only, self-hostable employee workspace with AI; ClarityPath supports structured, sensitive user journeys; and our broader work spans privacy-conscious software, AI, infrastructure, and digital operations.",
   },
   {
     q: "Is AppDeploy ready to use today?",
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "When can we use AXOS?",
-    a: "AXOS is in early access. You can join the waitlist or talk to us about a private preview and a deployment that fits your data and control requirements.",
+    a: "AXOS is a completed enterprise product. Because it is built for employee workspaces and business data, organisations share their business profile, team size, workflows, and infrastructure needs first; then we provide a limited testing platform so decision-makers can evaluate AXOS before adopting it for their employees.",
   },
   {
     q: "How do you handle data and privacy?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Who is ScotiTech?",
-    a: "A UK-registered product company operating from Scotland, with product, engineering, and infrastructure delivery across the UK and India. Shortlisted for the Scotland StartUp Awards 2026.",
+    a: "A UK-registered technology and product company operating from Scotland, with worldwide product strategy, engineering, infrastructure, AI, and digital delivery. Shortlisted for the Scotland StartUp Awards 2026.",
   },
 ];
 
