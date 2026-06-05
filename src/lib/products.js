@@ -37,9 +37,9 @@ export const products = {
     hero: {
       media: {
         type: "image",
-        src: "/images/products/appdeploy/phonepic.png",
-        alt: "AppDeploy workspace dashboard showing apps, installs and access",
-        chrome: "appdeploy.scotitech.com/admin — Workspace",
+        src: "/images/products/appdeploy/dashboard.png",
+        alt: "AppDeploy workspace dashboard screen showing apps, installs and access",
+        presentation: "bare",
       },
     },
     metrics: [

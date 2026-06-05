@@ -23,8 +23,8 @@ const flagships = [
     capabilities: ["Branded portal", "Apple Business", "iOS & Android"],
     media: {
       type: "image",
-      src: "/images/products/appdeploy/phonepic.png",
-      alt: "AppDeploy workspace dashboard",
+      src: "/images/products/appdeploy/dashboard.png",
+      alt: "AppDeploy workspace dashboard screen",
     },
   },
   {
@@ -75,7 +75,12 @@ export default function OurProducts() {
                     alt={product.media.alt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                    className={cn(
+                      "object-top transition-transform duration-500 group-hover:scale-[1.03]",
+                      product.media.fit === "contain"
+                        ? "p-4 object-contain"
+                        : "object-cover"
+                    )}
                   />
                 ) : (
                   <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-[radial-gradient(circle_at_50%_30%,rgba(251,146,60,0.12),transparent_60%)]">
