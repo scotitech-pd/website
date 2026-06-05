@@ -42,6 +42,11 @@ const productPaths = [
   },
 ];
 
+const regusMapUrl =
+  "https://www.google.com/maps/search/?api=1&query=Regus%20Lanarkshire%20Eurocentral%20Maxim%201%202%20Parklands%20Way%20Motherwell%20ML1%204WR";
+const regusMapEmbedUrl =
+  "https://maps.google.com/maps?q=Regus%20Lanarkshire%20Eurocentral%2C%20Maxim%201%2C%202%20Parklands%20Way%2C%20Eurocentral%2C%20Motherwell%20ML1%204WR&t=&z=16&ie=UTF8&iwloc=&output=embed";
+
 const contactRoutes = [
   {
     icon: Mail,
@@ -52,8 +57,9 @@ const contactRoutes = [
   {
     icon: MapPin,
     label: "Registered office",
-    value: "Maxim Business Park, Motherwell ML1 4WR, United Kingdom",
-    href: "https://maps.app.goo.gl/9fkHLWDX2CqnugMaA",
+    value:
+      "Regus - Lanarkshire Eurocentral, Maxim 1, 2 Parklands Way, Eurocentral, Motherwell ML1 4WR, United Kingdom",
+    href: regusMapUrl,
   },
   {
     icon: Clock,
@@ -418,7 +424,7 @@ export default function ContactExperience() {
                 </p>
               </div>
               <a
-                href="https://maps.app.goo.gl/9fkHLWDX2CqnugMaA"
+                href={regusMapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 font-karla text-sm font-semibold text-orange-200 hover:text-white"
@@ -428,8 +434,8 @@ export default function ContactExperience() {
               </a>
             </div>
             <iframe
-              title="ScotiTech Solutions office map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18288769.910807166!2d12.5088275!3d47.73855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x427253cbf716dbf5%3A0xc978dbe2283363f5!2sScotiTech%20Solutions%20Limited!5e1!3m2!1sen!2sin!4v1762855227518!5m2!1sen!2sin"
+              title="Regus Lanarkshire Eurocentral location map"
+              src={regusMapEmbedUrl}
               className="h-[360px] w-full lg:h-full"
               style={{ border: 0 }}
               allowFullScreen=""
