@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowRight, CalendarClock, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, CalendarClock, Mail, MessageSquare } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -50,33 +51,41 @@ export default function ContactCta() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm md:p-8">
-                <ul className="space-y-5">
-                  <li className="flex gap-3">
-                    <Mail size={18} className="mt-0.5 shrink-0 text-on-ink-muted" />
-                    <div>
-                      <p className="font-karla text-sm font-semibold text-on-ink">Email</p>
-                      <a
-                        href="mailto:info@scotitech.com"
-                        className="text-sm text-on-ink-muted hover:text-on-ink"
-                      >
-                        info@scotitech.com
-                      </a>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <MapPin size={18} className="mt-0.5 shrink-0 text-on-ink-muted" />
-                    <div>
-                      <p className="font-karla text-sm font-semibold text-on-ink">
-                        Registered office
-                      </p>
-                      <p className="text-sm leading-6 text-on-ink-muted">
-                        ScotiTech Solutions Limited, 11 Caldervale Drive,
-                        Motherwell ML1 2GB, United Kingdom
-                      </p>
-                    </div>
-                  </li>
-                </ul>
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm md:p-8">
+                <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full bg-brand/20 blur-2xl" />
+                <div className="relative">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-on-ink">
+                    <MessageSquare size={22} />
+                  </span>
+                  <h3 className="mt-5 font-karla text-2xl font-semibold text-on-ink">
+                    Need the right next step?
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-on-ink-muted">
+                    Tell us what you are exploring and we will route your
+                    request to the right product, evaluation, or partnership
+                    conversation.
+                  </p>
+
+                  <div className="mt-6 rounded-2xl border border-white/10 bg-black/15 p-4">
+                    <p className="font-karla text-xs font-semibold uppercase tracking-[0.14em] text-on-ink-muted">
+                      Direct email
+                    </p>
+                    <a
+                      href="mailto:info@scotitech.com"
+                      className="mt-2 inline-flex items-center gap-2 font-karla text-sm font-semibold text-on-ink hover:text-brand"
+                    >
+                      <Mail size={16} />
+                      info@scotitech.com
+                    </a>
+                  </div>
+
+                  <Button asChild size="lg" variant="onInkSolid" className="mt-6">
+                    <Link href="/contact">
+                      Contact us
+                      <ArrowRight size={17} />
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
