@@ -151,7 +151,7 @@ const  PrivacyPolicy  = () => {
           <p className="leading-7 font-karla text-main-dark">📍 ScotiTech Solutions Limited</p>
 
           <p className="leading-7">
-            Eurocentral, 2 Parklands Way Maxim 1, Maxim Business Park, 1st, Motherwell ML1 4WR, UK
+            11 Caldervale Drive, Motherwell ML1 2GB, UK
           </p>
 
           <div className="text-center font-karla block text-red-600 leading-7">

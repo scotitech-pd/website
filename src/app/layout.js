@@ -76,9 +76,9 @@ const organizationSchema = {
   email: "info@scotitech.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Maxim Business Park, 2 Parklands Way",
+    streetAddress: "11 Caldervale Drive",
     addressLocality: "Motherwell",
-    postalCode: "ML1 4WR",
+    postalCode: "ML1 2GB",
     addressCountry: "GB",
   },
   sameAs: [

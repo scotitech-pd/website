@@ -78,29 +78,40 @@ export default function HeroSection() {
           </div>
 
           {/* Product preview */}
-          <motion.div {...rise(0.12)} className="relative">
-            <div className="pointer-events-none absolute -inset-6 bg-[radial-gradient(circle_at_60%_30%,rgba(226,88,14,0.14),transparent_60%)] blur-2xl" />
+          <motion.div {...rise(0.12)} className="relative [perspective:1200px]">
+            <div className="pointer-events-none absolute -inset-10 bg-[radial-gradient(circle_at_62%_38%,rgba(226,88,14,0.18),transparent_58%)] blur-3xl" />
+            <div className="pointer-events-none absolute inset-x-12 bottom-3 h-16 rounded-full bg-ink/15 blur-2xl" />
 
-            <div className="relative rounded-[1.75rem] border border-hairline bg-surface p-3 shadow-lift">
-              <div className="flex items-center gap-1.5 px-3 py-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
-                <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
-                <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
-                <span className="ml-3 rounded-md bg-surface-sunken px-3 py-1 font-mono text-[11px] text-muted">
-                  app.appdeploy — Workspace
-                </span>
-              </div>
-              <div className="overflow-hidden rounded-[1.25rem] border border-hairline bg-surface-muted">
-                <Image
-                  src="/images/products/appdeploy/phonepic.png"
-                  alt="AppDeploy workspace dashboard showing app releases, installs and access"
-                  width={1200}
-                  height={760}
-                  priority
-                  className="h-auto w-full"
-                />
-              </div>
-            </div>
+            <motion.div
+              animate={
+                reduce
+                  ? undefined
+                  : {
+                      y: [0, -8, 0],
+                      rotateZ: [-2.4, -1.2, -2.4],
+                      rotateX: [1.5, 0, 1.5],
+                    }
+              }
+              transition={
+                reduce
+                  ? undefined
+                  : {
+                      duration: 8,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    }
+              }
+              className="relative mx-auto max-w-[680px] origin-center -rotate-2 drop-shadow-[0_32px_55px_rgba(15,23,42,0.20)] [transform-style:preserve-3d]"
+            >
+              <Image
+                src="/images/products/appdeploy/phonepic.png"
+                alt="AppDeploy workspace dashboard shown inside a tilted laptop preview"
+                width={1200}
+                height={688}
+                priority
+                className="h-auto w-full"
+              />
+            </motion.div>
 
             {/* floating proof cards */}
             <motion.div

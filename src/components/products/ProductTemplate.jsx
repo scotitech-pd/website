@@ -67,6 +67,24 @@ const deployIcons = [Cloud, Server, ServerCog, ShieldCheck];
 
 function ProductMedia({ media, accentBg }) {
   if (media?.type === "image") {
+    if (media.presentation === "bare") {
+      return (
+        <div className="relative">
+          <span className={cn("pointer-events-none absolute -inset-8 rounded-[2rem] opacity-10 blur-3xl", accentBg)} />
+          <div className="relative overflow-hidden rounded-[1.5rem] bg-surface shadow-lift">
+            <Image
+              src={media.src}
+              alt={media.alt}
+              width={1600}
+              height={1500}
+              priority
+              className="h-auto w-full"
+            />
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="relative rounded-[1.5rem] border border-hairline bg-surface p-3 shadow-lift">
         <div className="flex items-center gap-1.5 px-2 py-1.5">
