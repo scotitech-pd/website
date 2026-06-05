@@ -63,7 +63,7 @@ export default function InsideProducts() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_10%,rgba(15,118,110,0.08),transparent_26%),radial-gradient(circle_at_82%_16%,rgba(37,99,235,0.08),transparent_24%)]" />
 
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
-        <Reveal className="mb-10 grid gap-6 lg:grid-cols-[48%_52%] lg:items-end" variant="soft">
+        <Reveal className="mb-10 grid grid-cols-1 gap-6 lg:grid-cols-[48%_52%] lg:items-end" variant="soft">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#8C7A5E]">
               Inside the Products
@@ -79,7 +79,7 @@ export default function InsideProducts() {
           </p>
         </Reveal>
 
-        <div className="grid gap-6 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
           {productProof.map((product, index) => {
             const tone = toneStyles[product.tone];
 

@@ -90,24 +90,30 @@ export default function Credibility() {
       {/* Metrics band — the single dark moment */}
       <Reveal delay={0.05}>
         <div className="mt-10 overflow-hidden rounded-3xl bg-ink shadow-lift">
-          <div className="grid grid-cols-2 divide-y divide-white/10 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
+          {/* gap-px + outer bg creates clean hairline dividers at every breakpoint */}
+          <div className="grid grid-cols-1 gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
             {metrics.map((m) => (
-              <div key={m.label} className="px-6 py-8 text-center sm:py-10">
-                <p className="font-karla text-4xl font-semibold tracking-tight text-on-ink md:text-5xl">
+              <div
+                key={m.label}
+                className="bg-ink px-5 py-7 text-center sm:px-6 sm:py-10"
+              >
+                <p className="font-karla text-3xl font-semibold tracking-tight text-on-ink sm:text-4xl md:text-5xl">
                   {m.raw ? (
                     m.display || m.value
                   ) : (
                     <Counter value={m.value} suffix={m.suffix || ""} />
                   )}
                 </p>
-                <p className="mt-2 font-karla text-sm text-on-ink-muted">{m.label}</p>
+                <p className="mt-2 font-karla text-[13px] leading-snug text-on-ink-muted sm:text-sm">
+                  {m.label}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </Reveal>
 
-      <div className="mt-6 grid gap-6 lg:grid-cols-[40%_60%]">
+      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[40%_60%]">
         {/* Award */}
         <Reveal>
           <div className="flex h-full flex-col rounded-3xl border border-hairline bg-surface-muted p-6 shadow-soft md:p-8">
@@ -133,7 +139,7 @@ export default function Credibility() {
 
         {/* Testimonials + logos */}
         <div className="flex flex-col gap-6">
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             {testimonials.map((t, i) => (
               <Reveal key={t.name} delay={i * 0.08}>
                 <figure className="flex h-full flex-col rounded-3xl border border-hairline bg-surface p-6 shadow-soft md:p-7">

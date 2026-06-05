@@ -181,7 +181,7 @@ export default function AxosDeploymentDiscovery() {
   return (
     <section id="axos-deployment-discovery" className="bg-[#F7F7F5] py-16">
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
-        <div className="grid gap-8 xl:grid-cols-[34%_66%]">
+        <div className="grid grid-cols-1 gap-8 xl:grid-cols-[34%_66%]">
           <aside className="space-y-5">
             <div className="rounded-[1.5rem] border border-[#111827]/10 bg-[#100E0C] p-7 text-white shadow-[0_28px_80px_rgba(16,14,12,0.18)] sm:p-8 xl:sticky xl:top-28">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#5EEAD4]">
@@ -235,7 +235,7 @@ export default function AxosDeploymentDiscovery() {
                 title="Organisation"
                 description="Basic details for the right commercial and technical follow-up."
               >
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Field label="Full name" required>
                     <input
                       className={textInputClass}
@@ -298,7 +298,7 @@ export default function AxosDeploymentDiscovery() {
                 title="Deployment context"
                 description="The operating environment AXOS needs to fit into."
               >
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <SelectField
                     label="Team size"
                     name="teamSize"
@@ -356,7 +356,7 @@ export default function AxosDeploymentDiscovery() {
                 title="AI workflow"
                 description="The first controlled AI use case AXOS should support."
               >
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Field label="Primary AI use case" required>
                     <textarea
                       className={textareaClass}

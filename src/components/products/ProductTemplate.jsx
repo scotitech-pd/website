@@ -159,7 +159,7 @@ export default function ProductTemplate({ product }) {
       <section className="relative overflow-hidden bg-surface pt-28 pb-16 md:pt-32 md:pb-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_50%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
         <Container className="relative z-10">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <Reveal immediate>
               {product.logo && (
                 <Image
@@ -257,7 +257,7 @@ export default function ProductTemplate({ product }) {
       {/* PROBLEM / SOLUTION */}
       {product.problem && product.solution && (
         <Section surface="muted" spacing="lg">
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             <Reveal>
               <div className="h-full rounded-3xl border border-hairline bg-surface p-7 shadow-soft md:p-9">
                 <p className="font-karla text-xs font-semibold uppercase tracking-[0.14em] text-muted">The problem</p>
@@ -308,7 +308,7 @@ export default function ProductTemplate({ product }) {
               </p>
             </Reveal>
             {product.statement.points && (
-              <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
                 {product.statement.points.map((p, i) => (
                   <Reveal as="div" key={p.title} delay={i * 0.06} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
                     <h3 className="font-karla text-base font-semibold text-on-ink">{p.title}</h3>
@@ -328,7 +328,7 @@ export default function ProductTemplate({ product }) {
             <Eyebrow className={accentText}>Capabilities</Eyebrow>
             <h2 className="t-h1 mt-3">{product.featuresTitle || `What ${product.name} gives your team.`}</h2>
           </Reveal>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {product.features.map((f, i) => {
               const Icon = icons[f.icon] || Sparkles;
               return (
@@ -359,7 +359,7 @@ export default function ProductTemplate({ product }) {
               <p className="t-lead mt-4">{product.audiences.body}</p>
             )}
           </Reveal>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {product.audiences.items.map((a, i) => {
               const Icon = icons[a.icon] || Building2;
               return (
@@ -447,7 +447,7 @@ export default function ProductTemplate({ product }) {
             <Eyebrow className={accentText}>How it works</Eyebrow>
             <h2 className="t-h1 mt-3">{product.howItWorksTitle || "From setup to rollout in a few clear steps."}</h2>
           </Reveal>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {product.howItWorks.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.06}>
                 <div className="relative h-full rounded-2xl border border-hairline bg-surface p-6 shadow-soft">
@@ -466,7 +466,7 @@ export default function ProductTemplate({ product }) {
       {/* PROOF + SECURITY */}
       {(product.proof || product.security) && (
         <Section surface="base" spacing="lg">
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             {product.proof && (
               <Reveal>
                 <figure className="flex h-full flex-col rounded-3xl bg-ink p-8 shadow-lift md:p-10">
@@ -511,7 +511,7 @@ export default function ProductTemplate({ product }) {
         <Section surface="muted" spacing="lg">
           <Reveal>
             <div className="overflow-hidden rounded-[2rem] border border-hairline bg-brand-soft/50 shadow-soft">
-              <div className="grid lg:grid-cols-2">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="p-8 md:p-12">
                   <Eyebrow className={accentText}>{product.caseStudy.eyebrow}</Eyebrow>
                   <h2 className="t-h2 mt-3">{product.caseStudy.title}</h2>
@@ -556,7 +556,7 @@ export default function ProductTemplate({ product }) {
         <Section surface="muted" spacing="lg">
           <Reveal>
             <div className="rounded-3xl border border-hairline bg-surface p-8 shadow-soft md:p-12">
-              <div className="grid gap-8 lg:grid-cols-[36%_64%] lg:gap-16">
+              <div className="grid grid-cols-1 gap-8 lg:grid-cols-[36%_64%] lg:gap-16">
                 <div>
                   <Eyebrow className={accentText}>
                     {product.qualifying.eyebrow || "Private evaluation"}
@@ -566,7 +566,7 @@ export default function ProductTemplate({ product }) {
                     <p className="t-body mt-4">{product.qualifying.body}</p>
                   )}
                 </div>
-                <div className="grid gap-x-6 gap-y-7 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-x-6 gap-y-7 sm:grid-cols-2">
                   {product.qualifying.columns.map((c, i) => (
                     <Reveal as="div" key={c.label} delay={i * 0.05}>
                       <p
@@ -600,7 +600,7 @@ export default function ProductTemplate({ product }) {
               <p className="t-lead mt-4">{product.pricing.trial}</p>
             )}
           </Reveal>
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
             {product.pricing.plans.map((plan, i) => {
               const featured = i === 0;
               return (
@@ -656,7 +656,7 @@ export default function ProductTemplate({ product }) {
       {/* FAQ */}
       {product.faqs && (
         <Section surface="base" spacing="lg">
-          <div className="grid gap-10 lg:grid-cols-[36%_64%] lg:gap-16">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[36%_64%] lg:gap-16">
             <Reveal>
               <Eyebrow className={accentText}>FAQ</Eyebrow>
               <h2 className="t-h1 mt-3">Good to know.</h2>
@@ -696,7 +696,7 @@ export default function ProductTemplate({ product }) {
                       </p>
                     )}
                   </div>
-                  <div className="mt-10 grid gap-5 md:grid-cols-3">
+                  <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
                     {product.rolloutPaths.paths.map((p, i) => (
                       <Reveal as="div" key={p.label} delay={i * 0.06}>
                         <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-6">

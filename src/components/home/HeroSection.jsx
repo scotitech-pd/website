@@ -30,7 +30,7 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute inset-0 opacity-[0.4] [mask-image:radial-gradient(70%_60%_at_50%_0%,black,transparent)] bg-[linear-gradient(to_right,rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:48px_48px]" />
 
       <Container className="relative z-10">
-        <div className="grid items-center gap-12 xl:grid-cols-[48%_52%]">
+        <div className="grid grid-cols-1 items-center gap-12 xl:grid-cols-[48%_52%]">
           {/* Copy */}
           <div className="max-w-2xl">
             <motion.div {...rise(0)}>
