@@ -50,10 +50,10 @@ export default function LeadershipStrip() {
         </Reveal>
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
+      <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
         {team.map((m, i) => (
           <Reveal key={m.name} delay={i * 0.06}>
-            <div className="group grid h-full overflow-hidden rounded-2xl border border-hairline bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card sm:grid-cols-[42%_58%]">
+            <div className="group grid grid-cols-1 h-full overflow-hidden rounded-2xl border border-hairline bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card sm:grid-cols-[42%_58%]">
               <div className="relative min-h-[300px] overflow-hidden bg-surface-sunken sm:min-h-[360px]">
                 <Image
                   src={m.img}

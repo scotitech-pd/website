@@ -70,7 +70,7 @@ export default function FaqSection() {
 
   return (
     <Section surface="muted" spacing="lg">
-      <div className="grid gap-10 lg:grid-cols-[36%_64%] lg:gap-16">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[36%_64%] lg:gap-16">
         <Reveal>
           <Eyebrow>FAQ</Eyebrow>
           <h2 className="t-h1 mt-3">Questions, answered plainly.</h2>
