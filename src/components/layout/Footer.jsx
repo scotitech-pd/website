@@ -119,8 +119,8 @@ export default function Footer() {
               <li className="flex gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
                 <span>
-                  Eurocentral, 2 Parklands Way, Maxim 1, Maxim Business Park,
-                  Motherwell ML1 4WR, UK
+                  Operations: Regus - Lanarkshire Eurocentral, Maxim 1,
+                  2 Parklands Way, Eurocentral, Motherwell ML1 4WR, UK
                 </span>
               </li>
             </ul>

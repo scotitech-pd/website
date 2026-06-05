@@ -42,9 +42,9 @@ const productPaths = [
   },
 ];
 
-const regusMapUrl =
+const operationalMapUrl =
   "https://www.google.com/maps/search/?api=1&query=Regus%20Lanarkshire%20Eurocentral%20Maxim%201%202%20Parklands%20Way%20Motherwell%20ML1%204WR";
-const regusMapEmbedUrl =
+const operationalMapEmbedUrl =
   "https://maps.google.com/maps?q=Regus%20Lanarkshire%20Eurocentral%2C%20Maxim%201%2C%202%20Parklands%20Way%2C%20Eurocentral%2C%20Motherwell%20ML1%204WR&t=&z=16&ie=UTF8&iwloc=&output=embed";
 
 const contactRoutes = [
@@ -57,9 +57,15 @@ const contactRoutes = [
   {
     icon: MapPin,
     label: "Registered office",
+    value: "11 Caldervale Drive, Motherwell ML1 2GB, United Kingdom",
+    href: "https://www.google.com/maps/search/?api=1&query=11%20Caldervale%20Drive%20Motherwell%20ML1%202GB%20UK",
+  },
+  {
+    icon: Building2,
+    label: "Operational office",
     value:
       "Regus - Lanarkshire Eurocentral, Maxim 1, 2 Parklands Way, Eurocentral, Motherwell ML1 4WR, United Kingdom",
-    href: regusMapUrl,
+    href: operationalMapUrl,
   },
   {
     icon: Clock,
@@ -420,11 +426,13 @@ export default function ContactExperience() {
                   ScotiTech Solutions Limited
                 </h2>
                 <p className="mt-3 font-lora text-sm leading-7 text-white/65">
-                  UK-registered technology and product company, working with clients and partners worldwide.
+                  UK-registered technology and product company. Our operational
+                  office is at Regus Lanarkshire Eurocentral, working with
+                  clients and partners worldwide.
                 </p>
               </div>
               <a
-                href={regusMapUrl}
+                href={operationalMapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 font-karla text-sm font-semibold text-orange-200 hover:text-white"
@@ -434,8 +442,8 @@ export default function ContactExperience() {
               </a>
             </div>
             <iframe
-              title="Regus Lanarkshire Eurocentral location map"
-              src={regusMapEmbedUrl}
+              title="ScotiTech operational office map"
+              src={operationalMapEmbedUrl}
               className="h-[360px] w-full lg:h-full"
               style={{ border: 0 }}
               allowFullScreen=""

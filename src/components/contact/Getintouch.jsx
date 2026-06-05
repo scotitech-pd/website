@@ -9,7 +9,7 @@ const contactDetails = [
   {
     icon: "location",
     title:
-      "Eurocentral Scotland, 2 Parklands Way Maxim 1, Maxim Business Park, 1st, Motherwell ML1 4WR, UK",
+      "Regus - Lanarkshire Eurocentral, Maxim 1, 2 Parklands Way, Eurocentral, Motherwell ML1 4WR, UK",
     type: "location",
     style: "text-left",
   },

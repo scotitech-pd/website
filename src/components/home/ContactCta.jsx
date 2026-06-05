@@ -71,8 +71,8 @@ export default function ContactCta() {
                         Registered office
                       </p>
                       <p className="text-sm leading-6 text-on-ink-muted">
-                        ScotiTech Solutions Limited, Maxim Business Park,
-                        Motherwell ML1 4WR, United Kingdom
+                        ScotiTech Solutions Limited, 11 Caldervale Drive,
+                        Motherwell ML1 2GB, United Kingdom
                       </p>
                     </div>
                   </li>

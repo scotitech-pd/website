@@ -205,7 +205,7 @@ const TermsAndConditions = () => {
             ScotiTech Solutions Limited
           </p>
           <p>
-            Eurocentral, 2 Parklands Way Maxim 1, Maxim Business Park, 1st, Motherwell ML1 4WR, UK
+            11 Caldervale Drive, Motherwell ML1 2GB, UK
           </p>
           <div className="text-center font-karla text-wrap block text-red-600">
             <a href="mailto:privacy@scotitech.com">
