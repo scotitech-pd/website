@@ -10,6 +10,7 @@ import { CookieConsentProvider } from "@/components/cookie/CookieConsentContext"
 import CookieBanner from "@/components/cookie/CookieBanner";
 import CookiePreferencesModal from "@/components/cookie/CookiePreferencesModal";
 import JsonLd from "@/components/seo/JsonLd";
+import GoogleAnalytics from "@/components/seo/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -189,6 +190,7 @@ export default function RootLayout({ children }) {
 
             <CookieBanner />
             <CookiePreferencesModal />
+            <GoogleAnalytics />
           </CookieConsentProvider>
         </ModalProvider>
       </body>
