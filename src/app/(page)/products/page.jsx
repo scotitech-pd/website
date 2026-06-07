@@ -9,9 +9,18 @@ import Badge from "@/components/ui/Badge";
 import { products } from "@/lib/products";
 
 export const metadata = {
-  title: "Products | ScotiTech Solutions",
+  title: "Products",
   description:
-    "Explore ScotiTech products: AppDeploy for internal app distribution, AXOS for enterprise employee workspaces, and ClarityPath for decision-support.",
+    "Explore ScotiTech products: AppDeploy for private iOS app distribution, AXOS for enterprise AI workspaces, and ClarityPath for guided decision support.",
+  alternates: { canonical: "/products" },
+  openGraph: {
+    title: "Products — AppDeploy, AXOS, ClarityPath",
+    description:
+      "Private app distribution, governance-first AI workspaces, and guided decision support.",
+    url: "/products",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const order = ["appdeploy", "axos", "claritypath"];

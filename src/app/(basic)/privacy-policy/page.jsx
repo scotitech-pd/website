@@ -1,7 +1,10 @@
 
 import React from "react";
 export const metadata = {
-  title: "Privacy Policy | ScotiTech Solutions Limited",
+  title: "Privacy Policy",
+  description: "How ScotiTech Solutions Limited handles personal data, in line with UK GDPR.",
+  alternates: { canonical: "/privacy-policy" },
+  robots: { index: true, follow: true },
 }
 const  PrivacyPolicy  = () => {
   return (

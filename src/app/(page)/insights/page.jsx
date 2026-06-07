@@ -10,9 +10,18 @@ import {
 import { featuredInsight, insights } from "@/lib/insights";
 
 export const metadata = {
-  title: "Insights | ScotiTech Solutions",
+  title: "Insights",
   description:
-    "Practical ScotiTech briefings on relevant technology changes, digital operations, Apple Business, app deployment, AI, and privacy-conscious software.",
+    "Practical ScotiTech briefings on Apple Business, internal app deployment, governance-first AI, and privacy-conscious software.",
+  alternates: { canonical: "/insights" },
+  openGraph: {
+    title: "ScotiTech Insights",
+    description:
+      "Practical briefings on Apple Business, internal app rollout, and governance-first AI.",
+    url: "/insights",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const principles = [

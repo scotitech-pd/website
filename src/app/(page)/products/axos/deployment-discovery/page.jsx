@@ -11,9 +11,18 @@ import AxosDeploymentDiscovery from "@/components/products/axos/AxosDeploymentDi
 import { meetingLinks } from "@/lib/scheduling";
 
 export const metadata = {
-  title: "AXOS Rollout Review | ScotiTech Solutions",
+  title: "AXOS Rollout Review",
   description:
     "Request an AXOS rollout review for secure workspace deployment, controlled AI use cases, identity planning, data sources, and on-premises readiness.",
+  alternates: { canonical: "/products/axos/deployment-discovery" },
+  openGraph: {
+    title: "AXOS Rollout Review",
+    description:
+      "Request an AXOS rollout review for deployment, identity, data, and on-premises readiness.",
+    url: "/products/axos/deployment-discovery",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const outcomeCards = [

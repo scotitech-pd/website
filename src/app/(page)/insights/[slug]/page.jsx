@@ -10,6 +10,8 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { getInsightBySlug, insights } from "@/lib/insights";
+import JsonLd from "@/components/seo/JsonLd";
+import { articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://scotitech.com";
 
@@ -32,11 +34,12 @@ export async function generateMetadata({ params }) {
   const url = `${SITE_URL}/insights/${insight.slug}`;
 
   return {
-    title: `${insight.title} | ScotiTech Insights`,
+    title: insight.title,
     description: insight.seoDescription,
     alternates: {
       canonical: url,
     },
+    keywords: insight.tags,
     openGraph: {
       title: insight.title,
       description: insight.seoDescription,
@@ -44,12 +47,22 @@ export async function generateMetadata({ params }) {
       type: "article",
       publishedTime: insight.date,
       modifiedTime: insight.updated,
+      authors: ["ScotiTech Solutions"],
+      tags: insight.tags,
       images: [
         {
           url: `${SITE_URL}${insight.image}`,
+          width: 1200,
+          height: 630,
           alt: insight.title,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: insight.title,
+      description: insight.seoDescription,
+      images: [`${SITE_URL}${insight.image}`],
     },
   };
 }
@@ -70,34 +83,21 @@ export default async function InsightArticlePage({ params }) {
       "A branded operational layer for controlled internal iOS app distribution and rollout workflows.",
     cta: "Explore AppDeploy",
   };
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: insight.title,
-    description: insight.seoDescription,
-    datePublished: insight.date,
-    dateModified: insight.updated,
-    mainEntityOfPage: articleUrl,
-    author: {
-      "@type": "Organization",
-      name: "ScotiTech Solutions",
-      url: SITE_URL,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ScotiTech Solutions",
-      url: SITE_URL,
-    },
-  };
+  const structuredData = [
+    articleJsonLd(
+      { ...insight, seoDescription: insight.seoDescription },
+      `/insights/${insight.slug}`
+    ),
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Insights", path: "/insights" },
+      { name: insight.title, path: `/insights/${insight.slug}` },
+    ]),
+  ];
 
   return (
     <main className="bg-[#f7f7f5] text-[#0F172A]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
+      <JsonLd data={structuredData} />
 
       <section className="relative overflow-hidden py-12 sm:py-16">
         <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(226,88,14,0.08),transparent_34%),linear-gradient(315deg,rgba(15,118,110,0.07),transparent_30%)]" />
