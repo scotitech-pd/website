@@ -53,6 +53,12 @@ import Badge from "@/components/ui/Badge";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/ModalContext";
 import { cn } from "@/lib/utils";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  productJsonLd,
+  faqJsonLd,
+  breadcrumbJsonLd,
+} from "@/lib/seo";
 
 const icons = {
   Palette, MousePointerClick, GitBranch, Users, BarChart3, Building2,
@@ -153,8 +159,20 @@ export default function ProductTemplate({ product }) {
   const extHost = product.externalUrl ? new URL(product.externalUrl).hostname : null;
   const extLabel = product.externalLabel || `Visit ${product.name}`;
 
+  const productPath = `/products/${product.slug}`;
+  const structuredData = [
+    productJsonLd(product, productPath),
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Products", path: "/products" },
+      { name: product.name, path: productPath },
+    ]),
+    product.faqs?.length ? faqJsonLd(product.faqs) : null,
+  ];
+
   return (
     <>
+      <JsonLd data={structuredData} />
       {/* HERO */}
       <section className="relative overflow-hidden bg-surface pt-28 pb-16 md:pt-32 md:pb-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_50%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />

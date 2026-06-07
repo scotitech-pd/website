@@ -9,9 +9,18 @@ import LeadershipTeam from "@/components/aboutus/Leadershipteam";
 import ClientLogoStrip from "@/components/aboutus/ClientLogoStrip";
 
 export const metadata = {
-  title: "About | ScotiTech Solutions",
+  title: "About ScotiTech",
   description:
-    "ScotiTech Solutions is a UK-registered technology and product company building privacy-conscious software, infrastructure, AI, and digital delivery for teams worldwide.",
+    "ScotiTech Solutions is a UK-registered product company building privacy-conscious software, infrastructure, and AI for teams worldwide.",
+  alternates: { canonical: "/aboutus" },
+  openGraph: {
+    title: "About ScotiTech Solutions",
+    description:
+      "A UK-registered product company building privacy-conscious software for teams worldwide.",
+    url: "/aboutus",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const facts = [

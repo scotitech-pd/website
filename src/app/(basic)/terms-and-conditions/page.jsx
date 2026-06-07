@@ -2,7 +2,10 @@
 import React from "react";
 
 export const metadata = {
-  title: "Terms & Conditions | ScotiTech Solutions Limited",
+  title: "Terms & Conditions",
+  description: "Terms governing use of scotitech.com and ScotiTech products.",
+  alternates: { canonical: "/terms-and-conditions" },
+  robots: { index: true, follow: true },
 };
 
 const TermsAndConditions = () => {

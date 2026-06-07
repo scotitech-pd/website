@@ -1,5 +1,9 @@
 export const metadata = {
-  title: "Cookie Policy | ScotiTech Solutions Limited",
+  title: "Cookie Policy",
+  description:
+    "How ScotiTech uses cookies and similar technologies on scotitech.com — UK GDPR / PECR aligned.",
+  alternates: { canonical: "/cookie-policy" },
+  robots: { index: true, follow: true },
 };
 
 export default function CookiePolicyPage() {
