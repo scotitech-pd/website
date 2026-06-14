@@ -43,6 +43,10 @@ const principles = [
 ];
 
 export default function InsightsPage() {
+  const moreInsights = insights.filter(
+    (insight) => insight.slug !== featuredInsight.slug
+  );
+
   return (
     <main className="bg-[#f7f7f5] text-[#0F172A]">
       <section className="relative overflow-hidden py-14 sm:py-20">
@@ -173,10 +177,10 @@ export default function InsightsPage() {
 
           <div className="mt-12">
             <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-5">
-              All briefings
+              More briefings
             </p>
             <div className="grid grid-cols-1 gap-4">
-              {insights.map((insight) => (
+              {moreInsights.map((insight) => (
                 <Link
                   key={insight.slug}
                   href={`/insights/${insight.slug}`}
