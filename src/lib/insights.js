@@ -1,5 +1,95 @@
 export const insights = [
   {
+    slug: "wwdc26-app-store-updates-mean-for-appdeploy-rollout",
+    category: "WWDC 2026 Briefing",
+    topic: "AppDeploy",
+    title:
+      "Apple Business Admin APIs make AppDeploy's product bet bigger",
+    summary:
+      "Apple's App Store updates matter, but the bigger AppDeploy signal is Apple Business: built-in MDM, employee groups, app distribution, Blueprints, and Admin API access to device, user, audit, and MDM service data. That moves the opportunity from a branded rollout portal toward live fleet visibility, group-based app workflows, MDM-aware deployment intelligence, and centralised version status.",
+    seoDescription:
+      "A ScotiTech briefing on Apple Business Admin APIs, WWDC26 App Store updates, live fleet visibility, group-based app distribution, MDM-aware deployment intelligence, and AppDeploy.",
+    date: "2026-06-13",
+    updated: "2026-06-13",
+    displayDate: "13 June 2026",
+    readTime: "7 min read",
+    sourceName: "Apple Newsroom",
+    sourceUrl:
+      "https://www.apple.com/newsroom/2026/03/introducing-apple-business-a-new-all-in-one-platform-for-businesses-of-all-sizes/",
+    image: "/images/insights/apple-business-team-devices.jpg",
+    tags: ["Apple Business", "Admin API", "MDM", "AppDeploy", "WWDC26"],
+    relatedProduct: {
+      name: "AppDeploy",
+      href: "/products/appdeploy",
+      description:
+        "A branded workspace for private app access, install guidance, rollout ownership, and clearer Apple Business-aligned delivery.",
+      cta: "Explore AppDeploy",
+    },
+    highlights: [
+      {
+        label: "Admin API",
+        value: "Fleet visibility",
+        description:
+          "Apple Business includes API access to device, user, audit, and MDM service data, creating a stronger foundation for live deployment context.",
+      },
+      {
+        label: "Distribution",
+        value: "Groups + apps",
+        description:
+          "Employee groups and app distribution can turn rollout planning from manual audience lists into targeted workflows by team, role, location, or pilot cohort.",
+      },
+      {
+        label: "MDM context",
+        value: "Routing intelligence",
+        description:
+          "MDM service data lets AppDeploy complement existing Jamf, Intune, Kandji, Mosyle, or Apple Business setups instead of trying to replace them.",
+      },
+    ],
+    sections: [
+      {
+        heading: "The bigger signal: Apple Business Admin API",
+        paragraphs: [
+          "The first read of WWDC26 can easily focus on App Store Connect, creative assets, product page previews, volume purchasing, and age-safety metadata. Those changes still matter, but they are not the biggest AppDeploy story.",
+          "The larger shift is Apple Business. Apple is bringing device management, employee groups, app distribution, Blueprints, and an Admin API into one business platform. Apple describes the Admin API as access to device, user, audit, and MDM service data. For AppDeploy, that is the difference between showing an install route and understanding the rollout state behind it.",
+        ],
+      },
+      {
+        heading: "Live fleet visibility changes the product",
+        paragraphs: [
+          "For private app rollout, the operational question is no longer only who can access the app. It is which enrolled Apple devices exist, which model and OS version they run, which MDM service owns them, which app version they should receive, and where deployment is blocked.",
+          "That is where AppDeploy can become more than a branded front door. With Apple Business-backed inventory and MDM context, the platform can move toward live fleet visibility across enrolled Apple devices, centralised deployment status, and clearer version management for business app owners.",
+        ],
+      },
+      {
+        heading: "Group-based distribution becomes the workflow",
+        paragraphs: [
+          "Apple Business lets organisations create employee groups by function or team and assign apps and roles around those groups. WWDC26 also keeps pushing subscription and app access toward group and volume purchasing routes through Apple Business and Apple School Manager.",
+          "That matters because enterprise distribution is rarely a single public audience. A pilot team may need one build, a field team another, and a leadership group a controlled preview. AppDeploy should treat groups, app eligibility, app versions, and rollout waves as first-class workflow objects.",
+        ],
+      },
+      {
+        heading: "MDM-aware intelligence, not MDM replacement",
+        paragraphs: [
+          "The strongest positioning is not that AppDeploy replaces MDM. Enterprises already use Apple Business, Jamf, Microsoft Intune, Kandji, Mosyle, or mixed environments. The product opportunity is to read the deployment context and make it understandable for the people responsible for app rollout.",
+          "That means AppDeploy can become the practical intelligence layer: which devices are assigned, which MDM route applies, which app version is current, which installs are pending, where exceptions exist, and what needs attention before a rollout is considered complete.",
+        ],
+      },
+      {
+        heading: "The ScotiTech view",
+        paragraphs: [
+          "This makes AppDeploy's product bet bigger and more serious. The platform should still help users understand access, install guidance, release notes, and support. But the deeper enterprise value is centralised visibility into application deployment status and version management.",
+          "Blueprint-based zero-touch deployment, audit-ready rollout exports, group-based targeting, and MDM-aware deployment intelligence should sit close to the roadmap. The message is simple: AppDeploy should complement Apple's platform rails and give enterprises one clear operating layer for private app delivery.",
+        ],
+      },
+    ],
+    actionItems: [
+      "Model Apple Business device, user, group, app, audit, and MDM service data as core AppDeploy entities.",
+      "Prioritise live fleet visibility across enrolled Apple devices, including device assignment, app version, and deployment status.",
+      "Design group-based app distribution workflows for teams, roles, locations, pilot cohorts, and enterprise rollout waves.",
+      "Keep the MDM-agnostic promise clear: AppDeploy should coordinate and explain deployment across existing enterprise environments, not replace the customer's MDM.",
+    ],
+  },
+  {
     slug: "private-apple-app-rollout-needs-more-than-approval",
     category: "Platform Briefing",
     topic: "Private app distribution",
