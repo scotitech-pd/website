@@ -43,6 +43,10 @@ const principles = [
 ];
 
 export default function InsightsPage() {
+  const moreInsights = insights.filter(
+    (insight) => insight.slug !== featuredInsight.slug
+  );
+
   return (
     <main className="bg-[#f7f7f5] text-[#0F172A]">
       <section className="relative overflow-hidden py-14 sm:py-20">
@@ -173,26 +177,44 @@ export default function InsightsPage() {
 
           <div className="mt-12">
             <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-5">
-              All briefings
+              More briefings
             </p>
             <div className="grid grid-cols-1 gap-4">
-              {insights.map((insight) => (
+              {moreInsights.map((insight) => (
                 <Link
                   key={insight.slug}
                   href={`/insights/${insight.slug}`}
-                  className="group rounded-[1.5rem] border border-slate-200 bg-white px-5 py-5 shadow-[0_14px_35px_rgba(15,23,42,0.05)] transition hover:border-slate-300"
+                  className="group rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-[0_14px_35px_rgba(15,23,42,0.05)] transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-[0_18px_45px_rgba(15,23,42,0.08)] sm:p-6"
                 >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-karla font-semibold uppercase tracking-[0.16em] text-[#b8430b] mb-2">
-                        {insight.category}
-                      </p>
-                      <h2 className="text-xl font-karla font-semibold text-slate-900">
+                  <div className="grid gap-5 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
+                    <div className="max-w-4xl">
+                      <div className="mb-3 flex flex-wrap items-center gap-2">
+                        <span className="rounded-full bg-[#fff4ec] px-3 py-1 text-xs font-karla font-semibold uppercase tracking-[0.14em] text-[#b8430b]">
+                          {insight.category}
+                        </span>
+                        <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-karla font-semibold uppercase tracking-[0.14em] text-slate-500">
+                          {insight.topic}
+                        </span>
+                      </div>
+                      <h2 className="text-2xl font-karla font-semibold leading-tight text-slate-900">
                         {insight.title}
                       </h2>
+                      <p className="mt-3 text-sm font-lora leading-7 text-slate-600 sm:text-base">
+                        {insight.summary}
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-4 text-sm text-slate-500 font-lora">
+                        <span className="inline-flex items-center gap-2">
+                          <CalendarDays className="size-4" />
+                          {insight.displayDate}
+                        </span>
+                        <span className="inline-flex items-center gap-2">
+                          <Clock3 className="size-4" />
+                          {insight.readTime}
+                        </span>
+                      </div>
                     </div>
-                    <span className="inline-flex items-center gap-2 text-sm font-karla font-semibold text-slate-700">
-                      Open
+                    <span className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-karla font-semibold text-white md:mt-1">
+                      Read article
                       <ArrowRight className="size-4 transition group-hover:translate-x-1" />
                     </span>
                   </div>
