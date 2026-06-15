@@ -56,6 +56,17 @@ const recognitionStories = [
     location: "Scotland, UK",
     tone: "teal",
   },
+  {
+    label: "Podcast",
+    title: "AXOS featured in a founder conversation",
+    summary:
+      "AXOS — and the case for private, governance-first AI workspaces — discussed alongside founder Amit Garg in a recent founder podcast.",
+    date: "2026",
+    location: "Online",
+    tone: "amber",
+    href: "https://www.youtube.com/watch?v=0IMLuoXFYK8&t=2036s",
+    cta: "Watch the conversation",
+  },
 ];
 
 const PressRelease = () => {
@@ -195,6 +206,17 @@ const PressRelease = () => {
                   <span>{story.location}</span>
                 </div>
               </div>
+              {story.href && (
+                <a
+                  href={story.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-[#b8430b]"
+                >
+                  {story.cta || "Watch"}
+                  <PlayCircle className="size-4" />
+                </a>
+              )}
             </div>
           ))}
         </div>

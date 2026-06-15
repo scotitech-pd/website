@@ -13,10 +13,10 @@ import Counter from "@/components/ui/Counter";
  * numbers (installs, active teams, uptime, time saved) once supplied.
  */
 const metrics = [
-  { value: 2, label: "Live products in production" },
+  { value: 2, label: "AppDeploy workspaces in production" },
+  { value: 450, suffix: "+", label: "Apps installed via AppDeploy" },
+  { value: 300, suffix: "+", label: "Devices reached" },
   { value: 2026, label: "Scotland StartUp Awards shortlist", raw: true },
-  { value: 3, suffix: "+", label: "Named clients & partners" },
-  { value: 2024, label: "Founded · UK-registered company", raw: true },
 ];
 
 const clients = [
@@ -48,10 +48,10 @@ const testimonials = [
     role: "Director, Aviskaar Enterprises",
   },
   {
-    img: "/images/solution/vijay.jpeg",
-    text: "AXOS gives teams one secure place for mail, storage, coordination, and AI-assisted work — with much less dependence on disconnected tools.",
-    name: "Vijay Rathee",
-    role: "Founder, Bizztor",
+    text: "Most teams adopt AI and worry about where the data goes. AXOS turns that on its head — a private workspace with AI built into the work itself, running on infrastructure you actually control. The knowledge stays inside the company, not on someone else's model.",
+    name: "Amit Garg",
+    role: "Featured on a founder conversation",
+    podcastUrl: "https://www.youtube.com/watch?v=0IMLuoXFYK8&t=2036s",
   },
 ];
 
@@ -173,18 +173,39 @@ export default function Credibility() {
                     {t.text}
                   </blockquote>
                   <figcaption className="mt-5 flex items-center gap-3 border-t border-hairline pt-4">
-                    <Image
-                      src={t.img}
-                      alt={t.name}
-                      width={44}
-                      height={44}
-                      className="h-11 w-11 rounded-full object-cover"
-                    />
-                    <div>
+                    {t.img ? (
+                      <Image
+                        src={t.img}
+                        alt={t.name}
+                        width={44}
+                        height={44}
+                        className="h-11 w-11 rounded-full object-cover"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-soft font-karla text-sm font-semibold text-brand-strong"
+                      >
+                        {t.name.split(" ").map((p) => p[0]).join("").slice(0, 2)}
+                      </span>
+                    )}
+                    <div className="min-w-0 flex-1">
                       <p className="font-karla text-sm font-semibold text-strong">
                         {t.name}
                       </p>
-                      <p className="t-small">{t.role}</p>
+                      {t.podcastUrl ? (
+                        <a
+                          href={t.podcastUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 font-karla text-xs text-brand-strong hover:text-brand"
+                        >
+                          {t.role}
+                          <ArrowRight size={12} />
+                        </a>
+                      ) : (
+                        <p className="t-small">{t.role}</p>
+                      )}
                     </div>
                   </figcaption>
                 </figure>
