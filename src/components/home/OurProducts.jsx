@@ -166,43 +166,6 @@ export default function OurProducts() {
         ))}
       </div>
 
-      {/* Supporting product */}
-      <Reveal delay={0.1}>
-        <Link
-          href="/products/claritypath"
-          className="group mt-6 flex flex-col items-start gap-5 rounded-3xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-card sm:flex-row sm:items-center sm:justify-between md:p-8"
-        >
-          <div className="flex items-center gap-5">
-            <Image
-              src="/images/brand/claritypath-logo.png"
-              alt="ClarityPath logo"
-              width={48}
-              height={48}
-              className="h-12 w-12 shrink-0 rounded-2xl object-contain"
-            />
-            <div>
-              <div className="flex items-center gap-3">
-                <h3 className="font-karla text-xl font-semibold text-strong">
-                  ClarityPath
-                </h3>
-                <Badge variant="supporting">Accessed via AppDeploy</Badge>
-              </div>
-              <p className="t-body mt-1 max-w-2xl">
-                Daily strategic focus and tailored insight for relocation, career,
-                property, and financial decisions — accessed through the AppDeploy
-                portal.
-              </p>
-            </div>
-          </div>
-          <span className="inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong">
-            Learn more
-            <ArrowRight
-              size={16}
-              className="transition-transform group-hover:translate-x-0.5"
-            />
-          </span>
-        </Link>
-      </Reveal>
     </Section>
   );
 }
