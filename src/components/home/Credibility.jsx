@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Quote, Trophy } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Quote, Trophy } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -12,19 +13,32 @@ import Counter from "@/components/ui/Counter";
  * numbers (installs, active teams, uptime, time saved) once supplied.
  */
 const metrics = [
-  { value: 2, suffix: "", label: "Flagship products in market" },
+  { value: 2, label: "AppDeploy workspaces in production" },
+  { value: 450, suffix: "+", label: "Apps installed via AppDeploy" },
+  { value: 300, suffix: "+", label: "Devices reached" },
   { value: 2026, label: "Scotland StartUp Awards shortlist", raw: true },
-  { value: 3, suffix: "+", label: "Client & partner relationships" },
-  { value: 2, label: "Worldwide delivery and customers", raw: true, display: "Global" },
 ];
 
 const clients = [
-  { name: "Aviskaar Enterprises", image: "/images/home/aviskaar-logo.jpg", href: "https://aviskaar.co.uk" },
-  { name: "Growthcart", image: "/images/aboutus/growthcart-logo.png", href: null },
-  { name: "No94oo", image: "/images/aboutus/no94oo-logo.png", href: null },
+  {
+    name: "Aviskaar Enterprises",
+    image: "/images/home/aviskaar-logo.jpg",
+    href: "https://aviskaar.co.uk",
+    note: "AppDeploy customer",
+  },
+  {
+    name: "Growthcart",
+    image: "/images/aboutus/growthcart-logo.png",
+    href: null,
+    note: "Portfolio partner",
+  },
+  {
+    name: "No94oo",
+    image: "/images/aboutus/no94oo-logo.png",
+    href: null,
+    note: "Portfolio partner",
+  },
 ];
-
-const logoMarquee = [...clients, ...clients, ...clients, ...clients];
 
 const testimonials = [
   {
@@ -34,24 +48,32 @@ const testimonials = [
     role: "Director, Aviskaar Enterprises",
   },
   {
-    img: "/images/solution/vijay.jpeg",
-    text: "AXOS gives teams one secure place for mail, storage, coordination, and AI-assisted work — with much less dependence on disconnected tools.",
-    name: "Vijay Rathee",
-    role: "Founder, Bizztor",
+    text: "Most teams adopt AI and worry about where the data goes. AXOS turns that on its head — a private workspace with AI built into the work itself, running on infrastructure you actually control. The knowledge stays inside the company, not on someone else's model.",
+    name: "Amit Garg",
+    role: "Featured on a founder conversation",
+    podcastUrl: "https://www.youtube.com/watch?v=0IMLuoXFYK8&t=2036s",
   },
 ];
 
-function LogoMark({ client }) {
-  const logo = (
-    <span className="flex h-16 w-[190px] shrink-0 items-center justify-center rounded-2xl border border-hairline bg-surface-muted px-6 shadow-soft">
-      <Image
-        src={client.image}
-        alt={client.name}
-        width={150}
-        height={52}
-        className="h-9 w-auto max-w-[145px] object-contain opacity-70 grayscale transition duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
-      />
-    </span>
+function ClientCard({ client }) {
+  const inner = (
+    <div className="group/logo flex h-full flex-col items-center gap-3 rounded-2xl border border-hairline bg-surface-muted p-5 text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-soft">
+      <span className="flex h-12 w-full items-center justify-center">
+        <Image
+          src={client.image}
+          alt={client.name}
+          width={140}
+          height={48}
+          className="h-9 w-auto max-w-[140px] object-contain opacity-80 grayscale transition duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
+        />
+      </span>
+      <div>
+        <p className="font-karla text-sm font-semibold text-strong">{client.name}</p>
+        {client.note && (
+          <p className="mt-0.5 font-karla text-xs text-muted">{client.note}</p>
+        )}
+      </div>
+    </div>
   );
 
   if (client.href) {
@@ -61,18 +83,14 @@ function LogoMark({ client }) {
         target="_blank"
         rel="noreferrer"
         aria-label={client.name}
-        className="group/logo block"
+        className="block h-full"
       >
-        {logo}
+        {inner}
       </a>
     );
   }
 
-  return (
-    <span className="group/logo block" aria-label={client.name}>
-      {logo}
-    </span>
-  );
+  return <div className="block h-full">{inner}</div>;
 }
 
 export default function Credibility() {
@@ -134,6 +152,13 @@ export default function Credibility() {
               Shortlisted for <span className="font-semibold text-strong">Digital StartUp of the Year</span>,
               Scotland StartUp Awards 2026.
             </p>
+            <Link
+              href="/media"
+              className="mt-4 inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong transition-colors hover:text-brand"
+            >
+              See all recognition
+              <ArrowRight size={14} />
+            </Link>
           </div>
         </Reveal>
 
@@ -148,18 +173,39 @@ export default function Credibility() {
                     {t.text}
                   </blockquote>
                   <figcaption className="mt-5 flex items-center gap-3 border-t border-hairline pt-4">
-                    <Image
-                      src={t.img}
-                      alt={t.name}
-                      width={44}
-                      height={44}
-                      className="h-11 w-11 rounded-full object-cover"
-                    />
-                    <div>
+                    {t.img ? (
+                      <Image
+                        src={t.img}
+                        alt={t.name}
+                        width={44}
+                        height={44}
+                        className="h-11 w-11 rounded-full object-cover"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-soft font-karla text-sm font-semibold text-brand-strong"
+                      >
+                        {t.name.split(" ").map((p) => p[0]).join("").slice(0, 2)}
+                      </span>
+                    )}
+                    <div className="min-w-0 flex-1">
                       <p className="font-karla text-sm font-semibold text-strong">
                         {t.name}
                       </p>
-                      <p className="t-small">{t.role}</p>
+                      {t.podcastUrl ? (
+                        <a
+                          href={t.podcastUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 font-karla text-xs text-brand-strong hover:text-brand"
+                        >
+                          {t.role}
+                          <ArrowRight size={12} />
+                        </a>
+                      ) : (
+                        <p className="t-small">{t.role}</p>
+                      )}
                     </div>
                   </figcaption>
                 </figure>
@@ -167,21 +213,16 @@ export default function Credibility() {
             ))}
           </div>
 
-          {/* Client logos */}
+          {/* Client logos — static grid, no marquee */}
           <Reveal delay={0.1}>
-            <div className="rounded-3xl border border-hairline bg-surface py-6 shadow-soft">
-              <p className="t-small mb-4 px-6 font-karla font-semibold uppercase tracking-[0.14em] text-muted">
+            <div className="rounded-3xl border border-hairline bg-surface p-6 shadow-soft md:p-7">
+              <p className="t-small mb-5 font-karla font-semibold uppercase tracking-[0.14em] text-muted">
                 Trusted by early clients & partners
               </p>
-              <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
-                <div className="animate-logo-marquee flex w-max gap-4 pl-6 group-hover:[animation-play-state:paused]">
-                  {logoMarquee.map((client, index) => (
-                    <LogoMark
-                      key={`${client.name}-${index}`}
-                      client={client}
-                    />
-                  ))}
-                </div>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                {clients.map((client) => (
+                  <ClientCard key={client.name} client={client} />
+                ))}
               </div>
             </div>
           </Reveal>

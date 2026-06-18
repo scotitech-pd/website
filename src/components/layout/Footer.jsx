@@ -135,6 +135,22 @@ export default function Footer() {
               {label}
             </span>
           ))}
+          <a
+            href="https://sellwithboost.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Listed on Sell With Boost"
+            className="inline-flex h-10 items-center rounded-full bg-white px-3 transition-transform hover:-translate-y-0.5"
+          >
+            {/* Third-party badge asset supplied by Sell With Boost. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://sellwithboost.com/badge/listing.svg"
+              alt="Listed on Sell With Boost"
+              className="h-10 w-auto"
+              loading="lazy"
+            />
+          </a>
         </div>
 
         {/* Legal / registered office */}

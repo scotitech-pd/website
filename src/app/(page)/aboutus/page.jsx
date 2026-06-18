@@ -97,6 +97,14 @@ export default function AboutPage() {
               infrastructure, AI, and digital delivery around the real operational
               problems our clients face.
             </p>
+            <p className="t-body">
+              ScotiTech is bootstrapped, founder-led, and shipping. AppDeploy is
+              live in production, with two active customer workspaces, 450+ apps
+              installed and 300+ devices reached. AXOS is in private evaluation
+              with enterprise teams. We are actively engaging with UK innovation
+              grants and seed funding routes as we scale the platform from
+              founder-led delivery toward a wider commercial footprint.
+            </p>
             <div className="pt-2">
               <Button asChild variant="outline">
                 <Link href="/products">

@@ -18,10 +18,11 @@ import { cn } from "@/lib/utils";
  */
 const navLinks = [
   { id: 1, title: "Products", type: "anchor", target: "products" },
-  { id: 2, title: "How We Work", type: "anchor", target: "approach" },
-  { id: 3, title: "Credibility", type: "anchor", target: "proof" },
-  { id: 4, title: "Insights", type: "anchor", target: "insights" },
-  { id: 5, title: "Contact", type: "anchor", target: "contact" },
+  { id: 2, title: "Credibility", type: "anchor", target: "proof" },
+  { id: 3, title: "Insights", type: "anchor", target: "insights" },
+  { id: 4, title: "About", type: "route", link: "/aboutus" },
+  { id: 5, title: "Media", type: "route", link: "/media" },
+  { id: 6, title: "Contact", type: "anchor", target: "contact" },
 ];
 
 const Navbar = () => {
