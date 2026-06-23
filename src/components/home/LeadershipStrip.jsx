@@ -10,7 +10,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 const team = [
   {
     name: "Pradeep Dahiya",
-    title: "Co-Founder & CEO",
+    title: "Founder & CEO",
     img: "/images/home/pradeep.jpg",
     linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
     description:
