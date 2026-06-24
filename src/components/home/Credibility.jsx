@@ -131,21 +131,21 @@ export default function Credibility() {
         </div>
       </Reveal>
 
-      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[40%_60%]">
+      <div className="mt-6 grid grid-cols-1 items-start gap-6 lg:grid-cols-[34%_66%]">
         {/* Award */}
         <Reveal>
-          <div className="flex h-full flex-col rounded-3xl border border-hairline bg-surface-muted p-6 shadow-soft md:p-8">
-            <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 font-karla text-xs font-semibold text-brand-strong shadow-soft">
+          <div className="flex flex-col rounded-3xl border border-hairline bg-surface-muted p-5 shadow-soft md:p-6">
+            <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 font-karla text-xs font-semibold text-brand-strong shadow-soft">
               <Trophy size={14} />
               Award recognition
             </div>
-            <div className="overflow-hidden rounded-2xl border border-hairline">
+            <div className="overflow-hidden rounded-2xl border border-hairline bg-surface p-3">
               <Image
                 src="/images/home/scotland-startup-awards-2026-finalist.jpg"
                 alt="Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions, Digital StartUp of the Year"
                 width={800}
                 height={800}
-                className="h-auto w-full"
+                className="mx-auto h-56 w-auto max-w-full object-contain md:h-64"
               />
             </div>
             <p className="t-small mt-4">

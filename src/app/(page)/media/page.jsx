@@ -184,7 +184,7 @@ const PressRelease = () => {
           {recognitionStories.map((story) => (
             <div
               key={story.title}
-              className="rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)] sm:p-7"
+              className="rounded-[1.8rem] border border-slate-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] sm:p-6"
             >
               <span
                 className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${
@@ -197,20 +197,20 @@ const PressRelease = () => {
               >
                 {story.label}
               </span>
-              <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-slate-900">
+              <h2 className="mt-4 text-2xl font-bold text-slate-900">
                 {story.title}
               </h2>
-              <p className="mt-3 text-slate-600 font-lora leading-8">
+              <p className="mt-3 text-slate-600 font-lora leading-7">
                 {story.summary}
               </p>
               {story.imageSrc && (
-                <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-3">
+                <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-2">
                   <Image
                     src={story.imageSrc}
                     alt={story.imageAlt || story.title}
                     width={629}
                     height={876}
-                    className="mx-auto h-48 w-auto max-w-full rounded-xl object-contain shadow-sm sm:h-52"
+                    className="mx-auto h-32 w-auto max-w-full rounded-xl object-contain shadow-sm sm:h-36"
                   />
                 </div>
               )}
@@ -219,7 +219,7 @@ const PressRelease = () => {
                   href={story.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group mt-5 block max-w-[360px] overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-inner"
+                  className="group mt-4 block max-w-[320px] overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-inner"
                   aria-label={story.cta || story.title}
                 >
                   <div className="relative aspect-video">
@@ -230,14 +230,14 @@ const PressRelease = () => {
                       className="h-full w-full object-cover opacity-85 transition duration-300 group-hover:scale-[1.03] group-hover:opacity-100"
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                      <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/95 text-[#b8430b] shadow-lg transition duration-300 group-hover:scale-105">
-                        <PlayCircle className="size-7" />
+                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-[#b8430b] shadow-lg transition duration-300 group-hover:scale-105">
+                        <PlayCircle className="size-6" />
                       </span>
                     </div>
                   </div>
                 </a>
               )}
-              <div className="mt-5 flex flex-wrap gap-5 text-sm text-slate-500 font-lora">
+              <div className="mt-4 flex flex-wrap gap-5 text-sm text-slate-500 font-lora">
                 <div className="flex items-center gap-2">
                   <Calendar className="size-4" />
                   <span>{story.date}</span>
