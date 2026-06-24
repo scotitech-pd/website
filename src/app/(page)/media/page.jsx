@@ -180,16 +180,14 @@ const PressRelease = () => {
       </section>
 
       <section className="max-w-7xl mx-auto px-5 md:px-10 pb-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:items-stretch">
           {recognitionStories.map((story) => (
             <div
               key={story.title}
-              className={`rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.08)] ${
-                story.previewImage ? "p-5" : "p-5 sm:p-6"
-              }`}
+              className="flex flex-col rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.08)] p-5 sm:p-6"
             >
               <span
-                className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${
+                className={`inline-flex w-fit rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${
                   story.tone === "purple"
                     ? "bg-purple-100 text-[#641171]"
                     : story.tone === "teal"
@@ -199,20 +197,20 @@ const PressRelease = () => {
               >
                 {story.label}
               </span>
-              <h2 className={`mt-4 font-bold text-slate-900 ${story.previewImage ? "text-xl" : "text-2xl"}`}>
+              <h2 className="mt-4 text-xl font-bold text-slate-900 sm:text-2xl">
                 {story.title}
               </h2>
-              <p className={`mt-3 text-slate-600 font-lora ${story.previewImage ? "text-sm leading-6" : "leading-7"}`}>
+              <p className="mt-3 text-slate-600 font-lora leading-7">
                 {story.summary}
               </p>
               {story.imageSrc && (
-                <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-2">
+                <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-3">
                   <Image
                     src={story.imageSrc}
                     alt={story.imageAlt || story.title}
                     width={629}
                     height={876}
-                    className="mx-auto h-32 w-auto max-w-full rounded-xl object-contain shadow-sm sm:h-36"
+                    className="mx-auto block h-36 w-auto rounded-xl object-contain shadow-sm"
                   />
                 </div>
               )}
@@ -221,7 +219,7 @@ const PressRelease = () => {
                   href={story.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group mt-3 block max-w-[240px] overflow-hidden rounded-xl border border-slate-200 bg-slate-950 shadow-inner"
+                  className="group mt-4 block max-w-[260px] overflow-hidden rounded-xl border border-slate-200 bg-slate-950 shadow-inner"
                   aria-label={story.cta || story.title}
                 >
                   <div className="relative aspect-video">
@@ -239,7 +237,7 @@ const PressRelease = () => {
                   </div>
                 </a>
               )}
-              <div className={`flex flex-wrap gap-5 text-sm text-slate-500 font-lora ${story.previewImage ? "mt-3" : "mt-4"}`}>
+              <div className="mt-auto flex flex-wrap gap-5 pt-4 text-sm text-slate-500 font-lora">
                 <div className="flex items-center gap-2">
                   <Calendar className="size-4" />
                   <span>{story.date}</span>
@@ -254,7 +252,7 @@ const PressRelease = () => {
                   href={story.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-[#b8430b]"
+                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-[#b8430b]"
                 >
                   {story.cta || "Watch"}
                   <PlayCircle className="size-4" />

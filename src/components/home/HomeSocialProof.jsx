@@ -26,7 +26,7 @@ const marqueeItems = [...clients, ...clients, ...clients];
 const stats = [
   { value: "Apple Custom Apps", label: "distribution channel" },
   { value: "£79", label: "/ month from" },
-  { value: "UK StartUp Awards 2026", label: "finalist" },
+  { value: "Scotland StartUp Awards 2026", label: "finalist" },
   { value: "GDPR-aligned", label: "data posture" },
 ];
 

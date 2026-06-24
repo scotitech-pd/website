@@ -144,8 +144,8 @@ export default function Credibility() {
                 src="/images/home/scotland-startup-awards-2026-finalist.jpg"
                 alt="Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions, Digital StartUp of the Year"
                 width={800}
-                height={800}
-                className="mx-auto h-56 w-auto max-w-full object-contain md:h-64"
+                height={1000}
+                className="mx-auto block w-full max-w-[280px] rounded-lg object-contain md:max-w-[320px]"
               />
             </div>
             <p className="t-small mt-4">
