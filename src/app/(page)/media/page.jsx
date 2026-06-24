@@ -58,6 +58,8 @@ const recognitionStories = [
     date: "June 2026",
     location: "Scotland, UK",
     tone: "teal",
+    imageSrc: "/images/home/scotland-startup-awards-2026-finalist.jpg",
+    imageAlt: "Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions",
   },
   {
     label: "Podcast",
@@ -201,8 +203,19 @@ const PressRelease = () => {
               <p className="mt-3 text-slate-600 font-lora leading-8">
                 {story.summary}
               </p>
+              {story.imageSrc && (
+                <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-3">
+                  <Image
+                    src={story.imageSrc}
+                    alt={story.imageAlt || story.title}
+                    width={629}
+                    height={876}
+                    className="mx-auto h-48 w-auto max-w-full rounded-xl object-contain shadow-sm sm:h-52"
+                  />
+                </div>
+              )}
               {story.previewUrl && (
-                <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-inner">
+                <div className="mt-5 max-w-[420px] overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-inner">
                   <iframe
                     src={story.previewUrl}
                     title={story.previewTitle || story.title}
