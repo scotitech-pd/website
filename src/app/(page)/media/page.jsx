@@ -18,6 +18,9 @@ import {
 
 
 const IMAGES = [
+  { src: "/images/home/scotland-startup-awards-2026-finalist.jpg", alt: "Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions", caption: "Digital StartUp of the Year — 2026 finalist certificate" },
+  { src: "/images/home/scotland-startup-awards-2026-photo-1.jpg", alt: "ScotiTech Scotland StartUp Awards 2026 finalist moment", caption: "Scotland StartUp Awards 2026 finalist recognition" },
+  { src: "/images/home/scotland-startup-awards-2026-photo-2.jpg", alt: "ScotiTech at the Scotland StartUp Awards 2026", caption: "ScotiTech at the Scotland StartUp Awards 2026" },
   { src: "/images/home/p1.png", alt: "Pradeep Dahiya holding the award", caption: "Pradeep Dahiya, Founder & CEO, ScotiTech, holding the award" },
   { src: "/images/home/p2.jpg", alt: "award", caption: "Forttuna Global Excellence Awards 2025, Dubai" },
   { src: "/images/home/p3.jpg", alt: "Close up of the award trophy", caption: "NextGen Innovator trophy, Forttuna Awards" },
@@ -48,24 +51,28 @@ const recognitionStories = [
     tone: "purple",
   },
   {
-    label: "Shortlist",
+    label: "Finalist",
     title: "Scotland StartUp Awards 2026",
     summary:
-      "ScotiTech was shortlisted in the Digital StartUp of the Year category at the Scotland regional final.",
+      "ScotiTech was named a Digital StartUp of the Year finalist at the Scotland StartUp Awards 2026.",
     date: "June 2026",
     location: "Scotland, UK",
     tone: "teal",
+    imageSrc: "/images/home/scotland-startup-awards-2026-finalist.jpg",
+    imageAlt: "Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions",
   },
   {
     label: "Podcast",
-    title: "AXOS featured in a founder conversation",
+    title: "AppDeploy featured in a founder conversation",
     summary:
-      "AXOS — and the case for private, governance-first AI workspaces — discussed alongside founder Amit Garg in a recent founder podcast.",
+      "A short founder conversation on AppDeploy, private iOS distribution, and controlled rollout workflows.",
     date: "2026",
     location: "Online",
     tone: "amber",
     href: "https://www.youtube.com/watch?v=0IMLuoXFYK8&t=2036s",
     cta: "Watch the conversation",
+    previewImage: "https://img.youtube.com/vi/0IMLuoXFYK8/hqdefault.jpg",
+    previewAlt: "AppDeploy founder conversation podcast preview",
   },
 ];
 
@@ -177,7 +184,9 @@ const PressRelease = () => {
           {recognitionStories.map((story) => (
             <div
               key={story.title}
-              className="rounded-[1.8rem] border border-slate-200 bg-white p-6 sm:p-7 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+              className={`rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.08)] ${
+                story.previewImage ? "p-5" : "p-5 sm:p-6"
+              }`}
             >
               <span
                 className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${
@@ -190,13 +199,47 @@ const PressRelease = () => {
               >
                 {story.label}
               </span>
-              <h2 className="mt-4 text-2xl sm:text-3xl font-bold text-slate-900">
+              <h2 className={`mt-4 font-bold text-slate-900 ${story.previewImage ? "text-xl" : "text-2xl"}`}>
                 {story.title}
               </h2>
-              <p className="mt-3 text-slate-600 font-lora leading-8">
+              <p className={`mt-3 text-slate-600 font-lora ${story.previewImage ? "text-sm leading-6" : "leading-7"}`}>
                 {story.summary}
               </p>
-              <div className="mt-5 flex flex-wrap gap-5 text-sm text-slate-500 font-lora">
+              {story.imageSrc && (
+                <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-2">
+                  <Image
+                    src={story.imageSrc}
+                    alt={story.imageAlt || story.title}
+                    width={629}
+                    height={876}
+                    className="mx-auto h-32 w-auto max-w-full rounded-xl object-contain shadow-sm sm:h-36"
+                  />
+                </div>
+              )}
+              {story.previewImage && (
+                <a
+                  href={story.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group mt-3 block max-w-[240px] overflow-hidden rounded-xl border border-slate-200 bg-slate-950 shadow-inner"
+                  aria-label={story.cta || story.title}
+                >
+                  <div className="relative aspect-video">
+                    <img
+                      src={story.previewImage}
+                      alt={story.previewAlt || story.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover opacity-85 transition duration-300 group-hover:scale-[1.03] group-hover:opacity-100"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/95 text-[#b8430b] shadow-lg transition duration-300 group-hover:scale-105">
+                        <PlayCircle className="size-5" />
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              )}
+              <div className={`flex flex-wrap gap-5 text-sm text-slate-500 font-lora ${story.previewImage ? "mt-3" : "mt-4"}`}>
                 <div className="flex items-center gap-2">
                   <Calendar className="size-4" />
                   <span>{story.date}</span>
@@ -206,7 +249,7 @@ const PressRelease = () => {
                   <span>{story.location}</span>
                 </div>
               </div>
-              {story.href && (
+              {story.href && !story.previewImage && (
                 <a
                   href={story.href}
                   target="_blank"
@@ -324,44 +367,6 @@ const PressRelease = () => {
                 <div className="mt-2 flex items-center gap-2 text-sm text-slate-600 font-lora">
                   <MapPin className="size-4 text-amber-700" />
                   <span>London, UK</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-3xl border border-slate-200 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
-            >
-              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 mb-5">
-                <Image
-                  src="/images/home/startup-awards-2026-shortlist.jpg"
-                  alt="ScotiTech shortlisted for the Scotland StartUp Awards 2026"
-                  width={800}
-                  height={800}
-                  className="w-full h-[240px] object-contain p-3"
-                />
-              </div>
-              <span className="inline-flex rounded-full bg-cyan-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#0F766E]">
-                Shortlist
-              </span>
-              <h4 className="mt-4 font-karla font-bold text-2xl text-gray-900 leading-tight">
-                Scotland StartUp Awards 2026
-              </h4>
-              <p className="mt-3 text-slate-600 font-lora leading-8">
-                ScotiTech was shortlisted in the Digital StartUp of the Year
-                category, reflecting the company’s early product traction and
-                recognition within Scotland’s startup ecosystem.
-              </p>
-              <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4">
-                <div className="flex items-center gap-2 text-sm text-slate-600 font-lora">
-                  <Calendar className="size-4 text-[#0F766E]" />
-                  <span>Tue 23 Jun 2026</span>
-                </div>
-                <div className="mt-2 flex items-center gap-2 text-sm text-slate-600 font-lora">
-                  <MapPin className="size-4 text-[#0F766E]" />
-                  <span>Scotland regional final</span>
                 </div>
               </div>
             </motion.div>

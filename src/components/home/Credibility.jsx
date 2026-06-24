@@ -16,7 +16,7 @@ const metrics = [
   { value: 2, label: "AppDeploy workspaces in production" },
   { value: 450, suffix: "+", label: "Apps installed via AppDeploy" },
   { value: 300, suffix: "+", label: "Devices reached" },
-  { value: 2026, label: "Scotland StartUp Awards shortlist", raw: true },
+  { value: 2026, label: "Scotland StartUp Awards finalist", raw: true },
 ];
 
 const clients = [
@@ -48,9 +48,9 @@ const testimonials = [
     role: "Director, Aviskaar Enterprises",
   },
   {
-    text: "Most teams adopt AI and worry about where the data goes. AXOS turns that on its head — a private workspace with AI built into the work itself, running on infrastructure you actually control. The knowledge stays inside the company, not on someone else's model.",
-    name: "Amit Garg",
-    role: "Featured on a founder conversation",
+    text: "In a recent founder conversation, we discussed the AppDeploy problem space: helping teams ship private iOS apps with clearer release control, access management, and fewer manual handoffs.",
+    name: "AppDeploy",
+    role: "Featured in a founder conversation",
     podcastUrl: "https://www.youtube.com/watch?v=0IMLuoXFYK8&t=2036s",
   },
 ];
@@ -131,25 +131,25 @@ export default function Credibility() {
         </div>
       </Reveal>
 
-      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[40%_60%]">
+      <div className="mt-6 grid grid-cols-1 items-start gap-6 lg:grid-cols-[34%_66%]">
         {/* Award */}
         <Reveal>
-          <div className="flex h-full flex-col rounded-3xl border border-hairline bg-surface-muted p-6 shadow-soft md:p-8">
-            <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 font-karla text-xs font-semibold text-brand-strong shadow-soft">
+          <div className="flex flex-col rounded-3xl border border-hairline bg-surface-muted p-5 shadow-soft md:p-6">
+            <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 font-karla text-xs font-semibold text-brand-strong shadow-soft">
               <Trophy size={14} />
               Award recognition
             </div>
-            <div className="overflow-hidden rounded-2xl border border-hairline">
+            <div className="overflow-hidden rounded-2xl border border-hairline bg-surface p-3">
               <Image
-                src="/images/home/startup-awards-2026-shortlist.jpg"
-                alt="Scotland StartUp Awards 2026 Shortlist — ScotiTech Solutions, Digital StartUp of the Year"
+                src="/images/home/scotland-startup-awards-2026-finalist.jpg"
+                alt="Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions, Digital StartUp of the Year"
                 width={800}
                 height={800}
-                className="h-auto w-full"
+                className="mx-auto h-56 w-auto max-w-full object-contain md:h-64"
               />
             </div>
             <p className="t-small mt-4">
-              Shortlisted for <span className="font-semibold text-strong">Digital StartUp of the Year</span>,
+              Named a 2026 finalist for <span className="font-semibold text-strong">Digital StartUp of the Year</span>,
               Scotland StartUp Awards 2026.
             </p>
             <Link

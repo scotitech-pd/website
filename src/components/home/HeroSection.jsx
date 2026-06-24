@@ -39,7 +39,7 @@ export default function HeroSection() {
                 className="inline-flex items-center gap-2 rounded-full border border-hairline bg-surface px-3.5 py-1.5 font-karla text-sm font-medium text-body shadow-soft transition-colors hover:border-brand/40"
               >
                 <Trophy size={15} className="text-brand-strong" />
-                Shortlisted — Scotland StartUp Awards 2026
+                Finalist — Scotland StartUp Awards 2026
                 <ArrowRight size={14} className="text-muted" />
               </Link>
             </motion.div>
