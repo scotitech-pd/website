@@ -41,18 +41,20 @@ export default function Footer() {
   return (
     <footer className="bg-ink text-on-ink">
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
-        {/* Top */}
-        <div className="grid gap-10 py-14 md:py-16 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
-          {/* Brand */}
-          <div>
-            <Link href="/" className="inline-block">
-              <Image src="/logo/logo.png" alt="ScotiTech" width={170} height={42} className="h-auto w-[170px]" />
-            </Link>
-            <p className="mt-5 max-w-xs font-lora text-sm leading-relaxed text-on-ink-muted">
-              Focused software products for private app rollout, team operations,
-              and policy-aligned, AI-assisted work.
-            </p>
-            <div className="mt-6 flex gap-3">
+
+        {/* Editorial statement row */}
+        <div className="border-b border-white/8 py-12 md:py-16">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <Link href="/" className="inline-block mb-6">
+                <Image src="/logo/logo.png" alt="ScotiTech" width={170} height={42} className="h-auto w-[170px] invert" />
+              </Link>
+              <p className="max-w-lg font-geist-sans text-2xl font-semibold leading-snug tracking-tight text-white/90 md:text-3xl">
+                Focused software from Scotland.<br />
+                <span className="text-white/40">Shipped with real control.</span>
+              </p>
+            </div>
+            <div className="flex gap-3">
               {socials.map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -60,12 +62,23 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] text-on-ink transition-colors hover:border-brand hover:bg-brand hover:text-brand-contrast"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] text-on-ink transition-colors hover:border-brand hover:bg-brand hover:text-brand-contrast"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Links grid */}
+        <div className="grid gap-10 py-12 md:py-14 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Brand description */}
+          <div>
+            <p className="max-w-xs font-lora text-sm leading-relaxed text-on-ink-muted">
+              Focused software products for private app rollout, team operations,
+              and policy-aligned, AI-assisted work.
+            </p>
           </div>
 
           {/* Quick links */}
@@ -126,8 +139,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
-        {/* Trust badges */}
         <div className="flex flex-wrap gap-x-6 gap-y-3 border-t border-white/10 py-6">
           {badges.map(({ icon: Icon, label }) => (
             <span key={label} className="inline-flex items-center gap-2 font-karla text-xs font-semibold uppercase tracking-[0.12em] text-on-ink-muted">

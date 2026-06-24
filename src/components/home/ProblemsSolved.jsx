@@ -1,77 +1,123 @@
 "use client";
 
 import { Smartphone, ServerCog, Route, Lock } from "lucide-react";
-import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
-import Eyebrow from "@/components/ui/Eyebrow";
+import Container from "@/components/ui/Container";
 
 const problems = [
   {
+    no: "01",
     icon: Smartphone,
     title: "Internal app rollout is messy",
     body: "Distributing iOS apps to staff and partners relies on manual steps, unclear access, and no view of who has which release.",
     solved: "AppDeploy",
-    accent: "text-appdeploy",
+    accent: "text-orange-400",
+    glowColor: "rgba(226,88,14,0.15)",
   },
   {
+    no: "02",
     icon: ServerCog,
     title: "Operations are scattered across tools",
     body: "Mail, files, chat, and tasks live in disconnected SaaS, raising cost and weakening control over company data.",
     solved: "AXOS",
-    accent: "text-axos",
+    accent: "text-sky-400",
+    glowColor: "rgba(56,189,248,0.12)",
   },
   {
+    no: "03",
     icon: Route,
     title: "Sensitive journeys need structure",
     body: "Guided, high-stakes user decisions demand a private, considered flow — not a generic form or chatbot.",
     solved: "ClarityPath",
-    accent: "text-claritypath",
+    accent: "text-amber-400",
+    glowColor: "rgba(251,191,36,0.12)",
   },
   {
+    no: "04",
     icon: Lock,
     title: "Privacy can't be an afterthought",
     body: "Teams need clear data boundaries and deployment options they can actually reason about and defend.",
     solved: "Every product",
-    accent: "text-brand-strong",
+    accent: "text-emerald-400",
+    glowColor: "rgba(52,211,153,0.12)",
   },
 ];
 
-export default function ProblemsSolved() {
+export default function ProblemsSolved({ chapterNo }) {
   return (
-    <Section surface="base" spacing="lg">
-      <Reveal className="max-w-3xl">
-        <Eyebrow>Problems we solve</Eyebrow>
-        <h2 className="t-h1 mt-3">
-          We build for the operational problems teams actually hit.
-        </h2>
-        <p className="t-lead mt-5">
-          Each product starts from a real, recurring friction point — and stays
-          focused on solving it well.
-        </p>
-      </Reveal>
+    <section className="relative overflow-hidden bg-[#080d18] py-20 md:py-28">
+      {/* Background glow */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_100%,rgba(226,88,14,0.08),transparent_70%)]" />
+      {/* Top edge fade from previous light section */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#f7f8fa] to-transparent" />
+      {/* Bottom fade to next light section */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#f7f8fa] to-transparent" />
 
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {problems.map((p, i) => {
-          const Icon = p.icon;
-          return (
-            <Reveal key={p.title} delay={i * 0.07}>
-              <div className="flex h-full flex-col rounded-2xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface-sunken">
-                  <Icon size={20} className={p.accent} />
-                </span>
-                <h3 className="mt-5 font-karla text-lg font-semibold text-strong">
-                  {p.title}
-                </h3>
-                <p className="t-small mt-2 flex-1 leading-6">{p.body}</p>
-                <p className="mt-4 border-t border-hairline pt-4 font-karla text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                  Solved by{" "}
-                  <span className={p.accent}>{p.solved}</span>
+      <Container className="relative z-10">
+        {/* Chapter header */}
+        <Reveal>
+          <div className="mb-14 flex items-end justify-between gap-6 border-b border-white/8 pb-8">
+            <div>
+              {chapterNo && (
+                <p className="font-karla text-xs font-semibold uppercase tracking-[0.22em] text-brand/70 mb-3">
+                  {chapterNo} // Problems we solve
                 </p>
-              </div>
-            </Reveal>
-          );
-        })}
-      </div>
-    </Section>
+              )}
+              <h2 className="font-geist-sans text-[clamp(1.8rem,1.2rem+2.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.025em] text-white max-w-2xl">
+                We build for the operational problems teams actually hit.
+              </h2>
+            </div>
+            <p className="hidden lg:block max-w-xs font-karla text-sm leading-relaxed text-white/40">
+              Each product starts from a real, recurring friction point — and stays focused on solving it well.
+            </p>
+          </div>
+        </Reveal>
+
+        {/* Problem grid */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {problems.map((p, i) => {
+            const Icon = p.icon;
+            return (
+              <Reveal key={p.title} delay={i * 0.07}>
+                <div
+                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/8 bg-white/[0.03] p-6 transition-all duration-300 hover:border-white/15 hover:bg-white/[0.055]"
+                  style={{
+                    boxShadow: `inset 0 1px 0 rgba(255,255,255,0.06)`,
+                  }}
+                >
+                  {/* Hover glow */}
+                  <div
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-2xl"
+                    style={{
+                      background: `radial-gradient(circle at 30% 20%, ${p.glowColor}, transparent 65%)`,
+                    }}
+                  />
+                  {/* Number */}
+                  <span className="font-mono text-3xl font-bold text-white/8 select-none">
+                    {p.no}
+                  </span>
+                  {/* Icon */}
+                  <span className="mt-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white/8">
+                    <Icon size={19} className={p.accent} />
+                  </span>
+                  {/* Copy */}
+                  <h3 className="mt-5 font-karla text-[15px] font-semibold leading-snug text-white">
+                    {p.title}
+                  </h3>
+                  <p className="mt-2 flex-1 font-karla text-sm leading-relaxed text-white/45">
+                    {p.body}
+                  </p>
+                  {/* Footer */}
+                  <p className="mt-5 border-t border-white/8 pt-4 font-karla text-[11px] font-semibold uppercase tracking-[0.12em] text-white/30">
+                    Solved by{" "}
+                    <span className={p.accent}>{p.solved}</span>
+                  </p>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
+      </Container>
+    </section>
   );
 }

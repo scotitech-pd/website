@@ -32,14 +32,14 @@ const principles = [
   },
 ];
 
-export default function HowWeWork() {
+export default function HowWeWork({ chapterNo }) {
   return (
-    <Section id="approach" surface="muted" spacing="lg">
+    <Section id="approach" surface="base" spacing="lg">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[40%_60%] lg:gap-16">
-        {/* Sticky left panel — the signature pinned moment */}
+        {/* Sticky left panel */}
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
-            <Eyebrow>How we work</Eyebrow>
+            <Eyebrow>{chapterNo ? `${chapterNo} // ` : ""}How we work</Eyebrow>
             <h2 className="t-h1 mt-3">
               Principles that make our products credible.
             </h2>

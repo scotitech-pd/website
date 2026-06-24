@@ -37,7 +37,7 @@ const Navbar = () => {
   useEffect(() => {
     const onScroll = () => {
       const top = document.body.scrollTop || document.documentElement.scrollTop;
-      setScrolled(top > 8);
+      setScrolled(top > 80);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -114,8 +114,8 @@ const Navbar = () => {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-300",
           scrolled
-            ? "border-b border-hairline bg-surface/85 shadow-soft backdrop-blur-md"
-            : "border-b border-transparent bg-surface/60 backdrop-blur-sm"
+            ? "border-b border-hairline bg-surface/90 shadow-soft backdrop-blur-md"
+            : "border-b border-transparent bg-transparent"
         )}
       >
         <div className="mx-auto flex h-[72px] max-w-8xl items-center justify-between px-5 min-[500px]:px-10 md:px-20">
@@ -126,7 +126,10 @@ const Navbar = () => {
               width={168}
               height={42}
               priority
-              className="h-9 w-auto brightness-0"
+              className={cn(
+                "h-9 w-auto transition-all duration-300",
+                scrolled ? "brightness-0" : "brightness-0 invert"
+              )}
             />
           </Link>
 
@@ -138,8 +141,10 @@ const Navbar = () => {
                 className={cn(
                   "relative rounded-full px-4 py-2 font-karla text-[15px] font-medium transition-colors",
                   isActive(item)
-                    ? "text-brand-strong"
-                    : "text-body hover:text-strong"
+                    ? scrolled ? "text-brand-strong" : "text-white"
+                    : scrolled
+                      ? "text-body hover:text-strong"
+                      : "text-white/70 hover:text-white"
                 )}
               >
                 {item.title}
@@ -151,7 +156,11 @@ const Navbar = () => {
           </nav>
 
           <div className="hidden lg:block">
-            <Button size="sm" onClick={() => setShowModal(true)}>
+            <Button
+              size="sm"
+              variant={scrolled ? "default" : "onInk"}
+              onClick={() => setShowModal(true)}
+            >
               Talk to our team
             </Button>
           </div>
@@ -159,7 +168,10 @@ const Navbar = () => {
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
-            className="z-[70] rounded-lg p-1 text-strong lg:hidden"
+            className={cn(
+              "z-[70] rounded-lg p-1 lg:hidden transition-colors",
+              scrolled ? "text-strong" : "text-white"
+            )}
             onClick={() => setMenuOpen((p) => !p)}
           >
             {menuOpen ? <X size={28} /> : <Menu size={30} />}

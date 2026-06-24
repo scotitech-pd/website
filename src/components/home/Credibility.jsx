@@ -93,11 +93,11 @@ function ClientCard({ client }) {
   return <div className="block h-full">{inner}</div>;
 }
 
-export default function Credibility() {
+export default function Credibility({ chapterNo }) {
   return (
-    <Section id="proof" surface="base" spacing="lg">
+    <Section id="proof" surface="muted" spacing="lg">
       <Reveal className="max-w-3xl">
-        <Eyebrow>Credibility</Eyebrow>
+        <Eyebrow>{chapterNo ? `${chapterNo} // ` : ""}Credibility</Eyebrow>
         <h2 className="t-h1 mt-3">Real recognition. Real users. Real products.</h2>
         <p className="t-lead mt-5">
           We'd rather show evidence than make claims — award recognition,

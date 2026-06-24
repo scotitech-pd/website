@@ -55,7 +55,7 @@ function LogoItem({ client }) {
   return <span className="flex shrink-0 items-center">{img}</span>;
 }
 
-export default function HomeSocialProof() {
+export default function HomeSocialProof({ chapterNo }) {
   return (
     <section className="relative overflow-hidden border-y border-[#e4e8e3] bg-white py-12 md:py-14">
       {/* Soft top-edge gradient */}
@@ -64,7 +64,7 @@ export default function HomeSocialProof() {
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         {/* Label */}
         <p className="mb-8 text-center font-karla text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
-          Early clients &amp; delivery partners
+          {chapterNo ? `${chapterNo} // ` : ""}Early clients &amp; delivery partners
         </p>
 
         {/* Marquee */}

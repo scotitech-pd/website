@@ -3,10 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Trophy } from "lucide-react";
+import { ArrowRight, ShieldCheck, Trophy, ChevronDown } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { Button } from "@/components/ui/button";
-import Badge from "@/components/ui/Badge";
 import { useModal } from "@/components/ModalContext";
 
 export default function HeroSection() {
@@ -17,125 +16,180 @@ export default function HeroSection() {
     reduce
       ? {}
       : {
-          initial: { opacity: 0, y: 16 },
+          initial: { opacity: 0, y: 24 },
           animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay },
+          transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay },
         };
 
   return (
-    <section className="relative overflow-hidden bg-surface pt-28 pb-16 md:pt-32 md:pb-24">
-      {/* soft brand wash */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_55%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%),radial-gradient(45%_40%_at_-5%_10%,rgba(251,146,60,0.06),transparent_55%)]" />
-      {/* faint grid */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.4] [mask-image:radial-gradient(70%_60%_at_50%_0%,black,transparent)] bg-[linear-gradient(to_right,rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:48px_48px]" />
+    <section className="relative min-h-screen overflow-hidden bg-[#080d18] flex flex-col">
+      {/* ── Background layers ── */}
+      {/* Deep radial brand glow */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(226,88,14,0.18),transparent_65%)]" />
+      {/* Subtle bottom-left warmth */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_-5%_100%,rgba(184,67,11,0.10),transparent_60%)]" />
+      {/* Fine dot grid */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.18]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, rgba(255,255,255,0.55) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+          maskImage:
+            "radial-gradient(ellipse 80% 70% at 50% 0%, black 40%, transparent 100%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 80% 70% at 50% 0%, black 40%, transparent 100%)",
+        }}
+      />
+      {/* Horizontal scan line */}
+      <div className="pointer-events-none absolute inset-x-0 top-[72px] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <Container className="relative z-10">
-        <div className="grid grid-cols-1 items-center gap-12 xl:grid-cols-[48%_52%]">
-          {/* Copy */}
-          <div className="max-w-2xl">
-            <motion.div {...rise(0)}>
-              <Link
-                href="#proof"
-                className="inline-flex items-center gap-2 rounded-full border border-hairline bg-surface px-3.5 py-1.5 font-karla text-sm font-medium text-body shadow-soft transition-colors hover:border-brand/40"
-              >
-                <Trophy size={15} className="text-brand-strong" />
-                Finalist — Scotland StartUp Awards 2026
-                <ArrowRight size={14} className="text-muted" />
-              </Link>
-            </motion.div>
+      {/* ── Main content ── */}
+      <Container className="relative z-10 flex flex-1 flex-col items-center justify-center pt-28 pb-20 text-center md:pt-36 md:pb-28">
+        {/* Award badge */}
+        <motion.div {...rise(0)}>
+          <Link
+            href="/media"
+            className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.06] px-4 py-1.5 font-karla text-xs font-semibold uppercase tracking-[0.18em] text-white/70 backdrop-blur-sm transition-colors hover:border-brand/40 hover:text-white"
+          >
+            <Trophy size={13} className="text-brand" />
+            Scotland StartUp Awards 2026 — Finalist
+          </Link>
+        </motion.div>
 
-            <motion.h1 {...rise(0.06)} className="t-display mt-6">
-              Software that gives teams real control over how apps ship and where
-              data lives.
-            </motion.h1>
+        {/* Headline */}
+        <motion.h1
+          {...rise(0.08)}
+          className="mt-8 max-w-4xl font-geist-sans text-[clamp(2.6rem,1.6rem+4.2vw,5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white"
+        >
+          Software that gives teams{" "}
+          <span className="bg-gradient-to-r from-brand to-[#f97316] bg-clip-text text-transparent">
+            real control
+          </span>{" "}
+          over how apps ship and where data lives.
+        </motion.h1>
 
-            <motion.p {...rise(0.12)} className="t-lead mt-6 max-w-xl">
-              ScotiTech builds focused, privacy-conscious products for internal
-              app distribution and private enterprise operations — live today
-              with AppDeploy and AXOS.
-            </motion.p>
+        {/* Sub-headline */}
+        <motion.p
+          {...rise(0.16)}
+          className="mt-6 max-w-2xl font-karla text-[clamp(1rem,0.9rem+0.5vw,1.2rem)] leading-relaxed text-white/55"
+        >
+          ScotiTech builds focused, privacy-conscious products for internal app
+          distribution and private enterprise operations — live today with{" "}
+          <span className="text-white/80 font-medium">AppDeploy</span> and{" "}
+          <span className="text-white/80 font-medium">AXOS</span>.
+        </motion.p>
 
-            <motion.div {...rise(0.18)} className="mt-8 flex flex-wrap gap-3">
-              <Button size="lg" onClick={() => setShowModal(true)}>
-                Talk to our team
-                <ArrowRight size={17} />
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="#products">Explore products</Link>
-              </Button>
-            </motion.div>
+        {/* CTAs */}
+        <motion.div
+          {...rise(0.24)}
+          className="mt-10 flex flex-wrap items-center justify-center gap-3"
+        >
+          <button
+            onClick={() => setShowModal(true)}
+            className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 font-karla text-[15px] font-semibold text-white shadow-[0_0_32px_rgba(226,88,14,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-strong hover:shadow-[0_0_44px_rgba(226,88,14,0.50)]"
+          >
+            Talk to our team
+            <ArrowRight size={16} />
+          </button>
+          <Link
+            href="#products"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-7 py-3.5 font-karla text-[15px] font-semibold text-white/80 backdrop-blur-sm transition-all duration-200 hover:border-white/25 hover:text-white"
+          >
+            Explore products
+          </Link>
+        </motion.div>
 
-            <motion.div
-              {...rise(0.24)}
-              className="mt-10 flex items-center gap-3 text-muted"
-            >
-              <ShieldCheck size={18} className="text-brand-strong" />
-              <p className="t-small">
-                UK-registered · privacy-conscious by design · trusted by early
-                clients and partners
-              </p>
-            </motion.div>
-          </div>
+        {/* Trust strip */}
+        <motion.div
+          {...rise(0.30)}
+          className="mt-10 flex items-center justify-center gap-2 text-white/40"
+        >
+          <ShieldCheck size={15} className="text-brand/70" />
+          <p className="font-karla text-xs tracking-wide">
+            UK-registered · privacy-conscious by design · trusted by early clients and partners
+          </p>
+        </motion.div>
 
-          {/* Product preview */}
-          <motion.div {...rise(0.12)} className="relative [perspective:1200px]">
-            <div className="pointer-events-none absolute -inset-10 bg-[radial-gradient(circle_at_62%_38%,rgba(226,88,14,0.18),transparent_58%)] blur-3xl" />
-            <div className="pointer-events-none absolute inset-x-12 bottom-3 h-16 rounded-full bg-ink/15 blur-2xl" />
-
+        {/* Product preview card */}
+        <motion.div
+          {...rise(0.20)}
+          className="relative mt-16 w-full max-w-4xl"
+        >
+          {/* Glow under card */}
+          <div className="pointer-events-none absolute -inset-x-8 -bottom-6 h-24 bg-[radial-gradient(ellipse_70%_100%_at_50%_100%,rgba(226,88,14,0.20),transparent_70%)] blur-2xl" />
+          {/* Card frame */}
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_32px_80px_rgba(0,0,0,0.55)] backdrop-blur-sm">
+            {/* Fake browser chrome */}
+            <div className="flex items-center gap-2 border-b border-white/8 bg-white/[0.03] px-4 py-3">
+              <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+              <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
+              <span className="h-2.5 w-2.5 rounded-full bg-white/8" />
+              <span className="ml-3 flex-1 rounded-full bg-white/8 px-3 py-1 font-mono text-[10px] text-white/30">
+                appdeploy.scotitech.com
+              </span>
+            </div>
             <motion.div
               animate={
                 reduce
                   ? undefined
-                  : {
-                      y: [0, -8, 0],
-                      rotateZ: [-2.4, -1.2, -2.4],
-                      rotateX: [1.5, 0, 1.5],
-                    }
+                  : { y: [0, -6, 0] }
               }
               transition={
                 reduce
                   ? undefined
-                  : {
-                      duration: 8,
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                    }
+                  : { duration: 7, ease: "easeInOut", repeat: Infinity }
               }
-              className="relative mx-auto max-w-[680px] origin-center -rotate-2 drop-shadow-[0_32px_55px_rgba(15,23,42,0.20)] [transform-style:preserve-3d]"
             >
               <Image
                 src="/images/products/appdeploy/phonepic.png"
-                alt="AppDeploy workspace dashboard shown inside a tilted laptop preview"
+                alt="AppDeploy workspace dashboard"
                 width={1200}
                 height={688}
                 priority
                 className="h-auto w-full"
               />
             </motion.div>
+          </div>
 
-            {/* floating proof cards */}
-            <motion.div
-              {...rise(0.34)}
-              className="absolute -left-4 bottom-8 hidden rounded-2xl border border-hairline bg-surface px-4 py-3 shadow-card sm:block"
-            >
-              <p className="font-karla text-2xl font-semibold text-strong">
-                From £79<span className="text-base font-medium text-muted">/mo</span>
-              </p>
-              <p className="t-small">AppDeploy cloud</p>
-            </motion.div>
-
-            <motion.div
-              {...rise(0.42)}
-              className="absolute -right-3 top-10 hidden rounded-2xl border border-hairline bg-surface px-4 py-3 shadow-card sm:block"
-            >
-              <Badge variant="live" dot>
-                Live
-              </Badge>
-              <p className="t-small mt-1.5">AppDeploy in production</p>
-            </motion.div>
+          {/* Floating stat pills */}
+          <motion.div
+            {...rise(0.38)}
+            className="absolute -left-4 bottom-10 hidden rounded-xl border border-white/12 bg-[#080d18]/80 px-4 py-3 shadow-xl backdrop-blur-md sm:block"
+          >
+            <p className="font-karla text-xl font-bold text-white">
+              From £79<span className="text-sm font-medium text-white/50">/mo</span>
+            </p>
+            <p className="mt-0.5 font-karla text-xs text-white/50">AppDeploy cloud</p>
           </motion.div>
-        </div>
+
+          <motion.div
+            {...rise(0.44)}
+            className="absolute -right-4 top-16 hidden rounded-xl border border-white/12 bg-[#080d18]/80 px-4 py-3 shadow-xl backdrop-blur-md sm:block"
+          >
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 px-2.5 py-1 font-karla text-[11px] font-semibold text-emerald-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              Live in production
+            </span>
+            <p className="mt-1.5 font-karla text-xs text-white/50">AppDeploy</p>
+          </motion.div>
+        </motion.div>
       </Container>
+
+      {/* ── Scroll indicator ── */}
+      <div className="relative z-10 flex justify-center pb-8">
+        <motion.div
+          animate={reduce ? undefined : { y: [0, 6, 0] }}
+          transition={reduce ? undefined : { duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-2 text-white/25"
+        >
+          <span className="font-karla text-[10px] uppercase tracking-[0.2em]">Scroll</span>
+          <ChevronDown size={18} />
+        </motion.div>
+      </div>
+
+      {/* ── Bottom fade to next section ── */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#f7f8fa] to-transparent" />
     </section>
   );
 }

@@ -46,11 +46,11 @@ const flagships = [
   },
 ];
 
-export default function OurProducts() {
+export default function OurProducts({ chapterNo }) {
   return (
     <Section id="products" surface="muted" spacing="lg">
       <Reveal className="max-w-3xl">
-        <Eyebrow>Products</Eyebrow>
+        <Eyebrow>{chapterNo ? `${chapterNo} // ` : ""}Products</Eyebrow>
         <h2 className="t-h1 mt-3">
           Two flagship products, one operating principle: real control.
         </h2>
