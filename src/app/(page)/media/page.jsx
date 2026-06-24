@@ -51,15 +51,6 @@ const recognitionStories = [
     tone: "purple",
   },
   {
-    label: "Finalist",
-    title: "Scotland StartUp Awards 2026",
-    summary:
-      "ScotiTech was named a Digital StartUp of the Year finalist at the Scotland StartUp Awards 2026.",
-    date: "June 2026",
-    location: "Scotland, UK",
-    tone: "teal",
-  },
-  {
     label: "Podcast",
     title: "AppDeploy featured in a founder conversation",
     summary:
@@ -182,7 +173,9 @@ const PressRelease = () => {
           {recognitionStories.map((story) => (
             <div
               key={story.title}
-              className="rounded-[1.8rem] border border-slate-200 bg-white p-6 sm:p-7 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+              className={`rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)] sm:p-7 ${
+                story.previewUrl ? "lg:col-span-2" : ""
+              }`}
             >
               <span
                 className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${
