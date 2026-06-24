@@ -65,7 +65,7 @@ const recognitionStories = [
     label: "Podcast",
     title: "AppDeploy featured in a founder conversation",
     summary:
-      "A founder conversation on AppDeploy, private iOS app distribution, and why controlled rollout workflows matter for teams shipping internal apps.",
+      "A short founder conversation on AppDeploy, private iOS distribution, and controlled rollout workflows.",
     date: "2026",
     location: "Online",
     tone: "amber",
@@ -184,7 +184,9 @@ const PressRelease = () => {
           {recognitionStories.map((story) => (
             <div
               key={story.title}
-              className="rounded-[1.8rem] border border-slate-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] sm:p-6"
+              className={`rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.08)] ${
+                story.previewImage ? "p-5" : "p-5 sm:p-6"
+              }`}
             >
               <span
                 className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${
@@ -197,10 +199,10 @@ const PressRelease = () => {
               >
                 {story.label}
               </span>
-              <h2 className="mt-4 text-2xl font-bold text-slate-900">
+              <h2 className={`mt-4 font-bold text-slate-900 ${story.previewImage ? "text-xl" : "text-2xl"}`}>
                 {story.title}
               </h2>
-              <p className="mt-3 text-slate-600 font-lora leading-7">
+              <p className={`mt-3 text-slate-600 font-lora ${story.previewImage ? "text-sm leading-6" : "leading-7"}`}>
                 {story.summary}
               </p>
               {story.imageSrc && (
@@ -219,7 +221,7 @@ const PressRelease = () => {
                   href={story.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group mt-4 block max-w-[320px] overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-inner"
+                  className="group mt-3 block max-w-[240px] overflow-hidden rounded-xl border border-slate-200 bg-slate-950 shadow-inner"
                   aria-label={story.cta || story.title}
                 >
                   <div className="relative aspect-video">
@@ -230,14 +232,14 @@ const PressRelease = () => {
                       className="h-full w-full object-cover opacity-85 transition duration-300 group-hover:scale-[1.03] group-hover:opacity-100"
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-[#b8430b] shadow-lg transition duration-300 group-hover:scale-105">
-                        <PlayCircle className="size-6" />
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/95 text-[#b8430b] shadow-lg transition duration-300 group-hover:scale-105">
+                        <PlayCircle className="size-5" />
                       </span>
                     </div>
                   </div>
                 </a>
               )}
-              <div className="mt-4 flex flex-wrap gap-5 text-sm text-slate-500 font-lora">
+              <div className={`flex flex-wrap gap-5 text-sm text-slate-500 font-lora ${story.previewImage ? "mt-3" : "mt-4"}`}>
                 <div className="flex items-center gap-2">
                   <Calendar className="size-4" />
                   <span>{story.date}</span>
@@ -247,7 +249,7 @@ const PressRelease = () => {
                   <span>{story.location}</span>
                 </div>
               </div>
-              {story.href && (
+              {story.href && !story.previewImage && (
                 <a
                   href={story.href}
                   target="_blank"
