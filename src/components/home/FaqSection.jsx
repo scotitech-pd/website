@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Who is ScotiTech?",
-    a: "A UK-registered technology and product company operating from Scotland, with worldwide product strategy, engineering, infrastructure, AI, and digital delivery. Shortlisted for the Scotland StartUp Awards 2026.",
+    a: "A UK-registered technology and product company operating from Scotland, with worldwide product strategy, engineering, infrastructure, AI, and digital delivery. Finalist at the Scotland StartUp Awards 2026.",
   },
 ];
 

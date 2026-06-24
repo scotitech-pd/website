@@ -20,7 +20,7 @@ const productLinks = [
 ];
 
 const badges = [
-  { icon: Award, label: "UK StartUp Awards 2026 — Shortlisted" },
+  { icon: Award, label: "UK StartUp Awards 2026 — Finalist" },
   { icon: Apple, label: "Apple Custom Apps" },
   { icon: ShieldCheck, label: "GDPR Aligned" },
 ];

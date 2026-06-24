@@ -27,7 +27,7 @@ const facts = [
   { icon: Building2, value: "UK-registered", label: "Operated from Scotland" },
   { icon: Layers, value: "Broad technology focus", label: "Products, platforms, AI, and delivery" },
   { icon: Globe2, value: "Worldwide", label: "Global reach, clients, and partnerships" },
-  { icon: Trophy, value: "2026 shortlist", label: "Scotland StartUp Awards" },
+  { icon: Trophy, value: "2026 finalist", label: "Scotland StartUp Awards" },
 ];
 
 export default function AboutPage() {

@@ -18,6 +18,9 @@ import {
 
 
 const IMAGES = [
+  { src: "/images/home/scotland-startup-awards-2026-finalist.jpg", alt: "Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions", caption: "Digital StartUp of the Year — 2026 finalist certificate" },
+  { src: "/images/home/scotland-startup-awards-2026-photo-1.jpg", alt: "ScotiTech Scotland StartUp Awards 2026 finalist moment", caption: "Scotland StartUp Awards 2026 finalist recognition" },
+  { src: "/images/home/scotland-startup-awards-2026-photo-2.jpg", alt: "ScotiTech at the Scotland StartUp Awards 2026", caption: "ScotiTech at the Scotland StartUp Awards 2026" },
   { src: "/images/home/p1.png", alt: "Pradeep Dahiya holding the award", caption: "Pradeep Dahiya, Founder & CEO, ScotiTech, holding the award" },
   { src: "/images/home/p2.jpg", alt: "award", caption: "Forttuna Global Excellence Awards 2025, Dubai" },
   { src: "/images/home/p3.jpg", alt: "Close up of the award trophy", caption: "NextGen Innovator trophy, Forttuna Awards" },
@@ -48,10 +51,10 @@ const recognitionStories = [
     tone: "purple",
   },
   {
-    label: "Shortlist",
+    label: "Finalist",
     title: "Scotland StartUp Awards 2026",
     summary:
-      "ScotiTech was shortlisted in the Digital StartUp of the Year category at the Scotland regional final.",
+      "ScotiTech was named a Digital StartUp of the Year finalist at the Scotland StartUp Awards 2026.",
     date: "June 2026",
     location: "Scotland, UK",
     tone: "teal",
@@ -336,22 +339,22 @@ const PressRelease = () => {
             >
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 mb-5">
                 <Image
-                  src="/images/home/startup-awards-2026-shortlist.jpg"
-                  alt="ScotiTech shortlisted for the Scotland StartUp Awards 2026"
+                  src="/images/home/scotland-startup-awards-2026-finalist.jpg"
+                  alt="ScotiTech finalist certificate for the Scotland StartUp Awards 2026"
                   width={800}
                   height={800}
                   className="w-full h-[240px] object-contain p-3"
                 />
               </div>
               <span className="inline-flex rounded-full bg-cyan-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#0F766E]">
-                Shortlist
+                Finalist
               </span>
               <h4 className="mt-4 font-karla font-bold text-2xl text-gray-900 leading-tight">
                 Scotland StartUp Awards 2026
               </h4>
               <p className="mt-3 text-slate-600 font-lora leading-8">
-                ScotiTech was shortlisted in the Digital StartUp of the Year
-                category, reflecting the company’s early product traction and
+                ScotiTech was named a Digital StartUp of the Year finalist,
+                reflecting the company’s early product traction and
                 recognition within Scotland’s startup ecosystem.
               </p>
               <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4">

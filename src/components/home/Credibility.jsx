@@ -16,7 +16,7 @@ const metrics = [
   { value: 2, label: "AppDeploy workspaces in production" },
   { value: 450, suffix: "+", label: "Apps installed via AppDeploy" },
   { value: 300, suffix: "+", label: "Devices reached" },
-  { value: 2026, label: "Scotland StartUp Awards shortlist", raw: true },
+  { value: 2026, label: "Scotland StartUp Awards finalist", raw: true },
 ];
 
 const clients = [
@@ -141,15 +141,15 @@ export default function Credibility() {
             </div>
             <div className="overflow-hidden rounded-2xl border border-hairline">
               <Image
-                src="/images/home/startup-awards-2026-shortlist.jpg"
-                alt="Scotland StartUp Awards 2026 Shortlist — ScotiTech Solutions, Digital StartUp of the Year"
+                src="/images/home/scotland-startup-awards-2026-finalist.jpg"
+                alt="Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions, Digital StartUp of the Year"
                 width={800}
                 height={800}
                 className="h-auto w-full"
               />
             </div>
             <p className="t-small mt-4">
-              Shortlisted for <span className="font-semibold text-strong">Digital StartUp of the Year</span>,
+              Named a 2026 finalist for <span className="font-semibold text-strong">Digital StartUp of the Year</span>,
               Scotland StartUp Awards 2026.
             </p>
             <Link
