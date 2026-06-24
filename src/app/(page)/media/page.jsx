@@ -71,8 +71,8 @@ const recognitionStories = [
     tone: "amber",
     href: "https://www.youtube.com/watch?v=0IMLuoXFYK8&t=2036s",
     cta: "Watch the conversation",
-    previewUrl: "https://www.youtube-nocookie.com/embed/0IMLuoXFYK8?start=2036&rel=0&modestbranding=1",
-    previewTitle: "AppDeploy founder conversation podcast preview",
+    previewImage: "https://img.youtube.com/vi/0IMLuoXFYK8/hqdefault.jpg",
+    previewAlt: "AppDeploy founder conversation podcast preview",
   },
 ];
 
@@ -214,17 +214,28 @@ const PressRelease = () => {
                   />
                 </div>
               )}
-              {story.previewUrl && (
-                <div className="mt-5 max-w-[420px] overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-inner">
-                  <iframe
-                    src={story.previewUrl}
-                    title={story.previewTitle || story.title}
-                    loading="lazy"
-                    className="aspect-video w-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
+              {story.previewImage && (
+                <a
+                  href={story.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group mt-5 block max-w-[360px] overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-inner"
+                  aria-label={story.cta || story.title}
+                >
+                  <div className="relative aspect-video">
+                    <img
+                      src={story.previewImage}
+                      alt={story.previewAlt || story.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover opacity-85 transition duration-300 group-hover:scale-[1.03] group-hover:opacity-100"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                      <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/95 text-[#b8430b] shadow-lg transition duration-300 group-hover:scale-105">
+                        <PlayCircle className="size-7" />
+                      </span>
+                    </div>
+                  </div>
+                </a>
               )}
               <div className="mt-5 flex flex-wrap gap-5 text-sm text-slate-500 font-lora">
                 <div className="flex items-center gap-2">
