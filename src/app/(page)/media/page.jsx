@@ -69,6 +69,8 @@ const recognitionStories = [
     tone: "amber",
     href: "https://www.youtube.com/watch?v=0IMLuoXFYK8&t=2036s",
     cta: "Watch the conversation",
+    previewUrl: "https://www.youtube-nocookie.com/embed/0IMLuoXFYK8?start=2036&rel=0&modestbranding=1",
+    previewTitle: "AppDeploy founder conversation podcast preview",
   },
 ];
 
@@ -199,6 +201,18 @@ const PressRelease = () => {
               <p className="mt-3 text-slate-600 font-lora leading-8">
                 {story.summary}
               </p>
+              {story.previewUrl && (
+                <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-inner">
+                  <iframe
+                    src={story.previewUrl}
+                    title={story.previewTitle || story.title}
+                    loading="lazy"
+                    className="aspect-video w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              )}
               <div className="mt-5 flex flex-wrap gap-5 text-sm text-slate-500 font-lora">
                 <div className="flex items-center gap-2">
                   <Calendar className="size-4" />
