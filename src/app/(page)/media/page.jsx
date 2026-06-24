@@ -51,6 +51,15 @@ const recognitionStories = [
     tone: "purple",
   },
   {
+    label: "Finalist",
+    title: "Scotland StartUp Awards 2026",
+    summary:
+      "ScotiTech was named a Digital StartUp of the Year finalist at the Scotland StartUp Awards 2026.",
+    date: "June 2026",
+    location: "Scotland, UK",
+    tone: "teal",
+  },
+  {
     label: "Podcast",
     title: "AppDeploy featured in a founder conversation",
     summary:
@@ -173,9 +182,7 @@ const PressRelease = () => {
           {recognitionStories.map((story) => (
             <div
               key={story.title}
-              className={`rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)] sm:p-7 ${
-                story.previewUrl ? "lg:col-span-2" : ""
-              }`}
+              className="rounded-[1.8rem] border border-slate-200 bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)] sm:p-7"
             >
               <span
                 className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${
@@ -334,44 +341,6 @@ const PressRelease = () => {
                 <div className="mt-2 flex items-center gap-2 text-sm text-slate-600 font-lora">
                   <MapPin className="size-4 text-amber-700" />
                   <span>London, UK</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-3xl border border-slate-200 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
-            >
-              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 mb-5">
-                <Image
-                  src="/images/home/scotland-startup-awards-2026-finalist.jpg"
-                  alt="ScotiTech finalist certificate for the Scotland StartUp Awards 2026"
-                  width={800}
-                  height={800}
-                  className="w-full h-[240px] object-contain p-3"
-                />
-              </div>
-              <span className="inline-flex rounded-full bg-cyan-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#0F766E]">
-                Finalist
-              </span>
-              <h4 className="mt-4 font-karla font-bold text-2xl text-gray-900 leading-tight">
-                Scotland StartUp Awards 2026
-              </h4>
-              <p className="mt-3 text-slate-600 font-lora leading-8">
-                ScotiTech was named a Digital StartUp of the Year finalist,
-                reflecting the company’s early product traction and
-                recognition within Scotland’s startup ecosystem.
-              </p>
-              <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4">
-                <div className="flex items-center gap-2 text-sm text-slate-600 font-lora">
-                  <Calendar className="size-4 text-[#0F766E]" />
-                  <span>Tue 23 Jun 2026</span>
-                </div>
-                <div className="mt-2 flex items-center gap-2 text-sm text-slate-600 font-lora">
-                  <MapPin className="size-4 text-[#0F766E]" />
-                  <span>Scotland regional final</span>
                 </div>
               </div>
             </motion.div>
