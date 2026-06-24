@@ -48,9 +48,9 @@ const testimonials = [
     role: "Director, Aviskaar Enterprises",
   },
   {
-    text: "Most teams adopt AI and worry about where the data goes. AXOS turns that on its head — a private workspace with AI built into the work itself, running on infrastructure you actually control. The knowledge stays inside the company, not on someone else's model.",
-    name: "Amit Garg",
-    role: "Featured on a founder conversation",
+    text: "In a recent founder conversation, we discussed the AppDeploy problem space: helping teams ship private iOS apps with clearer release control, access management, and fewer manual handoffs.",
+    name: "AppDeploy",
+    role: "Featured in a founder conversation",
     podcastUrl: "https://www.youtube.com/watch?v=0IMLuoXFYK8&t=2036s",
   },
 ];

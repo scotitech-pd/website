@@ -61,9 +61,9 @@ const recognitionStories = [
   },
   {
     label: "Podcast",
-    title: "AXOS featured in a founder conversation",
+    title: "AppDeploy featured in a founder conversation",
     summary:
-      "AXOS — and the case for private, governance-first AI workspaces — discussed alongside founder Amit Garg in a recent founder podcast.",
+      "A founder conversation on AppDeploy, private iOS app distribution, and why controlled rollout workflows matter for teams shipping internal apps.",
     date: "2026",
     location: "Online",
     tone: "amber",
