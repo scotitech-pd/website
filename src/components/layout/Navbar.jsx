@@ -144,7 +144,7 @@ const Navbar = () => {
                     ? scrolled ? "text-brand-strong" : "text-white"
                     : scrolled
                       ? "text-body hover:text-strong"
-                      : "text-white/70 hover:text-white"
+                      : "text-white/90 hover:text-white"
                 )}
               >
                 {item.title}
@@ -158,7 +158,7 @@ const Navbar = () => {
           <div className="hidden lg:block">
             <Button
               size="sm"
-              variant={scrolled ? "default" : "onInk"}
+              variant={scrolled ? "default" : "onInkSolid"}
               onClick={() => setShowModal(true)}
             >
               Talk to our team

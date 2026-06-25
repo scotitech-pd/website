@@ -188,8 +188,8 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* ── Bottom fade to next section ── */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#f7f8fa] to-transparent" />
+      {/* ── Bottom fade to next section (white — HomeSocialProof) ── */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }

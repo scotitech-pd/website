@@ -45,15 +45,15 @@ const problems = [
 
 export default function ProblemsSolved({ chapterNo }) {
   return (
-    <section className="relative overflow-hidden bg-[#080d18] py-20 md:py-28">
+    <section className="relative overflow-hidden bg-[#080d18]">
       {/* Background glow */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_100%,rgba(226,88,14,0.08),transparent_70%)]" />
-      {/* Top edge fade from previous light section */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#f7f8fa] to-transparent" />
-      {/* Bottom fade to next light section */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#f7f8fa] to-transparent" />
+      {/* Top: fade from OurProducts (surface-muted = #f7f8fa) */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#f7f8fa] to-transparent" />
+      {/* Bottom: fade to HowWeWork (surface = #ffffff) */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white to-transparent" />
 
-      <Container className="relative z-10">
+      <Container className="relative z-10 py-20 md:py-28">
         {/* Chapter header */}
         <Reveal>
           <div className="mb-14 flex items-end justify-between gap-6 border-b border-white/8 pb-8">

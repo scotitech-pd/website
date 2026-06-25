@@ -50,8 +50,8 @@ export default function Footer() {
                 <Image src="/logo/logo.png" alt="ScotiTech" width={170} height={42} className="h-auto w-[170px] invert" />
               </Link>
               <p className="max-w-lg font-geist-sans text-2xl font-semibold leading-snug tracking-tight text-white/90 md:text-3xl">
-                Focused software from Scotland.<br />
-                <span className="text-white/40">Shipped with real control.</span>
+                Software built for real control.<br />
+                <span className="text-white/40">Privacy-conscious. Focused. Live.</span>
               </p>
             </div>
             <div className="flex gap-3">
