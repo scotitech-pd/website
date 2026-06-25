@@ -22,7 +22,7 @@ export default function HeroSection() {
         };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#080d18] flex flex-col">
+    <section className="relative min-h-screen bg-[#080d18] flex flex-col" style={{ marginBottom: "-80px", paddingBottom: "80px" }}>
       {/* ── Background layers ── */}
       {/* Deep radial brand glow */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(226,88,14,0.18),transparent_65%)]" />
@@ -187,9 +187,6 @@ export default function HeroSection() {
           <ChevronDown size={18} />
         </motion.div>
       </div>
-
-      {/* ── Bottom fade to next section (white — HomeSocialProof) ── */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }

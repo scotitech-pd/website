@@ -9,13 +9,6 @@ import { useModal } from "@/components/ModalContext";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-/**
- * Hybrid scroll-first nav:
- *  - "anchor" items smooth-scroll to a homepage section when on "/",
- *    and resolve to "/#section" from any other page.
- *  - The /aboutus and /insights routes still exist for SEO/deeper context;
- *    the top nav keeps the primary homepage journey focused.
- */
 const navLinks = [
   { id: 1, title: "Products", type: "anchor", target: "products" },
   { id: 2, title: "Credibility", type: "anchor", target: "proof" },
@@ -37,7 +30,7 @@ const Navbar = () => {
   useEffect(() => {
     const onScroll = () => {
       const top = document.body.scrollTop || document.documentElement.scrollTop;
-      setScrolled(top > 80);
+      setScrolled(top > 60);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -57,6 +50,10 @@ const Navbar = () => {
 
   const isActive = (item) =>
     item.type === "route" && pathname.startsWith(item.link);
+
+  // On the home page before scroll: dark hero mode
+  // On other pages or after scroll: light solid mode
+  const isDark = isHome && !scrolled;
 
   return (
     <div className="h-[72px]">
@@ -112,13 +109,14 @@ const Navbar = () => {
       {/* Bar */}
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-          scrolled
-            ? "border-b border-hairline bg-surface/90 shadow-soft backdrop-blur-md"
-            : "border-b border-transparent bg-transparent"
+          "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+          isDark
+            ? "border-b border-white/8 bg-[#080d18]/80 backdrop-blur-md"
+            : "border-b border-hairline bg-surface/95 shadow-soft backdrop-blur-md"
         )}
       >
         <div className="mx-auto flex h-[72px] max-w-8xl items-center justify-between px-5 min-[500px]:px-10 md:px-20">
+          {/* Logo */}
           <Link href="/" className="flex items-center" aria-label="ScotiTech home">
             <Image
               src="/logo/logo.png"
@@ -127,24 +125,25 @@ const Navbar = () => {
               height={42}
               priority
               className={cn(
-                "h-9 w-auto transition-all duration-300",
-                scrolled ? "brightness-0" : "brightness-0 invert"
+                "h-9 w-auto transition-all duration-500",
+                isDark ? "brightness-0 invert" : "brightness-0"
               )}
             />
           </Link>
 
+          {/* Desktop nav */}
           <nav className="hidden items-center gap-1 lg:flex">
             {navLinks.map((item) => (
               <Link
                 key={item.id}
                 href={hrefFor(item)}
                 className={cn(
-                  "relative rounded-full px-4 py-2 font-karla text-[15px] font-medium transition-colors",
+                  "relative rounded-full px-4 py-2 font-karla text-[15px] font-medium transition-colors duration-300",
                   isActive(item)
-                    ? scrolled ? "text-brand-strong" : "text-white"
-                    : scrolled
-                      ? "text-body hover:text-strong"
-                      : "text-white/90 hover:text-white"
+                    ? isDark ? "text-white" : "text-brand-strong"
+                    : isDark
+                      ? "text-white/75 hover:text-white"
+                      : "text-body hover:text-strong"
                 )}
               >
                 {item.title}
@@ -155,22 +154,24 @@ const Navbar = () => {
             ))}
           </nav>
 
+          {/* CTA */}
           <div className="hidden lg:block">
             <Button
               size="sm"
-              variant={scrolled ? "default" : "onInkSolid"}
+              variant={isDark ? "onInkSolid" : "default"}
               onClick={() => setShowModal(true)}
             >
               Talk to our team
             </Button>
           </div>
 
+          {/* Mobile hamburger */}
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             className={cn(
-              "z-[70] rounded-lg p-1 lg:hidden transition-colors",
-              scrolled ? "text-strong" : "text-white"
+              "z-[70] rounded-lg p-1 lg:hidden transition-colors duration-300",
+              isDark ? "text-white" : "text-strong"
             )}
             onClick={() => setMenuOpen((p) => !p)}
           >
