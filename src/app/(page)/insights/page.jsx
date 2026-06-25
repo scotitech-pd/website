@@ -48,7 +48,7 @@ export default function InsightsPage() {
   );
 
   return (
-    <main className="bg-[#f7f7f5] text-[#0F172A]">
+    <main className="bg-[#f5f3ee] text-[#0F172A]">
       <section className="relative overflow-hidden py-14 sm:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(50%_45%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
 

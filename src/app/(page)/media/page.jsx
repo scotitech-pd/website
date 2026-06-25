@@ -122,7 +122,7 @@ const PressRelease = () => {
   return (
     <main className="min-h-screen font-karla relative isolate">
       {/* BASE BACKGROUND */}
-      <div className="fixed inset-0 bg-[#f7f7f5] -z-20" />
+      <div className="fixed inset-0 bg-[#f5f3ee] -z-20" />
 
       {/* DYNAMIC BACKGROUND DECOR - HERO ONLY */}
       <div className="absolute top-0 left-0 w-full h-[650px] -z-10 pointer-events-none overflow-hidden select-none">

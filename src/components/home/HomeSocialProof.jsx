@@ -57,7 +57,7 @@ function LogoItem({ client }) {
 
 export default function HomeSocialProof({ chapterNo }) {
   return (
-    <section className="relative z-0 overflow-hidden border-y border-[#e4e8e3] bg-white py-12 md:py-14">
+    <section className="relative z-0 overflow-hidden border-y border-[#e8e3d8] bg-[#faf9f6] py-12 md:py-14">
       {/* Soft top-edge gradient */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8C7A5E]/20 to-transparent" />
 
@@ -84,7 +84,7 @@ export default function HomeSocialProof({ chapterNo }) {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="flex items-baseline gap-2 rounded-full border border-[#e4e8e3] bg-[#F7F7F5] px-5 py-2.5"
+              className="flex items-baseline gap-2 rounded-full border border-[#e4e8e3] bg-[#f5f3ee] px-5 py-2.5"
             >
               <span className="font-karla text-base font-bold text-[#111827]">
                 {stat.value}

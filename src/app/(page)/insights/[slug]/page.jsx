@@ -96,7 +96,7 @@ export default async function InsightArticlePage({ params }) {
   ];
 
   return (
-    <main className="bg-[#f7f7f5] text-[#0F172A]">
+    <main className="bg-[#f5f3ee] text-[#0F172A]">
       <JsonLd data={structuredData} />
 
       <section className="relative overflow-hidden py-12 sm:py-16">

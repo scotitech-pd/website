@@ -48,7 +48,7 @@ const outcomeCards = [
 
 export default function AxosDeploymentDiscoveryPage() {
   return (
-    <main className="bg-[#F7F7F5] text-[#111827]">
+    <main className="bg-[#f5f3ee] text-[#111827]">
       <section className="relative overflow-hidden py-14 sm:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(15,118,110,0.18),transparent_30%),radial-gradient(circle_at_85%_12%,rgba(37,99,235,0.10),transparent_28%)]" />
         <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">

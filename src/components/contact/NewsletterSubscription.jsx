@@ -39,7 +39,7 @@ const NewsletterSubscription = () => {
   };
 
   return (
-    <section className="relative bg-[#f7f7f5] text-[#0F172A] py-14 md:py-20">
+    <section className="relative bg-[#f5f3ee] text-[#0F172A] py-14 md:py-20">
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 md:px-20">
         <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_20px_50px_rgba(15,23,42,0.10)] p-6 md:p-10">

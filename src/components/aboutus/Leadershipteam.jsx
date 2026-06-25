@@ -43,7 +43,7 @@ export default function LeadershipTeam() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#f7f7f5] py-14 md:py-20">
+    <section className="relative overflow-hidden bg-[#f5f3ee] py-14 md:py-20">
 
       <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <div className="max-w-4xl mb-10">
