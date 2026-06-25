@@ -60,14 +60,14 @@ export default function LeadershipStrip({ chapterNo }) {
         {team.map((m, i) => (
           <Reveal key={m.name} delay={i * 0.08}>
             <div className="group relative overflow-hidden rounded-3xl border border-hairline bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
-              {/* Large photo — top half */}
-              <div className="relative h-72 w-full overflow-hidden bg-surface-sunken sm:h-80 md:h-96">
+              {/* Large photo */}
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface-sunken sm:aspect-[3/2]">
                 <Image
                   src={m.img}
                   alt={m.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                 />
                 {/* Dark gradient over bottom of photo for text legibility */}
                 <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent" />
