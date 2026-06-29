@@ -34,7 +34,7 @@ const team = [
 export default function LeadershipStrip({ chapterNo }) {
   return (
     <Section surface="base" spacing="lg">
-      {/* Header */}
+      {/* Section header */}
       <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
         <Reveal className="max-w-2xl">
           <Eyebrow>{chapterNo ? `${chapterNo} // ` : ""}Leadership</Eyebrow>
@@ -55,78 +55,83 @@ export default function LeadershipStrip({ chapterNo }) {
         </Reveal>
       </div>
 
-      {/* Cards */}
-      <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-        {team.map((m, i) => (
-          <Reveal key={m.name} delay={i * 0.08}>
-            <div className="group relative overflow-hidden rounded-3xl border border-hairline bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
-              {/* Large photo */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface-sunken sm:aspect-[3/2]">
-                <Image
-                  src={m.img}
-                  alt={m.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
-                />
-                {/* Dark gradient over bottom of photo for text legibility */}
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent" />
-                {/* Name overlay on photo */}
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <p className="font-geist-sans text-2xl font-semibold text-white drop-shadow">
-                    {m.name}
-                  </p>
-                  <p className="mt-0.5 font-karla text-sm font-semibold text-brand">
-                    {m.title}
-                  </p>
+      {/* Team cards — horizontal layout, portrait small and contained */}
+      <div className="mt-12 flex flex-col gap-5">
+        {team.map((m, i) => {
+          const Icon0 = m.credentials[0]?.icon;
+          return (
+            <Reveal key={m.name} delay={i * 0.08}>
+              <div className="group flex flex-col gap-5 rounded-2xl border border-hairline bg-surface p-5 shadow-soft transition-all duration-300 hover:shadow-card sm:flex-row sm:items-start sm:gap-7 md:p-7">
+
+                {/* Portrait — small, square, contained */}
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-surface-sunken sm:h-24 sm:w-24">
+                  <Image
+                    src={m.img}
+                    alt={m.name}
+                    fill
+                    sizes="96px"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
                 </div>
-                {/* LinkedIn badge */}
-                <a
-                  href={m.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${m.name} on LinkedIn`}
-                  className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-[#0077b5] shadow-soft backdrop-blur transition-all hover:scale-105 hover:bg-white"
-                >
-                  <Linkedin size={16} />
-                </a>
-              </div>
 
-              {/* Body */}
-              <div className="flex flex-col p-6 md:p-7">
-                <p className="font-karla text-[15px] leading-relaxed text-body">
-                  {m.description}
-                </p>
+                {/* Content */}
+                <div className="flex flex-1 flex-col gap-3 min-w-0">
 
-                {/* Credential pills */}
-                {m.credentials.length > 0 && (
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {m.credentials.map((c) => {
-                      const Icon = c.icon;
-                      return (
-                        <span
-                          key={c.text}
-                          className="inline-flex items-center gap-1.5 rounded-full border border-hairline bg-surface-muted px-3 py-1.5 font-karla text-xs font-medium text-body"
-                        >
-                          <Icon size={12} className="text-brand-strong" />
-                          {c.text}
-                        </span>
-                      );
-                    })}
+                  {/* Name + title row */}
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="font-karla text-lg font-semibold text-strong leading-tight">
+                        {m.name}
+                      </p>
+                      <p className="mt-0.5 font-karla text-sm font-semibold text-brand-strong">
+                        {m.title}
+                      </p>
+                    </div>
+                    <a
+                      href={m.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${m.name} on LinkedIn`}
+                      className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-hairline bg-surface-muted text-muted transition-all hover:border-[#0077b5]/30 hover:bg-[#0077b5]/10 hover:text-[#0077b5]"
+                    >
+                      <Linkedin size={14} />
+                    </a>
                   </div>
-                )}
 
-                <Link
-                  href="/aboutus"
-                  className="mt-6 inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong hover:text-brand"
-                >
-                  View full profile
-                  <ArrowRight size={15} />
-                </Link>
+                  {/* Bio */}
+                  <p className="font-karla text-sm leading-relaxed text-body">
+                    {m.description}
+                  </p>
+
+                  {/* Bottom row — credentials + link */}
+                  <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
+                    <div className="flex flex-wrap gap-2">
+                      {m.credentials.map((c) => {
+                        const Icon = c.icon;
+                        return (
+                          <span
+                            key={c.text}
+                            className="inline-flex items-center gap-1.5 rounded-full border border-hairline bg-surface-muted px-3 py-1 font-karla text-[11px] font-medium text-muted"
+                          >
+                            <Icon size={11} className="text-brand-strong" />
+                            {c.text}
+                          </span>
+                        );
+                      })}
+                    </div>
+                    <Link
+                      href="/aboutus"
+                      className="inline-flex items-center gap-1 font-karla text-xs font-semibold text-brand-strong hover:text-brand"
+                    >
+                      Full profile
+                      <ArrowRight size={13} />
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </div>
     </Section>
   );
