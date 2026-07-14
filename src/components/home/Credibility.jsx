@@ -33,8 +33,8 @@ const clients = [
     note: "Portfolio partner",
   },
   {
-    name: "No94oo",
-    image: "/images/aboutus/no94oo-logo.png",
+    name: "CRMNext",
+    image: null,
     href: null,
     note: "Portfolio partner",
   },
@@ -59,13 +59,19 @@ function ClientCard({ client }) {
   const inner = (
     <div className="group/logo flex h-full flex-col items-center gap-3 rounded-xl border border-hairline bg-surface-muted p-5 text-center transition-shadow duration-300 hover:shadow-md">
       <span className="flex h-12 w-full items-center justify-center">
-        <Image
-          src={client.image}
-          alt={client.name}
-          width={140}
-          height={48}
-          className="h-9 w-auto max-w-[140px] object-contain opacity-80 grayscale transition duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
-        />
+        {client.image ? (
+          <Image
+            src={client.image}
+            alt={client.name}
+            width={140}
+            height={48}
+            className="h-9 w-auto max-w-[140px] object-contain opacity-80 grayscale transition duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
+          />
+        ) : (
+          <span className="rounded-full border border-hairline bg-surface px-4 py-2 font-karla text-sm font-semibold text-strong">
+            {client.name}
+          </span>
+        )}
       </span>
       <div>
         <p className="font-karla text-sm font-semibold text-strong">{client.name}</p>

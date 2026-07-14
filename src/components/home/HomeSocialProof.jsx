@@ -14,8 +14,8 @@ const clients = [
     href: null,
   },
   {
-    name: "No94oo",
-    image: "/images/aboutus/no94oo-logo.png",
+    name: "CRMNext",
+    image: null,
     href: null,
   },
 ];
@@ -31,12 +31,16 @@ const stats = [
 ];
 
 function LogoItem({ client }) {
-  const img = (
+  const img = client.image ? (
     <img
       src={client.image}
       alt={client.name}
       className="h-10 w-auto max-w-[130px] object-contain opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
     />
+  ) : (
+    <span className="rounded-full border border-[#e4e8e3] bg-[#f5f3ee] px-4 py-2 font-karla text-sm font-semibold text-[#111827]">
+      {client.name}
+    </span>
   );
 
   if (client.href) {

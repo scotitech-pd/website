@@ -9,32 +9,32 @@ import Eyebrow from "@/components/ui/Eyebrow";
 
 const faqs = [
   {
-    q: "Which product should we talk to ScotiTech about first?",
-    a: "If your immediate problem is private mobile app rollout, start with AppDeploy. If you are evaluating a controlled employee workspace with private AI and self-hosting requirements, start with AXOS. If the need is broader, we can route the conversation to the right product or delivery path.",
+    q: "What does ScotiTech sell today?",
+    a: "ScotiTech currently leads with focused software products rather than a broad service catalogue. AppDeploy is for private app distribution and rollout operations. AXOS is for organisations evaluating a controlled, enterprise AI workspace with stronger hosting, governance, and data-control requirements.",
   },
   {
-    q: "Is AppDeploy ready for production use?",
-    a: "Yes. AppDeploy is live and built for branded private app distribution, release communication, access control, and clearer install journeys for employees, partners, or client teams.",
+    q: "Who is AppDeploy a serious fit for?",
+    a: "AppDeploy is a strong fit for organisations that already have a private or internal app and need a cleaner way to control access, explain installs, manage branded rollout, and reduce confusion around who gets what version and when.",
   },
   {
-    q: "Can we test AXOS before adopting it?",
-    a: "Yes, for qualified organisations. AXOS is an enterprise product, so we first review your business profile, team size, workflows, hosting expectations, and control requirements. After that, we can provide a limited testing platform so decision-makers can evaluate fit before employee rollout.",
+    q: "When should we talk about AXOS instead of a normal SaaS workspace?",
+    a: "Talk to us about AXOS when the standard public-cloud productivity stack is the problem, not the answer. The stronger AXOS fit is a team that cares about private deployment, tighter governance, AI control, data location, and a more serious evaluation before employee rollout.",
   },
   {
-    q: "Do you work only in the UK and India?",
-    a: "No. ScotiTech is UK-registered and operates from Scotland, but the product and delivery focus is worldwide. We work with organisations based on the problem, governance needs, and rollout fit rather than geography alone.",
+    q: "Is AXOS publicly available for instant signup?",
+    a: "No. AXOS is enterprise-only. Organisations first share their business information, intended use case, and deployment expectations. If the fit is real, we provide a limited testing platform so decision-makers can evaluate the product before any wider adoption discussion.",
   },
   {
-    q: "How do you handle privacy, hosting, and control?",
-    a: "We design around clear data boundaries, practical deployment control, and buyer visibility. AppDeploy keeps private app rollout more structured. AXOS is built for organisations that need stronger control over workspace data, AI use, and hosting decisions.",
+    q: "Can ScotiTech support private deployment, self-hosting, or tighter control requirements?",
+    a: "Yes, where the product fit supports it. That conversation is especially relevant for AXOS, and for AppDeploy enterprise cases that need stronger control, reporting, or environment-specific rollout requirements. We prefer to scope those needs directly rather than hide them behind vague marketing language.",
   },
   {
-    q: "What information should we share before a call?",
-    a: "A useful first message includes your organisation type, country, team size, the product you are interested in, the current problem, and any hosting, compliance, Apple Business, MDM, or rollout constraints. That helps us avoid a generic discovery call.",
+    q: "What should we send before the first conversation?",
+    a: "The most useful brief includes your organisation type, country, team size, the product you are interested in, the current operational problem, and any constraints around hosting, compliance, Apple Business, MDM, AI governance, or rollout ownership. That lets us respond with a sharper next step instead of a generic intro call.",
   },
   {
-    q: "Do you build custom software as well as products?",
-    a: "ScotiTech is product-led, but our wider work can include practical software, AI, infrastructure, and digital delivery where there is a clear business case. The best starting point is still the problem you need solved, not a fixed service menu.",
+    q: "What happens after we get in touch?",
+    a: "We qualify the product fit first. If the use case aligns, we move into a practical conversation around rollout, evaluation, deployment, or access. If it is not a real fit, we would rather say that early than stretch the wrong product into the wrong situation.",
   },
 ];
 
@@ -81,10 +81,9 @@ export default function FaqSection() {
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[36%_64%] lg:gap-16">
         <Reveal>
           <Eyebrow>FAQ</Eyebrow>
-          <h2 className="t-h1 mt-3">Questions buyers usually ask first.</h2>
+          <h2 className="t-h1 mt-3">Questions serious buyers ask early.</h2>
           <p className="t-lead mt-5">
-            Clear answers before a call, so the next conversation can stay
-            practical.
+            Straight answers on fit, control, evaluation, and what happens next.
           </p>
         </Reveal>
 

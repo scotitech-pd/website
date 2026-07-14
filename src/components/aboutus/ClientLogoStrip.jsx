@@ -14,8 +14,8 @@ const logos = [
     href: null,
   },
   {
-    name: "No94oo",
-    image: "/images/aboutus/no94oo-logo.png",
+    name: "CRMNext",
+    image: null,
     href: null,
   },
 ];
