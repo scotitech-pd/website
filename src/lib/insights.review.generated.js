@@ -5,6 +5,99 @@ export const allInsights = [
   {
     "status": "published",
     "featured": false,
+    "slug": "ai-workspace-vs-digital-workplace-solutions",
+    "category": "AI Workspace",
+    "topic": "Digital workplace solutions",
+    "title": "AI workspace or digital workplace solution? The difference matters",
+    "summary": "AI workspace, digital workplace, digital workspace platform, and enterprise AI platform are often used as if they mean the same thing. They do not. For serious buyers, the important question is whether the workspace controls data, identity, files, AI access, and deployment boundaries well enough to support real employee adoption.",
+    "seoDescription": "Compare AI workspace, digital workplace solutions, digital workspace platforms, private AI, self-hosted AI, and enterprise AI platform requirements for serious buyers.",
+    "date": "2026-07-14",
+    "updated": "2026-07-14",
+    "displayDate": "14 July 2026",
+    "readTime": "5 min read",
+    "sourceName": "ScotiTech editorial team",
+    "sourceUrl": "https://scotitech.com/products/axos",
+    "image": "/images/insights/secure-ai-governance.jpg",
+    "tags": [
+      "AI workspace",
+      "digital workplace solutions",
+      "enterprise AI platform",
+      "private AI",
+      "self-hosted AI",
+      "self hosted AI",
+      "on premise AI",
+      "AXOS"
+    ],
+    "relatedProduct": {
+      "name": "AXOS",
+      "href": "/products/axos",
+      "description": "A private AI workspace and enterprise AI platform for teams evaluating governed employee operations, self-hosted AI, and controlled deployment.",
+      "cta": "Explore AXOS"
+    },
+    "highlights": [
+      {
+        "label": "Search demand",
+        "value": "AI workspace",
+        "description": "The strongest keyword signal points to buyers looking for practical AI workspace and digital workplace solutions, not generic AI commentary."
+      },
+      {
+        "label": "Buyer need",
+        "value": "Control",
+        "description": "Enterprise teams need to know where data lives, who can access AI, and whether the workspace can support governed employee rollout."
+      },
+      {
+        "label": "AXOS angle",
+        "value": "Private deployment",
+        "description": "AXOS is positioned for private AI, self-hosted AI, and on premise AI evaluation where control matters more than instant signup."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "AI workspace is becoming the sharper search term",
+        "paragraphs": [
+          "The keyword signal is clear: buyers are searching for AI workspace, enterprise AI platform, private AI, and digital workplace solutions because the old productivity-suite category no longer answers the whole problem.",
+          "A normal digital workplace helps people communicate and coordinate. An AI workspace has to go further: it must decide what AI can see, which files are available, who can ask questions, how outputs are reviewed, and whether sensitive work stays inside a controlled environment."
+        ]
+      },
+      {
+        "heading": "Digital workplace solutions still matter",
+        "paragraphs": [
+          "The phrase digital workplace solutions is broad, but the buyer intent behind it is useful. Teams want fewer disconnected tools, clearer employee access, better collaboration, and less operational sprawl.",
+          "The risk is that AI gets added as a feature on top of that sprawl. If files, chat, tasks, meetings, and AI all live in separate systems, the organisation may gain convenience without gaining control."
+        ]
+      },
+      {
+        "heading": "What makes an enterprise AI platform credible",
+        "paragraphs": [
+          "An enterprise AI platform should be judged by operating controls, not only by model quality. Buyers should ask how identity, file access, audit logs, retention, deployment model, and human review work before they expand access to employees.",
+          "That is especially important for private AI, self-hosted AI, self hosted AI, and on premise AI discussions. The promise is not simply that the tool has AI. The promise is that the organisation can use AI without losing ownership of its data and workflow boundaries."
+        ]
+      },
+      {
+        "heading": "Where AXOS fits",
+        "paragraphs": [
+          "AXOS is strongest when the customer is not looking for another lightweight chatbot. The stronger fit is an organisation evaluating a private AI workspace with mail, drive, calendar, chat, video, tasks, and governed AI in one environment.",
+          "That makes AXOS part AI workspace, part digital workspace platform, and part deployment conversation. The evaluation starts with business information because the right deployment model depends on data posture, team size, infrastructure expectations, and control requirements."
+        ]
+      },
+      {
+        "heading": "The ScotiTech view",
+        "paragraphs": [
+          "The market language will keep shifting, but the buyer question is stable: can this workspace help employees work with AI while keeping business data, permissions, and accountability under control?",
+          "That is the right way to evaluate AI workspace and digital workplace solutions. Ignore the labels for a moment and inspect the operating model underneath."
+        ]
+      }
+    ],
+    "actionItems": [
+      "Decide whether your need is a collaboration tool, an AI workspace, or a controlled enterprise AI platform.",
+      "Review identity, file access, audit logs, retention, and human review before employee rollout.",
+      "Separate public-cloud AI convenience from private AI, self-hosted AI, or on premise AI requirements.",
+      "Use a limited evaluation environment before adopting an AI workspace across employees."
+    ]
+  },
+  {
+    "status": "published",
+    "featured": false,
     "slug": "enterprise-ai-trials-need-tighter-control-before-rollout",
     "date": "2026-07-14",
     "updated": "2026-07-14",
@@ -18,15 +111,18 @@ export const allInsights = [
       "model": "gpt-5-mini"
     },
     "category": "AI Governance",
-    "topic": "Enterprise AI evaluation",
-    "title": "Enterprise AI trials need tighter control before rollout",
-    "summary": "Before broad employee adoption, enterprises should evaluate AI in governed, time-limited private workspaces. Controlled trials reduce risk, surface integration needs, and produce measurable readiness criteria. AXOS provides the mechanisms enterprises need to run these pilot environments with auditing, policy enforcement, and staged access.",
-    "seoDescription": "Learn why enterprises should run AI pilots in governed, time-limited private workspaces and how AXOS supports controlled trials with auditing, policy controls, and measurable readiness metrics.",
+    "topic": "Enterprise AI platform evaluation",
+    "title": "Enterprise AI platform trials need tighter control before rollout",
+    "summary": "Before broad employee adoption, enterprises should evaluate AI in governed, time-limited AI workspaces. Controlled trials reduce risk, surface integration needs, and produce measurable readiness criteria. AXOS provides the mechanisms enterprises need to test a private AI workspace or self-hosted enterprise AI platform before rollout.",
+    "seoDescription": "Learn why enterprise AI platform trials should run in governed AI workspaces, and how AXOS supports private AI, self-hosted AI, and measurable rollout criteria.",
     "tags": [
       "enterprise AI",
+      "enterprise AI platform",
+      "AI workspace",
       "AI governance",
       "AXOS",
       "private AI workspace",
+      "self-hosted AI",
       "pilot program"
     ],
     "highlights": [
@@ -55,10 +151,10 @@ export const allInsights = [
         ]
       },
       {
-        "heading": "A practical alternative: governed, time-limited private workspaces",
+        "heading": "A practical alternative: governed, time-limited AI workspaces",
         "paragraphs": [
           "Set up private, time-limited AI workspaces for pilots that mirror the target production environment but include guardrails. Key elements include: scoped data access, enforced usage policies, role-based permissions, audit logging, and an explicit end date tied to evaluation milestones.",
-          "Time limits are important because they create a natural discipline: pilots must define goals, measurement criteria and ownership up front. When a workspace is scheduled to expire, teams must either document how they will transition to production or demonstrate why further evaluation is necessary. That prevents pilots from becoming long-running, unmanaged deployments."
+          "Time limits are important because they create a natural discipline: pilots must define goals, measurement criteria and ownership up front. When an enterprise AI platform evaluation is scheduled to expire, teams must either document how they will transition to production or demonstrate why further evaluation is necessary. That prevents pilots from becoming long-running, unmanaged deployments."
         ]
       },
       {
@@ -76,10 +172,10 @@ export const allInsights = [
         ]
       },
       {
-        "heading": "How AXOS supports safe, effective AI evaluations",
+        "heading": "How AXOS supports private AI workspace evaluations",
         "paragraphs": [
           "AXOS is designed to host private AI workspaces with governance controls suited for enterprise pilots. It provides role-based access controls, configurable policies for data use and model access, and built-in audit logs that capture workspace activity and model metadata. Workspaces can be time-boxed and provisioned with predefined datasets and model endpoints so trials are reproducible and comparable.",
-          "AXOS also helps operationalise the measurement side: teams can attach evaluation suites and monitoring hooks to workspaces to gather performance and operational metrics during the trial. Those outputs feed governance checkpoints that gate wider rollout decisions."
+          "AXOS also helps operationalise the measurement side for self-hosted AI or on-premise AI evaluation: teams can attach evaluation suites and monitoring hooks to workspaces to gather performance and operational metrics during the trial. Those outputs feed governance checkpoints that gate wider rollout decisions."
         ]
       },
       {
@@ -92,14 +188,14 @@ export const allInsights = [
     ],
     "actionItems": [
       "Design 30–90 day AI pilots with explicit goals, ownership and measurable success criteria.",
-      "Use private, time-limited workspaces that enforce data and model policies and produce audit logs.",
+      "Use private, time-limited AI workspaces that enforce data and model policies and produce audit logs.",
       "Collect both performance and operational metrics to inform a go/no-go decision.",
       "Move successful pilots through a staged rollout with updated policies and monitoring in production."
     ],
     "relatedProduct": {
       "name": "AXOS",
       "href": "/products/axos",
-      "description": "AXOS provides governed private AI workspaces with policy controls, auditing, and lifecycle management to support safe enterprise pilots and staged rollouts.",
+      "description": "AXOS provides governed private AI workspaces with policy controls, auditing, and lifecycle management to support safe enterprise AI platform pilots and staged rollouts.",
       "cta": "Explore AXOS"
     }
   },
@@ -375,10 +471,10 @@ export const allInsights = [
     "featured": false,
     "slug": "secure-ai-adoption-now-needs-operating-controls",
     "category": "AI Governance",
-    "topic": "Secure AI adoption",
-    "title": "Secure AI adoption fails when policy never reaches the workflow",
-    "summary": "Most AI risk does not appear in a board policy document. It appears when files move into the wrong workspace, prompts expose sensitive context, outputs influence decisions, and nobody can see who did what. The UK AI Cyber Security Code gives buyers a useful baseline. AXOS turns that conversation toward controlled, private AI workspaces.",
-    "seoDescription": "A ScotiTech briefing on the UK AI Cyber Security Code of Practice, secure AI deployment, access governance, monitoring, and why enterprise AI adoption needs operating controls.",
+    "topic": "Private AI adoption",
+    "title": "Private AI adoption fails when policy never reaches the workflow",
+    "summary": "Most AI risk does not appear in a board policy document. It appears when files move into the wrong workspace, prompts expose sensitive context, outputs influence decisions, and nobody can see who did what. The UK AI Cyber Security Code gives buyers a useful baseline. AXOS turns that conversation toward controlled private AI workspaces and digital workplace governance.",
+    "seoDescription": "A ScotiTech briefing on private AI, secure AI platforms, access governance, monitoring, and why enterprise AI adoption needs controlled workspace operations.",
     "date": "2026-05-04",
     "updated": "2026-06-14",
     "displayDate": "4 May 2026",
@@ -387,7 +483,10 @@ export const allInsights = [
     "sourceUrl": "https://www.gov.uk/government/publications/ai-cyber-security-code-of-practice/code-of-practice-for-the-cyber-security-of-ai",
     "image": "/images/insights/ai-governance-workspace.jpg",
     "tags": [
-      "AI security",
+      "private AI",
+      "secure AI platform",
+      "AI workspace",
+      "digital workplace",
       "Governance",
       "Secure deployment",
       "AXOS"
@@ -417,10 +516,10 @@ export const allInsights = [
     ],
     "sections": [
       {
-        "heading": "The AI risk is already inside the workflow",
+        "heading": "The private AI risk is already inside the workflow",
         "paragraphs": [
           "By the time a business writes an AI policy, teams may already be experimenting with documents, customer notes, meeting summaries, spreadsheets, code, and decision-support prompts.",
-          "That is why secure AI adoption cannot live only in a document. The practical risk sits inside everyday work: who can upload files, what the system can see, where outputs are stored, and whether a human review path exists before AI-supported work affects a real decision."
+          "That is why secure AI adoption cannot live only in a document. The practical risk sits inside everyday work: who can upload files, what a private AI system can see, where outputs are stored, and whether a human review path exists before AI-supported work affects a real decision."
         ]
       },
       {
@@ -431,17 +530,17 @@ export const allInsights = [
         ]
       },
       {
-        "heading": "Policy without workspace control becomes theatre",
+        "heading": "Policy without AI workspace control becomes theatre",
         "paragraphs": [
           "A policy can say sensitive data should not be pasted into unmanaged tools. It cannot, by itself, stop a team from doing exactly that when deadlines are tight and the approved workflow is inconvenient.",
-          "Secure adoption needs an operating layer: permissions, private file handling, approved workspaces, usage boundaries, output review, monitoring, and clear ownership when something needs to be investigated."
+          "Secure adoption needs an operating layer: permissions, private file handling, approved AI workspaces, usage boundaries, output review, monitoring, and clear ownership when something needs to be investigated."
         ]
       },
       {
         "heading": "Where AXOS fits",
         "paragraphs": [
-          "AXOS is strongest when the customer wants AI support in a controlled environment rather than another open-ended tool dropped into the business.",
-          "The product story should be practical: private workspace, clearer access, governed files, task context, and useful AI assistance that respects the organisation's need for control."
+          "AXOS is strongest when the customer wants private AI support in a controlled environment rather than another open-ended tool dropped into the business.",
+          "The product story should be practical: private AI workspace, clearer access, governed files, task context, and useful AI assistance that respects the organisation's need for digital workplace control."
         ]
       }
     ],

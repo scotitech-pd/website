@@ -2,31 +2,38 @@ import ProductTemplate from "@/components/products/ProductTemplate";
 import { getProduct } from "@/lib/products";
 
 export const metadata = {
-  title: "AXOS — Governance-First AI in a Private Workspace",
+  title: "AXOS - Private AI Workspace & Enterprise AI Platform",
   description:
-    "AXOS is a private, self-hostable workspace with governance-first AI grounded in your own knowledge — mail, drive, chat, video, tasks, and AI in one controlled environment.",
+    "AXOS is a private AI workspace and self-hosted enterprise AI platform for digital workplace teams that need mail, drive, chat, video, tasks, and governed AI in one controlled environment.",
   alternates: { canonical: "/products/axos" },
   keywords: [
     "AXOS",
+    "AI workspace",
+    "enterprise AI platform",
+    "private AI",
+    "digital workplace solutions",
+    "digital workspace platform",
     "private AI workspace",
     "self-hosted AI",
+    "self hosted AI",
     "governance-first AI",
     "enterprise productivity suite",
     "on-premise AI",
+    "on premise AI",
     "private workspace",
     "RAG",
   ],
   openGraph: {
-    title: "AXOS — Governance-First AI in a Private Workspace",
+    title: "AXOS - Private AI Workspace & Enterprise AI Platform",
     description:
-      "A private, self-hostable enterprise workspace with AI built in. Mail, drive, chat, video, tasks — your perimeter, your data.",
+      "A private, self-hostable AI workspace and digital workplace platform with mail, drive, chat, video, tasks, and governed AI built in.",
     url: "/products/axos",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AXOS — Governance-First AI in a Private Workspace",
-    description: "A private, self-hostable enterprise workspace with AI built in.",
+    title: "AXOS - Private AI Workspace & Enterprise AI Platform",
+    description: "A private, self-hostable enterprise AI platform with workspace tools built in.",
   },
 };
 

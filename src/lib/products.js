@@ -169,10 +169,10 @@ export const products = {
     externalLabel: "Request AXOS access",
     externalNote: "Enterprise access starts at",
     status: { variant: "early", label: "Enterprise only" },
-    eyebrow: "Enterprise AI workspace",
-    tagline: "Your entire workspace — self-hosted.",
+    eyebrow: "Private AI workspace",
+    tagline: "Your enterprise AI platform, self-hosted.",
     description:
-      "A completed enterprise-only workspace with AI built in: mail, drive, calendar, chat, video, and tasks. Organisations share their business profile first, then receive a limited testing platform before adopting AXOS for employees.",
+      "A completed enterprise-only AI workspace and digital workplace platform with mail, drive, calendar, chat, video, tasks, and private AI built in. Organisations share their business profile first, then receive a limited testing platform before adopting AXOS for employees.",
     hero: {
       media: {
         type: "image",
@@ -182,7 +182,7 @@ export const products = {
       },
     },
     problem: {
-      title: "Modern productivity suites put your data in someone else's cloud.",
+      title: "Most digital workplace solutions put your data in someone else's cloud.",
       points: [
         "Mail, files, chat, and tasks scattered across external SaaS you don't control.",
         "AI features that quietly send your work to third-party models.",
@@ -190,11 +190,11 @@ export const products = {
       ],
     },
     solution: {
-      title: "One self-hosted suite — with AI — that never leaves your environment.",
+      title: "One self-hosted enterprise AI platform that never leaves your environment.",
       points: [
-        "Mail, drive, calendar, chat, video, and tasks in a single private workspace.",
+        "Mail, drive, calendar, chat, video, and tasks in a single private AI workspace.",
         "A governance-first AI agent built in and running on your own infrastructure.",
-        "100% on-premise: zero external calls and complete data sovereignty.",
+        "100% on-premise AI: zero external calls and complete data sovereignty.",
       ],
     },
     features: [
@@ -202,8 +202,8 @@ export const products = {
       { icon: "HardDrive", title: "Drive & storage", body: "Files and shared storage, controlled end to end on your infrastructure." },
       { icon: "Video", title: "Chat & video", body: "Team messaging and calls without routing through a third-party tool." },
       { icon: "CheckSquare", title: "Tasks", body: "Plan and coordinate work alongside everything else in the suite." },
-      { icon: "Bot", title: "Governance-first AI", body: "Policy-aligned AI built into the workspace — shaped by your access rules, team policy, and data posture. Not bolted on." },
-      { icon: "ServerCog", title: "100% on-premise", body: "Zero external calls and complete data sovereignty by design." },
+      { icon: "Bot", title: "Governance-first private AI", body: "Policy-aligned AI built into the workspace, shaped by your access rules, team policy, and data posture." },
+      { icon: "ServerCog", title: "Self-hosted and on-premise", body: "Self-hosted AI or on-premise AI deployment with zero external calls and complete data sovereignty by design." },
     ],
     audiences: {
       eyebrow: "Who AXOS is for",
@@ -251,7 +251,7 @@ export const products = {
     deployment: {
       eyebrow: "Deployment model",
       title: "Start lean. Mature toward deeper ownership.",
-      body: "Begin where evaluation is fastest. Move to private cloud, self-hosted, or fully on-premises as your data posture demands. Same product, different perimeter.",
+      body: "Begin where evaluation is fastest. Move to private cloud, self-hosted AI, or fully on-premise AI as your data posture demands. Same product, different perimeter.",
       options: [
         {
           icon: "Cloud",
@@ -323,8 +323,8 @@ export const products = {
       ],
     },
     faqs: [
-      { q: "Is AXOS really self-hosted?", a: "Yes. AXOS runs 100% on your own infrastructure (or private cloud), with zero external calls and complete data sovereignty." },
-      { q: "What's included in the suite?", a: "Mail, drive, calendar, chat, video, and tasks — plus a governance-first AI agent built directly into the workspace." },
+      { q: "Is AXOS really self-hosted?", a: "Yes. AXOS can run on your own infrastructure or private cloud, with zero external calls and complete data sovereignty for teams that need self-hosted AI or on-premise AI." },
+      { q: "What's included in the AI workspace?", a: "Mail, drive, calendar, chat, video, and tasks, plus a governance-first AI agent built directly into the digital workspace platform." },
       { q: "How do people sign in?", a: "SSO (SAML) on the web, with biometric login available on mobile." },
       { q: "Can we test AXOS before adopting it?", a: "Yes. AXOS is enterprise-only, so we first review your business information and intended use case. Suitable organisations receive a limited testing platform to evaluate AXOS before deciding on employee adoption." },
     ],

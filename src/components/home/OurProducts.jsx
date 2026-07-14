@@ -39,15 +39,15 @@ const flagships = [
     logo: "/images/brand/axos-icon.png",
     accent: "bg-axos",
     status: { variant: "early", label: "Enterprise only" },
-    category: "Self-hosted employee workspace",
-    tagline: "Your entire workspace — self-hosted.",
+    category: "Private AI workspace",
+    tagline: "Your enterprise AI platform, self-hosted.",
     description:
-      "A completed enterprise workspace for employees — mail, drive, chat, video, tasks — with governance-first AI built in and a limited testing platform for qualified organisations.",
+      "A completed AI workspace and digital workplace platform for employees - mail, drive, chat, video, tasks - with governance-first AI built in and a limited testing platform for qualified organisations.",
     bestFor:
-      "Organisations evaluating a private workspace for employee operations and controlled AI use.",
+      "Organisations evaluating private AI, self-hosted AI, or digital workplace solutions for employee operations.",
     rollout:
       "Business-profile review, limited testing platform, governance planning, and deployment fit assessment.",
-    capabilities: ["Enterprise evaluation", "Governance-first AI", "100% on-premise"],
+    capabilities: ["Enterprise AI platform", "Private AI", "100% on-premise"],
     media: {
       type: "image",
       src: "/images/products/axos/workspace.png",
@@ -68,9 +68,10 @@ export default function OurProducts() {
             </h2>
             <p className="t-lead mt-5">
               AppDeploy is live for private mobile app distribution. AXOS is a
-              completed enterprise workspace evaluated through a qualified
-              testing process. Both are built for organisations that care about
-              adoption, governance, and where operational data lives.
+              completed private AI workspace and enterprise AI platform
+              evaluated through a qualified testing process. Both are built for
+              organisations that care about adoption, governance, and where
+              operational data lives.
             </p>
           </div>
 
@@ -81,7 +82,7 @@ export default function OurProducts() {
               </p>
               <p className="mt-2 font-lora text-sm leading-6 text-body">
                 Software products for distribution, internal operations,
-                privacy-conscious AI, and practical deployment control.
+                AI workspace adoption, and practical deployment control.
               </p>
             </div>
             <div>
