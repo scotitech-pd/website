@@ -4,9 +4,9 @@
   "slug": "apple-business-sme-impact",
   "category": "Industry Update",
   "topic": "Apple ecosystem",
-  "title": "Apple Business gives SMEs a cleaner way to run Apple at work",
-  "summary": "For many SMEs, Apple administration has been a patchwork of device setup, app access, employee changes, support routes, and brand details. Apple Business brings those pieces closer together. The opportunity for ScotiTech is to help organisations turn that platform foundation into cleaner app rollout, better access workflows, and less operational noise.",
-  "seoDescription": "A practical ScotiTech briefing on Apple Business, what changed on 14 April 2026, and how SMEs should approach device deployment, MDM, access governance, and app rollout.",
+  "title": "Apple Business Manager custom apps need a cleaner rollout model",
+  "summary": "For many SMEs, Apple administration has been a patchwork of device setup, app access, employee changes, support routes, and brand details. Apple Business brings those pieces closer together. The opportunity for ScotiTech is to help organisations turn Apple Business Manager custom apps into cleaner app distribution, better access workflows, and less operational noise.",
+  "seoDescription": "How SMEs should approach Apple Business Manager custom apps, app distribution, MDM, access governance, and private app rollout with a cleaner operating model.",
   "date": "2026-03-24",
   "updated": "2026-06-14",
   "displayDate": "24 March 2026",
@@ -16,6 +16,8 @@
   "image": "/images/insights/apple-business-team-devices.jpg",
   "tags": [
     "Apple Business",
+    "Apple Business Manager custom apps",
+    "app distribution",
     "MDM",
     "SME technology",
     "AppDeploy"
@@ -45,7 +47,7 @@
   ],
   "sections": [
     {
-      "heading": "Apple is reducing the admin sprawl",
+      "heading": "Apple Business Manager is reducing the admin sprawl",
       "paragraphs": [
         "On 24 March 2026, Apple announced Apple Business as an all-in-one platform for organisations, with availability from 14 April 2026 across more than 200 countries and regions.",
         "The important part for SMEs is not just the launch date. It is the consolidation: device management, employee access, app distribution, business identity, location details, and support moving into a cleaner operating foundation."
@@ -59,9 +61,9 @@
       ]
     },
     {
-      "heading": "The app rollout opportunity",
+      "heading": "The Apple Business Manager custom apps opportunity",
       "paragraphs": [
-        "Built-in MDM, employee groups, security settings, and app assignment all make Apple Business a stronger platform foundation. For internal or private iOS apps, that foundation still needs a clear user-facing layer.",
+        "Built-in MDM, employee groups, security settings, and app assignment all make Apple Business a stronger platform foundation. For Apple Business Manager custom apps and private iOS app distribution, that foundation still needs a clear user-facing layer.",
         "That is where AppDeploy becomes relevant. It can give teams one branded place for access requests, install guidance, release communication, legal acceptance, support, and visibility into who should be using which version."
       ]
     },

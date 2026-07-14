@@ -5,6 +5,99 @@ export const insights = [
   {
     "status": "published",
     "featured": false,
+    "slug": "ai-workspace-vs-digital-workplace-solutions",
+    "category": "AI Workspace",
+    "topic": "Digital workplace solutions",
+    "title": "AI workspace or digital workplace solution? The difference matters",
+    "summary": "AI workspace, digital workplace, digital workspace platform, and enterprise AI platform are often used as if they mean the same thing. They do not. For serious buyers, the important question is whether the workspace controls data, identity, files, AI access, and deployment boundaries well enough to support real employee adoption.",
+    "seoDescription": "Compare AI workspace, digital workplace solutions, digital workspace platforms, private AI, self-hosted AI, and enterprise AI platform requirements for serious buyers.",
+    "date": "2026-07-14",
+    "updated": "2026-07-14",
+    "displayDate": "14 July 2026",
+    "readTime": "5 min read",
+    "sourceName": "ScotiTech editorial team",
+    "sourceUrl": "https://scotitech.com/products/axos",
+    "image": "/images/insights/secure-ai-governance.jpg",
+    "tags": [
+      "AI workspace",
+      "digital workplace solutions",
+      "enterprise AI platform",
+      "private AI",
+      "self-hosted AI",
+      "self hosted AI",
+      "on premise AI",
+      "AXOS"
+    ],
+    "relatedProduct": {
+      "name": "AXOS",
+      "href": "/products/axos",
+      "description": "A private AI workspace and enterprise AI platform for teams evaluating governed employee operations, self-hosted AI, and controlled deployment.",
+      "cta": "Explore AXOS"
+    },
+    "highlights": [
+      {
+        "label": "Search demand",
+        "value": "AI workspace",
+        "description": "The strongest keyword signal points to buyers looking for practical AI workspace and digital workplace solutions, not generic AI commentary."
+      },
+      {
+        "label": "Buyer need",
+        "value": "Control",
+        "description": "Enterprise teams need to know where data lives, who can access AI, and whether the workspace can support governed employee rollout."
+      },
+      {
+        "label": "AXOS angle",
+        "value": "Private deployment",
+        "description": "AXOS is positioned for private AI, self-hosted AI, and on premise AI evaluation where control matters more than instant signup."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "AI workspace is becoming the sharper search term",
+        "paragraphs": [
+          "The keyword signal is clear: buyers are searching for AI workspace, enterprise AI platform, private AI, and digital workplace solutions because the old productivity-suite category no longer answers the whole problem.",
+          "A normal digital workplace helps people communicate and coordinate. An AI workspace has to go further: it must decide what AI can see, which files are available, who can ask questions, how outputs are reviewed, and whether sensitive work stays inside a controlled environment."
+        ]
+      },
+      {
+        "heading": "Digital workplace solutions still matter",
+        "paragraphs": [
+          "The phrase digital workplace solutions is broad, but the buyer intent behind it is useful. Teams want fewer disconnected tools, clearer employee access, better collaboration, and less operational sprawl.",
+          "The risk is that AI gets added as a feature on top of that sprawl. If files, chat, tasks, meetings, and AI all live in separate systems, the organisation may gain convenience without gaining control."
+        ]
+      },
+      {
+        "heading": "What makes an enterprise AI platform credible",
+        "paragraphs": [
+          "An enterprise AI platform should be judged by operating controls, not only by model quality. Buyers should ask how identity, file access, audit logs, retention, deployment model, and human review work before they expand access to employees.",
+          "That is especially important for private AI, self-hosted AI, self hosted AI, and on premise AI discussions. The promise is not simply that the tool has AI. The promise is that the organisation can use AI without losing ownership of its data and workflow boundaries."
+        ]
+      },
+      {
+        "heading": "Where AXOS fits",
+        "paragraphs": [
+          "AXOS is strongest when the customer is not looking for another lightweight chatbot. The stronger fit is an organisation evaluating a private AI workspace with mail, drive, calendar, chat, video, tasks, and governed AI in one environment.",
+          "That makes AXOS part AI workspace, part digital workspace platform, and part deployment conversation. The evaluation starts with business information because the right deployment model depends on data posture, team size, infrastructure expectations, and control requirements."
+        ]
+      },
+      {
+        "heading": "The ScotiTech view",
+        "paragraphs": [
+          "The market language will keep shifting, but the buyer question is stable: can this workspace help employees work with AI while keeping business data, permissions, and accountability under control?",
+          "That is the right way to evaluate AI workspace and digital workplace solutions. Ignore the labels for a moment and inspect the operating model underneath."
+        ]
+      }
+    ],
+    "actionItems": [
+      "Decide whether your need is a collaboration tool, an AI workspace, or a controlled enterprise AI platform.",
+      "Review identity, file access, audit logs, retention, and human review before employee rollout.",
+      "Separate public-cloud AI convenience from private AI, self-hosted AI, or on premise AI requirements.",
+      "Use a limited evaluation environment before adopting an AI workspace across employees."
+    ]
+  },
+  {
+    "status": "published",
+    "featured": false,
     "slug": "enterprise-ai-trials-need-tighter-control-before-rollout",
     "date": "2026-07-14",
     "updated": "2026-07-14",
@@ -18,15 +111,18 @@ export const insights = [
       "model": "gpt-5-mini"
     },
     "category": "AI Governance",
-    "topic": "Enterprise AI evaluation",
-    "title": "Enterprise AI trials need tighter control before rollout",
-    "summary": "Before broad employee adoption, enterprises should evaluate AI in governed, time-limited private workspaces. Controlled trials reduce risk, surface integration needs, and produce measurable readiness criteria. AXOS provides the mechanisms enterprises need to run these pilot environments with auditing, policy enforcement, and staged access.",
-    "seoDescription": "Learn why enterprises should run AI pilots in governed, time-limited private workspaces and how AXOS supports controlled trials with auditing, policy controls, and measurable readiness metrics.",
+    "topic": "Enterprise AI platform evaluation",
+    "title": "Enterprise AI platform trials need tighter control before rollout",
+    "summary": "Before broad employee adoption, enterprises should evaluate AI in governed, time-limited AI workspaces. Controlled trials reduce risk, surface integration needs, and produce measurable readiness criteria. AXOS provides the mechanisms enterprises need to test a private AI workspace or self-hosted enterprise AI platform before rollout.",
+    "seoDescription": "Learn why enterprise AI platform trials should run in governed AI workspaces, and how AXOS supports private AI, self-hosted AI, and measurable rollout criteria.",
     "tags": [
       "enterprise AI",
+      "enterprise AI platform",
+      "AI workspace",
       "AI governance",
       "AXOS",
       "private AI workspace",
+      "self-hosted AI",
       "pilot program"
     ],
     "highlights": [
@@ -55,10 +151,10 @@ export const insights = [
         ]
       },
       {
-        "heading": "A practical alternative: governed, time-limited private workspaces",
+        "heading": "A practical alternative: governed, time-limited AI workspaces",
         "paragraphs": [
           "Set up private, time-limited AI workspaces for pilots that mirror the target production environment but include guardrails. Key elements include: scoped data access, enforced usage policies, role-based permissions, audit logging, and an explicit end date tied to evaluation milestones.",
-          "Time limits are important because they create a natural discipline: pilots must define goals, measurement criteria and ownership up front. When a workspace is scheduled to expire, teams must either document how they will transition to production or demonstrate why further evaluation is necessary. That prevents pilots from becoming long-running, unmanaged deployments."
+          "Time limits are important because they create a natural discipline: pilots must define goals, measurement criteria and ownership up front. When an enterprise AI platform evaluation is scheduled to expire, teams must either document how they will transition to production or demonstrate why further evaluation is necessary. That prevents pilots from becoming long-running, unmanaged deployments."
         ]
       },
       {
@@ -76,10 +172,10 @@ export const insights = [
         ]
       },
       {
-        "heading": "How AXOS supports safe, effective AI evaluations",
+        "heading": "How AXOS supports private AI workspace evaluations",
         "paragraphs": [
           "AXOS is designed to host private AI workspaces with governance controls suited for enterprise pilots. It provides role-based access controls, configurable policies for data use and model access, and built-in audit logs that capture workspace activity and model metadata. Workspaces can be time-boxed and provisioned with predefined datasets and model endpoints so trials are reproducible and comparable.",
-          "AXOS also helps operationalise the measurement side: teams can attach evaluation suites and monitoring hooks to workspaces to gather performance and operational metrics during the trial. Those outputs feed governance checkpoints that gate wider rollout decisions."
+          "AXOS also helps operationalise the measurement side for self-hosted AI or on-premise AI evaluation: teams can attach evaluation suites and monitoring hooks to workspaces to gather performance and operational metrics during the trial. Those outputs feed governance checkpoints that gate wider rollout decisions."
         ]
       },
       {
@@ -92,16 +188,199 @@ export const insights = [
     ],
     "actionItems": [
       "Design 30–90 day AI pilots with explicit goals, ownership and measurable success criteria.",
-      "Use private, time-limited workspaces that enforce data and model policies and produce audit logs.",
+      "Use private, time-limited AI workspaces that enforce data and model policies and produce audit logs.",
       "Collect both performance and operational metrics to inform a go/no-go decision.",
       "Move successful pilots through a staged rollout with updated policies and monitoring in production."
     ],
     "relatedProduct": {
       "name": "AXOS",
       "href": "/products/axos",
-      "description": "AXOS provides governed private AI workspaces with policy controls, auditing, and lifecycle management to support safe enterprise pilots and staged rollouts.",
+      "description": "AXOS provides governed private AI workspaces with policy controls, auditing, and lifecycle management to support safe enterprise AI platform pilots and staged rollouts.",
       "cta": "Explore AXOS"
     }
+  },
+  {
+    "status": "published",
+    "featured": false,
+    "slug": "firebase-app-distribution-vs-private-app-rollout",
+    "category": "App Distribution",
+    "topic": "Firebase App Distribution",
+    "title": "Firebase App Distribution solves testing, not private app rollout",
+    "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where AppDeploy should sit: not as a Firebase replacement, but as the operating layer for private app rollout.",
+    "seoDescription": "Firebase App Distribution is built for pre-release app testing. Learn why private app distribution, iOS rollout, MDM app distribution, and AppDeploy need a different operating layer.",
+    "date": "2026-07-14",
+    "updated": "2026-07-14",
+    "displayDate": "14 July 2026",
+    "readTime": "5 min read",
+    "sourceName": "Firebase Docs",
+    "sourceUrl": "https://firebase.google.com/docs/app-distribution",
+    "image": "/images/insights/private-app-rollout-tablet.jpg",
+    "tags": [
+      "Firebase App Distribution",
+      "app distribution",
+      "private app distribution",
+      "iOS app distribution",
+      "Android app distribution",
+      "AppDeploy"
+    ],
+    "relatedProduct": {
+      "name": "AppDeploy",
+      "href": "/products/appdeploy",
+      "description": "A branded operational layer for private app access, install guidance, rollout visibility, and clearer release communication.",
+      "cta": "Explore AppDeploy"
+    },
+    "highlights": [
+      {
+        "label": "Search intent",
+        "value": "Testing vs rollout",
+        "description": "Firebase App Distribution has strong search demand, but the buyer problem shifts once testing ends and a private app needs controlled business rollout."
+      },
+      {
+        "label": "Platform fit",
+        "value": "Pre-release builds",
+        "description": "Firebase is useful for sending Android and iOS builds to trusted testers, collecting feedback, and supporting development workflows."
+      },
+      {
+        "label": "AppDeploy fit",
+        "value": "Private rollout",
+        "description": "AppDeploy is stronger when the question becomes who should access the app, which version is approved, and how rollout is supported."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Firebase App Distribution is a testing tool",
+        "paragraphs": [
+          "The keyword data is clear: Firebase App Distribution attracts far more search demand than most private app distribution phrases. That makes sense. Developers know the pain of getting builds to testers, especially across Android and iOS, and Firebase gives them a familiar path for pre-release delivery.",
+          "That does not make Firebase App Distribution the answer to every app distribution problem. It is built around trusted tester delivery, feedback, and build iteration. Those are development needs. A private app launch has a wider business problem once the build is approved."
+        ]
+      },
+      {
+        "heading": "Private app distribution has a different buyer",
+        "paragraphs": [
+          "The person searching for Firebase App Distribution may be an engineer trying to ship a test build. The person responsible for private app distribution may be an operations lead, product owner, IT manager, compliance reviewer, or founder who needs a controlled rollout to real users.",
+          "Their questions are different. Who is allowed to install the app? Which audience receives which version? Is this Apple Business Manager custom app available to the right organisation? Does MDM app distribution apply? Where do users go when install guidance fails? Who can prove rollout is complete?"
+        ]
+      },
+      {
+        "heading": "Why iOS app distribution becomes operational",
+        "paragraphs": [
+          "iOS app distribution can look simple when it is only TestFlight, ad hoc testing, or a small QA group. It becomes more serious when the app is meant for employees, partners, franchisees, dealers, or client teams who need a stable production route.",
+          "At that point, the problem is not only the installation file. It is identity, eligibility, release notes, legal acceptance, support routing, version visibility, and the confidence that people are acting on current instructions."
+        ]
+      },
+      {
+        "heading": "Where AppDeploy fits beside Firebase, TestFlight, and MDM",
+        "paragraphs": [
+          "AppDeploy should not pretend to replace every developer distribution tool. Firebase App Distribution, TestFlight, and fastlane all have clear roles in build testing and release operations. MDM tools have a clear role in managed device environments.",
+          "AppDeploy fits above that layer as the branded business front door: one place for app access, install guidance, rollout status, release communication, support context, and the operational evidence a team needs after the build leaves the engineering workflow."
+        ]
+      },
+      {
+        "heading": "The ScotiTech view",
+        "paragraphs": [
+          "The best SEO answer is also the honest product answer: Firebase App Distribution is excellent for pre-release app testing, but private app distribution needs more than a tester workflow.",
+          "For AppDeploy, the opportunity is to own the messy middle between technical distribution and real adoption. That means clearer Apple Business Manager custom app rollout, better iOS app distribution guidance, MDM-aware status, and a user experience that feels credible to the business, not only the developer."
+        ]
+      }
+    ],
+    "actionItems": [
+      "Use Firebase App Distribution, TestFlight, or fastlane for pre-release testing workflows where they fit.",
+      "Separate tester distribution from production private app rollout before users are invited.",
+      "Map eligibility, version ownership, support routes, and rollout evidence before launch.",
+      "Use AppDeploy as the business-facing layer for private app distribution once the app needs controlled adoption."
+    ]
+  },
+  {
+    "status": "published",
+    "featured": false,
+    "slug": "google-workspace-alternative-private-ai",
+    "category": "AI Workspace",
+    "topic": "Secure collaboration software",
+    "title": "Looking for a Google Workspace alternative? Start with control, not features",
+    "summary": "Search demand around Google Workspace alternatives, Microsoft 365 alternatives, secure collaboration software, and enterprise knowledge management points to a bigger issue: buyers are not only comparing mail, files, and chat. They are asking who controls the workspace, where knowledge lives, and whether AI can be used without exposing sensitive business data.",
+    "seoDescription": "A practical guide for teams comparing Google Workspace alternatives, Microsoft 365 alternatives, secure collaboration software, enterprise knowledge management, and private AI workspaces.",
+    "date": "2026-07-14",
+    "updated": "2026-07-14",
+    "displayDate": "14 July 2026",
+    "readTime": "5 min read",
+    "sourceName": "ScotiTech editorial team",
+    "sourceUrl": "https://scotitech.com/products/axos",
+    "image": "/images/insights/secure-ai-governance.jpg",
+    "tags": [
+      "Google Workspace alternative",
+      "Microsoft 365 alternative",
+      "Office 365 alternative",
+      "secure collaboration software",
+      "enterprise knowledge management",
+      "enterprise search AI",
+      "AXOS"
+    ],
+    "relatedProduct": {
+      "name": "AXOS",
+      "href": "/products/axos",
+      "description": "AXOS is a private AI workspace and secure collaboration platform for qualified enterprises evaluating controlled workspace alternatives.",
+      "cta": "Explore AXOS"
+    },
+    "highlights": [
+      {
+        "label": "Search intent",
+        "value": "Workspace alternatives",
+        "description": "Buyers search for Google Workspace alternative, Microsoft 365 alternative, and Office 365 alternative when standard SaaS does not match their control needs."
+      },
+      {
+        "label": "Real question",
+        "value": "Who owns the operating layer?",
+        "description": "Feature comparison is useful, but hosting, access, knowledge control, and AI boundaries usually decide whether the platform is fit for enterprise use."
+      },
+      {
+        "label": "AXOS fit",
+        "value": "Private workspace",
+        "description": "AXOS is strongest when a qualified organisation needs secure collaboration software, enterprise knowledge management, and private AI in one controlled environment."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Alternative does not mean cheaper clone",
+        "paragraphs": [
+          "A serious Google Workspace alternative is not just a different inbox and file drive. For enterprise teams, the real comparison is about control: data location, access rules, auditability, AI use, and whether the workspace can support sensitive employee operations.",
+          "The same is true for Microsoft 365 alternative and Office 365 alternative searches. Some buyers want cost reduction, but many are signalling a deeper concern: their current collaboration stack is powerful, yet too broad, too external, or too difficult to govern for specific workflows."
+        ]
+      },
+      {
+        "heading": "Secure collaboration software now has to include AI boundaries",
+        "paragraphs": [
+          "Mail, files, chat, meetings, and tasks used to be enough. Now the workspace also needs rules for what AI can see, which knowledge sources it can use, where outputs are stored, and who is accountable when AI-assisted work influences a decision.",
+          "That is why secure collaboration software should be judged by more than messaging and document storage. The better question is whether the platform gives leaders a clear operating model for collaboration, AI assistance, and data sovereignty."
+        ]
+      },
+      {
+        "heading": "Enterprise knowledge management is the hidden requirement",
+        "paragraphs": [
+          "Most organisations already have knowledge. The problem is that it is fragmented across drives, inboxes, chat threads, task boards, and personal notes. A workspace alternative that does not improve enterprise knowledge management may only move the same sprawl into a new interface.",
+          "Enterprise search AI can help, but only when search respects permissions, approved sources, retention expectations, and the organisation's deployment model. Search that ignores governance is not intelligence; it is a faster way to create risk."
+        ]
+      },
+      {
+        "heading": "Where AXOS fits",
+        "paragraphs": [
+          "AXOS is not positioned as a free Google Workspace alternative or a casual productivity-suite replacement. It is an enterprise-only private AI workspace for qualified organisations that want mail, drive, calendar, chat, video, tasks, and governed AI under a tighter control model.",
+          "That makes AXOS most relevant when the buyer is evaluating secure collaboration platforms, private AI, enterprise knowledge management, or a self-hosted workspace where employee adoption needs a limited testing platform before rollout."
+        ]
+      },
+      {
+        "heading": "The buying lens",
+        "paragraphs": [
+          "Before comparing feature grids, ask what problem created the search. If the goal is lower-cost generic collaboration, a mainstream SaaS alternative may be enough. If the goal is data ownership, AI governance, and controlled employee deployment, the evaluation needs to go deeper.",
+          "The right shortlist should test hosting model, identity, file access, audit trails, knowledge retrieval, AI boundaries, rollout process, and how the vendor supports a time-limited evaluation before enterprise adoption."
+        ]
+      }
+    ],
+    "actionItems": [
+      "Separate price-driven searches from control-driven searches before choosing a Google Workspace alternative.",
+      "Ask whether secure collaboration software includes AI access controls, audit trails, and data residency options.",
+      "Review enterprise knowledge management and enterprise search AI requirements before moving sensitive files into a new workspace.",
+      "Use a limited testing platform before adopting a private AI workspace for employees."
+    ]
   },
   {
     "status": "published",
@@ -109,9 +388,9 @@ export const insights = [
     "slug": "wwdc26-app-store-updates-mean-for-appdeploy-rollout",
     "category": "WWDC 2026 Briefing",
     "topic": "AppDeploy",
-    "title": "Apple Business Admin APIs could make AppDeploy the rollout command centre",
-    "summary": "The old private app question was simple: how do users install it? The better enterprise question is sharper: which people, devices, groups, MDM routes, app versions, and exceptions are actually in play? Apple's direction with Apple Business, including Admin API access to device, user, audit, and MDM service data, gives AppDeploy a bigger path: from polished install portal to rollout command centre for private Apple apps.",
-    "seoDescription": "A ScotiTech briefing on Apple Business Admin APIs, WWDC26 App Store updates, live fleet visibility, group-based app distribution, MDM-aware deployment intelligence, and AppDeploy.",
+    "title": "Apple Business Admin APIs could make AppDeploy the app distribution command centre",
+    "summary": "The old private app question was simple: how do users install it? The better enterprise question is sharper: which people, devices, groups, MDM routes, app versions, and exceptions are actually in play? Apple's direction with Apple Business, including Admin API access to device, user, audit, and MDM service data, gives AppDeploy a bigger path: from polished install portal to app distribution command centre for private Apple apps.",
+    "seoDescription": "A ScotiTech briefing on AppDeploy, Apple Business Admin APIs, app distribution, MDM app distribution, live fleet visibility, and private Apple app rollout.",
     "date": "2026-06-13",
     "updated": "2026-06-14",
     "displayDate": "13 June 2026",
@@ -123,6 +402,8 @@ export const insights = [
       "Apple Business",
       "Admin API",
       "MDM",
+      "MDM app distribution",
+      "app distribution",
       "AppDeploy",
       "WWDC26"
     ],
@@ -151,7 +432,7 @@ export const insights = [
     ],
     "sections": [
       {
-        "heading": "The real shift is control, not another app listing",
+        "heading": "The real shift is app distribution control, not another listing",
         "paragraphs": [
           "WWDC26 includes useful App Store Connect improvements, from product page previews to richer metadata and volume purchasing routes. Those updates matter, but they are not the part that makes AppDeploy strategically more interesting.",
           "The larger signal is Apple Business. Apple is pulling device management, employee groups, app distribution, Blueprints, and Admin API access into a more unified business platform. For AppDeploy, that opens a stronger ambition: not only helping someone find an app, but helping a business understand whether rollout is actually working."
@@ -172,9 +453,9 @@ export const insights = [
         ]
       },
       {
-        "heading": "MDM-aware, not MDM-heavy",
+        "heading": "MDM app distribution-aware, not MDM-heavy",
         "paragraphs": [
-          "The winning position is not to ask enterprises to replace Jamf, Intune, Kandji, Mosyle, or Apple Business. The stronger move is to understand those environments and make deployment status easier for non-specialists to act on.",
+          "The winning position is not to ask enterprises to replace Jamf, Intune, Kandji, Mosyle, or Apple Business. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
           "That means AppDeploy can become the practical command centre: which devices are assigned, which MDM route applies, which installs are pending, which app version is current, where exceptions exist, and what still needs attention before rollout can be called complete."
         ]
       },
@@ -199,9 +480,9 @@ export const insights = [
     "slug": "private-apple-app-rollout-needs-more-than-approval",
     "category": "Platform Briefing",
     "topic": "Private app distribution",
-    "title": "App Store approval is only the beginning of private app rollout",
-    "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the distribution rails. AppDeploy gives the rollout a working operating layer.",
-    "seoDescription": "A practical ScotiTech briefing on Apple Custom Apps, private distribution, and why internal iOS rollout needs a controlled operating layer after approval.",
+    "title": "Private app distribution needs more than App Store approval",
+    "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the private app distribution rails. AppDeploy gives iOS app distribution a working operating layer after approval.",
+    "seoDescription": "Private app distribution for iOS needs more than App Store approval. Learn how Apple Business Manager custom apps, MDM app distribution, and AppDeploy fit together.",
     "date": "2026-05-04",
     "updated": "2026-06-14",
     "displayDate": "4 May 2026",
@@ -212,7 +493,9 @@ export const insights = [
     "tags": [
       "Custom Apps",
       "Apple Business",
-      "Private rollout",
+      "Private app distribution",
+      "iOS app distribution",
+      "Apple Business Manager custom apps",
       "AppDeploy"
     ],
     "relatedProduct": {
@@ -240,16 +523,16 @@ export const insights = [
     ],
     "sections": [
       {
-        "heading": "Approval is not the same as adoption",
+        "heading": "Private app distribution is not the same as adoption",
         "paragraphs": [
-          "Apple's Custom Apps route gives organisations a credible way to distribute private apps through Apple Business. That solves an important platform problem, but it does not automatically solve the business rollout problem.",
-          "The moment a real team needs the app, the questions become operational. Who is eligible? Which build is approved? Which instructions are current? What happens when someone cannot install it? Who decides whether a rollout is complete?"
+          "Apple's Custom Apps route gives organisations a credible way to handle private app distribution through Apple Business. That solves an important platform problem, but it does not automatically solve the business rollout problem.",
+          "The moment a real team needs the app, the questions become operational. Who is eligible? Which build is approved? Which Apple Business Manager custom app is visible to the right organisation? Which instructions are current? What happens when someone cannot install it? Who decides whether a rollout is complete?"
         ]
       },
       {
-        "heading": "The messy middle is where launches slow down",
+        "heading": "The messy middle is where iOS app distribution slows down",
         "paragraphs": [
-          "Private app launches often break down in ordinary places: email chains, spreadsheet approvals, outdated screenshots, one-off support messages, and no single page that everyone trusts.",
+          "Private iOS app distribution often breaks down in ordinary places: email chains, spreadsheet approvals, outdated screenshots, one-off support messages, and no single page that everyone trusts.",
           "That friction is expensive because it makes a professional app feel unfinished. Users hesitate, administrators repeat themselves, and the product team loses visibility just when rollout should be building confidence."
         ]
       },
@@ -263,8 +546,8 @@ export const insights = [
       {
         "heading": "Where AppDeploy fits",
         "paragraphs": [
-          "AppDeploy gives private distribution a business-facing home: branded access, current install guidance, release context, request handling, support routes, and clearer rollout ownership.",
-          "The point is not to complicate Apple's distribution route. The point is to make it usable for the people who need to launch, explain, support, and measure private apps in the real world."
+          "AppDeploy gives private app distribution a business-facing home: branded access, current install guidance, release context, request handling, support routes, and clearer rollout ownership.",
+          "The point is not to complicate Apple's distribution route or replace MDM app distribution. The point is to make the route usable for the people who need to launch, explain, support, and measure private apps in the real world."
         ]
       }
     ],
@@ -280,10 +563,10 @@ export const insights = [
     "featured": false,
     "slug": "secure-ai-adoption-now-needs-operating-controls",
     "category": "AI Governance",
-    "topic": "Secure AI adoption",
-    "title": "Secure AI adoption fails when policy never reaches the workflow",
-    "summary": "Most AI risk does not appear in a board policy document. It appears when files move into the wrong workspace, prompts expose sensitive context, outputs influence decisions, and nobody can see who did what. The UK AI Cyber Security Code gives buyers a useful baseline. AXOS turns that conversation toward controlled, private AI workspaces.",
-    "seoDescription": "A ScotiTech briefing on the UK AI Cyber Security Code of Practice, secure AI deployment, access governance, monitoring, and why enterprise AI adoption needs operating controls.",
+    "topic": "Private AI adoption",
+    "title": "Private AI adoption fails when policy never reaches the workflow",
+    "summary": "Most AI risk does not appear in a board policy document. It appears when files move into the wrong workspace, prompts expose sensitive context, outputs influence decisions, and nobody can see who did what. The UK AI Cyber Security Code gives buyers a useful baseline. AXOS turns that conversation toward controlled private AI workspaces and digital workplace governance.",
+    "seoDescription": "A ScotiTech briefing on private AI, secure AI platforms, access governance, monitoring, and why enterprise AI adoption needs controlled workspace operations.",
     "date": "2026-05-04",
     "updated": "2026-06-14",
     "displayDate": "4 May 2026",
@@ -292,7 +575,10 @@ export const insights = [
     "sourceUrl": "https://www.gov.uk/government/publications/ai-cyber-security-code-of-practice/code-of-practice-for-the-cyber-security-of-ai",
     "image": "/images/insights/ai-governance-workspace.jpg",
     "tags": [
-      "AI security",
+      "private AI",
+      "secure AI platform",
+      "AI workspace",
+      "digital workplace",
       "Governance",
       "Secure deployment",
       "AXOS"
@@ -322,10 +608,10 @@ export const insights = [
     ],
     "sections": [
       {
-        "heading": "The AI risk is already inside the workflow",
+        "heading": "The private AI risk is already inside the workflow",
         "paragraphs": [
           "By the time a business writes an AI policy, teams may already be experimenting with documents, customer notes, meeting summaries, spreadsheets, code, and decision-support prompts.",
-          "That is why secure AI adoption cannot live only in a document. The practical risk sits inside everyday work: who can upload files, what the system can see, where outputs are stored, and whether a human review path exists before AI-supported work affects a real decision."
+          "That is why secure AI adoption cannot live only in a document. The practical risk sits inside everyday work: who can upload files, what a private AI system can see, where outputs are stored, and whether a human review path exists before AI-supported work affects a real decision."
         ]
       },
       {
@@ -336,17 +622,17 @@ export const insights = [
         ]
       },
       {
-        "heading": "Policy without workspace control becomes theatre",
+        "heading": "Policy without AI workspace control becomes theatre",
         "paragraphs": [
           "A policy can say sensitive data should not be pasted into unmanaged tools. It cannot, by itself, stop a team from doing exactly that when deadlines are tight and the approved workflow is inconvenient.",
-          "Secure adoption needs an operating layer: permissions, private file handling, approved workspaces, usage boundaries, output review, monitoring, and clear ownership when something needs to be investigated."
+          "Secure adoption needs an operating layer: permissions, private file handling, approved AI workspaces, usage boundaries, output review, monitoring, and clear ownership when something needs to be investigated."
         ]
       },
       {
         "heading": "Where AXOS fits",
         "paragraphs": [
-          "AXOS is strongest when the customer wants AI support in a controlled environment rather than another open-ended tool dropped into the business.",
-          "The product story should be practical: private workspace, clearer access, governed files, task context, and useful AI assistance that respects the organisation's need for control."
+          "AXOS is strongest when the customer wants private AI support in a controlled environment rather than another open-ended tool dropped into the business.",
+          "The product story should be practical: private AI workspace, clearer access, governed files, task context, and useful AI assistance that respects the organisation's need for digital workplace control."
         ]
       }
     ],
@@ -445,9 +731,9 @@ export const insights = [
     "slug": "apple-business-sme-impact",
     "category": "Industry Update",
     "topic": "Apple ecosystem",
-    "title": "Apple Business gives SMEs a cleaner way to run Apple at work",
-    "summary": "For many SMEs, Apple administration has been a patchwork of device setup, app access, employee changes, support routes, and brand details. Apple Business brings those pieces closer together. The opportunity for ScotiTech is to help organisations turn that platform foundation into cleaner app rollout, better access workflows, and less operational noise.",
-    "seoDescription": "A practical ScotiTech briefing on Apple Business, what changed on 14 April 2026, and how SMEs should approach device deployment, MDM, access governance, and app rollout.",
+    "title": "Apple Business Manager custom apps need a cleaner rollout model",
+    "summary": "For many SMEs, Apple administration has been a patchwork of device setup, app access, employee changes, support routes, and brand details. Apple Business brings those pieces closer together. The opportunity for ScotiTech is to help organisations turn Apple Business Manager custom apps into cleaner app distribution, better access workflows, and less operational noise.",
+    "seoDescription": "How SMEs should approach Apple Business Manager custom apps, app distribution, MDM, access governance, and private app rollout with a cleaner operating model.",
     "date": "2026-03-24",
     "updated": "2026-06-14",
     "displayDate": "24 March 2026",
@@ -457,6 +743,8 @@ export const insights = [
     "image": "/images/insights/apple-business-team-devices.jpg",
     "tags": [
       "Apple Business",
+      "Apple Business Manager custom apps",
+      "app distribution",
       "MDM",
       "SME technology",
       "AppDeploy"
@@ -486,7 +774,7 @@ export const insights = [
     ],
     "sections": [
       {
-        "heading": "Apple is reducing the admin sprawl",
+        "heading": "Apple Business Manager is reducing the admin sprawl",
         "paragraphs": [
           "On 24 March 2026, Apple announced Apple Business as an all-in-one platform for organisations, with availability from 14 April 2026 across more than 200 countries and regions.",
           "The important part for SMEs is not just the launch date. It is the consolidation: device management, employee access, app distribution, business identity, location details, and support moving into a cleaner operating foundation."
@@ -500,9 +788,9 @@ export const insights = [
         ]
       },
       {
-        "heading": "The app rollout opportunity",
+        "heading": "The Apple Business Manager custom apps opportunity",
         "paragraphs": [
-          "Built-in MDM, employee groups, security settings, and app assignment all make Apple Business a stronger platform foundation. For internal or private iOS apps, that foundation still needs a clear user-facing layer.",
+          "Built-in MDM, employee groups, security settings, and app assignment all make Apple Business a stronger platform foundation. For Apple Business Manager custom apps and private iOS app distribution, that foundation still needs a clear user-facing layer.",
           "That is where AppDeploy becomes relevant. It can give teams one branded place for access requests, install guidance, release communication, legal acceptance, support, and visibility into who should be using which version."
         ]
       },

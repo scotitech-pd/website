@@ -4,9 +4,9 @@
   "slug": "wwdc26-app-store-updates-mean-for-appdeploy-rollout",
   "category": "WWDC 2026 Briefing",
   "topic": "AppDeploy",
-  "title": "Apple Business Admin APIs could make AppDeploy the rollout command centre",
-  "summary": "The old private app question was simple: how do users install it? The better enterprise question is sharper: which people, devices, groups, MDM routes, app versions, and exceptions are actually in play? Apple's direction with Apple Business, including Admin API access to device, user, audit, and MDM service data, gives AppDeploy a bigger path: from polished install portal to rollout command centre for private Apple apps.",
-  "seoDescription": "A ScotiTech briefing on Apple Business Admin APIs, WWDC26 App Store updates, live fleet visibility, group-based app distribution, MDM-aware deployment intelligence, and AppDeploy.",
+  "title": "Apple Business Admin APIs could make AppDeploy the app distribution command centre",
+  "summary": "The old private app question was simple: how do users install it? The better enterprise question is sharper: which people, devices, groups, MDM routes, app versions, and exceptions are actually in play? Apple's direction with Apple Business, including Admin API access to device, user, audit, and MDM service data, gives AppDeploy a bigger path: from polished install portal to app distribution command centre for private Apple apps.",
+  "seoDescription": "A ScotiTech briefing on AppDeploy, Apple Business Admin APIs, app distribution, MDM app distribution, live fleet visibility, and private Apple app rollout.",
   "date": "2026-06-13",
   "updated": "2026-06-14",
   "displayDate": "13 June 2026",
@@ -18,6 +18,8 @@
     "Apple Business",
     "Admin API",
     "MDM",
+    "MDM app distribution",
+    "app distribution",
     "AppDeploy",
     "WWDC26"
   ],
@@ -46,7 +48,7 @@
   ],
   "sections": [
     {
-      "heading": "The real shift is control, not another app listing",
+      "heading": "The real shift is app distribution control, not another listing",
       "paragraphs": [
         "WWDC26 includes useful App Store Connect improvements, from product page previews to richer metadata and volume purchasing routes. Those updates matter, but they are not the part that makes AppDeploy strategically more interesting.",
         "The larger signal is Apple Business. Apple is pulling device management, employee groups, app distribution, Blueprints, and Admin API access into a more unified business platform. For AppDeploy, that opens a stronger ambition: not only helping someone find an app, but helping a business understand whether rollout is actually working."
@@ -67,9 +69,9 @@
       ]
     },
     {
-      "heading": "MDM-aware, not MDM-heavy",
+      "heading": "MDM app distribution-aware, not MDM-heavy",
       "paragraphs": [
-        "The winning position is not to ask enterprises to replace Jamf, Intune, Kandji, Mosyle, or Apple Business. The stronger move is to understand those environments and make deployment status easier for non-specialists to act on.",
+        "The winning position is not to ask enterprises to replace Jamf, Intune, Kandji, Mosyle, or Apple Business. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
         "That means AppDeploy can become the practical command centre: which devices are assigned, which MDM route applies, which installs are pending, which app version is current, where exceptions exist, and what still needs attention before rollout can be called complete."
       ]
     },
