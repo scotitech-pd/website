@@ -43,7 +43,7 @@ const problems = [
   },
 ];
 
-export default function ProblemsSolved({ chapterNo }) {
+export default function ProblemsSolved() {
   return (
     /*
      * Negative margins pull this dark section behind the adjacent light sections
@@ -62,11 +62,9 @@ export default function ProblemsSolved({ chapterNo }) {
         <Reveal>
           <div className="mb-14 flex items-end justify-between gap-6 border-b border-white/8 pb-8">
             <div>
-              {chapterNo && (
-                <p className="mb-3 font-karla text-xs font-semibold uppercase tracking-[0.22em] text-brand/70">
-                  {chapterNo} // Problems we solve
-                </p>
-              )}
+              <p className="mb-3 font-karla text-xs font-semibold uppercase tracking-[0.22em] text-brand/70">
+                Problems we solve
+              </p>
               <h2 className="max-w-2xl font-geist-sans text-[clamp(1.8rem,1.2rem+2.5vw,3rem)] font-semibold leading-[1.1] tracking-[-0.025em] text-white">
                 We build for the operational problems teams actually hit.
               </h2>
@@ -84,12 +82,12 @@ export default function ProblemsSolved({ chapterNo }) {
             return (
               <Reveal key={p.title} delay={i * 0.07}>
                 <div
-                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/8 bg-white/[0.03] p-6 transition-all duration-300 hover:border-white/15 hover:bg-white/[0.055]"
+                  className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-white/8 bg-white/[0.03] p-6 transition-all duration-300 hover:border-white/15 hover:bg-white/[0.055]"
                   style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)" }}
                 >
                   {/* Hover glow */}
                   <div
-                    className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     style={{
                       background: `radial-gradient(circle at 30% 20%, ${p.glowColor}, transparent 65%)`,
                     }}

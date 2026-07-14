@@ -55,7 +55,7 @@ function LogoItem({ client }) {
   return <span className="flex shrink-0 items-center">{img}</span>;
 }
 
-export default function HomeSocialProof({ chapterNo }) {
+export default function HomeSocialProof() {
   return (
     <section className="relative z-0 overflow-hidden border-y border-[#e8e3d8] bg-[#faf9f6] py-12 md:py-14">
       {/* Soft top-edge gradient */}
@@ -64,7 +64,7 @@ export default function HomeSocialProof({ chapterNo }) {
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         {/* Label */}
         <p className="mb-8 text-center font-karla text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
-          {chapterNo ? `${chapterNo} // ` : ""}Early clients &amp; delivery partners
+          Early clients &amp; delivery partners
         </p>
 
         {/* Marquee */}
@@ -84,12 +84,12 @@ export default function HomeSocialProof({ chapterNo }) {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="flex items-baseline gap-2 rounded-full border border-[#e4e8e3] bg-[#f5f3ee] px-5 py-2.5"
+              className="flex items-baseline gap-2 rounded-full border border-[#e4e8e3] bg-[#f5f3ee] px-4 py-2"
             >
-              <span className="font-karla text-base font-bold text-[#111827]">
+              <span className="font-karla text-sm font-bold text-[#111827]">
                 {stat.value}
               </span>
-              <span className="font-karla text-xs font-medium text-slate-500">
+              <span className="font-karla text-[11px] font-medium uppercase tracking-[0.1em] text-slate-500">
                 {stat.label}
               </span>
             </div>

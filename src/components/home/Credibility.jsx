@@ -57,7 +57,7 @@ const testimonials = [
 
 function ClientCard({ client }) {
   const inner = (
-    <div className="group/logo flex h-full flex-col items-center gap-3 rounded-2xl border border-hairline bg-surface-muted p-5 text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-soft">
+    <div className="group/logo flex h-full flex-col items-center gap-3 rounded-xl border border-hairline bg-surface-muted p-5 text-center transition-shadow duration-300 hover:shadow-md">
       <span className="flex h-12 w-full items-center justify-center">
         <Image
           src={client.image}
@@ -93,11 +93,11 @@ function ClientCard({ client }) {
   return <div className="block h-full">{inner}</div>;
 }
 
-export default function Credibility({ chapterNo }) {
+export default function Credibility() {
   return (
     <Section id="proof" surface="muted" spacing="lg">
       <Reveal className="max-w-3xl">
-        <Eyebrow>{chapterNo ? `${chapterNo} // ` : ""}Credibility</Eyebrow>
+        <Eyebrow>Credibility</Eyebrow>
         <h2 className="t-h1 mt-3">Real recognition. Real users. Real products.</h2>
         <p className="t-lead mt-5">
           We'd rather show evidence than make claims — award recognition,
@@ -107,7 +107,7 @@ export default function Credibility({ chapterNo }) {
 
       {/* Metrics band — the single dark moment */}
       <Reveal delay={0.05}>
-        <div className="mt-10 overflow-hidden rounded-3xl bg-ink shadow-lift">
+        <div className="mt-10 overflow-hidden rounded-xl bg-ink">
           {/* gap-px + outer bg creates clean hairline dividers at every breakpoint */}
           <div className="grid grid-cols-1 gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
             {metrics.map((m) => (
@@ -134,9 +134,9 @@ export default function Credibility({ chapterNo }) {
       <div className="mt-6 grid grid-cols-1 items-start gap-6 lg:grid-cols-[34%_66%]">
         {/* Award */}
         <Reveal>
-          <div className="flex flex-col rounded-3xl border border-hairline bg-surface-muted p-5 shadow-soft md:p-6">
-            <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 font-karla text-xs font-semibold text-brand-strong shadow-soft">
-              <Trophy size={14} />
+          <div className="flex flex-col rounded-xl border border-hairline bg-surface-muted p-5 md:p-6">
+            <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-surface px-2.5 py-1 font-karla text-[10.5px] font-semibold uppercase tracking-[0.18em] text-brand-strong ring-1 ring-inset ring-hairline">
+              <Trophy size={12} />
               Award recognition
             </div>
             <div className="overflow-hidden rounded-2xl border border-hairline bg-surface p-3">
@@ -167,7 +167,7 @@ export default function Credibility({ chapterNo }) {
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             {testimonials.map((t, i) => (
               <Reveal key={t.name} delay={i * 0.08}>
-                <figure className="flex h-full flex-col rounded-3xl border border-hairline bg-surface p-6 shadow-soft md:p-7">
+                <figure className="flex h-full flex-col rounded-xl border border-hairline bg-surface p-6 transition-shadow duration-300 hover:shadow-md md:p-7">
                   <Quote size={26} className="text-brand/30" />
                   <blockquote className="t-body mt-3 flex-1 text-strong">
                     {t.text}
@@ -215,7 +215,7 @@ export default function Credibility({ chapterNo }) {
 
           {/* Client logos — static grid, no marquee */}
           <Reveal delay={0.1}>
-            <div className="rounded-3xl border border-hairline bg-surface p-6 shadow-soft md:p-7">
+            <div className="rounded-xl border border-hairline bg-surface p-6 md:p-7">
               <p className="t-small mb-5 font-karla font-semibold uppercase tracking-[0.14em] text-muted">
                 Trusted by early clients & partners
               </p>

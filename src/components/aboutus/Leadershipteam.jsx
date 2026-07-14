@@ -63,31 +63,34 @@ export default function LeadershipTeam() {
           {team.map((member) => (
             <article
               key={member.name}
-              className="rounded-[1.6rem] border border-slate-200 bg-white p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)]"
+              className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 transition-shadow duration-300 hover:shadow-md"
             >
-              <div className="relative mb-4 h-[220px] overflow-hidden rounded-2xl border border-slate-200">
-                <Image
-                  src={member.img}
-                  alt={member.name}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
-                  className="object-cover"
-                />
+              <div className="mb-4 flex items-center gap-4">
+                <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border border-slate-200">
+                  <Image
+                    src={member.img}
+                    alt={member.name}
+                    fill
+                    sizes="64px"
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <h3 className="text-base font-karla font-bold text-slate-900 leading-tight">
+                    {member.name}
+                  </h3>
+                  <p className="mt-0.5 text-xs font-karla font-semibold text-brand-strong">
+                    {member.title}
+                  </p>
+                </div>
               </div>
 
-              <h3 className="text-xl font-karla font-semibold text-slate-900 mb-1">
-                {member.name}
-              </h3>
-              <p className="text-sm font-karla font-semibold text-brand-strong mb-2">
-                {member.title}
-              </p>
-
-              <div className="flex items-center gap-2 text-slate-500 mb-3">
-                <MapPin size={15} />
-                <span className="text-sm font-lora">{member.location}</span>
+              <div className="mb-3 flex items-center gap-1.5 text-[11.5px] font-karla uppercase tracking-[0.1em] text-slate-400">
+                <MapPin size={11} />
+                <span>{member.location}</span>
               </div>
 
-              <p className="text-[14px] font-lora leading-6 text-slate-700 mb-4">
+              <p className="flex-1 text-[14px] font-lora leading-6 text-slate-600 mb-4">
                 {member.description}
               </p>
 
@@ -95,10 +98,10 @@ export default function LeadershipTeam() {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-karla font-semibold text-slate-800 hover:border-brand hover:text-brand-strong transition-colors"
+                className="inline-flex w-fit items-center gap-1.5 text-xs font-karla font-semibold uppercase tracking-[0.14em] text-slate-700 hover:text-brand-strong transition-colors"
               >
-                <Linkedin size={15} />
-                View LinkedIn
+                <Linkedin size={13} />
+                LinkedIn
               </a>
             </article>
           ))}

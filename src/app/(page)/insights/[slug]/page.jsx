@@ -150,7 +150,7 @@ export default async function InsightArticlePage({ params }) {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.10)]">
+            <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
               <div className="relative min-h-[260px] bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(194,65,12,0.34),transparent_52%),linear-gradient(315deg,rgba(188,185,106,0.22),transparent_46%)]" />
                 <Image
@@ -166,7 +166,7 @@ export default async function InsightArticlePage({ params }) {
                 {insight.highlights.map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4"
+                    className="rounded-lg border border-slate-200 bg-slate-50 p-4"
                   >
                     <p className="text-xs font-karla font-semibold uppercase tracking-[0.16em] text-slate-500 mb-2">
                       {item.label}
@@ -188,7 +188,7 @@ export default async function InsightArticlePage({ params }) {
       <section className="pb-16 sm:pb-24">
         <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
-            <article className="rounded-[2rem] border border-slate-200 bg-white p-6 sm:p-8 lg:p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+            <article className="rounded-xl border border-slate-200 bg-white p-6 sm:p-8 lg:p-9">
               <div className="space-y-10">
                 {insight.sections.map((section) => (
                   <section key={section.heading}>
@@ -209,7 +209,7 @@ export default async function InsightArticlePage({ params }) {
                 ))}
               </div>
 
-              <div className="mt-12 rounded-[1.75rem] border border-slate-200 bg-[#F8FAFC] p-6 sm:p-8">
+              <div className="mt-12 rounded-xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-7">
                 <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b] mb-3">
                   SME checklist
                 </p>
@@ -220,7 +220,7 @@ export default async function InsightArticlePage({ params }) {
                   {insight.actionItems.map((item) => (
                     <div
                       key={item}
-                      className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4"
+                      className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-4"
                     >
                       <CheckCircle2 className="mt-1 size-5 shrink-0 text-[#0F766E]" />
                       <p className="font-lora leading-7 text-slate-700">
@@ -233,7 +233,7 @@ export default async function InsightArticlePage({ params }) {
             </article>
 
             <aside className="lg:sticky lg:top-28 space-y-5">
-              <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+              <div className="rounded-xl border border-slate-200 bg-white p-6">
                 <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-3">
                   Original source
                 </p>
@@ -251,7 +251,7 @@ export default async function InsightArticlePage({ params }) {
                 </a>
               </div>
 
-              <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+              <div className="rounded-xl border border-slate-200 bg-white p-6">
                 <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-3">
                   Related product
                 </p>

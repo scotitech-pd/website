@@ -39,36 +39,14 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-on-ink">
+    <footer className="relative z-10 bg-ink text-on-ink">
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
 
-        {/* Editorial statement row */}
-        <div className="border-b border-white/8 py-12 md:py-16">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <Link href="/" className="inline-block mb-6">
-                <Image src="/logo/logo.png" alt="ScotiTech" width={170} height={42} className="h-auto w-[170px] invert" />
-              </Link>
-              <p className="max-w-lg font-geist-sans text-2xl font-semibold leading-snug tracking-tight text-white/90 md:text-3xl">
-                Software built for real control.<br />
-                <span className="text-white/40">Privacy-conscious. Focused. Live.</span>
-              </p>
-            </div>
-            <div className="flex gap-3">
-              {socials.map(({ Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] text-on-ink transition-colors hover:border-brand hover:bg-brand hover:text-brand-contrast"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
-          </div>
+        {/* Brand row */}
+        <div className="border-b border-white/8 py-6">
+          <Link href="/" className="inline-block">
+            <Image src="/logo/logo.png" alt="ScotiTech" width={170} height={42} className="h-auto w-[140px] invert" />
+          </Link>
         </div>
 
         {/* Links grid */}
@@ -165,17 +143,32 @@ export default function Footer() {
         </div>
 
         {/* Legal / registered office */}
-        <div className="flex flex-col gap-4 border-t border-white/10 py-6 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-6 border-t border-white/10 py-6 md:flex-row md:items-center md:justify-between">
           <p className="font-lora text-xs leading-relaxed text-on-ink-muted">
             © {new Date().getFullYear()} ScotiTech Solutions Limited. All rights reserved.
             <br className="hidden sm:block" />
             Registered in Scotland · Registered office: 11 Caldervale Drive, Motherwell ML1 2GB, UK.
           </p>
-          <div className="flex gap-6 font-karla text-xs text-on-ink-muted">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-4 font-karla text-xs text-on-ink-muted">
             <Link href="/privacy-policy" className="hover:text-brand">Privacy</Link>
             <Link href="/cookie-policy" className="hover:text-brand">Cookies</Link>
             <Link href="/terms-and-conditions" className="hover:text-brand">Terms</Link>
             <CookiePreferencesButton className="cursor-pointer hover:text-brand" />
+            <span className="hidden h-3 w-px bg-white/15 md:inline-block" />
+            <div className="flex gap-2">
+              {socials.map(({ Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-on-ink/80 transition-colors hover:border-brand hover:bg-brand hover:text-brand-contrast"
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

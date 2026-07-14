@@ -118,17 +118,7 @@ export default function HeroSection() {
         >
           {/* Glow under card */}
           <div className="pointer-events-none absolute -inset-x-8 -bottom-6 h-24 bg-[radial-gradient(ellipse_70%_100%_at_50%_100%,rgba(226,88,14,0.20),transparent_70%)] blur-2xl" />
-          {/* Card frame */}
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_32px_80px_rgba(0,0,0,0.55)] backdrop-blur-sm">
-            {/* Fake browser chrome */}
-            <div className="flex items-center gap-2 border-b border-white/8 bg-white/[0.03] px-4 py-3">
-              <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-              <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
-              <span className="h-2.5 w-2.5 rounded-full bg-white/8" />
-              <span className="ml-3 flex-1 rounded-full bg-white/8 px-3 py-1 font-mono text-[10px] text-white/30">
-                appdeploy.scotitech.com
-              </span>
-            </div>
+          <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] p-2 shadow-[0_32px_80px_rgba(0,0,0,0.55)] backdrop-blur-sm">
             <motion.div
               animate={
                 reduce
@@ -147,7 +137,7 @@ export default function HeroSection() {
                 width={1200}
                 height={688}
                 priority
-                className="h-auto w-full"
+                className="h-auto w-full rounded-[22px]"
               />
             </motion.div>
           </div>

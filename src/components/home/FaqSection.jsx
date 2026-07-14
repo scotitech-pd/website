@@ -9,24 +9,32 @@ import Eyebrow from "@/components/ui/Eyebrow";
 
 const faqs = [
   {
-    q: "What does ScotiTech actually build?",
-    a: "Practical technology products and delivery solutions. AppDeploy handles internal iOS app distribution; AXOS is an enterprise-only, self-hostable employee workspace with AI; ClarityPath supports structured, sensitive user journeys; and our broader work spans privacy-conscious software, AI, infrastructure, and digital operations.",
+    q: "Which product should we talk to ScotiTech about first?",
+    a: "If your immediate problem is private mobile app rollout, start with AppDeploy. If you are evaluating a controlled employee workspace with private AI and self-hosting requirements, start with AXOS. If the need is broader, we can route the conversation to the right product or delivery path.",
   },
   {
-    q: "Is AppDeploy ready to use today?",
-    a: "Yes. AppDeploy is live and running in production, with branded internal distribution pages, release control, and access management for teams and partners.",
+    q: "Is AppDeploy ready for production use?",
+    a: "Yes. AppDeploy is live and built for branded private app distribution, release communication, access control, and clearer install journeys for employees, partners, or client teams.",
   },
   {
-    q: "When can we use AXOS?",
-    a: "AXOS is a completed enterprise product. Because it is built for employee workspaces and business data, organisations share their business profile, team size, workflows, and infrastructure needs first; then we provide a limited testing platform so decision-makers can evaluate AXOS before adopting it for their employees.",
+    q: "Can we test AXOS before adopting it?",
+    a: "Yes, for qualified organisations. AXOS is an enterprise product, so we first review your business profile, team size, workflows, hosting expectations, and control requirements. After that, we can provide a limited testing platform so decision-makers can evaluate fit before employee rollout.",
   },
   {
-    q: "How do you handle data and privacy?",
-    a: "Privacy is a default, not an upgrade. We build for clear data boundaries and deployment control — including self-hosting options for AXOS — so you can reason about where data lives and who can reach it.",
+    q: "Do you work only in the UK and India?",
+    a: "No. ScotiTech is UK-registered and operates from Scotland, but the product and delivery focus is worldwide. We work with organisations based on the problem, governance needs, and rollout fit rather than geography alone.",
   },
   {
-    q: "Who is ScotiTech?",
-    a: "A UK-registered technology and product company operating from Scotland, with worldwide product strategy, engineering, infrastructure, AI, and digital delivery. Finalist at the Scotland StartUp Awards 2026.",
+    q: "How do you handle privacy, hosting, and control?",
+    a: "We design around clear data boundaries, practical deployment control, and buyer visibility. AppDeploy keeps private app rollout more structured. AXOS is built for organisations that need stronger control over workspace data, AI use, and hosting decisions.",
+  },
+  {
+    q: "What information should we share before a call?",
+    a: "A useful first message includes your organisation type, country, team size, the product you are interested in, the current problem, and any hosting, compliance, Apple Business, MDM, or rollout constraints. That helps us avoid a generic discovery call.",
+  },
+  {
+    q: "Do you build custom software as well as products?",
+    a: "ScotiTech is product-led, but our wider work can include practical software, AI, infrastructure, and digital delivery where there is a clear business case. The best starting point is still the problem you need solved, not a fixed service menu.",
   },
 ];
 
@@ -73,14 +81,15 @@ export default function FaqSection() {
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[36%_64%] lg:gap-16">
         <Reveal>
           <Eyebrow>FAQ</Eyebrow>
-          <h2 className="t-h1 mt-3">Questions, answered plainly.</h2>
+          <h2 className="t-h1 mt-3">Questions buyers usually ask first.</h2>
           <p className="t-lead mt-5">
-            The essentials buyers and partners ask before a conversation.
+            Clear answers before a call, so the next conversation can stay
+            practical.
           </p>
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="rounded-3xl border border-hairline bg-surface px-6 shadow-soft md:px-8">
+          <div className="rounded-xl border border-hairline bg-surface px-6 md:px-8">
             {faqs.map((faq, i) => (
               <FaqItem
                 key={faq.q}

@@ -18,7 +18,7 @@ export default function ContactCta() {
     <section id="contact" className="bg-surface py-16 md:py-24">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 shadow-lift md:px-14 md:py-16">
+          <div className="relative overflow-hidden rounded-xl bg-ink px-7 py-12 md:px-14 md:py-16">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_85%_0%,rgba(226,88,14,0.25),transparent_60%),radial-gradient(40%_50%_at_-5%_100%,rgba(251,146,60,0.12),transparent_60%)]" />
 
             <div className="relative z-10 grid grid-cols-1 gap-10 lg:grid-cols-[55%_45%] lg:items-center">
@@ -51,22 +51,22 @@ export default function ContactCta() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm md:p-8">
+              <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm md:p-7">
                 <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full bg-brand/20 blur-2xl" />
                 <div className="relative">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-on-ink">
-                    <MessageSquare size={22} />
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-on-ink">
+                    <MessageSquare size={18} />
                   </span>
-                  <h3 className="mt-5 font-karla text-2xl font-semibold text-on-ink">
+                  <h3 className="mt-5 font-karla text-xl font-bold text-on-ink">
                     Need the right next step?
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-on-ink-muted">
+                  <p className="mt-3 font-lora text-[14.5px] leading-7 text-on-ink-muted">
                     Tell us what you are exploring and we will route your
                     request to the right product, evaluation, or partnership
                     conversation.
                   </p>
 
-                  <div className="mt-6 rounded-2xl border border-white/10 bg-black/15 p-4">
+                  <div className="mt-6 rounded-lg border border-white/10 bg-black/15 p-4">
                     <p className="font-karla text-xs font-semibold uppercase tracking-[0.14em] text-on-ink-muted">
                       Direct email
                     </p>

@@ -277,7 +277,7 @@ export default function ProductTemplate({ product }) {
         <Section surface="muted" spacing="lg">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             <Reveal>
-              <div className="h-full rounded-3xl border border-hairline bg-surface p-7 shadow-soft md:p-9">
+              <div className="h-full rounded-xl border border-hairline bg-surface p-6 md:p-8">
                 <p className="font-karla text-xs font-semibold uppercase tracking-[0.14em] text-muted">The problem</p>
                 <h2 className="t-h3 mt-3">{product.problem.title}</h2>
                 <ul className="mt-6 space-y-3">
@@ -291,7 +291,7 @@ export default function ProductTemplate({ product }) {
               </div>
             </Reveal>
             <Reveal delay={0.08}>
-              <div className="h-full rounded-3xl border border-hairline bg-surface p-7 shadow-soft md:p-9">
+              <div className="h-full rounded-xl border border-hairline bg-surface p-6 md:p-8">
                 <p className={cn("font-karla text-xs font-semibold uppercase tracking-[0.14em]", accentText)}>
                   With {product.name}
                 </p>
@@ -351,7 +351,7 @@ export default function ProductTemplate({ product }) {
               const Icon = icons[f.icon] || Sparkles;
               return (
                 <Reveal key={f.title} delay={(i % 3) * 0.06}>
-                  <div className="flex h-full flex-col rounded-2xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
+                  <div className="flex h-full flex-col rounded-xl border border-hairline bg-surface p-6 transition-shadow duration-300 hover:shadow-md">
                     <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface-sunken">
                       <Icon size={20} className={accentText} />
                     </span>
@@ -382,7 +382,7 @@ export default function ProductTemplate({ product }) {
               const Icon = icons[a.icon] || Building2;
               return (
                 <Reveal key={a.title} delay={(i % 3) * 0.05}>
-                  <article className="flex h-full flex-col rounded-2xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
+                  <article className="flex h-full flex-col rounded-xl border border-hairline bg-surface p-6 transition-shadow duration-300 hover:shadow-md">
                     <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface-sunken">
                       <Icon size={20} className={accentText} />
                     </span>
@@ -432,7 +432,7 @@ export default function ProductTemplate({ product }) {
               const Icon = opt.icon ? icons[opt.icon] : deployIcons[i] || ServerCog;
               return (
                 <Reveal key={opt.name} delay={i * 0.06}>
-                  <div className="relative flex h-full flex-col rounded-2xl border border-hairline bg-surface-muted p-6 shadow-soft">
+                  <div className="relative flex h-full flex-col rounded-xl border border-hairline bg-surface-muted p-6">
                     <div className="flex items-start justify-between gap-3">
                       <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface">
                         <Icon size={20} className={accentText} />
@@ -468,7 +468,7 @@ export default function ProductTemplate({ product }) {
           <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {product.howItWorks.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.06}>
-                <div className="relative h-full rounded-2xl border border-hairline bg-surface p-6 shadow-soft">
+                <div className="relative h-full rounded-xl border border-hairline bg-surface p-6">
                   <span className={cn("font-mono text-sm font-semibold", accentText)}>
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -487,7 +487,7 @@ export default function ProductTemplate({ product }) {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             {product.proof && (
               <Reveal>
-                <figure className="flex h-full flex-col rounded-3xl bg-ink p-8 shadow-lift md:p-10">
+                <figure className="flex h-full flex-col rounded-xl bg-ink p-7 md:p-9">
                   <Quote size={30} className="text-white/30" />
                   <blockquote className="mt-4 flex-1 font-karla text-xl leading-relaxed text-on-ink">
                     {product.proof.quote}
@@ -504,7 +504,7 @@ export default function ProductTemplate({ product }) {
             )}
             {product.security && (
               <Reveal delay={0.08}>
-                <div className="flex h-full flex-col rounded-3xl border border-hairline bg-surface-muted p-8 shadow-soft md:p-10">
+                <div className="flex h-full flex-col rounded-xl border border-hairline bg-surface-muted p-7 md:p-9">
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand-strong">
                     <ShieldCheck size={20} />
                   </span>
@@ -528,7 +528,7 @@ export default function ProductTemplate({ product }) {
       {product.caseStudy && (
         <Section surface="muted" spacing="lg">
           <Reveal>
-            <div className="overflow-hidden rounded-[2rem] border border-hairline bg-brand-soft/50 shadow-soft">
+            <div className="overflow-hidden rounded-xl border border-hairline bg-brand-soft/50">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="p-8 md:p-12">
                   <Eyebrow className={accentText}>{product.caseStudy.eyebrow}</Eyebrow>
@@ -573,7 +573,7 @@ export default function ProductTemplate({ product }) {
       {product.qualifying && (
         <Section surface="muted" spacing="lg">
           <Reveal>
-            <div className="rounded-3xl border border-hairline bg-surface p-8 shadow-soft md:p-12">
+            <div className="rounded-xl border border-hairline bg-surface p-7 md:p-10">
               <div className="grid grid-cols-1 gap-8 lg:grid-cols-[36%_64%] lg:gap-16">
                 <div>
                   <Eyebrow className={accentText}>
@@ -625,7 +625,7 @@ export default function ProductTemplate({ product }) {
                 <Reveal key={plan.name} delay={i * 0.08}>
                   <div
                     className={cn(
-                      "flex h-full flex-col rounded-3xl border p-8 shadow-soft md:p-10",
+                      "flex h-full flex-col rounded-xl border p-7 md:p-9",
                       featured ? "border-brand bg-surface ring-1 ring-brand/20" : "border-hairline bg-surface"
                     )}
                   >
@@ -680,7 +680,7 @@ export default function ProductTemplate({ product }) {
               <h2 className="t-h1 mt-3">Good to know.</h2>
             </Reveal>
             <Reveal delay={0.08}>
-              <div className="rounded-3xl border border-hairline bg-surface px-6 shadow-soft md:px-8">
+              <div className="rounded-xl border border-hairline bg-surface px-6 md:px-8">
                 {product.faqs.map((f) => (
                   <div key={f.q} className="border-b border-hairline py-5 last:border-b-0">
                     <p className="font-karla text-lg font-semibold text-strong">{f.q}</p>
@@ -698,7 +698,7 @@ export default function ProductTemplate({ product }) {
         <section className="bg-surface py-16 md:py-24">
           <Container>
             <Reveal>
-              <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 shadow-lift md:px-14 md:py-16">
+              <div className="relative overflow-hidden rounded-xl bg-ink px-7 py-12 md:px-12 md:py-14">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_50%_0%,rgba(226,88,14,0.28),transparent_62%)]" />
                 <div className="relative z-10">
                   <div className="max-w-2xl">
@@ -717,7 +717,7 @@ export default function ProductTemplate({ product }) {
                   <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
                     {product.rolloutPaths.paths.map((p, i) => (
                       <Reveal as="div" key={p.label} delay={i * 0.06}>
-                        <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+                        <div className="flex h-full flex-col rounded-xl border border-white/10 bg-white/[0.04] p-6">
                           <p className="font-karla text-[10px] font-semibold uppercase tracking-[0.14em] text-brand-soft">
                             {p.label}
                           </p>
@@ -781,7 +781,7 @@ export default function ProductTemplate({ product }) {
         <section className="bg-surface py-16 md:py-24">
           <Container>
             <Reveal>
-              <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 text-center shadow-lift md:px-14 md:py-16">
+              <div className="relative overflow-hidden rounded-xl bg-ink px-7 py-12 text-center md:px-12 md:py-14">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(226,88,14,0.25),transparent_60%)]" />
                 <div className="relative z-10 mx-auto max-w-2xl">
                   <h2 className="t-h1 text-on-ink">{product.cta.title}</h2>

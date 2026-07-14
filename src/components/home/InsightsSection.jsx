@@ -36,7 +36,7 @@ export default function InsightsSection() {
       <Reveal delay={0.05}>
         <Link
           href={`/insights/${featuredInsight.slug}`}
-          className="group mt-10 grid overflow-hidden rounded-3xl border border-hairline bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card lg:grid-cols-2"
+          className="group mt-10 grid overflow-hidden rounded-xl border border-hairline bg-surface transition-shadow duration-300 hover:shadow-md lg:grid-cols-2"
         >
           <div className="relative aspect-[16/10] overflow-hidden bg-surface-sunken lg:aspect-auto">
             <Image
@@ -44,27 +44,33 @@ export default function InsightsSection() {
               alt={featuredInsight.title}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             />
           </div>
-          <div className="flex flex-col p-7 md:p-10">
-            <div className="flex items-center gap-3">
-              <span className="rounded-full bg-brand-soft px-3 py-1 font-karla text-xs font-semibold text-brand-strong">
+          <div className="flex flex-col p-6 md:p-8">
+            <div className="flex items-center justify-between gap-3">
+              <span className="inline-flex rounded-full px-2.5 py-0.5 font-karla text-[10.5px] font-semibold uppercase tracking-[0.18em] text-brand-strong ring-1 ring-inset ring-brand-soft bg-brand-soft/40">
                 {featuredInsight.category}
               </span>
-              <span className="inline-flex items-center gap-1.5 t-small">
-                <Clock size={13} />
+              <span className="inline-flex items-center gap-1.5 font-karla text-[11.5px] uppercase tracking-[0.12em] text-muted">
+                <Clock size={12} />
                 {featuredInsight.readTime}
               </span>
             </div>
-            <h3 className="t-h3 mt-5">{featuredInsight.title}</h3>
-            <p className="t-body mt-4 flex-1">{featuredInsight.summary}</p>
-            <div className="mt-6 flex items-center justify-between">
-              <span className="t-small">{featuredInsight.displayDate}</span>
-              <span className="inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong">
+            <h3 className="mt-5 font-karla text-2xl font-bold leading-snug text-strong">
+              {featuredInsight.title}
+            </h3>
+            <p className="mt-3 font-lora text-[15px] leading-7 text-body flex-1">
+              {featuredInsight.summary}
+            </p>
+            <div className="mt-6 flex items-center justify-between border-t border-hairline pt-4">
+              <span className="font-karla text-xs uppercase tracking-[0.12em] text-muted">
+                {featuredInsight.displayDate}
+              </span>
+              <span className="inline-flex items-center gap-1.5 font-karla text-xs font-semibold uppercase tracking-[0.14em] text-brand-strong">
                 Read briefing
                 <ArrowRight
-                  size={16}
+                  size={14}
                   className="transition-transform group-hover:translate-x-0.5"
                 />
               </span>
@@ -79,16 +85,24 @@ export default function InsightsSection() {
             <Reveal key={post.slug} delay={i * 0.07}>
               <Link
                 href={`/insights/${post.slug}`}
-                className="group flex h-full flex-col rounded-2xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card"
+                className="group flex h-full flex-col rounded-xl border border-hairline bg-surface p-6 transition-shadow duration-300 hover:shadow-md"
               >
-                <span className="font-karla text-xs font-semibold uppercase tracking-[0.12em] text-brand-strong">
-                  {post.category}
-                </span>
-                <h4 className="mt-3 font-karla text-lg font-semibold text-strong">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="inline-flex rounded-full px-2.5 py-0.5 font-karla text-[10.5px] font-semibold uppercase tracking-[0.18em] text-brand-strong ring-1 ring-inset ring-brand-soft bg-brand-soft/40">
+                    {post.category}
+                  </span>
+                </div>
+                <h4 className="mt-4 font-karla text-lg font-bold leading-snug text-strong">
                   {post.title}
                 </h4>
-                <p className="t-small mt-2 flex-1">{post.summary}</p>
-                <span className="mt-4 t-small">{post.displayDate}</span>
+                <p className="mt-2 font-lora text-[14px] leading-6 text-body flex-1">
+                  {post.summary}
+                </p>
+                <div className="mt-5 border-t border-hairline pt-3">
+                  <span className="font-karla text-[11.5px] uppercase tracking-[0.12em] text-muted">
+                    {post.displayDate}
+                  </span>
+                </div>
               </Link>
             </Reveal>
           ))}
