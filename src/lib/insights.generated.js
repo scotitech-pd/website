@@ -292,6 +292,98 @@ export const insights = [
   },
   {
     "status": "published",
+    "featured": false,
+    "slug": "google-workspace-alternative-private-ai",
+    "category": "AI Workspace",
+    "topic": "Secure collaboration software",
+    "title": "Looking for a Google Workspace alternative? Start with control, not features",
+    "summary": "Search demand around Google Workspace alternatives, Microsoft 365 alternatives, secure collaboration software, and enterprise knowledge management points to a bigger issue: buyers are not only comparing mail, files, and chat. They are asking who controls the workspace, where knowledge lives, and whether AI can be used without exposing sensitive business data.",
+    "seoDescription": "A practical guide for teams comparing Google Workspace alternatives, Microsoft 365 alternatives, secure collaboration software, enterprise knowledge management, and private AI workspaces.",
+    "date": "2026-07-14",
+    "updated": "2026-07-14",
+    "displayDate": "14 July 2026",
+    "readTime": "5 min read",
+    "sourceName": "ScotiTech editorial team",
+    "sourceUrl": "https://scotitech.com/products/axos",
+    "image": "/images/insights/secure-ai-governance.jpg",
+    "tags": [
+      "Google Workspace alternative",
+      "Microsoft 365 alternative",
+      "Office 365 alternative",
+      "secure collaboration software",
+      "enterprise knowledge management",
+      "enterprise search AI",
+      "AXOS"
+    ],
+    "relatedProduct": {
+      "name": "AXOS",
+      "href": "/products/axos",
+      "description": "AXOS is a private AI workspace and secure collaboration platform for qualified enterprises evaluating controlled workspace alternatives.",
+      "cta": "Explore AXOS"
+    },
+    "highlights": [
+      {
+        "label": "Search intent",
+        "value": "Workspace alternatives",
+        "description": "Buyers search for Google Workspace alternative, Microsoft 365 alternative, and Office 365 alternative when standard SaaS does not match their control needs."
+      },
+      {
+        "label": "Real question",
+        "value": "Who owns the operating layer?",
+        "description": "Feature comparison is useful, but hosting, access, knowledge control, and AI boundaries usually decide whether the platform is fit for enterprise use."
+      },
+      {
+        "label": "AXOS fit",
+        "value": "Private workspace",
+        "description": "AXOS is strongest when a qualified organisation needs secure collaboration software, enterprise knowledge management, and private AI in one controlled environment."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Alternative does not mean cheaper clone",
+        "paragraphs": [
+          "A serious Google Workspace alternative is not just a different inbox and file drive. For enterprise teams, the real comparison is about control: data location, access rules, auditability, AI use, and whether the workspace can support sensitive employee operations.",
+          "The same is true for Microsoft 365 alternative and Office 365 alternative searches. Some buyers want cost reduction, but many are signalling a deeper concern: their current collaboration stack is powerful, yet too broad, too external, or too difficult to govern for specific workflows."
+        ]
+      },
+      {
+        "heading": "Secure collaboration software now has to include AI boundaries",
+        "paragraphs": [
+          "Mail, files, chat, meetings, and tasks used to be enough. Now the workspace also needs rules for what AI can see, which knowledge sources it can use, where outputs are stored, and who is accountable when AI-assisted work influences a decision.",
+          "That is why secure collaboration software should be judged by more than messaging and document storage. The better question is whether the platform gives leaders a clear operating model for collaboration, AI assistance, and data sovereignty."
+        ]
+      },
+      {
+        "heading": "Enterprise knowledge management is the hidden requirement",
+        "paragraphs": [
+          "Most organisations already have knowledge. The problem is that it is fragmented across drives, inboxes, chat threads, task boards, and personal notes. A workspace alternative that does not improve enterprise knowledge management may only move the same sprawl into a new interface.",
+          "Enterprise search AI can help, but only when search respects permissions, approved sources, retention expectations, and the organisation's deployment model. Search that ignores governance is not intelligence; it is a faster way to create risk."
+        ]
+      },
+      {
+        "heading": "Where AXOS fits",
+        "paragraphs": [
+          "AXOS is not positioned as a free Google Workspace alternative or a casual productivity-suite replacement. It is an enterprise-only private AI workspace for qualified organisations that want mail, drive, calendar, chat, video, tasks, and governed AI under a tighter control model.",
+          "That makes AXOS most relevant when the buyer is evaluating secure collaboration platforms, private AI, enterprise knowledge management, or a self-hosted workspace where employee adoption needs a limited testing platform before rollout."
+        ]
+      },
+      {
+        "heading": "The buying lens",
+        "paragraphs": [
+          "Before comparing feature grids, ask what problem created the search. If the goal is lower-cost generic collaboration, a mainstream SaaS alternative may be enough. If the goal is data ownership, AI governance, and controlled employee deployment, the evaluation needs to go deeper.",
+          "The right shortlist should test hosting model, identity, file access, audit trails, knowledge retrieval, AI boundaries, rollout process, and how the vendor supports a time-limited evaluation before enterprise adoption."
+        ]
+      }
+    ],
+    "actionItems": [
+      "Separate price-driven searches from control-driven searches before choosing a Google Workspace alternative.",
+      "Ask whether secure collaboration software includes AI access controls, audit trails, and data residency options.",
+      "Review enterprise knowledge management and enterprise search AI requirements before moving sensitive files into a new workspace.",
+      "Use a limited testing platform before adopting a private AI workspace for employees."
+    ]
+  },
+  {
+    "status": "published",
     "featured": true,
     "slug": "wwdc26-app-store-updates-mean-for-appdeploy-rollout",
     "category": "WWDC 2026 Briefing",

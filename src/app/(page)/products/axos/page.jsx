@@ -2,9 +2,9 @@ import ProductTemplate from "@/components/products/ProductTemplate";
 import { getProduct } from "@/lib/products";
 
 export const metadata = {
-  title: "AXOS - Private AI Workspace & Enterprise AI Platform",
+  title: "AXOS - Private AI Workspace & Enterprise Collaboration Platform",
   description:
-    "AXOS is a private AI workspace and self-hosted enterprise AI platform for digital workplace teams that need mail, drive, chat, video, tasks, and governed AI in one controlled environment.",
+    "AXOS is a private AI workspace and self-hosted enterprise collaboration platform for teams evaluating secure Google Workspace or Microsoft 365 alternatives with governed AI.",
   alternates: { canonical: "/products/axos" },
   keywords: [
     "AXOS",
@@ -13,6 +13,15 @@ export const metadata = {
     "private AI",
     "digital workplace solutions",
     "digital workspace platform",
+    "secure collaboration software",
+    "secure collaboration platforms",
+    "enterprise knowledge management",
+    "enterprise knowledge management platform",
+    "enterprise search AI",
+    "Google Workspace alternative",
+    "alternative to Google Workspace",
+    "Microsoft 365 alternative",
+    "Office 365 alternative",
     "private AI workspace",
     "self-hosted AI",
     "self hosted AI",
@@ -24,16 +33,16 @@ export const metadata = {
     "RAG",
   ],
   openGraph: {
-    title: "AXOS - Private AI Workspace & Enterprise AI Platform",
+    title: "AXOS - Private AI Workspace & Enterprise Collaboration Platform",
     description:
-      "A private, self-hostable AI workspace and digital workplace platform with mail, drive, chat, video, tasks, and governed AI built in.",
+      "A private, self-hostable workspace for secure collaboration, enterprise knowledge management, and governed AI.",
     url: "/products/axos",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AXOS - Private AI Workspace & Enterprise AI Platform",
-    description: "A private, self-hostable enterprise AI platform with workspace tools built in.",
+    title: "AXOS - Private AI Workspace & Enterprise Collaboration Platform",
+    description: "A private, self-hostable collaboration platform with governed AI built in.",
   },
 };
 
