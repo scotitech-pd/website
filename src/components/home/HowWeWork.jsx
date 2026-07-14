@@ -34,9 +34,9 @@ const principles = [
 
 export default function HowWeWork() {
   return (
-    <Section id="approach" surface="muted" spacing="lg">
+    <Section id="approach" surface="base" spacing="lg">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[40%_60%] lg:gap-16">
-        {/* Sticky left panel — the signature pinned moment */}
+        {/* Sticky left panel */}
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
             <Eyebrow>How we work</Eyebrow>
@@ -57,18 +57,18 @@ export default function HowWeWork() {
             const Icon = p.icon;
             return (
               <Reveal key={p.no} delay={i * 0.06}>
-                <div className="flex gap-5 rounded-2xl border border-hairline bg-surface p-6 shadow-soft transition-all duration-300 hover:shadow-card md:p-8">
+                <div className="flex gap-5 rounded-xl border border-hairline bg-surface p-6 transition-shadow duration-300 hover:shadow-md md:p-7">
                   <div className="flex flex-col items-center">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand-strong">
-                      <Icon size={20} />
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand-strong">
+                      <Icon size={18} />
                     </span>
-                    <span className="mt-3 font-mono text-xs text-muted">{p.no}</span>
+                    <span className="mt-3 font-mono text-[11px] tracking-wider text-muted">{p.no}</span>
                   </div>
                   <div>
-                    <h3 className="font-karla text-xl font-semibold text-strong">
+                    <h3 className="font-karla text-lg font-bold text-strong">
                       {p.title}
                     </h3>
-                    <p className="t-body mt-2">{p.body}</p>
+                    <p className="mt-2 font-lora text-[15px] leading-7 text-body">{p.body}</p>
                   </div>
                 </div>
               </Reveal>

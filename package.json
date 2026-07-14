@@ -6,7 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "insights:sync": "node scripts/build-insights-index.mjs",
+    "insights:draft": "node scripts/generate-insight-draft.mjs",
+    "insights:publish": "node scripts/publish-insight.mjs",
+    "insights:pipeline": "node scripts/run-editorial-pipeline.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

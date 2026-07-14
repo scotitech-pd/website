@@ -1,0 +1,82 @@
+{
+  "status": "published",
+  "featured": false,
+  "slug": "software-security-code-raises-the-standard-for-product-buyers",
+  "category": "Security Briefing",
+  "topic": "Software assurance",
+  "title": "Software buyers are starting to ask harder security questions",
+  "summary": "Security is no longer a late-stage procurement checkbox. The UK Software Security Code of Practice gives buyers a sharper way to ask how software is designed, built, updated, supported, and retired. For vendors, the opportunity is clear: the companies that can explain their security posture simply will look more trustworthy before the technical review even starts.",
+  "seoDescription": "A ScotiTech briefing on the UK Software Security Code of Practice, secure-by-design software, vendor assurance, deployment, maintenance, and buyer expectations.",
+  "date": "2026-05-04",
+  "updated": "2026-06-14",
+  "displayDate": "4 May 2026",
+  "readTime": "6 min read",
+  "sourceName": "GOV.UK",
+  "sourceUrl": "https://www.gov.uk/government/publications/software-security-code-of-practice",
+  "image": "/images/insights/software-security-code.jpg",
+  "tags": [
+    "Software security",
+    "Vendor assurance",
+    "Secure by design",
+    "Governance"
+  ],
+  "relatedProduct": {
+    "name": "ScotiTech product portfolio",
+    "href": "/products",
+    "description": "Focused software products built around private rollout, team workflows, and policy-aligned technology adoption.",
+    "cta": "Explore products"
+  },
+  "highlights": [
+    {
+      "label": "Buyer pressure",
+      "value": "Evidence matters",
+      "description": "Customers increasingly expect clear answers about secure design, build controls, updates, vulnerabilities, and support."
+    },
+    {
+      "label": "Vendor signal",
+      "value": "Trust before demo",
+      "description": "A simple, credible security story helps software companies stand out before procurement turns into a document chase."
+    },
+    {
+      "label": "Product impact",
+      "value": "Control by design",
+      "description": "Products that handle private apps, AI workflows, or operational data need security posture to be visible in the experience."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Security is becoming part of the sale",
+      "paragraphs": [
+        "For business software, trust now starts long before a contract is signed. Buyers want to know not only what a product does, but how it is built, updated, monitored, supported, and retired.",
+        "The UK Software Security Code of Practice makes that expectation easier to name. It gives buyers a practical language for asking about secure design, development, deployment, maintenance, vulnerability handling, and customer communication."
+      ]
+    },
+    {
+      "heading": "The questions are getting more specific",
+      "paragraphs": [
+        "The old question was: is this product secure? The better question is: how do you know, who owns it, how are updates delivered, what happens when a vulnerability appears, and how will customers be told?",
+        "That shift matters because vague reassurance is no longer enough. Buyers are looking for evidence that security is part of the product lifecycle, not a slide added at the end of the sales process."
+      ]
+    },
+    {
+      "heading": "Lightweight does not mean unmanaged",
+      "paragraphs": [
+        "Small product companies do not need to pretend they have enterprise certification for everything on day one. But they do need to show that simple software can still be responsibly designed, operated, updated, and supported.",
+        "That is especially important for products close to private app access, team communication, AI-supported work, or operational data. The lighter the product feels, the clearer the control story needs to be."
+      ]
+    },
+    {
+      "heading": "The ScotiTech view",
+      "paragraphs": [
+        "ScotiTech products are strongest when trust is visible: controlled deployment, private workflow boundaries, clear ownership, sensible data handling, and a security story that buyers can understand without a 40-page explanation.",
+        "That is not just compliance hygiene. It is commercial credibility. Buyers remember the vendor that can explain risk clearly and honestly."
+      ]
+    }
+  ],
+  "actionItems": [
+    "Explain security as part of the product experience, not a separate procurement appendix.",
+    "Prepare clear answers for development practice, update handling, vulnerability response, and customer communication.",
+    "Show access control, data handling, rollout ownership, and support expectations directly on product pages.",
+    "Use recognised guidance to build confidence without overstating maturity or adding unnecessary complexity."
+  ]
+}

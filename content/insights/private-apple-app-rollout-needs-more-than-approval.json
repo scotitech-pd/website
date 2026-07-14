@@ -1,0 +1,82 @@
+{
+  "status": "published",
+  "featured": false,
+  "slug": "private-apple-app-rollout-needs-more-than-approval",
+  "category": "Platform Briefing",
+  "topic": "Private app distribution",
+  "title": "App Store approval is only the beginning of private app rollout",
+  "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the distribution rails. AppDeploy gives the rollout a working operating layer.",
+  "seoDescription": "A practical ScotiTech briefing on Apple Custom Apps, private distribution, and why internal iOS rollout needs a controlled operating layer after approval.",
+  "date": "2026-05-04",
+  "updated": "2026-06-14",
+  "displayDate": "4 May 2026",
+  "readTime": "5 min read",
+  "sourceName": "Apple Developer",
+  "sourceUrl": "https://developer.apple.com/support/volume-purchase-and-custom-apps/",
+  "image": "/images/insights/private-app-rollout-tablet.jpg",
+  "tags": [
+    "Custom Apps",
+    "Apple Business",
+    "Private rollout",
+    "AppDeploy"
+  ],
+  "relatedProduct": {
+    "name": "AppDeploy",
+    "href": "/products/appdeploy",
+    "description": "A branded workspace for controlled iOS app access, install guidance, and rollout ownership.",
+    "cta": "Explore AppDeploy"
+  },
+  "highlights": [
+    {
+      "label": "Approval",
+      "value": "Not adoption",
+      "description": "An approved private app still needs audience control, install clarity, support ownership, and version confidence."
+    },
+    {
+      "label": "Rollout gap",
+      "value": "The messy middle",
+      "description": "The risk usually lives between Apple approval and daily use: requests, instructions, failed installs, and unclear ownership."
+    },
+    {
+      "label": "AppDeploy",
+      "value": "One front door",
+      "description": "A branded rollout workspace gives users one trusted place to understand access, install steps, release notes, and support."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Approval is not the same as adoption",
+      "paragraphs": [
+        "Apple's Custom Apps route gives organisations a credible way to distribute private apps through Apple Business. That solves an important platform problem, but it does not automatically solve the business rollout problem.",
+        "The moment a real team needs the app, the questions become operational. Who is eligible? Which build is approved? Which instructions are current? What happens when someone cannot install it? Who decides whether a rollout is complete?"
+      ]
+    },
+    {
+      "heading": "The messy middle is where launches slow down",
+      "paragraphs": [
+        "Private app launches often break down in ordinary places: email chains, spreadsheet approvals, outdated screenshots, one-off support messages, and no single page that everyone trusts.",
+        "That friction is expensive because it makes a professional app feel unfinished. Users hesitate, administrators repeat themselves, and the product team loses visibility just when rollout should be building confidence."
+      ]
+    },
+    {
+      "heading": "SMEs feel this before enterprises admit it",
+      "paragraphs": [
+        "Small and mid-sized organisations may not have a full mobile engineering or IT operations team sitting behind every release. The buyer might be a founder, operations lead, product owner, or IT manager who simply needs rollout to feel controlled.",
+        "For those teams, a lightweight but professional rollout layer is not a luxury. It is how they avoid turning every private app launch into a manual support project."
+      ]
+    },
+    {
+      "heading": "Where AppDeploy fits",
+      "paragraphs": [
+        "AppDeploy gives private distribution a business-facing home: branded access, current install guidance, release context, request handling, support routes, and clearer rollout ownership.",
+        "The point is not to complicate Apple's distribution route. The point is to make it usable for the people who need to launch, explain, support, and measure private apps in the real world."
+      ]
+    }
+  ],
+  "actionItems": [
+    "Define the rollout owner before submission, not after users start asking for help.",
+    "Create one trusted access page with eligibility, install steps, release notes, and support contact.",
+    "Track approved versions and target audiences so users never act on stale instructions.",
+    "Treat failed installs and access requests as part of the product experience, not background admin."
+  ]
+}

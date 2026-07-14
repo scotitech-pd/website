@@ -65,7 +65,7 @@ const getContactHref = (item) => {
 /* main section */
 const GetInTouch = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f7f7f5] py-12 lg:py-20">
+    <section className="relative overflow-hidden bg-[#f5f3ee] py-12 lg:py-20">
       {/* background decorative images */}
       <div>
         <Image

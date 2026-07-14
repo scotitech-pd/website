@@ -59,12 +59,12 @@ export default function AboutPage() {
             const Icon = f.icon;
             return (
               <Reveal key={f.value} delay={i * 0.06}>
-                <div className="h-full rounded-2xl border border-hairline bg-surface p-6 shadow-soft">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand-strong">
-                    <Icon size={20} />
+                <div className="h-full rounded-xl border border-hairline bg-surface p-6 transition-shadow duration-300 hover:shadow-md">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand-strong">
+                    <Icon size={18} />
                   </span>
-                  <p className="mt-5 font-karla text-xl font-semibold text-strong">{f.value}</p>
-                  <p className="t-small mt-1">{f.label}</p>
+                  <p className="mt-5 font-karla text-lg font-bold text-strong">{f.value}</p>
+                  <p className="mt-1 font-karla text-xs uppercase tracking-[0.12em] text-muted">{f.label}</p>
                 </div>
               </Reveal>
             );
@@ -125,7 +125,7 @@ export default function AboutPage() {
       <section className="bg-surface py-16 md:py-24">
         <Container>
           <Reveal>
-            <div className="relative overflow-hidden rounded-[2rem] bg-ink px-7 py-12 text-center shadow-lift md:px-14 md:py-16">
+            <div className="relative overflow-hidden rounded-xl bg-ink px-7 py-12 text-center md:px-12 md:py-14">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(226,88,14,0.25),transparent_60%)]" />
               <div className="relative z-10 mx-auto max-w-2xl">
                 <h2 className="t-h1 text-on-ink">Let's build something credible together.</h2>

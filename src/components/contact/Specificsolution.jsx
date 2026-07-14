@@ -124,7 +124,7 @@ const SpecificSolution = () => {
   };
 
   return (
-    <section className="relative bg-[#f7f7f5] overflow-hidden py-12 lg:py-20">
+    <section className="relative bg-[#f5f3ee] overflow-hidden py-12 lg:py-20">
       <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
         <h2 className="text-2xl lg:text-[48px] font-bold font-karla text-[#0F172A] text-center mb-8 lg:mb-16">
           Looking for a Specific Product?

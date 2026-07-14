@@ -39,33 +39,24 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-on-ink">
+    <footer className="relative z-10 bg-ink text-on-ink">
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
-        {/* Top */}
-        <div className="grid gap-10 py-14 md:py-16 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
-          {/* Brand */}
+
+        {/* Brand row */}
+        <div className="border-b border-white/8 py-6">
+          <Link href="/" className="inline-block">
+            <Image src="/logo/logo.png" alt="ScotiTech" width={170} height={42} className="h-auto w-[140px] invert" />
+          </Link>
+        </div>
+
+        {/* Links grid */}
+        <div className="grid gap-10 py-12 md:py-14 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Brand description */}
           <div>
-            <Link href="/" className="inline-block">
-              <Image src="/logo/logo.png" alt="ScotiTech" width={170} height={42} className="h-auto w-[170px]" />
-            </Link>
-            <p className="mt-5 max-w-xs font-lora text-sm leading-relaxed text-on-ink-muted">
+            <p className="max-w-xs font-lora text-sm leading-relaxed text-on-ink-muted">
               Focused software products for private app rollout, team operations,
               and policy-aligned, AI-assisted work.
             </p>
-            <div className="mt-6 flex gap-3">
-              {socials.map(({ Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] text-on-ink transition-colors hover:border-brand hover:bg-brand hover:text-brand-contrast"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick links */}
@@ -126,8 +117,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
-        {/* Trust badges */}
         <div className="flex flex-wrap gap-x-6 gap-y-3 border-t border-white/10 py-6">
           {badges.map(({ icon: Icon, label }) => (
             <span key={label} className="inline-flex items-center gap-2 font-karla text-xs font-semibold uppercase tracking-[0.12em] text-on-ink-muted">
@@ -154,17 +143,32 @@ export default function Footer() {
         </div>
 
         {/* Legal / registered office */}
-        <div className="flex flex-col gap-4 border-t border-white/10 py-6 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-6 border-t border-white/10 py-6 md:flex-row md:items-center md:justify-between">
           <p className="font-lora text-xs leading-relaxed text-on-ink-muted">
             © {new Date().getFullYear()} ScotiTech Solutions Limited. All rights reserved.
             <br className="hidden sm:block" />
             Registered in Scotland · Registered office: 11 Caldervale Drive, Motherwell ML1 2GB, UK.
           </p>
-          <div className="flex gap-6 font-karla text-xs text-on-ink-muted">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-4 font-karla text-xs text-on-ink-muted">
             <Link href="/privacy-policy" className="hover:text-brand">Privacy</Link>
             <Link href="/cookie-policy" className="hover:text-brand">Cookies</Link>
             <Link href="/terms-and-conditions" className="hover:text-brand">Terms</Link>
             <CookiePreferencesButton className="cursor-pointer hover:text-brand" />
+            <span className="hidden h-3 w-px bg-white/15 md:inline-block" />
+            <div className="flex gap-2">
+              {socials.map(({ Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-on-ink/80 transition-colors hover:border-brand hover:bg-brand hover:text-brand-contrast"
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

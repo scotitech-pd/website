@@ -6,10 +6,10 @@
      One canvas, one accent, soft elevation. Used sitewide.
   --------------------------------------------------------------- */
 
-  /* Surfaces */
-  --surface: #ffffff;
-  --surface-muted: #f7f8fa;
-  --surface-sunken: #eef1f5;
+  /* Surfaces — warm cream palette */
+  --surface: #faf9f6;
+  --surface-muted: #f5f3ee;
+  --surface-sunken: #ede9e0;
   --ink: #0b1220; /* inverse / rare high-impact bands */
   --ink-soft: #111a2e;
 
@@ -47,7 +47,7 @@
   /* ---------------------------------------------------------------
      LEGACY ALIASES — keep existing pages rendering during migration
   --------------------------------------------------------------- */
-  --background: #ffffff;
+  --background: #faf9f6;
   --foreground: #ffffff;
   --main-light: #6b61d9;
   --main: #e2580e;
@@ -63,9 +63,9 @@
   --seablue: #e2e8f0;
 
   /* Scrollbar */
-  --scrollbar-bg: #eef1f5;
-  --scrollbar-thumb: #cbd5e1;
-  --scrollbar-thumb-hover: #94a3b8;
+  --scrollbar-bg: #ede9e0;
+  --scrollbar-thumb: #d4cfc4;
+  --scrollbar-thumb-hover: #b8b0a0;
 }
 
 @theme inline {

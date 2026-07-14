@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, ArrowRight } from "lucide-react";
+import { Linkedin, ArrowRight, Trophy, Globe } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -15,6 +15,10 @@ const team = [
     linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
     description:
       "Leads ScotiTech's product vision, commercial strategy, and global direction across AppDeploy, AXOS, ClarityPath, and wider technology delivery.",
+    credentials: [
+      { icon: Trophy, text: "NextGen Innovator of the Year 2025" },
+      { icon: Globe, text: "Scotland StartUp Awards 2026 Finalist" },
+    ],
   },
   {
     name: "Daniel Chapman",
@@ -23,20 +27,21 @@ const team = [
     linkedin: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     description:
       "Supports long-term strategy, commercial direction, and partner positioning across ScotiTech's core product portfolio.",
+    credentials: [],
   },
 ];
 
-export default function LeadershipStrip() {
+export default function LeadershipStrip({ chapterNo }) {
   return (
-    <Section surface="muted" spacing="lg">
+    <Section surface="base" spacing="lg">
+      {/* Section header */}
       <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
         <Reveal className="max-w-2xl">
-          <Eyebrow>Leadership</Eyebrow>
-          <h2 className="t-h1 mt-3">Founder-led product direction.</h2>
+          <Eyebrow>{chapterNo ? `${chapterNo} // ` : ""}Leadership</Eyebrow>
+          <h2 className="t-h1 mt-3">The team that built this.</h2>
           <p className="t-lead mt-5">
-            ScotiTech is led by Pradeep Dahiya and Daniel Chapman, with a wider
-            team supporting product, engineering, infrastructure, AI, content,
-            and delivery worldwide.
+            ScotiTech is founder-led from Scotland with a wider team across
+            product, engineering, infrastructure, AI, content, and global delivery.
           </p>
         </Reveal>
         <Reveal delay={0.1}>
@@ -50,47 +55,83 @@ export default function LeadershipStrip() {
         </Reveal>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-        {team.map((m, i) => (
-          <Reveal key={m.name} delay={i * 0.06}>
-            <div className="group grid grid-cols-1 h-full overflow-hidden rounded-2xl border border-hairline bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card sm:grid-cols-[42%_58%]">
-              <div className="relative min-h-[300px] overflow-hidden bg-surface-sunken sm:min-h-[360px]">
-                <Image
-                  src={m.img}
-                  alt={m.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 42vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                />
-                <a
-                  href={m.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${m.name} on LinkedIn`}
-                  className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-surface/90 text-brand-strong shadow-soft backdrop-blur transition-colors hover:bg-brand hover:text-brand-contrast"
-                >
-                  <Linkedin size={16} />
-                </a>
+      {/* Team cards — horizontal layout, portrait small and contained */}
+      <div className="mt-12 flex flex-col gap-5">
+        {team.map((m, i) => {
+          const Icon0 = m.credentials[0]?.icon;
+          return (
+            <Reveal key={m.name} delay={i * 0.08}>
+              <div className="group flex flex-col gap-5 rounded-2xl border border-hairline bg-surface p-5 shadow-soft transition-all duration-300 hover:shadow-card sm:flex-row sm:items-start sm:gap-7 md:p-7">
+
+                {/* Portrait — small, square, contained */}
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-surface-sunken sm:h-24 sm:w-24">
+                  <Image
+                    src={m.img}
+                    alt={m.name}
+                    fill
+                    sizes="96px"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="flex flex-1 flex-col gap-3 min-w-0">
+
+                  {/* Name + title row */}
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="font-karla text-lg font-semibold text-strong leading-tight">
+                        {m.name}
+                      </p>
+                      <p className="mt-0.5 font-karla text-sm font-semibold text-brand-strong">
+                        {m.title}
+                      </p>
+                    </div>
+                    <a
+                      href={m.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${m.name} on LinkedIn`}
+                      className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-hairline bg-surface-muted text-muted transition-all hover:border-[#0077b5]/30 hover:bg-[#0077b5]/10 hover:text-[#0077b5]"
+                    >
+                      <Linkedin size={14} />
+                    </a>
+                  </div>
+
+                  {/* Bio */}
+                  <p className="font-karla text-sm leading-relaxed text-body">
+                    {m.description}
+                  </p>
+
+                  {/* Bottom row — credentials + link */}
+                  <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
+                    <div className="flex flex-wrap gap-2">
+                      {m.credentials.map((c) => {
+                        const Icon = c.icon;
+                        return (
+                          <span
+                            key={c.text}
+                            className="inline-flex items-center gap-1.5 rounded-full border border-hairline bg-surface-muted px-3 py-1 font-karla text-[11px] font-medium text-muted"
+                          >
+                            <Icon size={11} className="text-brand-strong" />
+                            {c.text}
+                          </span>
+                        );
+                      })}
+                    </div>
+                    <Link
+                      href="/aboutus"
+                      className="inline-flex items-center gap-1 font-karla text-xs font-semibold text-brand-strong hover:text-brand"
+                    >
+                      Full profile
+                      <ArrowRight size={13} />
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col p-6 md:p-7">
-                <p className="font-karla text-2xl font-semibold text-strong">
-                  {m.name}
-                </p>
-                <p className="mt-1 font-karla text-sm font-semibold text-brand-strong">
-                  {m.title}
-                </p>
-                <p className="t-body mt-5 flex-1">{m.description}</p>
-                <Link
-                  href="/aboutus"
-                  className="mt-6 inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong hover:text-brand"
-                >
-                  View full team
-                  <ArrowRight size={16} />
-                </Link>
-              </div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </div>
     </Section>
   );

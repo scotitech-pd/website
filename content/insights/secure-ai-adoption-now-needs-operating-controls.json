@@ -1,0 +1,82 @@
+{
+  "status": "published",
+  "featured": false,
+  "slug": "secure-ai-adoption-now-needs-operating-controls",
+  "category": "AI Governance",
+  "topic": "Secure AI adoption",
+  "title": "Secure AI adoption fails when policy never reaches the workflow",
+  "summary": "Most AI risk does not appear in a board policy document. It appears when files move into the wrong workspace, prompts expose sensitive context, outputs influence decisions, and nobody can see who did what. The UK AI Cyber Security Code gives buyers a useful baseline. AXOS turns that conversation toward controlled, private AI workspaces.",
+  "seoDescription": "A ScotiTech briefing on the UK AI Cyber Security Code of Practice, secure AI deployment, access governance, monitoring, and why enterprise AI adoption needs operating controls.",
+  "date": "2026-05-04",
+  "updated": "2026-06-14",
+  "displayDate": "4 May 2026",
+  "readTime": "6 min read",
+  "sourceName": "GOV.UK",
+  "sourceUrl": "https://www.gov.uk/government/publications/ai-cyber-security-code-of-practice/code-of-practice-for-the-cyber-security-of-ai",
+  "image": "/images/insights/ai-governance-workspace.jpg",
+  "tags": [
+    "AI security",
+    "Governance",
+    "Secure deployment",
+    "AXOS"
+  ],
+  "relatedProduct": {
+    "name": "AXOS",
+    "href": "/products/axos",
+    "description": "A private workspace approach for communication, files, tasks, and governance-aligned AI operations.",
+    "cta": "Explore AXOS"
+  },
+  "highlights": [
+    {
+      "label": "Reality check",
+      "value": "Policy is not control",
+      "description": "AI rules only become useful when access, files, prompts, outputs, and review paths are controlled in the workflow."
+    },
+    {
+      "label": "Buyer concern",
+      "value": "Operational risk",
+      "description": "Teams need to know where data goes, who can use AI assistance, what is logged, and how outputs are reviewed."
+    },
+    {
+      "label": "AXOS fit",
+      "value": "Private workspace",
+      "description": "AXOS is positioned for teams that want useful AI support without losing control over data, permissions, and accountability."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "The AI risk is already inside the workflow",
+      "paragraphs": [
+        "By the time a business writes an AI policy, teams may already be experimenting with documents, customer notes, meeting summaries, spreadsheets, code, and decision-support prompts.",
+        "That is why secure AI adoption cannot live only in a document. The practical risk sits inside everyday work: who can upload files, what the system can see, where outputs are stored, and whether a human review path exists before AI-supported work affects a real decision."
+      ]
+    },
+    {
+      "heading": "The UK code gives buyers a sharper lens",
+      "paragraphs": [
+        "The UK AI Cyber Security Code of Practice is useful because it pushes the conversation beyond excitement and into operating discipline. It covers secure design, deployment, maintenance, monitoring, and end-of-life handling across AI systems.",
+        "For buyers, that turns a vague question into a practical one: does this AI workflow have controlled access, clear data boundaries, visible accountability, and a way to manage risk after launch?"
+      ]
+    },
+    {
+      "heading": "Policy without workspace control becomes theatre",
+      "paragraphs": [
+        "A policy can say sensitive data should not be pasted into unmanaged tools. It cannot, by itself, stop a team from doing exactly that when deadlines are tight and the approved workflow is inconvenient.",
+        "Secure adoption needs an operating layer: permissions, private file handling, approved workspaces, usage boundaries, output review, monitoring, and clear ownership when something needs to be investigated."
+      ]
+    },
+    {
+      "heading": "Where AXOS fits",
+      "paragraphs": [
+        "AXOS is strongest when the customer wants AI support in a controlled environment rather than another open-ended tool dropped into the business.",
+        "The product story should be practical: private workspace, clearer access, governed files, task context, and useful AI assistance that respects the organisation's need for control."
+      ]
+    }
+  ],
+  "actionItems": [
+    "Start with workflows where AI already touches business data, files, or decision-support outputs.",
+    "Separate user access, file access, and AI assistance so workspace boundaries are clear.",
+    "Make prompt use, output review, and accountability visible before expanding AI availability.",
+    "Include monitoring, incident response, and data disposal in the operating model from day one."
+  ]
+}

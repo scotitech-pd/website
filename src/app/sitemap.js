@@ -31,7 +31,7 @@ export default function sitemap() {
     })),
     ...insights.map((insight) => ({
       url: `${SITE_URL}/insights/${insight.slug}`,
-      lastModified: new Date(insight.updated),
+      lastModified: new Date(insight.updated || insight.date),
       changeFrequency: "monthly",
       priority: 0.75,
     })),

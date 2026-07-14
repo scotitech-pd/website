@@ -14,8 +14,8 @@ const logos = [
     href: null,
   },
   {
-    name: "No94oo",
-    image: "/images/aboutus/no94oo-logo.png",
+    name: "CRMNext",
+    image: null,
     href: null,
   },
 ];
@@ -60,7 +60,7 @@ const LogoTile = ({ logo }) => {
 
 export default function ClientLogoStrip() {
   return (
-    <section className="relative overflow-hidden bg-[#f7f7f5] py-14 md:py-18">
+    <section className="relative overflow-hidden bg-[#f5f3ee] py-14 md:py-18">
 
       <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         <div className="mx-auto mb-8 max-w-3xl text-center">

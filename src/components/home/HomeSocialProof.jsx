@@ -14,8 +14,8 @@ const clients = [
     href: null,
   },
   {
-    name: "No94oo",
-    image: "/images/aboutus/no94oo-logo.png",
+    name: "CRMNext",
+    image: null,
     href: null,
   },
 ];
@@ -26,17 +26,21 @@ const marqueeItems = [...clients, ...clients, ...clients];
 const stats = [
   { value: "Apple Custom Apps", label: "distribution channel" },
   { value: "£79", label: "/ month from" },
-  { value: "UK StartUp Awards 2026", label: "finalist" },
+  { value: "Scotland StartUp Awards 2026", label: "finalist" },
   { value: "GDPR-aligned", label: "data posture" },
 ];
 
 function LogoItem({ client }) {
-  const img = (
+  const img = client.image ? (
     <img
       src={client.image}
       alt={client.name}
       className="h-10 w-auto max-w-[130px] object-contain opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
     />
+  ) : (
+    <span className="rounded-full border border-[#e4e8e3] bg-[#f5f3ee] px-4 py-2 font-karla text-sm font-semibold text-[#111827]">
+      {client.name}
+    </span>
   );
 
   if (client.href) {
@@ -57,7 +61,7 @@ function LogoItem({ client }) {
 
 export default function HomeSocialProof() {
   return (
-    <section className="relative overflow-hidden border-y border-[#e4e8e3] bg-white py-12 md:py-14">
+    <section className="relative z-0 overflow-hidden border-y border-[#e8e3d8] bg-[#faf9f6] py-12 md:py-14">
       {/* Soft top-edge gradient */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#8C7A5E]/20 to-transparent" />
 
@@ -84,12 +88,12 @@ export default function HomeSocialProof() {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="flex items-baseline gap-2 rounded-full border border-[#e4e8e3] bg-[#F7F7F5] px-5 py-2.5"
+              className="flex items-baseline gap-2 rounded-full border border-[#e4e8e3] bg-[#f5f3ee] px-4 py-2"
             >
-              <span className="font-karla text-base font-bold text-[#111827]">
+              <span className="font-karla text-sm font-bold text-[#111827]">
                 {stat.value}
               </span>
-              <span className="font-karla text-xs font-medium text-slate-500">
+              <span className="font-karla text-[11px] font-medium uppercase tracking-[0.1em] text-slate-500">
                 {stat.label}
               </span>
             </div>

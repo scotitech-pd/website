@@ -122,7 +122,7 @@ const PressRelease = () => {
   return (
     <main className="min-h-screen font-karla relative isolate">
       {/* BASE BACKGROUND */}
-      <div className="fixed inset-0 bg-[#f7f7f5] -z-20" />
+      <div className="fixed inset-0 bg-[#f5f3ee] -z-20" />
 
       {/* DYNAMIC BACKGROUND DECOR - HERO ONLY */}
       <div className="absolute top-0 left-0 w-full h-[650px] -z-10 pointer-events-none overflow-hidden select-none">
@@ -180,16 +180,14 @@ const PressRelease = () => {
       </section>
 
       <section className="max-w-7xl mx-auto px-5 md:px-10 pb-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:items-stretch">
           {recognitionStories.map((story) => (
             <div
               key={story.title}
-              className={`rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.08)] ${
-                story.previewImage ? "p-5" : "p-5 sm:p-6"
-              }`}
+              className="flex flex-col rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.08)] p-5 sm:p-6"
             >
               <span
-                className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${
+                className={`inline-flex w-fit rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] ${
                   story.tone === "purple"
                     ? "bg-purple-100 text-[#641171]"
                     : story.tone === "teal"
@@ -199,67 +197,81 @@ const PressRelease = () => {
               >
                 {story.label}
               </span>
-              <h2 className={`mt-4 font-bold text-slate-900 ${story.previewImage ? "text-xl" : "text-2xl"}`}>
+              <h2 className="mt-4 text-xl font-bold text-slate-900 sm:text-2xl">
                 {story.title}
               </h2>
-              <p className={`mt-3 text-slate-600 font-lora ${story.previewImage ? "text-sm leading-6" : "leading-7"}`}>
-                {story.summary}
-              </p>
-              {story.imageSrc && (
-                <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-2">
-                  <Image
-                    src={story.imageSrc}
-                    alt={story.imageAlt || story.title}
-                    width={629}
-                    height={876}
-                    className="mx-auto h-32 w-auto max-w-full rounded-xl object-contain shadow-sm sm:h-36"
-                  />
-                </div>
-              )}
-              {story.previewImage && (
-                <a
-                  href={story.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group mt-3 block max-w-[240px] overflow-hidden rounded-xl border border-slate-200 bg-slate-950 shadow-inner"
-                  aria-label={story.cta || story.title}
-                >
-                  <div className="relative aspect-video">
-                    <img
-                      src={story.previewImage}
-                      alt={story.previewAlt || story.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover opacity-85 transition duration-300 group-hover:scale-[1.03] group-hover:opacity-100"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/95 text-[#b8430b] shadow-lg transition duration-300 group-hover:scale-105">
-                        <PlayCircle className="size-5" />
-                      </span>
+              <div
+                className={`mt-3 flex flex-1 flex-col gap-4 ${
+                  story.imageSrc || story.previewImage
+                    ? "sm:grid sm:grid-cols-[minmax(0,1fr)_168px] sm:items-start"
+                    : ""
+                }`}
+              >
+                <div className="min-w-0">
+                  <p className="text-slate-600 font-lora leading-7">
+                    {story.summary}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-5 text-sm text-slate-500 font-lora">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="size-4" />
+                      <span>{story.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="size-4" />
+                      <span>{story.location}</span>
                     </div>
                   </div>
-                </a>
-              )}
-              <div className={`flex flex-wrap gap-5 text-sm text-slate-500 font-lora ${story.previewImage ? "mt-3" : "mt-4"}`}>
-                <div className="flex items-center gap-2">
-                  <Calendar className="size-4" />
-                  <span>{story.date}</span>
+                  {story.href && !story.previewImage && (
+                    <a
+                      href={story.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-[#b8430b]"
+                    >
+                      {story.cta || "Watch"}
+                      <PlayCircle className="size-4" />
+                    </a>
+                  )}
                 </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="size-4" />
-                  <span>{story.location}</span>
-                </div>
+                {(story.imageSrc || story.previewImage) && (
+                  <div className="w-full sm:justify-self-end">
+                    {story.imageSrc && (
+                      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-2">
+                        <Image
+                          src={story.imageSrc}
+                          alt={story.imageAlt || story.title}
+                          width={629}
+                          height={876}
+                          className="mx-auto block h-28 w-auto rounded-lg object-contain"
+                        />
+                      </div>
+                    )}
+                    {story.previewImage && (
+                      <a
+                        href={story.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group block overflow-hidden rounded-xl border border-slate-200 bg-slate-950 shadow-inner"
+                        aria-label={story.cta || story.title}
+                      >
+                        <div className="relative aspect-video">
+                          <img
+                            src={story.previewImage}
+                            alt={story.previewAlt || story.title}
+                            loading="lazy"
+                            className="h-full w-full object-cover opacity-85 transition duration-300 group-hover:scale-[1.03] group-hover:opacity-100"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/95 text-[#b8430b] shadow-lg transition duration-300 group-hover:scale-105">
+                              <PlayCircle className="size-5" />
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
-              {story.href && !story.previewImage && (
-                <a
-                  href={story.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-[#b8430b]"
-                >
-                  {story.cta || "Watch"}
-                  <PlayCircle className="size-4" />
-                </a>
-              )}
             </div>
           ))}
         </div>
@@ -283,22 +295,24 @@ const PressRelease = () => {
                 held in Dubai, UAE.
               </p>
 
-              {/* HIGHLIGHT VIDEO */}
-              <motion.div 
-                whileHover={{ scale: 1.01 }}
-                className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl mb-12 bg-black group"
-              >
-                <video
-                  src={VIDEO_SRC}
-                  controls
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-xs flex items-center gap-2">
-                  <PlayCircle className="size-4 text-purple-400" />
-                  Glimpse of the Ceremony
+              {/* HIGHLIGHT VIDEO — capped, editorial framing */}
+              <figure className="mb-12 mx-auto max-w-2xl">
+                <div className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 bg-black shadow-lg">
+                  <video
+                    src={VIDEO_SRC}
+                    controls
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white px-3 py-1 rounded-full text-[11px] flex items-center gap-1.5">
+                    <PlayCircle className="size-3.5 text-purple-300" />
+                    Ceremony highlight
+                  </div>
                 </div>
-              </motion.div>
+                <figcaption className="mt-3 text-center text-xs text-slate-500 font-lora tracking-wide">
+                  Forttuna Global Excellence Awards 2025 — Dubai, UAE
+                </figcaption>
+              </figure>
 
               <div className="space-y-6 text-base md:text-lg">
                 <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">Recognition for practical execution</h3>

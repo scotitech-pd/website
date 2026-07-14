@@ -1,0 +1,10 @@
+{
+  "defaults": {
+    "publish": false,
+    "featured": false,
+    "status": "draft",
+    "product": "AppDeploy",
+    "category": "Insight Briefing"
+  },
+  "items": []
+}
