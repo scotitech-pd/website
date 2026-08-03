@@ -15,7 +15,8 @@ const navLinks = [
   { id: 3, title: "Insights", type: "anchor", target: "insights" },
   { id: 4, title: "About", type: "route", link: "/aboutus" },
   { id: 5, title: "Media", type: "route", link: "/media" },
-  { id: 6, title: "Contact", type: "anchor", target: "contact" },
+  { id: 6, title: "Growth roles", type: "route", link: "/careers" },
+  { id: 7, title: "Contact", type: "anchor", target: "contact" },
 ];
 
 const Navbar = () => {
