@@ -26,7 +26,7 @@ export const CATEGORIES = [
     id: "marketing",
     label: "Marketing",
     description:
-      "Used to deliver relevant content and measure the effectiveness of our campaigns.",
+      "Used to understand business visitors, support relevant outreach, and measure campaign effectiveness.",
     required: false,
   },
 ];

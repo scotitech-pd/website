@@ -14,7 +14,7 @@ export default function CookiePolicyPage() {
           <h1 className="text-center font-karla text-4xl font-bold text-main-dark">
             Cookie Policy
           </h1>
-          <p className="mt-4 text-center">Last Updated: 14 May 2026</p>
+          <p className="mt-4 text-center">Last Updated: 3 August 2026</p>
         </div>
 
         <div className="space-y-4 pl-1">
@@ -48,9 +48,11 @@ export default function CookiePolicyPage() {
             <div>
               <h3 className="font-karla text-xl font-semibold">2.3 Marketing Cookies</h3>
               <p className="mt-2 leading-7">
-                With your consent, marketing cookies may be used to deliver relevant content and measure
-                the effectiveness of campaigns. We do not use marketing cookies without your explicit
-                consent.
+                With your consent, marketing cookies and similar technologies may be used to understand
+                business visitors, support relevant outreach, and measure the effectiveness of campaigns.
+                This may include Apollo.io's website tracker for company-level visitor identification and,
+                where available and lawful, person-level identification for visitors in the United States.
+                We do not use marketing cookies without your explicit consent.
               </p>
             </div>
           </div>

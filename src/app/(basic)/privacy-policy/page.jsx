@@ -15,7 +15,7 @@ const  PrivacyPolicy  = () => {
         <div>
           <h1 className="text-4xl font-karla font-bold text-main-dark text-center">Privacy Policy</h1>
           {/* <p className="mt-2">Effective Date: [Insert Date]</p> */}
-          <p className="mt-4 text-center">Last Updated: 13-November-2025</p>
+          <p className="mt-4 text-center">Last Updated: 3 August 2026</p>
         </div>
 
         {/* 1. Introduction */}
@@ -49,12 +49,16 @@ const  PrivacyPolicy  = () => {
             <ul className="list-disc ml-6 mt-2 space-y-2 leading-7">
               <li>IP address, browser type, and device information.</li>
               <li>Cookies and usage data to improve our website experience.</li>
+              <li>Company-level visitor identification data where you have allowed marketing tracking.</li>
             </ul>
           </div>
 
           <div className="pl-3">
             <h3 className="text-xl font-karla font-semibold">2.3 Information from Third Parties</h3>
-            <p className="mt-2 leading-7">We may receive information from our business partners or analytics providers.</p>
+            <p className="mt-2 leading-7">
+              We may receive information from our business partners, analytics providers, or marketing
+              technology providers such as Apollo.io where you have allowed optional marketing tracking.
+            </p>
           </div>
         </div>
 
@@ -66,6 +70,7 @@ const  PrivacyPolicy  = () => {
             <li>To process payments and invoices.</li>
             <li>To communicate with you regarding inquiries, services, and updates.</li>
             <li>To analyze website traffic and enhance user experience.</li>
+            <li>To understand business interest in our products and support relevant B2B outreach.</li>
             <li>To comply with legal obligations.</li>
           </ul>
         </div>
@@ -77,10 +82,12 @@ const  PrivacyPolicy  = () => {
           <ul className="list-disc ml-6 space-y-2 leading-7 mt-2">
             <li>Enhance website functionality.</li>
             <li>Track visitor behaviour for analytics.</li>
-            <li>Provide personalised experiences.</li>
+            <li>Identify business visitors and support relevant B2B marketing where consent has been given.</li>
           </ul>
           <p className="mt-1 leading-7">
-            You can disable cookies through your browser settings, but some features may not function properly.
+            Optional analytics and marketing technologies are controlled through the cookie banner and
+            Cookie Settings link in the footer. You can also disable cookies through your browser settings,
+            but some features may not function properly.
           </p>
         </div>
 
@@ -90,6 +97,7 @@ const  PrivacyPolicy  = () => {
           <p className="leading-7">We do not sell your personal data. However, we may share data with:</p>
           <ul className="list-disc ml-6 space-y-2 leading-7">
             <li>Service providers (e.g., payment processors, cloud hosting).</li>
+            <li>Analytics and marketing technology providers where you have given optional consent.</li>
             <li>Legal authorities if required by law.</li>
             <li>Business partners in case of mergers or acquisitions.</li>
           </ul>
