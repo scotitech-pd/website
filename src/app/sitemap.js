@@ -12,6 +12,7 @@ const staticRoutes = [
   "/products/axos/deployment-discovery",
   "/products/claritypath",
   "/aboutus",
+  "/careers",
   "/media",
   "/contact",
   "/insights",

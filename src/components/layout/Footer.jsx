@@ -8,6 +8,7 @@ import CookiePreferencesButton from "@/components/cookie/CookiePreferencesButton
 const quickLinks = [
   { title: "Products", link: "/products" },
   { title: "Insights", link: "/insights" },
+  { title: "Growth roles", link: "/careers" },
   { title: "About", link: "/aboutus" },
   { title: "Media", link: "/media" },
   { title: "Contact", link: "/contact" },
