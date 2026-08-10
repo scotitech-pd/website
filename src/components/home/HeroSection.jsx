@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Trophy, ChevronDown } from "lucide-react";
+import { ArrowRight, Building2, ShieldCheck, ChevronDown } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/ModalContext";
@@ -46,14 +46,14 @@ export default function HeroSection() {
 
       {/* ── Main content ── */}
       <Container className="relative z-10 flex flex-1 flex-col items-center justify-center pt-28 pb-20 text-center md:pt-36 md:pb-28">
-        {/* Award badge */}
+        {/* Company badge */}
         <motion.div {...rise(0)}>
           <Link
-            href="/media"
+            href="/aboutus"
             className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.06] px-4 py-1.5 font-karla text-xs font-semibold uppercase tracking-[0.18em] text-white/70 backdrop-blur-sm transition-colors hover:border-brand/40 hover:text-white"
           >
-            <Trophy size={13} className="text-brand" />
-            Scotland StartUp Awards 2026 — Finalist
+            <Building2 size={13} className="text-brand" />
+            UK-registered technology company · worldwide focus
           </Link>
         </motion.div>
 
@@ -74,8 +74,9 @@ export default function HeroSection() {
           {...rise(0.16)}
           className="mt-6 max-w-2xl font-karla text-[clamp(1rem,0.9rem+0.5vw,1.2rem)] leading-relaxed text-white/55"
         >
-          ScotiTech builds focused, privacy-conscious products for internal app
-          distribution and private enterprise operations — live today with{" "}
+          ScotiTech builds and supports focused software for private app
+          distribution and controlled enterprise operations — led from Scotland
+          and working with organisations worldwide through{" "}
           <span className="text-white/80 font-medium">AppDeploy</span> and{" "}
           <span className="text-white/80 font-medium">AXOS</span>.
         </motion.p>
@@ -89,14 +90,14 @@ export default function HeroSection() {
             onClick={() => setShowModal(true)}
             className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 font-karla text-[15px] font-semibold text-white shadow-[0_0_32px_rgba(226,88,14,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-strong hover:shadow-[0_0_44px_rgba(226,88,14,0.50)]"
           >
-            Talk to our team
+            Discuss your requirement
             <ArrowRight size={16} />
           </button>
           <Link
             href="#products"
             className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-7 py-3.5 font-karla text-[15px] font-semibold text-white/80 backdrop-blur-sm transition-all duration-200 hover:border-white/25 hover:text-white"
           >
-            Explore products
+            View product portfolio
           </Link>
         </motion.div>
 
@@ -107,7 +108,7 @@ export default function HeroSection() {
         >
           <ShieldCheck size={15} className="text-brand/70" />
           <p className="font-karla text-xs tracking-wide">
-            UK-registered · privacy-conscious by design · trusted by early clients and partners
+            Live products · direct access to product leaders · structured deployment and support
           </p>
         </motion.div>
 

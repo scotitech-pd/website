@@ -11,12 +11,12 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { id: 1, title: "Products", type: "anchor", target: "products" },
-  { id: 2, title: "Credibility", type: "anchor", target: "proof" },
-  { id: 3, title: "Insights", type: "anchor", target: "insights" },
-  { id: 4, title: "About", type: "route", link: "/aboutus" },
-  { id: 5, title: "Media", type: "route", link: "/media" },
-  { id: 6, title: "Growth roles", type: "route", link: "/careers" },
-  { id: 7, title: "Contact", type: "anchor", target: "contact" },
+  { id: 2, title: "Solutions", type: "anchor", target: "solutions" },
+  { id: 3, title: "Trust", type: "route", link: "/trust" },
+  { id: 4, title: "Insights", type: "anchor", target: "insights" },
+  { id: 5, title: "Company", type: "route", link: "/aboutus" },
+  { id: 6, title: "Media", type: "route", link: "/media" },
+  { id: 7, title: "Careers", type: "route", link: "/careers" },
 ];
 
 const Navbar = () => {
@@ -61,7 +61,7 @@ const Navbar = () => {
       {/* Mobile overlay + panel */}
       <div
         className={cn(
-          "fixed inset-0 z-[60] bg-ink/40 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
+          "fixed inset-0 z-[60] bg-ink/40 backdrop-blur-sm transition-opacity duration-300 xl:hidden",
           menuOpen ? "visible opacity-100" : "invisible opacity-0"
         )}
         onClick={() => setMenuOpen(false)}
@@ -100,7 +100,7 @@ const Navbar = () => {
                   setMenuOpen(false);
                 }}
               >
-                Talk to our team
+                Start a business enquiry
               </Button>
             </div>
           </div>
@@ -133,7 +133,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden items-center gap-1 lg:flex">
+          <nav className="hidden items-center gap-1 xl:flex">
             {navLinks.map((item) => (
               <Link
                 key={item.id}
@@ -156,13 +156,13 @@ const Navbar = () => {
           </nav>
 
           {/* CTA */}
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <Button
               size="sm"
               variant={isDark ? "onInkSolid" : "default"}
               onClick={() => setShowModal(true)}
             >
-              Talk to our team
+              Business enquiry
             </Button>
           </div>
 
@@ -171,7 +171,7 @@ const Navbar = () => {
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             className={cn(
-              "z-[70] rounded-lg p-1 lg:hidden transition-colors duration-300",
+              "z-[70] rounded-lg p-1 xl:hidden transition-colors duration-300",
               isDark ? "text-white" : "text-strong"
             )}
             onClick={() => setMenuOpen((p) => !p)}

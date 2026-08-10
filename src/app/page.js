@@ -2,10 +2,10 @@ import Pagehome from "@/components/home/Pagehome";
 
 export const metadata = {
   title: {
-    absolute: "ScotiTech Solutions | Private App Distribution & AI Workspace Products",
+    absolute: "ScotiTech Solutions | Business Software for Controlled Operations",
   },
   description:
-    "ScotiTech Solutions builds focused software products: AppDeploy for private app distribution and AXOS for private AI workspace, secure collaboration, enterprise knowledge management, and digital workplace control.",
+    "ScotiTech Solutions is a UK-registered technology company serving organisations worldwide with AppDeploy for private app distribution, AXOS for controlled enterprise operations, and focused digital products.",
   keywords: [
     "private app distribution",
     "AI workspace",

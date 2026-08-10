@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
 
-export const alt = "ScotiTech Solutions — Practical Digital Products for Modern Teams";
+export const alt = "ScotiTech Solutions — Business Software for Controlled Operations";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -56,7 +56,7 @@ export default async function OgImage() {
               maxWidth: 1000,
             }}
           >
-            Practical digital products for modern teams.
+            Business software for controlled operations.
           </div>
           <div
             style={{
@@ -66,7 +66,7 @@ export default async function OgImage() {
               maxWidth: 980,
             }}
           >
-            AppDeploy · AXOS · ClarityPath — built for control, privacy, and clarity.
+            AppDeploy · AXOS · ClarityPath — built and supported by a UK technology company.
           </div>
         </div>
 

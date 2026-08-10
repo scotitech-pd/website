@@ -22,7 +22,7 @@ const team = [
   },
   {
     name: "Daniel Chapman",
-    title: "Director & Co-founder",
+    title: "Co-Founder & Director",
     img: "/images/aboutus/daniel.jpeg",
     linkedin: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     description:
@@ -38,10 +38,10 @@ export default function LeadershipStrip({ chapterNo }) {
       <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
         <Reveal className="max-w-2xl">
           <Eyebrow>{chapterNo ? `${chapterNo} // ` : ""}Leadership</Eyebrow>
-          <h2 className="t-h1 mt-3">The team that built this.</h2>
+          <h2 className="t-h1 mt-3">Leadership with direct accountability.</h2>
           <p className="t-lead mt-5">
-            ScotiTech is founder-led from Scotland with a wider team across
-            product, engineering, infrastructure, AI, content, and global delivery.
+            Clients and partners work directly with the people responsible for
+            product direction, commercial decisions, engineering, and delivery.
           </p>
         </Reveal>
         <Reveal delay={0.1}>

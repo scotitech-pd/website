@@ -161,8 +161,8 @@ const PressRelease = () => {
               Company milestones, awards, and public recognition from the ScotiTech journey
             </h1>
             <p className="max-w-3xl mx-auto text-base md:text-xl text-gray-600 font-lora leading-8 mb-8">
-              A focused view of the recognitions and public milestones that have
-              marked ScotiTech’s early product journey.
+              A focused view of the recognitions and public milestones that mark
+              ScotiTech’s product and company journey.
             </p>
             
             <div className="flex flex-wrap items-center justify-center gap-6 text-gray-500 font-lora text-sm">
@@ -317,7 +317,7 @@ const PressRelease = () => {
               <div className="space-y-6 text-base md:text-lg">
                 <h3 className="font-karla font-bold text-2xl text-gray-900 pt-4">Recognition for practical execution</h3>
                 <p>
-                  The award recognised practical product-building, disciplined execution, and founder-led progress from a young UK software company operating out of Scotland.
+                  The award recognised practical product-building, disciplined execution, and founder-led progress from a UK software company operating out of Scotland.
                 </p>
 
                 <blockquote className="relative p-8 bg-purple-50 rounded-2xl border-none my-10">

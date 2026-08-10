@@ -7,6 +7,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/button";
 import LeadershipTeam from "@/components/aboutus/Leadershipteam";
 import ClientLogoStrip from "@/components/aboutus/ClientLogoStrip";
+import OfficeCollage from "@/components/aboutus/OfficeCollage";
 
 export const metadata = {
   title: "About ScotiTech",
@@ -37,18 +38,24 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-surface pt-28 pb-12 md:pt-32 md:pb-16">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
         <Container className="relative z-10">
-          <Reveal immediate className="max-w-3xl">
-            <Eyebrow>About ScotiTech</Eyebrow>
-            <h1 className="t-display mt-3">
-              A UK-registered technology company building for teams worldwide.
-            </h1>
-            <p className="t-lead mt-5 max-w-2xl">
-              ScotiTech Solutions Limited is a product-led company founded in
-              Scotland. We build privacy-conscious products, platforms, AI
-              capabilities, and delivery solutions with clearer deployment,
-              rollout, and operational control at the centre.
-            </p>
-          </Reveal>
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.88fr)_minmax(500px,1.12fr)] lg:gap-8 xl:gap-14">
+            <Reveal immediate className="max-w-3xl">
+              <Eyebrow>About ScotiTech</Eyebrow>
+              <h1 className="t-display mt-3">
+                A UK-registered technology company building for teams worldwide.
+              </h1>
+              <p className="t-lead mt-5 max-w-2xl">
+                ScotiTech Solutions Limited is a product-led company founded in
+                Scotland. We build privacy-conscious products, platforms, AI
+                capabilities, and delivery solutions with clearer deployment,
+                rollout, and operational control at the centre.
+              </p>
+            </Reveal>
+
+            <Reveal immediate delay={0.12}>
+              <OfficeCollage />
+            </Reveal>
+          </div>
         </Container>
       </section>
 

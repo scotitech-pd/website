@@ -25,12 +25,12 @@ export default function ContactCta() {
               <div>
                 <Eyebrow onInk>Contact</Eyebrow>
                 <h2 className="t-h1 mt-3 text-on-ink">
-                  Let's talk about how your team ships and operates.
+                  Bring us the requirement. We will bring a practical next step.
                 </h2>
                 <p className="mt-5 max-w-xl font-karla text-lg leading-relaxed text-on-ink-muted">
-                  Whether you're evaluating AppDeploy, requesting an AXOS
-                  enterprise testing platform, or partnering with us — start a
-                  conversation.
+                  Discuss AppDeploy, an AXOS enterprise evaluation, a deployment
+                  requirement, or a commercial partnership with the people who
+                  own the product and delivery decisions.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
@@ -39,7 +39,7 @@ export default function ContactCta() {
                     variant="onInkSolid"
                     onClick={() => setShowModal(true)}
                   >
-                    Talk to our team
+                    Start a business enquiry
                     <ArrowRight size={17} />
                   </Button>
                   <Button asChild size="lg" variant="onInk">
@@ -61,9 +61,9 @@ export default function ContactCta() {
                     Need the right next step?
                   </h3>
                   <p className="mt-3 font-lora text-[14.5px] leading-7 text-on-ink-muted">
-                    Tell us what you are exploring and we will route your
-                    request to the right product, evaluation, or partnership
-                    conversation.
+                    Share your organisation, use case, operating constraints,
+                    and desired outcome. We will route it to the right commercial
+                    or technical owner.
                   </p>
 
                   <div className="mt-6 rounded-lg border border-white/10 bg-black/15 p-4">

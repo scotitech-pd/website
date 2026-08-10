@@ -13,10 +13,10 @@ import Counter from "@/components/ui/Counter";
  * numbers (installs, active teams, uptime, time saved) once supplied.
  */
 const metrics = [
-  { value: 2, label: "AppDeploy workspaces in production" },
+  { value: "Live", label: "AppDeploy customer systems", raw: true },
   { value: 450, suffix: "+", label: "Apps installed via AppDeploy" },
   { value: 300, suffix: "+", label: "Devices reached" },
-  { value: 2026, label: "Scotland StartUp Awards finalist", raw: true },
+  { value: "Global", label: "Client and partner outlook", raw: true },
 ];
 
 const clients = [
@@ -103,11 +103,11 @@ export default function Credibility() {
   return (
     <Section id="proof" surface="muted" spacing="lg">
       <Reveal className="max-w-3xl">
-        <Eyebrow>Credibility</Eyebrow>
-        <h2 className="t-h1 mt-3">Real recognition. Real users. Real products.</h2>
+        <Eyebrow>Evidence</Eyebrow>
+        <h2 className="t-h1 mt-3">Evidence that can be checked, not inflated.</h2>
         <p className="t-lead mt-5">
-          We'd rather show evidence than make claims — award recognition,
-          named clients, and a working product in production today.
+          Live product usage, a named customer perspective, public product
+          experiences, and independent recognition support the company story.
         </p>
       </Reveal>
 
@@ -145,13 +145,13 @@ export default function Credibility() {
               <Trophy size={12} />
               Award recognition
             </div>
-            <div className="overflow-hidden rounded-2xl border border-hairline bg-surface p-3">
+            <div className="overflow-hidden rounded-xl border border-hairline bg-surface p-3">
               <Image
                 src="/images/home/scotland-startup-awards-2026-finalist.jpg"
                 alt="Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions, Digital StartUp of the Year"
                 width={800}
                 height={1000}
-                className="mx-auto block w-full max-w-[280px] rounded-lg object-contain md:max-w-[320px]"
+                className="mx-auto block h-[180px] w-auto rounded-lg object-contain"
               />
             </div>
             <p className="t-small mt-4">
@@ -223,7 +223,7 @@ export default function Credibility() {
           <Reveal delay={0.1}>
             <div className="rounded-xl border border-hairline bg-surface p-6 md:p-7">
               <p className="t-small mb-5 font-karla font-semibold uppercase tracking-[0.14em] text-muted">
-                Trusted by early clients & partners
+                Selected clients &amp; partners
               </p>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
                 {clients.map((client) => (

@@ -14,13 +14,13 @@ export default function LeadershipTeam() {
       linkedin: "https://www.linkedin.com/in/prachi-dwivedi-5724a51b6/",
     },
     {
-      name: "Hitesh Dubey",
-      title: "Head of DevOps & Infrastructure",
-      location: "Gurgaon, India",
+      name: "Pradeep Dahiya",
+      title: "Founder & CEO",
+      location: "Motherwell, Scotland",
       description:
-        "Owns infrastructure reliability, security posture, and automation standards that support stable product delivery at scale.",
-      img: "/images/aboutus/hitesh.png",
-      linkedin: "https://www.linkedin.com/in/hitesh-dubey-4349731b/",
+        "Leads ScotiTech's product vision, commercial strategy, and global direction across AppDeploy, AXOS, ClarityPath, and wider technology delivery.",
+      img: "/images/home/pradeep.jpg",
+      linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
     },
     {
       name: "Anurag Parmar",

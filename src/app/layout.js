@@ -39,11 +39,11 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL("https://scotitech.com"),
   title: {
-    default: "ScotiTech Solutions | Practical Digital Products for Modern Teams",
+    default: "ScotiTech Solutions | Business Software for Controlled Operations",
     template: "%s | ScotiTech Solutions",
   },
   description:
-    "ScotiTech Solutions builds focused, privacy-conscious products for internal app distribution and private enterprise operations — AppDeploy, AXOS and ClarityPath.",
+    "ScotiTech Solutions is a UK-registered technology company building and supporting privacy-conscious software products for organisations worldwide, including AppDeploy, AXOS and ClarityPath.",
   applicationName: "ScotiTech Solutions",
   authors: [{ name: "ScotiTech Solutions Limited", url: "https://scotitech.com" }],
   creator: "ScotiTech Solutions Limited",
@@ -65,9 +65,9 @@ export const metadata = {
   openGraph: {
     type: "website",
     siteName: "ScotiTech Solutions",
-    title: "ScotiTech Solutions | Practical Digital Products for Modern Teams",
+    title: "ScotiTech Solutions | Business Software for Controlled Operations",
     description:
-      "Focused, privacy-conscious products for internal app distribution and private enterprise operations.",
+      "A UK-registered technology company building and supporting focused software products for organisations worldwide.",
     url: "https://scotitech.com",
     locale: "en_GB",
   },
@@ -75,7 +75,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "ScotiTech Solutions",
     description:
-      "Focused, privacy-conscious products for internal app distribution and private enterprise operations.",
+      "UK-registered technology company building and supporting focused software products for organisations worldwide.",
     creator: "@scotitech",
   },
   robots: {
@@ -119,7 +119,7 @@ const organizationSchema = {
     {
       "@type": "Person",
       name: "Pradeep Dahiya",
-      url: "https://www.linkedin.com/in/pradeepdahiya/",
+      url: "https://www.linkedin.com/in/pradeepkumar2411/",
     },
     {
       "@type": "Person",
@@ -138,7 +138,7 @@ const organizationSchema = {
     },
     {
       "@type": "PostalAddress",
-      name: "Corporate office",
+      name: "Operational office",
       streetAddress: "Maxim 1, 2 Parklands Way, Maxim Business Park, 1st Floor",
       addressLocality: "Motherwell",
       addressRegion: "Eurocentral, Scotland",

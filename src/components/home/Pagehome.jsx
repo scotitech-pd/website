@@ -3,6 +3,7 @@ import HomeSocialProof from "./HomeSocialProof";
 import OurProducts from "./OurProducts";
 import ProblemsSolved from "./ProblemsSolved";
 import HowWeWork from "./HowWeWork";
+import BusinessAssurance from "./BusinessAssurance";
 import Credibility from "./Credibility";
 import LeadershipStrip from "./LeadershipStrip";
 import InsightsSection from "./InsightsSection";
@@ -17,6 +18,7 @@ const Pagehome = () => {
       <OurProducts />
       <ProblemsSolved />
       <HowWeWork />
+      <BusinessAssurance />
       <Credibility />
       <LeadershipStrip />
       <InsightsSection />

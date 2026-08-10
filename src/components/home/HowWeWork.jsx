@@ -10,7 +10,7 @@ const principles = [
     no: "01",
     icon: Crosshair,
     title: "Focused scope",
-    body: "We ship narrow products that do one job well — not bloated platforms with claims we can't stand behind. Easier to evaluate, faster to adopt.",
+    body: "We define the operational problem, product boundary, and intended outcome clearly. That makes each product easier to evaluate, procure, deploy, and support.",
   },
   {
     no: "02",
@@ -28,7 +28,7 @@ const principles = [
     no: "04",
     icon: Wrench,
     title: "Practical over flashy",
-    body: "We optimise for real operational outcomes: fewer manual handoffs, cleaner rollout, less day-to-day friction for the people using the tools.",
+    body: "We optimise for measurable operational outcomes: fewer manual handoffs, cleaner rollout, and less day-to-day friction for administrators and users.",
   },
 ];
 
@@ -41,12 +41,12 @@ export default function HowWeWork() {
           <Reveal>
             <Eyebrow>How we work</Eyebrow>
             <h2 className="t-h1 mt-3">
-              Principles that make our products credible.
+              Product discipline backed by delivery accountability.
             </h2>
             <p className="t-lead mt-5">
-              We're a product company, not a service shop. These four principles
-              shape every release across the portfolio — and they're how buyers
-              and partners can judge us.
+              We are a product-led technology company. These standards guide
+              how we scope, build, deploy, and support every solution across the
+              portfolio.
             </p>
           </Reveal>
         </div>

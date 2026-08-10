@@ -24,10 +24,10 @@ const clients = [
 const marqueeItems = [...clients, ...clients, ...clients];
 
 const stats = [
-  { value: "Apple Custom Apps", label: "distribution channel" },
-  { value: "£79", label: "/ month from" },
-  { value: "Scotland StartUp Awards 2026", label: "finalist" },
-  { value: "GDPR-aligned", label: "data posture" },
+  { value: "Scotland", label: "registered and operated" },
+  { value: "Worldwide", label: "client and partner focus" },
+  { value: "Production", label: "live customer systems" },
+  { value: "Direct", label: "product and delivery access" },
 ];
 
 function LogoItem({ client }) {
@@ -68,7 +68,7 @@ export default function HomeSocialProof() {
       <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
         {/* Label */}
         <p className="mb-8 text-center font-karla text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
-          Early clients &amp; delivery partners
+          Selected clients &amp; delivery relationships
         </p>
 
         {/* Marquee */}

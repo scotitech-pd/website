@@ -51,6 +51,7 @@ export default function ProblemsSolved() {
      * compensates so content isn't clipped. z-10 keeps it above siblings.
      */
     <section
+      id="solutions"
       className="relative z-10 bg-[#080d18]"
       style={{ margin: "-80px 0", padding: "120px 0" }}
     >

@@ -7,9 +7,10 @@ import CookiePreferencesButton from "@/components/cookie/CookiePreferencesButton
 
 const quickLinks = [
   { title: "Products", link: "/products" },
+  { title: "Trust & delivery", link: "/trust" },
   { title: "Insights", link: "/insights" },
-  { title: "Growth roles", link: "/careers" },
-  { title: "About", link: "/aboutus" },
+  { title: "Careers", link: "/careers" },
+  { title: "Company", link: "/aboutus" },
   { title: "Media", link: "/media" },
   { title: "Contact", link: "/contact" },
 ];
@@ -22,8 +23,8 @@ const productLinks = [
 
 const badges = [
   { icon: Award, label: "UK StartUp Awards 2026 — Finalist" },
-  { icon: Apple, label: "Apple Custom Apps" },
-  { icon: ShieldCheck, label: "GDPR Aligned" },
+  { icon: Apple, label: "Apple Business workflows" },
+  { icon: ShieldCheck, label: "Privacy-conscious products" },
 ];
 
 const WhatsApp = ({ className }) => (
@@ -55,8 +56,8 @@ export default function Footer() {
           {/* Brand description */}
           <div>
             <p className="max-w-xs font-lora text-sm leading-relaxed text-on-ink-muted">
-              Focused software products for private app rollout, team operations,
-              and policy-aligned, AI-assisted work.
+              UK-registered technology company building and supporting focused
+              software products for organisations worldwide.
             </p>
           </div>
 
@@ -154,6 +155,7 @@ export default function Footer() {
             <Link href="/privacy-policy" className="hover:text-brand">Privacy</Link>
             <Link href="/cookie-policy" className="hover:text-brand">Cookies</Link>
             <Link href="/terms-and-conditions" className="hover:text-brand">Terms</Link>
+            <Link href="/trust" className="hover:text-brand">Trust &amp; delivery</Link>
             <CookiePreferencesButton className="cursor-pointer hover:text-brand" />
             <span className="hidden h-3 w-px bg-white/15 md:inline-block" />
             <div className="flex gap-2">
