@@ -13,7 +13,12 @@ const contactDetails = [
     type: "location",
     style: "text-left",
   },
-  { icon: "phone", title: "+44 20 7946 0958", type: "phone" },
+  {
+    icon: "phone",
+    title: "01698 609091",
+    href: "tel:+441698609091",
+    type: "phone",
+  },
   { icon: "email", title: "info@scotitech.com", type: "email" },
   { icon: "time", title: "Mon-Fri", subtitle: "9:00 AM - 5:30 PM GMT", type: "time" },
 ];
@@ -51,9 +56,7 @@ const getContactHref = (item) => {
       return `https://maps.app.goo.gl/9fkHLWDX2CqnugMaA`;
     }
     case "phone": {
-      // normalize phone number for tel: (remove spaces)
-      const tel = item.title.replace(/\s+/g, "");
-      return `tel:${tel}`;
+      return item.href;
     }
     case "email":
       return `mailto:${item.title}`;

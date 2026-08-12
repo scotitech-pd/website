@@ -214,8 +214,8 @@ const TermsAndConditions = () => {
             <a href="mailto:privacy@scotitech.com">
               <p className="inline-block pr-5">📧 privacy@scotitech.com</p>
             </a>
-            <a href="tel:01698 708203">
-              <p className="inline-block">📞 01698 708203</p>
+            <a href="tel:+441698609091">
+              <p className="inline-block">📞 01698 609091</p>
             </a>
           </div>
         </div>

@@ -113,7 +113,7 @@ const organizationSchema = {
     height: 42,
   },
   email: "info@scotitech.com",
-  telephone: "+44-1698-708203",
+  telephone: "+44-1698-609091",
   foundingDate: "2024",
   founders: [
     {
@@ -151,7 +151,7 @@ const organizationSchema = {
       "@type": "ContactPoint",
       contactType: "sales",
       email: "info@scotitech.com",
-      telephone: "+44-1698-708203",
+      telephone: "+44-1698-609091",
       areaServed: "Worldwide",
       availableLanguage: ["English"],
     },

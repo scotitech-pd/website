@@ -53,7 +53,7 @@ const companyFacts = [
   {
     icon: Mail,
     label: "Business enquiries",
-    value: "info@scotitech.com · +44 (0) 1698 708203",
+    value: "info@scotitech.com · 01698 609091",
   },
 ];
 

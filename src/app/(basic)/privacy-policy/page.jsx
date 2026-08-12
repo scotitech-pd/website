@@ -169,8 +169,8 @@ const  PrivacyPolicy  = () => {
             <a href="mailto:privacy@scotitech.com" className="inline-block pr-5">
               📧 privacy@scotitech.com
             </a>
-            <a href="tel:01698 708203" className="inline-block">
-              📞 01698 708203
+            <a href="tel:+441698609091" className="inline-block">
+              📞 01698 609091
             </a>
           </div>
         </div>
