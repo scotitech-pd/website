@@ -83,6 +83,9 @@ export function normalizeInsight(rawInsight) {
   insight.slug = insight.slug || slugify(insight.title);
   insight.status = insight.status || "draft";
   insight.featured = Boolean(insight.featured);
+  insight.editorialPriority = Number.isFinite(Number(insight.editorialPriority))
+    ? Number(insight.editorialPriority)
+    : 0;
   insight.date = insight.date || todayUtc();
   insight.updated = insight.updated || insight.date;
   insight.displayDate = insight.displayDate || formatDisplayDate(insight.date);
@@ -178,6 +181,10 @@ export function writeInsightFile(insight) {
 }
 
 export function sortInsightsByDateDesc(left, right) {
+  if (left.editorialPriority !== right.editorialPriority) {
+    return right.editorialPriority - left.editorialPriority;
+  }
+
   const leftDate = new Date(`${left.date}T00:00:00Z`).getTime();
   const rightDate = new Date(`${right.date}T00:00:00Z`).getTime();
   if (leftDate !== rightDate) return rightDate - leftDate;

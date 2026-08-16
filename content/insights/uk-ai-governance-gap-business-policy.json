@@ -1,0 +1,115 @@
+{
+  "status": "published",
+  "featured": false,
+  "editorialPriority": 95,
+  "slug": "uk-ai-governance-gap-business-policy",
+  "category": "AI Governance",
+  "topic": "UK business AI policy",
+  "title": "UK AI governance gap: just 5% of AI-using businesses have a written policy",
+  "summary": "AI adoption is moving faster than operational governance. The UK Business Data Survey 2026 found that 41% of businesses handling digitised data use AI, yet only 17% of AI-using businesses have any policy or guidance. The gap is a warning for every organisation choosing an AI workspace, private AI deployment, or enterprise AI platform: governance has to work inside the product, not only in a policy document.",
+  "seoDescription": "UK government data shows just 5% of AI-using businesses have a written policy. See what AI governance, private AI and enterprise platforms must operationalise.",
+  "date": "2026-08-16",
+  "updated": "2026-08-16",
+  "displayDate": "16 August 2026",
+  "readTime": "7 min read",
+  "sourceName": "UK Business Data Survey 2026 - GOV.UK",
+  "sourceUrl": "https://www.gov.uk/government/statistics/uk-business-data-survey-2026/uk-business-data-survey-2026",
+  "image": "/images/insights/ai-governance-workspace.jpg",
+  "tags": [
+    "AI governance",
+    "AI governance framework",
+    "AI workspace",
+    "enterprise AI platform",
+    "private AI",
+    "digital workplace solutions",
+    "AI policy",
+    "responsible AI adoption",
+    "UK business AI",
+    "AXOS"
+  ],
+  "relatedProduct": {
+    "name": "AXOS",
+    "href": "/products/axos",
+    "description": "A private AI workspace for qualified enterprises evaluating controlled employee access, data boundaries, and governed rollout in a time-limited environment.",
+    "cta": "Explore AXOS"
+  },
+  "highlights": [
+    {
+      "label": "AI adoption",
+      "value": "41%",
+      "description": "Of UK businesses handling digitised data reported using AI in the 2026 government survey."
+    },
+    {
+      "label": "Any AI guidance",
+      "value": "17%",
+      "description": "Of AI-using businesses had a formal policy or informal guidance; only 5% had a formal written policy."
+    },
+    {
+      "label": "External training",
+      "value": "73%",
+      "description": "Of businesses handling digitised data were uncomfortable with their data being used to train external AI models."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "AI adoption is moving faster than AI governance",
+      "paragraphs": [
+        "The UK Business Data Survey 2026 gives leaders a useful reality check. Among businesses handling digitised data, 41% reported using artificial intelligence. Among the 1,870 AI-using businesses asked about governance, however, only 17% had any policy or guidance for AI use. Just 5% had a formal written policy, while 12% relied on informal guidance.",
+        "That is not an argument for slowing useful innovation. It is evidence that adoption and accountability are developing at different speeds. Employees can start using generative AI in minutes; an organisation still needs to decide which data is appropriate, who is accountable, how output is reviewed, and what evidence exists when something goes wrong."
+      ]
+    },
+    {
+      "heading": "An AI policy has to reach the AI workspace",
+      "paragraphs": [
+        "A policy that sits in a shared folder cannot govern the moment an employee uploads a customer document, asks an AI assistant to summarise a contract, or uses generated analysis in a decision. The control has to meet the user inside the workflow.",
+        "The survey found that, among organisations with AI policy or guidance, 62% covered whether AI tools could access business data and files. That is a strong starting point, but serious AI governance also needs identity controls, role-based permissions, approved data sources, retention rules, activity records, and a clear route for human review.",
+        "This is where an AI workspace differs from an unmanaged collection of AI subscriptions. The workspace should make the organisation's policy usable: employees can see what is approved, administrators can define boundaries, and decision-makers can review evidence before expanding access."
+      ]
+    },
+    {
+      "heading": "Enterprise AI platform integration raises the stakes",
+      "paragraphs": [
+        "Only 21% of AI-using businesses in the survey said AI was integrated into existing business systems. As that number grows, AI will move beyond occasional prompting and into files, communications, knowledge search, customer operations, and everyday decisions.",
+        "Integration creates value because the system understands more context. It also increases the consequence of weak access design. An enterprise AI platform should not inherit broad access simply because a user can reach a drive, inbox, or knowledge base. It needs to respect the permissions, purpose, and sensitivity of the underlying information.",
+        "For buyers comparing digital workplace solutions, model quality is therefore only one part of the decision. Deployment model, data location, access boundaries, auditability, incident handling, and lifecycle ownership deserve equal attention."
+      ]
+    },
+    {
+      "heading": "Private AI is a control decision, not a privacy slogan",
+      "paragraphs": [
+        "The survey also found that 73% of businesses handling digitised data were uncomfortable with their data being used to train external AI models. That concern explains the growing interest in private AI, self-hosted AI, and on-premise AI, but those labels should not be accepted without evidence.",
+        "A credible private AI evaluation should establish where prompts and files are processed, whether external calls are made, how long information is retained, who can administer the environment, and what logs are available. Hosting alone does not create governance. The operating controls around the deployment determine whether privacy claims survive real employee use."
+      ]
+    },
+    {
+      "heading": "What a practical AI governance framework should cover",
+      "paragraphs": [
+        "A useful AI governance framework starts with the decisions people make, not a generic list of principles. Which workflows may use AI? Which data classes are prohibited? When is human approval mandatory? Who owns an incident? What must a supplier prove before a pilot becomes a wider rollout?",
+        "The answers should be reflected in the product environment. At minimum, buyers should test user identity, data permissions, model access, approved knowledge sources, activity logging, retention and deletion, output review, supplier responsibilities, and the process for removing access. These controls turn responsible AI adoption from an aspiration into repeatable operations.",
+        "The same discipline improves search and productivity. When enterprise search AI only uses approved sources and respects existing permissions, employees receive more relevant answers and the organisation has a clearer basis for trusting how those answers were produced."
+      ]
+    },
+    {
+      "heading": "Where AXOS fits",
+      "paragraphs": [
+        "AXOS is designed for enterprises that want to evaluate a private AI workspace alongside mail, drive, calendar, chat, video, tasks, and enterprise knowledge management in a controlled environment. It is not positioned as an instant consumer signup or a claim of automatic compliance.",
+        "Qualified organisations first share their business profile, intended workflows, data requirements, and infrastructure preferences. A limited testing platform can then be scoped around the team's deployment and governance needs before any decision about employee adoption.",
+        "That evaluation model matters because governance questions are specific to each organisation. A healthcare provider, professional services firm, manufacturer, and multi-site operator may all want an enterprise AI platform, but they will not share the same risk boundaries or evidence requirements."
+      ]
+    },
+    {
+      "heading": "The leadership question is no longer whether people will use AI",
+      "paragraphs": [
+        "The stronger question is whether the organisation can explain and control how AI is used. The UK survey shows that many businesses have already crossed the adoption line while formal governance remains uncommon and understanding of regulatory guidance remains limited.",
+        "Leaders do not need to predict every future rule before acting. They do need a documented policy, an approved workspace, defined ownership, measurable controls, and a staged evaluation that can produce evidence. That is how AI governance becomes part of the operating model rather than a document written after adoption has already happened."
+      ]
+    }
+  ],
+  "actionItems": [
+    "Map every AI tool currently used with business data, including informal employee-led adoption.",
+    "Publish a written AI policy that defines approved workflows, prohibited data, human review, and accountable owners.",
+    "Evaluate AI workspace and enterprise AI platform controls against real permissions, files, and business scenarios.",
+    "Require evidence for data processing, external model training, retention, activity logging, and incident response.",
+    "Run a time-limited private AI evaluation before expanding access across employees."
+  ]
+}

@@ -1,6 +1,7 @@
 {
   "status": "published",
   "featured": false,
+  "editorialPriority": 50,
   "slug": "private-apple-app-rollout-needs-more-than-approval",
   "category": "Platform Briefing",
   "topic": "Private app distribution",

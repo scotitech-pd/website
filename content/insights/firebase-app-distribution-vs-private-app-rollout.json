@@ -1,6 +1,7 @@
 {
   "status": "published",
   "featured": false,
+  "editorialPriority": 90,
   "slug": "firebase-app-distribution-vs-private-app-rollout",
   "category": "App Distribution",
   "topic": "Firebase App Distribution",

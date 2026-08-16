@@ -4,7 +4,8 @@
 export const insights = [
   {
     "status": "published",
-    "featured": false,
+    "featured": true,
+    "editorialPriority": 100,
     "slug": "ai-workspace-vs-digital-workplace-solutions",
     "category": "AI Workspace",
     "topic": "Digital workplace solutions",
@@ -98,6 +99,214 @@ export const insights = [
   {
     "status": "published",
     "featured": false,
+    "editorialPriority": 95,
+    "slug": "uk-ai-governance-gap-business-policy",
+    "category": "AI Governance",
+    "topic": "UK business AI policy",
+    "title": "UK AI governance gap: just 5% of AI-using businesses have a written policy",
+    "summary": "AI adoption is moving faster than operational governance. The UK Business Data Survey 2026 found that 41% of businesses handling digitised data use AI, yet only 17% of AI-using businesses have any policy or guidance. The gap is a warning for every organisation choosing an AI workspace, private AI deployment, or enterprise AI platform: governance has to work inside the product, not only in a policy document.",
+    "seoDescription": "UK government data shows just 5% of AI-using businesses have a written policy. See what AI governance, private AI and enterprise platforms must operationalise.",
+    "date": "2026-08-16",
+    "updated": "2026-08-16",
+    "displayDate": "16 August 2026",
+    "readTime": "7 min read",
+    "sourceName": "UK Business Data Survey 2026 - GOV.UK",
+    "sourceUrl": "https://www.gov.uk/government/statistics/uk-business-data-survey-2026/uk-business-data-survey-2026",
+    "image": "/images/insights/ai-governance-workspace.jpg",
+    "tags": [
+      "AI governance",
+      "AI governance framework",
+      "AI workspace",
+      "enterprise AI platform",
+      "private AI",
+      "digital workplace solutions",
+      "AI policy",
+      "responsible AI adoption",
+      "UK business AI",
+      "AXOS"
+    ],
+    "relatedProduct": {
+      "name": "AXOS",
+      "href": "/products/axos",
+      "description": "A private AI workspace for qualified enterprises evaluating controlled employee access, data boundaries, and governed rollout in a time-limited environment.",
+      "cta": "Explore AXOS"
+    },
+    "highlights": [
+      {
+        "label": "AI adoption",
+        "value": "41%",
+        "description": "Of UK businesses handling digitised data reported using AI in the 2026 government survey."
+      },
+      {
+        "label": "Any AI guidance",
+        "value": "17%",
+        "description": "Of AI-using businesses had a formal policy or informal guidance; only 5% had a formal written policy."
+      },
+      {
+        "label": "External training",
+        "value": "73%",
+        "description": "Of businesses handling digitised data were uncomfortable with their data being used to train external AI models."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "AI adoption is moving faster than AI governance",
+        "paragraphs": [
+          "The UK Business Data Survey 2026 gives leaders a useful reality check. Among businesses handling digitised data, 41% reported using artificial intelligence. Among the 1,870 AI-using businesses asked about governance, however, only 17% had any policy or guidance for AI use. Just 5% had a formal written policy, while 12% relied on informal guidance.",
+          "That is not an argument for slowing useful innovation. It is evidence that adoption and accountability are developing at different speeds. Employees can start using generative AI in minutes; an organisation still needs to decide which data is appropriate, who is accountable, how output is reviewed, and what evidence exists when something goes wrong."
+        ]
+      },
+      {
+        "heading": "An AI policy has to reach the AI workspace",
+        "paragraphs": [
+          "A policy that sits in a shared folder cannot govern the moment an employee uploads a customer document, asks an AI assistant to summarise a contract, or uses generated analysis in a decision. The control has to meet the user inside the workflow.",
+          "The survey found that, among organisations with AI policy or guidance, 62% covered whether AI tools could access business data and files. That is a strong starting point, but serious AI governance also needs identity controls, role-based permissions, approved data sources, retention rules, activity records, and a clear route for human review.",
+          "This is where an AI workspace differs from an unmanaged collection of AI subscriptions. The workspace should make the organisation's policy usable: employees can see what is approved, administrators can define boundaries, and decision-makers can review evidence before expanding access."
+        ]
+      },
+      {
+        "heading": "Enterprise AI platform integration raises the stakes",
+        "paragraphs": [
+          "Only 21% of AI-using businesses in the survey said AI was integrated into existing business systems. As that number grows, AI will move beyond occasional prompting and into files, communications, knowledge search, customer operations, and everyday decisions.",
+          "Integration creates value because the system understands more context. It also increases the consequence of weak access design. An enterprise AI platform should not inherit broad access simply because a user can reach a drive, inbox, or knowledge base. It needs to respect the permissions, purpose, and sensitivity of the underlying information.",
+          "For buyers comparing digital workplace solutions, model quality is therefore only one part of the decision. Deployment model, data location, access boundaries, auditability, incident handling, and lifecycle ownership deserve equal attention."
+        ]
+      },
+      {
+        "heading": "Private AI is a control decision, not a privacy slogan",
+        "paragraphs": [
+          "The survey also found that 73% of businesses handling digitised data were uncomfortable with their data being used to train external AI models. That concern explains the growing interest in private AI, self-hosted AI, and on-premise AI, but those labels should not be accepted without evidence.",
+          "A credible private AI evaluation should establish where prompts and files are processed, whether external calls are made, how long information is retained, who can administer the environment, and what logs are available. Hosting alone does not create governance. The operating controls around the deployment determine whether privacy claims survive real employee use."
+        ]
+      },
+      {
+        "heading": "What a practical AI governance framework should cover",
+        "paragraphs": [
+          "A useful AI governance framework starts with the decisions people make, not a generic list of principles. Which workflows may use AI? Which data classes are prohibited? When is human approval mandatory? Who owns an incident? What must a supplier prove before a pilot becomes a wider rollout?",
+          "The answers should be reflected in the product environment. At minimum, buyers should test user identity, data permissions, model access, approved knowledge sources, activity logging, retention and deletion, output review, supplier responsibilities, and the process for removing access. These controls turn responsible AI adoption from an aspiration into repeatable operations.",
+          "The same discipline improves search and productivity. When enterprise search AI only uses approved sources and respects existing permissions, employees receive more relevant answers and the organisation has a clearer basis for trusting how those answers were produced."
+        ]
+      },
+      {
+        "heading": "Where AXOS fits",
+        "paragraphs": [
+          "AXOS is designed for enterprises that want to evaluate a private AI workspace alongside mail, drive, calendar, chat, video, tasks, and enterprise knowledge management in a controlled environment. It is not positioned as an instant consumer signup or a claim of automatic compliance.",
+          "Qualified organisations first share their business profile, intended workflows, data requirements, and infrastructure preferences. A limited testing platform can then be scoped around the team's deployment and governance needs before any decision about employee adoption.",
+          "That evaluation model matters because governance questions are specific to each organisation. A healthcare provider, professional services firm, manufacturer, and multi-site operator may all want an enterprise AI platform, but they will not share the same risk boundaries or evidence requirements."
+        ]
+      },
+      {
+        "heading": "The leadership question is no longer whether people will use AI",
+        "paragraphs": [
+          "The stronger question is whether the organisation can explain and control how AI is used. The UK survey shows that many businesses have already crossed the adoption line while formal governance remains uncommon and understanding of regulatory guidance remains limited.",
+          "Leaders do not need to predict every future rule before acting. They do need a documented policy, an approved workspace, defined ownership, measurable controls, and a staged evaluation that can produce evidence. That is how AI governance becomes part of the operating model rather than a document written after adoption has already happened."
+        ]
+      }
+    ],
+    "actionItems": [
+      "Map every AI tool currently used with business data, including informal employee-led adoption.",
+      "Publish a written AI policy that defines approved workflows, prohibited data, human review, and accountable owners.",
+      "Evaluate AI workspace and enterprise AI platform controls against real permissions, files, and business scenarios.",
+      "Require evidence for data processing, external model training, retention, activity logging, and incident response.",
+      "Run a time-limited private AI evaluation before expanding access across employees."
+    ]
+  },
+  {
+    "status": "published",
+    "featured": false,
+    "editorialPriority": 90,
+    "slug": "firebase-app-distribution-vs-private-app-rollout",
+    "category": "App Distribution",
+    "topic": "Firebase App Distribution",
+    "title": "Firebase App Distribution solves testing, not private app rollout",
+    "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where AppDeploy should sit: not as a Firebase replacement, but as the operating layer for private app rollout.",
+    "seoDescription": "Firebase App Distribution is built for pre-release app testing. Learn why private app distribution, iOS rollout, MDM app distribution, and AppDeploy need a different operating layer.",
+    "date": "2026-07-14",
+    "updated": "2026-07-14",
+    "displayDate": "14 July 2026",
+    "readTime": "5 min read",
+    "sourceName": "Firebase Docs",
+    "sourceUrl": "https://firebase.google.com/docs/app-distribution",
+    "image": "/images/insights/private-app-rollout-tablet.jpg",
+    "tags": [
+      "Firebase App Distribution",
+      "app distribution",
+      "private app distribution",
+      "iOS app distribution",
+      "Android app distribution",
+      "AppDeploy"
+    ],
+    "relatedProduct": {
+      "name": "AppDeploy",
+      "href": "/products/appdeploy",
+      "description": "A branded operational layer for private app access, install guidance, rollout visibility, and clearer release communication.",
+      "cta": "Explore AppDeploy"
+    },
+    "highlights": [
+      {
+        "label": "Search intent",
+        "value": "Testing vs rollout",
+        "description": "Firebase App Distribution has strong search demand, but the buyer problem shifts once testing ends and a private app needs controlled business rollout."
+      },
+      {
+        "label": "Platform fit",
+        "value": "Pre-release builds",
+        "description": "Firebase is useful for sending Android and iOS builds to trusted testers, collecting feedback, and supporting development workflows."
+      },
+      {
+        "label": "AppDeploy fit",
+        "value": "Private rollout",
+        "description": "AppDeploy is stronger when the question becomes who should access the app, which version is approved, and how rollout is supported."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Firebase App Distribution is a testing tool",
+        "paragraphs": [
+          "The keyword data is clear: Firebase App Distribution attracts far more search demand than most private app distribution phrases. That makes sense. Developers know the pain of getting builds to testers, especially across Android and iOS, and Firebase gives them a familiar path for pre-release delivery.",
+          "That does not make Firebase App Distribution the answer to every app distribution problem. It is built around trusted tester delivery, feedback, and build iteration. Those are development needs. A private app launch has a wider business problem once the build is approved."
+        ]
+      },
+      {
+        "heading": "Private app distribution has a different buyer",
+        "paragraphs": [
+          "The person searching for Firebase App Distribution may be an engineer trying to ship a test build. The person responsible for private app distribution may be an operations lead, product owner, IT manager, compliance reviewer, or founder who needs a controlled rollout to real users.",
+          "Their questions are different. Who is allowed to install the app? Which audience receives which version? Is this Apple Business Manager custom app available to the right organisation? Does MDM app distribution apply? Where do users go when install guidance fails? Who can prove rollout is complete?"
+        ]
+      },
+      {
+        "heading": "Why iOS app distribution becomes operational",
+        "paragraphs": [
+          "iOS app distribution can look simple when it is only TestFlight, ad hoc testing, or a small QA group. It becomes more serious when the app is meant for employees, partners, franchisees, dealers, or client teams who need a stable production route.",
+          "At that point, the problem is not only the installation file. It is identity, eligibility, release notes, legal acceptance, support routing, version visibility, and the confidence that people are acting on current instructions."
+        ]
+      },
+      {
+        "heading": "Where AppDeploy fits beside Firebase, TestFlight, and MDM",
+        "paragraphs": [
+          "AppDeploy should not pretend to replace every developer distribution tool. Firebase App Distribution, TestFlight, and fastlane all have clear roles in build testing and release operations. MDM tools have a clear role in managed device environments.",
+          "AppDeploy fits above that layer as the branded business front door: one place for app access, install guidance, rollout status, release communication, support context, and the operational evidence a team needs after the build leaves the engineering workflow."
+        ]
+      },
+      {
+        "heading": "The ScotiTech view",
+        "paragraphs": [
+          "The best SEO answer is also the honest product answer: Firebase App Distribution is excellent for pre-release app testing, but private app distribution needs more than a tester workflow.",
+          "For AppDeploy, the opportunity is to own the messy middle between technical distribution and real adoption. That means clearer Apple Business Manager custom app rollout, better iOS app distribution guidance, MDM-aware status, and a user experience that feels credible to the business, not only the developer."
+        ]
+      }
+    ],
+    "actionItems": [
+      "Use Firebase App Distribution, TestFlight, or fastlane for pre-release testing workflows where they fit.",
+      "Separate tester distribution from production private app rollout before users are invited.",
+      "Map eligibility, version ownership, support routes, and rollout evidence before launch.",
+      "Use AppDeploy as the business-facing layer for private app distribution once the app needs controlled adoption."
+    ]
+  },
+  {
+    "status": "published",
+    "featured": false,
+    "editorialPriority": 80,
     "slug": "enterprise-ai-trials-need-tighter-control-before-rollout",
     "date": "2026-07-14",
     "updated": "2026-07-14",
@@ -202,97 +411,7 @@ export const insights = [
   {
     "status": "published",
     "featured": false,
-    "slug": "firebase-app-distribution-vs-private-app-rollout",
-    "category": "App Distribution",
-    "topic": "Firebase App Distribution",
-    "title": "Firebase App Distribution solves testing, not private app rollout",
-    "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where AppDeploy should sit: not as a Firebase replacement, but as the operating layer for private app rollout.",
-    "seoDescription": "Firebase App Distribution is built for pre-release app testing. Learn why private app distribution, iOS rollout, MDM app distribution, and AppDeploy need a different operating layer.",
-    "date": "2026-07-14",
-    "updated": "2026-07-14",
-    "displayDate": "14 July 2026",
-    "readTime": "5 min read",
-    "sourceName": "Firebase Docs",
-    "sourceUrl": "https://firebase.google.com/docs/app-distribution",
-    "image": "/images/insights/private-app-rollout-tablet.jpg",
-    "tags": [
-      "Firebase App Distribution",
-      "app distribution",
-      "private app distribution",
-      "iOS app distribution",
-      "Android app distribution",
-      "AppDeploy"
-    ],
-    "relatedProduct": {
-      "name": "AppDeploy",
-      "href": "/products/appdeploy",
-      "description": "A branded operational layer for private app access, install guidance, rollout visibility, and clearer release communication.",
-      "cta": "Explore AppDeploy"
-    },
-    "highlights": [
-      {
-        "label": "Search intent",
-        "value": "Testing vs rollout",
-        "description": "Firebase App Distribution has strong search demand, but the buyer problem shifts once testing ends and a private app needs controlled business rollout."
-      },
-      {
-        "label": "Platform fit",
-        "value": "Pre-release builds",
-        "description": "Firebase is useful for sending Android and iOS builds to trusted testers, collecting feedback, and supporting development workflows."
-      },
-      {
-        "label": "AppDeploy fit",
-        "value": "Private rollout",
-        "description": "AppDeploy is stronger when the question becomes who should access the app, which version is approved, and how rollout is supported."
-      }
-    ],
-    "sections": [
-      {
-        "heading": "Firebase App Distribution is a testing tool",
-        "paragraphs": [
-          "The keyword data is clear: Firebase App Distribution attracts far more search demand than most private app distribution phrases. That makes sense. Developers know the pain of getting builds to testers, especially across Android and iOS, and Firebase gives them a familiar path for pre-release delivery.",
-          "That does not make Firebase App Distribution the answer to every app distribution problem. It is built around trusted tester delivery, feedback, and build iteration. Those are development needs. A private app launch has a wider business problem once the build is approved."
-        ]
-      },
-      {
-        "heading": "Private app distribution has a different buyer",
-        "paragraphs": [
-          "The person searching for Firebase App Distribution may be an engineer trying to ship a test build. The person responsible for private app distribution may be an operations lead, product owner, IT manager, compliance reviewer, or founder who needs a controlled rollout to real users.",
-          "Their questions are different. Who is allowed to install the app? Which audience receives which version? Is this Apple Business Manager custom app available to the right organisation? Does MDM app distribution apply? Where do users go when install guidance fails? Who can prove rollout is complete?"
-        ]
-      },
-      {
-        "heading": "Why iOS app distribution becomes operational",
-        "paragraphs": [
-          "iOS app distribution can look simple when it is only TestFlight, ad hoc testing, or a small QA group. It becomes more serious when the app is meant for employees, partners, franchisees, dealers, or client teams who need a stable production route.",
-          "At that point, the problem is not only the installation file. It is identity, eligibility, release notes, legal acceptance, support routing, version visibility, and the confidence that people are acting on current instructions."
-        ]
-      },
-      {
-        "heading": "Where AppDeploy fits beside Firebase, TestFlight, and MDM",
-        "paragraphs": [
-          "AppDeploy should not pretend to replace every developer distribution tool. Firebase App Distribution, TestFlight, and fastlane all have clear roles in build testing and release operations. MDM tools have a clear role in managed device environments.",
-          "AppDeploy fits above that layer as the branded business front door: one place for app access, install guidance, rollout status, release communication, support context, and the operational evidence a team needs after the build leaves the engineering workflow."
-        ]
-      },
-      {
-        "heading": "The ScotiTech view",
-        "paragraphs": [
-          "The best SEO answer is also the honest product answer: Firebase App Distribution is excellent for pre-release app testing, but private app distribution needs more than a tester workflow.",
-          "For AppDeploy, the opportunity is to own the messy middle between technical distribution and real adoption. That means clearer Apple Business Manager custom app rollout, better iOS app distribution guidance, MDM-aware status, and a user experience that feels credible to the business, not only the developer."
-        ]
-      }
-    ],
-    "actionItems": [
-      "Use Firebase App Distribution, TestFlight, or fastlane for pre-release testing workflows where they fit.",
-      "Separate tester distribution from production private app rollout before users are invited.",
-      "Map eligibility, version ownership, support routes, and rollout evidence before launch.",
-      "Use AppDeploy as the business-facing layer for private app distribution once the app needs controlled adoption."
-    ]
-  },
-  {
-    "status": "published",
-    "featured": false,
+    "editorialPriority": 75,
     "slug": "google-workspace-alternative-private-ai",
     "category": "AI Workspace",
     "topic": "Secure collaboration software",
@@ -384,7 +503,94 @@ export const insights = [
   },
   {
     "status": "published",
-    "featured": true,
+    "featured": false,
+    "editorialPriority": 70,
+    "slug": "secure-ai-adoption-now-needs-operating-controls",
+    "category": "AI Governance",
+    "topic": "Private AI adoption",
+    "title": "Private AI adoption fails when policy never reaches the workflow",
+    "summary": "Most AI risk does not appear in a board policy document. It appears when files move into the wrong workspace, prompts expose sensitive context, outputs influence decisions, and nobody can see who did what. The UK AI Cyber Security Code gives buyers a useful baseline. AXOS turns that conversation toward controlled private AI workspaces and digital workplace governance.",
+    "seoDescription": "A ScotiTech briefing on private AI, secure AI platforms, access governance, monitoring, and why enterprise AI adoption needs controlled workspace operations.",
+    "date": "2026-05-04",
+    "updated": "2026-06-14",
+    "displayDate": "4 May 2026",
+    "readTime": "6 min read",
+    "sourceName": "GOV.UK",
+    "sourceUrl": "https://www.gov.uk/government/publications/ai-cyber-security-code-of-practice/code-of-practice-for-the-cyber-security-of-ai",
+    "image": "/images/insights/ai-governance-workspace.jpg",
+    "tags": [
+      "private AI",
+      "secure AI platform",
+      "AI workspace",
+      "digital workplace",
+      "Governance",
+      "Secure deployment",
+      "AXOS"
+    ],
+    "relatedProduct": {
+      "name": "AXOS",
+      "href": "/products/axos",
+      "description": "A private workspace approach for communication, files, tasks, and governance-aligned AI operations.",
+      "cta": "Explore AXOS"
+    },
+    "highlights": [
+      {
+        "label": "Reality check",
+        "value": "Policy is not control",
+        "description": "AI rules only become useful when access, files, prompts, outputs, and review paths are controlled in the workflow."
+      },
+      {
+        "label": "Buyer concern",
+        "value": "Operational risk",
+        "description": "Teams need to know where data goes, who can use AI assistance, what is logged, and how outputs are reviewed."
+      },
+      {
+        "label": "AXOS fit",
+        "value": "Private workspace",
+        "description": "AXOS is positioned for teams that want useful AI support without losing control over data, permissions, and accountability."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The private AI risk is already inside the workflow",
+        "paragraphs": [
+          "By the time a business writes an AI policy, teams may already be experimenting with documents, customer notes, meeting summaries, spreadsheets, code, and decision-support prompts.",
+          "That is why secure AI adoption cannot live only in a document. The practical risk sits inside everyday work: who can upload files, what a private AI system can see, where outputs are stored, and whether a human review path exists before AI-supported work affects a real decision."
+        ]
+      },
+      {
+        "heading": "The UK code gives buyers a sharper lens",
+        "paragraphs": [
+          "The UK AI Cyber Security Code of Practice is useful because it pushes the conversation beyond excitement and into operating discipline. It covers secure design, deployment, maintenance, monitoring, and end-of-life handling across AI systems.",
+          "For buyers, that turns a vague question into a practical one: does this AI workflow have controlled access, clear data boundaries, visible accountability, and a way to manage risk after launch?"
+        ]
+      },
+      {
+        "heading": "Policy without AI workspace control becomes theatre",
+        "paragraphs": [
+          "A policy can say sensitive data should not be pasted into unmanaged tools. It cannot, by itself, stop a team from doing exactly that when deadlines are tight and the approved workflow is inconvenient.",
+          "Secure adoption needs an operating layer: permissions, private file handling, approved AI workspaces, usage boundaries, output review, monitoring, and clear ownership when something needs to be investigated."
+        ]
+      },
+      {
+        "heading": "Where AXOS fits",
+        "paragraphs": [
+          "AXOS is strongest when the customer wants private AI support in a controlled environment rather than another open-ended tool dropped into the business.",
+          "The product story should be practical: private AI workspace, clearer access, governed files, task context, and useful AI assistance that respects the organisation's need for digital workplace control."
+        ]
+      }
+    ],
+    "actionItems": [
+      "Start with workflows where AI already touches business data, files, or decision-support outputs.",
+      "Separate user access, file access, and AI assistance so workspace boundaries are clear.",
+      "Make prompt use, output review, and accountability visible before expanding AI availability.",
+      "Include monitoring, incident response, and data disposal in the operating model from day one."
+    ]
+  },
+  {
+    "status": "published",
+    "featured": false,
+    "editorialPriority": 60,
     "slug": "wwdc26-app-store-updates-mean-for-appdeploy-rollout",
     "category": "WWDC 2026 Briefing",
     "topic": "AppDeploy",
@@ -477,6 +683,7 @@ export const insights = [
   {
     "status": "published",
     "featured": false,
+    "editorialPriority": 50,
     "slug": "private-apple-app-rollout-needs-more-than-approval",
     "category": "Platform Briefing",
     "topic": "Private app distribution",
@@ -561,173 +768,7 @@ export const insights = [
   {
     "status": "published",
     "featured": false,
-    "slug": "secure-ai-adoption-now-needs-operating-controls",
-    "category": "AI Governance",
-    "topic": "Private AI adoption",
-    "title": "Private AI adoption fails when policy never reaches the workflow",
-    "summary": "Most AI risk does not appear in a board policy document. It appears when files move into the wrong workspace, prompts expose sensitive context, outputs influence decisions, and nobody can see who did what. The UK AI Cyber Security Code gives buyers a useful baseline. AXOS turns that conversation toward controlled private AI workspaces and digital workplace governance.",
-    "seoDescription": "A ScotiTech briefing on private AI, secure AI platforms, access governance, monitoring, and why enterprise AI adoption needs controlled workspace operations.",
-    "date": "2026-05-04",
-    "updated": "2026-06-14",
-    "displayDate": "4 May 2026",
-    "readTime": "6 min read",
-    "sourceName": "GOV.UK",
-    "sourceUrl": "https://www.gov.uk/government/publications/ai-cyber-security-code-of-practice/code-of-practice-for-the-cyber-security-of-ai",
-    "image": "/images/insights/ai-governance-workspace.jpg",
-    "tags": [
-      "private AI",
-      "secure AI platform",
-      "AI workspace",
-      "digital workplace",
-      "Governance",
-      "Secure deployment",
-      "AXOS"
-    ],
-    "relatedProduct": {
-      "name": "AXOS",
-      "href": "/products/axos",
-      "description": "A private workspace approach for communication, files, tasks, and governance-aligned AI operations.",
-      "cta": "Explore AXOS"
-    },
-    "highlights": [
-      {
-        "label": "Reality check",
-        "value": "Policy is not control",
-        "description": "AI rules only become useful when access, files, prompts, outputs, and review paths are controlled in the workflow."
-      },
-      {
-        "label": "Buyer concern",
-        "value": "Operational risk",
-        "description": "Teams need to know where data goes, who can use AI assistance, what is logged, and how outputs are reviewed."
-      },
-      {
-        "label": "AXOS fit",
-        "value": "Private workspace",
-        "description": "AXOS is positioned for teams that want useful AI support without losing control over data, permissions, and accountability."
-      }
-    ],
-    "sections": [
-      {
-        "heading": "The private AI risk is already inside the workflow",
-        "paragraphs": [
-          "By the time a business writes an AI policy, teams may already be experimenting with documents, customer notes, meeting summaries, spreadsheets, code, and decision-support prompts.",
-          "That is why secure AI adoption cannot live only in a document. The practical risk sits inside everyday work: who can upload files, what a private AI system can see, where outputs are stored, and whether a human review path exists before AI-supported work affects a real decision."
-        ]
-      },
-      {
-        "heading": "The UK code gives buyers a sharper lens",
-        "paragraphs": [
-          "The UK AI Cyber Security Code of Practice is useful because it pushes the conversation beyond excitement and into operating discipline. It covers secure design, deployment, maintenance, monitoring, and end-of-life handling across AI systems.",
-          "For buyers, that turns a vague question into a practical one: does this AI workflow have controlled access, clear data boundaries, visible accountability, and a way to manage risk after launch?"
-        ]
-      },
-      {
-        "heading": "Policy without AI workspace control becomes theatre",
-        "paragraphs": [
-          "A policy can say sensitive data should not be pasted into unmanaged tools. It cannot, by itself, stop a team from doing exactly that when deadlines are tight and the approved workflow is inconvenient.",
-          "Secure adoption needs an operating layer: permissions, private file handling, approved AI workspaces, usage boundaries, output review, monitoring, and clear ownership when something needs to be investigated."
-        ]
-      },
-      {
-        "heading": "Where AXOS fits",
-        "paragraphs": [
-          "AXOS is strongest when the customer wants private AI support in a controlled environment rather than another open-ended tool dropped into the business.",
-          "The product story should be practical: private AI workspace, clearer access, governed files, task context, and useful AI assistance that respects the organisation's need for digital workplace control."
-        ]
-      }
-    ],
-    "actionItems": [
-      "Start with workflows where AI already touches business data, files, or decision-support outputs.",
-      "Separate user access, file access, and AI assistance so workspace boundaries are clear.",
-      "Make prompt use, output review, and accountability visible before expanding AI availability.",
-      "Include monitoring, incident response, and data disposal in the operating model from day one."
-    ]
-  },
-  {
-    "status": "published",
-    "featured": false,
-    "slug": "software-security-code-raises-the-standard-for-product-buyers",
-    "category": "Security Briefing",
-    "topic": "Software assurance",
-    "title": "Software buyers are starting to ask harder security questions",
-    "summary": "Security is no longer a late-stage procurement checkbox. The UK Software Security Code of Practice gives buyers a sharper way to ask how software is designed, built, updated, supported, and retired. For vendors, the opportunity is clear: the companies that can explain their security posture simply will look more trustworthy before the technical review even starts.",
-    "seoDescription": "A ScotiTech briefing on the UK Software Security Code of Practice, secure-by-design software, vendor assurance, deployment, maintenance, and buyer expectations.",
-    "date": "2026-05-04",
-    "updated": "2026-06-14",
-    "displayDate": "4 May 2026",
-    "readTime": "6 min read",
-    "sourceName": "GOV.UK",
-    "sourceUrl": "https://www.gov.uk/government/publications/software-security-code-of-practice",
-    "image": "/images/insights/software-security-code.jpg",
-    "tags": [
-      "Software security",
-      "Vendor assurance",
-      "Secure by design",
-      "Governance"
-    ],
-    "relatedProduct": {
-      "name": "ScotiTech product portfolio",
-      "href": "/products",
-      "description": "Focused software products built around private rollout, team workflows, and policy-aligned technology adoption.",
-      "cta": "Explore products"
-    },
-    "highlights": [
-      {
-        "label": "Buyer pressure",
-        "value": "Evidence matters",
-        "description": "Customers increasingly expect clear answers about secure design, build controls, updates, vulnerabilities, and support."
-      },
-      {
-        "label": "Vendor signal",
-        "value": "Trust before demo",
-        "description": "A simple, credible security story helps software companies stand out before procurement turns into a document chase."
-      },
-      {
-        "label": "Product impact",
-        "value": "Control by design",
-        "description": "Products that handle private apps, AI workflows, or operational data need security posture to be visible in the experience."
-      }
-    ],
-    "sections": [
-      {
-        "heading": "Security is becoming part of the sale",
-        "paragraphs": [
-          "For business software, trust now starts long before a contract is signed. Buyers want to know not only what a product does, but how it is built, updated, monitored, supported, and retired.",
-          "The UK Software Security Code of Practice makes that expectation easier to name. It gives buyers a practical language for asking about secure design, development, deployment, maintenance, vulnerability handling, and customer communication."
-        ]
-      },
-      {
-        "heading": "The questions are getting more specific",
-        "paragraphs": [
-          "The old question was: is this product secure? The better question is: how do you know, who owns it, how are updates delivered, what happens when a vulnerability appears, and how will customers be told?",
-          "That shift matters because vague reassurance is no longer enough. Buyers are looking for evidence that security is part of the product lifecycle, not a slide added at the end of the sales process."
-        ]
-      },
-      {
-        "heading": "Lightweight does not mean unmanaged",
-        "paragraphs": [
-          "Small product companies do not need to pretend they have enterprise certification for everything on day one. But they do need to show that simple software can still be responsibly designed, operated, updated, and supported.",
-          "That is especially important for products close to private app access, team communication, AI-supported work, or operational data. The lighter the product feels, the clearer the control story needs to be."
-        ]
-      },
-      {
-        "heading": "The ScotiTech view",
-        "paragraphs": [
-          "ScotiTech products are strongest when trust is visible: controlled deployment, private workflow boundaries, clear ownership, sensible data handling, and a security story that buyers can understand without a 40-page explanation.",
-          "That is not just compliance hygiene. It is commercial credibility. Buyers remember the vendor that can explain risk clearly and honestly."
-        ]
-      }
-    ],
-    "actionItems": [
-      "Explain security as part of the product experience, not a separate procurement appendix.",
-      "Prepare clear answers for development practice, update handling, vulnerability response, and customer communication.",
-      "Show access control, data handling, rollout ownership, and support expectations directly on product pages.",
-      "Use recognised guidance to build confidence without overstating maturity or adding unnecessary complexity."
-    ]
-  },
-  {
-    "status": "published",
-    "featured": false,
+    "editorialPriority": 40,
     "slug": "apple-business-sme-impact",
     "category": "Industry Update",
     "topic": "Apple ecosystem",
@@ -807,6 +848,89 @@ export const insights = [
       "Map where app access still depends on email approvals, manual messages, or disconnected spreadsheets.",
       "Create a single rollout workflow for requests, eligibility, install guidance, release updates, and support.",
       "Connect Apple Business foundations with AppDeploy-style visibility so private app delivery feels controlled from day one."
+    ]
+  },
+  {
+    "status": "published",
+    "featured": false,
+    "editorialPriority": 30,
+    "slug": "software-security-code-raises-the-standard-for-product-buyers",
+    "category": "Security Briefing",
+    "topic": "Software assurance",
+    "title": "Software buyers are starting to ask harder security questions",
+    "summary": "Security is no longer a late-stage procurement checkbox. The UK Software Security Code of Practice gives buyers a sharper way to ask how software is designed, built, updated, supported, and retired. For vendors, the opportunity is clear: the companies that can explain their security posture simply will look more trustworthy before the technical review even starts.",
+    "seoDescription": "A ScotiTech briefing on the UK Software Security Code of Practice, secure-by-design software, vendor assurance, deployment, maintenance, and buyer expectations.",
+    "date": "2026-05-04",
+    "updated": "2026-06-14",
+    "displayDate": "4 May 2026",
+    "readTime": "6 min read",
+    "sourceName": "GOV.UK",
+    "sourceUrl": "https://www.gov.uk/government/publications/software-security-code-of-practice",
+    "image": "/images/insights/software-security-code.jpg",
+    "tags": [
+      "Software security",
+      "Vendor assurance",
+      "Secure by design",
+      "Governance"
+    ],
+    "relatedProduct": {
+      "name": "ScotiTech product portfolio",
+      "href": "/products",
+      "description": "Focused software products built around private rollout, team workflows, and policy-aligned technology adoption.",
+      "cta": "Explore products"
+    },
+    "highlights": [
+      {
+        "label": "Buyer pressure",
+        "value": "Evidence matters",
+        "description": "Customers increasingly expect clear answers about secure design, build controls, updates, vulnerabilities, and support."
+      },
+      {
+        "label": "Vendor signal",
+        "value": "Trust before demo",
+        "description": "A simple, credible security story helps software companies stand out before procurement turns into a document chase."
+      },
+      {
+        "label": "Product impact",
+        "value": "Control by design",
+        "description": "Products that handle private apps, AI workflows, or operational data need security posture to be visible in the experience."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Security is becoming part of the sale",
+        "paragraphs": [
+          "For business software, trust now starts long before a contract is signed. Buyers want to know not only what a product does, but how it is built, updated, monitored, supported, and retired.",
+          "The UK Software Security Code of Practice makes that expectation easier to name. It gives buyers a practical language for asking about secure design, development, deployment, maintenance, vulnerability handling, and customer communication."
+        ]
+      },
+      {
+        "heading": "The questions are getting more specific",
+        "paragraphs": [
+          "The old question was: is this product secure? The better question is: how do you know, who owns it, how are updates delivered, what happens when a vulnerability appears, and how will customers be told?",
+          "That shift matters because vague reassurance is no longer enough. Buyers are looking for evidence that security is part of the product lifecycle, not a slide added at the end of the sales process."
+        ]
+      },
+      {
+        "heading": "Lightweight does not mean unmanaged",
+        "paragraphs": [
+          "Small product companies do not need to pretend they have enterprise certification for everything on day one. But they do need to show that simple software can still be responsibly designed, operated, updated, and supported.",
+          "That is especially important for products close to private app access, team communication, AI-supported work, or operational data. The lighter the product feels, the clearer the control story needs to be."
+        ]
+      },
+      {
+        "heading": "The ScotiTech view",
+        "paragraphs": [
+          "ScotiTech products are strongest when trust is visible: controlled deployment, private workflow boundaries, clear ownership, sensible data handling, and a security story that buyers can understand without a 40-page explanation.",
+          "That is not just compliance hygiene. It is commercial credibility. Buyers remember the vendor that can explain risk clearly and honestly."
+        ]
+      }
+    ],
+    "actionItems": [
+      "Explain security as part of the product experience, not a separate procurement appendix.",
+      "Prepare clear answers for development practice, update handling, vulnerability response, and customer communication.",
+      "Show access control, data handling, rollout ownership, and support expectations directly on product pages.",
+      "Use recognised guidance to build confidence without overstating maturity or adding unnecessary complexity."
     ]
   }
 ];
