@@ -33,6 +33,11 @@ shows the exact publish command for approval.
 
 ## Draft workflow
 
+Every draft requires an independent primary reference. Use an authoritative
+external source such as GOV.UK, a UK regulator, official product documentation,
+or a vendor's original announcement. ScotiTech domains are rejected as article
+sources; product links belong in the separate related-product field.
+
 Create a review-ready draft directly from the terminal:
 
 ```bash

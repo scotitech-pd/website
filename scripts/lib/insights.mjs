@@ -135,6 +135,22 @@ export function validateInsight(insight, sourcePath = "unknown source") {
   if (!Array.isArray(insight.actionItems) || insight.actionItems.length < 3) {
     throw new Error(`At least three action items are required in ${sourcePath}`);
   }
+
+  let sourceUrl;
+  try {
+    sourceUrl = new URL(insight.sourceUrl);
+  } catch {
+    throw new Error(`Invalid source URL in ${sourcePath}`);
+  }
+
+  if (!["http:", "https:"].includes(sourceUrl.protocol)) {
+    throw new Error(`Source URL must use HTTP or HTTPS in ${sourcePath}`);
+  }
+
+  const sourceHost = sourceUrl.hostname.toLowerCase();
+  if (sourceHost === "scotitech.com" || sourceHost.endsWith(".scotitech.com")) {
+    throw new Error(`Source URL must use an independent domain in ${sourcePath}`);
+  }
 }
 
 export function insightFilePath(slug) {

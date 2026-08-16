@@ -311,7 +311,7 @@ function InsightPreview({ insight }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-950"
                 >
-                  Source: {insight.sourceName}
+                  Reference: {insight.sourceName}
                   <ExternalLink className="size-4" />
                 </a>
               </div>
@@ -386,6 +386,7 @@ function InsightPreview({ insight }) {
                 {[
                   "Is the tone engaging without sounding inflated or generic?",
                   "Are the claims supported by the source and consistent with product reality?",
+                  "Is the primary reference independent, authoritative, and external to ScotiTech?",
                   "Does the title feel commercially sharp enough to earn a click?",
                   "Is the product angle useful and believable rather than forced?",
                 ].map((item) => (

@@ -9,11 +9,11 @@
   "summary": "AI workspace, digital workplace, digital workspace platform, and enterprise AI platform are often used as if they mean the same thing. They do not. For serious buyers, the important question is whether the workspace controls data, identity, files, AI access, and deployment boundaries well enough to support real employee adoption.",
   "seoDescription": "Compare AI workspace, digital workplace solutions, digital workspace platforms, private AI, self-hosted AI, and enterprise AI platform requirements for serious buyers.",
   "date": "2026-07-14",
-  "updated": "2026-07-14",
+  "updated": "2026-08-16",
   "displayDate": "14 July 2026",
   "readTime": "5 min read",
-  "sourceName": "ScotiTech editorial team",
-  "sourceUrl": "https://scotitech.com/products/axos",
+  "sourceName": "AI Management Essentials - GOV.UK",
+  "sourceUrl": "https://www.gov.uk/government/consultations/ai-management-essentials-tool/guidance-for-using-the-ai-management-essentials-tool",
   "image": "/images/insights/secure-ai-governance.jpg",
   "tags": [
     "AI workspace",
@@ -67,7 +67,8 @@
       "heading": "What makes an enterprise AI platform credible",
       "paragraphs": [
         "An enterprise AI platform should be judged by operating controls, not only by model quality. Buyers should ask how identity, file access, audit logs, retention, deployment model, and human review work before they expand access to employees.",
-        "That is especially important for private AI, self-hosted AI, self hosted AI, and on premise AI discussions. The promise is not simply that the tool has AI. The promise is that the organisation can use AI without losing ownership of its data and workflow boundaries."
+        "That is especially important for private AI, self-hosted AI, self hosted AI, and on premise AI discussions. The promise is not simply that the tool has AI. The promise is that the organisation can use AI without losing ownership of its data and workflow boundaries.",
+        "The UK government's AI Management Essentials guidance reinforces this process-based view. It helps organisations assess internal processes, risk management, and communication around AI, while making clear that the self-assessment does not certify an AI product. Buyers need both sides: accountable organisational governance and technology capable of enforcing the controls they choose."
       ]
     },
     {

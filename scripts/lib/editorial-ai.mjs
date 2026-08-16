@@ -302,6 +302,14 @@ function defaultRelatedProduct(brief) {
 }
 
 export async function createInsightFromBrief(rawBrief) {
+  if (!String(rawBrief.sourceName || "").trim()) {
+    throw new Error("An independent source name is required for every insight draft.");
+  }
+
+  if (!String(rawBrief.sourceUrl || "").trim()) {
+    throw new Error("An independent source URL is required for every insight draft.");
+  }
+
   const defaults = defaultRelatedProduct(rawBrief);
   const brief = {
     category: rawBrief.category || "Insight Briefing",
@@ -310,8 +318,8 @@ export async function createInsightFromBrief(rawBrief) {
     angle: rawBrief.angle || rawBrief.title || "A practical ScotiTech briefing",
     title: rawBrief.title || "",
     keywords: Array.isArray(rawBrief.keywords) ? rawBrief.keywords : [],
-    sourceName: rawBrief.sourceName || "ScotiTech editorial team",
-    sourceUrl: rawBrief.sourceUrl || "https://scotitech.com/insights",
+    sourceName: rawBrief.sourceName,
+    sourceUrl: rawBrief.sourceUrl,
     sourceNotes: rawBrief.sourceNotes || "",
     relatedProductHref: rawBrief.relatedProductHref || defaults.href,
     relatedProductCta: rawBrief.relatedProductCta || defaults.cta,

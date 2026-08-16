@@ -144,7 +144,7 @@ export default async function InsightArticlePage({ params }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-950"
                 >
-                  Source: {insight.sourceName}
+                  Reference: {insight.sourceName}
                   <ExternalLink className="size-4" />
                 </a>
               </div>
@@ -235,7 +235,7 @@ export default async function InsightArticlePage({ params }) {
             <aside className="lg:sticky lg:top-28 space-y-5">
               <div className="rounded-xl border border-slate-200 bg-white p-6">
                 <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-3">
-                  Original source
+                  Primary reference
                 </p>
                 <h2 className="text-xl font-karla font-semibold text-slate-900 mb-4">
                   {insight.sourceName}
@@ -246,7 +246,7 @@ export default async function InsightArticlePage({ params }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-5 py-3 text-sm font-karla font-semibold text-white hover:bg-slate-900"
                 >
-                  View source
+                  View reference
                   <ExternalLink className="size-4" />
                 </a>
               </div>

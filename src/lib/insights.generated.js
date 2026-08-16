@@ -13,11 +13,11 @@ export const insights = [
     "summary": "AI workspace, digital workplace, digital workspace platform, and enterprise AI platform are often used as if they mean the same thing. They do not. For serious buyers, the important question is whether the workspace controls data, identity, files, AI access, and deployment boundaries well enough to support real employee adoption.",
     "seoDescription": "Compare AI workspace, digital workplace solutions, digital workspace platforms, private AI, self-hosted AI, and enterprise AI platform requirements for serious buyers.",
     "date": "2026-07-14",
-    "updated": "2026-07-14",
+    "updated": "2026-08-16",
     "displayDate": "14 July 2026",
     "readTime": "5 min read",
-    "sourceName": "ScotiTech editorial team",
-    "sourceUrl": "https://scotitech.com/products/axos",
+    "sourceName": "AI Management Essentials - GOV.UK",
+    "sourceUrl": "https://www.gov.uk/government/consultations/ai-management-essentials-tool/guidance-for-using-the-ai-management-essentials-tool",
     "image": "/images/insights/secure-ai-governance.jpg",
     "tags": [
       "AI workspace",
@@ -71,7 +71,8 @@ export const insights = [
         "heading": "What makes an enterprise AI platform credible",
         "paragraphs": [
           "An enterprise AI platform should be judged by operating controls, not only by model quality. Buyers should ask how identity, file access, audit logs, retention, deployment model, and human review work before they expand access to employees.",
-          "That is especially important for private AI, self-hosted AI, self hosted AI, and on premise AI discussions. The promise is not simply that the tool has AI. The promise is that the organisation can use AI without losing ownership of its data and workflow boundaries."
+          "That is especially important for private AI, self-hosted AI, self hosted AI, and on premise AI discussions. The promise is not simply that the tool has AI. The promise is that the organisation can use AI without losing ownership of its data and workflow boundaries.",
+          "The UK government's AI Management Essentials guidance reinforces this process-based view. It helps organisations assess internal processes, risk management, and communication around AI, while making clear that the self-assessment does not certify an AI product. Buyers need both sides: accountable organisational governance and technology capable of enforcing the controls they choose."
         ]
       },
       {
@@ -309,11 +310,11 @@ export const insights = [
     "editorialPriority": 80,
     "slug": "enterprise-ai-trials-need-tighter-control-before-rollout",
     "date": "2026-07-14",
-    "updated": "2026-07-14",
+    "updated": "2026-08-16",
     "displayDate": "14 July 2026",
-    "readTime": "3 min read",
-    "sourceName": "OpenAI API Docs",
-    "sourceUrl": "https://developers.openai.com/api/docs/models",
+    "readTime": "5 min read",
+    "sourceName": "AI Growth Lab - GOV.UK",
+    "sourceUrl": "https://www.gov.uk/government/calls-for-evidence/ai-growth-lab/ai-growth-lab",
     "image": "/images/insights/secure-ai-governance.jpg",
     "generationMeta": {
       "mode": "openai",
@@ -357,6 +358,13 @@ export const insights = [
         "paragraphs": [
           "Many organisations treat early AI experimentation as benign exploratory work: a data scientist tests a model here, a product manager runs prompts there. That approach can feel fast, but it embeds hard-to-see costs. Sensitive data may be provisioned into unmanaged tools, governance teams lose visibility into what models are being used and how, and support teams must react to inconsistent implementations. Those issues become expensive when a team relies on a model in production or regulatory questions arise.",
           "Uncontrolled pilots also produce noisy signals. Different teams use different prompts, datasets, and models, so trial outcomes aren’t comparable. Without consistent observability, you can’t reliably assess model accuracy, bias, latency, or total cost of ownership across the organisation."
+        ]
+      },
+      {
+        "heading": "The UK policy direction favours controlled evidence",
+        "paragraphs": [
+          "The UK government's AI Growth Lab proposal is a regulatory sandbox, not a template or approval route for ordinary enterprise procurement. Its design still offers a useful operating principle: deploy in a controlled setting, define safeguards, monitor carefully, and use real-world evidence before scaling.",
+          "An enterprise AI pilot can borrow that discipline without claiming regulatory endorsement. A bounded use case, named owner, restricted data, measurable outcomes, incident plan, and explicit end date create a more defensible route from experimentation to production."
         ]
       },
       {
@@ -419,11 +427,11 @@ export const insights = [
     "summary": "Search demand around Google Workspace alternatives, Microsoft 365 alternatives, secure collaboration software, and enterprise knowledge management points to a bigger issue: buyers are not only comparing mail, files, and chat. They are asking who controls the workspace, where knowledge lives, and whether AI can be used without exposing sensitive business data.",
     "seoDescription": "A practical guide for teams comparing Google Workspace alternatives, Microsoft 365 alternatives, secure collaboration software, enterprise knowledge management, and private AI workspaces.",
     "date": "2026-07-14",
-    "updated": "2026-07-14",
+    "updated": "2026-08-16",
     "displayDate": "14 July 2026",
     "readTime": "5 min read",
-    "sourceName": "ScotiTech editorial team",
-    "sourceUrl": "https://scotitech.com/products/axos",
+    "sourceName": "NCSC Cloud Security Principles",
+    "sourceUrl": "https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles",
     "image": "/images/insights/secure-ai-governance.jpg",
     "tags": [
       "Google Workspace alternative",
@@ -462,7 +470,8 @@ export const insights = [
         "heading": "Alternative does not mean cheaper clone",
         "paragraphs": [
           "A serious Google Workspace alternative is not just a different inbox and file drive. For enterprise teams, the real comparison is about control: data location, access rules, auditability, AI use, and whether the workspace can support sensitive employee operations.",
-          "The same is true for Microsoft 365 alternative and Office 365 alternative searches. Some buyers want cost reduction, but many are signalling a deeper concern: their current collaboration stack is powerful, yet too broad, too external, or too difficult to govern for specific workflows."
+          "The same is true for Microsoft 365 alternative and Office 365 alternative searches. Some buyers want cost reduction, but many are signalling a deeper concern: their current collaboration stack is powerful, yet too broad, too external, or too difficult to govern for specific workflows.",
+          "The National Cyber Security Centre's Cloud Security Principles apply to both cloud platforms and Software-as-a-Service. They direct buyers to examine governance, data protection, customer separation, secure user management, identity, and audit information. That is a stronger foundation for a workspace decision than a feature grid alone."
         ]
       },
       {
@@ -515,7 +524,7 @@ export const insights = [
     "updated": "2026-06-14",
     "displayDate": "4 May 2026",
     "readTime": "6 min read",
-    "sourceName": "GOV.UK",
+    "sourceName": "AI Cyber Security Code of Practice - GOV.UK",
     "sourceUrl": "https://www.gov.uk/government/publications/ai-cyber-security-code-of-practice/code-of-practice-for-the-cyber-security-of-ai",
     "image": "/images/insights/ai-governance-workspace.jpg",
     "tags": [
@@ -864,8 +873,8 @@ export const insights = [
     "updated": "2026-06-14",
     "displayDate": "4 May 2026",
     "readTime": "6 min read",
-    "sourceName": "GOV.UK",
-    "sourceUrl": "https://www.gov.uk/government/publications/software-security-code-of-practice",
+    "sourceName": "Software Security Code of Practice - GOV.UK",
+    "sourceUrl": "https://www.gov.uk/government/publications/software-security-code-of-practice/software-security-code-of-practice",
     "image": "/images/insights/software-security-code.jpg",
     "tags": [
       "Software security",
