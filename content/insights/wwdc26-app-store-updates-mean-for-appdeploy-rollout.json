@@ -1,7 +1,6 @@
 {
   "status": "published",
   "featured": false,
-  "editorialPriority": 60,
   "slug": "wwdc26-app-store-updates-mean-for-appdeploy-rollout",
   "category": "WWDC 2026 Briefing",
   "topic": "AppDeploy",
