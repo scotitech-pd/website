@@ -15,10 +15,10 @@ export default function LeadershipTeam() {
     },
     {
       name: "Pradeep Dahiya",
-      title: "Founder & CEO",
+      title: "Founder & CEO, Lead Developer",
       location: "Motherwell, Scotland",
       description:
-        "Leads ScotiTech's product vision, commercial strategy, and global direction across AppDeploy, AXOS, ClarityPath, and wider technology delivery.",
+        "Architects and builds AppDeploy and AXOS, and sets ScotiTech's product vision, commercial strategy, and global direction.",
       img: "/images/home/pradeep.jpg",
       linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
     },

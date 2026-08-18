@@ -21,7 +21,7 @@ const IMAGES = [
   { src: "/images/home/scotland-startup-awards-2026-finalist.jpg", alt: "Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions", caption: "Digital StartUp of the Year — 2026 finalist certificate" },
   { src: "/images/home/scotland-startup-awards-2026-photo-1.jpg", alt: "ScotiTech Scotland StartUp Awards 2026 finalist moment", caption: "Scotland StartUp Awards 2026 finalist recognition" },
   { src: "/images/home/scotland-startup-awards-2026-photo-2.jpg", alt: "ScotiTech at the Scotland StartUp Awards 2026", caption: "ScotiTech at the Scotland StartUp Awards 2026" },
-  { src: "/images/home/p1.png", alt: "Pradeep Dahiya holding the award", caption: "Pradeep Dahiya, Founder & CEO, ScotiTech, holding the award" },
+  { src: "/images/home/p1.png", alt: "Pradeep Dahiya holding the award", caption: "Pradeep Dahiya, Founder & CEO and Lead Developer, ScotiTech, holding the award" },
   { src: "/images/home/p2.jpg", alt: "award", caption: "Forttuna Global Excellence Awards 2025, Dubai" },
   { src: "/images/home/p3.jpg", alt: "Close up of the award trophy", caption: "NextGen Innovator trophy, Forttuna Awards" },
   { src: "/images/home/p4.jpeg", alt: "Handshake with the co founder", caption: "Partnership and Excellence Celebration" },
@@ -290,7 +290,7 @@ const PressRelease = () => {
           >
             <div className="prose prose-lg max-w-none text-gray-800 font-lora leading-relaxed">
               <p className="text-xl text-gray-600 mb-8 leading-relaxed italic border-l-4 border-purple-200 pl-6">
-                ScotiTech Solutions Limited is proud to announce that its Founder & CEO, Pradeep Dahiya,
+                ScotiTech Solutions Limited is proud to announce that its Founder & CEO and Lead Developer, Pradeep Dahiya,
                 has been honored with the NextGen Innovator of the Year award at the Forttuna Global Excellence Awards 2025,
                 held in Dubai, UAE.
               </p>

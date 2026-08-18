@@ -10,11 +10,11 @@ import Eyebrow from "@/components/ui/Eyebrow";
 const team = [
   {
     name: "Pradeep Dahiya",
-    title: "Founder & CEO",
+    title: "Founder & CEO, Lead Developer",
     img: "/images/home/pradeep.jpg",
     linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
     description:
-      "Leads ScotiTech's product vision, commercial strategy, and global direction across AppDeploy, AXOS, ClarityPath, and wider technology delivery.",
+      "Architects and builds AppDeploy and AXOS, and sets ScotiTech's product vision, commercial strategy, and global direction.",
     credentials: [
       { icon: Trophy, text: "NextGen Innovator of the Year 2025" },
       { icon: Globe, text: "Scotland StartUp Awards 2026 Finalist" },

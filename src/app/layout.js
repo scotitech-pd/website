@@ -119,6 +119,7 @@ const organizationSchema = {
     {
       "@type": "Person",
       name: "Pradeep Dahiya",
+      jobTitle: "Founder & CEO, Lead Developer",
       url: "https://www.linkedin.com/in/pradeepkumar2411/",
     },
     {
