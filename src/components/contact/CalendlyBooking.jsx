@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { meetingLinks } from "@/lib/scheduling";
 
 const CalendlySection = () => {
   return (
@@ -25,7 +26,7 @@ const CalendlySection = () => {
 
         {/* CTA Button */}
         <a
-          href="https://calendly.com/pradeepdahiya2411/axos-private-workspace-strategy-session"
+          href={meetingLinks.calendly}
           target="_blank"
           rel="noopener noreferrer"
           className="group inline-flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-karla font-semibold hover:bg-main-dark hover:text-white transition-all shadow-lg"

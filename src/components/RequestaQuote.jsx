@@ -3,10 +3,7 @@
 import { useModal } from "@/components/ModalContext";
 import { useEffect } from "react";
 import { ArrowRight, Clock, ShieldCheck, Sparkles, X } from "lucide-react";
-
-/* Single scheduling link used for both product sessions */
-const CALENDLY_URL =
-  "https://calendly.com/pradeepdahiya2411/axos-private-workspace-strategy-session";
+import { meetingLinks } from "@/lib/scheduling";
 
 const chips = [
   { icon: Clock, label: "45-min session" },
@@ -149,7 +146,7 @@ export default function RequestaQuote() {
                 <h3 className="font-karla text-lg font-semibold text-strong">{s.name}</h3>
                 <p className="t-small mt-1.5 leading-6">{s.body}</p>
                 <a
-                  href={CALENDLY_URL}
+                  href={meetingLinks.calendly}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 font-karla text-sm font-semibold text-on-ink transition-colors hover:bg-ink-soft"

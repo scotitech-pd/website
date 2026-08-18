@@ -16,6 +16,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { meetingLinks } from "@/lib/scheduling";
 
 const productPaths = [
   {
@@ -81,8 +82,7 @@ const responseStats = [
   { value: "Global", label: "Client conversations" },
 ];
 
-const calendlyUrl =
-  "https://calendly.com/pradeepdahiya2411/axos-private-workspace-strategy-session";
+const calendlyUrl = meetingLinks.calendly;
 
 const initialForm = {
   name: "",

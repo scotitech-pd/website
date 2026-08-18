@@ -7,9 +7,7 @@ import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/ModalContext";
-
-const calendlyUrl =
-  "https://calendly.com/pradeepdahiya2411/axos-private-workspace-strategy-session";
+import { meetingLinks } from "@/lib/scheduling";
 
 export default function ContactCta() {
   const { setShowModal } = useModal();
@@ -43,7 +41,7 @@ export default function ContactCta() {
                     <ArrowRight size={17} />
                   </Button>
                   <Button asChild size="lg" variant="onInk">
-                    <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+                    <a href={meetingLinks.calendly} target="_blank" rel="noopener noreferrer">
                       <CalendarClock size={17} />
                       Book a call
                     </a>
