@@ -1,12 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Building2, ShieldCheck, ChevronDown } from "lucide-react";
 import Container from "@/components/ui/Container";
-import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/ModalContext";
+import ProductShowcase from "@/components/products/ProductShowcase";
 
 export default function HeroSection() {
   const { setShowModal } = useModal();
@@ -117,52 +116,21 @@ export default function HeroSection() {
           {...rise(0.20)}
           className="relative mt-16 w-full max-w-4xl"
         >
-          {/* Glow under card */}
           <div className="pointer-events-none absolute -inset-x-8 -bottom-6 h-24 bg-[radial-gradient(ellipse_70%_100%_at_50%_100%,rgba(226,88,14,0.20),transparent_70%)] blur-2xl" />
-          <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] p-2 shadow-[0_32px_80px_rgba(0,0,0,0.55)] backdrop-blur-sm">
-            <motion.div
-              animate={
-                reduce
-                  ? undefined
-                  : { y: [0, -6, 0] }
-              }
-              transition={
-                reduce
-                  ? undefined
-                  : { duration: 7, ease: "easeInOut", repeat: Infinity }
-              }
-            >
-              <Image
-                src="/images/products/appdeploy/phonepic.png"
-                alt="AppDeploy workspace dashboard"
-                width={1200}
-                height={688}
-                priority
-                className="h-auto w-full rounded-[22px]"
-              />
-            </motion.div>
-          </div>
-
-          {/* Floating stat pills */}
           <motion.div
-            {...rise(0.38)}
-            className="absolute -left-4 bottom-10 hidden rounded-xl border border-white/12 bg-[#080d18]/80 px-4 py-3 shadow-xl backdrop-blur-md sm:block"
+            animate={reduce ? undefined : { y: [0, -5, 0] }}
+            transition={
+              reduce
+                ? undefined
+                : { duration: 7, ease: "easeInOut", repeat: Infinity }
+            }
           >
-            <p className="font-karla text-xl font-bold text-white">
-              From £79<span className="text-sm font-medium text-white/50">/mo</span>
-            </p>
-            <p className="mt-0.5 font-karla text-xs text-white/50">AppDeploy cloud</p>
-          </motion.div>
-
-          <motion.div
-            {...rise(0.44)}
-            className="absolute -right-4 top-16 hidden rounded-xl border border-white/12 bg-[#080d18]/80 px-4 py-3 shadow-xl backdrop-blur-md sm:block"
-          >
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 px-2.5 py-1 font-karla text-[11px] font-semibold text-emerald-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              Live in production
-            </span>
-            <p className="mt-1.5 font-karla text-xs text-white/50">AppDeploy</p>
+            <ProductShowcase
+              variant="appdeploy"
+              src="/images/products/appdeploy/claritypath-portal.webp"
+              alt="AppDeploy Business organisation portal showing approved apps"
+              priority
+            />
           </motion.div>
         </motion.div>
       </Container>

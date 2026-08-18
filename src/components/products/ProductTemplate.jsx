@@ -54,6 +54,7 @@ import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/ModalContext";
 import { cn } from "@/lib/utils";
 import JsonLd from "@/components/seo/JsonLd";
+import ProductShowcase from "@/components/products/ProductShowcase";
 import {
   productJsonLd,
   faqJsonLd,
@@ -73,6 +74,17 @@ const deployIcons = [Cloud, Server, ServerCog, ShieldCheck];
 
 function ProductMedia({ media, accentBg }) {
   if (media?.type === "image") {
+    if (media.presentation === "showcase") {
+      return (
+        <ProductShowcase
+          variant={media.variant}
+          src={media.src}
+          alt={media.alt}
+          priority
+        />
+      );
+    }
+
     if (media.presentation === "bare") {
       return (
         <div className="relative">
@@ -553,13 +565,24 @@ export default function ProductTemplate({ product }) {
                   )}
                 </div>
                 {product.caseStudy.image && (
-                  <div className="relative min-h-[280px] border-t border-hairline bg-surface lg:border-l lg:border-t-0">
+                  <div
+                    className={cn(
+                      "relative border-t border-hairline lg:border-l lg:border-t-0",
+                      product.caseStudy.imageFit === "contain"
+                        ? "aspect-[1357/772] min-h-[280px] bg-[#f4f3ef] lg:aspect-auto lg:min-h-full"
+                        : "min-h-[280px] bg-surface"
+                    )}
+                  >
                     <Image
                       src={product.caseStudy.image}
                       alt={product.caseStudy.imageAlt || product.caseStudy.title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
+                      className={cn(
+                        product.caseStudy.imageFit === "contain"
+                          ? "object-contain p-4 md:p-5"
+                          : "object-cover"
+                      )}
                     />
                   </div>
                 )}
@@ -618,9 +641,16 @@ export default function ProductTemplate({ product }) {
               <p className="t-lead mt-4">{product.pricing.trial}</p>
             )}
           </Reveal>
-          <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div
+            className={cn(
+              "mt-12 grid grid-cols-1 gap-6",
+              product.pricing.plans.length === 3
+                ? "lg:grid-cols-3"
+                : "lg:grid-cols-2"
+            )}
+          >
             {product.pricing.plans.map((plan, i) => {
-              const featured = i === 0;
+              const featured = plan.featured ?? i === 0;
               return (
                 <Reveal key={plan.name} delay={i * 0.08}>
                   <div
@@ -641,15 +671,75 @@ export default function ProductTemplate({ product }) {
                     </div>
                     {plan.note && <p className="t-small mt-1">{plan.note}</p>}
                     <p className="t-body mt-4">{plan.desc}</p>
-                    <ul className="mt-6 space-y-3">
-                      {plan.features.map((f) => (
-                        <li key={f} className="flex gap-3 t-body">
-                          <Check size={18} className={cn("mt-0.5 shrink-0", accentText)} />
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-8 pt-2">
+                    {plan.sections ? (
+                      <div className="mt-6 space-y-5">
+                        {plan.sections.map((section) => (
+                          <div
+                            key={section.label}
+                            className={cn(
+                              "border-t border-hairline pt-5",
+                              section.boxed && "rounded-xl border bg-surface-sunken p-4"
+                            )}
+                          >
+                            <p className={cn("font-karla text-[10px] font-semibold uppercase tracking-[0.16em]", accentText)}>
+                              {section.label}
+                            </p>
+                            <ul className="mt-4 space-y-3">
+                              {section.items.map((item) => (
+                                <li key={item} className="flex gap-3 t-body">
+                                  <Check size={18} className={cn("mt-0.5 shrink-0", accentText)} />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <ul className="mt-6 space-y-3">
+                        {plan.features.map((f) => (
+                          <li key={f} className="flex gap-3 t-body">
+                            <Check size={18} className={cn("mt-0.5 shrink-0", accentText)} />
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {plan.details && (
+                      <div className="mt-6 rounded-xl border border-hairline bg-surface-sunken p-4">
+                        <p className="font-karla text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
+                          {plan.details.label}
+                        </p>
+                        <div className="mt-3 space-y-2">
+                          {plan.details.items.map((item) => (
+                            <div
+                              key={item.label}
+                              className="flex items-start justify-between gap-3 font-karla text-xs leading-5 text-body"
+                            >
+                              <span>{item.label}</span>
+                              <span className="shrink-0 font-semibold text-strong">
+                                {item.value}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                        {plan.details.notes && (
+                          <div className="mt-4 space-y-2 border-t border-hairline pt-4">
+                            {plan.details.notes.map((note) => (
+                              <p key={note} className="font-karla text-xs leading-5 text-body">
+                                {note}
+                              </p>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                    {plan.footerNote && (
+                      <p className="mt-5 rounded-xl border border-hairline bg-surface px-4 py-3 font-karla text-xs leading-5 text-body">
+                        {plan.footerNote}
+                      </p>
+                    )}
+                    <div className="mt-auto pt-8">
                       {plan.cta.external ? (
                         <Button asChild size="lg" variant={featured ? "default" : "outline"} className="w-full">
                           <a href={plan.cta.href} target="_blank" rel="noopener noreferrer">

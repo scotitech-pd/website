@@ -1,3 +1,5 @@
+import { meetingLinks } from "@/lib/scheduling";
+
 /**
  * Product configuration consumed by the shared ProductTemplate.
  * Keep copy customer-facing and proof-backed. Sections render only when present.
@@ -12,9 +14,9 @@ export const products = {
     externalUrl: "https://appdeploy.scotitech.com",
     status: { variant: "live", dot: true, label: "Live" },
     eyebrow: "Private app distribution",
-    tagline: "MDM-free private app distribution, built around Apple Business.",
+    tagline: "Private app distribution with optional remote deployment, built around Apple Business.",
     description:
-      "AppDeploy turns private iOS rollout into a branded workspace: admins publish releases and manage entitlement-led organisation access, while employees and partners get one clear place to install approved apps.",
+      "AppDeploy turns private iOS rollout into a branded workspace. Business supports Apple Business Manager Apps & Books, iOS redemption codes, and enterprise-signed IPA delivery for up to five enrolled devices. Android signed APK upload and delivery is available with Enterprise.",
     heroSpecs: [
       { label: "Access model", value: "Entitlement-led" },
       { label: "Releases", value: "Versions + roles" },
@@ -25,21 +27,22 @@ export const products = {
     howItWorksTitle: "One path from request to release review.",
     statement: {
       eyebrow: "Rollout architecture",
-      title: "Built for controlled rollout, not broad device control.",
-      body: "AppDeploy keeps Apple Business as the compliant distribution foundation and adds the branded workspace teams actually use — access, releases, and rollout visibility — without the weight of full device management.",
+      title: "Built for controlled app rollout, not a full device-management suite.",
+      body: "AppDeploy combines Apple Business distribution, signed app delivery, a branded user workspace, and focused remote deployment capacity. Business includes AutoDeploy for five enrolled Apple devices, with additional capacity available on the same subscription.",
       points: [
         { title: "Entitlement-led access", body: "App availability managed per organisation and user, not per device." },
         { title: "Apple Business aligned", body: "Apps & Books token sync and Managed Apple ID workflows underneath." },
-        { title: "Rollout audit trail", body: "Admin actions, sync, and delivery events visible in one place." },
-        { title: "Hosted or tailored", body: "Start on Business; move to Enterprise for deeper control." },
+        { title: "Remote deployment capacity", body: "AutoDeploy is included for the first five enrolled Apple devices on Business." },
+        { title: "Rollout audit trail", body: "App assignment, command status, sync, and delivery events stay reviewable." },
       ],
     },
     hero: {
       media: {
         type: "image",
-        src: "/images/products/appdeploy/dashboard.png",
-        alt: "AppDeploy workspace dashboard screen showing apps, installs and access",
-        presentation: "bare",
+        src: "/images/products/appdeploy/claritypath-portal.webp",
+        alt: "AppDeploy organisation portal showing ClarityPath and other approved business apps",
+        presentation: "showcase",
+        variant: "appdeploy",
       },
     },
     metrics: [
@@ -67,18 +70,18 @@ export const products = {
     },
     features: [
       { icon: "Palette", title: "Branded distribution portals", body: "Give each organisation a controlled portal for private app delivery, with clear install guidance and branded presentation." },
-      { icon: "Building2", title: "Apple Business delivery", body: "Apps & Books token sync for delivery, plus Apple Business user and group sync on paid plans when Managed Apple ID provisioning is enabled." },
+      { icon: "Building2", title: "Business delivery routes", body: "Use Apple Business Manager Apps & Books, iOS redemption codes, or enterprise-signed IPA delivery for up to five enrolled devices." },
+      { icon: "ServerCog", title: "AutoDeploy for Apple devices", body: "Business includes remote deployment for five enrolled Apple devices, with QR enrolment and additional capacity when needed." },
       { icon: "MousePointerClick", title: "Simpler install journey", body: "Keep AppDeploy as the branded, employee-facing portal instead of scattered instructions and disconnected steps." },
       { icon: "Users", title: "Org-level controls", body: "Separate teams, branded pages, and admin workflows by organisation so distribution stays controlled and reviewable as you grow." },
-      { icon: "GitBranch", title: "Business and Enterprise paths", body: "Start with hosted Business, or move to Enterprise for scheduled provisioning, group rules, and deeper rollout control." },
-      { icon: "BarChart3", title: "Enterprise audit surface", body: "Give Enterprise workspaces a reviewable trail for admin actions, sync activity, and delivery events." },
+      { icon: "GitBranch", title: "Business and Enterprise paths", body: "Start with hosted Business, or move to Enterprise for Android signed APK upload and delivery, scheduled provisioning, group rules, and deeper rollout control." },
     ],
     howItWorks: [
       { title: "Request a workspace", body: "Business requests move through email verification, billing, and activation; Enterprise requests move into review-led onboarding." },
       { title: "Configure the brand", body: "Set the organisation slug, display name, logo, accent colour, public-page status, and enabled platforms." },
-      { title: "Publish releases", body: "Upload iOS release assets and redemption data; Android APK distribution is reserved for Enterprise deployments." },
-      { title: "Share one portal", body: "Employees, testers, or client teams use a branded app page rather than scattered install messages." },
-      { title: "Track usage", body: "Monitor install counts, remaining iOS codes, active users, app inventory, and distribution activity." },
+      { title: "Add approved apps", body: "Business supports Apple Business Manager Apps & Books, iOS redemption codes, and enterprise-signed IPA delivery. Android signed APK upload and delivery is available with Enterprise." },
+      { title: "Share or remotely deploy", body: "Give users one branded portal, or use QR enrolment and AutoDeploy to assign eligible Apple apps to enrolled devices." },
+      { title: "Track usage", body: "Monitor installs, codes, active users, app inventory, per-device commands, and distribution activity." },
       { title: "Review operations", body: "Audit logs and member permissions give larger teams a cleaner way to review sensitive release actions." },
     ],
     proof: {
@@ -99,58 +102,135 @@ export const products = {
       ],
     },
     pricing: {
-      trial: "14-day free trial · no card required",
+      trial: "AppDeploy Business includes AutoDeploy for the first five enrolled Apple devices. Increase remote-deployment capacity from £2/device/month.",
       plans: [
         {
           name: "Business",
+          featured: true,
           price: "£79",
           period: "/mo",
           note: "or £599/year — save 37%",
-          tag: "Most popular",
+          tag: "14-day free trial",
           desc: "The complete private app distribution workspace for growing organisations — unlimited apps, unlimited users, full governance.",
-          features: [
-            "Branded organisation portal, live immediately",
-            "Role-based access control",
-            "Apple Business aligned workflow",
-            "Priority email support from day one",
+          sections: [
+            {
+              label: "Ways to add and deliver apps",
+              items: [
+                "Apple Business Manager Apps & Books",
+                "iOS redemption codes",
+                "Enterprise-signed IPA delivery for up to five enrolled devices",
+              ],
+            },
+            {
+              label: "Your 14-day free trial includes",
+              boxed: true,
+              items: [
+                "Branded organisation portal, live immediately",
+                "Reduced code handling, clearer install guidance, and fewer support requests",
+                "Role-based access control",
+                "Manual iOS release setup for trial validation",
+                "Apple Business aligned workflow",
+                "Priority email support from day one",
+              ],
+            },
           ],
-          cta: { label: "Start free trial", href: "https://appdeploy.scotitech.com", external: true },
+          details: {
+            label: "Trial limits",
+            items: [
+              { label: "Apps", value: "10 maximum" },
+              { label: "Installs", value: "100 maximum" },
+              { label: "User invitations", value: "5, then unlimited" },
+              { label: "Team invitations", value: "Email enabled" },
+            ],
+            notes: [
+              "Apple Business token sync and directory sync unlock after trial activation.",
+            ],
+          },
+          footerNote: "After 14 days, all trial limits lift and full Business access continues from £79/month. Cancel before the trial ends and you will not be charged.",
+          cta: { label: "Start Business trial", href: "https://appdeploy.scotitech.com/request-access", external: true },
+        },
+        {
+          name: "AutoDeploy",
+          featured: false,
+          price: "+ £2",
+          period: "/device/mo",
+          note: "First 5 devices included · Add more from £2/device/month · Save 15% when billed annually",
+          tag: "5 devices included with Business",
+          desc: "Business already includes AutoDeploy for five devices. Increase the allowance when you need to enrol more iPhones or iPads, assign approved apps, and deploy them remotely. Everything stays on the same Business subscription and Stripe invoice.",
+          sections: [
+            {
+              label: "Remote deployment capacity",
+              boxed: true,
+              items: [
+                "Deploy eligible iPhone and iPad apps already managed in Business",
+                "Shareable QR enrolment links with configurable validity",
+                "Automatic app assignment when a device enrols",
+                "Remote app deployment through Apple MDM and APNs",
+                "Silent installation on eligible supervised devices",
+                "Per-device command status and audit trail",
+                "Push certificate setup and expiry reminders",
+                "CMS-signed enrolment profiles",
+              ],
+            },
+          ],
+          details: {
+            label: "Device rates",
+            items: [
+              { label: "6–25 total devices", value: "£2/device/mo" },
+              { label: "26–100 total devices", value: "£1.75/device/mo" },
+              { label: "101+ total devices", value: "£1.50/device/mo" },
+            ],
+            notes: [
+              "The first five devices are included with Business. The rate for your total allowance applies only to devices above those five.",
+              "Device increases are prorated immediately. Reductions take effect at the next renewal.",
+            ],
+          },
+          cta: { label: "Start Business", href: "https://appdeploy.scotitech.com/request-access", external: true },
         },
         {
           name: "Enterprise",
+          featured: true,
           price: "Custom",
           note: "Tailored to your organisation",
-          desc: "Everything in Business, plus self-hosted deployment, Android delivery, scheduled sync, and a dedicated team to get you live.",
+          desc: "Everything your IT and compliance teams need: Android signed APK upload and delivery, self-hosted deployment review, scheduled sync, advanced reporting, audit exports, and a dedicated team to get you live.",
           features: [
+            "Everything in Business",
             "Scheduled user & group sync",
-            "Android app delivery",
+            "Enterprise SSO through SAML/OIDC with WorkOS",
+            "Directory provisioning (SCIM) for identity providers",
+            "Group-based app user provisioning",
+            "Android signed APK upload and delivery",
             "Self-hosted deployment",
             "Dedicated implementation engineer",
+            "Dedicated customer success manager",
             "Advanced reporting & audit export",
-            "99.9% uptime SLA & compliance documentation",
+            "Negotiated uptime commitment",
+            "Compliance documentation",
           ],
-          cta: { label: "Book a demo", href: "/contact" },
+          footerNote: "Custom pricing · No commitment · Live within 2 weeks",
+          cta: { label: "Book a demo", href: meetingLinks.appdeploy, external: true },
         },
       ],
     },
     caseStudy: {
-      eyebrow: "AppDeploy release story",
-      title: "A focused planning app needed a focused launch path.",
-      body: 'ClarityPath was built around a clear promise — "Plan your life. Align with time." But public App Store submissions showed how hard it is for a specialised planning product to stand out in a saturated category. AppDeploy gives it a branded route where its purpose, access model, disclaimers, and install journey are presented with clarity.',
+      eyebrow: "ClarityPath case study",
+      title: "An App Store setback became a clearer, controlled route to users.",
+      body: "ClarityPath's public App Store review exposed a familiar problem for specialised products: a useful app can still struggle to explain its distinction inside a crowded category. Rather than reduce the product to another public listing, AppDeploy created a branded route where its purpose, access model, and installation journey can be understood before a user begins.",
       points: [
-        "Public App Store submissions were rejected — life-planning and guidance apps sit in a crowded category.",
-        "ClarityPath needed a launch path to explain its purpose, boundaries, disclaimers, and access experience before installation.",
-        "With AppDeploy it gets a branded product page, managed access, install guidance, and clearer user expectations.",
+        "The review challenge made the product-positioning and distribution problem visible early.",
+        "AppDeploy presents ClarityPath inside an organisation-branded catalogue with clear platform and access context.",
+        "Direct sharing and QR access give approved teams one consistent route instead of fragmented links and instructions.",
       ],
       image: "/images/products/appdeploy/1.jpeg",
-      imageAlt: "App Store rejection notice for a specialised planning app",
+      imageAlt: "ClarityPath App Store review challenge documented during the product launch journey",
       link: { label: "Explore ClarityPath", href: "/products/claritypath" },
     },
     faqs: [
       { q: "Does AppDeploy replace Apple Business?", a: "No — and that's the point. Apple Business handles the compliant distribution layer; AppDeploy adds the branded portal, user management, and rollout workflow on top." },
-      { q: "Is Android included in the Business plan?", a: "Android is available on Enterprise plans. If you need iOS and Android from day one, get in touch and we'll find the right fit." },
+      { q: "Is Android included in the Business plan?", a: "No. Android signed APK upload and delivery is available with Enterprise. Business supports Apple Business Manager Apps & Books, iOS redemption codes, and enterprise-signed IPA delivery for up to five enrolled devices." },
+      { q: "Is AutoDeploy a separate plan?", a: "No. Business includes AutoDeploy for the first five enrolled Apple devices. Additional capacity is charged from device 6 using the published device-rate tiers, on the same Business subscription and invoice." },
       { q: "Can I view an app catalogue before signing up?", a: "Yes — open a sample branded workspace before requesting access to see app discovery, install guidance, and branding." },
-      { q: "What happens after I start a free trial?", a: "Your branded workspace is live within minutes. Billing only starts after your 14 days, with priority email support from day one." },
+      { q: "What happens after I start a free trial?", a: "The 14-day Business trial includes a branded portal, manual iOS release setup for validation, five user invitations, up to 10 apps, and up to 100 installs. Full limits and connected directory features unlock after activation." },
     ],
     cta: {
       title: "Give private app delivery a product-grade front door.",
@@ -176,9 +256,10 @@ export const products = {
     hero: {
       media: {
         type: "image",
-        src: "/images/products/axos/workspace.png",
-        alt: "AXOS self-hosted workspace sign-in with mail, drive, calendar, chat, video and tasks",
-        chrome: "axos.scotitech.com",
+        src: "/images/products/axos/command-center-dashboard.webp",
+        alt: "AXOS Command Center dashboard showing governed AI, mail, calendar, tasks and team operations",
+        presentation: "showcase",
+        variant: "axos",
       },
     },
     problem: {

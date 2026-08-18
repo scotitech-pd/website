@@ -7,10 +7,12 @@ import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Badge from "@/components/ui/Badge";
+import ProductShowcase from "@/components/products/ProductShowcase";
 import { cn } from "@/lib/utils";
 
 const flagships = [
   {
+    slug: "appdeploy",
     name: "AppDeploy",
     href: "/products/appdeploy",
     externalUrl: "https://appdeploy.scotitech.com",
@@ -20,19 +22,20 @@ const flagships = [
     category: "Private app distribution",
     tagline: "Your apps. Your brand. Enterprise-ready in 14 days.",
     description:
-      "A branded workspace for private iOS and Android app delivery, with Apple Business-aligned workflows and clearer install guidance — without forcing full MDM adoption.",
+      "A branded workspace for private iOS delivery through Business. Android signed APK upload and delivery is available with Enterprise. Apple Business-aligned workflows keep installation clear without forcing full MDM adoption.",
     bestFor:
       "Teams shipping private mobile apps to employees, client teams, or external partners.",
     rollout:
       "Branded portal, guided installs, release notes, access control, and clearer app rollout visibility.",
-    capabilities: ["Branded portal", "Apple Business", "iOS & Android"],
+    capabilities: ["Branded portal", "Apple Business", "Android: Enterprise"],
     media: {
       type: "image",
-      src: "/images/products/appdeploy/dashboard.png",
-      alt: "AppDeploy workspace dashboard screen",
+      src: "/images/products/appdeploy/claritypath-portal.webp",
+      alt: "AppDeploy organisation portal showing ClarityPath and other approved business apps",
     },
   },
   {
+    slug: "axos",
     name: "AXOS",
     href: "/products/axos",
     externalUrl: "https://axos.scotitech.com",
@@ -50,8 +53,8 @@ const flagships = [
     capabilities: ["Enterprise AI platform", "Secure collaboration", "100% on-premise"],
     media: {
       type: "image",
-      src: "/images/products/axos/workspace.png",
-      alt: "AXOS self-hosted workspace",
+      src: "/images/products/axos/command-center-dashboard.webp",
+      alt: "AXOS Command Center dashboard showing governed AI and connected workspace modules",
     },
   },
 ];
@@ -104,18 +107,13 @@ export default function OurProducts() {
           <Reveal key={product.name} delay={i * 0.08}>
             <article className="group overflow-hidden rounded-xl border border-hairline bg-surface shadow-soft transition-shadow duration-300 hover:shadow-card">
               <div className="grid lg:grid-cols-[42%_58%]">
-                <div className="relative min-h-[240px] overflow-hidden border-b border-hairline bg-surface-sunken lg:border-b-0 lg:border-r">
-                  <Image
+                <div className="relative min-h-[300px] overflow-hidden border-b border-hairline bg-surface-sunken lg:min-h-full lg:border-b-0 lg:border-r">
+                  <ProductShowcase
+                    variant={product.slug}
                     src={product.media.src}
                     alt={product.media.alt}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 42vw"
-                    className={cn(
-                      "object-top transition-transform duration-500 group-hover:scale-[1.02]",
-                      product.media.fit === "contain"
-                        ? "p-5 object-contain"
-                        : "object-cover"
-                    )}
+                    compact
+                    className="absolute inset-0"
                   />
                   <div className="absolute inset-x-0 top-0 h-1 bg-hairline">
                     <span className={cn("block h-full w-1/3", product.accent)} />
