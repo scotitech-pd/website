@@ -60,7 +60,7 @@ const productsToKnow = [
   {
     name: "AppDeploy",
     status: "Live",
-    tagline: "MDM-free private app distribution, built around Apple Business.",
+    tagline: "Private app distribution with optional remote deployment, built around Apple Business.",
     audience:
       "IT leaders and operations teams distributing internal iOS apps to employees, testers, or partner organisations.",
   },

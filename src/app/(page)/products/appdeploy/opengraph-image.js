@@ -10,7 +10,7 @@ export default async function Image() {
   return renderProductOg({
     eyebrow: "Private app distribution",
     name: "AppDeploy",
-    tagline: "MDM-free private app distribution, built around Apple Business.",
+    tagline: "Private app distribution with optional remote deployment, built around Apple Business.",
     accent: "#C2410C",
   });
 }
