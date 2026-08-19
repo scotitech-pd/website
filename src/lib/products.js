@@ -55,7 +55,7 @@ export const products = {
       title: "Private app delivery turns into manual work.",
       points: [
         "App Store review isn't designed for every internal-only app workflow.",
-        "Enterprise distribution and full MDM add approval, setup, and support overhead.",
+        "Enterprise distribution and full MDM add approval, setup, and support overhead — and per-device pricing charges for every device, even ones that only need an app.",
         "Apple Business purchases, codes, licences, and Managed Apple ID checks live in separate places.",
         "Employees receive scattered links while admins have limited install visibility.",
       ],
@@ -66,6 +66,7 @@ export const products = {
         "Employees land on a branded internal apps portal instead of raw distribution mechanics.",
         "Admins sync Apps & Books content and manage app-user access in one place.",
         "Branded portal, tracking, and day-to-day rollout workflow on top of compliant distribution.",
+        "One flat Business plan distributes to any number of devices, with no per-device fee for the portal. Silent AutoDeploy management is an optional per-device add-on, with the first five included.",
       ],
     },
     features: [
@@ -84,6 +85,61 @@ export const products = {
       { title: "Track usage", body: "Monitor installs, codes, active users, app inventory, per-device commands, and distribution activity." },
       { title: "Review operations", body: "Audit logs and member permissions give larger teams a cleaner way to review sensitive release actions." },
     ],
+    deliveryPaths: {
+      eyebrow: "Delivery",
+      title: "Three ways an app reaches a device.",
+      body: "Getting an app into AppDeploy and getting it onto a phone are two separate decisions. Pick the delivery route that matches how much control you have over the hardware — you can run all three side by side.",
+      routes: [
+        {
+          name: "Self-service portal",
+          summary: "Employees open your branded workspace, sign in, and install what they are entitled to. Nothing is installed on the device beyond the apps themselves.",
+          points: [
+            "Works on personally owned devices",
+            "No enrolment and no supervision required",
+            "Role-based entitlement, so people see only their apps",
+            "Every install recorded in the audit trail",
+          ],
+        },
+        {
+          name: "AutoDeploy silent install",
+          summary: "Assign an app and the device installs it on its own. No prompt, no tap, no App Store visit for the employee.",
+          points: [
+            "Install triggered over Apple Push Notification service",
+            "Assign by group, so new joiners receive the set automatically",
+            "Install state reported back for each device",
+            "Requires the device to be enrolled",
+          ],
+        },
+        {
+          name: "Zero-touch enrolment",
+          summary: "Devices bought through Apple Business Manager enrol themselves out of the box. The employee unboxes, joins Wi-Fi, and the device arrives configured.",
+          points: [
+            "Apple Automated Device Enrollment, assigned by serial",
+            "Setup Assistant panes skipped as you configure them",
+            "Supervision with management the employee cannot remove",
+            "Devices appear in your fleet before they are handed out",
+          ],
+        },
+      ],
+      note: "The branded portal distributes to any number of devices on the flat Business plan, with no per-device fee and no enrolment. AutoDeploy is an optional add-on, and only for the devices where you want installs to happen silently.",
+      link: {
+        label: "Read the full delivery guide",
+        href: "https://appdeploy.scotitech.com/docs/app-delivery-paths",
+      },
+    },
+    releaseOps: {
+      eyebrow: "Release operations",
+      title: "Ship apps like releases, not like emails.",
+      body: "Assigning an app is the easy part. Knowing it arrived, catching a bad build before it ships, and proving all of it afterwards is what AppDeploy's release layer does.",
+      items: [
+        { title: "Release Guard", body: "Every artefact is preflighted before it can reach a device: identity, version, signing validity, OS support, and what changed since the last release. A failed check blocks the push — and a check we cannot perform says \"unknown\", never \"passed\"." },
+        { title: "Rollout rings", body: "Ship to a pilot group first, expand when you choose. Maintenance windows, deadlines, pause and resume — and a failure threshold that pauses the rollout by itself before more devices get a bad build." },
+        { title: "Deployment answers", body: "Every device that hasn't converged tells you exactly why — not assigned, blocked release, device offline, retries exhausted — with the evidence behind it and the one action that fixes it." },
+        { title: "Risk Forecast", body: "Before a rollout starts: licence shortfalls, incompatible devices, expiring certificates, stale device data — each with the number of devices affected, never a vague warning." },
+        { title: "Employee status page", body: "Employees see what is happening with their own apps — installing, installed, update on the way — on your branded page, without ever seeing serial numbers or management internals." },
+        { title: "Evidence Packs", body: "One download proving what was released, to whom, and with what outcome — checksummed so an auditor can verify it independently. Included on Business, not an Enterprise upsell." },
+      ],
+    },
     proof: {
       quote:
         "We replaced three different manual processes with a single AppDeploy workspace. Our IT team now ships updates to 40+ employees faster, and install-related support is much easier to manage.",
@@ -102,7 +158,7 @@ export const products = {
       ],
     },
     pricing: {
-      trial: "AppDeploy Business includes AutoDeploy for the first five enrolled Apple devices. Increase remote-deployment capacity from £2/device/month.",
+      trial: "Portal distribution is unlimited on Business — any number of devices, no enrolment, no per-device fee. AutoDeploy adds silent install, with the first five devices included and more from £2/device/month.",
       plans: [
         {
           name: "Business",
@@ -155,8 +211,8 @@ export const products = {
           price: "+ £2",
           period: "/device/mo",
           note: "First 5 devices included · Add more from £2/device/month · Save 15% when billed annually",
-          tag: "5 devices included with Business",
-          desc: "Business already includes AutoDeploy for five devices. Increase the allowance when you need to enrol more iPhones or iPads, assign approved apps, and deploy them remotely. Everything stays on the same Business subscription and Stripe invoice.",
+          tag: "Optional · silent install only",
+          desc: "You do not need AutoDeploy to reach more than five devices — the branded portal already distributes to any number of them on the flat Business plan. AutoDeploy is for when you want installs to happen silently, with nobody touching the device. Everything stays on the same Business subscription and Stripe invoice.",
           sections: [
             {
               label: "Remote deployment capacity",

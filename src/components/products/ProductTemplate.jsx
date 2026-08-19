@@ -493,6 +493,99 @@ export default function ProductTemplate({ product }) {
         </Section>
       )}
 
+      {product.deliveryPaths && (
+        <Section surface="base" spacing="lg">
+          <Reveal className="max-w-3xl">
+            <Eyebrow className={accentText}>
+              {product.deliveryPaths.eyebrow || "Delivery"}
+            </Eyebrow>
+            <h2 className="t-h1 mt-3">{product.deliveryPaths.title}</h2>
+            {product.deliveryPaths.body && (
+              <p className="t-lead mt-5">{product.deliveryPaths.body}</p>
+            )}
+          </Reveal>
+
+          <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3">
+            {product.deliveryPaths.routes.map((route, i) => (
+              <Reveal key={route.name} delay={i * 0.06}>
+                <article className="flex h-full flex-col rounded-xl border border-hairline bg-surface p-6 shadow-soft">
+                  <span
+                    className={cn(
+                      "flex h-9 w-9 items-center justify-center rounded-lg bg-surface-sunken font-mono text-sm font-semibold",
+                      accentText
+                    )}
+                  >
+                    {i + 1}
+                  </span>
+                  <h3 className="mt-4 font-karla text-xl font-bold text-strong">
+                    {route.name}
+                  </h3>
+                  <p className="t-small mt-3 leading-7">{route.summary}</p>
+                  <ul className="mt-5 space-y-2.5 border-t border-hairline pt-5">
+                    {route.points.map((point) => (
+                      <li key={point} className="flex gap-2.5 font-karla text-sm leading-6 text-body">
+                        <Check className={cn("mt-0.5 h-4 w-4 shrink-0", accentText)} />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          {product.deliveryPaths.note && (
+            <Reveal delay={0.12}>
+              <div className="mt-6 rounded-xl border border-hairline-strong bg-surface-muted p-6 md:p-7">
+                <p className="font-karla text-base font-semibold leading-7 text-strong md:text-lg">
+                  {product.deliveryPaths.note}
+                </p>
+                {product.deliveryPaths.link && (
+                  <a
+                    href={product.deliveryPaths.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      "mt-4 inline-flex items-center gap-1.5 font-karla text-sm font-semibold transition-opacity hover:opacity-70",
+                      accentText
+                    )}
+                  >
+                    {product.deliveryPaths.link.label}
+                    <ArrowRight size={15} />
+                  </a>
+                )}
+              </div>
+            </Reveal>
+          )}
+        </Section>
+      )}
+
+      {product.releaseOps && (
+        <Section surface="muted" spacing="lg">
+          <Reveal className="max-w-3xl">
+            <Eyebrow className={accentText}>
+              {product.releaseOps.eyebrow || "Release operations"}
+            </Eyebrow>
+            <h2 className="t-h1 mt-3">{product.releaseOps.title}</h2>
+            {product.releaseOps.body && (
+              <p className="t-lead mt-5">{product.releaseOps.body}</p>
+            )}
+          </Reveal>
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {product.releaseOps.items.map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.05}>
+                <div className="h-full rounded-xl border border-hairline bg-surface p-6">
+                  <h3 className="font-karla text-lg font-bold text-strong">
+                    {item.title}
+                  </h3>
+                  <p className="t-small mt-3 leading-7">{item.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Section>
+      )}
+
       {/* PROOF + SECURITY */}
       {(product.proof || product.security) && (
         <Section surface="base" spacing="lg">
