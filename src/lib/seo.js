@@ -34,6 +34,13 @@ export function productJsonLd(product, path) {
       "@type": "Organization",
       name: SITE_NAME,
       url: SITE_URL,
+      sameAs: [
+        "https://www.linkedin.com/company/scotitech-ltd/",
+        "https://find-and-update.company-information.service.gov.uk/company/SC829021",
+        "https://www.capterra.com/p/10056775/AppDeploy/",
+        "https://www.getapp.com/all-software/a/appdeploy-1/",
+        "https://www.softwareadvice.com/product/564477-AppDeploy/",
+      ],
     },
   };
 

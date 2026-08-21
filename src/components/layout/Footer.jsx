@@ -33,6 +33,13 @@ const WhatsApp = ({ className }) => (
   </svg>
 );
 
+/* Software-directory listings. Icons are copied into /public, never hot-linked. */
+const directories = [
+  { name: "Capterra", href: "https://www.capterra.com/p/10056775/AppDeploy/", label: "AppDeploy on Capterra", src: "/images/brand/directories/capterra.png" },
+  { name: "GetApp", href: "https://www.getapp.com/all-software/a/appdeploy-1/", label: "AppDeploy on GetApp", src: "/images/brand/directories/getapp.png" },
+  { name: "Software Advice", href: "https://www.softwareadvice.com/product/564477-AppDeploy/", label: "AppDeploy on Software Advice", src: "/images/brand/directories/softwareadvice.png" },
+];
+
 const socials = [
   { Icon: WhatsApp, href: "https://wa.me/447424331001", label: "WhatsApp" },
   { Icon: Instagram, href: "https://www.instagram.com/scotitechsolutions/", label: "Instagram" },
@@ -142,6 +149,25 @@ export default function Footer() {
               loading="lazy"
             />
           </a>
+
+          <div className="inline-flex items-center gap-2">
+            <span className="font-karla text-xs font-semibold uppercase tracking-[0.12em] text-on-ink-muted">
+              Listed on
+            </span>
+            {directories.map(({ name, href, label, src }) => (
+              <a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                title={label}
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] transition-colors hover:border-brand hover:bg-brand"
+              >
+                <Image src={src} alt={name} width={48} height={48} className="h-3.5 w-3.5" />
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Legal / registered office */}
