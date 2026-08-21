@@ -160,6 +160,9 @@ const organizationSchema = {
   sameAs: [
     "https://www.linkedin.com/company/scotitech-ltd/",
     "https://www.instagram.com/scotitechsolutions/",
+    "https://www.capterra.com/p/10056775/AppDeploy/",
+    "https://www.getapp.com/all-software/a/appdeploy-1/",
+    "https://www.softwareadvice.com/product/564477-AppDeploy/",
   ],
 };
 
