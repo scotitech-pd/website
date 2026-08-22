@@ -3,7 +3,6 @@ import {
   ArrowRight,
   BadgePoundSterling,
   Building2,
-  FileSignature,
   MailCheck,
   Rocket,
   Send,
@@ -35,25 +34,32 @@ export const metadata = {
 const principles = [
   {
     icon: BadgePoundSterling,
-    title: "Performance-based",
-    body: "Commission typically sits between 10–25% of deal value. Demo-booking roles pay a fixed fee per qualified demo — £99 for enterprise demos and £25 for SaaS demos — plus a conversion share. Exact terms are confirmed per role in a written agreement before you start.",
+    title: "We grow by fit, not noise",
+    body: "ScotiTech is not trying to build a pressure-sales machine. We want the right opportunities, introduced well, with the right context.",
   },
   {
     icon: ShieldCheck,
-    title: "Clear agreement first",
-    body: "Commission terms, eligibility, payment timing, and rules of engagement are confirmed in writing before any live activity begins.",
+    title: "Relationships are protected",
+    body: "If you bring someone to us, we treat that relationship with care. That is a core rule, not a line in the copy.",
   },
   {
     icon: Building2,
-    title: "Business-first conversations",
-    body: "We only want thoughtful introductions where ScotiTech products may genuinely help, not noisy outreach or pressure selling.",
+    title: "Commercial honesty matters",
+    body: "We would rather decline a weak-fit opportunity than inflate expectations and waste everyone's time.",
   },
 ];
 
 const fitSignals = [
-  "You can open doors to SMEs, agencies, IT teams, founders, enterprises, or sector-specific operators.",
-  "You can qualify a real fit before making an introduction — not just pass on a contact list.",
-  "You are comfortable working independently with commission-based upside rather than fixed salary.",
+  "People with relevant business networks or outreach craft.",
+  "People who can represent a serious software company with restraint and clarity.",
+  "People who prefer long-term reputation over short-term noise.",
+];
+
+const whatToSend = [
+  "Your role interest and territory.",
+  "The kind of network or buyer access you already have.",
+  "Why you can represent ScotiTech credibly.",
+  "An optional hosted intro video URL if it helps you communicate better.",
 ];
 
 const productsToKnow = [
@@ -76,23 +82,18 @@ const productsToKnow = [
 const processSteps = [
   {
     icon: Send,
-    title: "Apply with a short video",
-    body: "Submit the form for the role that fits. A 45–75 second video helps us understand how you communicate, not just what's on your CV.",
+    title: "Initial application",
+    body: "Send your details, role interest, network context, and optional video URL through the form below, or email join@scotitech.com.",
   },
   {
     icon: MailCheck,
-    title: "We review within 5 working days",
-    body: "If there is a clear fit, we reply to arrange a short call. If not, we still reply so you are not left waiting.",
-  },
-  {
-    icon: FileSignature,
-    title: "Written commission agreement",
-    body: "Before any live activity, we confirm commission rate, qualifying rules, attribution window, and payment timing in writing.",
+    title: "Fit review",
+    body: "We review for network relevance, communication quality, commercial judgment, and alignment with how we want ScotiTech represented.",
   },
   {
     icon: Rocket,
-    title: "Onboard and start conversations",
-    body: "You get product positioning, approved language, and founder or team support for qualified discovery calls.",
+    title: "Conversation",
+    body: "Strong applicants move to a practical conversation focused on territory, role shape, compensation fit, and how you would create momentum.",
   },
 ];
 
@@ -122,15 +123,16 @@ export default function CareersPage() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_55%_at_80%_0%,rgba(226,88,14,0.30),transparent_62%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent_42%)]" />
         <Container className="relative z-10">
           <Reveal immediate className="max-w-4xl">
-            <Badge variant="onInk">Commission-based growth roles</Badge>
+            <Badge variant="onInk">Now hiring</Badge>
             <h1 className="t-display mt-5 text-on-ink">
-              Help ScotiTech grow through trusted business conversations.
+              Join ScotiTech and help grow serious products the right way.
             </h1>
             <p className="mt-6 max-w-2xl font-karla text-xl leading-8 text-on-ink-muted">
-              We are opening partner-style opportunities for people who can
-              introduce ScotiTech products to relevant businesses, communities,
-              and decision-makers. These are commission-based roles, not
-              salaried employment positions.
+              We are opening relationship-led growth roles for people who can
+              create real commercial momentum without gimmicks, spam, or
+              borrowed credibility. We are looking for people who understand
+              relationships, business context, and the discipline needed to put
+              the right product in front of the right organisation.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" variant="onInkSolid">
@@ -223,15 +225,15 @@ export default function CareersPage() {
       <Section surface="base" spacing="lg">
         <div className="grid gap-10 rounded-3xl border border-hairline bg-surface-muted p-7 shadow-soft md:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal>
-            <Eyebrow>Who should apply</Eyebrow>
+            <Eyebrow>Who this is for</Eyebrow>
             <h2 className="t-h1 mt-3">Good fit looks like trust, focus, and follow-through.</h2>
             <p className="t-body mt-5">
-              We are building product-led growth, not a high-pressure sales
-              machine. The right people will protect relationships and bring
+              We are not looking for polished buzzwords or mass outbound
+              theatre. The right people will protect relationships and bring
               relevant opportunities to the table.
             </p>
           </Reveal>
-          <Reveal delay={0.08}>
+          <Reveal delay={0.08} className="grid gap-6">
             <ul className="grid gap-3">
               {fitSignals.map((signal) => (
                 <li key={signal} className="rounded-xl border border-hairline bg-surface p-4 font-lora text-sm leading-7 text-body">
@@ -239,6 +241,19 @@ export default function CareersPage() {
                 </li>
               ))}
             </ul>
+            <div className="rounded-xl border border-hairline bg-surface p-5">
+              <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-brand-strong">
+                What to send
+              </p>
+              <ul className="mt-4 grid gap-2.5">
+                {whatToSend.map((item) => (
+                  <li key={item} className="flex gap-2 font-lora text-sm leading-6 text-body">
+                    <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-brand" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </Reveal>
         </div>
       </Section>
@@ -246,14 +261,14 @@ export default function CareersPage() {
       <Section surface="muted" spacing="lg">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
-            <Eyebrow>How the process works</Eyebrow>
-            <h2 className="t-h1 mt-3">From application to first live conversation.</h2>
+            <Eyebrow>Application process</Eyebrow>
+            <h2 className="t-h1 mt-3">Straightforward, thoughtful, and human.</h2>
             <p className="t-body mt-5">
               A short, honest process. We reply either way so you can plan.
             </p>
           </Reveal>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
           {processSteps.map((step, i) => {
             const Icon = step.icon;
             return (

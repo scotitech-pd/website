@@ -41,24 +41,30 @@ const growthRoles = [
     location: "Remote / worldwide",
     icon: Handshake,
     summary:
-      "Introduce qualified companies, agencies, and enterprise teams to ScotiTech products where there is a real operational fit.",
+      "For commercially mature operators and connectors who can introduce ScotiTech products to the right organisations at the right stage of buying intent.",
     suitedFor:
-      "People with an existing business network across technology, operations, healthcare, finance, education, or professional services.",
+      "People already operating in or around legal, finance, healthcare, manufacturing, public-sector-adjacent, or data-sensitive business circles.",
     outcomes: [
-      "Qualified product introductions",
-      "Discovery calls with decision-makers",
-      "New AppDeploy, AXOS, or platform opportunities",
+      "You bring introductions that fit the buyer profile and convert into serious review meetings.",
+      "Your context saves the internal team time and helps us qualify opportunities quickly.",
+      "Your relationships remain stronger after the introduction, not weaker.",
     ],
     detail:
-      "Ideal for commercially minded connectors who can identify business-fit opportunities and make trusted introductions to decision-makers.",
-    commission: {
-      headline: "15–25% of first-year contract value on closed business",
-      note: "Applies to AppDeploy and AXOS deals you originate and help close. Exact percentage varies with product, deal size, and cycle length.",
-    },
+      "For commercially mature operators and connectors who can introduce ScotiTech products to the right organisations at the right stage of buying intent.",
     responsibilities: [
-      "Identify companies where AppDeploy, AXOS, or ScotiTech platform work may solve a real operational problem.",
-      "Make warm introductions to owners, founders, operators, IT leaders, or decision-makers.",
-      "Help us understand the buyer context before the first discovery call.",
+      "Identify organisations where private workspace or app-distribution infrastructure is a serious operational need, not a curiosity.",
+      "Open high-trust introductions into founders, operations leaders, technology heads, or transformation sponsors.",
+      "Stay close enough to the early conversation to add real context without over-owning delivery.",
+    ],
+    fits: [
+      "You already operate in or around legal, finance, healthcare, manufacturing, public-sector-adjacent, or data-sensitive business circles.",
+      "You understand that protecting trust matters more than forcing pipeline volume.",
+      "You want partner-style upside, not a noisy SDR script.",
+    ],
+    commission: [
+      "Commission on qualified opportunities that progress into closed business.",
+      "Clear attribution rules and written payout expectations before work begins.",
+      "Structured to reward fit, trust, and conversion quality rather than raw lead count.",
     ],
   },
   {
@@ -67,24 +73,30 @@ const growthRoles = [
     location: "Remote / worldwide",
     icon: Network,
     summary:
-      "Build referral and channel relationships with consultants, agencies, IT providers, and business communities.",
+      "For people who know how to build referral and channel relationships with consultants, MSPs, implementation partners, and advisory firms.",
     suitedFor:
-      "Relationship-led people who can spot commercial partnerships and keep warm conversations moving professionally.",
+      "People who understand how consultants and IT service firms decide whether to introduce a product to their clients.",
     outcomes: [
-      "Referral partner conversations",
-      "Agency and consultant introductions",
-      "Co-selling or channel opportunities",
+      "You create repeatable partner conversations, not one-off random intros.",
+      "Partners understand exactly where ScotiTech products fit and where they do not.",
+      "You help shape a channel motion that remains lightweight and credible.",
     ],
     detail:
-      "Best for people who can create long-term partner routes through consultants, agencies, technology providers, or business communities.",
-    commission: {
-      headline: "15–20% on partner-sourced closed deals, plus 5–10% on renewals within the attribution window",
-      note: "Applies to co-selling and referral partnerships you originate. Recurring share applies while the partnership remains active per the written agreement.",
-    },
+      "For people who know how to build referral and channel relationships with consultants, MSPs, implementation partners, and advisory firms.",
     responsibilities: [
-      "Find agencies, consultants, IT providers, and business communities that could refer or co-sell with ScotiTech.",
-      "Open the first conversation and help qualify whether the partnership is serious.",
-      "Support follow-up until there is a clear next step or a polite close.",
+      "Build relationships with service firms whose clients need stronger control over AI, workspace, and app-distribution infrastructure.",
+      "Introduce AppDeploy or AXOS as a serious fit where those partners need a private, enterprise-ready alternative.",
+      "Keep partner conversations clear, practical, and grounded in customer outcomes rather than vendor hype.",
+    ],
+    fits: [
+      "You understand how consultants and IT service firms decide whether to introduce a product to their clients.",
+      "You are comfortable with longer-cycle relationship development.",
+      "You think in terms of fit, reputation, and repeatability.",
+    ],
+    commission: [
+      "Commission structure tied to referred commercial outcomes.",
+      "Potential for longer-term partner economics on repeat-fit introductions.",
+      "Best suited to someone who values strategic relationships over fast churn.",
     ],
   },
   {
@@ -93,62 +105,62 @@ const growthRoles = [
     location: "Remote / worldwide",
     icon: Megaphone,
     summary:
-      "Run targeted outreach for AppDeploy and AXOS, focusing on practical buyer problems rather than generic sales scripts.",
+      "For disciplined outbound operators who can write well, personalise well, and book the right conversations without burning lists or credibility.",
     suitedFor:
-      "People comfortable with outbound email, LinkedIn outreach, follow-ups, and clear CRM discipline.",
+      "People who already know how to do outbound without sounding like spam, and who care about message quality and honest qualification.",
     outcomes: [
-      "Qualified demos booked",
-      "Relevant buyer conversations",
-      "Pipeline for product-fit reviews",
+      "Outreach lands with decision-makers because it sounds informed, not automated.",
+      "Booked meetings are the kind the internal team wants more of, not fewer.",
+      "Your process compounds over time because the contact quality stays high.",
     ],
     detail:
-      "A good fit if you can research prospects, write clear outreach, follow up respectfully, and book useful product conversations.",
-    commission: {
-      headline: "Fixed fee per qualified demo booked, plus a conversion share",
-      tracks: [
-        {
-          label: "Enterprise track",
-          detail: "£99 per qualified enterprise demo booked, plus 5–10% on demos that convert to closed business.",
-          scope: "AXOS and AppDeploy Enterprise",
-        },
-        {
-          label: "SaaS track",
-          detail: "£25 per qualified SaaS demo booked, plus 20% of first-year subscription value on demos that convert.",
-          scope: "AppDeploy Business (from £79/mo)",
-        },
-      ],
-      note: "A demo qualifies once ScotiTech accepts it as a real product-fit conversation. Conversion share is paid on the resulting first-year contract or subscription value.",
-    },
+      "For disciplined outbound operators who can write well, personalise well, and book the right conversations without burning lists or credibility.",
     responsibilities: [
-      "Research specific companies and buyer problems before outreach.",
-      "Run respectful email or LinkedIn outreach using approved positioning.",
-      "Book relevant product-fit conversations and keep outreach notes clear.",
+      "Run careful outreach for AppDeploy, AXOS, and selected ScotiTech offerings across email and LinkedIn.",
+      "Work against defined buyer groups and use public context to make the outreach relevant.",
+      "Hand over clean notes, clean context, and genuinely qualified meetings.",
+    ],
+    fits: [
+      "You already know how to do outbound without sounding like spam.",
+      "You can write short, credible, business-aware copy.",
+      "You care about message quality, CRM discipline, and honest qualification.",
+    ],
+    commission: [
+      "Demo-booking reward plus conversion-linked upside where applicable.",
+      "Designed for people who can own high-quality outbound rhythm consistently.",
+      "Stronger economics for stronger qualification, not just activity volume.",
     ],
   },
   {
     title: "Community & Campus Ambassador",
     type: "Referral / commission-based",
-    location: "Remote / local community",
+    location: "Remote / local territory",
     icon: Users,
     summary:
-      "Represent ScotiTech in founder, student, professional, and local business communities where relevant technology conversations happen.",
+      "For early-career builders, student leaders, and community connectors who can represent ScotiTech thoughtfully in founder, student, and business ecosystems.",
     suitedFor:
-      "Students, early-career builders, community organisers, or connectors who want commercial exposure around real software products.",
+      "People who already participate in student, startup, or local business networks and can speak about products factually.",
     outcomes: [
-      "Community introductions",
-      "Event and ecosystem visibility",
-      "Referral-led business conversations",
+      "You become a trusted bridge into your local ecosystem.",
+      "Your introductions are relevant and well-framed.",
+      "You help build early awareness with maturity and credibility.",
     ],
     detail:
-      "Designed for energetic community builders who can create visibility and warm introductions without hard-selling.",
-    commission: {
-      headline: "£50–£150 per accepted introduction that reaches a discovery call, plus 10–15% on referrals that convert",
-      note: "Introductions are accepted based on relevance and reach. The referral share applies to closed business originating from your introduction within the attribution window.",
-    },
+      "For early-career builders, student leaders, and community connectors who can represent ScotiTech thoughtfully in founder, student, and business ecosystems.",
     responsibilities: [
-      "Represent ScotiTech in relevant founder, student, business, or local technology communities.",
-      "Create warm introductions through events, communities, and trusted peer networks.",
-      "Share feedback from the market so we understand which messages resonate.",
+      "Represent ScotiTech in communities where thoughtful introductions and early signals matter.",
+      "Surface relevant events, communities, and opportunities back to the team.",
+      "Make careful introductions and strengthen brand visibility without overpromising product capabilities.",
+    ],
+    fits: [
+      "You already participate in student, startup, or local business networks.",
+      "You are comfortable speaking about products factually and responsibly.",
+      "You want meaningful commercial exposure without pretending to be a full sales organisation.",
+    ],
+    commission: [
+      "Referral-led economics and role-specific upside.",
+      "A practical way to build commercial signal and professional credibility.",
+      "Can grow into broader business development responsibility over time.",
     ],
   },
 ];
@@ -423,47 +435,35 @@ export default function GrowthRoles() {
               </ul>
             </div>
 
+            {selectedRole.fits && (
+              <div className="mt-4 rounded-2xl border border-hairline bg-surface-muted p-5">
+                <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                  Who fits best
+                </p>
+                <ul className="mt-4 grid gap-3">
+                  {selectedRole.fits.map((item) => (
+                    <li key={item} className="flex gap-2 font-lora text-sm leading-6 text-body">
+                      <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-brand" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div className="mt-4 rounded-2xl border border-brand/20 bg-brand-soft/40 p-5">
               <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-brand-strong">
-                Commission for this role
+                Compensation structure
               </p>
-              {selectedRole.commission ? (
-                <>
-                  <p className="mt-3 font-karla text-base font-bold leading-6 text-strong">
-                    {selectedRole.commission.headline}
-                  </p>
-                  {selectedRole.commission.tracks && (
-                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                      {selectedRole.commission.tracks.map((track) => (
-                        <div
-                          key={track.label}
-                          className="rounded-xl border border-brand/15 bg-surface p-4"
-                        >
-                          <p className="font-karla text-xs font-semibold uppercase tracking-[0.14em] text-brand-strong">
-                            {track.label}
-                          </p>
-                          <p className="mt-2 font-karla text-sm font-bold text-strong">
-                            {track.scope}
-                          </p>
-                          <p className="mt-2 font-lora text-sm leading-6 text-body">
-                            {track.detail}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                  <p className="mt-3 font-lora text-sm leading-6 text-body">
-                    {selectedRole.commission.note}
-                  </p>
-                </>
-              ) : (
-                <p className="mt-3 font-lora text-sm leading-7 text-body">
-                  Commission is linked to qualified opportunities, booked
-                  discovery calls, or closed business.
-                </p>
-              )}
+              <ul className="mt-4 grid gap-3">
+                {selectedRole.commission.map((item) => (
+                  <li key={item} className="flex gap-2 font-lora text-sm leading-6 text-body">
+                    <Sparkles className="mt-1 h-4 w-4 shrink-0 text-brand" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
               <p className="mt-4 border-t border-brand/15 pt-3 font-karla text-xs leading-5 text-muted">
-                Figures reflect market-standard ranges for similar roles.
                 Exact rate, attribution window, and payment timing are
                 confirmed in a written agreement before any live activity
                 begins.
