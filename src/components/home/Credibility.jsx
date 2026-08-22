@@ -33,8 +33,8 @@ const clients = [
     note: "Portfolio partner",
   },
   {
-    name: "CRMNext",
-    image: null,
+    name: "No94oo",
+    image: "/images/aboutus/no94oo-logo.png",
     href: null,
     note: "Portfolio partner",
   },

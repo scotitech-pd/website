@@ -14,8 +14,8 @@ const clients = [
     href: null,
   },
   {
-    name: "CRMNext",
-    image: null,
+    name: "No94oo",
+    image: "/images/aboutus/no94oo-logo.png",
     href: null,
   },
 ];
