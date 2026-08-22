@@ -1,11 +1,18 @@
 "use client";
 
+import { Fragment } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Building2, ShieldCheck, ChevronDown } from "lucide-react";
+import { ArrowRight, ShieldCheck, ChevronDown } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { useModal } from "@/components/ModalContext";
 import ProductShowcase from "@/components/products/ProductShowcase";
+
+const announcements = [
+  { label: "AXOS v1.3 is live", href: "/products/axos", live: true },
+  { label: "Trust & security posture", href: "/trust" },
+  { label: "Now hiring growth roles worldwide", href: "/careers", cta: "See open roles" },
+];
 
 export default function HeroSection() {
   const { setShowModal } = useModal();
@@ -45,15 +52,37 @@ export default function HeroSection() {
 
       {/* ── Main content ── */}
       <Container className="relative z-10 flex flex-1 flex-col items-center justify-center pt-28 pb-20 text-center md:pt-36 md:pb-28">
-        {/* Company badge */}
+        {/* Announcement strip */}
         <motion.div {...rise(0)}>
-          <Link
-            href="/aboutus"
-            className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.06] px-4 py-1.5 font-karla text-xs font-semibold uppercase tracking-[0.18em] text-white/70 backdrop-blur-sm transition-colors hover:border-brand/40 hover:text-white"
-          >
-            <Building2 size={13} className="text-brand" />
-            UK-registered technology company · worldwide focus
-          </Link>
+          <div className="inline-flex max-w-full flex-wrap items-center justify-center gap-x-2.5 gap-y-1.5 rounded-full border border-white/12 bg-white/[0.06] px-4 py-1.5 backdrop-blur-sm">
+            {announcements.map((item, i) => (
+              <Fragment key={item.label}>
+                {i > 0 && (
+                  <span aria-hidden="true" className="hidden text-white/25 sm:inline">
+                    ·
+                  </span>
+                )}
+                <Link
+                  href={item.href}
+                  className="inline-flex items-center gap-1.5 font-karla text-xs font-semibold uppercase tracking-[0.18em] text-white/70 transition-colors hover:text-white"
+                >
+                  {item.live && (
+                    <span className="relative flex h-1.5 w-1.5">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-70 motion-reduce:animate-none" />
+                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-brand" />
+                    </span>
+                  )}
+                  {item.label}
+                  {item.cta && (
+                    <span className="inline-flex items-center gap-1 text-brand">
+                      {item.cta}
+                      <ArrowRight size={12} />
+                    </span>
+                  )}
+                </Link>
+              </Fragment>
+            ))}
+          </div>
         </motion.div>
 
         {/* Headline */}

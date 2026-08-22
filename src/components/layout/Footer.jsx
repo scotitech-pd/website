@@ -134,7 +134,7 @@ export default function Footer() {
             </span>
           ))}
           <a
-            href="https://sellwithboost.com"
+            href="https://sellwithboost.com/startups/appdeploy"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Listed on Sell With Boost"
