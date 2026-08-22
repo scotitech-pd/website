@@ -9,7 +9,6 @@ import { useModal } from "@/components/ModalContext";
 import ProductShowcase from "@/components/products/ProductShowcase";
 
 const announcements = [
-  { label: "AXOS v1.3 is live", href: "/products/axos", live: true },
   { label: "Trust & security posture", href: "/trust" },
   { label: "Now hiring growth roles worldwide", href: "/careers", cta: "See open roles" },
 ];
@@ -66,12 +65,6 @@ export default function HeroSection() {
                   href={item.href}
                   className="inline-flex items-center gap-1.5 font-karla text-xs font-semibold uppercase tracking-[0.18em] text-white/70 transition-colors hover:text-white"
                 >
-                  {item.live && (
-                    <span className="relative flex h-1.5 w-1.5">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-70 motion-reduce:animate-none" />
-                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-brand" />
-                    </span>
-                  )}
                   {item.label}
                   {item.cta && (
                     <span className="inline-flex items-center gap-1 text-brand">
