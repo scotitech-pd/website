@@ -184,16 +184,28 @@ export default function TrustPage() {
               The details below are public and independently verifiable at
               Companies House.
             </p>
-            <Button asChild variant="outline" className="mt-6">
-              <a
-                href="https://find-and-update.company-information.service.gov.uk/company/SC829021"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View on Companies House
-                <ExternalLink size={15} />
-              </a>
-            </Button>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button asChild variant="outline">
+                <a
+                  href="https://find-and-update.company-information.service.gov.uk/company/SC829021"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on Companies House
+                  <ExternalLink size={15} />
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a
+                  href="https://ico.org.uk/ESDWebPages/Entry/ZB925464"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on the ICO register
+                  <ExternalLink size={15} />
+                </a>
+              </Button>
+            </div>
           </Reveal>
           <Reveal delay={0.08}>
             <dl className="grid gap-4 sm:grid-cols-2">
