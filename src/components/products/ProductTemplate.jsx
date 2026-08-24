@@ -583,6 +583,24 @@ export default function ProductTemplate({ product }) {
               </Reveal>
             ))}
           </div>
+          {product.releaseOps.links && (
+            <Reveal delay={0.1}>
+              <div className="mt-8 flex flex-wrap gap-2">
+                {product.releaseOps.links.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-hairline bg-surface px-4 py-2 font-karla text-sm font-semibold text-strong transition-colors hover:border-brand hover:text-brand-strong"
+                  >
+                    {link.label}
+                    <ArrowUpRight size={14} />
+                  </a>
+                ))}
+              </div>
+            </Reveal>
+          )}
         </Section>
       )}
 

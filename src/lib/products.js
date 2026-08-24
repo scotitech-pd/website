@@ -139,6 +139,10 @@ export const products = {
         { title: "Employee status page", body: "Employees see what is happening with their own apps — installing, installed, update on the way — on your branded page, without ever seeing serial numbers or management internals." },
         { title: "Evidence Packs", body: "One download proving what was released, to whom, and with what outcome — checksummed so an auditor can verify it independently. Included on Business, not an Enterprise upsell." },
       ],
+      links: [
+        { label: "Live service status", href: "https://appdeploy.scotitech.com/status" },
+        { label: "Trust Centre", href: "https://appdeploy.scotitech.com/trust" },
+      ],
     },
     proof: {
       quote:
@@ -241,6 +245,7 @@ export const products = {
             ],
             notes: [
               "The first five devices are included with Business. The rate for your total allowance applies only to devices above those five.",
+              "On annual pre-pay the equivalent rates are £20.40, £17.85, and £15.30 per device per year.",
               "Device increases are prorated immediately. Reductions take effect at the next renewal.",
             ],
           },
