@@ -35,6 +35,8 @@ const companyFacts = [
   { label: "Registered in", value: "Scotland, United Kingdom" },
   { label: "Company number", value: "SC829021" },
   { label: "Registered office", value: "11 Caldervale Drive, Motherwell ML1 2GB, UK" },
+  { label: "ICO registration", value: "ZB925464" },
+  { label: "Data Protection Officer", value: "Pradeep Dahiya" },
 ];
 
 const certifications = [
@@ -85,9 +87,10 @@ const outOfScope = [
 const privacyCoverage = [
   {
     title: "UK & EU GDPR",
-    body: "ScotiTech Solutions Limited (SC829021) is the data controller for personal data collected through this website. You can exercise your rights, or complain to the Information Commissioner's Office, at any time.",
+    body: "ScotiTech Solutions Limited (SC829021) is the data controller for personal data collected through this website, registered with the Information Commissioner's Office under reference ZB925464. Our Data Protection Officer is Pradeep Dahiya. You can exercise your rights, or complain to the ICO, at any time.",
     links: [
       { label: "Privacy policy", href: "/privacy-policy" },
+      { label: "Contact the DPO", href: "mailto:pradeepdahiya@scotitech.com?subject=Data%20protection%20enquiry", external: true },
       { label: "ico.org.uk", href: "https://ico.org.uk", external: true },
     ],
   },

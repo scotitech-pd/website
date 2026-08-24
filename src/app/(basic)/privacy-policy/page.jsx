@@ -29,7 +29,9 @@ const  PrivacyPolicy  = () => {
           <p className="leading-7">
             ScotiTech Solutions Limited (company number SC829021, registered office 11 Caldervale Drive,
             Motherwell ML1 2GB, United Kingdom) is the data controller for personal data collected through
-            this website.
+            this website. We are registered with the Information Commissioner&apos;s Office under reference
+            ZB925464. Our Data Protection Officer is Pradeep Dahiya, who can be reached at{" "}
+            <a href="mailto:pradeepdahiya@scotitech.com" className="text-main-dark underline">pradeepdahiya@scotitech.com</a>.
           </p>
           <p className="leading-7">
             By accessing our website and services, you agree to this Privacy Policy. If you do not agree,
@@ -199,7 +201,7 @@ const  PrivacyPolicy  = () => {
             </li>
             <li>
               <strong>Grievance redressal.</strong> Our Grievance Officer is Pradeep Dahiya, Data Protection
-              Lead, ScotiTech Solutions Limited, reachable at{" "}
+              Officer, ScotiTech Solutions Limited, reachable at{" "}
               <a href="mailto:info@scotitech.com?subject=DPDP%20grievance" className="text-main-dark underline">info@scotitech.com</a>
               {" "}(mark the subject &quot;DPDP grievance&quot;). We acknowledge grievances within 72 hours and aim to
               resolve them within 30 days.
@@ -256,6 +258,9 @@ const  PrivacyPolicy  = () => {
 
           <p className="leading-7">
             Company number SC829021, registered in Scotland
+          </p>
+          <p className="leading-7">
+            ICO data protection registration: ZB925464
           </p>
           <p className="leading-7">
             11 Caldervale Drive, Motherwell ML1 2GB, United Kingdom
