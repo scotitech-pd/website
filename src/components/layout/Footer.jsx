@@ -175,7 +175,7 @@ export default function Footer() {
           <p className="font-lora text-xs leading-relaxed text-on-ink-muted">
             © {new Date().getFullYear()} ScotiTech Solutions Limited. All rights reserved.
             <br className="hidden sm:block" />
-            Registered in Scotland · Registered office: 11 Caldervale Drive, Motherwell ML1 2GB, UK.
+            Registered in Scotland · Company no. SC829021 · ICO ZB925464 · Registered office: 11 Caldervale Drive, Motherwell ML1 2GB, UK.
           </p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-4 font-karla text-xs text-on-ink-muted">
             <Link href="/privacy-policy" className="hover:text-brand">Privacy</Link>
