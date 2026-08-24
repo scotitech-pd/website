@@ -121,7 +121,7 @@ const  PrivacyPolicy  = () => {
         </div>
 
         {/* 7. Your Rights */}
-        <div className="space-y-4 pl-1">
+        <div id="your-rights" className="space-y-4 pl-1">
           <h2 className="text-2xl font-karla font-semibold text-main-dark">7. Your Rights & Choices</h2>
           <p className="leading-7">
             Under applicable laws (e.g., GDPR, UK Data Protection Act), you have the right to:
@@ -163,7 +163,7 @@ const  PrivacyPolicy  = () => {
         </div>
 
         {/* 10. Product services */}
-        <div className="space-y-4 pl-1">
+        <div id="product-services" className="space-y-4 pl-1">
           <h2 className="text-2xl font-karla font-semibold text-main-dark">10. Product Services (AppDeploy and AXOS)</h2>
           <p className="leading-7">
             This policy covers personal data collected through this website. Customer and end-user data
@@ -187,7 +187,7 @@ const  PrivacyPolicy  = () => {
         </div>
 
         {/* 11. India DPDP */}
-        <div className="space-y-4 pl-1">
+        <div id="india-dpdp" className="space-y-4 pl-1">
           <h2 className="text-2xl font-karla font-semibold text-main-dark">11. Additional Information for India (DPDP Act, 2023)</h2>
           <p className="leading-7">
             Where we process personal data of individuals in India, we act consistently with the Digital
@@ -214,7 +214,7 @@ const  PrivacyPolicy  = () => {
         </div>
 
         {/* 12. US state privacy laws */}
-        <div className="space-y-4 pl-1">
+        <div id="us-state-privacy" className="space-y-4 pl-1">
           <h2 className="text-2xl font-karla font-semibold text-main-dark">12. Additional Information for United States Residents</h2>
           <p className="leading-7">
             Where we process personal data of residents of California or other US states with comprehensive
@@ -252,7 +252,7 @@ const  PrivacyPolicy  = () => {
         </div>
 
         {/* 14. Contact */}
-        <div className="space-y-4 pl-1">
+        <div id="contact" className="space-y-4 pl-1">
           <h2 className="text-2xl font-karla font-semibold text-main-dark">14. Contact Us</h2>
           <p className="leading-7 font-karla text-main-dark">📍 ScotiTech Solutions Limited</p>
 
