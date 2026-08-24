@@ -182,6 +182,7 @@ export default function Footer() {
             <Link href="/cookie-policy" className="hover:text-brand">Cookies</Link>
             <Link href="/terms-and-conditions" className="hover:text-brand">Terms</Link>
             <Link href="/trust" className="hover:text-brand">Trust &amp; delivery</Link>
+            <Link href="/trust#disclosure" className="hover:text-brand">Responsible disclosure</Link>
             <CookiePreferencesButton className="cursor-pointer hover:text-brand" />
             <span className="hidden h-3 w-px bg-white/15 md:inline-block" />
             <div className="flex gap-2">

@@ -15,7 +15,7 @@ const  PrivacyPolicy  = () => {
         <div>
           <h1 className="text-4xl font-karla font-bold text-main-dark text-center">Privacy Policy</h1>
           {/* <p className="mt-2">Effective Date: [Insert Date]</p> */}
-          <p className="mt-4 text-center">Last Updated: 3 August 2026</p>
+          <p className="mt-4 text-center">Last Updated: 24 August 2026</p>
         </div>
 
         {/* 1. Introduction */}
@@ -25,6 +25,11 @@ const  PrivacyPolicy  = () => {
             ScotiTech Solutions Limited ("Company," "we," "our," or "us") is committed to protecting your
             privacy. This Privacy Policy outlines how we collect, use, and safeguard your personal information
             when you visit our website (https://www.scotitech.com) and use our services.
+          </p>
+          <p className="leading-7">
+            ScotiTech Solutions Limited (company number SC829021, registered office 11 Caldervale Drive,
+            Motherwell ML1 2GB, United Kingdom) is the data controller for personal data collected through
+            this website.
           </p>
           <p className="leading-7">
             By accessing our website and services, you agree to this Privacy Policy. If you do not agree,
@@ -125,7 +130,15 @@ const  PrivacyPolicy  = () => {
             <li>Restrict data processing under certain conditions.</li>
           </ul>
           <p className="mt-1 leading-7">
-            To exercise your rights, contact us at privacy@scotitech.com.
+            To exercise your rights, contact us at info@scotitech.com.
+          </p>
+          <p className="leading-7">
+            If you are unhappy with how we have handled your personal data, you can complain to the
+            Information Commissioner&apos;s Office at{" "}
+            <a href="https://ico.org.uk" target="_blank" rel="noreferrer" className="text-main-dark underline">
+              ico.org.uk
+            </a>
+            . We would appreciate the chance to address your concern first.
           </p>
         </div>
 
@@ -147,27 +160,110 @@ const  PrivacyPolicy  = () => {
           </p>
         </div>
 
-        {/* 10. Changes */}
+        {/* 10. Product services */}
         <div className="space-y-4 pl-1">
-          <h2 className="text-2xl font-karla font-semibold text-main-dark">10. Changes to This Privacy Policy</h2>
+          <h2 className="text-2xl font-karla font-semibold text-main-dark">10. Product Services (AppDeploy and AXOS)</h2>
+          <p className="leading-7">
+            This policy covers personal data collected through this website. Customer and end-user data
+            processed inside our products is governed by each product&apos;s own privacy policy and Data
+            Processing Agreement, under which we act as processor for the customer organisation.
+          </p>
+          <ul className="list-disc ml-6 space-y-2 leading-7">
+            <li>
+              AppDeploy —{" "}
+              <a href="https://appdeploy.scotitech.com/privacy" target="_blank" rel="noreferrer" className="text-main-dark underline">privacy policy</a>
+              {" "}and{" "}
+              <a href="https://appdeploy.scotitech.com/dpa" target="_blank" rel="noreferrer" className="text-main-dark underline">data processing agreement</a>.
+            </li>
+            <li>
+              AXOS —{" "}
+              <a href="https://axos.scotitech.com/privacy" target="_blank" rel="noreferrer" className="text-main-dark underline">privacy policy</a>
+              {" "}and{" "}
+              <a href="https://axos.scotitech.com/dpa" target="_blank" rel="noreferrer" className="text-main-dark underline">data processing agreement</a>.
+            </li>
+          </ul>
+        </div>
+
+        {/* 11. India DPDP */}
+        <div className="space-y-4 pl-1">
+          <h2 className="text-2xl font-karla font-semibold text-main-dark">11. Additional Information for India (DPDP Act, 2023)</h2>
+          <p className="leading-7">
+            Where we process personal data of individuals in India, we act consistently with the Digital
+            Personal Data Protection Act, 2023:
+          </p>
+          <ul className="list-disc ml-6 space-y-2 leading-7">
+            <li>
+              <strong>Notice and consent.</strong> Where processing is based on consent, we describe the
+              purpose in clear terms at the point of collection, and withdrawing consent is as simple as
+              giving it — cookie choices can be changed at any time from the footer.
+            </li>
+            <li>
+              <strong>Grievance redressal.</strong> Our Grievance Officer is Pradeep Dahiya, Data Protection
+              Lead, ScotiTech Solutions Limited, reachable at{" "}
+              <a href="mailto:info@scotitech.com?subject=DPDP%20grievance" className="text-main-dark underline">info@scotitech.com</a>
+              {" "}(mark the subject &quot;DPDP grievance&quot;). We acknowledge grievances within 72 hours and aim to
+              resolve them within 30 days.
+            </li>
+            <li>
+              <strong>Data Protection Board.</strong> If your grievance is not resolved to your satisfaction,
+              you may approach the Data Protection Board of India.
+            </li>
+          </ul>
+        </div>
+
+        {/* 12. US state privacy laws */}
+        <div className="space-y-4 pl-1">
+          <h2 className="text-2xl font-karla font-semibold text-main-dark">12. Additional Information for United States Residents</h2>
+          <p className="leading-7">
+            Where we process personal data of residents of California or other US states with comprehensive
+            privacy laws (including the CCPA/CPRA, and the laws of Virginia, Colorado, Connecticut, and Utah):
+          </p>
+          <ul className="list-disc ml-6 space-y-2 leading-7">
+            <li>
+              <strong>We do not sell or share personal information</strong> as those terms are defined by the
+              CCPA/CPRA, and we have not done so in the preceding 12 months. We use no third-party advertising
+              cookies; optional analytics runs only after opt-in.
+            </li>
+            <li>
+              <strong>Your rights.</strong> You may request to know, access, correct, or delete the personal
+              information we hold about you, and you will not be discriminated against for exercising these
+              rights. Contact us at{" "}
+              <a href="mailto:info@scotitech.com" className="text-main-dark underline">info@scotitech.com</a>;
+              we verify requests using the email address associated with the data and respond within the
+              timeframe your state&apos;s law requires (typically 45 days).
+            </li>
+            <li>
+              <strong>Service-provider role.</strong> For data processed on behalf of a customer organisation
+              we act as a service provider or processor. If you are an employee of one of our customers,
+              please direct rights requests to your organisation.
+            </li>
+          </ul>
+        </div>
+
+        {/* 13. Changes */}
+        <div className="space-y-4 pl-1">
+          <h2 className="text-2xl font-karla font-semibold text-main-dark">13. Changes to This Privacy Policy</h2>
           <p className="leading-7">
             We may update this policy from time to time. Changes will be posted on this page with the
             \"Last Updated\" date.
           </p>
         </div>
 
-        {/* 11. Contact */}
+        {/* 14. Contact */}
         <div className="space-y-4 pl-1">
-          <h2 className="text-2xl font-karla font-semibold text-main-dark">11. Contact Us</h2>
+          <h2 className="text-2xl font-karla font-semibold text-main-dark">14. Contact Us</h2>
           <p className="leading-7 font-karla text-main-dark">📍 ScotiTech Solutions Limited</p>
 
           <p className="leading-7">
-            11 Caldervale Drive, Motherwell ML1 2GB, UK
+            Company number SC829021, registered in Scotland
+          </p>
+          <p className="leading-7">
+            11 Caldervale Drive, Motherwell ML1 2GB, United Kingdom
           </p>
 
           <div className="text-center font-karla block text-red-600 leading-7">
-            <a href="mailto:privacy@scotitech.com" className="inline-block pr-5">
-              📧 privacy@scotitech.com
+            <a href="mailto:info@scotitech.com" className="inline-block pr-5">
+              📧 info@scotitech.com
             </a>
             <a href="tel:+441698609091" className="inline-block">
               📞 01698 609091
