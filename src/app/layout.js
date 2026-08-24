@@ -118,7 +118,7 @@ const organizationSchema = {
   founders: [
     {
       "@type": "Person",
-      name: "Pradeep Dahiya",
+      name: "Pardeep Kumar",
       jobTitle: "Founder & CEO, Lead Developer",
       url: "https://www.linkedin.com/in/pradeepkumar2411/",
     },

@@ -30,7 +30,7 @@ const  PrivacyPolicy  = () => {
             ScotiTech Solutions Limited (company number SC829021, registered office 11 Caldervale Drive,
             Motherwell ML1 2GB, United Kingdom) is the data controller for personal data collected through
             this website. We are registered with the Information Commissioner&apos;s Office under reference
-            ZB925464. Our Data Protection Officer is Pradeep Dahiya, who can be reached at{" "}
+            ZB925464. Our Data Protection Officer is Pardeep Kumar, who can be reached at{" "}
             <a href="mailto:privacy@scotitech.com" className="text-main-dark underline">privacy@scotitech.com</a>.
           </p>
           <p className="leading-7">
@@ -200,7 +200,7 @@ const  PrivacyPolicy  = () => {
               giving it — cookie choices can be changed at any time from the footer.
             </li>
             <li>
-              <strong>Grievance redressal.</strong> Our Grievance Officer is Pradeep Dahiya, Data Protection
+              <strong>Grievance redressal.</strong> Our Grievance Officer is Pardeep Kumar, Data Protection
               Officer, ScotiTech Solutions Limited, reachable at{" "}
               <a href="mailto:privacy@scotitech.com?subject=DPDP%20grievance" className="text-main-dark underline">privacy@scotitech.com</a>
               {" "}(mark the subject &quot;DPDP grievance&quot;). We acknowledge grievances within 72 hours and aim to

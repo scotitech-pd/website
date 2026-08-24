@@ -14,7 +14,7 @@ export default function LeadershipTeam() {
       linkedin: "https://www.linkedin.com/in/prachi-dwivedi-5724a51b6/",
     },
     {
-      name: "Pradeep Dahiya",
+      name: "Pardeep Kumar",
       title: "Founder & CEO, Lead Developer",
       location: "Motherwell, Scotland",
       description:

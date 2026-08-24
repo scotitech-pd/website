@@ -36,7 +36,7 @@ const companyFacts = [
   { label: "Company number", value: "SC829021" },
   { label: "Registered office", value: "11 Caldervale Drive, Motherwell ML1 2GB, UK" },
   { label: "ICO registration", value: "ZB925464" },
-  { label: "Data Protection Officer", value: "Pradeep Dahiya" },
+  { label: "Data Protection Officer", value: "Pardeep Kumar" },
 ];
 
 const certifications = [
@@ -87,7 +87,7 @@ const outOfScope = [
 const privacyCoverage = [
   {
     title: "UK & EU GDPR",
-    body: "ScotiTech Solutions Limited (SC829021) is the data controller for personal data collected through this website, registered with the Information Commissioner's Office under reference ZB925464. Our Data Protection Officer is Pradeep Dahiya. You can exercise your rights, or complain to the ICO, at any time.",
+    body: "ScotiTech Solutions Limited (SC829021) is the data controller for personal data collected through this website, registered with the Information Commissioner's Office under reference ZB925464. Our Data Protection Officer is Pardeep Kumar. You can exercise your rights, or complain to the ICO, at any time.",
     links: [
       { label: "Your rights", href: "/privacy-policy#your-rights" },
       { label: "Contact the DPO", href: "mailto:privacy@scotitech.com?subject=Data%20protection%20enquiry", external: true },
@@ -96,7 +96,7 @@ const privacyCoverage = [
   },
   {
     title: "India — DPDP Act 2023",
-    body: "Our Grievance Officer is Pradeep Dahiya, Data Protection Lead. Grievances are acknowledged within 72 hours and we aim to resolve them within 30 days. Withdrawing consent is as simple as giving it.",
+    body: "Our Grievance Officer is Pardeep Kumar, Data Protection Officer. Grievances are acknowledged within 72 hours and we aim to resolve them within 30 days. Withdrawing consent is as simple as giving it.",
     links: [
       { label: "DPDP section", href: "/privacy-policy#india-dpdp" },
       { label: "Raise a grievance", href: "mailto:privacy@scotitech.com?subject=DPDP%20grievance", external: true },
