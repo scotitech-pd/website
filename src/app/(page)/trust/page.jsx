@@ -1,11 +1,11 @@
 import Link from "next/link";
 import {
+  AlertTriangle,
   ArrowRight,
-  Building2,
   CheckCircle2,
+  ExternalLink,
   FileText,
-  KeyRound,
-  LifeBuoy,
+  Scale,
   ServerCog,
   ShieldCheck,
 } from "lucide-react";
@@ -16,59 +16,119 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "Trust, Privacy & Delivery",
+  title: "Trust & Security",
   description:
-    "Learn how ScotiTech approaches company accountability, privacy, product security, deployment, customer control, and ongoing support.",
+    "ScotiTech Solutions Limited company identity, certification status, responsible disclosure policy, and privacy law coverage across UK GDPR, India's DPDP Act and US state privacy laws.",
   alternates: { canonical: "/trust" },
   openGraph: {
-    title: "Trust, Privacy & Delivery | ScotiTech Solutions",
+    title: "Trust & Security | ScotiTech Solutions",
     description:
-      "Clear information about ScotiTech's privacy approach, product boundaries, deployment options, and customer support.",
+      "Company identity, certification status, responsible disclosure, and privacy law coverage. Product-level controls live in each product's Trust Centre.",
     url: "/trust",
     type: "website",
   },
 };
 
-const principles = [
+
+const companyFacts = [
+  { label: "Legal entity", value: "ScotiTech Solutions Limited" },
+  { label: "Registered in", value: "Scotland, United Kingdom" },
+  { label: "Company number", value: "SC829021" },
+  { label: "Registered office", value: "11 Caldervale Drive, Motherwell ML1 2GB, UK" },
+  { label: "ICO registration", value: "ZB925464" },
+  { label: "Data Protection Officer", value: "Pradeep Dahiya" },
+];
+
+const certifications = [
   {
-    icon: Building2,
-    title: "Accountable company",
-    body: "ScotiTech Solutions Limited is registered in Scotland, with published leadership, office details, and direct contact routes for customers and partners.",
+    icon: AlertTriangle,
+    tone: "progress",
+    name: "Cyber Essentials",
+    status: "In progress",
+    body: "Application in progress as of August 2026. When granted, the certificate number and badge will be published here — not before.",
+  },
+  {
+    icon: Scale,
+    tone: "none",
+    name: "SOC 2 / ISO 27001",
+    status: "Not held",
+    body: "Neither certification is held today. Both are a 2027 roadmap item, once Enterprise volume justifies the cost of a formal audit.",
   },
   {
     icon: ShieldCheck,
-    title: "Honest assurance",
-    body: "We communicate security controls, privacy practices, and certification status accurately so buyers can evaluate current capabilities with confidence.",
-  },
-  {
-    icon: KeyRound,
-    title: "Clear deployment choices",
-    body: "Each product has its own approach to hosting, access, administration, and data control. We explain those boundaries before adoption.",
-  },
-  {
-    icon: LifeBuoy,
-    title: "Support with ownership",
-    body: "Customers have clear commercial and technical contacts, an agreed onboarding path, and support expectations suited to the engagement.",
+    tone: "product",
+    name: "Product controls",
+    status: "Operated",
+    body: "Each product operates the technical controls a SOC 2 or ISO 27001 auditor would inspect. The detail is product-specific and published in each product's Trust Centre below.",
   },
 ];
 
-const products = [
+const disclosureCommitments = [
+  "We acknowledge security reports within two business days.",
+  "We provide a first triage update within five business days.",
+  "We treat reports as confidential until a coordinated disclosure is agreed.",
+  "We offer credit, with the reporter's consent, once a fix is deployed.",
+];
+
+const safeHarbour = [
+  "Avoid privacy violations, data destruction, and service disruption.",
+  "Use only test accounts or your own data — never another organisation's.",
+  "Do not access, modify, or retain data belonging to others.",
+  "Give us a reasonable opportunity to remediate before public disclosure.",
+];
+
+const outOfScope = [
+  "Social engineering of ScotiTech staff or customers.",
+  "Denial-of-service or volumetric testing.",
+  "Findings on third-party services this site depends on — please report upstream.",
+  "Missing security headers, SPF/DMARC, or version disclosure without demonstrated impact.",
+];
+
+const privacyCoverage = [
+  {
+    title: "UK & EU GDPR",
+    body: "ScotiTech Solutions Limited (SC829021) is the data controller for personal data collected through this website, registered with the Information Commissioner's Office under reference ZB925464. Our Data Protection Officer is Pradeep Dahiya. You can exercise your rights, or complain to the ICO, at any time.",
+    links: [
+      { label: "Privacy policy", href: "/privacy-policy" },
+      { label: "Contact the DPO", href: "mailto:pradeepdahiya@scotitech.com?subject=Data%20protection%20enquiry", external: true },
+      { label: "ico.org.uk", href: "https://ico.org.uk", external: true },
+    ],
+  },
+  {
+    title: "India — DPDP Act 2023",
+    body: "Our Grievance Officer is Pradeep Dahiya, Data Protection Lead. Grievances are acknowledged within 72 hours and we aim to resolve them within 30 days. Withdrawing consent is as simple as giving it.",
+    links: [
+      { label: "DPDP grievance", href: "mailto:info@scotitech.com?subject=DPDP%20grievance", external: true },
+    ],
+  },
+  {
+    title: "United States — state privacy laws",
+    body: "We do not sell or share personal information as defined by the CCPA/CPRA, and have not done so in the preceding 12 months. We use no third-party advertising cookies; optional analytics runs only after opt-in.",
+    links: [{ label: "Your rights", href: "/privacy-policy" }],
+  },
+];
+
+const trustCentres = [
   {
     name: "AppDeploy",
     label: "Private app distribution",
-    body: "AppDeploy helps approved organisations distribute private mobile apps with clearer access, release communication, and rollout guidance.",
-    responsibilities: [
-      "Clear separation between product configuration, access administration, app ownership, and distribution accounts.",
-      "Guided onboarding and rollout support aligned to your chosen Apple Business or Android distribution route.",
+    body: "Control detail, service status, data processing terms, and the sub-processor list are published in full.",
+    links: [
+      { label: "Trust Centre", href: "https://appdeploy.scotitech.com/trust" },
+      { label: "Service status", href: "https://appdeploy.scotitech.com/status" },
+      { label: "DPA", href: "https://appdeploy.scotitech.com/dpa" },
+      { label: "Sub-processors", href: "https://appdeploy.scotitech.com/sub-processors" },
+      { label: "Privacy", href: "https://appdeploy.scotitech.com/privacy" },
     ],
   },
   {
     name: "AXOS",
     label: "Private enterprise workspace",
-    body: "AXOS gives organisations a controlled way to evaluate a private workspace before considering wider employee adoption.",
-    responsibilities: [
-      "Deployment, identity, access, and data-location requirements are agreed before the testing environment is prepared.",
-      "Your organisation retains control of infrastructure choices, users, permissions, business data, and internal governance.",
+    body: "Trust, privacy, and data processing terms are published. Operational evidence and control review are provided during enterprise evaluation.",
+    links: [
+      { label: "Trust Centre", href: "https://axos.scotitech.com/trust" },
+      { label: "DPA", href: "https://axos.scotitech.com/dpa" },
+      { label: "Privacy", href: "https://axos.scotitech.com/privacy" },
     ],
   },
 ];
@@ -113,31 +173,81 @@ export default function TrustPage() {
         </Container>
       </section>
 
+      {/* COMPANY */}
       <Section surface="muted" spacing="lg">
+        <div className="grid gap-12 lg:grid-cols-[34%_66%] lg:gap-16">
+          <Reveal>
+            <Eyebrow>Company</Eyebrow>
+            <h2 className="t-h1 mt-3">Who you are contracting with.</h2>
+            <p className="t-lead mt-5">
+              One registered UK entity stands behind every ScotiTech product.
+              The details below are public and independently verifiable at
+              Companies House.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button asChild variant="outline">
+                <a
+                  href="https://find-and-update.company-information.service.gov.uk/company/SC829021"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on Companies House
+                  <ExternalLink size={15} />
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a
+                  href="https://ico.org.uk/ESDWebPages/Entry/ZB925464"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on the ICO register
+                  <ExternalLink size={15} />
+                </a>
+              </Button>
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <dl className="grid gap-4 sm:grid-cols-2">
+              {companyFacts.map((fact) => (
+                <div key={fact.label} className="rounded-xl border border-hairline bg-surface p-5 shadow-soft">
+                  <dt className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                    {fact.label}
+                  </dt>
+                  <dd className="mt-2 font-karla text-base font-bold text-strong">{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+        </div>
+      </Section>
+
+      {/* CERTIFICATIONS */}
+      <Section surface="base" spacing="lg">
         <Reveal className="max-w-3xl">
-          <Eyebrow>How we build trust</Eyebrow>
-          <h2 className="t-h1 mt-3">Clear information. Responsible delivery.</h2>
+          <Eyebrow>Certifications &amp; assurance</Eyebrow>
+          <h2 className="t-h1 mt-3">Stated honestly, including what we do not hold.</h2>
           <p className="t-lead mt-5">
-            We explain what each product does, how it can be deployed, where
-            customer control begins, and what support looks like before you make
-            a decision.
+            We publish certification status rather than badges. Nothing below is
+            claimed before it is granted.
           </p>
         </Reveal>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {principles.map((principle, index) => {
-            const Icon = principle.icon;
+        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          {certifications.map((cert, index) => {
+            const Icon = cert.icon;
             return (
-              <Reveal key={principle.title} delay={index * 0.06}>
+              <Reveal key={cert.name} delay={index * 0.06}>
                 <article className="h-full rounded-xl border border-hairline bg-surface p-6 shadow-soft">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand-strong">
-                    <Icon size={18} />
-                  </span>
-                  <h3 className="mt-5 font-karla text-lg font-bold text-strong">
-                    {principle.title}
-                  </h3>
-                  <p className="mt-2 font-lora text-sm leading-7 text-body">
-                    {principle.body}
-                  </p>
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand-strong">
+                      <Icon size={18} />
+                    </span>
+                    <span className="rounded-full border border-hairline bg-surface-muted px-3 py-1 font-karla text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
+                      {cert.status}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 font-karla text-lg font-bold text-strong">{cert.name}</h3>
+                  <p className="mt-2 font-lora text-sm leading-7 text-body">{cert.body}</p>
                 </article>
               </Reveal>
             );
@@ -145,46 +255,155 @@ export default function TrustPage() {
         </div>
       </Section>
 
-      <Section surface="base" spacing="lg">
-        <div className="grid gap-12 lg:grid-cols-[34%_66%] lg:gap-16">
+      {/* RESPONSIBLE DISCLOSURE */}
+      <Section id="disclosure" surface="muted" spacing="lg">
+        <div className="grid gap-12 lg:grid-cols-[38%_62%] lg:gap-16">
           <Reveal>
-            <Eyebrow>Trust by product</Eyebrow>
-            <h2 className="t-h1 mt-3">The right controls for each product.</h2>
+            <Eyebrow>Responsible disclosure</Eyebrow>
+            <h2 className="t-h1 mt-3">Report a vulnerability.</h2>
             <p className="t-lead mt-5">
-              Private app distribution and a private enterprise workspace have
-              different requirements. Our guidance reflects the technology,
-              deployment model, and level of control your organisation needs.
+              Send security reports to security@scotitech.com. Include a clear
+              description, steps to reproduce, the affected URL, and your
+              assessment of impact. Mark the subject URGENT if the issue is being
+              actively exploited. A PGP key is available on request.
             </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button asChild>
+                <a href="mailto:security@scotitech.com?subject=Security%20report">
+                  Email security@scotitech.com
+                  <ArrowRight size={15} />
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href="/.well-known/security.txt">security.txt</a>
+              </Button>
+            </div>
           </Reveal>
-          <div className="space-y-5">
-            {products.map((product, index) => (
-              <Reveal key={product.name} delay={index * 0.07}>
-                <article className="rounded-xl border border-hairline bg-surface p-6 shadow-soft md:p-8">
-                  <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-brand-strong">
-                    {product.label}
-                  </p>
-                  <h3 className="mt-2 font-karla text-2xl font-bold text-strong">
-                    {product.name}
-                  </h3>
-                  <p className="mt-3 font-lora text-[15px] leading-7 text-body">
-                    {product.body}
-                  </p>
-                  <div className="mt-6 grid gap-3 md:grid-cols-2">
-                    {product.responsibilities.map((responsibility) => (
-                      <div key={responsibility} className="flex gap-3 rounded-lg bg-surface-muted p-4">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-strong" />
-                        <p className="font-karla text-sm leading-6 text-body">
-                          {responsibility}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={0.08} className="grid gap-5">
+            <div className="rounded-xl border border-hairline bg-surface p-6 shadow-soft">
+              <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-brand-strong">
+                Our commitments
+              </p>
+              <ul className="mt-4 space-y-3">
+                {disclosureCommitments.map((item) => (
+                  <li key={item} className="flex gap-3 font-lora text-sm leading-6 text-body">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-strong" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div className="rounded-xl border border-hairline bg-surface p-6">
+                <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                  Safe harbour
+                </p>
+                <p className="mt-3 font-lora text-sm leading-6 text-body">
+                  Research in line with these rules is treated as authorised and
+                  we will not pursue legal action.
+                </p>
+                <ul className="mt-4 space-y-2.5">
+                  {safeHarbour.map((item) => (
+                    <li key={item} className="font-lora text-sm leading-6 text-body">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-xl border border-hairline bg-surface p-6">
+                <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                  Out of scope
+                </p>
+                <p className="mt-3 font-lora text-sm leading-6 text-body">
+                  For product endpoints and tenants, see the relevant product
+                  Trust Centre.
+                </p>
+                <ul className="mt-4 space-y-2.5">
+                  {outOfScope.map((item) => (
+                    <li key={item} className="font-lora text-sm leading-6 text-body">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </Section>
+
+      {/* PRIVACY LAW COVERAGE */}
+      <Section surface="base" spacing="lg">
+        <Reveal className="max-w-3xl">
+          <Eyebrow>Privacy law coverage</Eyebrow>
+          <h2 className="t-h1 mt-3">Which laws we operate under.</h2>
+          <p className="t-lead mt-5">
+            Summarised here, set out in full in the privacy policy.
+          </p>
+        </Reveal>
+        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          {privacyCoverage.map((item, index) => (
+            <Reveal key={item.title} delay={index * 0.06}>
+              <article className="flex h-full flex-col rounded-xl border border-hairline bg-surface p-6 shadow-soft">
+                <h3 className="font-karla text-lg font-bold text-strong">{item.title}</h3>
+                <p className="mt-3 flex-1 font-lora text-sm leading-7 text-body">{item.body}</p>
+                <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 border-t border-hairline pt-4">
+                  {item.links.map((link) => (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      {...(link.external ? { target: "_blank", rel: "noreferrer" } : {})}
+                      className="inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong hover:text-brand"
+                    >
+                      {link.label}
+                      <ArrowRight size={13} />
+                    </Link>
+                  ))}
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      {/* PRODUCT TRUST CENTRES */}
+      <Section surface="muted" spacing="lg">
+        <Reveal className="max-w-3xl">
+          <Eyebrow>Product trust centres</Eyebrow>
+          <h2 className="t-h1 mt-3">Control detail lives with each product.</h2>
+          <p className="t-lead mt-5">
+            This page covers the company. Technical controls, service status, and
+            contractual terms are specific to each product and published there.
+          </p>
+        </Reveal>
+        <div className="mt-10 grid gap-5 lg:grid-cols-2">
+          {trustCentres.map((product, index) => (
+            <Reveal key={product.name} delay={index * 0.07}>
+              <article className="h-full rounded-xl border border-hairline bg-surface p-6 shadow-soft md:p-8">
+                <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-brand-strong">
+                  {product.label}
+                </p>
+                <h3 className="mt-2 font-karla text-2xl font-bold text-strong">{product.name}</h3>
+                <p className="mt-3 font-lora text-[15px] leading-7 text-body">{product.body}</p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {product.links.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-hairline bg-surface-muted px-3.5 py-1.5 font-karla text-xs font-semibold text-strong transition-colors hover:border-brand hover:text-brand-strong"
+                    >
+                      {link.label}
+                      <ExternalLink size={12} />
+                    </a>
+                  ))}
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
 
       <Section surface="sunken" spacing="lg">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-16">
