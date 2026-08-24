@@ -150,9 +150,10 @@ const TermsAndConditions = () => {
             8. Governing Law
           </h2>
           <p>
-            These Terms are governed by the laws of the United Kingdom. Any
-            disputes shall be resolved through negotiation and, if unresolved,
-            through binding arbitration.
+            These Terms are governed by the law of Scotland. Any disputes shall
+            be resolved through negotiation and, if unresolved, through binding
+            arbitration. Signed engagement documents may specify a different
+            governing law.
           </p>
         </div>
 

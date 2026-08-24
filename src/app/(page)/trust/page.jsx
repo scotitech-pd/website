@@ -90,7 +90,7 @@ const privacyCoverage = [
     body: "ScotiTech Solutions Limited (SC829021) is the data controller for personal data collected through this website, registered with the Information Commissioner's Office under reference ZB925464. Our Data Protection Officer is Pradeep Dahiya. You can exercise your rights, or complain to the ICO, at any time.",
     links: [
       { label: "Your rights", href: "/privacy-policy#your-rights" },
-      { label: "Contact the DPO", href: "mailto:pradeepdahiya@scotitech.com?subject=Data%20protection%20enquiry", external: true },
+      { label: "Contact the DPO", href: "mailto:privacy@scotitech.com?subject=Data%20protection%20enquiry", external: true },
       { label: "ico.org.uk", href: "https://ico.org.uk", external: true },
     ],
   },
@@ -99,7 +99,7 @@ const privacyCoverage = [
     body: "Our Grievance Officer is Pradeep Dahiya, Data Protection Lead. Grievances are acknowledged within 72 hours and we aim to resolve them within 30 days. Withdrawing consent is as simple as giving it.",
     links: [
       { label: "DPDP section", href: "/privacy-policy#india-dpdp" },
-      { label: "Raise a grievance", href: "mailto:info@scotitech.com?subject=DPDP%20grievance", external: true },
+      { label: "Raise a grievance", href: "mailto:privacy@scotitech.com?subject=DPDP%20grievance", external: true },
     ],
   },
   {

@@ -31,7 +31,7 @@ const  PrivacyPolicy  = () => {
             Motherwell ML1 2GB, United Kingdom) is the data controller for personal data collected through
             this website. We are registered with the Information Commissioner&apos;s Office under reference
             ZB925464. Our Data Protection Officer is Pradeep Dahiya, who can be reached at{" "}
-            <a href="mailto:pradeepdahiya@scotitech.com" className="text-main-dark underline">pradeepdahiya@scotitech.com</a>.
+            <a href="mailto:privacy@scotitech.com" className="text-main-dark underline">privacy@scotitech.com</a>.
           </p>
           <p className="leading-7">
             By accessing our website and services, you agree to this Privacy Policy. If you do not agree,
@@ -132,7 +132,7 @@ const  PrivacyPolicy  = () => {
             <li>Restrict data processing under certain conditions.</li>
           </ul>
           <p className="mt-1 leading-7">
-            To exercise your rights, contact us at info@scotitech.com.
+            To exercise your rights, contact us at privacy@scotitech.com.
           </p>
           <p className="leading-7">
             If you are unhappy with how we have handled your personal data, you can complain to the
@@ -202,7 +202,7 @@ const  PrivacyPolicy  = () => {
             <li>
               <strong>Grievance redressal.</strong> Our Grievance Officer is Pradeep Dahiya, Data Protection
               Officer, ScotiTech Solutions Limited, reachable at{" "}
-              <a href="mailto:info@scotitech.com?subject=DPDP%20grievance" className="text-main-dark underline">info@scotitech.com</a>
+              <a href="mailto:privacy@scotitech.com?subject=DPDP%20grievance" className="text-main-dark underline">privacy@scotitech.com</a>
               {" "}(mark the subject &quot;DPDP grievance&quot;). We acknowledge grievances within 72 hours and aim to
               resolve them within 30 days.
             </li>
@@ -230,7 +230,7 @@ const  PrivacyPolicy  = () => {
               <strong>Your rights.</strong> You may request to know, access, correct, or delete the personal
               information we hold about you, and you will not be discriminated against for exercising these
               rights. Contact us at{" "}
-              <a href="mailto:info@scotitech.com" className="text-main-dark underline">info@scotitech.com</a>;
+              <a href="mailto:privacy@scotitech.com" className="text-main-dark underline">privacy@scotitech.com</a>;
               we verify requests using the email address associated with the data and respond within the
               timeframe your state&apos;s law requires (typically 45 days).
             </li>
@@ -267,8 +267,8 @@ const  PrivacyPolicy  = () => {
           </p>
 
           <div className="text-center font-karla block text-red-600 leading-7">
-            <a href="mailto:info@scotitech.com" className="inline-block pr-5">
-              📧 info@scotitech.com
+            <a href="mailto:privacy@scotitech.com" className="inline-block pr-5">
+              📧 privacy@scotitech.com
             </a>
             <a href="tel:+441698609091" className="inline-block">
               📞 01698 609091
