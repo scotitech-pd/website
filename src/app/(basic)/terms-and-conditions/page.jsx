@@ -67,6 +67,65 @@ const TermsAndConditions = () => {
             All services are governed by individual agreements signed between
             the Company and the client.
           </p>
+          <p>
+            <strong>Product subscriptions are governed by separate terms.</strong>{" "}
+            These Terms and Conditions cover use of this website and our
+            consulting engagements. If you subscribe to one of our software
+            products, that subscription is governed by the product&rsquo;s own
+            terms of service, data processing agreement, and sub-processor list,
+            which prevail over these Terms for the subject matter they cover:
+          </p>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>
+              AppDeploy —{" "}
+              <a
+                href="https://appdeploy.scotitech.com/terms"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-brand"
+              >
+                Terms of Service
+              </a>
+              ,{" "}
+              <a
+                href="https://appdeploy.scotitech.com/dpa"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-brand"
+              >
+                DPA
+              </a>
+              ,{" "}
+              <a
+                href="https://appdeploy.scotitech.com/sub-processors"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-brand"
+              >
+                sub-processors
+              </a>
+            </li>
+            <li>
+              AXOS —{" "}
+              <a
+                href="https://axos.scotitech.com/trust"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-brand"
+              >
+                Trust Centre
+              </a>
+              ,{" "}
+              <a
+                href="https://axos.scotitech.com/dpa"
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-brand"
+              >
+                DPA
+              </a>
+            </li>
+          </ul>
         </div>
 
         {/* 3. Intellectual Property */}
