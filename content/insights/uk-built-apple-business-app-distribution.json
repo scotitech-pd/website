@@ -1,0 +1,96 @@
+{
+  "status": "published",
+  "featured": true,
+  "slug": "uk-built-apple-business-app-distribution",
+  "category": "Private App Distribution",
+  "topic": "UK enterprise mobility",
+  "title": "Why is every Apple device-management vendor American?",
+  "summary": "Apple Business launched worldwide in April 2026 with a free MDM layer and an Admin API — and the vendors building on it are almost all American. We went looking for a UK-built platform doing standalone app distribution on Apple's business APIs, then had independent research tools look too. Neither search found one. Here is why that gap matters for UK organisations, and what we built into it.",
+  "seoDescription": "Jamf, Kandji, Mosyle and SimpleMDM are all US companies. Research found no other UK-built SaaS doing standalone Apple Business app distribution. AppDeploy is built in Scotland.",
+  "date": "2026-08-29",
+  "updated": "2026-08-29",
+  "displayDate": "29 August 2026",
+  "readTime": "6 min read",
+  "sourceName": "Apple Newsroom — Introducing Apple Business",
+  "sourceUrl": "https://www.apple.com/uk/newsroom/2026/03/introducing-apple-business/",
+  "image": "/images/insights/apple-business-team-devices.jpg",
+  "tags": [
+    "Apple Business",
+    "private app distribution",
+    "UK tech",
+    "enterprise mobility",
+    "MDM alternative",
+    "Apple Business Manager",
+    "iOS app deployment",
+    "AppDeploy"
+  ],
+  "relatedProduct": {
+    "name": "AppDeploy",
+    "href": "/products/appdeploy",
+    "description": "Private app distribution built around Apple Business, with optional remote deployment — built in Scotland, hosted in Glasgow.",
+    "cta": "Explore AppDeploy"
+  },
+  "highlights": [
+    {
+      "label": "The incumbents",
+      "value": "All US",
+      "description": "Jamf (Minneapolis), Kandji (San Francisco), Mosyle (Florida), SimpleMDM (Oregon). The closest architectural comparable, Appaloosa, is French."
+    },
+    {
+      "label": "The UK market",
+      "value": "Resellers",
+      "description": "UK companies in this space are consultancies and MSPs configuring the American platforms, not vendors writing their own distribution software."
+    },
+    {
+      "label": "Built here",
+      "value": "Glasgow",
+      "description": "AppDeploy is UK-incorporated, UK-hosted, with EEA encrypted backups and no US transfer by default."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Apple just reset the category — worldwide",
+      "paragraphs": [
+        "On 14 April 2026, Apple Business launched in more than 200 countries, replacing Apple Business Manager, Apple Business Essentials and Apple Business Connect with one free platform: device enrolment, Managed Apple Accounts, app distribution, a built-in MDM layer, and an Admin API for programmatic access.",
+        "A platform reset like this is when categories get rebuilt. The question that interested us: who is building the software layer on top of Apple's new business APIs — and where are they?"
+      ]
+    },
+    {
+      "heading": "The vendor map is a map of America",
+      "paragraphs": [
+        "Jamf is headquartered in Minneapolis. Kandji in San Francisco. Mosyle in Florida. SimpleMDM in Oregon. Addigy in Miami. Of the early SaaS products publicly building on the new Apple Business endpoints, the visible names are US-based too.",
+        "The closest thing to a European exception in app-distribution-first architecture is Appaloosa — which is French. Look for the United Kingdom on this map and you find something specific: service companies. UK firms in Apple device management overwhelmingly resell and configure the American platforms — implementation, support and consulting on Jamf, Intune or Mosyle — rather than building distribution software of their own."
+      ]
+    },
+    {
+      "heading": "We looked for a UK-built alternative. Then we asked the research tools to prove us wrong.",
+      "paragraphs": [
+        "Before saying anything in public, we searched for a UK-incorporated SaaS company building a standalone product for app distribution on Apple's business APIs. We then ran the same question through independent AI research tools across business registries, tech press and startup databases.",
+        "Neither pass found one. No UK startup with recent funding or coverage in this niche; no UK-registered software company with a public product, site or hiring in Apple Business API-based app distribution. As far as we and the tools can establish, AppDeploy is operating in a category of one within the UK.",
+        "We are saying that carefully, and we mean the narrow claim: a UK-built SaaS product whose core is app distribution on Apple's business APIs, where device management is optional rather than the entry fee. If we have missed a UK-built platform doing this, tell us at info@scotitech.com — we will link them from this article. A claim you invite people to falsify is worth more than one you hope nobody checks."
+      ]
+    },
+    {
+      "heading": "Why a UK-built layer matters now",
+      "paragraphs": [
+        "For most UK organisations this is not about flag-waving. It is about where the operational layer above their Apple estate lives, who operates it, and under which laws.",
+        "AppDeploy is operated by a Scottish-registered company, hosted in Glasgow, with encrypted backups held in the EEA and no US transfer by default. The data-processing agreement, sub-processor list and service status are published, not gated behind sales. For public-sector-adjacent, legal, healthcare and finance buyers who must answer data-residency questions in procurement, a UK operational layer on top of Apple's platform is a materially simpler answer.",
+        "Architecture is the other half. Apple Business now gives every organisation a free MDM layer — which makes it more important, not less, to separate two decisions most platforms couple: getting an app onto a device, and managing the device. AppDeploy distributes through a branded portal with no enrolment at all, and treats silent MDM-based deployment as an optional, per-device add-on. You buy control only where you need it."
+      ]
+    },
+    {
+      "heading": "What this means if you are choosing tooling",
+      "paragraphs": [
+        "If your organisation needs full device management across the fleet — configuration profiles, macOS patching, compliance dashboards — the American suites are mature and Apple's own free MDM layer is now an option. We say that plainly on our comparison pages.",
+        "But if your actual problem is getting your own apps to your own people — employees, field teams, client organisations — with governance, audit and rollout control, you no longer have to buy a device-management programme to get it, and you no longer have to buy American to get it either."
+      ]
+    }
+  ],
+  "actionItems": [
+    "Map which of your Apple tooling needs are app distribution and which are genuine device management — they price and procure differently.",
+    "Ask any vendor where the operational layer is hosted, under which jurisdiction, and where backups live.",
+    "Review Apple Business (free since April 2026) for the baseline MDM layer before paying per-device for one.",
+    "Pilot portal-based distribution on personally owned devices before enrolling anything.",
+    "If you know a UK-built platform in this category, tell us — we will link them here."
+  ]
+}
