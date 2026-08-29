@@ -290,6 +290,7 @@ export const products = {
     },
     faqs: [
       { q: "Does AppDeploy replace Apple Business?", a: "No — and that's the point. Apple Business handles the compliant distribution layer; AppDeploy adds the branded portal, user management, and rollout workflow on top." },
+      { q: "Apple Business now includes a free MDM layer. Why do I still need AppDeploy?", a: "Use it — Apple Business is the foundation AppDeploy builds on. What it doesn't give you is the operational layer: a branded portal your employees recognise, entitlement-led access, Release Guard preflight, rollout rings, per-device deployment answers, Evidence Packs, and an org-scoped audit trail. AppDeploy is the workspace on top of Apple's platform, not a competitor to it." },
       { q: "Is Android included in the Business plan?", a: "No. Android app delivery is available with Enterprise. Business supports Apple Business Manager Apps & Books, Apple redemption codes, and enterprise-signed .ipa upload and hosting." },
       { q: "Is AutoDeploy a separate plan?", a: "No. Business includes AutoDeploy for the first five enrolled Apple devices. Additional capacity is charged from device 6 using the published device-rate tiers, on the same Business subscription and invoice." },
       { q: "Can I view an app catalogue before signing up?", a: "Yes — open a sample branded workspace before requesting access to see app discovery, install guidance, and branding." },
