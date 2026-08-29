@@ -55,7 +55,7 @@ export const insights = [
       {
         "heading": "Apple just reset the category — worldwide",
         "paragraphs": [
-          "On 14 April 2026, Apple Business launched in more than 200 countries, replacing Apple Business Manager, Apple Business Essentials and Apple Business Connect with one free platform: device enrolment, Managed Apple Accounts, app distribution, a built-in MDM layer, and an Admin API for programmatic access.",
+          "On 14 April 2026, Apple Business launched in more than 200 countries, replacing Apple Business Manager, Apple Business Essentials and Apple Business Connect with one free platform: device enrolment, Managed Apple Accounts, app distribution, a built-in MDM layer, Blueprints for zero-touch setup, and an Admin API for programmatic access.",
           "A platform reset like this is when categories get rebuilt. The question that interested us: who is building the software layer on top of Apple's new business APIs — and where are they?"
         ]
       },
@@ -86,7 +86,7 @@ export const insights = [
         "heading": "What this means if you are choosing tooling",
         "paragraphs": [
           "If your organisation needs full device management across the fleet — configuration profiles, macOS patching, compliance dashboards — the American suites are mature and Apple's own free MDM layer is now an option. We say that plainly on our comparison pages.",
-          "But if your actual problem is getting your own apps to your own people — employees, field teams, client organisations — with governance, audit and rollout control, you no longer have to buy a device-management programme to get it, and you no longer have to buy American to get it either."
+          "But if your actual problem is getting your own apps to your own people — employees, field teams, client organisations — with governance, audit and rollout control, you no longer have to buy a device-management programme to get it, and you no longer have to buy American to get it either. That is the segment AppDeploy is built for: teams who have outgrown Apple's free tier but are not ready for a full MDM platform — the control layer in between."
         ]
       }
     ],
