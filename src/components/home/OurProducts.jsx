@@ -20,7 +20,7 @@ const flagships = [
     accent: "bg-appdeploy",
     status: { variant: "live", dot: true, label: "Live" },
     category: "Private app distribution",
-    tagline: "Your apps. Your brand. Enterprise-ready in 14 days.",
+    tagline: "Your apps. Your brand. Typical enterprise rollout: around 14 days.",
     description:
       "A branded workspace for private iOS and Android app delivery, built around Apple Business. MDM-free by default, with optional managed deployment for company-owned devices — you choose the level of control you need.",
     bestFor:

@@ -48,8 +48,8 @@ export const products = {
     metrics: [
       { value: "99.9%", label: "Availability SLO" },
       { value: "450+", label: "Apps installed" },
-      { value: "14 days", label: "To enterprise go-live" },
-      { value: "100%", label: "Deployments on time" },
+      { value: "~14 days", label: "Typical enterprise rollout" },
+      { value: "2", label: "Active customer workspaces" },
     ],
     problem: {
       title: "Private app delivery turns into manual work.",
