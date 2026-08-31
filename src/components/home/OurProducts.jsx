@@ -22,7 +22,7 @@ const flagships = [
     category: "Private app distribution",
     tagline: "Your apps. Your brand. Enterprise-ready in 14 days.",
     description:
-      "A branded workspace for private iOS delivery through Business. Android signed APK upload and delivery is available with Enterprise. Apple Business-aligned workflows keep installation clear without forcing full MDM adoption.",
+      "A branded workspace for private iOS and Android app delivery, built around Apple Business. MDM-free by default, with optional managed deployment for company-owned devices — you choose the level of control you need.",
     bestFor:
       "Teams shipping private mobile apps to employees, client teams, or external partners.",
     rollout:

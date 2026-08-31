@@ -14,7 +14,7 @@ export const products = {
     externalUrl: "https://appdeploy.scotitech.com",
     status: { variant: "live", dot: true, label: "Live" },
     eyebrow: "Private app distribution",
-    tagline: "Private app distribution with optional remote deployment, built around Apple Business.",
+    tagline: "MDM-free by default, with optional managed deployment for company-owned devices.",
     description:
       "AppDeploy turns private iOS rollout into a branded workspace. Business supports Apple Business Manager Apps & Books, Apple redemption codes, and enterprise-signed .ipa upload and hosting, with AutoDeploy included for the first five enrolled Apple devices. Android app delivery is available with Enterprise.",
     heroSpecs: [
@@ -28,7 +28,7 @@ export const products = {
     statement: {
       eyebrow: "Rollout architecture",
       title: "Built for controlled app rollout, not a full device-management suite.",
-      body: "AppDeploy combines Apple Business distribution, signed app delivery, a branded user workspace, and focused remote deployment capacity with device actions, OS-update enforcement and compliance evidence. Business includes AutoDeploy for five enrolled Apple devices, with additional capacity available on the same subscription.",
+      body: "AppDeploy combines Apple Business distribution, signed app delivery, a branded user workspace, and focused remote deployment capacity with device actions, OS-update enforcement and compliance evidence. MDM-free by default, with optional managed deployment for company-owned devices — Business includes AutoDeploy for five enrolled Apple devices, with additional capacity available on the same subscription.",
       points: [
         { title: "Entitlement-led access", body: "App availability managed per organisation and user, not per device." },
         { title: "Apple Business aligned", body: "Apps & Books token sync and Managed Apple ID workflows underneath." },
@@ -55,8 +55,7 @@ export const products = {
       title: "Private app delivery turns into manual work.",
       points: [
         "App Store review isn't designed for every internal-only app workflow.",
-        "Enterprise distribution and full MDM add approval, setup, and support overhead — and per-device pricing charges for every device, even ones that only need an app.",
-        "Apple Business purchases, codes, licences, and Managed Apple ID checks live in separate places.",
+        "Enterprise distribution and full MDM add approval, setup, and support overhead — and per-device pricing charges for every device, even ones that only need an app.",        "Apple Business purchases, codes, licences, and Managed Apple ID checks live in separate places.",
         "Employees receive scattered links while admins have limited install visibility.",
       ],
     },
@@ -66,7 +65,7 @@ export const products = {
         "Employees land on a branded internal apps portal instead of raw distribution mechanics.",
         "Admins sync Apps & Books content and manage app-user access in one place.",
         "Branded portal, tracking, and day-to-day rollout workflow on top of compliant distribution.",
-        "One flat Business plan distributes to any number of devices, with no per-device fee for the portal. Silent AutoDeploy management is an optional per-device add-on, with the first five included.",
+        "MDM-free by default — one flat Business plan distributes to any number of devices, with no per-device fee for the portal. Optional managed deployment via AutoDeploy is a per-device add-on for company-owned devices, with the first five included.",
       ],
     },
     features: [
