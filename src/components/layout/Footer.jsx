@@ -22,7 +22,7 @@ const productLinks = [
 ];
 
 const badges = [
-  { icon: Award, label: "UK StartUp Awards 2026 — Finalist" },
+  { icon: Award, label: "UK StartUp Awards 2026 — Scotland Regional Finalist" },
   { icon: Apple, label: "Apple Business workflows" },
   { icon: ShieldCheck, label: "Privacy-conscious products" },
 ];

@@ -18,9 +18,9 @@ import {
 
 
 const IMAGES = [
-  { src: "/images/home/scotland-startup-awards-2026-finalist.jpg", alt: "Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions", caption: "Digital StartUp of the Year — 2026 finalist certificate" },
-  { src: "/images/home/scotland-startup-awards-2026-photo-1.jpg", alt: "ScotiTech Scotland StartUp Awards 2026 finalist moment", caption: "Scotland StartUp Awards 2026 finalist recognition" },
-  { src: "/images/home/scotland-startup-awards-2026-photo-2.jpg", alt: "ScotiTech at the Scotland StartUp Awards 2026", caption: "ScotiTech at the Scotland StartUp Awards 2026" },
+  { src: "/images/home/scotland-startup-awards-2026-finalist.jpg", alt: "UK StartUp Awards 2026 — Scotland Regional Finalist certificate for ScotiTech Solutions", caption: "UK StartUp Awards 2026 — Scotland Regional Finalist, Digital StartUp of the Year" },
+  { src: "/images/home/scotland-startup-awards-2026-photo-1.jpg", alt: "ScotiTech at the UK StartUp Awards 2026 Scotland Regional Final", caption: "UK StartUp Awards 2026 — Scotland Regional Finalist recognition" },
+  { src: "/images/home/scotland-startup-awards-2026-photo-2.jpg", alt: "ScotiTech at the UK StartUp Awards 2026 Scotland Regional Final", caption: "ScotiTech at the UK StartUp Awards 2026 Scotland Regional Final" },
   { src: "/images/home/p1.png", alt: "Pardeep Kumar holding the award", caption: "Pardeep Kumar, Founder & CEO and Lead Developer, ScotiTech, holding the award" },
   { src: "/images/home/p2.jpg", alt: "award", caption: "Forttuna Global Excellence Awards 2025, Dubai" },
   { src: "/images/home/p3.jpg", alt: "Close up of the award trophy", caption: "NextGen Innovator trophy, Forttuna Awards" },
@@ -52,14 +52,14 @@ const recognitionStories = [
   },
   {
     label: "Finalist",
-    title: "Scotland StartUp Awards 2026",
+    title: "UK StartUp Awards 2026 — Scotland Regional Finalist",
     summary:
-      "ScotiTech was named a Digital StartUp of the Year finalist at the Scotland StartUp Awards 2026.",
+      "ScotiTech was named a Scotland Regional Finalist for Digital StartUp of the Year at the UK StartUp Awards 2026.",
     date: "June 2026",
     location: "Scotland, UK",
     tone: "teal",
     imageSrc: "/images/home/scotland-startup-awards-2026-finalist.jpg",
-    imageAlt: "Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions",
+    imageAlt: "UK StartUp Awards 2026 — Scotland Regional Finalist certificate for ScotiTech Solutions",
   },
   {
     label: "Podcast",

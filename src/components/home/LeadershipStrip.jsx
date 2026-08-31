@@ -17,7 +17,7 @@ const team = [
       "Architects and builds AppDeploy and AXOS, and sets ScotiTech's product vision, commercial strategy, and global direction.",
     credentials: [
       { icon: Trophy, text: "NextGen Innovator of the Year 2025" },
-      { icon: Globe, text: "Scotland StartUp Awards 2026 Finalist" },
+      { icon: Globe, text: "UK StartUp Awards 2026 — Scotland Regional Finalist" },
     ],
   },
   {

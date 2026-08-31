@@ -148,15 +148,15 @@ export default function Credibility() {
             <div className="overflow-hidden rounded-xl border border-hairline bg-surface p-3">
               <Image
                 src="/images/home/scotland-startup-awards-2026-finalist.jpg"
-                alt="Scotland StartUp Awards 2026 finalist certificate for ScotiTech Solutions, Digital StartUp of the Year"
+                alt="UK StartUp Awards 2026 — Scotland Regional Finalist certificate for ScotiTech Solutions, Digital StartUp of the Year"
                 width={800}
                 height={1000}
                 className="mx-auto block h-[180px] w-auto rounded-lg object-contain"
               />
             </div>
             <p className="t-small mt-4">
-              Named a 2026 finalist for <span className="font-semibold text-strong">Digital StartUp of the Year</span>,
-              Scotland StartUp Awards 2026.
+              Named a <span className="font-semibold text-strong">Scotland Regional Finalist, Digital StartUp of the Year</span>,
+              UK StartUp Awards 2026.
             </p>
             <Link
               href="/media"
