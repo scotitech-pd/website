@@ -8,7 +8,7 @@ export const allInsights = [
     "slug": "uk-built-apple-business-app-distribution",
     "category": "Private App Distribution",
     "topic": "UK enterprise mobility",
-    "title": "Why is every Apple device-management vendor American?",
+    "title": "Why are so many Apple device-management vendors American?",
     "summary": "Apple Business launched worldwide in April 2026 with a free MDM layer and an Admin API — and the vendors building on it are almost all American. We went looking for a UK-built platform doing standalone app distribution on Apple's business APIs, then had independent research tools look too. Neither search found one. Here is why that gap matters for UK organisations, and what we built into it.",
     "seoDescription": "Jamf, Kandji, Mosyle and SimpleMDM are all US companies. Research found no other UK-built SaaS doing standalone Apple Business app distribution. AppDeploy is built in Scotland.",
     "date": "2026-08-29",
