@@ -45,11 +45,11 @@ const flagships = [
     category: "Private AI workspace",
     tagline: "Your enterprise AI platform, self-hosted.",
     description:
-      "A completed AI workspace and secure collaboration platform for employees - mail, drive, chat, video, tasks - with governance-first AI built in and a limited testing platform for qualified organisations.",
+      "AXOS is a completed core platform currently available for private enterprise evaluation — mail, drive, chat, video, tasks — with governance-first AI built in.",
     bestFor:
       "Organisations evaluating private AI, self-hosted AI, Google Workspace alternatives, or Microsoft 365 alternatives for employee operations.",
     rollout:
-      "Business-profile review, limited testing platform, governance planning, and deployment fit assessment.",
+      "Business-profile review, private enterprise evaluation access, governance planning, and deployment fit assessment.",
     capabilities: ["Enterprise AI platform", "Secure collaboration", "100% on-premise"],
     media: {
       type: "image",
@@ -71,8 +71,8 @@ export default function OurProducts() {
             </h2>
             <p className="t-lead mt-5">
               AppDeploy is live for private mobile app distribution. AXOS is a
-                completed private AI workspace and secure collaboration
-              platform evaluated through a qualified testing process. Both are built for
+                completed core platform currently available for private enterprise
+              evaluation. Both are built for
               organisations that care about adoption, governance, and where
               operational data lives.
             </p>

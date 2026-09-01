@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: "Is AXOS publicly available for instant signup?",
-    a: "No. AXOS is enterprise-only. Organisations first share their business information, intended use case, and deployment expectations. If the fit is real, we provide a limited testing platform so decision-makers can evaluate the product before any wider adoption discussion.",
+    a: "No. AXOS is enterprise-only. Organisations first share their business information, intended use case, and deployment expectations. If the fit is real, we provide private enterprise evaluation access so decision-makers can evaluate the product before any wider adoption discussion.",
   },
   {
     q: "Can ScotiTech support private deployment, self-hosting, or tighter control requirements?",

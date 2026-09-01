@@ -30,7 +30,7 @@ const productPaths = [
     name: "AXOS",
     eyebrow: "Enterprise workspace",
     description:
-      "Completed enterprise-only AI workspace with a limited testing platform for qualified organisations.",
+      "AXOS is a completed core platform currently available for private enterprise evaluation.",
     href: "/products/axos",
     accent: "from-cyan-500/20 via-emerald-400/10 to-white/0",
   },

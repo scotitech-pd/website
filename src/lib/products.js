@@ -315,7 +315,7 @@ export const products = {
     eyebrow: "Private AI workspace",
     tagline: "Your enterprise AI platform, self-hosted.",
     description:
-      "A completed enterprise-only AI workspace and secure collaboration platform with mail, drive, calendar, chat, video, tasks, enterprise knowledge management, and private AI built in. Organisations share their business profile first, then receive a limited testing platform before adopting AXOS for employees.",
+      "AXOS is a completed core platform currently available for private enterprise evaluation — mail, drive, calendar, chat, video, tasks, enterprise knowledge management, and private AI built in. Organisations share their business profile first, then receive private enterprise evaluation access before adopting AXOS for employees.",
     hero: {
       media: {
         type: "image",
@@ -472,11 +472,11 @@ export const products = {
       { q: "Is AXOS a Google Workspace or Microsoft 365 alternative?", a: "AXOS is not positioned as a free or lightweight replacement for every team. It is an enterprise-only Google Workspace alternative or Microsoft 365 alternative for organisations that need private hosting, secure collaboration, and stronger data control." },
       { q: "Does AXOS support enterprise knowledge management?", a: "Yes. AXOS brings files, communication, tasks, and governed AI into one workspace so teams can build controlled enterprise knowledge management and enterprise search AI workflows around their own data." },
       { q: "How do people sign in?", a: "SSO (SAML) on the web, with biometric login available on mobile." },
-      { q: "Can we test AXOS before adopting it?", a: "Yes. AXOS is enterprise-only, so we first review your business information and intended use case. Suitable organisations receive a limited testing platform to evaluate AXOS before deciding on employee adoption." },
+      { q: "Can we test AXOS before adopting it?", a: "Yes. AXOS is enterprise-only, so we first review your business information and intended use case. Suitable organisations receive private enterprise evaluation access to evaluate AXOS before deciding on employee adoption." },
     ],
     cta: {
       title: "Run your entire workspace on your own terms.",
-      body: "Share your business information and we'll provide the right AXOS evaluation route, including a limited testing platform for qualified enterprise teams.",
+      body: "Share your business information and we'll provide the right AXOS evaluation route, including private enterprise evaluation access for qualified enterprise teams.",
       primary: "Request AXOS evaluation",
       secondary: { label: "Book a call", href: "/contact" },
     },
