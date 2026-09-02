@@ -54,7 +54,7 @@ export default function Footer() {
         {/* Brand row */}
         <div className="border-b border-white/8 py-6">
           <Link href="/" className="inline-block">
-            <Image src="/logo/logo.png" alt="ScotiTech" width={170} height={42} className="h-auto w-[140px] invert" />
+            <Image src="/logo/logo.png" alt="ScotiTech" width={170} height={42} className="h-auto w-[140px]" />
           </Link>
         </div>
 
