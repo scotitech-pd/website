@@ -38,13 +38,23 @@ export default function InsightsSection() {
           href={`/insights/${featuredInsight.slug}`}
           className="group mt-10 grid overflow-hidden rounded-xl border border-hairline bg-surface transition-shadow duration-300 hover:shadow-md lg:grid-cols-2"
         >
-          <div className="relative aspect-[16/10] overflow-hidden bg-surface-sunken lg:aspect-auto">
+          <div
+            className={`relative aspect-[16/10] overflow-hidden lg:aspect-auto ${
+              featuredInsight.imageFit === "contain"
+                ? "bg-[#0b1422]"
+                : "bg-surface-sunken"
+            }`}
+          >
             <Image
               src={featuredInsight.image}
               alt={featuredInsight.title}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              className={`${
+                featuredInsight.imageFit === "contain"
+                  ? "object-contain"
+                  : "object-cover"
+              } transition-transform duration-500 group-hover:scale-[1.02]`}
             />
           </div>
           <div className="flex flex-col p-6 md:p-8">

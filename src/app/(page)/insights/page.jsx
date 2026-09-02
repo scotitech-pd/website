@@ -101,7 +101,11 @@ export default function InsightsPage() {
                 alt={`${featuredInsight.title} cover image`}
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
+                className={
+                  featuredInsight.imageFit === "contain"
+                    ? "object-contain"
+                    : "object-cover"
+                }
                 priority
               />
             </div>

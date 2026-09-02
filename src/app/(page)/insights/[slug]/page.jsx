@@ -158,7 +158,11 @@ export default async function InsightArticlePage({ params }) {
                   alt={`${insight.title} cover image`}
                   fill
                   sizes="(min-width: 1280px) 42vw, 100vw"
-                  className="object-cover"
+                  className={
+                    insight.imageFit === "contain"
+                      ? "object-contain"
+                      : "object-cover"
+                  }
                   priority
                 />
               </div>

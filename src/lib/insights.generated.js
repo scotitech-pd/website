@@ -17,7 +17,8 @@ export const insights = [
     "readTime": "6 min read",
     "sourceName": "Apple Newsroom — Introducing Apple Business",
     "sourceUrl": "https://www.apple.com/uk/newsroom/2026/03/introducing-apple-business/",
-    "image": "/images/insights/apple-business-team-devices.jpg",
+    "image": "/images/insights/latitude-ledger.jpg",
+    "imageFit": "contain",
     "tags": [
       "Apple Business",
       "private app distribution",
