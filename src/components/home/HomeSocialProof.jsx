@@ -18,6 +18,12 @@ const clients = [
     image: "/images/aboutus/no94oo-logo.png",
     href: null,
   },
+  {
+    name: "Olympus Residency",
+    image: "/images/home/olympus-residency-logo.png",
+    href: null,
+    blendMultiply: true,
+  },
 ];
 
 // Double for seamless marquee
@@ -35,7 +41,7 @@ function LogoItem({ client }) {
     <img
       src={client.image}
       alt={client.name}
-      className="h-10 w-auto max-w-[130px] object-contain opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+      className={`h-10 w-auto max-w-[130px] object-contain opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0${client.blendMultiply ? " mix-blend-multiply" : ""}`}
     />
   ) : (
     <span className="rounded-full border border-[#e4e8e3] bg-[#f5f3ee] px-4 py-2 font-karla text-sm font-semibold text-[#111827]">

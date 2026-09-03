@@ -38,6 +38,13 @@ const clients = [
     href: null,
     note: "Portfolio partner",
   },
+  {
+    name: "Olympus Residency",
+    image: "/images/home/olympus-residency-logo.png",
+    href: null,
+    note: "Portfolio partner",
+    blendMultiply: true,
+  },
 ];
 
 const testimonials = [
@@ -65,7 +72,7 @@ function ClientCard({ client }) {
             alt={client.name}
             width={140}
             height={48}
-            className="h-9 w-auto max-w-[140px] object-contain opacity-80 grayscale transition duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
+            className={`h-9 w-auto max-w-[140px] object-contain opacity-80 grayscale transition duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0${client.blendMultiply ? " mix-blend-multiply" : ""}`}
           />
         ) : (
           <span className="rounded-full border border-hairline bg-surface px-4 py-2 font-karla text-sm font-semibold text-strong">
