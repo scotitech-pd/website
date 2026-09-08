@@ -49,7 +49,7 @@ export const products = {
       { value: "99.9%", label: "Availability SLO" },
       { value: "450+", label: "Apps installed" },
       { value: "~14 days", label: "Typical enterprise rollout" },
-      { value: "2", label: "Active customer workspaces" },
+      { value: "Apple MDM Vendor", label: "Verified enterprise distribution partner", raw: true },
     ],
     problem: {
       title: "Private app delivery turns into manual work.",
