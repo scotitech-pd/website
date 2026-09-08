@@ -270,7 +270,7 @@ export const products = {
             "Executed DPA, quarterly sub-processor review, security questionnaire response",
           ],
           footerNote: "Custom pricing · No commitment · Live within 2 weeks",
-          cta: { label: "Book a demo", href: meetingLinks.appdeploy, external: true },
+          cta: { label: "Book a demo", type: "modal" },
         },
       ],
     },
@@ -451,13 +451,6 @@ export const products = {
       { title: "Test AXOS for a limited time", body: "We provide a working testing platform so your decision-makers can evaluate the real product." },
       { title: "Adopt for employees", body: "If AXOS fits, we scope the employee rollout across self-hosted or private-cloud deployment." },
     ],
-    proof: {
-      quote:
-        "AXOS gives teams a secure place to put AI to work on their own data, with far less dependence on disconnected tools.",
-      name: "Vijay Rathee",
-      role: "Founder, Bizztor",
-      img: "/images/solution/vijay.jpeg",
-    },
     security: {
       title: "Enterprise security, complete sovereignty",
       points: [

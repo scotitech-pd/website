@@ -34,7 +34,7 @@ export default function LeadershipTeam() {
     {
       name: "Daniel Chapman",
       title: "Director and Co-founder",
-      location: "Leeds, UK",
+      location: "Huddersfield, England",
       description:
         "Supports long-term strategy, commercial direction, and partner positioning across ScotiTech’s core product portfolio.",
       img: "/images/aboutus/daniel.jpeg",

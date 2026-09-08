@@ -851,7 +851,11 @@ export default function ProductTemplate({ product }) {
                       </p>
                     )}
                     <div className="mt-auto pt-8">
-                      {plan.cta.external ? (
+                      {plan.cta.type === "modal" ? (
+                        <Button size="lg" variant={featured ? "default" : "outline"} className="w-full" onClick={() => setShowModal(true)}>
+                          {plan.cta.label}
+                        </Button>
+                      ) : plan.cta.external ? (
                         <Button asChild size="lg" variant={featured ? "default" : "outline"} className="w-full">
                           <a href={plan.cta.href} target="_blank" rel="noopener noreferrer">
                             {plan.cta.label}
