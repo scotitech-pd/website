@@ -207,7 +207,7 @@ export const products = {
               "Apple Business token sync and directory sync unlock after trial activation.",
             ],
           },
-          footerNote: "After 14 days, all trial limits lift and full Business access continues from £79/month. Cancel before the trial ends and you will not be charged.",
+          footerNote: "After 14 days, all trial limits lift and full Business access continues automatically at £79/month — no card is required to start the trial, but a payment method will be requested at activation. You can cancel before the trial ends and you will not be charged. Subscriptions can be cancelled at any time from your account settings.",
           cta: { label: "Start Business trial", href: "https://appdeploy.scotitech.com/request-access", external: true },
         },
         {
@@ -297,7 +297,7 @@ export const products = {
     ],
     cta: {
       title: "Give private app delivery a product-grade front door.",
-      body: "Start a 14-day free trial — no card required — or talk to our team about an Enterprise rollout.",
+      body: "Start a 14-day free trial — no card required to begin — or talk to our team about an Enterprise rollout.",
       primary: "Talk to our team",
       secondary: { label: "Book a call", href: "/contact" },
     },
