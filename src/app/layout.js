@@ -12,6 +12,7 @@ import CookiePreferencesModal from "@/components/cookie/CookiePreferencesModal";
 import JsonLd from "@/components/seo/JsonLd";
 import GoogleAnalytics from "@/components/seo/GoogleAnalytics";
 import ApolloTracker from "@/components/seo/ApolloTracker";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -197,6 +198,7 @@ export default function RootLayout({ children }) {
             <CookiePreferencesModal />
             <GoogleAnalytics />
             <ApolloTracker />
+            <SpeedInsights />
           </CookieConsentProvider>
         </ModalProvider>
       </body>
