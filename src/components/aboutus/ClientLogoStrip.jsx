@@ -14,13 +14,19 @@ const logos = [
     href: null,
   },
   {
-    name: "No94oo",
+    name: "CRMNext",
     image: "/images/aboutus/no94oo-logo.png",
     href: null,
   },
+  {
+    name: "Olympus Residency",
+    image: "/images/home/olympus-residency-logo.png",
+    href: null,
+    blendMultiply: true,
+  },
 ];
 
-const marqueeLogos = [...logos, ...logos];
+const marqueeLogos = [...logos, ...logos, ...logos];
 
 const LogoTile = ({ logo }) => {
   const content = (
@@ -31,7 +37,7 @@ const LogoTile = ({ logo }) => {
           alt={logo.name}
           width={160}
           height={64}
-          className="h-16 w-auto max-w-[160px] object-contain saturate-0 transition duration-300 hover:saturate-100"
+          className={`h-16 w-auto max-w-[160px] object-contain saturate-0 transition duration-300 hover:saturate-100${logo.blendMultiply ? " mix-blend-multiply" : ""}`}
         />
       ) : (
         <div className="flex h-16 w-[160px] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-slate-50 px-4 text-center font-karla text-sm font-semibold uppercase tracking-[0.16em] text-slate-400">
@@ -94,9 +100,7 @@ export default function ClientLogoStrip() {
           from {
             transform: translateX(0);
           }
-          to {
-            transform: translateX(calc(-50% - 0.625rem));
-          }
+          to { transform: translateX(calc(-33.333% - 0.833rem)); }
         }
       `}</style>
     </section>
