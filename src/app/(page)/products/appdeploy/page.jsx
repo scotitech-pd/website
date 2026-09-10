@@ -10,7 +10,7 @@ export const metadata = {
     "AppDeploy",
     "private app distribution",
     "internal iOS app distribution",
-    "Apple Business Manager alternative",
+    "Apple Business Manager integration",
     "branded app portal",
     "enterprise iOS distribution",
     "remote iOS app deployment",

@@ -26,14 +26,18 @@ export const products = {
     featuresTitle: "Publish, guide, and review app access from one place.",
     howItWorksTitle: "One path from request to release review.",
     statement: {
-      eyebrow: "Rollout architecture",
-      title: "Built for controlled app rollout, not a full device-management suite.",
-      body: "AppDeploy combines Apple Business distribution, signed app delivery, a branded user workspace, and focused remote deployment capacity with device actions, OS-update enforcement and compliance evidence. MDM-free by default, with optional managed deployment for company-owned devices — Business includes AutoDeploy for five enrolled Apple devices, with additional capacity available on the same subscription.",
+      eyebrow: "App access for your team",
+      title: "Give employees access to the right apps.",
+      body: "Many organisations need to give employees access to a private business app without introducing a large device-management platform. AppDeploy, built and operated by ScotiTech Solutions Limited, provides a controlled internal app distribution route: branded self-service access where device management is unnecessary, with managed Apple deployment available when silent installation and device-level visibility are required.",
+      link: {
+        label: "See how internal app distribution works",
+        href: "https://appdeploy.scotitech.com/internal-app-distribution",
+      },
       points: [
-        { title: "Entitlement-led access", body: "App availability managed per organisation and user, not per device." },
-        { title: "Apple Business aligned", body: "Apps & Books token sync and Managed Apple ID workflows underneath." },
-        { title: "Remote deployment capacity", body: "AutoDeploy is included for the first five enrolled Apple devices on Business." },
-        { title: "Rollout audit trail", body: "App assignment, command status, sync, and delivery events stay reviewable." },
+        { title: "Production business apps", body: "AppDeploy is Apple-first. Business supports private iOS and iPadOS distribution; Android APK delivery is available through Enterprise only." },
+        { title: "One workspace", body: "Self-service access and managed Apple deployment can run side by side in the same workspace." },
+        { title: "Works with Apple Business Manager", body: "Apple Business Manager remains the source for eligible apps, licences and automated device assignments. AppDeploy builds on those services." },
+        { title: "Management where needed", body: "AutoDeploy adds managed-device capabilities for enrolled Apple devices, including silent installation on supervised devices and device-level visibility." },
       ],
     },
     hero: {

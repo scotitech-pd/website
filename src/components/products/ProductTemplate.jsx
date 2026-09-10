@@ -336,6 +336,15 @@ export default function ProductTemplate({ product }) {
               <p className="mt-5 font-karla text-lg leading-relaxed text-on-ink-muted">
                 {product.statement.body}
               </p>
+              {product.statement.link && (
+                <a
+                  href={product.statement.link.href}
+                  className="mt-6 inline-flex min-h-11 max-w-full items-center gap-2 rounded-sm font-karla text-base font-semibold text-brand-soft underline decoration-brand-soft/50 underline-offset-4 transition-colors hover:text-on-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-soft"
+                >
+                  <span>{product.statement.link.label}</span>
+                  <ArrowRight size={17} className="shrink-0" aria-hidden="true" />
+                </a>
+              )}
             </Reveal>
             {product.statement.points && (
               <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
