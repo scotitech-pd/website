@@ -213,6 +213,54 @@ export default async function InsightArticlePage({ params }) {
                 ))}
               </div>
 
+              {insight.workedExample ? (
+              <div className="mt-12 rounded-xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-7">
+                <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b] mb-3">
+                  {insight.workedExample.eyebrow}
+                </p>
+                <h2 className="text-2xl sm:text-3xl font-karla font-semibold text-slate-900 mb-4">
+                  {insight.workedExample.title}
+                </h2>
+                <p className="font-lora leading-7 text-slate-700 mb-6">
+                  {insight.workedExample.intro}
+                </p>
+                <ol className="grid grid-cols-1 gap-4">
+                  {insight.workedExample.steps.map((step, index) => (
+                    <li
+                      key={step.label}
+                      className="flex items-start gap-4 rounded-lg border border-slate-200 bg-white p-4"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#0F766E] font-karla text-sm font-semibold text-white"
+                      >
+                        {index + 1}
+                      </span>
+                      <div>
+                        <h3 className="font-karla font-semibold text-slate-900">
+                          {step.label}
+                        </h3>
+                        <p className="mt-1 font-lora leading-7 text-slate-700">
+                          {step.body}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+                {insight.workedExample.link && (
+                  <p className="mt-6 font-lora leading-7 text-slate-700">
+                    {insight.workedExample.link.prefix}{" "}
+                    <a
+                      href={insight.workedExample.link.href}
+                      className="font-semibold text-[#0F766E] underline underline-offset-4 hover:text-slate-900"
+                    >
+                      {insight.workedExample.link.label}
+                    </a>
+                    .
+                  </p>
+                )}
+              </div>
+              ) : (
               <div className="mt-12 rounded-xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-7">
                 <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b] mb-3">
                   SME checklist
@@ -234,6 +282,7 @@ export default async function InsightArticlePage({ params }) {
                   ))}
                 </div>
               </div>
+              )}
             </article>
 
             <aside className="lg:sticky lg:top-28 space-y-5">

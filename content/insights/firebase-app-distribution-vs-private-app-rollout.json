@@ -8,7 +8,7 @@
   "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where AppDeploy should sit: not as a Firebase replacement, but as the operating layer for private app rollout.",
   "seoDescription": "Firebase App Distribution is built for pre-release app testing. Learn why private app distribution, iOS rollout, MDM app distribution, and AppDeploy need a different operating layer.",
   "date": "2026-07-14",
-  "updated": "2026-07-14",
+  "updated": "2026-10-06",
   "displayDate": "14 July 2026",
   "readTime": "5 min read",
   "sourceName": "Firebase Docs",
@@ -87,5 +87,33 @@
     "Separate tester distribution from production private app rollout before users are invited.",
     "Map eligibility, version ownership, support routes, and rollout evidence before launch.",
     "Use AppDeploy as the business-facing layer for private app distribution once the app needs controlled adoption."
-  ]
+  ],
+  "workedExample": {
+    "eyebrow": "Worked handover example",
+    "title": "Handing a tested iPad app from Firebase to staff",
+    "intro": "Illustrative scenario: an internal inspection app for iPad has passed testing with a small QA group in Firebase App Distribution. The team now needs field staff using the approved build, with a clear owner for support.",
+    "steps": [
+      {
+        "label": "Testing stays where it works",
+        "body": "Engineers keep sending release candidates to the QA tester group in Firebase App Distribution. The tester list is never used as the production audience, and field staff are not invited to it."
+      },
+      {
+        "label": "Handover is a named decision",
+        "body": "The product owner signs off one build number as the production release. From that point, the Firebase tester link is no longer how anyone outside QA gets the app."
+      },
+      {
+        "label": "Map the rollout before inviting anyone",
+        "body": "The team records who is eligible, which version is approved, who answers install problems, and what evidence shows the rollout is complete. Each answer has a named owner."
+      },
+      {
+        "label": "Move production access to a controlled route",
+        "body": "In AppDeploy, eligible staff get the approved build through a branded self-service workspace with install guidance. Company-owned, supervised iPads can receive it as a managed install instead, and both routes sit in the same workspace."
+      }
+    ],
+    "link": {
+      "prefix": "For the full set of production routes, managed and unmanaged devices, and release controls, read the",
+      "label": "AppDeploy guide to internal app distribution",
+      "href": "https://appdeploy.scotitech.com/internal-app-distribution"
+    }
+  }
 }
