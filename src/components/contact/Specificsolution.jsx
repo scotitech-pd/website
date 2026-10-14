@@ -9,7 +9,7 @@ const SpecificSolution = () => {
       id: 1,
       name: "AppDeploy",
       image: "/images/brand/appdeploy-logo-black.png",
-      description: "Internal app distribution built around Apple Business workflows",
+      description: "Apple device management and private app distribution, built on Apple Business",
       link: "/products/appdeploy",
     },
     {

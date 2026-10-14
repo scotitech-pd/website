@@ -8,8 +8,8 @@ const problems = [
   {
     no: "01",
     icon: Smartphone,
-    title: "Internal app rollout is messy",
-    body: "Distributing iOS apps to staff and partners relies on manual steps, unclear access, and no view of who has which release.",
+    title: "Company devices and apps are messy",
+    body: "Setting up Macs and iPhones, getting private apps onto them, and proving it all to an auditor takes manual steps across too many tools.",
     solved: "AppDeploy",
     accent: "text-orange-400",
     glowColor: "rgba(226,88,14,0.15)",

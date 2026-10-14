@@ -2,30 +2,33 @@ import ProductTemplate from "@/components/products/ProductTemplate";
 import { getProduct } from "@/lib/products";
 
 export const metadata = {
-  title: "AppDeploy — Private iOS App Distribution",
+  title: "AppDeploy — Apple Device Management and Private App Distribution",
   description:
-    "Private app distribution with optional remote deployment, built around Apple Business. Branded access pages, one-tap install, release control, and rollout visibility for teams and partners.",
+    "Manage iPhone, iPad and Mac and give your people a branded app store, in one workspace built on Apple Business. Zero-touch setup, security baselines, FileVault, compliance evidence and release controls. First 5 devices free, then £1 per device a month.",
   alternates: { canonical: "/products/appdeploy" },
   keywords: [
     "AppDeploy",
+    "Apple device management",
+    "Mac device management",
+    "iPhone and iPad management",
     "private app distribution",
     "internal iOS app distribution",
-    "Apple Business Manager integration",
-    "branded app portal",
-    "enterprise iOS distribution",
-    "remote iOS app deployment",
+    "Apple Business integration",
+    "branded app store",
+    "SOC 2 device evidence",
+    "zero-touch enrolment",
   ],
   openGraph: {
-    title: "AppDeploy — Private iOS App Distribution",
+    title: "AppDeploy — Apple Device Management and Private App Distribution",
     description:
-      "Private app distribution with optional remote deployment, built around Apple Business. Branded portal, one-tap install, full rollout visibility.",
+      "iPhone, iPad and Mac management with your own branded app store, built on Apple Business. First 5 devices free, then £1 per device a month.",
     url: "/products/appdeploy",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AppDeploy — Private iOS App Distribution",
-    description: "Private app distribution with optional remote deployment, built around Apple Business.",
+    title: "AppDeploy — Apple Device Management and Private App Distribution",
+    description: "iPhone, iPad and Mac management with your own branded app store, built on Apple Business.",
   },
 };
 

@@ -11,12 +11,12 @@ import { products } from "@/lib/products";
 export const metadata = {
   title: "Products",
   description:
-    "Explore ScotiTech products: AppDeploy for private iOS app distribution, AXOS for enterprise AI workspaces, and ClarityPath for guided decision support.",
+    "Explore ScotiTech products: AppDeploy for Apple device management and private app distribution, AXOS for enterprise AI workspaces, and ClarityPath for guided decision support.",
   alternates: { canonical: "/products" },
   openGraph: {
     title: "Products — AppDeploy, AXOS, ClarityPath",
     description:
-      "Private app distribution, governance-first AI workspaces, and guided decision support.",
+      "Apple device management and private apps, governance-first AI workspaces, and guided decision support.",
     url: "/products",
     type: "website",
   },
@@ -39,8 +39,8 @@ export default function ProductsPage() {
               Focused products, built for control.
             </h1>
             <p className="t-lead mt-5 max-w-2xl">
-              Two flagship products lead the portfolio — AppDeploy for internal
-              app distribution and AXOS for private enterprise operations — supported
+              Two flagship products lead the portfolio — AppDeploy for Apple
+              devices and private apps, and AXOS for private enterprise operations — supported
               by ClarityPath for sensitive decision journeys.
             </p>
           </Reveal>

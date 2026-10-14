@@ -95,8 +95,8 @@ export default function HeroSection() {
           {...rise(0.16)}
           className="mt-6 max-w-2xl font-karla text-[clamp(1rem,0.9rem+0.5vw,1.2rem)] leading-relaxed text-white/55"
         >
-          ScotiTech builds and supports focused software for private app
-          distribution and controlled enterprise operations — led from Scotland
+          ScotiTech builds and supports focused software for Apple device
+          management, private app distribution and controlled enterprise operations — led from Scotland
           and working with organisations worldwide through{" "}
           <span className="text-white/80 font-medium">AppDeploy</span> and{" "}
           <span className="text-white/80 font-medium">AXOS</span>.
@@ -150,7 +150,7 @@ export default function HeroSection() {
             <ProductShowcase
               variant="appdeploy"
               src="/images/products/appdeploy/claritypath-portal.webp"
-              alt="AppDeploy Business organisation portal showing approved apps"
+              alt="AppDeploy branded app store showing approved apps"
               priority
             />
           </motion.div>

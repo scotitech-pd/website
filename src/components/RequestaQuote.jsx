@@ -20,7 +20,7 @@ const agenda = [
 const sessions = [
   {
     name: "AppDeploy session",
-    body: "For teams distributing private or internal iOS apps through Apple Business, with controlled installs and clear rollout governance.",
+    body: "For teams managing iPhones, iPads and Macs, or distributing private apps through Apple Business, with controlled installs and clear rollout governance.",
     cta: "Book AppDeploy session",
   },
   {
@@ -133,7 +133,7 @@ export default function RequestaQuote() {
           <span className="t-eyebrow">Schedule a meeting</span>
           <h2 className="t-h3 mt-2 pr-8">Book the session that fits your goals.</h2>
           <p className="t-body mt-3">
-            Choose AppDeploy for private iOS rollout or AXOS for secure workspace
+            Choose AppDeploy for Apple devices and private apps, or AXOS for secure workspace
             planning, then book instantly with the right team.
           </p>
 

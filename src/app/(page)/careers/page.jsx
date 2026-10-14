@@ -66,9 +66,9 @@ const productsToKnow = [
   {
     name: "AppDeploy",
     status: "Live",
-    tagline: "Private app distribution with optional remote deployment, built around Apple Business.",
+    tagline: "Apple device management and private app distribution for iPhone, iPad and Mac, built on Apple Business.",
     audience:
-      "IT leaders and operations teams distributing internal iOS apps to employees, testers, or partner organisations.",
+      "Companies with private apps, startups setting up company devices, and the app agencies and Apple IT firms that support them.",
   },
   {
     name: "AXOS",

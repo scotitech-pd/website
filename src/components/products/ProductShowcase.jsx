@@ -11,13 +11,13 @@ import { cn } from "@/lib/utils";
 
 const showcaseContent = {
   appdeploy: {
-    kicker: "AppDeploy control plane",
+    kicker: "AppDeploy console",
     status: "Live",
-    index: "01 / Distribution",
-    primaryLabel: "Business",
-    primaryValue: "From £79/mo",
+    index: "01 / Devices and apps",
+    primaryLabel: "Devices",
+    primaryValue: "5 free, then £1",
     secondaryLabel: "Apple Business",
-    secondaryValue: "Aligned rollout",
+    secondaryValue: "Zero-touch setup",
     Icon: Building2,
   },
   axos: {

@@ -6,13 +6,13 @@ import Reveal from "@/components/Reveal";
 const productProof = [
   {
     name: "AppDeploy",
-    label: "Private app rollout",
+    label: "Apple devices and private apps",
     href: "/products/appdeploy",
     image: "/images/products/appdeploy/dashboard.png",
     imageAlt: "AppDeploy admin dashboard showing branded workspace, reports, quick actions, and platform status",
     summary:
-      "A branded admin workspace for entitlement-led private iOS releases, reviewing installs, managing access, and keeping rollout activity visible.",
-    points: ["Branded portal", "Entitlement access", "Release workflow"],
+      "One admin workspace for iPhone, iPad and Mac: set devices up, install apps, keep every device healthy and compliant, and ship private releases through your own branded app store.",
+    points: ["Device management", "Branded app store", "Release controls"],
     tone: "blue",
   },
   {

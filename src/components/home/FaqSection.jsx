@@ -10,11 +10,11 @@ import Eyebrow from "@/components/ui/Eyebrow";
 const faqs = [
   {
     q: "What does ScotiTech sell today?",
-    a: "ScotiTech currently leads with focused software products rather than a broad service catalogue. AppDeploy is for private app distribution and rollout operations. AXOS is for organisations evaluating a controlled, enterprise AI workspace with stronger hosting, governance, and data-control requirements.",
+    a: "ScotiTech currently leads with focused software products rather than a broad service catalogue. AppDeploy is for Apple device management, private app distribution and release controls. AXOS is for organisations evaluating a controlled, enterprise AI workspace with stronger hosting, governance, and data-control requirements.",
   },
   {
     q: "Who is AppDeploy a serious fit for?",
-    a: "AppDeploy is a strong fit for organisations that already have a private or internal app and need a cleaner way to control access, explain installs, manage branded rollout, and reduce confusion around who gets what version and when.",
+    a: "AppDeploy is a strong fit for organisations that already have a private or internal app and need a cleaner way to control access and rollout, and for startups setting up company Macs, iPhones and iPads with the device evidence a SOC 2, ISO 27001 or Cyber Essentials audit asks for.",
   },
   {
     q: "When should we talk about AXOS instead of a normal SaaS workspace?",

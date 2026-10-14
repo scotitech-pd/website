@@ -19,19 +19,19 @@ const flagships = [
     logo: "/images/brand/appdeploy-logo-black.png",
     accent: "bg-appdeploy",
     status: { variant: "live", dot: true, label: "Live" },
-    category: "Private app distribution",
-    tagline: "Your apps. Your brand. Typical enterprise rollout: around 14 days.",
+    category: "Apple devices and private apps",
+    tagline: "Your devices. Your apps. Your brand.",
     description:
-      "A branded workspace for private iOS and Android app delivery, built around Apple Business. MDM-free by default, with optional managed deployment for company-owned devices — you choose the level of control you need.",
+      "Device management for iPhone, iPad and Mac with your own branded app store, built on Apple Business. The first 5 devices are free, then £1 per device a month, with every device feature included.",
     bestFor:
-      "Teams shipping private mobile apps to employees, client teams, or external partners.",
+      "Companies with private apps, startups setting up company devices, and the agencies and IT firms that support them.",
     rollout:
-      "Branded portal, guided installs, release notes, access control, and clearer app rollout visibility.",
-    capabilities: ["Branded portal", "Apple Business", "Android: Enterprise"],
+      "Zero-touch setup, silent app installs, security baselines, FileVault, compliance evidence and a branded app store.",
+    capabilities: ["iPhone, iPad, Mac", "Apple Business", "SOC 2 / ISO evidence"],
     media: {
       type: "image",
       src: "/images/products/appdeploy/claritypath-portal.webp",
-      alt: "AppDeploy organisation portal showing ClarityPath and other approved business apps",
+      alt: "AppDeploy branded app store showing ClarityPath and other approved business apps",
     },
   },
   {
@@ -70,7 +70,7 @@ export default function OurProducts() {
               Product infrastructure for private rollout and controlled work.
             </h2>
             <p className="t-lead mt-5">
-              AppDeploy is live for private mobile app distribution. AXOS is a
+              AppDeploy is live for Apple device management and private app distribution. AXOS is a
                 completed core platform currently available for private enterprise
               evaluation. Both are built for
               organisations that care about adoption, governance, and where

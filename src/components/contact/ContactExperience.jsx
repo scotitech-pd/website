@@ -21,8 +21,8 @@ import { meetingLinks } from "@/lib/scheduling";
 const productPaths = [
   {
     name: "AppDeploy",
-    eyebrow: "Private app rollout",
-    description: "Branded internal app access, install guidance, and release control.",
+    eyebrow: "Apple devices and private apps",
+    description: "iPhone, iPad and Mac management, a branded app store, and release controls.",
     href: "/products/appdeploy",
     accent: "from-orange-500/20 via-amber-400/10 to-white/0",
   },

@@ -93,8 +93,8 @@ export default function AboutPage() {
               how software is deployed and where their data lives.
             </p>
             <p className="t-body">
-              That's the principle behind our portfolio. AppDeploy makes internal
-              app distribution controlled and clear. AXOS brings everyday team
+              That's the principle behind our portfolio. AppDeploy makes company
+              Apple devices and private apps simple to manage and easy to prove. AXOS brings everyday team
               operations into one private, self-hostable environment with AI built
               in. ClarityPath supports structured, sensitive decision journeys.
             </p>
