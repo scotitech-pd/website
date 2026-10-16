@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/private-ai",
+      "destination": "/private-ai.html"
+    },
+    {
+      "source": "/private-ai/",
+      "destination": "/private-ai.html"
+    }
+  ]
+}
