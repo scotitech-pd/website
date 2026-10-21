@@ -6,9 +6,9 @@
   "topic": "UK enterprise mobility",
   "title": "Why are so many Apple device-management vendors American?",
   "summary": "Apple Business launched worldwide in April 2026 with a free MDM layer and an Admin API — and the vendors building on it are almost all American. We went looking for a UK-built platform doing standalone app distribution on Apple's business APIs, then had independent research tools look too. Neither search found one. Here is why that gap matters for UK organisations, and what we built into it.",
-  "seoDescription": "Jamf, Kandji, Mosyle and SimpleMDM are all US companies. Research found no other UK-built SaaS doing standalone Apple Business app distribution. AppDeploy is built in Scotland.",
+  "seoDescription": "Jamf, Kandji, Mosyle and SimpleMDM are all US companies. Research found no other UK-built SaaS doing standalone Apple Business app distribution. Vamiq is built in Scotland.",
   "date": "2026-08-29",
-  "updated": "2026-08-29",
+  "updated": "2026-10-21",
   "displayDate": "29 August 2026",
   "readTime": "6 min read",
   "sourceName": "Apple Newsroom — Introducing Apple Business",
@@ -23,13 +23,13 @@
     "MDM alternative",
     "Apple Business Manager",
     "iOS app deployment",
-    "AppDeploy"
+    "Vamiq"
   ],
   "relatedProduct": {
-    "name": "AppDeploy",
-    "href": "/products/appdeploy",
+    "name": "Vamiq",
+    "href": "/products/vamiq",
     "description": "Private app distribution built around Apple Business, with optional remote deployment — built in Scotland, hosted in Glasgow.",
-    "cta": "Explore AppDeploy"
+    "cta": "Explore Vamiq"
   },
   "highlights": [
     {
@@ -45,7 +45,7 @@
     {
       "label": "Built here",
       "value": "Glasgow",
-      "description": "AppDeploy is UK-incorporated, UK-hosted, with EEA encrypted backups and no US transfer by default."
+      "description": "Vamiq is UK-incorporated and UK-hosted, with no US transfer by default."
     }
   ],
   "sections": [
@@ -67,7 +67,7 @@
       "heading": "We looked for a UK-built alternative. Then we asked the research tools to prove us wrong.",
       "paragraphs": [
         "Before saying anything in public, we searched for a UK-incorporated SaaS company building a standalone product for app distribution on Apple's business APIs. We then ran the same question through independent AI research tools across business registries, tech press and startup databases.",
-        "Neither pass found one. No UK startup with recent funding or coverage in this niche; no UK-registered software company with a public product, site or hiring in Apple Business API-based app distribution. As far as we and the tools can establish, AppDeploy is operating in a category of one within the UK.",
+        "Neither pass found one. No UK startup with recent funding or coverage in this niche; no UK-registered software company with a public product, site or hiring in Apple Business API-based app distribution. As far as we and the tools can establish, Vamiq is operating in a category of one within the UK.",
         "We are saying that carefully, and we mean the narrow claim: a UK-built SaaS product whose core is app distribution on Apple's business APIs, where device management is optional rather than the entry fee. If we have missed a UK-built platform doing this, tell us at info@scotitech.com — we will link them from this article. A claim you invite people to falsify is worth more than one you hope nobody checks."
       ]
     },
@@ -75,15 +75,15 @@
       "heading": "Why a UK-built layer matters now",
       "paragraphs": [
         "For most UK organisations this is not about flag-waving. It is about where the operational layer above their Apple estate lives, who operates it, and under which laws.",
-        "AppDeploy is operated by a Scottish-registered company, hosted in Glasgow, with encrypted backups held in the EEA and no US transfer by default. The data-processing agreement, sub-processor list and service status are published, not gated behind sales. For public-sector-adjacent, legal, healthcare and finance buyers who must answer data-residency questions in procurement, a UK operational layer on top of Apple's platform is a materially simpler answer.",
-        "Architecture is the other half. Apple Business now gives every organisation a free MDM layer — which makes it more important, not less, to separate two decisions most platforms couple: getting an app onto a device, and managing the device. AppDeploy distributes through a branded portal with no enrolment at all, and treats silent MDM-based deployment as an optional, per-device add-on. You buy control only where you need it."
+        "Vamiq is operated by a Scottish-registered company, hosted in Glasgow, with no US transfer by default; encrypted off-server backups in the EU are being set up. The data-processing agreement, sub-processor list and service status are published, not gated behind sales. For public-sector-adjacent, legal, healthcare and finance buyers who must answer data-residency questions in procurement, a UK operational layer on top of Apple's platform is a materially simpler answer.",
+        "Architecture is the other half. Apple Business now gives every organisation a free MDM layer — which makes it more important, not less, to separate two decisions most platforms couple: getting an app onto a device, and managing the device. Vamiq distributes through a branded portal with no enrolment at all, and treats silent MDM-based deployment as an optional, per-device add-on. You buy control only where you need it."
       ]
     },
     {
       "heading": "What this means if you are choosing tooling",
       "paragraphs": [
         "If your organisation needs full device management across the fleet — configuration profiles, macOS patching, compliance dashboards — the American suites are mature and Apple's own free MDM layer is now an option. We say that plainly on our comparison pages.",
-        "But if your actual problem is getting your own apps to your own people — employees, field teams, client organisations — with governance, audit and rollout control, you no longer have to buy a device-management programme to get it, and you no longer have to buy American to get it either. That is the segment AppDeploy is built for: teams who have outgrown Apple's free tier but are not ready for a full MDM platform \u2014 the control layer in between."
+        "But if your actual problem is getting your own apps to your own people — employees, field teams, client organisations — with governance, audit and rollout control, you no longer have to buy a device-management programme to get it, and you no longer have to buy American to get it either. That is the segment Vamiq is built for: teams who have outgrown Apple's free tier but are not ready for a full MDM platform \u2014 the control layer in between."
       ]
     }
   ],

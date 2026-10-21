@@ -5,10 +5,10 @@
   "category": "App Distribution",
   "topic": "Firebase App Distribution",
   "title": "Firebase App Distribution solves testing, not private app rollout",
-  "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where AppDeploy should sit: not as a Firebase replacement, but as the operating layer for private app rollout.",
-  "seoDescription": "Firebase App Distribution is built for pre-release app testing. Learn why private app distribution, iOS rollout, MDM app distribution, and AppDeploy need a different operating layer.",
+  "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where Vamiq should sit: not as a Firebase replacement, but as the operating layer for private app rollout.",
+  "seoDescription": "Firebase App Distribution is built for pre-release app testing. Learn why private app distribution, iOS rollout, MDM app distribution, and Vamiq need a different operating layer.",
   "date": "2026-07-14",
-  "updated": "2026-10-06",
+  "updated": "2026-10-21",
   "displayDate": "14 July 2026",
   "readTime": "5 min read",
   "sourceName": "Firebase Docs",
@@ -20,13 +20,13 @@
     "private app distribution",
     "iOS app distribution",
     "Android app distribution",
-    "AppDeploy"
+    "Vamiq"
   ],
   "relatedProduct": {
-    "name": "AppDeploy",
-    "href": "/products/appdeploy",
+    "name": "Vamiq",
+    "href": "/products/vamiq",
     "description": "A branded operational layer for private app access, install guidance, rollout visibility, and clearer release communication.",
-    "cta": "Explore AppDeploy"
+    "cta": "Explore Vamiq"
   },
   "highlights": [
     {
@@ -40,9 +40,9 @@
       "description": "Firebase is useful for sending Android and iOS builds to trusted testers, collecting feedback, and supporting development workflows."
     },
     {
-      "label": "AppDeploy fit",
+      "label": "Vamiq fit",
       "value": "Private rollout",
-      "description": "AppDeploy is stronger when the question becomes who should access the app, which version is approved, and how rollout is supported."
+      "description": "Vamiq is stronger when the question becomes who should access the app, which version is approved, and how rollout is supported."
     }
   ],
   "sections": [
@@ -68,17 +68,17 @@
       ]
     },
     {
-      "heading": "Where AppDeploy fits beside Firebase, TestFlight, and MDM",
+      "heading": "Where Vamiq fits beside Firebase, TestFlight, and MDM",
       "paragraphs": [
-        "AppDeploy should not pretend to replace every developer distribution tool. Firebase App Distribution, TestFlight, and fastlane all have clear roles in build testing and release operations. MDM tools have a clear role in managed device environments.",
-        "AppDeploy fits above that layer as the branded business front door: one place for app access, install guidance, rollout status, release communication, support context, and the operational evidence a team needs after the build leaves the engineering workflow."
+        "Vamiq should not pretend to replace every developer distribution tool. Firebase App Distribution, TestFlight, and fastlane all have clear roles in build testing and release operations. MDM tools have a clear role in managed device environments.",
+        "Vamiq fits above that layer as the branded business front door: one place for app access, install guidance, rollout status, release communication, support context, and the operational evidence a team needs after the build leaves the engineering workflow."
       ]
     },
     {
       "heading": "The ScotiTech view",
       "paragraphs": [
         "The best SEO answer is also the honest product answer: Firebase App Distribution is excellent for pre-release app testing, but private app distribution needs more than a tester workflow.",
-        "For AppDeploy, the opportunity is to own the messy middle between technical distribution and real adoption. That means clearer Apple Business Manager custom app rollout, better iOS app distribution guidance, MDM-aware status, and a user experience that feels credible to the business, not only the developer."
+        "For Vamiq, the opportunity is to own the messy middle between technical distribution and real adoption. That means clearer Apple Business Manager custom app rollout, better iOS app distribution guidance, MDM-aware status, and a user experience that feels credible to the business, not only the developer."
       ]
     }
   ],
@@ -86,34 +86,34 @@
     "Use Firebase App Distribution, TestFlight, or fastlane for pre-release testing workflows where they fit.",
     "Separate tester distribution from production private app rollout before users are invited.",
     "Map eligibility, version ownership, support routes, and rollout evidence before launch.",
-    "Use AppDeploy as the business-facing layer for private app distribution once the app needs controlled adoption."
+    "Use Vamiq as the business-facing layer for private app distribution once the app needs controlled adoption."
   ],
   "workedExample": {
     "eyebrow": "Worked handover example",
     "title": "Handing a tested iPad app from Firebase to staff",
-    "intro": "Illustrative scenario: an internal inspection app for iPad has passed testing with a small QA group in Firebase App Distribution. The team now needs field staff using the approved build, with a clear owner for support.",
+    "intro": "Illustrative example: five QA testers approve version 1.4 (build 42) of an internal iPad inspection app in Firebase App Distribution. Operations now needs to release it to 30 field staff. Here is what the handover looks like.",
     "steps": [
       {
         "label": "Testing stays where it works",
-        "body": "Engineers keep sending release candidates to the QA tester group in Firebase App Distribution. The tester list is never used as the production audience, and field staff are not invited to it."
+        "body": "Engineering keeps the five QA testers in Firebase for future release candidates. The product owner records build 42, the test sign-off and release notes as the approved production release."
       },
       {
-        "label": "Handover is a named decision",
-        "body": "The product owner signs off one build number as the production release. From that point, the Firebase tester link is no longer how anyone outside QA gets the app."
+        "label": "Choose the production route",
+        "body": "IT confirms the app's approved Apple distribution route, such as a Custom App made available to the organisation through Apple Business Manager. A Firebase invitation is not converted into a production licence or installation route."
       },
       {
-        "label": "Map the rollout before inviting anyone",
-        "body": "The team records who is eligible, which version is approved, who answers install problems, and what evidence shows the rollout is complete. Each answer has a named owner."
+        "label": "Pilot with five field staff",
+        "body": "IT assigns the approved app to a five-person pilot in Vamiq. Staff use the organisation portal and install guidance, or managed deployment on eligible enrolled devices. Operations checks installation and a completed inspection before inviting the remaining 25 staff."
       },
       {
-        "label": "Move production access to a controlled route",
-        "body": "In AppDeploy, eligible staff get the approved build through a branded self-service workspace with install guidance. Company-owned, supervised iPads can receive it as a managed install instead, and both routes sit in the same workspace."
+        "label": "Close the handover with evidence",
+        "body": "The handover record names the release owner and support contact, identifies the approved version, and records deployment outcomes where reported. Self-service users confirm access separately; a portal invitation alone is not proof of installation."
       }
     ],
     "link": {
-      "prefix": "For the full set of production routes, managed and unmanaged devices, and release controls, read the",
-      "label": "AppDeploy guide to internal app distribution",
-      "href": "https://appdeploy.scotitech.com/internal-app-distribution"
+      "prefix": "Planning the same move from Firebase testing to employee rollout? Compare Apple distribution routes, self-service access and managed deployment in the",
+      "label": "Vamiq guide to internal app distribution",
+      "href": "https://vamiq.app/internal-app-distribution"
     }
   }
 }

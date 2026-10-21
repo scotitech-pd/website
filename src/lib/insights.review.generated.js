@@ -10,9 +10,9 @@ export const allInsights = [
     "topic": "UK enterprise mobility",
     "title": "Why are so many Apple device-management vendors American?",
     "summary": "Apple Business launched worldwide in April 2026 with a free MDM layer and an Admin API — and the vendors building on it are almost all American. We went looking for a UK-built platform doing standalone app distribution on Apple's business APIs, then had independent research tools look too. Neither search found one. Here is why that gap matters for UK organisations, and what we built into it.",
-    "seoDescription": "Jamf, Kandji, Mosyle and SimpleMDM are all US companies. Research found no other UK-built SaaS doing standalone Apple Business app distribution. AppDeploy is built in Scotland.",
+    "seoDescription": "Jamf, Kandji, Mosyle and SimpleMDM are all US companies. Research found no other UK-built SaaS doing standalone Apple Business app distribution. Vamiq is built in Scotland.",
     "date": "2026-08-29",
-    "updated": "2026-08-29",
+    "updated": "2026-10-21",
     "displayDate": "29 August 2026",
     "readTime": "6 min read",
     "sourceName": "Apple Newsroom — Introducing Apple Business",
@@ -27,13 +27,13 @@ export const allInsights = [
       "MDM alternative",
       "Apple Business Manager",
       "iOS app deployment",
-      "AppDeploy"
+      "Vamiq"
     ],
     "relatedProduct": {
-      "name": "AppDeploy",
-      "href": "/products/appdeploy",
+      "name": "Vamiq",
+      "href": "/products/vamiq",
       "description": "Private app distribution built around Apple Business, with optional remote deployment — built in Scotland, hosted in Glasgow.",
-      "cta": "Explore AppDeploy"
+      "cta": "Explore Vamiq"
     },
     "highlights": [
       {
@@ -49,7 +49,7 @@ export const allInsights = [
       {
         "label": "Built here",
         "value": "Glasgow",
-        "description": "AppDeploy is UK-incorporated, UK-hosted, with EEA encrypted backups and no US transfer by default."
+        "description": "Vamiq is UK-incorporated and UK-hosted, with no US transfer by default."
       }
     ],
     "sections": [
@@ -71,7 +71,7 @@ export const allInsights = [
         "heading": "We looked for a UK-built alternative. Then we asked the research tools to prove us wrong.",
         "paragraphs": [
           "Before saying anything in public, we searched for a UK-incorporated SaaS company building a standalone product for app distribution on Apple's business APIs. We then ran the same question through independent AI research tools across business registries, tech press and startup databases.",
-          "Neither pass found one. No UK startup with recent funding or coverage in this niche; no UK-registered software company with a public product, site or hiring in Apple Business API-based app distribution. As far as we and the tools can establish, AppDeploy is operating in a category of one within the UK.",
+          "Neither pass found one. No UK startup with recent funding or coverage in this niche; no UK-registered software company with a public product, site or hiring in Apple Business API-based app distribution. As far as we and the tools can establish, Vamiq is operating in a category of one within the UK.",
           "We are saying that carefully, and we mean the narrow claim: a UK-built SaaS product whose core is app distribution on Apple's business APIs, where device management is optional rather than the entry fee. If we have missed a UK-built platform doing this, tell us at info@scotitech.com — we will link them from this article. A claim you invite people to falsify is worth more than one you hope nobody checks."
         ]
       },
@@ -79,15 +79,15 @@ export const allInsights = [
         "heading": "Why a UK-built layer matters now",
         "paragraphs": [
           "For most UK organisations this is not about flag-waving. It is about where the operational layer above their Apple estate lives, who operates it, and under which laws.",
-          "AppDeploy is operated by a Scottish-registered company, hosted in Glasgow, with encrypted backups held in the EEA and no US transfer by default. The data-processing agreement, sub-processor list and service status are published, not gated behind sales. For public-sector-adjacent, legal, healthcare and finance buyers who must answer data-residency questions in procurement, a UK operational layer on top of Apple's platform is a materially simpler answer.",
-          "Architecture is the other half. Apple Business now gives every organisation a free MDM layer — which makes it more important, not less, to separate two decisions most platforms couple: getting an app onto a device, and managing the device. AppDeploy distributes through a branded portal with no enrolment at all, and treats silent MDM-based deployment as an optional, per-device add-on. You buy control only where you need it."
+          "Vamiq is operated by a Scottish-registered company, hosted in Glasgow, with no US transfer by default; encrypted off-server backups in the EU are being set up. The data-processing agreement, sub-processor list and service status are published, not gated behind sales. For public-sector-adjacent, legal, healthcare and finance buyers who must answer data-residency questions in procurement, a UK operational layer on top of Apple's platform is a materially simpler answer.",
+          "Architecture is the other half. Apple Business now gives every organisation a free MDM layer — which makes it more important, not less, to separate two decisions most platforms couple: getting an app onto a device, and managing the device. Vamiq distributes through a branded portal with no enrolment at all, and treats silent MDM-based deployment as an optional, per-device add-on. You buy control only where you need it."
         ]
       },
       {
         "heading": "What this means if you are choosing tooling",
         "paragraphs": [
           "If your organisation needs full device management across the fleet — configuration profiles, macOS patching, compliance dashboards — the American suites are mature and Apple's own free MDM layer is now an option. We say that plainly on our comparison pages.",
-          "But if your actual problem is getting your own apps to your own people — employees, field teams, client organisations — with governance, audit and rollout control, you no longer have to buy a device-management programme to get it, and you no longer have to buy American to get it either. That is the segment AppDeploy is built for: teams who have outgrown Apple's free tier but are not ready for a full MDM platform — the control layer in between."
+          "But if your actual problem is getting your own apps to your own people — employees, field teams, client organisations — with governance, audit and rollout control, you no longer have to buy a device-management programme to get it, and you no longer have to buy American to get it either. That is the segment Vamiq is built for: teams who have outgrown Apple's free tier but are not ready for a full MDM platform — the control layer in between."
         ]
       }
     ],
@@ -220,10 +220,10 @@ export const allInsights = [
     "category": "App Distribution",
     "topic": "Firebase App Distribution",
     "title": "Firebase App Distribution solves testing, not private app rollout",
-    "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where AppDeploy should sit: not as a Firebase replacement, but as the operating layer for private app rollout.",
-    "seoDescription": "Firebase App Distribution is built for pre-release app testing. Learn why private app distribution, iOS rollout, MDM app distribution, and AppDeploy need a different operating layer.",
+    "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where Vamiq should sit: not as a Firebase replacement, but as the operating layer for private app rollout.",
+    "seoDescription": "Firebase App Distribution is built for pre-release app testing. Learn why private app distribution, iOS rollout, MDM app distribution, and Vamiq need a different operating layer.",
     "date": "2026-07-14",
-    "updated": "2026-10-06",
+    "updated": "2026-10-21",
     "displayDate": "14 July 2026",
     "readTime": "5 min read",
     "sourceName": "Firebase Docs",
@@ -235,13 +235,13 @@ export const allInsights = [
       "private app distribution",
       "iOS app distribution",
       "Android app distribution",
-      "AppDeploy"
+      "Vamiq"
     ],
     "relatedProduct": {
-      "name": "AppDeploy",
-      "href": "/products/appdeploy",
+      "name": "Vamiq",
+      "href": "/products/vamiq",
       "description": "A branded operational layer for private app access, install guidance, rollout visibility, and clearer release communication.",
-      "cta": "Explore AppDeploy"
+      "cta": "Explore Vamiq"
     },
     "highlights": [
       {
@@ -255,9 +255,9 @@ export const allInsights = [
         "description": "Firebase is useful for sending Android and iOS builds to trusted testers, collecting feedback, and supporting development workflows."
       },
       {
-        "label": "AppDeploy fit",
+        "label": "Vamiq fit",
         "value": "Private rollout",
-        "description": "AppDeploy is stronger when the question becomes who should access the app, which version is approved, and how rollout is supported."
+        "description": "Vamiq is stronger when the question becomes who should access the app, which version is approved, and how rollout is supported."
       }
     ],
     "sections": [
@@ -283,17 +283,17 @@ export const allInsights = [
         ]
       },
       {
-        "heading": "Where AppDeploy fits beside Firebase, TestFlight, and MDM",
+        "heading": "Where Vamiq fits beside Firebase, TestFlight, and MDM",
         "paragraphs": [
-          "AppDeploy should not pretend to replace every developer distribution tool. Firebase App Distribution, TestFlight, and fastlane all have clear roles in build testing and release operations. MDM tools have a clear role in managed device environments.",
-          "AppDeploy fits above that layer as the branded business front door: one place for app access, install guidance, rollout status, release communication, support context, and the operational evidence a team needs after the build leaves the engineering workflow."
+          "Vamiq should not pretend to replace every developer distribution tool. Firebase App Distribution, TestFlight, and fastlane all have clear roles in build testing and release operations. MDM tools have a clear role in managed device environments.",
+          "Vamiq fits above that layer as the branded business front door: one place for app access, install guidance, rollout status, release communication, support context, and the operational evidence a team needs after the build leaves the engineering workflow."
         ]
       },
       {
         "heading": "The ScotiTech view",
         "paragraphs": [
           "The best SEO answer is also the honest product answer: Firebase App Distribution is excellent for pre-release app testing, but private app distribution needs more than a tester workflow.",
-          "For AppDeploy, the opportunity is to own the messy middle between technical distribution and real adoption. That means clearer Apple Business Manager custom app rollout, better iOS app distribution guidance, MDM-aware status, and a user experience that feels credible to the business, not only the developer."
+          "For Vamiq, the opportunity is to own the messy middle between technical distribution and real adoption. That means clearer Apple Business Manager custom app rollout, better iOS app distribution guidance, MDM-aware status, and a user experience that feels credible to the business, not only the developer."
         ]
       }
     ],
@@ -301,34 +301,34 @@ export const allInsights = [
       "Use Firebase App Distribution, TestFlight, or fastlane for pre-release testing workflows where they fit.",
       "Separate tester distribution from production private app rollout before users are invited.",
       "Map eligibility, version ownership, support routes, and rollout evidence before launch.",
-      "Use AppDeploy as the business-facing layer for private app distribution once the app needs controlled adoption."
+      "Use Vamiq as the business-facing layer for private app distribution once the app needs controlled adoption."
     ],
     "workedExample": {
       "eyebrow": "Worked handover example",
       "title": "Handing a tested iPad app from Firebase to staff",
-      "intro": "Illustrative scenario: an internal inspection app for iPad has passed testing with a small QA group in Firebase App Distribution. The team now needs field staff using the approved build, with a clear owner for support.",
+      "intro": "Illustrative example: five QA testers approve version 1.4 (build 42) of an internal iPad inspection app in Firebase App Distribution. Operations now needs to release it to 30 field staff. Here is what the handover looks like.",
       "steps": [
         {
           "label": "Testing stays where it works",
-          "body": "Engineers keep sending release candidates to the QA tester group in Firebase App Distribution. The tester list is never used as the production audience, and field staff are not invited to it."
+          "body": "Engineering keeps the five QA testers in Firebase for future release candidates. The product owner records build 42, the test sign-off and release notes as the approved production release."
         },
         {
-          "label": "Handover is a named decision",
-          "body": "The product owner signs off one build number as the production release. From that point, the Firebase tester link is no longer how anyone outside QA gets the app."
+          "label": "Choose the production route",
+          "body": "IT confirms the app's approved Apple distribution route, such as a Custom App made available to the organisation through Apple Business Manager. A Firebase invitation is not converted into a production licence or installation route."
         },
         {
-          "label": "Map the rollout before inviting anyone",
-          "body": "The team records who is eligible, which version is approved, who answers install problems, and what evidence shows the rollout is complete. Each answer has a named owner."
+          "label": "Pilot with five field staff",
+          "body": "IT assigns the approved app to a five-person pilot in Vamiq. Staff use the organisation portal and install guidance, or managed deployment on eligible enrolled devices. Operations checks installation and a completed inspection before inviting the remaining 25 staff."
         },
         {
-          "label": "Move production access to a controlled route",
-          "body": "In AppDeploy, eligible staff get the approved build through a branded self-service workspace with install guidance. Company-owned, supervised iPads can receive it as a managed install instead, and both routes sit in the same workspace."
+          "label": "Close the handover with evidence",
+          "body": "The handover record names the release owner and support contact, identifies the approved version, and records deployment outcomes where reported. Self-service users confirm access separately; a portal invitation alone is not proof of installation."
         }
       ],
       "link": {
-        "prefix": "For the full set of production routes, managed and unmanaged devices, and release controls, read the",
-        "label": "AppDeploy guide to internal app distribution",
-        "href": "https://appdeploy.scotitech.com/internal-app-distribution"
+        "prefix": "Planning the same move from Firebase testing to employee rollout? Compare Apple distribution routes, self-service access and managed deployment in the",
+        "label": "Vamiq guide to internal app distribution",
+        "href": "https://vamiq.app/internal-app-distribution"
       }
     }
   },
@@ -635,12 +635,12 @@ export const allInsights = [
     "featured": false,
     "slug": "wwdc26-app-store-updates-mean-for-appdeploy-rollout",
     "category": "WWDC 2026 Briefing",
-    "topic": "AppDeploy",
-    "title": "Apple Business Admin APIs could make AppDeploy the app distribution command centre",
-    "summary": "The old private app question was simple: how do users install it? The better enterprise question is sharper: which people, devices, groups, MDM routes, app versions, and exceptions are actually in play? Apple's direction with Apple Business, including Admin API access to device, user, audit, and MDM service data, gives AppDeploy a bigger path: from polished install portal to app distribution command centre for private Apple apps.",
-    "seoDescription": "A ScotiTech briefing on AppDeploy, Apple Business Admin APIs, app distribution, MDM app distribution, live fleet visibility, and private Apple app rollout.",
+    "topic": "Vamiq",
+    "title": "Apple Business Admin APIs could make Vamiq the app distribution command centre",
+    "summary": "The old private app question was simple: how do users install it? The better enterprise question is sharper: which people, devices, groups, MDM routes, app versions, and exceptions are actually in play? Apple's direction with Apple Business, including Admin API access to device, user, audit, and MDM service data, gives Vamiq a bigger path: from polished install portal to app distribution command centre for private Apple apps.",
+    "seoDescription": "A ScotiTech briefing on Vamiq, Apple Business Admin APIs, app distribution, MDM app distribution, live fleet visibility, and private Apple app rollout.",
     "date": "2026-06-13",
-    "updated": "2026-06-14",
+    "updated": "2026-10-21",
     "displayDate": "13 June 2026",
     "readTime": "7 min read",
     "sourceName": "Apple Newsroom",
@@ -652,14 +652,14 @@ export const allInsights = [
       "MDM",
       "MDM app distribution",
       "app distribution",
-      "AppDeploy",
+      "Vamiq",
       "WWDC26"
     ],
     "relatedProduct": {
-      "name": "AppDeploy",
-      "href": "/products/appdeploy",
+      "name": "Vamiq",
+      "href": "/products/vamiq",
       "description": "A branded workspace for private app access, install guidance, rollout ownership, and clearer Apple Business-aligned delivery.",
-      "cta": "Explore AppDeploy"
+      "cta": "Explore Vamiq"
     },
     "highlights": [
       {
@@ -675,51 +675,51 @@ export const allInsights = [
       {
         "label": "MDM context",
         "value": "Command centre",
-        "description": "AppDeploy can sit above existing MDM environments and give product, IT, and operations teams one clearer view of rollout status."
+        "description": "Vamiq can sit above existing MDM environments and give product, IT, and operations teams one clearer view of rollout status."
       }
     ],
     "sections": [
       {
         "heading": "The real shift is app distribution control, not another listing",
         "paragraphs": [
-          "WWDC26 includes useful App Store Connect improvements, from product page previews to richer metadata and volume purchasing routes. Those updates matter, but they are not the part that makes AppDeploy strategically more interesting.",
-          "The larger signal is Apple Business. Apple is pulling device management, employee groups, app distribution, Blueprints, and Admin API access into a more unified business platform. For AppDeploy, that opens a stronger ambition: not only helping someone find an app, but helping a business understand whether rollout is actually working."
+          "WWDC26 includes useful App Store Connect improvements, from product page previews to richer metadata and volume purchasing routes. Those updates matter, but they are not the part that makes Vamiq strategically more interesting.",
+          "The larger signal is Apple Business. Apple is pulling device management, employee groups, app distribution, Blueprints, and Admin API access into a more unified business platform. For Vamiq, that opens a stronger ambition: not only helping someone find an app, but helping a business understand whether rollout is actually working."
         ]
       },
       {
         "heading": "Fleet visibility changes the whole conversation",
         "paragraphs": [
           "Private rollout becomes serious when the team can answer practical questions quickly: which enrolled Apple devices exist, which OS versions are in the field, which MDM service owns each device, which app version is expected, and where deployment is stuck.",
-          "That is the kind of visibility that turns AppDeploy from a branded front door into a rollout intelligence layer. The product opportunity is not more decoration around an install link. It is centralised status, exceptions, version clarity, and deployment confidence."
+          "That is the kind of visibility that turns Vamiq from a branded front door into a rollout intelligence layer. The product opportunity is not more decoration around an install link. It is centralised status, exceptions, version clarity, and deployment confidence."
         ]
       },
       {
         "heading": "Groups make distribution feel enterprise-ready",
         "paragraphs": [
           "Enterprise rollout rarely means one audience and one version. A pilot group may need a controlled build, a field team may need a production release, and a leadership team may need visibility before wider launch.",
-          "Apple Business employee groups and app distribution workflows make that structure more natural. AppDeploy should treat groups, eligibility, app versions, install routes, and rollout waves as first-class product objects, not manual notes scattered across emails."
+          "Apple Business employee groups and app distribution workflows make that structure more natural. Vamiq should treat groups, eligibility, app versions, install routes, and rollout waves as first-class product objects, not manual notes scattered across emails."
         ]
       },
       {
         "heading": "MDM app distribution-aware, not MDM-heavy",
         "paragraphs": [
           "The winning position is not to ask enterprises to replace Jamf, Intune, Kandji, Mosyle, or Apple Business. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
-          "That means AppDeploy can become the practical command centre: which devices are assigned, which MDM route applies, which installs are pending, which app version is current, where exceptions exist, and what still needs attention before rollout can be called complete."
+          "That means Vamiq can become the practical command centre: which devices are assigned, which MDM route applies, which installs are pending, which app version is current, where exceptions exist, and what still needs attention before rollout can be called complete."
         ]
       },
       {
         "heading": "The ScotiTech view",
         "paragraphs": [
-          "This is the most compelling AppDeploy direction: a product that still feels simple to the user, but gives the business far more operational confidence behind the scenes.",
-          "Blueprint-based deployment, audit-ready exports, group-based targeting, and MDM-aware deployment intelligence should remain close to the roadmap. The message is stronger now: AppDeploy should complement Apple's platform rails and give enterprises one clear operating layer for private app delivery."
+          "This is the most compelling Vamiq direction: a product that still feels simple to the user, but gives the business far more operational confidence behind the scenes.",
+          "Blueprint-based deployment, audit-ready exports, group-based targeting, and MDM-aware deployment intelligence should remain close to the roadmap. The message is stronger now: Vamiq should complement Apple's platform rails and give enterprises one clear operating layer for private app delivery."
         ]
       }
     ],
     "actionItems": [
-      "Design AppDeploy around live rollout questions: who, which device, which version, which route, and what is blocked.",
+      "Design Vamiq around live rollout questions: who, which device, which version, which route, and what is blocked.",
       "Model Apple Business device, user, group, app, audit, and MDM service data as core product concepts.",
       "Prioritise views for group-based targeting, version status, pending installs, deployment exceptions, and audit-ready evidence.",
-      "Keep the promise MDM-agnostic: AppDeploy should coordinate around the customer's existing stack, not compete with it."
+      "Keep the promise MDM-agnostic: Vamiq should coordinate around the customer's existing stack, not compete with it."
     ]
   },
   {
@@ -729,10 +729,10 @@ export const allInsights = [
     "category": "Platform Briefing",
     "topic": "Private app distribution",
     "title": "Private app distribution needs more than App Store approval",
-    "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the private app distribution rails. AppDeploy gives iOS app distribution a working operating layer after approval.",
-    "seoDescription": "Private app distribution for iOS needs more than App Store approval. Learn how Apple Business Manager custom apps, MDM app distribution, and AppDeploy fit together.",
+    "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the private app distribution rails. Vamiq gives iOS app distribution a working operating layer after approval.",
+    "seoDescription": "Private app distribution for iOS needs more than App Store approval. Learn how Apple Business Manager custom apps, MDM app distribution, and Vamiq fit together.",
     "date": "2026-05-04",
-    "updated": "2026-06-14",
+    "updated": "2026-10-21",
     "displayDate": "4 May 2026",
     "readTime": "5 min read",
     "sourceName": "Apple Developer",
@@ -744,13 +744,13 @@ export const allInsights = [
       "Private app distribution",
       "iOS app distribution",
       "Apple Business Manager custom apps",
-      "AppDeploy"
+      "Vamiq"
     ],
     "relatedProduct": {
-      "name": "AppDeploy",
-      "href": "/products/appdeploy",
+      "name": "Vamiq",
+      "href": "/products/vamiq",
       "description": "A branded workspace for controlled iOS app access, install guidance, and rollout ownership.",
-      "cta": "Explore AppDeploy"
+      "cta": "Explore Vamiq"
     },
     "highlights": [
       {
@@ -764,7 +764,7 @@ export const allInsights = [
         "description": "The risk usually lives between Apple approval and daily use: requests, instructions, failed installs, and unclear ownership."
       },
       {
-        "label": "AppDeploy",
+        "label": "Vamiq",
         "value": "One front door",
         "description": "A branded rollout workspace gives users one trusted place to understand access, install steps, release notes, and support."
       }
@@ -792,9 +792,9 @@ export const allInsights = [
         ]
       },
       {
-        "heading": "Where AppDeploy fits",
+        "heading": "Where Vamiq fits",
         "paragraphs": [
-          "AppDeploy gives private app distribution a business-facing home: branded access, current install guidance, release context, request handling, support routes, and clearer rollout ownership.",
+          "Vamiq gives private app distribution a business-facing home: branded access, current install guidance, release context, request handling, support routes, and clearer rollout ownership.",
           "The point is not to complicate Apple's distribution route or replace MDM app distribution. The point is to make the route usable for the people who need to launch, explain, support, and measure private apps in the real world."
         ]
       }
@@ -983,7 +983,7 @@ export const allInsights = [
     "summary": "For many SMEs, Apple administration has been a patchwork of device setup, app access, employee changes, support routes, and brand details. Apple Business brings those pieces closer together. The opportunity for ScotiTech is to help organisations turn Apple Business Manager custom apps into cleaner app distribution, better access workflows, and less operational noise.",
     "seoDescription": "How SMEs should approach Apple Business Manager custom apps, app distribution, MDM, access governance, and private app rollout with a cleaner operating model.",
     "date": "2026-03-24",
-    "updated": "2026-06-14",
+    "updated": "2026-10-21",
     "displayDate": "24 March 2026",
     "readTime": "5 min read",
     "sourceName": "Apple Newsroom",
@@ -995,13 +995,13 @@ export const allInsights = [
       "app distribution",
       "MDM",
       "SME technology",
-      "AppDeploy"
+      "Vamiq"
     ],
     "relatedProduct": {
-      "name": "AppDeploy",
-      "href": "/products/appdeploy",
+      "name": "Vamiq",
+      "href": "/products/vamiq",
       "description": "A branded workspace for controlled iOS app access, install guidance, and rollout ownership.",
-      "cta": "Explore AppDeploy"
+      "cta": "Explore Vamiq"
     },
     "highlights": [
       {
@@ -1015,7 +1015,7 @@ export const allInsights = [
         "description": "Device management, employee access, app distribution, business identity, and support are easier to think about together."
       },
       {
-        "label": "AppDeploy angle",
+        "label": "Vamiq angle",
         "value": "Rollout clarity",
         "description": "The stronger Apple Business becomes, the more valuable a clear access and rollout layer becomes around private apps."
       }
@@ -1039,13 +1039,13 @@ export const allInsights = [
         "heading": "The Apple Business Manager custom apps opportunity",
         "paragraphs": [
           "Built-in MDM, employee groups, security settings, and app assignment all make Apple Business a stronger platform foundation. For Apple Business Manager custom apps and private iOS app distribution, that foundation still needs a clear user-facing layer.",
-          "That is where AppDeploy becomes relevant. It can give teams one branded place for access requests, install guidance, release communication, legal acceptance, support, and visibility into who should be using which version."
+          "That is where Vamiq becomes relevant. It can give teams one branded place for access requests, install guidance, release communication, legal acceptance, support, and visibility into who should be using which version."
         ]
       },
       {
         "heading": "The ScotiTech view",
         "paragraphs": [
-          "Apple Business makes the platform cleaner. AppDeploy should make the rollout clearer. Together, that creates a better path from employee onboarding to secure app access without forcing SMEs into unnecessary enterprise weight.",
+          "Apple Business makes the platform cleaner. Vamiq should make the rollout clearer. Together, that creates a better path from employee onboarding to secure app access without forcing SMEs into unnecessary enterprise weight.",
           "The strongest message for customers is practical: fewer manual handoffs, fewer stale instructions, fewer confused users, and a more professional way to operate Apple app delivery."
         ]
       }
@@ -1054,7 +1054,7 @@ export const allInsights = [
       "Use Apple Business as a chance to simplify device, employee, app, brand, and support ownership.",
       "Map where app access still depends on email approvals, manual messages, or disconnected spreadsheets.",
       "Create a single rollout workflow for requests, eligibility, install guidance, release updates, and support.",
-      "Connect Apple Business foundations with AppDeploy-style visibility so private app delivery feels controlled from day one."
+      "Connect Apple Business foundations with Vamiq-style visibility so private app delivery feels controlled from day one."
     ]
   }
 ];

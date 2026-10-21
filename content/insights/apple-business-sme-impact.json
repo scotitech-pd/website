@@ -8,7 +8,7 @@
   "summary": "For many SMEs, Apple administration has been a patchwork of device setup, app access, employee changes, support routes, and brand details. Apple Business brings those pieces closer together. The opportunity for ScotiTech is to help organisations turn Apple Business Manager custom apps into cleaner app distribution, better access workflows, and less operational noise.",
   "seoDescription": "How SMEs should approach Apple Business Manager custom apps, app distribution, MDM, access governance, and private app rollout with a cleaner operating model.",
   "date": "2026-03-24",
-  "updated": "2026-06-14",
+  "updated": "2026-10-21",
   "displayDate": "24 March 2026",
   "readTime": "5 min read",
   "sourceName": "Apple Newsroom",
@@ -20,13 +20,13 @@
     "app distribution",
     "MDM",
     "SME technology",
-    "AppDeploy"
+    "Vamiq"
   ],
   "relatedProduct": {
-    "name": "AppDeploy",
-    "href": "/products/appdeploy",
+    "name": "Vamiq",
+    "href": "/products/vamiq",
     "description": "A branded workspace for controlled iOS app access, install guidance, and rollout ownership.",
-    "cta": "Explore AppDeploy"
+    "cta": "Explore Vamiq"
   },
   "highlights": [
     {
@@ -40,7 +40,7 @@
       "description": "Device management, employee access, app distribution, business identity, and support are easier to think about together."
     },
     {
-      "label": "AppDeploy angle",
+      "label": "Vamiq angle",
       "value": "Rollout clarity",
       "description": "The stronger Apple Business becomes, the more valuable a clear access and rollout layer becomes around private apps."
     }
@@ -64,13 +64,13 @@
       "heading": "The Apple Business Manager custom apps opportunity",
       "paragraphs": [
         "Built-in MDM, employee groups, security settings, and app assignment all make Apple Business a stronger platform foundation. For Apple Business Manager custom apps and private iOS app distribution, that foundation still needs a clear user-facing layer.",
-        "That is where AppDeploy becomes relevant. It can give teams one branded place for access requests, install guidance, release communication, legal acceptance, support, and visibility into who should be using which version."
+        "That is where Vamiq becomes relevant. It can give teams one branded place for access requests, install guidance, release communication, legal acceptance, support, and visibility into who should be using which version."
       ]
     },
     {
       "heading": "The ScotiTech view",
       "paragraphs": [
-        "Apple Business makes the platform cleaner. AppDeploy should make the rollout clearer. Together, that creates a better path from employee onboarding to secure app access without forcing SMEs into unnecessary enterprise weight.",
+        "Apple Business makes the platform cleaner. Vamiq should make the rollout clearer. Together, that creates a better path from employee onboarding to secure app access without forcing SMEs into unnecessary enterprise weight.",
         "The strongest message for customers is practical: fewer manual handoffs, fewer stale instructions, fewer confused users, and a more professional way to operate Apple app delivery."
       ]
     }
@@ -79,6 +79,6 @@
     "Use Apple Business as a chance to simplify device, employee, app, brand, and support ownership.",
     "Map where app access still depends on email approvals, manual messages, or disconnected spreadsheets.",
     "Create a single rollout workflow for requests, eligibility, install guidance, release updates, and support.",
-    "Connect Apple Business foundations with AppDeploy-style visibility so private app delivery feels controlled from day one."
+    "Connect Apple Business foundations with Vamiq-style visibility so private app delivery feels controlled from day one."
   ]
 }

@@ -5,10 +5,10 @@
   "category": "Platform Briefing",
   "topic": "Private app distribution",
   "title": "Private app distribution needs more than App Store approval",
-  "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the private app distribution rails. AppDeploy gives iOS app distribution a working operating layer after approval.",
-  "seoDescription": "Private app distribution for iOS needs more than App Store approval. Learn how Apple Business Manager custom apps, MDM app distribution, and AppDeploy fit together.",
+  "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the private app distribution rails. Vamiq gives iOS app distribution a working operating layer after approval.",
+  "seoDescription": "Private app distribution for iOS needs more than App Store approval. Learn how Apple Business Manager custom apps, MDM app distribution, and Vamiq fit together.",
   "date": "2026-05-04",
-  "updated": "2026-06-14",
+  "updated": "2026-10-21",
   "displayDate": "4 May 2026",
   "readTime": "5 min read",
   "sourceName": "Apple Developer",
@@ -20,13 +20,13 @@
     "Private app distribution",
     "iOS app distribution",
     "Apple Business Manager custom apps",
-    "AppDeploy"
+    "Vamiq"
   ],
   "relatedProduct": {
-    "name": "AppDeploy",
-    "href": "/products/appdeploy",
+    "name": "Vamiq",
+    "href": "/products/vamiq",
     "description": "A branded workspace for controlled iOS app access, install guidance, and rollout ownership.",
-    "cta": "Explore AppDeploy"
+    "cta": "Explore Vamiq"
   },
   "highlights": [
     {
@@ -40,7 +40,7 @@
       "description": "The risk usually lives between Apple approval and daily use: requests, instructions, failed installs, and unclear ownership."
     },
     {
-      "label": "AppDeploy",
+      "label": "Vamiq",
       "value": "One front door",
       "description": "A branded rollout workspace gives users one trusted place to understand access, install steps, release notes, and support."
     }
@@ -68,9 +68,9 @@
       ]
     },
     {
-      "heading": "Where AppDeploy fits",
+      "heading": "Where Vamiq fits",
       "paragraphs": [
-        "AppDeploy gives private app distribution a business-facing home: branded access, current install guidance, release context, request handling, support routes, and clearer rollout ownership.",
+        "Vamiq gives private app distribution a business-facing home: branded access, current install guidance, release context, request handling, support routes, and clearer rollout ownership.",
         "The point is not to complicate Apple's distribution route or replace MDM app distribution. The point is to make the route usable for the people who need to launch, explain, support, and measure private apps in the real world."
       ]
     }
