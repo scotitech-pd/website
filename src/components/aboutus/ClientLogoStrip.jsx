@@ -77,7 +77,7 @@ export default function ClientLogoStrip() {
             Working relationships that put our products to real use
           </h2>
           <p className="font-lora text-lg leading-8 text-slate-700">
-            We partner closely with the organisations adopting AppDeploy and
+            We partner closely with the organisations adopting Vamiq and
             AXOS — building, refining, and supporting products against real
             operational needs.
           </p>

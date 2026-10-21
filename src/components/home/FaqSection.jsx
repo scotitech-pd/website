@@ -10,11 +10,11 @@ import Eyebrow from "@/components/ui/Eyebrow";
 const faqs = [
   {
     q: "What does ScotiTech sell today?",
-    a: "ScotiTech currently leads with focused software products rather than a broad service catalogue. AppDeploy is for Apple device management, private app distribution and release controls. AXOS is for organisations evaluating a controlled, enterprise AI workspace with stronger hosting, governance, and data-control requirements.",
+    a: "ScotiTech leads with focused software products rather than a broad service catalogue. Our flagship, Vamiq (formerly AppDeploy), is a branded app store for private apps and Apple device management for iPhone, iPad and Mac, with build checks before each release. Free for up to 5 devices at vamiq.app. AXOS is for organisations evaluating a controlled, enterprise AI workspace with stronger hosting, governance, and data-control requirements.",
   },
   {
-    q: "Who is AppDeploy a serious fit for?",
-    a: "AppDeploy is a strong fit for organisations that already have a private or internal app and need a cleaner way to control access and rollout, and for startups setting up company Macs, iPhones and iPads with the device evidence a SOC 2, ISO 27001 or Cyber Essentials audit asks for.",
+    q: "Who is Vamiq a serious fit for?",
+    a: "Vamiq fits organisations with private or internal apps that want them on company iPhones, iPads and Macs without buying a large device-management suite for one job, plus the app agencies and Apple IT firms that work for them. Teams that need to prove what was released, to whom and when get checksummed Evidence Packs on the Distribution plan.",
   },
   {
     q: "When should we talk about AXOS instead of a normal SaaS workspace?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Can ScotiTech support private deployment, self-hosting, or tighter control requirements?",
-    a: "Yes, where the product fit supports it. That conversation is especially relevant for AXOS, and for AppDeploy enterprise cases that need stronger control, reporting, or environment-specific rollout requirements. We prefer to scope those needs directly rather than hide them behind vague marketing language.",
+    a: "Yes, where the product fit supports it. That conversation is especially relevant for AXOS, and for Vamiq Enterprise cases that need stronger control, reporting, or environment-specific rollout requirements. We prefer to scope those needs directly rather than hide them behind vague marketing language.",
   },
   {
     q: "What should we send before the first conversation?",

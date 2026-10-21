@@ -32,7 +32,7 @@
   --brand-contrast: #ffffff;
 
   /* Per-product accents (warm, distinct; chips / hairlines only) */
-  --accent-appdeploy: #c2410c;
+  --accent-vamiq: #0f766e;
   --accent-axos: #ea580c;
   --accent-claritypath: #b45309;
 
@@ -94,7 +94,7 @@
   --color-brand-contrast: var(--brand-contrast);
 
   /* Per-product accents */
-  --color-appdeploy: var(--accent-appdeploy);
+  --color-vamiq: var(--accent-vamiq);
   --color-axos: var(--accent-axos);
   --color-claritypath: var(--accent-claritypath);
 
@@ -209,7 +209,7 @@ body {
    TYPOGRAPHY SCALE — confident, restrained
    Use display/h-* utility classes to stop ad-hoc per-file sizing.
    Defined in @layer components so Tailwind color utilities
-   (e.g. text-on-ink, text-appdeploy) can override the default color.
+   (e.g. text-on-ink, text-vamiq) can override the default color.
 --------------------------------------------------------------- */
 @layer components {
 .t-eyebrow {

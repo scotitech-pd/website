@@ -11,19 +11,19 @@ import { products } from "@/lib/products";
 export const metadata = {
   title: "Products",
   description:
-    "Explore ScotiTech products: AppDeploy for Apple device management and private app distribution, AXOS for enterprise AI workspaces, and ClarityPath for guided decision support.",
+    "Explore ScotiTech products: Vamiq, a branded app store for your private apps with Apple device management for iPhone, iPad and Mac; AXOS for enterprise AI workspaces; and ClarityPath for guided decision support.",
   alternates: { canonical: "/products" },
   openGraph: {
-    title: "Products — AppDeploy, AXOS, ClarityPath",
+    title: "Products — Vamiq, AXOS, ClarityPath",
     description:
-      "Apple device management and private apps, governance-first AI workspaces, and guided decision support.",
+      "Private app stores and Apple device management, governance-first AI workspaces, and guided decision support.",
     url: "/products",
     type: "website",
   },
   twitter: { card: "summary_large_image" },
 };
 
-const order = ["appdeploy", "axos", "claritypath"];
+const order = ["vamiq", "axos", "claritypath"];
 
 export default function ProductsPage() {
   const list = order.map((slug) => products[slug]);
@@ -39,9 +39,11 @@ export default function ProductsPage() {
               Focused products, built for control.
             </h1>
             <p className="t-lead mt-5 max-w-2xl">
-              Two flagship products lead the portfolio — AppDeploy for Apple
-              devices and private apps, and AXOS for private enterprise operations — supported
-              by ClarityPath for sensitive decision journeys.
+              Vamiq leads the portfolio: a branded app store for your private apps,
+              and Apple device management that installs them on iPhone, iPad and
+              Mac, with build checks before each release. AXOS brings private
+              enterprise operations together, and ClarityPath supports sensitive
+              decision journeys.
             </p>
           </Reveal>
         </Container>

@@ -19,14 +19,16 @@ const agenda = [
 
 const sessions = [
   {
-    name: "AppDeploy session",
-    body: "For teams managing iPhones, iPads and Macs, or distributing private apps through Apple Business, with controlled installs and clear rollout governance.",
-    cta: "Book AppDeploy session",
+    name: "Vamiq session",
+    body: "For teams distributing private apps to iPhone, iPad and Mac, with a branded app store, device management, and build checks before each release.",
+    cta: "Book Vamiq session",
+    href: meetingLinks.vamiq,
   },
   {
     name: "AXOS session",
     body: "For teams planning a private workspace for communication, files, tasks, and governance-aligned AI operations.",
     cta: "Book AXOS session",
+    href: meetingLinks.axos,
   },
 ];
 
@@ -79,7 +81,7 @@ export default function RequestaQuote() {
 
             <h2 className="t-h2 mt-6 text-on-ink">Book a focused product session.</h2>
             <p className="mt-4 font-karla leading-relaxed text-on-ink-muted">
-              Choose AppDeploy or AXOS and schedule the right session. We'll cover
+              Choose Vamiq or AXOS and schedule the right session. We'll cover
               product fit, deployment approach, and practical next steps for your team.
             </p>
 
@@ -133,7 +135,7 @@ export default function RequestaQuote() {
           <span className="t-eyebrow">Schedule a meeting</span>
           <h2 className="t-h3 mt-2 pr-8">Book the session that fits your goals.</h2>
           <p className="t-body mt-3">
-            Choose AppDeploy for Apple devices and private apps, or AXOS for secure workspace
+            Choose Vamiq for private apps on Apple devices or AXOS for secure workspace
             planning, then book instantly with the right team.
           </p>
 
@@ -146,7 +148,7 @@ export default function RequestaQuote() {
                 <h3 className="font-karla text-lg font-semibold text-strong">{s.name}</h3>
                 <p className="t-small mt-1.5 leading-6">{s.body}</p>
                 <a
-                  href={meetingLinks.calendly}
+                  href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 font-karla text-sm font-semibold text-on-ink transition-colors hover:bg-ink-soft"

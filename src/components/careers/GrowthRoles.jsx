@@ -85,7 +85,7 @@ const growthRoles = [
       "For people who know how to build referral and channel relationships with consultants, MSPs, implementation partners, and advisory firms.",
     responsibilities: [
       "Build relationships with service firms whose clients need stronger control over AI, workspace, and app-distribution infrastructure.",
-      "Introduce AppDeploy or AXOS as a serious fit where those partners need a private, enterprise-ready alternative.",
+      "Introduce Vamiq or AXOS as a serious fit where those partners need a private, enterprise-ready alternative.",
       "Keep partner conversations clear, practical, and grounded in customer outcomes rather than vendor hype.",
     ],
     fits: [
@@ -116,7 +116,7 @@ const growthRoles = [
     detail:
       "For disciplined outbound operators who can write well, personalise well, and book the right conversations without burning lists or credibility.",
     responsibilities: [
-      "Run careful outreach for AppDeploy, AXOS, and selected ScotiTech offerings across email and LinkedIn.",
+      "Run careful outreach for Vamiq, AXOS, and selected ScotiTech offerings across email and LinkedIn.",
       "Work against defined buyer groups and use public context to make the outreach relevant.",
       "Hand over clean notes, clean context, and genuinely qualified meetings.",
     ],

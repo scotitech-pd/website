@@ -18,7 +18,7 @@ export default function LeadershipTeam() {
       title: "Founder & CEO, Lead Developer",
       location: "Motherwell, Scotland",
       description:
-        "Architects and builds AppDeploy and AXOS, and sets ScotiTech's product vision, commercial strategy, and global direction.",
+        "Architects and builds Vamiq and AXOS, and sets ScotiTech's product vision, commercial strategy, and global direction.",
       img: "/images/home/pradeep.jpg",
       linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
     },

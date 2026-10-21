@@ -111,15 +111,15 @@ const privacyCoverage = [
 
 const trustCentres = [
   {
-    name: "AppDeploy",
-    label: "Private app distribution",
+    name: "Vamiq",
+    label: "Private apps and Apple devices",
     body: "Control detail, service status, data processing terms, and the sub-processor list are published in full.",
     links: [
-      { label: "Trust Centre", href: "https://appdeploy.scotitech.com/trust" },
-      { label: "Service status", href: "https://appdeploy.scotitech.com/status" },
-      { label: "DPA", href: "https://appdeploy.scotitech.com/dpa" },
-      { label: "Sub-processors", href: "https://appdeploy.scotitech.com/sub-processors" },
-      { label: "Privacy", href: "https://appdeploy.scotitech.com/privacy" },
+      { label: "Trust Centre", href: "https://vamiq.app/trust" },
+      { label: "Service status", href: "https://vamiq.app/status" },
+      { label: "DPA", href: "https://vamiq.app/dpa" },
+      { label: "Sub-processors", href: "https://vamiq.app/sub-processors" },
+      { label: "Privacy", href: "https://vamiq.app/privacy" },
     ],
   },
   {

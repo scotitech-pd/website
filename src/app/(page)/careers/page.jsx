@@ -64,11 +64,11 @@ const whatToSend = [
 
 const productsToKnow = [
   {
-    name: "AppDeploy",
+    name: "Vamiq",
     status: "Live",
-    tagline: "Apple device management and private app distribution for iPhone, iPad and Mac, built on Apple Business.",
+    tagline: "A branded app store for your private apps, and Apple device management that installs them on iPhone, iPad and Mac, with build checks before each release.",
     audience:
-      "Companies with private apps, startups setting up company devices, and the app agencies and Apple IT firms that support them.",
+      "IT leaders and operations teams distributing internal apps to employees, testers, or partner organisations on Apple devices.",
   },
   {
     name: "AXOS",
@@ -113,7 +113,7 @@ const faqs = [
   },
   {
     q: "Do I need to be based in the UK?",
-    a: "No. Roles are open worldwide. What matters is the market you can credibly open — some regions and sectors will be a stronger fit for AppDeploy or AXOS than others, and we will be honest with you about that early.",
+    a: "No. Roles are open worldwide. What matters is the market you can credibly open — some regions and sectors will be a stronger fit for Vamiq or AXOS than others, and we will be honest with you about that early.",
   },
   {
     q: "Do I need existing customers, or is a strong network enough?",

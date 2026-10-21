@@ -44,13 +44,14 @@ export const metadata = {
     template: "%s | ScotiTech Solutions",
   },
   description:
-    "ScotiTech Solutions is a UK-registered technology company building and supporting privacy-conscious software products for organisations worldwide, including AppDeploy, AXOS and ClarityPath.",
+    "ScotiTech Solutions is a UK-registered technology company building and supporting privacy-conscious software products for organisations worldwide, including Vamiq, AXOS and ClarityPath.",
   applicationName: "ScotiTech Solutions",
   authors: [{ name: "ScotiTech Solutions Limited", url: "https://scotitech.com" }],
   creator: "ScotiTech Solutions Limited",
   publisher: "ScotiTech Solutions Limited",
   keywords: [
     "ScotiTech",
+    "Vamiq",
     "AppDeploy",
     "AXOS",
     "ClarityPath",
@@ -107,6 +108,16 @@ const organizationSchema = {
   name: "ScotiTech Solutions Limited",
   alternateName: "ScotiTech",
   url: "https://scotitech.com",
+  description:
+    "UK-registered technology company. Its flagship product, Vamiq (formerly AppDeploy), is a branded app store for your private apps, and Apple device management that installs them on iPhone, iPad and Mac, with build checks before each release. ScotiTech also builds AXOS and ClarityPath.",
+  brand: [
+    {
+      "@type": "Brand",
+      name: "Vamiq",
+      alternateName: "AppDeploy",
+      url: "https://vamiq.app",
+    },
+  ],
   logo: {
     "@type": "ImageObject",
     url: "https://scotitech.com/logo/logo.png",

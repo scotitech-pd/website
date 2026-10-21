@@ -164,7 +164,7 @@ const  PrivacyPolicy  = () => {
 
         {/* 10. Product services */}
         <div id="product-services" className="space-y-4 pl-1">
-          <h2 className="text-2xl font-karla font-semibold text-main-dark">10. Product Services (AppDeploy and AXOS)</h2>
+          <h2 className="text-2xl font-karla font-semibold text-main-dark">10. Product Services (Vamiq and AXOS)</h2>
           <p className="leading-7">
             This policy covers personal data collected through this website. Customer and end-user data
             processed inside our products is governed by each product&apos;s own privacy policy and Data
@@ -172,10 +172,10 @@ const  PrivacyPolicy  = () => {
           </p>
           <ul className="list-disc ml-6 space-y-2 leading-7">
             <li>
-              AppDeploy —{" "}
-              <a href="https://appdeploy.scotitech.com/privacy" target="_blank" rel="noreferrer" className="text-main-dark underline">privacy policy</a>
+              Vamiq (formerly AppDeploy) —{" "}
+              <a href="https://vamiq.app/privacy" target="_blank" rel="noreferrer" className="text-main-dark underline">privacy policy</a>
               {" "}and{" "}
-              <a href="https://appdeploy.scotitech.com/dpa" target="_blank" rel="noreferrer" className="text-main-dark underline">data processing agreement</a>.
+              <a href="https://vamiq.app/dpa" target="_blank" rel="noreferrer" className="text-main-dark underline">data processing agreement</a>.
             </li>
             <li>
               AXOS —{" "}

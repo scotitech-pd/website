@@ -4,7 +4,7 @@ import { getProduct } from "@/lib/products";
 export const metadata = {
   title: "ClarityPath — Guided Decision Support",
   description:
-    "Private, structured decision support for sensitive, high-stakes journeys — relocation, career, property, finance, and yearly planning — delivered through the AppDeploy portal.",
+    "Private, structured decision support for sensitive, high-stakes journeys — relocation, career, property, finance, and yearly planning — delivered through Vamiq.",
   alternates: { canonical: "/products/claritypath" },
   keywords: [
     "ClarityPath",
@@ -12,12 +12,12 @@ export const metadata = {
     "guided planning",
     "structured planning",
     "private mobile app",
-    "AppDeploy portfolio",
+    "Vamiq",
   ],
   openGraph: {
     title: "ClarityPath — Guided Decision Support",
     description:
-      "Structured decision support for sensitive, high-stakes journeys, delivered through the AppDeploy portal.",
+      "Structured decision support for sensitive, high-stakes journeys, delivered through Vamiq.",
     url: "/products/claritypath",
     type: "website",
   },

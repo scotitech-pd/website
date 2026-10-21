@@ -5,7 +5,7 @@ export const ogContentType = "image/png";
 
 /**
  * Render a branded product OG card. Used by per-product opengraph-image.js
- * routes (AppDeploy, AXOS, ClarityPath) for clean LinkedIn / X / Slack previews.
+ * routes (Vamiq, AXOS, ClarityPath) for clean LinkedIn / X / Slack previews.
  */
 export function renderProductOg({ eyebrow, name, tagline, accent = "#E2580E" }) {
   return new ImageResponse(

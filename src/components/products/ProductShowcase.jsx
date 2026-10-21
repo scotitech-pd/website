@@ -10,14 +10,14 @@ import {
 import { cn } from "@/lib/utils";
 
 const showcaseContent = {
-  appdeploy: {
-    kicker: "AppDeploy console",
+  vamiq: {
+    kicker: "Vamiq workspace",
     status: "Live",
-    index: "01 / Devices and apps",
-    primaryLabel: "Devices",
-    primaryValue: "5 free, then £1",
-    secondaryLabel: "Apple Business",
-    secondaryValue: "Zero-touch setup",
+    index: "01 / Flagship",
+    primaryLabel: "Free",
+    primaryValue: "Up to 5 devices",
+    secondaryLabel: "Release controls",
+    secondaryValue: "Checked before every release",
     Icon: Building2,
   },
   axos: {
@@ -41,7 +41,7 @@ export default function ProductShowcase({
   className,
 }) {
   const isAxos = variant === "axos";
-  const content = showcaseContent[variant] || showcaseContent.appdeploy;
+  const content = showcaseContent[variant] || showcaseContent.vamiq;
   const ProductIcon = content.Icon;
 
   return (

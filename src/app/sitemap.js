@@ -18,7 +18,7 @@ export const dynamic = "force-static";
 const staticRoutes = [
   { path: "", lastModified: "2026-08-19", changeFrequency: "weekly", priority: 1, followsInsights: true },
   { path: "/products", lastModified: "2026-08-19", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/products/appdeploy", lastModified: "2026-08-19", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/products/vamiq", lastModified: "2026-10-21", changeFrequency: "monthly", priority: 0.8 },
   { path: "/products/axos", lastModified: "2026-07-14", changeFrequency: "monthly", priority: 0.8 },
   { path: "/products/axos/deployment-discovery", lastModified: "2026-07-14", changeFrequency: "yearly", priority: 0.6 },
   { path: "/products/claritypath", lastModified: "2026-06-07", changeFrequency: "yearly", priority: 0.6 },

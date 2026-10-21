@@ -8,11 +8,11 @@ const problems = [
   {
     no: "01",
     icon: Smartphone,
-    title: "Company devices and apps are messy",
-    body: "Setting up Macs and iPhones, getting private apps onto them, and proving it all to an auditor takes manual steps across too many tools.",
-    solved: "AppDeploy",
-    accent: "text-orange-400",
-    glowColor: "rgba(226,88,14,0.15)",
+    title: "Private apps don't have a home",
+    body: "Test builds expire, install steps get lost in email, and nobody can prove which release reached which device.",
+    solved: "Vamiq",
+    accent: "text-teal-300",
+    glowColor: "rgba(20,184,166,0.16)",
   },
   {
     no: "02",

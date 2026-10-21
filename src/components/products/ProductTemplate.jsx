@@ -44,6 +44,7 @@ import {
   BriefcaseBusiness,
   Store,
   Truck,
+  Laptop,
 } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
@@ -67,7 +68,7 @@ const icons = {
   Sparkles, Bot, FileSearch, FileText, Layers3, Video, Calendar,
   Plane, Briefcase, Home, Coins, CalendarRange, TrendingUp,
   HeartPulse, Landmark, Factory, BriefcaseBusiness, Store, Truck,
-  Cloud, Server, ShieldCheck,
+  Cloud, Server, ShieldCheck, Laptop,
 };
 
 const deployIcons = [Cloud, Server, ServerCog, ShieldCheck];

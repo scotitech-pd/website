@@ -13,8 +13,8 @@ import Counter from "@/components/ui/Counter";
  * numbers (installs, active teams, uptime, time saved) once supplied.
  */
 const metrics = [
-  { value: "Live", label: "AppDeploy customer systems", raw: true },
-  { value: 450, suffix: "+", label: "Apps installed via AppDeploy" },
+  { value: "Live", label: "Vamiq customer systems", raw: true },
+  { value: 450, suffix: "+", label: "Apps installed via Vamiq" },
   { value: 300, suffix: "+", label: "Devices reached" },
   { value: "Global", label: "Client and partner outlook", raw: true },
 ];
@@ -24,7 +24,7 @@ const clients = [
     name: "Aviskaar Enterprises",
     image: "/images/home/aviskaar-logo.jpg",
     href: "https://aviskaar.co.uk",
-    note: "AppDeploy customer",
+    note: "Vamiq customer",
   },
   {
     name: "Growthcart",
@@ -55,9 +55,9 @@ const testimonials = [
     role: "Director, Aviskaar Enterprises",
   },
   {
-    text: "In a recent founder conversation, we discussed the AppDeploy problem space: helping teams ship private iOS apps with clearer release control, access management, and fewer manual handoffs.",
-    name: "AppDeploy",
-    role: "Featured in a founder conversation",
+    text: "In a recent founder conversation, we discussed the problem Vamiq (then AppDeploy) solves: helping teams ship private iOS apps with clearer release control, access management, and fewer manual handoffs.",
+    name: "Vamiq",
+    role: "Featured in a founder conversation, as AppDeploy",
     podcastUrl: "https://www.youtube.com/watch?v=0IMLuoXFYK8&t=2036s",
   },
 ];

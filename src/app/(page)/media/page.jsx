@@ -63,7 +63,7 @@ const recognitionStories = [
   },
   {
     label: "Podcast",
-    title: "AppDeploy featured in a founder conversation",
+    title: "Vamiq (then AppDeploy) featured in a founder conversation",
     summary:
       "A short founder conversation on AppDeploy, private iOS distribution, and controlled rollout workflows.",
     date: "2026",
@@ -72,7 +72,7 @@ const recognitionStories = [
     href: "https://www.youtube.com/watch?v=0IMLuoXFYK8&t=2036s",
     cta: "Watch the conversation",
     previewImage: "https://img.youtube.com/vi/0IMLuoXFYK8/hqdefault.jpg",
-    previewAlt: "AppDeploy founder conversation podcast preview",
+    previewAlt: "Vamiq (then AppDeploy) founder conversation podcast preview",
   },
 ];
 

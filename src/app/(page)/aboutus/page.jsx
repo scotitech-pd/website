@@ -93,8 +93,10 @@ export default function AboutPage() {
               how software is deployed and where their data lives.
             </p>
             <p className="t-body">
-              That's the principle behind our portfolio. AppDeploy makes company
-              Apple devices and private apps simple to manage and easy to prove. AXOS brings everyday team
+              That's the principle behind our portfolio. Vamiq, our flagship, is a
+              branded app store for your private apps, and Apple device management
+              that installs them on iPhone, iPad and Mac, with build checks before
+              each release. AXOS brings everyday team
               operations into one private, self-hostable environment with AI built
               in. ClarityPath supports structured, sensitive decision journeys.
             </p>
@@ -105,8 +107,8 @@ export default function AboutPage() {
               problems our clients face.
             </p>
             <p className="t-body">
-              ScotiTech is bootstrapped, founder-led, and shipping. AppDeploy is
-              live in production, with two active customer workspaces, 450+ apps
+              ScotiTech is bootstrapped, founder-led, and shipping. Vamiq (formerly
+              AppDeploy) is live in production, with two active customer workspaces, 450+ apps
               installed and 300+ devices reached. AXOS is in private evaluation
               with enterprise teams. We are actively engaging with UK innovation
               grants and seed funding routes as we scale the platform from

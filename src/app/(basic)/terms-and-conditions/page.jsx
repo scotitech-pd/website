@@ -77,9 +77,9 @@ const TermsAndConditions = () => {
           </p>
           <ul className="list-disc ml-6 space-y-1">
             <li>
-              AppDeploy —{" "}
+              Vamiq (formerly AppDeploy) —{" "}
               <a
-                href="https://appdeploy.scotitech.com/terms"
+                href="https://vamiq.app/terms"
                 target="_blank"
                 rel="noreferrer"
                 className="underline hover:text-brand"
@@ -88,7 +88,7 @@ const TermsAndConditions = () => {
               </a>
               ,{" "}
               <a
-                href="https://appdeploy.scotitech.com/dpa"
+                href="https://vamiq.app/dpa"
                 target="_blank"
                 rel="noreferrer"
                 className="underline hover:text-brand"
@@ -97,7 +97,7 @@ const TermsAndConditions = () => {
               </a>
               ,{" "}
               <a
-                href="https://appdeploy.scotitech.com/sub-processors"
+                href="https://vamiq.app/sub-processors"
                 target="_blank"
                 rel="noreferrer"
                 className="underline hover:text-brand"

@@ -26,7 +26,7 @@ export default function ContactCta() {
                   Bring us the requirement. We will bring a practical next step.
                 </h2>
                 <p className="mt-5 max-w-xl font-karla text-lg leading-relaxed text-on-ink-muted">
-                  Discuss AppDeploy, an AXOS enterprise evaluation, a deployment
+                  Discuss a Vamiq rollout, an AXOS enterprise evaluation, a deployment
                   requirement, or a commercial partnership with the people who
                   own the product and delivery decisions.
                 </p>

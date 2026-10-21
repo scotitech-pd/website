@@ -16,7 +16,7 @@ const quickLinks = [
 ];
 
 const productLinks = [
-  { title: "AppDeploy", link: "/products/appdeploy" },
+  { title: "Vamiq", link: "/products/vamiq" },
   { title: "AXOS", link: "/products/axos" },
   { title: "ClarityPath", link: "/products/claritypath" },
 ];
@@ -35,9 +35,9 @@ const WhatsApp = ({ className }) => (
 
 /* Software-directory listings. Icons are copied into /public, never hot-linked. */
 const directories = [
-  { name: "Capterra", href: "https://www.capterra.com/p/10056775/AppDeploy/", label: "AppDeploy on Capterra", src: "/images/brand/directories/capterra.png" },
-  { name: "GetApp", href: "https://www.getapp.com/all-software/a/appdeploy-1/", label: "AppDeploy on GetApp", src: "/images/brand/directories/getapp.png" },
-  { name: "Software Advice", href: "https://www.softwareadvice.com/product/564477-AppDeploy/", label: "AppDeploy on Software Advice", src: "/images/brand/directories/softwareadvice.png" },
+  { name: "Capterra", href: "https://www.capterra.com/p/10056775/AppDeploy/", label: "Vamiq (listed as AppDeploy) on Capterra", src: "/images/brand/directories/capterra.png" },
+  { name: "GetApp", href: "https://www.getapp.com/all-software/a/appdeploy-1/", label: "Vamiq (listed as AppDeploy) on GetApp", src: "/images/brand/directories/getapp.png" },
+  { name: "Software Advice", href: "https://www.softwareadvice.com/product/564477-AppDeploy/", label: "Vamiq (listed as AppDeploy) on Software Advice", src: "/images/brand/directories/softwareadvice.png" },
 ];
 
 const socials = [

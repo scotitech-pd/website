@@ -2,7 +2,7 @@ import { renderProductOg, ogSize, ogContentType } from "@/lib/ogProductImage";
 
 export const dynamic = "force-static";
 
-export const alt = "ClarityPath — Guided decision support, accessed via AppDeploy";
+export const alt = "ClarityPath — Guided decision support, accessed via Vamiq";
 export const size = ogSize;
 export const contentType = ogContentType;
 

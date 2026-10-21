@@ -5,7 +5,7 @@ export const metadata = {
     absolute: "ScotiTech Solutions | Business Software for Controlled Operations",
   },
   description:
-    "ScotiTech Solutions is a UK-registered technology company serving organisations worldwide with AppDeploy for Apple device management and private app distribution, AXOS for controlled enterprise operations, and focused digital products.",
+    "ScotiTech Solutions is a UK-registered technology company serving organisations worldwide with Vamiq for private app stores and Apple device management, AXOS for controlled enterprise operations, and focused digital products.",
   keywords: [
     "private app distribution",
     "AI workspace",

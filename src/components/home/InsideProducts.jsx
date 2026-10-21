@@ -5,14 +5,14 @@ import Reveal from "@/components/Reveal";
 
 const productProof = [
   {
-    name: "AppDeploy",
-    label: "Apple devices and private apps",
-    href: "/products/appdeploy",
+    name: "Vamiq",
+    label: "Private app rollout",
+    href: "/products/vamiq",
     image: "/images/products/appdeploy/dashboard.png",
-    imageAlt: "AppDeploy admin dashboard showing branded workspace, reports, quick actions, and platform status",
+    imageAlt: "Vamiq admin dashboard showing branded workspace, reports, quick actions, and platform status",
     summary:
-      "One admin workspace for iPhone, iPad and Mac: set devices up, install apps, keep every device healthy and compliant, and ship private releases through your own branded app store.",
-    points: ["Device management", "Branded app store", "Release controls"],
+      "A branded admin workspace for entitlement-led private iOS releases, reviewing installs, managing access, and keeping rollout activity visible.",
+    points: ["Branded portal", "Entitlement access", "Release workflow"],
     tone: "blue",
   },
   {
@@ -73,7 +73,7 @@ export default function InsideProducts() {
             </h2>
           </div>
           <p className="max-w-2xl font-lora text-lg leading-8 text-slate-700 lg:ml-auto">
-            AppDeploy, AXOS, and ClarityPath are shown through real product
+            Vamiq, AXOS, and ClarityPath are shown through real product
             interfaces: branded app delivery, private workspace operations, and
             guided planning support.
           </p>

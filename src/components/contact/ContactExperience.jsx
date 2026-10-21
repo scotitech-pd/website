@@ -20,10 +20,10 @@ import { meetingLinks } from "@/lib/scheduling";
 
 const productPaths = [
   {
-    name: "AppDeploy",
-    eyebrow: "Apple devices and private apps",
-    description: "iPhone, iPad and Mac management, a branded app store, and release controls.",
-    href: "/products/appdeploy",
+    name: "Vamiq",
+    eyebrow: "Private apps and Apple devices",
+    description: "Branded app store, Apple device management, and build checks before each release.",
+    href: "/products/vamiq",
     accent: "from-orange-500/20 via-amber-400/10 to-white/0",
   },
   {
@@ -88,7 +88,7 @@ const initialForm = {
   name: "",
   email: "",
   company: "",
-  interest: "AppDeploy",
+  interest: "Vamiq",
   message: "",
 };
 
@@ -160,7 +160,7 @@ export default function ContactExperience() {
               Start the right conversation, not another generic enquiry.
             </h1>
             <p className="mt-6 max-w-2xl font-lora text-lg leading-8 text-white/72 md:text-xl">
-              Tell us whether you are evaluating AppDeploy, requesting AXOS enterprise access, or exploring a partnership. We will route the conversation to the right product and commercial path.
+              Tell us whether you are evaluating Vamiq, requesting AXOS enterprise access, or exploring a partnership. We will route the conversation to the right product and commercial path.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" variant="onInkSolid">
@@ -186,7 +186,7 @@ export default function ContactExperience() {
                   Conversation routes
                 </p>
                 <div className="mt-5 space-y-3">
-                  {["AppDeploy access", "AXOS enterprise evaluation", "Partnership or delivery discussion"].map((item) => (
+                  {["Vamiq access", "AXOS enterprise evaluation", "Partnership or delivery discussion"].map((item) => (
                     <div key={item} className="flex items-center gap-3 rounded-lg bg-white/8 px-4 py-3">
                       <CheckCircle2 size={18} className="shrink-0 text-emerald-300" />
                       <span className="font-karla text-sm font-semibold text-white/88">{item}</span>
@@ -353,7 +353,7 @@ export default function ContactExperience() {
                     onChange={updateField}
                     className="h-11 w-full rounded-lg border border-slate-200 bg-white px-4 font-karla text-sm text-slate-950 outline-none transition-colors focus:border-orange-400"
                   >
-                    <option>AppDeploy</option>
+                    <option>Vamiq</option>
                     <option>AXOS enterprise evaluation</option>
                     <option>ClarityPath</option>
                     <option>Partnership</option>
@@ -407,7 +407,7 @@ export default function ContactExperience() {
             Prefer a call?
           </h2>
           <p className="mt-3 font-lora text-sm leading-7 text-slate-600">
-            Book a focused session for product fit, AppDeploy rollout, AXOS enterprise evaluation, or partnership routes.
+            Book a focused session for product fit, Vamiq rollout, AXOS enterprise evaluation, or partnership routes.
           </p>
           <Button asChild className="mt-6" variant="ink">
             <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">

@@ -77,11 +77,11 @@ export default async function InsightArticlePage({ params }) {
 
   const articleUrl = `${SITE_URL}/insights/${insight.slug}`;
   const relatedProduct = insight.relatedProduct || {
-    name: "AppDeploy",
-    href: "/products/appdeploy",
+    name: "Vamiq",
+    href: "/products/vamiq",
     description:
-      "A branded operational layer for controlled internal iOS app distribution and rollout workflows.",
-    cta: "Explore AppDeploy",
+      "A branded app store for your private apps, and Apple device management that installs them on iPhone, iPad and Mac, with build checks before each release.",
+    cta: "Explore Vamiq",
   };
   const structuredData = [
     articleJsonLd(

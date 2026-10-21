@@ -2,217 +2,234 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Store,
+  Smartphone,
+  ShieldCheck,
+  FileCheck2,
+  ScanSearch,
+  Gauge,
+} from "lucide-react";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Badge from "@/components/ui/Badge";
 import ProductShowcase from "@/components/products/ProductShowcase";
-import { cn } from "@/lib/utils";
 
-const flagships = [
+const vamiqParts = [
   {
-    slug: "appdeploy",
-    name: "AppDeploy",
-    href: "/products/appdeploy",
-    externalUrl: "https://appdeploy.scotitech.com",
-    logo: "/images/brand/appdeploy-logo-black.png",
-    accent: "bg-appdeploy",
-    status: { variant: "live", dot: true, label: "Live" },
-    category: "Apple devices and private apps",
-    tagline: "Your devices. Your apps. Your brand.",
-    description:
-      "Device management for iPhone, iPad and Mac with your own branded app store, built on Apple Business. The first 5 devices are free, then £1 per device a month, with every device feature included.",
-    bestFor:
-      "Companies with private apps, startups setting up company devices, and the agencies and IT firms that support them.",
-    rollout:
-      "Zero-touch setup, silent app installs, security baselines, FileVault, compliance evidence and a branded app store.",
-    capabilities: ["iPhone, iPad, Mac", "Apple Business", "SOC 2 / ISO evidence"],
-    media: {
-      type: "image",
-      src: "/images/products/appdeploy/claritypath-portal.webp",
-      alt: "AppDeploy branded app store showing ClarityPath and other approved business apps",
-    },
+    Icon: Store,
+    title: "Private app distribution",
+    body: "Your own branded app store for your company’s private and internal apps.",
   },
   {
-    slug: "axos",
-    name: "AXOS",
-    href: "/products/axos",
-    externalUrl: "https://axos.scotitech.com",
-    logo: "/images/brand/axos-icon.png",
-    accent: "bg-axos",
-    status: { variant: "early", label: "Enterprise only" },
-    category: "Private AI workspace",
-    tagline: "Your enterprise AI platform, self-hosted.",
-    description:
-      "AXOS is a completed core platform currently available for private enterprise evaluation — mail, drive, chat, video, tasks — with governance-first AI built in.",
-    bestFor:
-      "Organisations evaluating private AI, self-hosted AI, Google Workspace alternatives, or Microsoft 365 alternatives for employee operations.",
-    rollout:
-      "Business-profile review, private enterprise evaluation access, governance planning, and deployment fit assessment.",
-    capabilities: ["Enterprise AI platform", "Secure collaboration", "100% on-premise"],
-    media: {
-      type: "image",
-      src: "/images/products/axos/command-center-dashboard.webp",
-      alt: "AXOS Command Center dashboard showing governed AI and connected workspace modules",
-    },
+    Icon: Smartphone,
+    title: "Device management",
+    body: "Set up company iPhones, iPads and Macs, install apps on them and keep updates in view.",
+  },
+  {
+    Icon: ShieldCheck,
+    title: "Release controls",
+    body: "Check each new build before it reaches a device, and keep a record of what was released.",
   },
 ];
+
+const vamiqDifferentiators = [
+  {
+    Icon: ScanSearch,
+    title: "Release Guard",
+    body: "Every build is preflighted before it can reach a device. A check that can’t run says “unknown”, never “passed”.",
+  },
+  {
+    Icon: Gauge,
+    title: "Deployment answers",
+    body: "A deterministic cause and next action for every device that didn’t converge. No AI in deployment decisions.",
+  },
+  {
+    Icon: FileCheck2,
+    title: "Evidence Packs",
+    body: "A checksummed record of what was released, to whom and with what outcome, verifiable by an auditor.",
+  },
+];
+
+const axos = {
+  name: "AXOS",
+  href: "/products/axos",
+  externalUrl: "https://axos.scotitech.com",
+  logo: "/images/brand/axos-icon.png",
+  status: { variant: "early", label: "Enterprise only" },
+  category: "Private AI workspace",
+  tagline: "Your enterprise AI platform, self-hosted.",
+  description:
+    "Mail, drive, chat, video and tasks with governance-first AI built in, running entirely inside your own environment. A completed core platform, available for private enterprise evaluation.",
+  media: {
+    src: "/images/products/axos/command-center-dashboard.webp",
+    alt: "AXOS Command Center dashboard showing governed AI and connected workspace modules",
+  },
+};
 
 export default function OurProducts() {
   return (
     <Section id="products" surface="muted" spacing="lg">
       <Reveal>
-        <div className="grid gap-8 border-b border-hairline pb-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(280px,0.75fr)] lg:items-end">
-          <div className="max-w-3xl">
-            <Eyebrow>Products</Eyebrow>
-            <h2 className="t-h1 mt-3">
-              Product infrastructure for private rollout and controlled work.
-            </h2>
-            <p className="t-lead mt-5">
-              AppDeploy is live for Apple device management and private app distribution. AXOS is a
-                completed core platform currently available for private enterprise
-              evaluation. Both are built for
-              organisations that care about adoption, governance, and where
-              operational data lives.
-            </p>
-          </div>
-
-          <div className="grid gap-4 border-l border-hairline pl-5 sm:grid-cols-2 lg:grid-cols-1">
-            <div>
-              <p className="font-karla text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
-                Portfolio focus
-              </p>
-              <p className="mt-2 font-lora text-sm leading-6 text-body">
-                Software products for distribution, internal operations,
-                secure collaboration, AI workspace adoption, and practical
-                deployment control.
-              </p>
-            </div>
-            <div>
-              <p className="font-karla text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
-                Buyer path
-              </p>
-              <p className="mt-2 font-lora text-sm leading-6 text-body">
-                Ready-to-use where the product is live, structured evaluation
-                where business data, hosting, and employee rollout are involved.
-              </p>
-            </div>
-          </div>
+        <div className="max-w-3xl">
+          <Eyebrow>Our flagship</Eyebrow>
+          <h2 className="t-h1 mt-3">Meet Vamiq.</h2>
+          <p className="t-lead mt-5">
+            Your private apps, on your team’s iPhones, iPads and Macs. Vamiq
+            is a branded app store, Apple device management and release
+            controls in one workspace, built on Apple Business rather than
+            around it.
+          </p>
         </div>
       </Reveal>
 
-      <div className="mt-10 grid gap-5">
-        {flagships.map((product, i) => (
-          <Reveal key={product.name} delay={i * 0.08}>
-            <article className="group overflow-hidden rounded-xl border border-hairline bg-surface shadow-soft transition-shadow duration-300 hover:shadow-card">
-              <div className="grid lg:grid-cols-[42%_58%]">
-                <div className="relative min-h-[300px] overflow-hidden border-b border-hairline bg-surface-sunken lg:min-h-full lg:border-b-0 lg:border-r">
-                  <ProductShowcase
-                    variant={product.slug}
-                    src={product.media.src}
-                    alt={product.media.alt}
-                    compact
-                    className="absolute inset-0"
-                  />
-                  <div className="absolute inset-x-0 top-0 h-1 bg-hairline">
-                    <span className={cn("block h-full w-1/3", product.accent)} />
-                  </div>
-                </div>
-
-                <div className="flex min-h-full flex-col p-6 md:p-8">
-                  <div className="flex flex-wrap items-start justify-between gap-4">
-                    <div className="flex min-w-0 items-center gap-3.5">
-                      {product.logo && (
-                        <Image
-                          src={product.logo}
-                          alt={`${product.name} logo`}
-                          width={42}
-                          height={42}
-                          className="h-10 w-10 rounded-lg object-contain"
-                        />
-                      )}
-                      <div>
-                        <p className="font-karla text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
-                          {product.category}
-                        </p>
-                        <h3 className="mt-1 font-karla text-2xl font-bold leading-tight text-strong">
-                          {product.name}
-                        </h3>
-                      </div>
-                    </div>
-                    <Badge variant={product.status.variant} dot={product.status.dot}>
-                      {product.status.label}
-                    </Badge>
-                  </div>
-
-                  <p className="mt-6 max-w-2xl font-karla text-[1.05rem] font-semibold leading-7 text-strong">
-                    {product.tagline}
-                  </p>
-                  <p className="mt-3 max-w-2xl font-lora text-[15.5px] leading-7 text-body">
-                    {product.description}
-                  </p>
-
-                  <div className="mt-6 grid gap-4 border-y border-hairline py-5 md:grid-cols-2">
-                    <div>
-                      <p className="font-karla text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">
-                        Best for
-                      </p>
-                      <p className="mt-2 font-lora text-sm leading-6 text-body">
-                        {product.bestFor}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="font-karla text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">
-                        Deployment path
-                      </p>
-                      <p className="mt-2 font-lora text-sm leading-6 text-body">
-                        {product.rollout}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {product.capabilities.map((c) => (
-                      <span
-                        key={c}
-                        className="rounded-full border border-hairline bg-surface-sunken px-3 py-1 font-karla text-[11px] font-semibold uppercase tracking-[0.08em] text-body"
-                      >
-                        {c}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
-                    <Link
-                      href={product.href}
-                      className="inline-flex items-center gap-1.5 font-karla text-xs font-semibold uppercase tracking-[0.16em] text-brand-strong transition-colors hover:text-brand"
-                    >
-                      Explore {product.name}
-                      <ArrowRight
-                        size={14}
-                        className="transition-transform group-hover:translate-x-0.5"
-                      />
-                    </Link>
-                    {product.externalUrl && (
-                      <a
-                        href={product.externalUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 font-karla text-xs font-semibold uppercase tracking-[0.16em] text-muted transition-colors hover:text-strong"
-                      >
-                        Visit live site
-                        <ArrowUpRight size={13} />
-                      </a>
-                    )}
-                  </div>
-                </div>
+      {/* Vamiq flagship panel */}
+      <Reveal delay={0.06}>
+        <article className="relative mt-10 overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#032B2A_0%,#053B39_55%,#0B4F4B_100%)] text-white shadow-lift">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_90%_0%,rgba(94,234,212,0.18),transparent_60%)]" />
+          <div className="relative grid gap-10 p-6 md:p-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center lg:p-12">
+            <div>
+              <div className="flex flex-wrap items-center gap-3">
+                <Image
+                  src="/images/brand/vamiq/vamiq-logo-on-dark.svg"
+                  alt="Vamiq"
+                  width={150}
+                  height={51}
+                  className="h-10 w-auto"
+                />
+                <Badge variant="onInk" dot>
+                  Live
+                </Badge>
               </div>
-            </article>
-          </Reveal>
-        ))}
-      </div>
+              <p className="mt-6 font-karla text-[1.15rem] font-semibold leading-8 text-white">
+                Apple Business stays underneath. Vamiq is the operational
+                layer teams were building themselves, or buying a large
+                device-management suite to get.
+              </p>
 
+              <ul className="mt-7 space-y-4">
+                {vamiqParts.map(({ Icon, title, body }) => (
+                  <li key={title} className="flex gap-3.5">
+                    <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-[#5EEAD4] ring-1 ring-white/10">
+                      <Icon size={17} />
+                    </span>
+                    <div>
+                      <p className="font-karla text-[15px] font-semibold text-white">{title}</p>
+                      <p className="mt-0.5 font-lora text-sm leading-6 text-white/65">{body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://vamiq.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-karla text-[15px] font-semibold text-[#0B1F1E] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#F0FDFA]"
+                >
+                  Start free on vamiq.app
+                  <ArrowUpRight size={16} />
+                </a>
+                <Link
+                  href="/products/vamiq"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 font-karla text-[15px] font-semibold text-white/85 transition-colors hover:border-white/40 hover:text-white"
+                >
+                  Explore Vamiq
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+              <p className="mt-4 font-karla text-xs tracking-wide text-white/45">
+                Free for up to 5 devices · £1 per device after that · formerly AppDeploy
+              </p>
+            </div>
+
+            <div className="relative">
+              <ProductShowcase
+                variant="vamiq"
+                src="/images/products/appdeploy/claritypath-portal.webp"
+                alt="Vamiq branded app store for an organisation, listing its approved private apps"
+              />
+            </div>
+          </div>
+
+          <div className="relative grid border-t border-white/10 md:grid-cols-3">
+            {vamiqDifferentiators.map(({ Icon, title, body }, i) => (
+              <div
+                key={title}
+                className={
+                  "p-6 md:p-8 " + (i > 0 ? "border-t border-white/10 md:border-l md:border-t-0" : "")
+                }
+              >
+                <Icon size={18} className="text-[#5EEAD4]" />
+                <p className="mt-3 font-karla text-[15px] font-semibold text-white">{title}</p>
+                <p className="mt-1.5 font-lora text-sm leading-6 text-white/60">{body}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+      </Reveal>
+
+      {/* Secondary product */}
+      <Reveal delay={0.1}>
+        <p className="mt-16 font-karla text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+          Also from ScotiTech
+        </p>
+        <article className="group mt-4 grid overflow-hidden rounded-xl border border-hairline bg-surface shadow-soft transition-shadow duration-300 hover:shadow-card md:grid-cols-[minmax(0,1fr)_280px] lg:grid-cols-[minmax(0,1fr)_360px]">
+          <div className="flex flex-col p-6 md:p-8">
+            <div className="flex flex-wrap items-center gap-3.5">
+              <Image
+                src={axos.logo}
+                alt={`${axos.name} logo`}
+                width={36}
+                height={36}
+                className="h-9 w-9 rounded-lg object-contain"
+              />
+              <div>
+                <p className="font-karla text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+                  {axos.category}
+                </p>
+                <h3 className="font-karla text-xl font-bold leading-tight text-strong">{axos.name}</h3>
+              </div>
+              <Badge variant={axos.status.variant} className="ml-auto">
+                {axos.status.label}
+              </Badge>
+            </div>
+            <p className="mt-5 font-karla text-base font-semibold text-strong">{axos.tagline}</p>
+            <p className="mt-2 max-w-2xl font-lora text-[15px] leading-7 text-body">{axos.description}</p>
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <Link
+                href={axos.href}
+                className="inline-flex items-center gap-1.5 font-karla text-xs font-semibold uppercase tracking-[0.16em] text-brand-strong transition-colors hover:text-brand"
+              >
+                Explore AXOS
+                <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+              </Link>
+              <a
+                href={axos.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-karla text-xs font-semibold uppercase tracking-[0.16em] text-muted transition-colors hover:text-strong"
+              >
+                Request access
+                <ArrowUpRight size={13} />
+              </a>
+            </div>
+          </div>
+          <div className="relative hidden min-h-[220px] border-l border-hairline md:block">
+            <ProductShowcase
+              variant="axos"
+              src={axos.media.src}
+              alt={axos.media.alt}
+              compact
+              className="absolute inset-0"
+            />
+          </div>
+        </article>
+      </Reveal>
     </Section>
   );
 }

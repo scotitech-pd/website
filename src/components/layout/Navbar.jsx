@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
+  { id: 0, title: "Vamiq", type: "route", link: "/products/vamiq" },
   { id: 1, title: "Products", type: "anchor", target: "products" },
   { id: 2, title: "Solutions", type: "anchor", target: "solutions" },
   { id: 3, title: "Trust", type: "route", link: "/trust" },

@@ -7,10 +7,10 @@ const SpecificSolution = () => {
   const productCards = [
     {
       id: 1,
-      name: "AppDeploy",
-      image: "/images/brand/appdeploy-logo-black.png",
-      description: "Apple device management and private app distribution, built on Apple Business",
-      link: "/products/appdeploy",
+      name: "Vamiq",
+      image: "/images/brand/vamiq/vamiq-app-icon-rounded.svg",
+      description: "Branded app store and Apple device management for iPhone, iPad and Mac",
+      link: "/products/vamiq",
     },
     {
       id: 2,

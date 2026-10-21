@@ -3,14 +3,14 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, ShieldCheck, ChevronDown } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ShieldCheck, ChevronDown } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { useModal } from "@/components/ModalContext";
 import ProductShowcase from "@/components/products/ProductShowcase";
 
 const announcements = [
-  { label: "Trust & security posture", href: "/trust" },
-  { label: "Now hiring growth roles worldwide", href: "/careers", cta: "See open roles" },
+  { label: "AppDeploy is now Vamiq", href: "/products/vamiq", cta: "Meet Vamiq" },
+  { label: "Now hiring growth roles worldwide", href: "/careers" },
 ];
 
 export default function HeroSection() {
@@ -95,11 +95,12 @@ export default function HeroSection() {
           {...rise(0.16)}
           className="mt-6 max-w-2xl font-karla text-[clamp(1rem,0.9rem+0.5vw,1.2rem)] leading-relaxed text-white/55"
         >
-          ScotiTech builds and supports focused software for Apple device
-          management, private app distribution and controlled enterprise operations — led from Scotland
-          and working with organisations worldwide through{" "}
-          <span className="text-white/80 font-medium">AppDeploy</span> and{" "}
-          <span className="text-white/80 font-medium">AXOS</span>.
+          ScotiTech is a UK software company, led from Scotland. Our flagship,{" "}
+          <span className="text-white/80 font-medium">Vamiq</span>, puts
+          private apps on company iPhones, iPads and Macs, with every release
+          checked before it ships and recorded after. We also build{" "}
+          <span className="text-white/80 font-medium">AXOS</span>, a
+          self-hosted enterprise AI workspace.
         </motion.p>
 
         {/* CTAs */}
@@ -107,19 +108,28 @@ export default function HeroSection() {
           {...rise(0.24)}
           className="mt-10 flex flex-wrap items-center justify-center gap-3"
         >
-          <button
-            onClick={() => setShowModal(true)}
+          <Link
+            href="/products/vamiq"
             className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 font-karla text-[15px] font-semibold text-white shadow-[0_0_32px_rgba(226,88,14,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-strong hover:shadow-[0_0_44px_rgba(226,88,14,0.50)]"
           >
-            Discuss your requirement
+            Meet Vamiq
             <ArrowRight size={16} />
-          </button>
-          <Link
-            href="#products"
+          </Link>
+          <a
+            href="https://vamiq.app"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-7 py-3.5 font-karla text-[15px] font-semibold text-white/80 backdrop-blur-sm transition-all duration-200 hover:border-white/25 hover:text-white"
           >
-            View product portfolio
-          </Link>
+            Try Vamiq free
+            <ArrowUpRight size={16} />
+          </a>
+          <button
+            onClick={() => setShowModal(true)}
+            className="inline-flex items-center gap-2 rounded-full px-4 py-3.5 font-karla text-[15px] font-semibold text-white/60 transition-colors hover:text-white"
+          >
+            Talk to us
+          </button>
         </motion.div>
 
         {/* Trust strip */}
@@ -129,7 +139,7 @@ export default function HeroSection() {
         >
           <ShieldCheck size={15} className="text-brand/70" />
           <p className="font-karla text-xs tracking-wide">
-            Live products · direct access to product leaders · structured deployment and support
+            Built and hosted in the UK · Apple MDM Vendor · direct access to the founder
           </p>
         </motion.div>
 
@@ -148,9 +158,9 @@ export default function HeroSection() {
             }
           >
             <ProductShowcase
-              variant="appdeploy"
+              variant="vamiq"
               src="/images/products/appdeploy/claritypath-portal.webp"
-              alt="AppDeploy branded app store showing approved apps"
+              alt="Vamiq branded app store for an organisation, listing its approved private apps"
               priority
             />
           </motion.div>

@@ -66,7 +66,7 @@ export default async function OgImage() {
               maxWidth: 980,
             }}
           >
-            AppDeploy · AXOS · ClarityPath — built and supported by a UK technology company.
+            Vamiq · AXOS · ClarityPath — built and supported by a UK technology company.
           </div>
         </div>
 

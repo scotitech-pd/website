@@ -45,6 +45,10 @@ export function productJsonLd(product, path) {
   };
 
   if (product.logo) ld.image = siteUrl(product.logo);
+  // Renamed products (e.g. Vamiq, formerly AppDeploy) keep the old name as an
+  // alternate name and point at their own site so the two are linked.
+  if (product.formerName) ld.alternateName = [product.formerName, product.tagline];
+  if (product.externalUrl && product.formerName) ld.sameAs = [product.externalUrl];
 
   if (product.pricing?.plans?.length) {
     // Only emit Offer entries for plans with a real numeric price; skip
