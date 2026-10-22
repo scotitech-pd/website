@@ -2,70 +2,91 @@
 
 :root {
   /* ---------------------------------------------------------------
-     SEMANTIC DESIGN TOKENS — "Clean Light Enterprise"
-     One canvas, one accent, soft elevation. Used sitewide.
+     SEMANTIC DESIGN TOKENS — "Warm paper" (Vamiq standard, Oct 2026)
+     One warm-paper canvas, deep-teal ink and one teal accent, system
+     fonts (no web-font downloads), soft elevation. Used sitewide.
   --------------------------------------------------------------- */
 
-  /* Surfaces — warm cream palette */
-  --surface: #faf9f6;
-  --surface-muted: #f5f3ee;
-  --surface-sunken: #ede9e0;
-  --ink: #0b1220; /* inverse / rare high-impact bands */
-  --ink-soft: #111a2e;
+  /* Fonts — the platform's own faces: SF Pro / New York on Apple
+     devices, Segoe UI / Georgia on Windows. Nothing to download. */
+  --font-sans-stack: ui-sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif-stack: ui-serif, "New York", "Iowan Old Style", Charter,
+    Georgia, Cambria, "Times New Roman", serif;
+  --font-mono-stack: ui-monospace, "SF Mono", SFMono-Regular, Menlo,
+    Consolas, monospace;
+
+  /* Older components name their faces after the web fonts the site
+     used to load; they now all resolve to the system stacks above. */
+  --font-karla: var(--font-sans-stack);
+  --font-geist-sans: var(--font-sans-stack);
+  --font-lora: var(--font-sans-stack);
+  --font-geist-mono: var(--font-mono-stack);
+
+  /* Surfaces — warm paper */
+  --surface: #fcfbf8; /* raised cards and quiet bands */
+  --surface-muted: #f4f2ec; /* the page canvas */
+  --surface-sunken: #ebe7de;
+  --ink: #0b1f1e; /* deep teal-black bands */
+  --ink-soft: #12302e;
 
   /* Text */
-  --strong: #0b1220;
-  --body: #334155;
-  --muted: #64748b;
-  --on-ink: #e8ecf4;
-  --on-ink-muted: #93a0b8;
+  --strong: #0b1f1e;
+  --body: #3b4a48;
+  --muted: #66736f;
+  --on-ink: #eef4f2;
+  --on-ink-muted: #a9bcb8;
 
   /* Borders */
-  --border: #e5e9f0;
-  --border-strong: #cbd5e1;
-  --hairline-ink: rgba(255, 255, 255, 0.1);
+  --border: #e3dfd5;
+  --border-strong: #cbc6ba;
+  --hairline-ink: rgba(255, 255, 255, 0.12);
 
-  /* Brand — single accent (orange) */
-  --brand: #e2580e;
-  --brand-strong: #b8430b;
-  --brand-soft: #fdebdd;
+  /* Brand — single accent (deep teal, shared with Vamiq) */
+  --brand: #0f766e;
+  --brand-strong: #0b5d57;
+  --brand-soft: #e2efeb;
   --brand-contrast: #ffffff;
 
-  /* Per-product accents (warm, distinct; chips / hairlines only) */
+  /* Photo grade — the deep-teal gradient laid over every photo */
+  --grade: #002d35;
+
+  /* Per-product accents (chips / hairlines only) */
   --accent-vamiq: #0f766e;
-  --accent-axos: #ea580c;
-  --accent-claritypath: #b45309;
+  --accent-axos: #2f5d86;
+  --accent-claritypath: #a16207;
 
   /* Elevation — soft, low-spread */
-  --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.04),
-    0 8px 24px rgba(15, 23, 42, 0.05);
-  --shadow-card: 0 2px 4px rgba(15, 23, 42, 0.04),
-    0 18px 40px rgba(15, 23, 42, 0.08);
-  --shadow-lift: 0 8px 16px rgba(15, 23, 42, 0.06),
-    0 30px 60px rgba(15, 23, 42, 0.12);
+  --shadow-soft: 0 1px 2px rgba(11, 31, 30, 0.04),
+    0 8px 24px rgba(11, 31, 30, 0.05);
+  --shadow-card: 0 2px 4px rgba(11, 31, 30, 0.04),
+    0 18px 40px rgba(11, 31, 30, 0.08);
+  --shadow-lift: 0 8px 16px rgba(11, 31, 30, 0.06),
+    0 30px 60px rgba(11, 31, 30, 0.14);
 
   /* ---------------------------------------------------------------
-     LEGACY ALIASES — keep existing pages rendering during migration
+     LEGACY ALIASES — keep older pages rendering in the new palette
   --------------------------------------------------------------- */
-  --background: #faf9f6;
+  --background: #f4f2ec;
   --foreground: #ffffff;
-  --main-light: #6b61d9;
-  --main: #e2580e;
-  --main-dark: #0f172a;
-  --blue: #2563eb;
-  --orange: #c08457;
+  --main-light: #5eaaa1;
+  --main: #0f766e;
+  --main-dark: #0b1f1e;
+  --blue: #2f5d86;
+  --orange: #a16207;
   --green: #0f766e;
-  --green-light: #cbd5e1;
-  --grey: #475569;
-  --yellow: #64748b;
-  --blue-light: #1d4ed8;
+  --green-light: #cbc6ba;
+  --grey: #3b4a48;
+  --yellow: #66736f;
+  --blue-light: #2f5d86;
   --greenblue: #0f766e;
-  --seablue: #e2e8f0;
+  --seablue: #e3dfd5;
 
   /* Scrollbar */
-  --scrollbar-bg: #ede9e0;
-  --scrollbar-thumb: #d4cfc4;
-  --scrollbar-thumb-hover: #b8b0a0;
+  --scrollbar-bg: #ebe7de;
+  --scrollbar-thumb: #cbc6ba;
+  --scrollbar-thumb-hover: #a9a397;
 }
 
 @theme inline {
@@ -75,6 +96,7 @@
   --color-surface-sunken: var(--surface-sunken);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
+  --color-grade: var(--grade);
 
   /* Text → text-strong, text-body, text-muted, text-on-ink */
   --color-strong: var(--strong);
@@ -119,11 +141,13 @@
   --color-greenblue: var(--greenblue);
   --color-foreground: var(--foreground);
 
-  /* Fonts */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Fonts → font-sans, font-serif, font-mono (+ legacy names) */
+  --font-sans: var(--font-sans-stack);
+  --font-serif: var(--font-serif-stack);
+  --font-mono: var(--font-mono-stack);
   --font-lora: var(--font-lora);
   --font-karla: var(--font-karla);
+  --font-geist-sans: var(--font-geist-sans);
 
   /* Layout */
   --spacing-8xl: 1600px;
@@ -185,7 +209,7 @@
 html {
   scroll-behavior: smooth;
   /* offset anchored sections below the fixed navbar */
-  scroll-padding-top: 96px;
+  scroll-padding-top: 88px;
   scrollbar-width: auto;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
 }
@@ -193,83 +217,136 @@ html {
 body {
   background: var(--surface-muted);
   color: var(--body);
-  font-family: var(--font-karla), var(--font-geist-sans), Arial, Helvetica,
-    sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-sans-stack);
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+::selection {
+  background: #cfe6e1;
+  color: var(--strong);
+}
+
 /* anchored sections also get individual scroll-margin as a safety net */
 [id] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 88px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
 }
 
 /* ---------------------------------------------------------------
-   TYPOGRAPHY SCALE — confident, restrained
-   Use display/h-* utility classes to stop ad-hoc per-file sizing.
-   Defined in @layer components so Tailwind color utilities
-   (e.g. text-on-ink, text-vamiq) can override the default color.
+   TYPOGRAPHY SCALE — calm, large, restrained
+   Page titles are the system sans, tight and confident; section
+   headings are the system serif, as on vamiq.app. Defined in
+   @layer components so Tailwind colour utilities can override.
 --------------------------------------------------------------- */
 @layer components {
 .t-eyebrow {
-  font-family: var(--font-karla), sans-serif;
-  font-size: 0.8125rem;
+  font-family: var(--font-sans-stack);
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brand-strong);
 }
 .t-display {
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: var(--font-sans-stack);
   font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.04;
-  font-size: clamp(2.5rem, 1.6rem + 3.8vw, 4.5rem);
+  letter-spacing: -0.035em;
+  line-height: 1.03;
+  font-size: clamp(2.5rem, 1.25rem + 4.4vw, 4.4rem);
   color: var(--strong);
+  text-wrap: balance;
 }
 .t-h1 {
-  font-family: var(--font-geist-sans), sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
-  font-size: clamp(2rem, 1.4rem + 2.6vw, 3.25rem);
+  font-family: var(--font-serif-stack);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1.1;
+  font-size: clamp(2rem, 1.35rem + 2.3vw, 2.85rem);
   color: var(--strong);
+  text-wrap: balance;
 }
 .t-h2 {
-  font-family: var(--font-geist-sans), sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  line-height: 1.12;
-  font-size: clamp(1.75rem, 1.3rem + 1.9vw, 2.75rem);
+  font-family: var(--font-serif-stack);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  font-size: clamp(1.6rem, 1.25rem + 1.3vw, 2.1rem);
   color: var(--strong);
+  text-wrap: balance;
 }
 .t-h3 {
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: var(--font-sans-stack);
   font-weight: 600;
   letter-spacing: -0.01em;
-  line-height: 1.2;
-  font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.625rem);
+  line-height: 1.25;
+  font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.35rem);
   color: var(--strong);
 }
 .t-lead {
-  font-family: var(--font-karla), sans-serif;
-  font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
-  line-height: 1.7;
+  font-family: var(--font-sans-stack);
+  font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  line-height: 1.6;
   color: var(--body);
+  text-wrap: pretty;
 }
 .t-body {
-  font-family: var(--font-karla), sans-serif;
+  font-family: var(--font-sans-stack);
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.65;
   color: var(--body);
+  text-wrap: pretty;
 }
 .t-small {
-  font-family: var(--font-karla), sans-serif;
+  font-family: var(--font-sans-stack);
   font-size: 0.875rem;
   line-height: 1.6;
   color: var(--muted);
 }
+
+/* Photo grade: the deep-teal gradient that sits over every photo so
+   real photography reads as one set and text on it stays legible. */
+.photo-grade {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 45, 53, 0.05) 0%,
+    rgba(0, 45, 53, 0.2) 40%,
+    rgba(0, 45, 53, 0.86) 100%
+  );
+}
+.photo-tint {
+  background: linear-gradient(
+    160deg,
+    rgba(15, 118, 110, 0.18) 0%,
+    rgba(0, 45, 53, 0.32) 100%
+  );
+  mix-blend-mode: multiply;
+}
+}
+
+/* ---------------------------------------------------------------
+   REVEAL — a calm fade and small rise. Pure CSS, no JavaScript:
+   scroll-driven where the browser supports it, otherwise content is
+   simply shown. Nothing is ever hidden from crawlers or no-JS users.
+--------------------------------------------------------------- */
+@keyframes reveal-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.reveal-now {
+  animation: reveal-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal-rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 28%;
+  }
 }
 
 /* ---------------------------------------------------------------
@@ -321,5 +398,9 @@ body {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+  .reveal,
+  .reveal-now {
+    animation: none !important;
   }
 }

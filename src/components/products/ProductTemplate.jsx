@@ -56,6 +56,9 @@ import { useModal } from "@/components/ModalContext";
 import { cn } from "@/lib/utils";
 import JsonLd from "@/components/seo/JsonLd";
 import ProductShowcase from "@/components/products/ProductShowcase";
+import LoopVideo from "@/components/media/LoopVideo";
+import FilmDialog from "@/components/media/FilmDialog";
+import PhotoCard from "@/components/media/PhotoCard";
 import {
   productJsonLd,
   faqJsonLd,
@@ -74,6 +77,41 @@ const icons = {
 const deployIcons = [Cloud, Server, ServerCog, ShieldCheck];
 
 function ProductMedia({ media, accentBg }) {
+  if (media?.type === "loop") {
+    return (
+      <figure className="relative pb-6">
+        <div className="relative mr-[14%] overflow-hidden rounded-xl border border-hairline-strong/70 bg-white shadow-lift">
+          <div className="flex h-7 items-center gap-1.5 border-b border-hairline bg-[#f7f6f2] px-3" aria-hidden="true">
+            <span className="size-2 rounded-full bg-[#d9d5cc]" />
+            <span className="size-2 rounded-full bg-[#d9d5cc]" />
+            <span className="size-2 rounded-full bg-[#d9d5cc]" />
+          </div>
+          <LoopVideo
+            src={media.src}
+            poster={media.poster}
+            width={media.width}
+            height={media.height}
+            label={media.alt}
+            className="block aspect-[16/10] w-full bg-white object-cover"
+          />
+        </div>
+        {media.phone && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={media.phone.src}
+            alt={media.phone.alt}
+            width={media.phone.width}
+            height={media.phone.height}
+            fetchPriority="high"
+            className="absolute bottom-0 right-0 w-[28%] rounded-[1.4rem] border-[5px] border-ink bg-ink shadow-lift"
+          />
+        )}
+        {media.caption && (
+          <figcaption className="mt-4 mr-[30%] text-[13px] text-muted">{media.caption}</figcaption>
+        )}
+      </figure>
+    );
+  }
   if (media?.type === "image") {
     if (media.presentation === "showcase") {
       return (
@@ -187,8 +225,8 @@ export default function ProductTemplate({ product }) {
     <>
       <JsonLd data={structuredData} />
       {/* HERO */}
-      <section className="relative overflow-hidden bg-surface pt-28 pb-16 md:pt-32 md:pb-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_50%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
+      <section className="relative overflow-hidden bg-surface-muted pt-10 pb-16 md:pt-16 md:pb-24">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_50%_at_85%_-5%,rgba(15,118,110,0.10),transparent_60%)]" />
         <Container className="relative z-10">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <Reveal immediate>
@@ -235,8 +273,13 @@ export default function ProductTemplate({ product }) {
                   </>
                 )}
               </div>
+              {product.film && (
+                <div className="mt-6">
+                  <FilmDialog />
+                </div>
+              )}
               {product.externalUrl && (
-                <p className="mt-3 font-karla text-sm text-muted">
+                <p className="mt-4 font-karla text-sm text-muted">
                   {product.externalNote || "Live at"}{" "}
                   <a
                     href={product.externalUrl}
@@ -257,7 +300,7 @@ export default function ProductTemplate({ product }) {
           {product.heroSpecs && (
             <Reveal className="mt-12 grid grid-cols-2 gap-3 border-t border-hairline pt-8 sm:gap-4 md:grid-cols-4">
               {product.heroSpecs.map((s) => (
-                <div key={s.label} className="rounded-2xl border border-hairline bg-surface-muted px-4 py-4">
+                <div key={s.label} className="rounded-xl border border-hairline bg-surface px-4 py-4">
                   <p className={cn("font-karla text-[11px] font-semibold uppercase tracking-[0.14em]", accentText)}>
                     {s.label}
                   </p>
@@ -268,6 +311,34 @@ export default function ProductTemplate({ product }) {
           )}
         </Container>
       </section>
+
+      {/* FILM + PHOTO CARDS */}
+      {product.film && (
+        <Section surface="base" spacing="lg" className="border-y border-hairline">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)] lg:items-center lg:gap-14">
+            <Reveal>
+              <FilmDialog variant="poster" />
+            </Reveal>
+            <Reveal>
+              <p className="t-eyebrow">The film</p>
+              <h2 className="t-h1 mt-3">See {product.name} in 75 seconds.</h2>
+              <p className="t-lead mt-5">
+                A release checked before it ships, sent to the right team, published in a branded app
+                store and ready on a new starter&apos;s iPhone. A sample workspace, music only.
+              </p>
+            </Reveal>
+          </div>
+          {product.photoCards?.length > 0 && (
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              {product.photoCards.map((card, i) => (
+                <Reveal key={card.title} delay={i * 0.05}>
+                  <PhotoCard {...card} external linkLabel="On vamiq.app" />
+                </Reveal>
+              ))}
+            </div>
+          )}
+        </Section>
+      )}
 
       {/* METRICS */}
       {product.metrics && (
@@ -914,7 +985,7 @@ export default function ProductTemplate({ product }) {
           <Container>
             <Reveal>
               <div className="relative overflow-hidden rounded-xl bg-ink px-7 py-12 md:px-12 md:py-14">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_50%_0%,rgba(226,88,14,0.28),transparent_62%)]" />
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_50%_0%,rgba(15,118,110,0.28),transparent_62%)]" />
                 <div className="relative z-10">
                   <div className="max-w-2xl">
                     <p className="font-karla text-xs font-semibold uppercase tracking-[0.16em] text-brand-soft">
@@ -997,7 +1068,7 @@ export default function ProductTemplate({ product }) {
           <Container>
             <Reveal>
               <div className="relative overflow-hidden rounded-xl bg-ink px-7 py-12 text-center md:px-12 md:py-14">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(226,88,14,0.25),transparent_60%)]" />
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(15,118,110,0.25),transparent_60%)]" />
                 <div className="relative z-10 mx-auto max-w-2xl">
                   <h2 className="t-h1 text-on-ink">{product.cta.title}</h2>
                   <p className="mt-4 font-karla text-lg text-on-ink-muted">{product.cta.body}</p>

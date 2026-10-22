@@ -179,8 +179,8 @@ export default function AxosDeploymentDiscovery() {
   };
 
   return (
-    <section id="axos-deployment-discovery" className="bg-[#f5f3ee] py-16">
-      <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+    <section id="axos-deployment-discovery" className="bg-[#f4f2ec] py-16">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 xl:grid-cols-[34%_66%]">
           <aside className="space-y-5">
             <div className="rounded-[1.5rem] border border-[#111827]/10 bg-[#100E0C] p-7 text-white shadow-[0_28px_80px_rgba(16,14,12,0.18)] sm:p-8 xl:sticky xl:top-28">

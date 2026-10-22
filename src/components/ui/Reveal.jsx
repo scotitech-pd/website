@@ -1,50 +1,33 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 /**
  * Tier-1 motion backbone: a calm fade + small rise as the element scrolls into
- * view. Animates once. Honors prefers-reduced-motion (renders static).
+ * view. Pure CSS (see `.reveal` in globals.css): scroll-driven where the
+ * browser supports it, otherwise the content is simply shown. No JavaScript,
+ * so nothing is hidden from crawlers, no-JS visitors or slow connections.
  *
- * Use `delay` for staggered lists; `y`/`direction` to tweak the rise.
+ * `immediate` animates on load (above-the-fold content); `delay` staggers it.
+ * The old framer-motion props (y, duration, once, amount) are accepted and
+ * ignored so existing call sites keep working.
  */
 export default function Reveal({
-  as = "div",
+  as: Tag = "div",
   delay = 0,
-  y = 14,
-  duration = 0.5,
-  once = true,
-  amount = 0.2,
-  immediate = false, // use for above-the-fold content (animates on mount, no flash)
+  immediate = false,
   className,
+  style,
   children,
+  // eslint-disable-next-line no-unused-vars
+  y, duration, once, amount,
   ...props
 }) {
-  const reduce = useReducedMotion();
-  const MotionTag = motion[as] || motion.div;
-
-  if (reduce) {
-    const StaticTag = as;
-    return (
-      <StaticTag className={className} {...props}>
-        {children}
-      </StaticTag>
-    );
-  }
-
-  const trigger = immediate
-    ? { animate: { opacity: 1, y: 0 } }
-    : { whileInView: { opacity: 1, y: 0 }, viewport: { once, amount } };
-
   return (
-    <MotionTag
-      className={className}
-      initial={{ opacity: 0, y }}
-      {...trigger}
-      transition={{ duration, ease: [0.22, 1, 0.36, 1], delay }}
+    <Tag
+      className={cn(immediate ? "reveal-now" : "reveal", className)}
+      style={immediate && delay ? { animationDelay: `${delay}s`, ...style } : style}
       {...props}
     >
       {children}
-    </MotionTag>
+    </Tag>
   );
 }

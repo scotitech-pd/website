@@ -9,21 +9,14 @@ import {
 } from "lucide-react";
 import AxosDeploymentDiscovery from "@/components/products/axos/AxosDeploymentDiscovery";
 import { meetingLinks } from "@/lib/scheduling";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "AXOS Rollout Review",
+export const metadata = pageMetadata({
+  title: "Plan an AXOS rollout",
   description:
-    "Request an AXOS rollout review for secure workspace deployment, controlled AI use cases, identity planning, data sources, and on-premises readiness.",
-  alternates: { canonical: "/products/axos/deployment-discovery" },
-  openGraph: {
-    title: "AXOS Rollout Review",
-    description:
-      "Request an AXOS rollout review for deployment, identity, data, and on-premises readiness.",
-    url: "/products/axos/deployment-discovery",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image" },
-};
+    "Request an AXOS rollout review: secure workspace deployment, controlled AI use cases, identity planning, data sources and on-premises readiness.",
+  path: "/products/axos/deployment-discovery",
+});
 
 const outcomeCards = [
   {
@@ -48,10 +41,10 @@ const outcomeCards = [
 
 export default function AxosDeploymentDiscoveryPage() {
   return (
-    <main className="bg-[#f5f3ee] text-[#111827]">
+    <div className="bg-[#f4f2ec] text-[#111827]">
       <section className="relative overflow-hidden py-14 sm:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(15,118,110,0.18),transparent_30%),radial-gradient(circle_at_85%_12%,rgba(37,99,235,0.10),transparent_28%)]" />
-        <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+        <div className="relative z-10 mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <Link
             href="/products/axos"
             className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-slate-700 transition hover:text-slate-950"
@@ -140,6 +133,6 @@ export default function AxosDeploymentDiscoveryPage() {
       </section>
 
       <AxosDeploymentDiscovery />
-    </main>
+    </div>
   );
 }

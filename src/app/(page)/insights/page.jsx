@@ -8,21 +8,14 @@ import {
   SearchCheck,
 } from "lucide-react";
 import { featuredInsight, insights } from "@/lib/insights";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Insights",
+export const metadata = pageMetadata({
+  title: "Insights and briefings",
   description:
-    "Practical ScotiTech briefings on Apple Business, internal app deployment, governance-first AI, and privacy-conscious software.",
-  alternates: { canonical: "/insights" },
-  openGraph: {
-    title: "ScotiTech Insights",
-    description:
-      "Practical briefings on Apple Business, internal app rollout, and governance-first AI.",
-    url: "/insights",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image" },
-};
+    "ScotiTech briefings on Apple Business, private app distribution, Apple device management and governed AI.",
+  path: "/insights",
+});
 
 const principles = [
   {
@@ -48,14 +41,14 @@ export default function InsightsPage() {
   );
 
   return (
-    <main className="bg-[#f5f3ee] text-[#0F172A]">
+    <div className="bg-[#f4f2ec] text-[#0b1f1e]">
       <section className="relative overflow-hidden py-14 sm:py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(50%_45%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(50%_45%_at_85%_-5%,rgba(15,118,110,0.10),transparent_60%)]" />
 
-        <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 xl:grid-cols-[56%_44%] gap-10 items-end mb-14">
             <div className="max-w-4xl">
-              <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b]/80 mb-3">
+              <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#0b5d57]/80 mb-3">
                 Insights
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-karla font-semibold leading-tight mb-5">
@@ -70,7 +63,7 @@ export default function InsightsPage() {
 
             <div className="rounded-xl border border-slate-200 bg-white p-6 sm:p-7">
               <div className="flex items-center gap-3 mb-4">
-                <div className="size-9 rounded-lg bg-[#0F172A] text-white flex items-center justify-center">
+                <div className="size-9 rounded-lg bg-[#0b1f1e] text-white flex items-center justify-center">
                   <SearchCheck className="size-4" />
                 </div>
                 <div>
@@ -94,8 +87,8 @@ export default function InsightsPage() {
             href={`/insights/${featuredInsight.slug}`}
             className="group grid grid-cols-1 lg:grid-cols-[40%_60%] overflow-hidden rounded-xl border border-slate-200 bg-white transition-shadow duration-300 hover:shadow-md"
           >
-            <div className="relative min-h-[260px] bg-[#0F172A]">
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(226,88,14,0.32),transparent_52%),linear-gradient(315deg,rgba(194,65,12,0.22),transparent_46%)]" />
+            <div className="relative min-h-[260px] bg-[#0b1f1e]">
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(15,118,110,0.32),transparent_52%),linear-gradient(315deg,rgba(194,65,12,0.22),transparent_46%)]" />
               <Image
                 src={featuredInsight.image}
                 alt={`${featuredInsight.title} cover image`}
@@ -112,7 +105,7 @@ export default function InsightsPage() {
 
             <article className="p-6 sm:p-7 lg:p-8 flex flex-col">
               <div className="mb-4 flex flex-wrap items-center gap-2">
-                <span className="rounded-full px-2.5 py-0.5 text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b] ring-1 ring-inset ring-[#fde2cd] bg-[#fff4ec]">
+                <span className="rounded-full px-2.5 py-0.5 text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-[#0b5d57] ring-1 ring-inset ring-[#fde2cd] bg-[#fff4ec]">
                   {featuredInsight.category}
                 </span>
                 <span className="rounded-full px-2.5 py-0.5 text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 ring-1 ring-inset ring-slate-200">
@@ -149,7 +142,7 @@ export default function InsightsPage() {
       </section>
 
       <section className="pb-16 sm:pb-20">
-        <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {principles.map((item) => (
               <div
@@ -182,7 +175,7 @@ export default function InsightsPage() {
                 >
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="rounded-full px-2.5 py-0.5 text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b] ring-1 ring-inset ring-[#fde2cd] bg-[#fff4ec]">
+                      <span className="rounded-full px-2.5 py-0.5 text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-[#0b5d57] ring-1 ring-inset ring-[#fde2cd] bg-[#fff4ec]">
                         {insight.category}
                       </span>
                       <span className="rounded-full px-2.5 py-0.5 text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 ring-1 ring-inset ring-slate-200">
@@ -218,6 +211,6 @@ export default function InsightsPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

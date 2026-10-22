@@ -1,4 +1,5 @@
 import { meetingLinks } from "@/lib/scheduling";
+import { vamiqMedia } from "@/lib/company";
 
 /**
  * Product configuration consumed by the shared ProductTemplate.
@@ -45,18 +46,40 @@ export const products = {
     },
     hero: {
       media: {
-        type: "image",
-        src: "/images/products/appdeploy/claritypath-portal.webp",
-        alt: "Vamiq branded app store for an organisation, listing its approved private apps",
-        presentation: "showcase",
-        variant: "vamiq",
+        type: "loop",
+        src: vamiqMedia.loop.src,
+        poster: vamiqMedia.poster.src,
+        width: vamiqMedia.loop.width,
+        height: vamiqMedia.loop.height,
+        alt: vamiqMedia.poster.alt,
+        phone: vamiqMedia.phone,
+        caption: "Sample workspace",
       },
     },
-    metrics: [
-      { value: "450+", label: "Apps installed" },
-      { value: "99.9%", label: "Availability SLO" },
-      { value: "~14 days", label: "Typical enterprise rollout" },
-      { value: "Apple MDM Vendor", label: "Verified enterprise distribution partner", raw: true },
+    film: true,
+    photoCards: [
+      {
+        photo: "iphone-at-work",
+        eyebrow: "For your people",
+        title: "Private app distribution",
+        body: "Your own branded app store for your company's private and internal apps.",
+        href: "https://vamiq.app/private-app-distribution",
+      },
+      {
+        photo: "device-macbook",
+        eyebrow: "For your devices",
+        title: "Device management",
+        body: "Enrol company iPhones, iPads and Macs, install their apps, and manage their settings and security.",
+        href: "https://vamiq.app/device-management",
+        position: "55% 50%",
+      },
+      {
+        photo: "code-on-mac",
+        eyebrow: "For your releases",
+        title: "Release controls",
+        body: "Check each new build before it reaches a device, and keep a record of what was released.",
+        href: "https://vamiq.app/release-controls",
+      },
     ],
     problem: {
       title: "Private apps fall between the App Store and a full MDM suite.",
@@ -97,7 +120,7 @@ export const products = {
         {
           icon: "TrendingUp",
           title: "Startups setting up company devices",
-          body: "Device records, a daily compliance history and an audit log you can hand to an auditor for SOC 2 or ISO 27001 work. Free for up to 5 devices. Vamiq itself is not yet certified.",
+          body: "Device records, a daily compliance history and an audit log you can hand to an auditor for your own SOC 2 or ISO 27001 work. Free for up to 5 devices.",
         },
         {
           icon: "BriefcaseBusiness",
@@ -129,21 +152,14 @@ export const products = {
         { label: "Live service status", href: "https://vamiq.app/status" },
       ],
     },
-    proof: {
-      quote:
-        "We replaced three different manual processes with a single AppDeploy workspace. Our IT team now ships updates to 40+ employees faster, and install-related support is much easier to manage.",
-      name: "Rohit Ahlawat",
-      role: "Director, Aviskaar Enterprises (customer since AppDeploy)",
-      img: "/images/solution/rohit.jpeg",
-    },
     security: {
-      title: "Security on every plan, stated honestly",
+      title: "Security on every plan, Free included",
       points: [
-        "Customer data hosted in Glasgow, UK, on servers ScotiTech operates.",
+        "Customer data is hosted in the UK and backed up daily.",
         "Traffic over HTTPS; Apple Business credentials, integration secrets and push-certificate keys encrypted at rest with AES-256-GCM.",
         "Every signed-in request checked on the server, and queries on customer data filtered to the user’s own workspace.",
         "An audit log on every plan, Free included: app changes, roles, Apple Business sync and admin actions.",
-        "Not yet certified to SOC 2 or ISO 27001. Device records, a daily compliance history and the audit log are available to review today.",
+        "Device records, a daily compliance history and the audit log are ready for your auditor or security team to review.",
       ],
     },
     pricing: {
@@ -211,19 +227,6 @@ export const products = {
         },
       ],
     },
-    caseStudy: {
-      eyebrow: "ClarityPath case study",
-      title: "An App Store setback became a clearer, controlled route to users.",
-      body: "ClarityPath’s public App Store review exposed a familiar problem for specialised products: a useful app can still struggle to explain its distinction inside a crowded category. Rather than reduce the product to another public listing, Vamiq gave it a branded route where its purpose, access model and installation journey can be understood before a user begins.",
-      points: [
-        "The review challenge made the product-positioning and distribution problem visible early.",
-        "Vamiq presents ClarityPath inside an organisation-branded app store with clear platform and access context.",
-        "Direct sharing and QR access give approved teams one consistent route instead of fragmented links and instructions.",
-      ],
-      image: "/images/products/appdeploy/1.jpeg",
-      imageAlt: "ClarityPath App Store review challenge documented during the product launch journey",
-      link: { label: "Explore ClarityPath", href: "/products/claritypath" },
-    },
     faqs: [
       { q: "What happened to AppDeploy?", a: "In October 2026 AppDeploy became Vamiq. The product, the team and the company behind it, ScotiTech Solutions Limited, are unchanged. Existing accounts, enrolled devices, apps, integrations and billing continue without any action." },
       { q: "Does Vamiq replace Apple Business?", a: "No. Apple Business stays underneath and remains the source of your apps, licences and device assignments. Vamiq is the operational layer on top: the branded app store, device management and release controls." },
@@ -266,7 +269,7 @@ export const products = {
       points: [
         "Mail, files, chat, and tasks scattered across external SaaS you don't control.",
         "AI features that quietly send your work to third-party models.",
-        "Many Google Workspace alternatives or Microsoft 365 alternatives still leave knowledge, search, and governance split across tools.",
+        "Many collaboration suites still leave knowledge, search, and governance split across tools.",
       ],
     },
     solution: {
@@ -398,7 +401,7 @@ export const products = {
     faqs: [
       { q: "Is AXOS really self-hosted?", a: "Yes. AXOS can run on your own infrastructure or private cloud, with zero external calls and complete data sovereignty for teams that need self-hosted AI or on-premise AI." },
       { q: "What's included in the AI workspace?", a: "Mail, drive, calendar, chat, video, and tasks, plus a governance-first AI agent built directly into the digital workspace platform." },
-      { q: "Is AXOS a Google Workspace or Microsoft 365 alternative?", a: "AXOS is not positioned as a free or lightweight replacement for every team. It is an enterprise-only Google Workspace alternative or Microsoft 365 alternative for organisations that need private hosting, secure collaboration, and stronger data control." },
+      { q: "Can AXOS replace our current office suite?", a: "AXOS is an enterprise workspace for organisations that need private hosting, secure collaboration and stronger data control: mail, files, chat, video and tasks in one place, with governed AI built in." },
       { q: "Does AXOS support enterprise knowledge management?", a: "Yes. AXOS brings files, communication, tasks, and governed AI into one workspace so teams can build controlled enterprise knowledge management and enterprise search AI workflows around their own data." },
       { q: "How do people sign in?", a: "SSO (SAML) on the web, with biometric login available on mobile." },
       { q: "Can we test AXOS before adopting it?", a: "Yes. AXOS is enterprise-only, so we first review your business information and intended use case. Suitable organisations receive private enterprise evaluation access to evaluate AXOS before deciding on employee adoption." },
@@ -453,8 +456,8 @@ export const products = {
       media: {
         type: "phone",
         screens: [
-          "/images/products/claritypath/app-insights.png",
-          "/images/products/claritypath/app-focus.png",
+          "/images/products/claritypath/app-insights-600.webp",
+          "/images/products/claritypath/app-focus-600.webp",
         ],
         alt: "ClarityPath app showing deeper insights and today's strategic focus",
       },

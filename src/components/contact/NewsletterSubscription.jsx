@@ -39,14 +39,14 @@ const NewsletterSubscription = () => {
   };
 
   return (
-    <section className="relative bg-[#f5f3ee] text-[#0F172A] py-14 md:py-20">
+    <section className="relative bg-[#f4f2ec] text-[#0b1f1e] py-14 md:py-20">
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 md:px-20">
         <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_20px_50px_rgba(15,23,42,0.10)] p-6 md:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* LEFT */}
             <div>
-              <h2 className="text-3xl font-karla font-bold mb-3 text-[#0F172A]">
+              <h2 className="text-3xl font-karla font-bold mb-3 text-[#0b1f1e]">
                 Stay Updated with ScotiTech
               </h2>
               <p className="text-slate-700 font-lora text-sm md:text-base leading-relaxed max-w-md">
@@ -71,7 +71,7 @@ const NewsletterSubscription = () => {
                 />
                 <button
                   onClick={handleSubmit}
-                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#0F172A] hover:bg-slate-900 text-white font-karla font-semibold text-sm transition shadow-md hover:shadow-lg"
+                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#0b1f1e] hover:bg-slate-900 text-white font-karla font-semibold text-sm transition shadow-md hover:shadow-lg"
                 >
                   {status === "success" ? "Subscribed" : "Subscribe"}
                   <ArrowRightCircle className="w-5 h-5" />
@@ -92,7 +92,7 @@ const NewsletterSubscription = () => {
                 />
                 <button
                   onClick={handleSubmit}
-                  className="absolute top-1/2 right-2 -translate-y-1/2 px-8 py-3 rounded-full bg-[#0F172A] hover:bg-slate-900 text-white font-karla font-semibold text-base transition-all shadow-md hover:shadow-lg"
+                  className="absolute top-1/2 right-2 -translate-y-1/2 px-8 py-3 rounded-full bg-[#0b1f1e] hover:bg-slate-900 text-white font-karla font-semibold text-base transition-all shadow-md hover:shadow-lg"
                 >
                   {status === "success" ? "Subscribed" : "Subscribe"}
                 </button>

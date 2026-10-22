@@ -4,36 +4,26 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
-import { useModal } from "@/components/ModalContext";
-import { Button } from "@/components/ui/button";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { VAMIQ_URL } from "@/lib/company";
 
 const navLinks = [
-  { id: 0, title: "Vamiq", type: "route", link: "/products/vamiq" },
-  { id: 1, title: "Products", type: "anchor", target: "products" },
-  { id: 2, title: "Solutions", type: "anchor", target: "solutions" },
-  { id: 3, title: "Trust", type: "route", link: "/trust" },
-  { id: 4, title: "Insights", type: "anchor", target: "insights" },
-  { id: 5, title: "Company", type: "route", link: "/aboutus" },
-  { id: 6, title: "Media", type: "route", link: "/media" },
-  { id: 7, title: "Careers", type: "route", link: "/careers" },
+  { title: "Vamiq", href: "/products/vamiq" },
+  { title: "Products", href: "/products" },
+  { title: "Services", href: "/#services" },
+  { title: "Company", href: "/aboutus" },
+  { title: "Insights", href: "/insights" },
+  { title: "Trust", href: "/trust" },
 ];
 
 const Navbar = () => {
   const pathname = usePathname();
-  const { setShowModal } = useModal();
-
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const isHome = pathname === "/";
-
   useEffect(() => {
-    const onScroll = () => {
-      const top = document.body.scrollTop || document.documentElement.scrollTop;
-      setScrolled(top > 60);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -43,143 +33,123 @@ const Navbar = () => {
     setMenuOpen(false);
   }, [pathname]);
 
-  const hrefFor = (item) =>
-    item.type === "route"
-      ? item.link
-      : isHome
-        ? `#${item.target}`
-        : `/#${item.target}`;
+  useEffect(() => {
+    document.documentElement.style.overflow = menuOpen ? "hidden" : "";
+    const onKey = (e) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
 
-  const isActive = (item) =>
-    item.type === "route" && pathname.startsWith(item.link);
-
-  // On the home page before scroll: dark hero mode
-  // On other pages or after scroll: light solid mode
-  const isDark = isHome && !scrolled;
+  const isActive = (href) => !href.includes("#") && pathname.startsWith(href);
 
   return (
-    <div className="h-[72px]">
-      {/* Mobile overlay + panel */}
-      <div
-        className={cn(
-          "fixed inset-0 z-[60] bg-ink/40 backdrop-blur-sm transition-opacity duration-300 xl:hidden",
-          menuOpen ? "visible opacity-100" : "invisible opacity-0"
-        )}
-        onClick={() => setMenuOpen(false)}
-      >
-        <nav
-          onClick={(e) => e.stopPropagation()}
-          className={cn(
-            "absolute right-0 h-full w-full max-w-[320px] bg-surface shadow-lift transition-transform duration-300",
-            menuOpen ? "translate-x-0" : "translate-x-full"
-          )}
-        >
-          <div className="flex h-full flex-col px-7 pt-24 pb-10">
-            <ul className="space-y-1">
-              {navLinks.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    href={hrefFor(item)}
-                    className={cn(
-                      "block rounded-xl px-4 py-3 font-karla text-lg font-medium transition-colors",
-                      isActive(item)
-                        ? "bg-brand-soft text-brand-strong"
-                        : "text-strong hover:bg-surface-sunken"
-                    )}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-auto">
-              <Button
-                className="w-full"
-                size="lg"
-                onClick={() => {
-                  setShowModal(true);
-                  setMenuOpen(false);
-                }}
-              >
-                Start a business enquiry
-              </Button>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      {/* Bar */}
+    <div className="h-16">
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-          isDark
-            ? "border-b border-white/8 bg-[#080d18]/80 backdrop-blur-md"
-            : "border-b border-hairline bg-surface/95 shadow-soft backdrop-blur-md"
+          "fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300",
+          scrolled || menuOpen
+            ? "border-hairline bg-surface-muted/90 backdrop-blur-md"
+            : "border-transparent bg-surface-muted"
         )}
       >
-        <div className="mx-auto flex h-[72px] max-w-8xl items-center justify-between px-5 min-[500px]:px-10 md:px-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center" aria-label="ScotiTech home">
+        <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
+          <Link href="/" className="flex shrink-0 items-center" aria-label="ScotiTech home">
             <Image
-              src="/logo/logo.png"
+              src="/logo/scotitech-wordmark.png"
               alt="ScotiTech"
-              width={168}
-              height={42}
+              width={538}
+              height={150}
               priority
-              className={cn(
-                "h-9 w-auto transition-all duration-500",
-                isDark ? "brightness-0 invert" : "brightness-0"
-              )}
+              className="h-7 w-auto brightness-0"
             />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden items-center gap-1 xl:flex">
+          <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
             {navLinks.map((item) => (
               <Link
-                key={item.id}
-                href={hrefFor(item)}
+                key={item.title}
+                href={item.href}
+                aria-current={isActive(item.href) ? "page" : undefined}
                 className={cn(
-                  "relative rounded-full px-4 py-2 font-karla text-[15px] font-medium transition-colors duration-300",
-                  isActive(item)
-                    ? isDark ? "text-white" : "text-brand-strong"
-                    : isDark
-                      ? "text-white/75 hover:text-white"
-                      : "text-body hover:text-strong"
+                  "rounded-md px-3 py-2 text-[14px] font-medium transition-colors",
+                  isActive(item.href) ? "text-strong" : "text-body hover:text-strong"
                 )}
               >
                 {item.title}
-                {isActive(item) && (
-                  <span className="absolute inset-x-4 -bottom-px h-0.5 rounded-full bg-brand" />
-                )}
               </Link>
             ))}
           </nav>
 
-          {/* CTA */}
-          <div className="hidden xl:block">
-            <Button
-              size="sm"
-              variant={isDark ? "onInkSolid" : "default"}
-              onClick={() => setShowModal(true)}
+          <div className="hidden items-center gap-2 lg:flex">
+            <a
+              href={VAMIQ_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-9 items-center gap-1 rounded-md border border-hairline-strong bg-surface px-3.5 text-[14px] font-semibold text-strong transition-colors hover:bg-white"
             >
-              Business enquiry
-            </Button>
+              Try Vamiq
+              <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex h-9 items-center rounded-md bg-brand px-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-brand-strong"
+            >
+              Talk to us
+            </Link>
           </div>
 
-          {/* Mobile hamburger */}
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
-            className={cn(
-              "z-[70] rounded-lg p-1 xl:hidden transition-colors duration-300",
-              isDark ? "text-white" : "text-strong"
-            )}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            className="-mr-2 rounded-md p-2 text-strong lg:hidden"
             onClick={() => setMenuOpen((p) => !p)}
           >
-            {menuOpen ? <X size={28} /> : <Menu size={30} />}
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
+
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile"
+          className={cn(
+            "border-t border-hairline bg-surface-muted lg:hidden",
+            menuOpen ? "block" : "hidden"
+          )}
+        >
+          <ul className="mx-auto max-w-[1200px] px-4 py-3 sm:px-6">
+            {navLinks.map((item) => (
+              <li key={item.title}>
+                <Link
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block border-b border-hairline py-3.5 text-[17px] font-medium text-strong"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+            <li className="flex gap-3 py-4">
+              <Link
+                href="/contact"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex h-11 flex-1 items-center justify-center rounded-lg bg-brand text-[15px] font-semibold text-white"
+              >
+                Talk to us
+              </Link>
+              <a
+                href={VAMIQ_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 flex-1 items-center justify-center gap-1 rounded-lg border border-hairline-strong bg-surface text-[15px] font-semibold text-strong"
+              >
+                Try Vamiq
+                <ArrowUpRight size={15} aria-hidden="true" />
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
     </div>
   );

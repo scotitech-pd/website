@@ -33,8 +33,11 @@ export async function generateMetadata({ params }) {
 
   const url = `${SITE_URL}/insights/${insight.slug}`;
 
+  // Long headlines drop the " | ScotiTech" suffix so search results show the
+  // whole headline rather than a truncated one.
+  const withSuffix = `${insight.title} | ScotiTech`;
   return {
-    title: insight.title,
+    title: withSuffix.length > 60 ? { absolute: insight.title } : insight.title,
     description: insight.seoDescription,
     alternates: {
       canonical: url,
@@ -96,13 +99,13 @@ export default async function InsightArticlePage({ params }) {
   ];
 
   return (
-    <main className="bg-[#f5f3ee] text-[#0F172A]">
+    <div className="bg-[#f4f2ec] text-[#0b1f1e]">
       <JsonLd data={structuredData} />
 
       <section className="relative overflow-hidden py-12 sm:py-16">
-        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(226,88,14,0.08),transparent_34%),linear-gradient(315deg,rgba(15,118,110,0.07),transparent_30%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(15,118,110,0.08),transparent_34%),linear-gradient(315deg,rgba(15,118,110,0.07),transparent_30%)]" />
 
-        <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/insights"
             className="mb-8 inline-flex items-center gap-2 text-sm font-karla font-semibold text-slate-600 hover:text-slate-900"
@@ -151,7 +154,7 @@ export default async function InsightArticlePage({ params }) {
             </div>
 
             <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
-              <div className="relative min-h-[260px] bg-[#0F172A]">
+              <div className="relative min-h-[260px] bg-[#0b1f1e]">
                 <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(194,65,12,0.34),transparent_52%),linear-gradient(315deg,rgba(188,185,106,0.22),transparent_46%)]" />
                 <Image
                   src={insight.image}
@@ -190,7 +193,7 @@ export default async function InsightArticlePage({ params }) {
       </section>
 
       <section className="pb-16 sm:pb-24">
-        <div className="max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
             <article className="rounded-xl border border-slate-200 bg-white p-6 sm:p-8 lg:p-9">
               <div className="space-y-10">
@@ -215,7 +218,7 @@ export default async function InsightArticlePage({ params }) {
 
               {insight.workedExample ? (
               <div className="mt-12 rounded-xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-7">
-                <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b] mb-3">
+                <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#0b5d57] mb-3">
                   {insight.workedExample.eyebrow}
                 </p>
                 <h2 className="text-2xl sm:text-3xl font-karla font-semibold text-slate-900 mb-4">
@@ -262,7 +265,7 @@ export default async function InsightArticlePage({ params }) {
               </div>
               ) : (
               <div className="mt-12 rounded-xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-7">
-                <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b] mb-3">
+                <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#0b5d57] mb-3">
                   SME checklist
                 </p>
                 <h2 className="text-2xl sm:text-3xl font-karla font-semibold text-slate-900 mb-6">
@@ -297,7 +300,7 @@ export default async function InsightArticlePage({ params }) {
                   href={insight.sourceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#0F172A] px-5 py-3 text-sm font-karla font-semibold text-white hover:bg-slate-900"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#0b1f1e] px-5 py-3 text-sm font-karla font-semibold text-white hover:bg-slate-900"
                 >
                   View reference
                   <ExternalLink className="size-4" />
@@ -326,6 +329,6 @@ export default async function InsightArticlePage({ params }) {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

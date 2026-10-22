@@ -1,9 +1,6 @@
-import { Geist, Geist_Mono, Karla, Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import GotoTop from "@/components/GotoTop";
-import RouteLoader from "@/components/RouteLoader";
 import { ModalProvider } from "@/components/ModalContext";
 import RequestaQuote from "@/components/RequestaQuote";
 import { CookieConsentProvider } from "@/components/cookie/CookieConsentContext";
@@ -13,72 +10,48 @@ import JsonLd from "@/components/seo/JsonLd";
 import GoogleAnalytics from "@/components/seo/GoogleAnalytics";
 import ApolloTracker from "@/components/seo/ApolloTracker";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const karla = Karla({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "700", "800"],
-  variable: "--font-karla",
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-lora",
-  weight: ["400", "500", "600", "700"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { DEFAULT_OG_IMAGE, SITE_DESCRIPTION } from "@/lib/seo";
 
 export const metadata = {
   metadataBase: new URL("https://scotitech.com"),
   title: {
-    default: "ScotiTech Solutions | Business Software for Controlled Operations",
-    template: "%s | ScotiTech Solutions",
+    default: "ScotiTech Solutions | The company behind Vamiq",
+    template: "%s | ScotiTech",
   },
-  description:
-    "ScotiTech Solutions is a UK-registered technology company building and supporting privacy-conscious software products for organisations worldwide, including Vamiq, AXOS and ClarityPath.",
+  description: SITE_DESCRIPTION,
   applicationName: "ScotiTech Solutions",
   authors: [{ name: "ScotiTech Solutions Limited", url: "https://scotitech.com" }],
   creator: "ScotiTech Solutions Limited",
   publisher: "ScotiTech Solutions Limited",
   keywords: [
     "ScotiTech",
+    "ScotiTech Solutions",
     "Vamiq",
     "AppDeploy",
     "AXOS",
     "ClarityPath",
+    "Apple device management",
+    "private app store",
     "internal app distribution",
     "Apple Business",
-    "private app delivery",
-    "private workspace",
-    "self-hosted AI",
-    "governance-first AI",
-    "enterprise iOS distribution",
+    "self-hosted AI workspace",
+    "software company Scotland",
   ],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: "ScotiTech Solutions",
-    title: "ScotiTech Solutions | Business Software for Controlled Operations",
-    description:
-      "A UK-registered technology company building and supporting focused software products for organisations worldwide.",
+    title: "ScotiTech Solutions | The company behind Vamiq",
+    description: SITE_DESCRIPTION,
     url: "https://scotitech.com",
     locale: "en_GB",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "ScotiTech Solutions",
-    description:
-      "UK-registered technology company building and supporting focused software products for organisations worldwide.",
-    creator: "@scotitech",
+    description: SITE_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE.url],
   },
   robots: {
     index: true,
@@ -96,7 +69,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#ffffff",
+  themeColor: "#f4f2ec",
   width: "device-width",
   initialScale: 1,
 };
@@ -105,11 +78,17 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://scotitech.com/#organization",
-  name: "ScotiTech Solutions Limited",
+  name: "ScotiTech Solutions",
+  legalName: "ScotiTech Solutions Limited",
   alternateName: "ScotiTech",
   url: "https://scotitech.com",
   description:
-    "UK-registered technology company. Its flagship product, Vamiq (formerly AppDeploy), is a branded app store for your private apps, and Apple device management that installs them on iPhone, iPad and Mac, with build checks before each release. ScotiTech also builds AXOS and ClarityPath.",
+    "UK software company based in Scotland. Its flagship product, Vamiq (formerly AppDeploy), is Apple device management and a branded app store for your private apps, with build checks before each release. ScotiTech also makes AXOS and ClarityPath.",
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "UK Companies House company number",
+    value: "SC829021",
+  },
   brand: [
     {
       "@type": "Brand",
@@ -121,22 +100,25 @@ const organizationSchema = {
   logo: {
     "@type": "ImageObject",
     url: "https://scotitech.com/logo/logo.png",
-    width: 168,
-    height: 42,
+    width: 600,
+    height: 222,
   },
+  image: "https://scotitech.com/og/scotitech-home.jpg",
   email: "info@scotitech.com",
   telephone: "+44-1698-609091",
   foundingDate: "2024",
-  founders: [
+  founder: [
     {
       "@type": "Person",
-      name: "Pardeep Kumar",
-      jobTitle: "Founder & CEO, Lead Developer",
+      name: "Pradeep Dahiya",
+      jobTitle: "Founder and CEO",
+      image: "https://scotitech.com/images/company/pradeep-dahiya-800.webp",
       url: "https://www.linkedin.com/in/pradeepkumar2411/",
     },
     {
       "@type": "Person",
       name: "Daniel Chapman",
+      jobTitle: "Co-founder and Director",
       url: "https://www.linkedin.com/in/daniel-chapman-755098327/",
     },
   ],
@@ -172,6 +154,8 @@ const organizationSchema = {
   sameAs: [
     "https://www.linkedin.com/company/scotitech-ltd/",
     "https://www.instagram.com/scotitechsolutions/",
+    "https://find-and-update.company-information.service.gov.uk/company/SC829021",
+    "https://vamiq.app",
     "https://www.capterra.com/p/10056775/AppDeploy/",
     "https://www.getapp.com/all-software/a/appdeploy-1/",
     "https://www.softwareadvice.com/product/564477-AppDeploy/",
@@ -190,19 +174,21 @@ const websiteSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${karla.variable} ${lora.variable} antialiased`}
-      >
+    <html lang="en-GB">
+      <body className="antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+        >
+          Skip to content
+        </a>
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <ModalProvider>
           <CookieConsentProvider>
             <Navbar />
             <RequestaQuote />
 
-            <GotoTop />
-
-            <RouteLoader>{children}</RouteLoader>
+            <main id="main">{children}</main>
             <Footer />
 
             <CookieBanner />

@@ -1,17 +1,12 @@
-export const metadata = {
-  title: "Media & Recognition",
+import { ogImage, pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Media and awards",
   description:
-    "ScotiTech recognition, awards, and media — UK StartUp Awards 2026 Scotland Regional Finalist, Digital StartUp of the Year, NextGen Innovator, and Indian Tech Society 2024.",
-  alternates: { canonical: "/media" },
-  openGraph: {
-    title: "ScotiTech — Media & Recognition",
-    description:
-      "Awards and recognition: UK StartUp Awards 2026 — Scotland Regional Finalist, Digital StartUp of the Year, NextGen Innovator, and more.",
-    url: "/media",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image" },
-};
+    "ScotiTech news and recognition: UK StartUp Awards 2026 Scotland Regional Finalist for Digital StartUp of the Year, and NextGen Innovator of the Year 2025 for founder Pradeep Dahiya.",
+  path: "/media",
+  image: ogImage("company.jpg", "ScotiTech Solutions, a software company built in Scotland"),
+});
 
 export default function MediaLayout({ children }) {
   return children;

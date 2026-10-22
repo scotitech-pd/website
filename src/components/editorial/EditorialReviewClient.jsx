@@ -70,7 +70,7 @@ function DashboardRow({ insight }) {
               {statusLabel(insight.status)}
             </span>
             {insight.featured && (
-              <span className="rounded-full bg-[#0F172A] px-3 py-1 text-[10.5px] font-karla font-semibold uppercase tracking-[0.16em] text-white">
+              <span className="rounded-full bg-[#0b1f1e] px-3 py-1 text-[10.5px] font-karla font-semibold uppercase tracking-[0.16em] text-white">
                 Featured
               </span>
             )}
@@ -130,13 +130,13 @@ function EditorialDashboard() {
   ];
 
   return (
-    <main className="bg-[#f5f3ee] text-[#0F172A]">
+    <div className="bg-[#f4f2ec] text-[#0b1f1e]">
       <section className="relative overflow-hidden py-14 sm:py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(44%_36%_at_92%_0%,rgba(15,118,110,0.12),transparent_60%),radial-gradient(34%_28%_at_10%_10%,rgba(226,88,14,0.10),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(44%_36%_at_92%_0%,rgba(15,118,110,0.12),transparent_60%),radial-gradient(34%_28%_at_10%_10%,rgba(15,118,110,0.10),transparent_60%)]" />
 
-        <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+        <div className="relative z-10 mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b]">
+            <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#0b5d57]">
               Editorial review
             </p>
             <h1 className="mt-4 text-4xl font-karla font-semibold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
@@ -178,7 +178,7 @@ function EditorialDashboard() {
       </section>
 
       <section className="pb-20">
-        <div className="mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_28px_90px_-60px_rgba(15,23,42,0.45)] sm:p-8">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
               <div className="max-w-3xl">
@@ -194,7 +194,7 @@ function EditorialDashboard() {
                   to move it onto the public insights page and sitemap.
                 </p>
               </div>
-              <div className="rounded-2xl bg-[#0F172A] p-5 text-white lg:max-w-md">
+              <div className="rounded-2xl bg-[#0b1f1e] p-5 text-white lg:max-w-md">
                 <div className="flex items-center gap-3">
                   <Sparkles className="size-5 text-[#BCB96A]" />
                   <p className="font-karla text-sm font-semibold uppercase tracking-[0.16em]">
@@ -245,17 +245,17 @@ function EditorialDashboard() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 
 function InsightPreview({ insight }) {
   return (
-    <main className="bg-[#f5f3ee] text-[#0F172A]">
+    <div className="bg-[#f4f2ec] text-[#0b1f1e]">
       <section className="relative overflow-hidden py-12 sm:py-16">
         <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(79,70,229,0.09),transparent_34%),linear-gradient(315deg,rgba(15,118,110,0.07),transparent_32%)]" />
 
-        <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+        <div className="relative z-10 mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
             <Link
               href="/editorial"
@@ -318,7 +318,7 @@ function InsightPreview({ insight }) {
             </div>
 
             <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
-              <div className="relative min-h-[280px] bg-[#0F172A]">
+              <div className="relative min-h-[280px] bg-[#0b1f1e]">
                 <Image
                   src={insight.image}
                   alt={`${insight.title} cover image`}
@@ -353,7 +353,7 @@ function InsightPreview({ insight }) {
       </section>
 
       <section className="pb-16 sm:pb-24">
-        <div className="mx-auto grid max-w-8xl gap-10 px-5 min-[500px]:px-10 md:px-20 lg:grid-cols-[minmax(0,1fr)_360px]">
+        <div className="mx-auto grid max-w-[1200px] gap-10 px-4 sm:px-6 lg:px-8 lg:grid-cols-[minmax(0,1fr)_360px]">
           <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 lg:p-9">
             <div className="space-y-10">
               {insight.sections.map((section) => (
@@ -418,7 +418,7 @@ function InsightPreview({ insight }) {
 
             <div className="rounded-2xl border border-slate-200 bg-white p-6">
               <div className="flex items-center gap-3">
-                <FilePenLine className="size-5 text-[#b8430b]" />
+                <FilePenLine className="size-5 text-[#0b5d57]" />
                 <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500">
                   Edit source
                 </p>
@@ -431,7 +431,7 @@ function InsightPreview({ insight }) {
               </code>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-[#0F172A] p-6 text-white">
+            <div className="rounded-2xl border border-slate-200 bg-[#0b1f1e] p-6 text-white">
               <div className="flex items-center gap-3">
                 <ShieldCheck className="size-5 text-[#BCB96A]" />
                 <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em]">
@@ -449,7 +449,7 @@ function InsightPreview({ insight }) {
           </aside>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

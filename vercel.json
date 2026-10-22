@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    { "source": "/products/appdeploy", "destination": "/products/vamiq", "permanent": true },
+    { "source": "/products/appdeploy/", "destination": "/products/vamiq", "permanent": true },
+    { "source": "/products/opsly", "destination": "/products/axos", "permanent": true },
+    { "source": "/products/opsly/", "destination": "/products/axos", "permanent": true },
+    { "source": "/solutions", "destination": "/products", "permanent": true },
+    { "source": "/solutions/", "destination": "/products", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/private-ai",
@@ -7,6 +15,16 @@
     {
       "source": "/private-ai/",
       "destination": "/private-ai.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/media/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/og/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
     }
   ]
 }

@@ -1,50 +1,25 @@
 import ProductTemplate from "@/components/products/ProductTemplate";
 import { getProduct } from "@/lib/products";
+import { ogImage, pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "AXOS - Private AI Workspace & Enterprise Collaboration Platform",
+export const metadata = pageMetadata({
+  title: "AXOS: private AI workspace on your own servers",
   description:
-    "AXOS is a private AI workspace and self-hosted enterprise collaboration platform for teams evaluating secure Google Workspace or Microsoft 365 alternatives with governed AI.",
-  alternates: { canonical: "/products/axos" },
+    "AXOS is a self-hosted enterprise workspace: mail, files, chat, video and tasks with governed AI built in, running entirely inside your own environment.",
+  path: "/products/axos",
+  image: ogImage("axos.jpg", "AXOS, the private AI workspace from ScotiTech"),
   keywords: [
     "AXOS",
-    "AI workspace",
-    "enterprise AI platform",
-    "private AI",
-    "digital workplace solutions",
-    "digital workspace platform",
-    "secure collaboration software",
-    "secure collaboration platforms",
-    "enterprise knowledge management",
-    "enterprise knowledge management platform",
-    "enterprise search AI",
-    "Google Workspace alternative",
-    "alternative to Google Workspace",
-    "Microsoft 365 alternative",
-    "Office 365 alternative",
     "private AI workspace",
     "self-hosted AI",
-    "self hosted AI",
+    "enterprise AI platform",
+    "secure collaboration software",
+    "enterprise knowledge management",
+    "self-hosted collaboration suite",
+    "on-premises AI",
     "governance-first AI",
-    "enterprise productivity suite",
-    "on-premise AI",
-    "on premise AI",
-    "private workspace",
-    "RAG",
   ],
-  openGraph: {
-    title: "AXOS - Private AI Workspace & Enterprise Collaboration Platform",
-    description:
-      "A private, self-hostable workspace for secure collaboration, enterprise knowledge management, and governed AI.",
-    url: "/products/axos",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AXOS - Private AI Workspace & Enterprise Collaboration Platform",
-    description: "A private, self-hostable collaboration platform with governed AI built in.",
-  },
-};
+});
 
 export default function AxosPage() {
   return <ProductTemplate product={getProduct("axos")} />;

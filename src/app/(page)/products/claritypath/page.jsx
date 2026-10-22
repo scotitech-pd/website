@@ -1,33 +1,15 @@
 import ProductTemplate from "@/components/products/ProductTemplate";
 import { getProduct } from "@/lib/products";
+import { ogImage, pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "ClarityPath — Guided Decision Support",
+export const metadata = pageMetadata({
+  title: "ClarityPath: guided decision support",
   description:
-    "Private, structured decision support for sensitive, high-stakes journeys — relocation, career, property, finance, and yearly planning — delivered through Vamiq.",
-  alternates: { canonical: "/products/claritypath" },
-  keywords: [
-    "ClarityPath",
-    "decision support",
-    "guided planning",
-    "structured planning",
-    "private mobile app",
-    "Vamiq",
-  ],
-  openGraph: {
-    title: "ClarityPath — Guided Decision Support",
-    description:
-      "Structured decision support for sensitive, high-stakes journeys, delivered through Vamiq.",
-    url: "/products/claritypath",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ClarityPath — Guided Decision Support",
-    description:
-      "Structured decision support for sensitive, high-stakes journeys.",
-  },
-};
+    "ClarityPath turns considered, high-stakes choices such as relocation, career, property and finances into a clear daily focus and a structured plan. Delivered through Vamiq.",
+  path: "/products/claritypath",
+  image: ogImage("claritypath.jpg", "ClarityPath, guided decision support from ScotiTech"),
+  keywords: ["ClarityPath", "decision support", "guided planning", "structured planning", "Vamiq"],
+});
 
 export default function ClarityPathPage() {
   return <ProductTemplate product={getProduct("claritypath")} />;

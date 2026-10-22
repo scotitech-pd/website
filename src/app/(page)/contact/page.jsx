@@ -1,21 +1,13 @@
-export const metadata = {
-  title: "Contact",
-  description:
-    "Contact ScotiTech for Vamiq access, AXOS enterprise evaluation, partnerships, and product-fit conversations.",
-  alternates: { canonical: "/contact" },
-  openGraph: {
-    title: "Contact ScotiTech",
-    description:
-      "Talk to the team about Vamiq, AXOS, partnerships, or a product-fit conversation.",
-    url: "/contact",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image" },
-};
 import ContactExperience from "@/components/contact/ContactExperience";
+import { pageMetadata } from "@/lib/seo";
 
-const page = () => {
+export const metadata = pageMetadata({
+  title: "Contact ScotiTech",
+  description:
+    "Talk to ScotiTech about Vamiq, an AXOS deployment, Apple Business set-up, partnerships or our services.",
+  path: "/contact",
+});
+
+export default function ContactPage() {
   return <ContactExperience />;
-};  
-
-export default page;
+}
