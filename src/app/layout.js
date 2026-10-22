@@ -9,7 +9,7 @@ import CookiePreferencesModal from "@/components/cookie/CookiePreferencesModal";
 import JsonLd from "@/components/seo/JsonLd";
 import GoogleAnalytics from "@/components/seo/GoogleAnalytics";
 import ApolloTracker from "@/components/seo/ApolloTracker";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import ConsentedSpeedInsights from "@/components/cookie/ConsentedSpeedInsights";
 import { DEFAULT_OG_IMAGE, SITE_DESCRIPTION } from "@/lib/seo";
 
 export const metadata = {
@@ -196,7 +196,7 @@ export default function RootLayout({ children }) {
             <CookiePreferencesModal />
             <GoogleAnalytics />
             <ApolloTracker />
-            <SpeedInsights />
+            <ConsentedSpeedInsights />
           </CookieConsentProvider>
         </ModalProvider>
       </body>

@@ -75,6 +75,35 @@ export function writeConsent(prefs) {
 }
 
 /**
+ * Remove what optional tools leave on this site once their category is off:
+ * analytics → the Google Analytics _ga, _gid and _gat cookies (set on the bare
+ * domain and on the dotted parent domain); marketing → Apollo keys in local
+ * storage. Cookies set on apollo.io itself belong to that site and expire on
+ * their own.
+ * @param {{ analytics: boolean, marketing: boolean }} consent What is allowed now.
+ */
+export function clearTrackingStorage({ analytics = false, marketing = false } = {}) {
+  if (typeof document === "undefined") return;
+  const host = window.location.hostname;
+  const domains = ["", host, "." + host.replace(/^www\./, "")];
+  document.cookie.split("; ").forEach((row) => {
+    const name = row.split("=")[0];
+    if (analytics || !/^(_ga|_gid|_gat)/.test(name)) return;
+    domains.forEach((d) => {
+      document.cookie = `${name}=; max-age=0; path=/${d ? "; domain=" + d : ""}`;
+    });
+  });
+  if (marketing) return;
+  try {
+    Object.keys(window.localStorage)
+      .filter((k) => /apollo|aplo/i.test(k))
+      .forEach((k) => window.localStorage.removeItem(k));
+  } catch {
+    // Storage can be unavailable (private mode, blocked site data).
+  }
+}
+
+/**
  * Returns true if the given category is currently allowed.
  * "necessary" is always allowed.
  */

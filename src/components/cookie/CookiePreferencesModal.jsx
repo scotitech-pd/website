@@ -66,21 +66,21 @@ export default function CookiePreferencesModal() {
         aria-modal="true"
         aria-labelledby="cookie-prefs-title"
         tabIndex={-1}
-        className="fixed inset-x-4 bottom-4 z-[1000] mx-auto max-w-lg rounded-[1.15rem] border border-white/10 bg-[#100E0C] p-6 shadow-[0_32px_80px_rgba(16,14,12,0.55)] outline-none sm:inset-x-auto sm:left-1/2 sm:bottom-6 sm:-translate-x-1/2"
+        className="fixed inset-x-4 bottom-4 z-[1000] mx-auto max-w-lg rounded-xl border border-hairline bg-surface p-6 shadow-lift outline-none sm:inset-x-auto sm:left-1/2 sm:bottom-6 sm:-translate-x-1/2"
       >
         {/* Header */}
         <div className="mb-5 flex items-start justify-between gap-4">
           <h2
             id="cookie-prefs-title"
-            className="font-karla text-base font-semibold text-white"
+            className="text-[17px] font-semibold text-strong"
           >
-            Cookie Preferences
+            Cookie preferences
           </h2>
           {hasConsented && (
             <button
               onClick={closePreferences}
               aria-label="Close cookie preferences"
-              className="rounded-full border border-white/10 p-1.5 text-slate-400 transition hover:border-white/25 hover:text-white"
+              className="rounded-md border border-hairline p-1.5 text-muted transition hover:text-strong"
             >
               <X className="size-4" />
             </button>
@@ -88,18 +88,18 @@ export default function CookiePreferencesModal() {
         </div>
 
         {/* Description */}
-        <p className="mb-5 font-lora text-sm leading-6 text-slate-400">
+        <p className="mb-5 text-[14px] leading-6 text-body">
           Choose which cookies you allow us to use. See our{" "}
           <Link
             href="/privacy-policy"
-            className="underline underline-offset-2 transition hover:text-white"
+            className="font-medium text-brand-strong underline underline-offset-2"
           >
             Privacy Policy
           </Link>{" "}
           and{" "}
           <Link
             href="/cookie-policy"
-            className="underline underline-offset-2 transition hover:text-white"
+            className="font-medium text-brand-strong underline underline-offset-2"
           >
             Cookie Policy
           </Link>
@@ -113,18 +113,18 @@ export default function CookiePreferencesModal() {
             return (
               <div
                 key={cat.id}
-                className="flex items-start justify-between gap-4 rounded-xl border border-white/[0.08] bg-white/[0.03] p-4"
+                className="flex items-start justify-between gap-4 rounded-lg border border-hairline bg-surface-muted p-4"
               >
                 <div className="flex-1">
-                  <p className="font-karla text-sm font-semibold text-white">
+                  <p className="text-[14px] font-semibold text-strong">
                     {cat.label}
                     {cat.required && (
-                      <span className="ml-2 font-karla text-[10px] font-normal uppercase tracking-wider text-slate-500">
+                      <span className="ml-2 text-[11px] font-normal uppercase tracking-wider text-muted">
                         Always on
                       </span>
                     )}
                   </p>
-                  <p className="mt-1 font-lora text-xs leading-5 text-slate-400">
+                  <p className="mt-1 text-[13px] leading-5 text-body">
                     {cat.description}
                   </p>
                 </div>
@@ -136,10 +136,10 @@ export default function CookiePreferencesModal() {
                   aria-label={`${cat.label} cookies`}
                   disabled={cat.required}
                   onClick={() => !cat.required && toggle(cat.id)}
-                  className={`mt-0.5 h-6 w-10 shrink-0 rounded-full border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${
+                  className={`mt-0.5 h-6 w-10 shrink-0 rounded-full border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 ${
                     checked
-                      ? "border-[#8C7A5E] bg-[#8C7A5E]"
-                      : "border-white/15 bg-white/10"
+                      ? "border-brand bg-brand"
+                      : "border-hairline-strong bg-surface-sunken"
                   } ${cat.required ? "cursor-not-allowed opacity-50" : "cursor-pointer"}`}
                 >
                   <span
@@ -157,19 +157,19 @@ export default function CookiePreferencesModal() {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => savePreferences(draftPrefs)}
-            className="rounded-full bg-white px-4 py-2 font-karla text-xs font-semibold text-[#100E0C] transition hover:bg-slate-100"
+            className="inline-flex h-10 items-center rounded-lg bg-ink px-4 text-[14px] font-semibold text-white transition hover:bg-ink-soft"
           >
             Save preferences
           </button>
           <button
             onClick={acceptAll}
-            className="rounded-full border border-white/15 px-4 py-2 font-karla text-xs font-semibold text-slate-400 transition hover:border-white/30 hover:text-white"
+            className="inline-flex h-10 items-center rounded-lg border border-hairline-strong bg-surface px-4 text-[14px] font-semibold text-strong transition hover:bg-white"
           >
             Accept all
           </button>
           <button
             onClick={rejectNonEssential}
-            className="rounded-full border border-white/15 px-4 py-2 font-karla text-xs font-semibold text-slate-400 transition hover:border-white/30 hover:text-white"
+            className="inline-flex h-10 items-center rounded-lg border border-hairline-strong bg-surface px-4 text-[14px] font-semibold text-strong transition hover:bg-white"
           >
             Reject non-essential
           </button>

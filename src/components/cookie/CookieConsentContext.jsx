@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
-import { readConsent, writeConsent } from "@/lib/cookieConsent";
+import { clearTrackingStorage, readConsent, writeConsent } from "@/lib/cookieConsent";
 
 const CookieConsentContext = createContext(null);
 
@@ -15,24 +15,41 @@ export function CookieConsentProvider({ children }) {
     const stored = readConsent();
     if (stored) {
       setConsent(stored);
+      // Analytics can re-write its cookies while a page unloads, so clear
+      // them again on every load while consent is off.
+      clearTrackingStorage(stored);
     } else {
       setBannerVisible(true);
     }
   }, []);
 
-  const acceptAll = useCallback(() => {
-    const c = writeConsent({ analytics: true, marketing: true });
-    setConsent(c);
-    setBannerVisible(false);
-    setModalOpen(false);
+  // Withdrawing analytics or marketing consent clears what those tools left
+  // behind and reloads the page, so scripts already running stop at once.
+  const store = useCallback((prefs) => {
+    const previous = readConsent();
+    const c = writeConsent(prefs);
+    const withdrawn =
+      (previous?.analytics && !c.analytics) || (previous?.marketing && !c.marketing);
+    if (withdrawn) {
+      clearTrackingStorage(c);
+      window.location.reload();
+    }
+    return c;
   }, []);
 
-  const rejectNonEssential = useCallback(() => {
-    const c = writeConsent({ analytics: false, marketing: false });
+  const acceptAll = useCallback(() => {
+    const c = store({ analytics: true, marketing: true });
     setConsent(c);
     setBannerVisible(false);
     setModalOpen(false);
-  }, []);
+  }, [store]);
+
+  const rejectNonEssential = useCallback(() => {
+    const c = store({ analytics: false, marketing: false });
+    setConsent(c);
+    setBannerVisible(false);
+    setModalOpen(false);
+  }, [store]);
 
   const openPreferences = useCallback(() => {
     const stored = readConsent();
@@ -48,11 +65,11 @@ export function CookieConsentProvider({ children }) {
   }, []);
 
   const savePreferences = useCallback((prefs) => {
-    const c = writeConsent(prefs);
+    const c = store(prefs);
     setConsent(c);
     setBannerVisible(false);
     setModalOpen(false);
-  }, []);
+  }, [store]);
 
   return (
     <CookieConsentContext.Provider
