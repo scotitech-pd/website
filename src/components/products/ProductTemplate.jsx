@@ -76,7 +76,54 @@ const icons = {
 
 const deployIcons = [Cloud, Server, ServerCog, ShieldCheck];
 
+/** A real screenshot in a light browser frame, as on the home page hero. */
+function WindowFrame({ src, alt, width, height, chrome, priority = false, className }) {
+  return (
+    <div className={cn("overflow-hidden rounded-xl border border-hairline-strong/70 bg-white shadow-lift", className)}>
+      <div className="flex h-7 items-center gap-1.5 border-b border-hairline bg-[#f7f6f2] px-3">
+        <span className="size-2 rounded-full bg-[#d9d5cc]" aria-hidden="true" />
+        <span className="size-2 rounded-full bg-[#d9d5cc]" aria-hidden="true" />
+        <span className="size-2 rounded-full bg-[#d9d5cc]" aria-hidden="true" />
+        {chrome && (
+          <span className="mx-auto hidden rounded bg-white px-8 py-0.5 text-[11px] text-muted ring-1 ring-hairline sm:block">
+            {chrome}
+          </span>
+        )}
+      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : undefined}
+        decoding="async"
+        className="block h-auto w-full"
+      />
+    </div>
+  );
+}
+
+/** A real phone screenshot in a simple device frame. */
+function PhoneFrame({ src, alt, width = 600, height = 1298, className }) {
+  return (
+    <div className={cn("overflow-hidden rounded-[2rem] border-[6px] border-ink bg-ink shadow-lift", className)}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={alt} width={width} height={height} loading="lazy" decoding="async" className="block h-auto w-full rounded-[1.5rem]" />
+    </div>
+  );
+}
+
 function ProductMedia({ media, accentBg }) {
+  if (media?.type === "window") {
+    return (
+      <figure className="relative">
+        <WindowFrame src={media.src} alt={media.alt} width={media.width} height={media.height} chrome={media.chrome} priority />
+        {media.caption && <figcaption className="mt-3 text-[13px] text-muted">{media.caption}</figcaption>}
+      </figure>
+    );
+  }
   if (media?.type === "loop") {
     return (
       <figure className="relative pb-6">
@@ -337,6 +384,80 @@ export default function ProductTemplate({ product }) {
               ))}
             </div>
           )}
+        </Section>
+      )}
+
+      {/* GALLERY — real screens of the product */}
+      {product.gallery && (
+        <Section surface="base" spacing="lg" className="border-y border-hairline">
+          <Reveal className="max-w-2xl">
+            <p className="t-eyebrow">{product.gallery.eyebrow || "Inside " + product.name}</p>
+            <h2 className="t-h1 mt-3">{product.gallery.title}</h2>
+            {product.gallery.body && <p className="t-lead mt-5">{product.gallery.body}</p>}
+          </Reveal>
+          <div
+            className={cn(
+              "mt-12 grid gap-8",
+              product.gallery.frame === "phone"
+                ? "mx-auto max-w-3xl grid-cols-2 gap-6 sm:gap-10"
+                : "md:grid-cols-2"
+            )}
+          >
+            {product.gallery.items.map((item, i) => (
+              <Reveal
+                key={item.src}
+                delay={i * 0.05}
+                as="figure"
+                className={cn(product.gallery.frame !== "phone" && i === 0 && "md:col-span-2")}
+              >
+                {product.gallery.frame === "phone" ? (
+                  <PhoneFrame src={item.src} alt={item.alt} width={item.width} height={item.height} />
+                ) : (
+                  <WindowFrame src={item.src} alt={item.alt} width={item.width} height={item.height} chrome={item.chrome} />
+                )}
+                <figcaption className="mt-4">
+                  <span className="block text-[15px] font-semibold text-strong">{item.title}</span>
+                  <span className="mt-1 block text-[14px] leading-6 text-body">{item.caption}</span>
+                </figcaption>
+              </Reveal>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* SPOTLIGHT — one real screen with a short explanation */}
+      {product.spotlight && (
+        <Section surface="muted" spacing="lg">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-center lg:gap-14">
+            <Reveal>
+              <p className="t-eyebrow">{product.spotlight.eyebrow}</p>
+              <h2 className="t-h1 mt-3">{product.spotlight.title}</h2>
+              <p className="t-lead mt-5">{product.spotlight.body}</p>
+              {product.spotlight.link && (
+                <a
+                  href={product.spotlight.link.href}
+                  target={product.spotlight.link.external ? "_blank" : undefined}
+                  rel={product.spotlight.link.external ? "noopener noreferrer" : undefined}
+                  className="mt-7 inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand-strong hover:text-brand"
+                >
+                  {product.spotlight.link.label}
+                  {product.spotlight.link.external ? <ArrowUpRight size={15} aria-hidden="true" /> : <ArrowRight size={15} aria-hidden="true" />}
+                </a>
+              )}
+            </Reveal>
+            <Reveal as="figure">
+              <WindowFrame
+                src={product.spotlight.image.src}
+                alt={product.spotlight.image.alt}
+                width={product.spotlight.image.width}
+                height={product.spotlight.image.height}
+                chrome={product.spotlight.image.chrome}
+              />
+              {product.spotlight.image.caption && (
+                <figcaption className="mt-3 text-[13px] text-muted">{product.spotlight.image.caption}</figcaption>
+              )}
+            </Reveal>
+          </div>
         </Section>
       )}
 
@@ -685,8 +806,36 @@ export default function ProductTemplate({ product }) {
         </Section>
       )}
 
+      {/* SECURITY BAND (no testimonial) */}
+      {product.security && !product.proof && (
+        <section className="bg-surface-muted py-16 md:py-24">
+          <Container>
+            <Reveal>
+              <div className="relative overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#032b2a_0%,#05403c_60%,#0b5550_100%)] p-7 text-white sm:p-10 lg:p-14">
+                <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14">
+                  <div>
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#9fe0d4]">Security</p>
+                    <h2 className="mt-3 font-serif text-[clamp(1.8rem,1.3rem+1.6vw,2.6rem)] font-normal leading-[1.12] text-white">
+                      {product.security.title}
+                    </h2>
+                  </div>
+                  <ul className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                    {product.security.points.map((p) => (
+                      <li key={p} className="flex gap-3 border-t border-white/15 pt-5 text-[15px] leading-6 text-white/85">
+                        <Check size={18} className="mt-0.5 shrink-0 text-[#9fe0d4]" aria-hidden="true" />
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Reveal>
+          </Container>
+        </section>
+      )}
+
       {/* PROOF + SECURITY */}
-      {(product.proof || product.security) && (
+      {product.proof && (
         <Section surface="base" spacing="lg">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             {product.proof && (
@@ -789,7 +938,7 @@ export default function ProductTemplate({ product }) {
         <Section surface="muted" spacing="lg">
           <Reveal>
             <div className="rounded-xl border border-hairline bg-surface p-7 md:p-10">
-              <div className="grid grid-cols-1 gap-8 lg:grid-cols-[36%_64%] lg:gap-16">
+              <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,36fr)_minmax(0,64fr)] lg:gap-16">
                 <div>
                   <Eyebrow className={accentText}>
                     {product.qualifying.eyebrow || "Private evaluation"}
@@ -960,7 +1109,7 @@ export default function ProductTemplate({ product }) {
       {/* FAQ */}
       {product.faqs && (
         <Section surface="base" spacing="lg">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[36%_64%] lg:gap-16">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,36fr)_minmax(0,64fr)] lg:gap-16">
             <Reveal>
               <Eyebrow className={accentText}>FAQ</Eyebrow>
               <h2 className="t-h1 mt-3">Good to know.</h2>

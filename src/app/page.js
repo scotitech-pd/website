@@ -4,7 +4,7 @@ import { pageMetadata, SITE_DESCRIPTION, siteUrl } from "@/lib/seo";
 import { vamiqMedia } from "@/lib/company";
 
 export const metadata = pageMetadata({
-  title: "ScotiTech Solutions | The company behind Vamiq",
+  title: "ScotiTech | Software for Apple devices, private apps and AI",
   absoluteTitle: true,
   description: SITE_DESCRIPTION,
   path: "/",

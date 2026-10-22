@@ -10,7 +10,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const template = `file://${path.join(root, "scripts", "og-cards.html")}`;
 const outDir = path.join(root, "public", "og");
-const cards = { home: "scotitech-home", vamiq: "vamiq", axos: "axos", claritypath: "claritypath", company: "company" };
+const cards = { home: "scotitech-home", vamiq: "vamiq", axos: "axos", claritypath: "claritypath", "private-ai": "private-ai", company: "company" };
 const chromePath = process.env.CHROME || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const port = 9399;
 const profile = fs.mkdtempSync(path.join(os.tmpdir(), "og-chrome-"));

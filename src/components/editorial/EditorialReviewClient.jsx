@@ -278,7 +278,7 @@ function InsightPreview({ insight }) {
             ) : null}
           </div>
 
-          <div className="grid grid-cols-1 gap-10 xl:grid-cols-[58%_42%] xl:items-start">
+          <div className="grid grid-cols-1 gap-10 xl:grid-cols-[minmax(0,58fr)_minmax(0,42fr)] xl:items-start">
             <div>
               <div className="mb-5 flex flex-wrap items-center gap-3">
                 <span

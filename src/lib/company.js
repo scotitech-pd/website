@@ -124,7 +124,7 @@ export const founder = {
     alt: "Pradeep Dahiya, Founder and CEO of ScotiTech Solutions",
   },
   linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
-  bio: "Pradeep founded ScotiTech in Scotland and architects its products, Vamiq and AXOS. He sets the company's product direction and works directly with customers, so the people who use the software talk to the person who builds it.",
+  bio: "Pradeep founded ScotiTech and architects its products, Vamiq and AXOS. He sets the company's product direction and works directly with customers, so the people who use the software talk to the person who builds it.",
 };
 
 export const director = {
@@ -156,10 +156,10 @@ export const recognition = [
 ];
 
 export const companyFacts = [
-  { label: "Registered in Scotland", value: "Company SC829021" },
+  { label: "Founded", value: "2024" },
   { label: "Apple MDM vendor", value: "Approved by Apple" },
   { label: "Vamiq customer data", value: "Hosted in the UK" },
-  { label: "Working with", value: "Teams worldwide" },
+  { label: "UK company number", value: "SC829021" },
 ];
 
 export const contact = {

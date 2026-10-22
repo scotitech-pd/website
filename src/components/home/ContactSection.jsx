@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Mail, Phone } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 import { useModal } from "@/components/ModalContext";
 import { contact } from "@/lib/company";
 
-/** Closing call to talk: real people, a real office, three ways to reach us. */
+/** Closing call to talk: real people, a real office, and how to reach them. */
 export default function ContactSection() {
   const { setShowModal } = useModal();
 
@@ -68,10 +68,6 @@ export default function ContactSection() {
                     <Phone size={18} className="shrink-0 text-[#9fe0d4]" aria-hidden="true" />
                     {contact.phone}
                   </a>
-                </li>
-                <li className="flex gap-3">
-                  <MapPin size={18} className="mt-0.5 shrink-0 text-[#9fe0d4]" aria-hidden="true" />
-                  <span>{contact.office}</span>
                 </li>
               </ul>
             </div>

@@ -21,19 +21,16 @@ export default function HeroSection() {
       />
       <Container className="relative">
         <div className="mx-auto max-w-[920px] text-center">
-          <p className="reveal-now text-[13px] font-medium text-muted">
-            ScotiTech Solutions · Software from Scotland
-          </p>
-          <h1 className="t-display reveal-now mt-5" style={{ animationDelay: "0.05s" }}>
+          <h1 className="t-display reveal-now">
             Your apps, your devices, your data. Under your control.
           </h1>
           <p
-            className="reveal-now mx-auto mt-6 max-w-[680px] text-[clamp(1.0625rem,1rem+0.35vw,1.25rem)] leading-[1.6] text-body"
-            style={{ animationDelay: "0.1s" }}
+            className="reveal-now mx-auto mt-6 max-w-[700px] text-[clamp(1.0625rem,1rem+0.35vw,1.25rem)] leading-[1.6] text-body"
+            style={{ animationDelay: "0.08s" }}
           >
-            We are a UK software company. We make Vamiq (formerly AppDeploy), which manages
-            your company&apos;s iPhones, iPads and Macs and gives your people their own app
-            store, and AXOS, an AI workspace that runs on your own servers.
+            ScotiTech makes Vamiq (formerly AppDeploy), which manages company iPhones, iPads and Macs
+            and delivers your own apps through a branded app store, and AXOS, an AI workspace that runs
+            on your own servers.
           </p>
           <div
             className="reveal-now mt-9 flex flex-wrap items-center justify-center gap-3"

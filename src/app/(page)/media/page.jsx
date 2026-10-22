@@ -128,7 +128,7 @@ export default function MediaPage() {
               </figure>
               <p>
                 The award recognised practical product-building, disciplined execution and founder-led
-                progress from a UK software company in Scotland. The NextGen Innovator category recognises
+                progress from a UK software company. The NextGen Innovator category recognises
                 product builders who show practical execution, leadership and consistent delivery.
               </p>
               <blockquote className="border-l-2 border-brand pl-5 font-serif text-[1.3rem] leading-8 text-strong">
@@ -141,7 +141,7 @@ export default function MediaPage() {
               </blockquote>
               <p>
                 For ScotiTech, the award is an early milestone. The company stays focused on steady product
-                execution and on building from Scotland for customers worldwide.
+                execution for customers worldwide.
               </p>
             </div>
           </Reveal>

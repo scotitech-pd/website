@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
-import { insights } from "@/lib/insights";
+import { formatInsightDate, insightImage, insights } from "@/lib/insights";
 
 /* Briefings shown on the home page, picked for a general business reader. */
 const HOME_PICKS = [
@@ -11,24 +11,16 @@ const HOME_PICKS = [
   "uk-ai-governance-gap-business-policy",
 ];
 
-const formatDate = (iso) =>
-  new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-
 export default function InsightsSection() {
   const picks = HOME_PICKS.map((slug) => insights.find((i) => i.slug === slug)).filter(Boolean);
   const list = picks.length === 3 ? picks : insights.slice(0, 3);
 
   return (
-    <Section id="insights" surface="muted" spacing="lg">
+    <Section id="insights" surface="base" spacing="lg" className="border-y border-hairline">
       <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
         <Reveal className="max-w-2xl">
           <p className="t-eyebrow">Insights</p>
-          <h2 className="t-h1 mt-3">Briefings for the people who run rollouts.</h2>
+          <h2 className="t-h1 mt-3">Latest insights.</h2>
         </Reveal>
         <Link
           href="/insights"
@@ -49,7 +41,7 @@ export default function InsightsSection() {
               <div className="relative aspect-[16/10] overflow-hidden bg-surface-sunken">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={item.image}
+                  src={insightImage(item.image).small}
                   alt=""
                   loading="lazy"
                   decoding="async"
@@ -63,7 +55,7 @@ export default function InsightsSection() {
                 </p>
                 <h3 className="mt-3 text-[1.1rem] font-semibold leading-snug text-strong">{item.title}</h3>
                 <p className="mt-auto pt-5 text-[13px] text-muted">
-                  {formatDate(item.date)}
+                  {formatInsightDate(item.date)}
                   {item.readTime ? ` · ${item.readTime}` : ""}
                 </p>
               </div>

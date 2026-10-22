@@ -1,13 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  CalendarDays,
-  Clock3,
-  FileText,
-  SearchCheck,
-} from "lucide-react";
-import { featuredInsight, insights } from "@/lib/insights";
+import { ArrowRight } from "lucide-react";
+import Container from "@/components/ui/Container";
+import Reveal from "@/components/ui/Reveal";
+import { featuredInsight, formatInsightDate, insightImage, insights } from "@/lib/insights";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -17,200 +12,99 @@ export const metadata = pageMetadata({
   path: "/insights",
 });
 
-const principles = [
-  {
-    title: "Relevant to operators",
-    description:
-      "Updates are selected for teams managing devices, products, workflows, data, or customer-facing digital services.",
-  },
-  {
-    title: "Practical interpretation",
-    description:
-      "Each briefing explains what changed, why it matters, and what a business should review next.",
-  },
-  {
-    title: "Sourced and focused",
-    description:
-      "The goal is clear analysis with named sources, not a high-volume news feed.",
-  },
-];
+function Cover({ insight, sizes, eager = false, className = "" }) {
+  const img = insightImage(insight.image);
+  const contain = insight.imageFit === "contain";
+  return (
+    <div className={`relative overflow-hidden ${contain ? "bg-ink" : "bg-surface-sunken"} ${className}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={img.src}
+        srcSet={img.srcSet}
+        sizes={sizes}
+        alt=""
+        loading={eager ? "eager" : "lazy"}
+        decoding="async"
+        className={`absolute inset-0 h-full w-full transition-transform duration-500 group-hover:scale-[1.03] ${contain ? "object-contain" : "object-cover"}`}
+      />
+      {!contain && <span className="photo-tint absolute inset-0" aria-hidden="true" />}
+    </div>
+  );
+}
+
+function Meta({ insight }) {
+  return (
+    <p className="text-[13px] text-muted">
+      {formatInsightDate(insight.date)} · {insight.readTime}
+    </p>
+  );
+}
 
 export default function InsightsPage() {
-  const moreInsights = insights.filter(
-    (insight) => insight.slug !== featuredInsight.slug
-  );
+  const rest = insights.filter((i) => i.slug !== featuredInsight.slug);
 
   return (
-    <div className="bg-[#f4f2ec] text-[#0b1f1e]">
-      <section className="relative overflow-hidden py-14 sm:py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(50%_45%_at_85%_-5%,rgba(15,118,110,0.10),transparent_60%)]" />
-
-        <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 xl:grid-cols-[56%_44%] gap-10 items-end mb-14">
-            <div className="max-w-4xl">
-              <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#0b5d57]/80 mb-3">
-                Insights
-              </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-karla font-semibold leading-tight mb-5">
-                Relevant technology briefings for practical business decisions
-              </h1>
-              <p className="text-lg text-slate-700 font-lora leading-8 max-w-3xl">
-                Short, sourced updates on the platform changes and operational
-                shifts that matter to SMEs, product teams, and organisations
-                managing modern digital workflows.
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-slate-200 bg-white p-6 sm:p-7">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="size-9 rounded-lg bg-[#0b1f1e] text-white flex items-center justify-center">
-                  <SearchCheck className="size-4" />
-                </div>
-                <div>
-                  <p className="text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-slate-400">
-                    Editorial focus
-                  </p>
-                  <p className="text-base font-karla font-bold text-slate-900">
-                    Signal over volume
-                  </p>
-                </div>
-              </div>
-              <p className="text-[15px] text-slate-600 font-lora leading-7">
-                ScotiTech Insights is for updates with a direct connection to
-                app deployment, private operations, accessibility, AI workflows,
-                privacy, or SME technology adoption.
-              </p>
-            </div>
+    <>
+      <section className="bg-surface-muted pb-12 pt-12 md:pb-16 md:pt-20">
+        <Container>
+          <div className="max-w-3xl">
+            <p className="t-eyebrow reveal-now">Insights</p>
+            <h1 className="t-display reveal-now mt-4">Briefings on Apple devices, private apps and AI.</h1>
+            <p className="t-lead reveal-now mt-6 max-w-2xl">
+              Short, sourced analysis of the platform and policy changes that affect how organisations
+              roll out apps, manage devices and adopt AI. Each one ends with what to review next.
+            </p>
           </div>
 
           <Link
             href={`/insights/${featuredInsight.slug}`}
-            className="group grid grid-cols-1 lg:grid-cols-[40%_60%] overflow-hidden rounded-xl border border-slate-200 bg-white transition-shadow duration-300 hover:shadow-md"
+            className="reveal-now group mt-12 grid overflow-hidden rounded-2xl border border-hairline bg-surface shadow-soft transition-shadow hover:shadow-card lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
           >
-            <div className="relative min-h-[260px] bg-[#0b1f1e]">
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(15,118,110,0.32),transparent_52%),linear-gradient(315deg,rgba(194,65,12,0.22),transparent_46%)]" />
-              <Image
-                src={featuredInsight.image}
-                alt={`${featuredInsight.title} cover image`}
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className={
-                  featuredInsight.imageFit === "contain"
-                    ? "object-contain"
-                    : "object-cover"
-                }
-                priority
-              />
-            </div>
-
-            <article className="p-6 sm:p-7 lg:p-8 flex flex-col">
-              <div className="mb-4 flex flex-wrap items-center gap-2">
-                <span className="rounded-full px-2.5 py-0.5 text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-[#0b5d57] ring-1 ring-inset ring-[#fde2cd] bg-[#fff4ec]">
-                  {featuredInsight.category}
-                </span>
-                <span className="rounded-full px-2.5 py-0.5 text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 ring-1 ring-inset ring-slate-200">
-                  {featuredInsight.topic}
-                </span>
-              </div>
-
-              <h2 className="text-2xl sm:text-3xl font-karla font-bold leading-snug text-slate-900 mb-3">
+            <Cover insight={featuredInsight} eager sizes="(min-width: 1024px) 640px, 100vw" className="aspect-[16/10] lg:aspect-auto lg:min-h-[380px]" />
+            <article className="flex flex-col p-6 sm:p-8 lg:p-10">
+              <p className="t-eyebrow">{featuredInsight.category}</p>
+              <h2 className="mt-4 font-serif text-[clamp(1.6rem,1.3rem+1.1vw,2.2rem)] leading-[1.15] text-strong">
                 {featuredInsight.title}
               </h2>
-              <p className="text-[15px] text-slate-600 font-lora leading-7 mb-5 flex-1">
-                {featuredInsight.summary}
-              </p>
-
-              <div className="flex flex-wrap items-center justify-between gap-4 border-t border-slate-100 pt-4">
-                <div className="flex flex-wrap gap-4 text-[11.5px] font-karla uppercase tracking-[0.12em] text-slate-400">
-                  <span className="inline-flex items-center gap-1.5">
-                    <CalendarDays className="size-3.5" />
-                    {featuredInsight.displayDate}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Clock3 className="size-3.5" />
-                    {featuredInsight.readTime}
-                  </span>
-                </div>
-                <span className="inline-flex items-center gap-1.5 text-xs font-karla font-semibold uppercase tracking-[0.14em] text-slate-900">
-                  Read briefing
-                  <ArrowRight className="size-3.5 transition group-hover:translate-x-0.5" />
+              <p className="mt-4 text-[16px] leading-7 text-body">{featuredInsight.summary}</p>
+              <div className="mt-auto flex items-center justify-between gap-4 pt-8">
+                <Meta insight={featuredInsight} />
+                <span className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-brand-strong">
+                  Read the briefing
+                  <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                 </span>
               </div>
             </article>
           </Link>
-        </div>
+        </Container>
       </section>
 
-      <section className="pb-16 sm:pb-20">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {principles.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-xl border border-slate-200 bg-white p-6"
-              >
-                <div className="size-9 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center mb-4">
-                  <FileText className="size-4" />
-                </div>
-                <h3 className="text-lg font-karla font-bold text-slate-900 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-[15px] text-slate-600 font-lora leading-7">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12">
-            <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 mb-5">
-              More briefings
-            </p>
-            <div className="grid grid-cols-1 gap-4">
-              {moreInsights.map((insight) => (
-                <Link
-                  key={insight.slug}
-                  href={`/insights/${insight.slug}`}
-                  className="group rounded-xl border border-slate-200 bg-white p-6 transition-shadow duration-300 hover:shadow-md"
-                >
-                  <div className="flex flex-col gap-4">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="rounded-full px-2.5 py-0.5 text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-[#0b5d57] ring-1 ring-inset ring-[#fde2cd] bg-[#fff4ec]">
-                        {insight.category}
-                      </span>
-                      <span className="rounded-full px-2.5 py-0.5 text-[10.5px] font-karla font-semibold uppercase tracking-[0.18em] text-slate-500 ring-1 ring-inset ring-slate-200">
-                        {insight.topic}
-                      </span>
-                    </div>
-                    <h2 className="text-xl font-karla font-bold leading-snug text-slate-900">
-                      {insight.title}
-                    </h2>
-                    <p className="text-[15px] font-lora leading-7 text-slate-600">
-                      {insight.summary}
-                    </p>
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4">
-                      <div className="flex flex-wrap gap-4 text-[11.5px] font-karla uppercase tracking-[0.12em] text-slate-400">
-                        <span className="inline-flex items-center gap-1.5">
-                          <CalendarDays className="size-3.5" />
-                          {insight.displayDate}
-                        </span>
-                        <span className="inline-flex items-center gap-1.5">
-                          <Clock3 className="size-3.5" />
-                          {insight.readTime}
-                        </span>
-                      </div>
-                      <span className="inline-flex items-center gap-1.5 text-xs font-karla font-semibold uppercase tracking-[0.14em] text-slate-900">
-                        Read article
-                        <ArrowRight className="size-3.5 transition group-hover:translate-x-0.5" />
-                      </span>
-                    </div>
+      <section className="border-t border-hairline bg-surface py-16 md:py-24">
+        <Container>
+          <h2 className="t-h2">All briefings</h2>
+          <ul className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {rest.map((insight, i) => (
+              <Reveal as="li" key={insight.slug} delay={(i % 3) * 0.04}>
+                <Link href={`/insights/${insight.slug}`} className="group flex h-full flex-col">
+                  <Cover
+                    insight={insight}
+                    sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"
+                    className="aspect-[16/10] rounded-xl"
+                  />
+                  <p className="t-eyebrow mt-5">{insight.category}</p>
+                  <h3 className="mt-2 text-[1.15rem] font-semibold leading-snug text-strong group-hover:text-brand-strong">
+                    {insight.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-3 text-[15px] leading-6 text-body">{insight.summary}</p>
+                  <div className="mt-auto pt-4">
+                    <Meta insight={insight} />
                   </div>
                 </Link>
-              ))}
-            </div>
-          </div>
-        </div>
+              </Reveal>
+            ))}
+          </ul>
+        </Container>
       </section>
-    </div>
+    </>
   );
 }

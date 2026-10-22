@@ -12,9 +12,9 @@ import { companyFacts, recognition } from "@/lib/company";
 export const metadata = pageMetadata({
   title: "About ScotiTech",
   description:
-    "ScotiTech Solutions Limited is a UK software company in Scotland, the company behind Vamiq. Meet the founder, Pradeep Dahiya, and the team.",
+    "ScotiTech Solutions Limited is a UK software company, the company behind Vamiq and AXOS. Meet the founder, Pradeep Dahiya, and the team.",
   path: "/aboutus",
-  image: ogImage("company.jpg", "ScotiTech Solutions, a software company built in Scotland"),
+  image: ogImage("company.jpg", "ScotiTech Solutions, the company behind Vamiq and AXOS"),
 });
 
 function Tile({ src, srcSet, sizes, alt, width, height, className, label }) {
@@ -53,7 +53,7 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
             <div>
               <p className="t-eyebrow reveal-now">About ScotiTech</p>
-              <h1 className="t-display reveal-now mt-4">Software built in Scotland, for teams that need control.</h1>
+              <h1 className="t-display reveal-now mt-4">The company behind Vamiq and AXOS.</h1>
               <p className="t-lead reveal-now mt-6 max-w-xl">
                 ScotiTech Solutions Limited is a UK software company, registered in Scotland and run
                 from Eurocentral, Motherwell. We make Vamiq (formerly AppDeploy), our flagship, along

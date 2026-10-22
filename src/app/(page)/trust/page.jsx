@@ -169,7 +169,7 @@ export default function TrustPage() {
 
       {/* COMPANY */}
       <Section surface="muted" spacing="lg">
-        <div className="grid gap-12 lg:grid-cols-[34%_66%] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,34fr)_minmax(0,66fr)] lg:gap-16">
           <Reveal>
             <Eyebrow>Company</Eyebrow>
             <h2 className="t-h1 mt-3">Who you are contracting with.</h2>
@@ -251,7 +251,7 @@ export default function TrustPage() {
 
       {/* RESPONSIBLE DISCLOSURE */}
       <Section id="disclosure" surface="muted" spacing="lg">
-        <div className="grid gap-12 lg:grid-cols-[38%_62%] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:gap-16">
           <Reveal>
             <Eyebrow>Responsible disclosure</Eyebrow>
             <h2 className="t-h1 mt-3">Report a vulnerability.</h2>

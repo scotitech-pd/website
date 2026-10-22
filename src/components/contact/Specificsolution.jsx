@@ -15,14 +15,14 @@ const SpecificSolution = () => {
     {
       id: 2,
       name: "AXOS",
-      image: "/images/brand/axos-icon.png",
+      image: "/images/brand/axos-icon-256.webp",
       description: "Enterprise-only employee workspace with AI built directly in",
       link: "/products/axos",
     },
     {
       id: 3,
       name: "ClarityPath",
-      image: "/images/brand/claritypath-logo.png",
+      image: "/images/brand/claritypath-logo-256.webp",
       description: "Private decision-support app",
       link: "/products/claritypath",
     },
@@ -130,7 +130,7 @@ const SpecificSolution = () => {
           Looking for a Specific Product?
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[45%_51%] gap-5 min-[1400px]:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,45fr)_minmax(0,51fr)] gap-5 min-[1400px]:gap-12">
           <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-[0_22px_55px_rgba(15,23,42,0.10)] border border-slate-200">
             <div className="border border-slate-200 p-6 rounded-2xl relative bg-slate-50/80">
               <h3 className="text-2xl lg:text-3xl font-karla text-[#0b1f1e] mb-6 lg:mb-8">
@@ -256,7 +256,7 @@ const SpecificSolution = () => {
             </div>
 
             <div className="bg-white h-full border border-slate-200 rounded-3xl relative overflow-hidden lg:h-[53%] mt-10 shadow-[0_20px_50px_rgba(15,23,42,0.10)]">
-              <div className="grid lg:grid-cols-[28%_72%] lg:h-full">
+              <div className="grid lg:grid-cols-[minmax(0,28fr)_minmax(0,72fr)] lg:h-full">
                 <div>
                   <h3 className="text-[#0b1f1e] text-xl font-bold p-4 px-7 font-lora">
                     Our Location

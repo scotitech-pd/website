@@ -15,7 +15,7 @@ import { DEFAULT_OG_IMAGE, SITE_DESCRIPTION } from "@/lib/seo";
 export const metadata = {
   metadataBase: new URL("https://scotitech.com"),
   title: {
-    default: "ScotiTech Solutions | The company behind Vamiq",
+    default: "ScotiTech | Software for Apple devices, private apps and AI",
     template: "%s | ScotiTech",
   },
   description: SITE_DESCRIPTION,
@@ -35,13 +35,14 @@ export const metadata = {
     "internal app distribution",
     "Apple Business",
     "self-hosted AI workspace",
-    "software company Scotland",
+    "Apple device management software",
+    "private AI workspace",
   ],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: "ScotiTech Solutions",
-    title: "ScotiTech Solutions | The company behind Vamiq",
+    title: "ScotiTech | Software for Apple devices, private apps and AI",
     description: SITE_DESCRIPTION,
     url: "https://scotitech.com",
     locale: "en_GB",
@@ -83,7 +84,7 @@ const organizationSchema = {
   alternateName: "ScotiTech",
   url: "https://scotitech.com",
   description:
-    "UK software company based in Scotland. Its flagship product, Vamiq (formerly AppDeploy), is Apple device management and a branded app store for your private apps, with build checks before each release. ScotiTech also makes AXOS and ClarityPath.",
+    "UK software company. Its flagship product, Vamiq (formerly AppDeploy), is Apple device management and a branded app store for your private apps, with build checks before each release. ScotiTech also makes AXOS and ClarityPath.",
   identifier: {
     "@type": "PropertyValue",
     propertyID: "UK Companies House company number",

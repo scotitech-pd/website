@@ -70,7 +70,7 @@ export default function Footer() {
               <Image src="/logo/scotitech-wordmark.png" alt="ScotiTech" width={538} height={150} className="h-7 w-auto brightness-0" />
             </Link>
             <p className="mt-5 text-[14px] leading-6 text-body">
-              A UK software company in Scotland, and the company behind Vamiq.
+              The company behind Vamiq and AXOS.
             </p>
             <p className="mt-4 text-[13px] leading-6 text-muted">{contact.office}</p>
           </div>
