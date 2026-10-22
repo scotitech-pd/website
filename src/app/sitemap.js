@@ -28,8 +28,8 @@ const staticRoutes = [
   { path: "/media", lastModified: "2026-10-22", changeFrequency: "monthly", priority: 0.7 },
   { path: "/contact", lastModified: "2026-10-22", changeFrequency: "yearly", priority: 0.7 },
   { path: "/insights", lastModified: "2026-10-22", changeFrequency: "weekly", priority: 0.8, followsInsights: true },
-  { path: "/privacy-policy", lastModified: "2026-08-12", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/cookie-policy", lastModified: "2026-08-03", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/privacy-policy", lastModified: "2026-10-22", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/cookie-policy", lastModified: "2026-10-22", changeFrequency: "yearly", priority: 0.3 },
   { path: "/terms-and-conditions", lastModified: "2026-08-12", changeFrequency: "yearly", priority: 0.3 },
 ];
 

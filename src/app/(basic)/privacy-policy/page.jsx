@@ -16,7 +16,7 @@ const  PrivacyPolicy  = () => {
         <div>
           <h1 className="text-4xl font-karla font-bold text-main-dark text-center">Privacy Policy</h1>
           {/* <p className="mt-2">Effective Date: [Insert Date]</p> */}
-          <p className="mt-4 text-center">Last Updated: 24 August 2026</p>
+          <p className="mt-4 text-center">Last Updated: 22 October 2026</p>
         </div>
 
         {/* 1. Introduction */}
@@ -25,7 +25,7 @@ const  PrivacyPolicy  = () => {
           <p className="leading-7">
             ScotiTech Solutions Limited ("Company," "we," "our," or "us") is committed to protecting your
             privacy. This Privacy Policy outlines how we collect, use, and safeguard your personal information
-            when you visit our website (https://www.scotitech.com) and use our services.
+            when you visit our website (https://scotitech.com) and use our services.
           </p>
           <p className="leading-7">
             ScotiTech Solutions Limited (company number SC829021, registered office 11 Caldervale Drive,
@@ -35,8 +35,9 @@ const  PrivacyPolicy  = () => {
             <a href="mailto:privacy@scotitech.com" className="text-main-dark underline">privacy@scotitech.com</a>.
           </p>
           <p className="leading-7">
-            By accessing our website and services, you agree to this Privacy Policy. If you do not agree,
-            please do not use our website.
+            This policy explains what we do with your personal data and the rights you have. Please read
+            it alongside our{" "}
+            <a href="/cookie-policy" className="text-main-dark underline">Cookie Policy</a>.
           </p>
         </div>
 
@@ -48,6 +49,7 @@ const  PrivacyPolicy  = () => {
             <h3 className="text-xl font-karla font-semibold">2.1 Information You Provide to Us</h3>
             <ul className="list-disc ml-6 mt-2 space-y-2 leading-7">
               <li>Name, email address, phone number, and company details when you contact us or fill out a form.</li>
+              <li>The details you give when you book a call with us through Calendly.</li>
               <li>Payment details when purchasing our services.</li>
             </ul>
           </div>
@@ -55,7 +57,7 @@ const  PrivacyPolicy  = () => {
           <div className="pl-3">
             <h3 className="text-xl font-karla font-semibold">2.2 Information We Collect Automatically</h3>
             <ul className="list-disc ml-6 mt-2 space-y-2 leading-7">
-              <li>IP address, browser type, and device information.</li>
+              <li>IP address, browser type, and device information, which our hosting provider records in server logs to deliver and protect the site.</li>
               <li>Cookies and usage data to improve our website experience.</li>
               <li>Company-level visitor identification data where you have allowed marketing tracking.</li>
             </ul>
@@ -95,20 +97,35 @@ const  PrivacyPolicy  = () => {
           <p className="mt-1 leading-7">
             Optional analytics and marketing technologies are controlled through the cookie banner and
             Cookie Settings link in the footer. You can also disable cookies through your browser settings,
-            but some features may not function properly.
+            but some features may not function properly. Each cookie, its provider and how long it lasts
+            are listed in our{" "}
+            <a href="/cookie-policy" className="text-main-dark underline">Cookie Policy</a>.
           </p>
         </div>
 
         {/* 5. Data Sharing */}
         <div className="space-y-4 pl-1">
           <h2 className="text-2xl font-karla font-semibold text-main-dark">5. Data Sharing & Third-Party Disclosure</h2>
-          <p className="leading-7">We do not sell your personal data. However, we may share data with:</p>
+          <p className="leading-7">We do not sell your personal data. We share it only with:</p>
           <ul className="list-disc ml-6 space-y-2 leading-7">
-            <li>Service providers (e.g., payment processors, cloud hosting).</li>
-            <li>Analytics and marketing technology providers where you have given optional consent.</li>
-            <li>Legal authorities if required by law.</li>
-            <li>Business partners in case of mergers or acquisitions.</li>
+            <li>
+              <strong>Service providers who run parts of this website for us:</strong>
+              <ul className="list-[circle] ml-6 mt-2 space-y-2">
+                <li>Vercel, which hosts the website and, with your analytics consent, measures page speed (Speed Insights);</li>
+                <li>Google, which provides Google Analytics, only with your analytics consent;</li>
+                <li>Apollo.io, which provides company-level visitor insights, only with your marketing consent;</li>
+                <li>Web3Forms, which delivers the messages you send through our contact and application forms to our inbox;</li>
+                <li>Calendly, which handles bookings when you book a call with us, under its own privacy policy.</li>
+              </ul>
+            </li>
+            <li>Payment processors, when you buy our services.</li>
+            <li>Legal authorities, if required by law.</li>
+            <li>A buyer or successor, in the event of a merger or acquisition.</li>
           </ul>
+          <p className="leading-7">
+            Some of these providers are based in the United States and may process data there. Where personal
+            data is transferred outside the UK, we rely on the safeguards UK data protection law requires.
+          </p>
         </div>
 
         {/* 6. Data Security */}
@@ -248,14 +265,14 @@ const  PrivacyPolicy  = () => {
           <h2 className="text-2xl font-karla font-semibold text-main-dark">13. Changes to This Privacy Policy</h2>
           <p className="leading-7">
             We may update this policy from time to time. Changes will be posted on this page with the
-            \"Last Updated\" date.
+            &quot;Last Updated&quot; date.
           </p>
         </div>
 
         {/* 14. Contact */}
         <div id="contact" className="space-y-4 pl-1">
           <h2 className="text-2xl font-karla font-semibold text-main-dark">14. Contact Us</h2>
-          <p className="leading-7 font-karla text-main-dark">📍 ScotiTech Solutions Limited</p>
+          <p className="leading-7 font-karla font-semibold text-main-dark">ScotiTech Solutions Limited</p>
 
           <p className="leading-7">
             Company number SC829021, registered in Scotland
@@ -267,14 +284,12 @@ const  PrivacyPolicy  = () => {
             11 Caldervale Drive, Motherwell ML1 2GB, United Kingdom
           </p>
 
-          <div className="text-center font-karla block text-red-600 leading-7">
-            <a href="mailto:privacy@scotitech.com" className="inline-block pr-5">
-              📧 privacy@scotitech.com
-            </a>
-            <a href="tel:+441698609091" className="inline-block">
-              📞 01698 609091
-            </a>
-          </div>
+          <p className="leading-7">
+            Email{" "}
+            <a href="mailto:privacy@scotitech.com" className="text-main-dark underline">privacy@scotitech.com</a>
+            {" "}or call{" "}
+            <a href="tel:+441698609091" className="text-main-dark underline">01698 609091</a>.
+          </p>
         </div>
 
       </div>
