@@ -43,8 +43,6 @@ const productPaths = [
 
 const operationalMapUrl =
   "https://www.google.com/maps/search/?api=1&query=Regus%20Lanarkshire%20Eurocentral%20Maxim%201%202%20Parklands%20Way%20Motherwell%20ML1%204WR";
-const operationalMapEmbedUrl =
-  "https://maps.google.com/maps?q=Regus%20Lanarkshire%20Eurocentral%2C%20Maxim%201%2C%202%20Parklands%20Way%2C%20Eurocentral%2C%20Motherwell%20ML1%204WR&t=&z=16&ie=UTF8&iwloc=&output=embed";
 
 const contactRoutes = [
   {
@@ -431,15 +429,31 @@ export default function ContactExperience() {
                 <ArrowRight size={16} />
               </a>
             </div>
-            <iframe
-              title="ScotiTech operational office map"
-              src={operationalMapEmbedUrl}
-              className="h-[360px] w-full lg:h-full"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            {/* A photo and a link out instead of an embedded map: an embed
+                sends visitor data to Google before any cookie choice. */}
+            <a
+              href={operationalMapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative block min-h-[260px] overflow-hidden bg-[#002d35]"
+              aria-label="Open our Eurocentral office in Google Maps"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/company/office-meeting-room.webp"
+                alt="A meeting room at ScotiTech's Eurocentral office"
+                width={702}
+                height={468}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              <span className="photo-grade absolute inset-0" aria-hidden="true" />
+              <span className="absolute bottom-5 left-5 inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2.5 text-[14px] font-semibold text-[#0b1f1e]">
+                Open in Google Maps
+                <ArrowRight size={15} aria-hidden="true" />
+              </span>
+            </a>
           </div>
         </div>
       </section>
