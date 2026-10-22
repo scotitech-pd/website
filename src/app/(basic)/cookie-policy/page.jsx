@@ -14,7 +14,7 @@ export default function CookiePolicyPage() {
           <h1 className="text-center font-karla text-4xl font-bold text-main-dark">
             Cookie Policy
           </h1>
-          <p className="mt-4 text-center text-sm text-gray-500">Last Updated: 8 September 2026</p>
+          <p className="mt-4 text-center text-sm text-gray-500">Last Updated: 22 October 2026</p>
         </div>
 
         {/* 1. What Are Cookies */}
@@ -23,8 +23,8 @@ export default function CookiePolicyPage() {
           <p className="leading-7">
             Cookies are small text files placed on your device when you visit a website. They are widely
             used to make websites work or work more efficiently, and to provide information to the site owner.
-            We also use similar storage technologies, including browser local storage and first-party cookies,
-            to record your preferences.
+            We record your cookie choices in a first-party cookie. Some of the optional tools described
+            below may also use your browser&apos;s local storage.
           </p>
         </div>
 
@@ -65,15 +65,15 @@ export default function CookiePolicyPage() {
           <div className="space-y-3">
             <h3 className="font-karla text-xl font-semibold">2.2 Analytics Cookies</h3>
             <p className="leading-7">
-              With your consent, we use analytics cookies to understand how visitors interact with our
-              site — for example, which pages are most visited. This data is aggregated and anonymised.
-              We do not use analytics cookies without your explicit consent.
+              With your consent, we use analytics tools to understand how visitors use our site, for
+              example which pages are visited most. We look at this information in aggregate. We do not
+              load these tools unless you consent.
             </p>
             <div className="overflow-x-auto rounded-xl border border-gray-200">
               <table className="w-full font-karla text-sm">
                 <thead className="bg-gray-50 text-left text-xs font-semibold uppercase tracking-wider text-gray-500">
                   <tr>
-                    <th className="px-4 py-3">Cookie Name</th>
+                    <th className="px-4 py-3">Name</th>
                     <th className="px-4 py-3">Provider</th>
                     <th className="px-4 py-3">Purpose</th>
                     <th className="px-4 py-3">Duration</th>
@@ -83,27 +83,26 @@ export default function CookiePolicyPage() {
                   <tr>
                     <td className="px-4 py-3 font-mono text-xs">_ga</td>
                     <td className="px-4 py-3">Google Analytics 4</td>
-                    <td className="px-4 py-3">Distinguishes unique users; anonymised</td>
-                    <td className="px-4 py-3">2 years</td>
+                    <td className="px-4 py-3">Tells visits from the same browser apart</td>
+                    <td className="px-4 py-3">Up to 2 years (most browsers cap this at 400 days)</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 font-mono text-xs">_ga_XXXXXXXXXX</td>
+                    <td className="px-4 py-3 font-mono text-xs">_ga_XBZFK78JCX</td>
                     <td className="px-4 py-3">Google Analytics 4</td>
-                    <td className="px-4 py-3">Maintains session state for GA4</td>
-                    <td className="px-4 py-3">2 years</td>
+                    <td className="px-4 py-3">Keeps track of the current visit</td>
+                    <td className="px-4 py-3">Up to 2 years (most browsers cap this at 400 days)</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 font-mono text-xs">vercel-speed-insights</td>
-                    <td className="px-4 py-3">Vercel Speed Insights</td>
-                    <td className="px-4 py-3">Measures real-user web performance metrics; no personal data leaves the platform</td>
-                    <td className="px-4 py-3">Session</td>
+                    <td className="px-4 py-3 font-mono text-xs">Speed Insights</td>
+                    <td className="px-4 py-3">Vercel</td>
+                    <td className="px-4 py-3">Measures how quickly our pages load, using anonymous performance data</td>
+                    <td className="px-4 py-3">No cookie set</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p className="text-sm leading-6 text-gray-500">
-              Google Analytics is configured with IP anonymisation enabled (<code className="rounded bg-gray-100 px-1 font-mono text-xs">anonymize_ip: true</code>).
-              Google's privacy policy is available at{" "}
+              Google Analytics 4 does not log or store IP addresses. Google&apos;s privacy policy is available at{" "}
               <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" className="underline underline-offset-2">
                 policies.google.com/privacy
               </a>.
@@ -141,9 +140,25 @@ export default function CookiePolicyPage() {
                     </td>
                     <td className="px-4 py-3">Session / persistent (set by Apollo)</td>
                   </tr>
+                  <tr>
+                    <td className="px-4 py-3 font-mono text-xs">__cf_bm</td>
+                    <td className="px-4 py-3">Cloudflare, for Apollo.io</td>
+                    <td className="px-4 py-3">Protects Apollo&apos;s tracking service from automated traffic. Set on apollo.io, not on scotitech.com.</td>
+                    <td className="px-4 py-3">30 minutes</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
+          </div>
+
+          {/* 2.4 Content from other sites */}
+          <div className="space-y-3">
+            <h3 className="font-karla text-xl font-semibold">2.4 Content From Other Sites</h3>
+            <p className="leading-7">
+              We do not embed maps, videos or booking widgets from other services. Links to Google Maps,
+              YouTube and Calendly open those sites, where their own cookie policies apply. The Vamiq
+              product film plays from vamiq.app, a ScotiTech service, and sets no cookies.
+            </p>
           </div>
         </div>
 
@@ -154,6 +169,11 @@ export default function CookiePolicyPage() {
             You can manage your cookie preferences at any time using the <strong>Cookie Settings</strong>{" "}
             link in the footer of every page. You can accept all cookies, reject non-essential cookies,
             or customise your choices by category.
+          </p>
+          <p className="leading-7">
+            If you withdraw consent, we delete the Google Analytics cookies on scotitech.com, clear
+            Apollo&apos;s data in your browser, and stop loading these tools straight away. Cookies that
+            other sites set on their own domains, such as apollo.io, expire on their own.
           </p>
           <p className="leading-7">
             Your consent is stored in a first-party cookie on your device and is versioned. If we add
@@ -171,9 +191,10 @@ export default function CookiePolicyPage() {
           <h2 className="font-karla text-2xl font-semibold text-main-dark">4. Legal Basis</h2>
           <p className="leading-7">
             We operate under UK GDPR and the Privacy and Electronic Communications Regulations (PECR).
-            Necessary cookies are used on the basis of legitimate interest to deliver the site. All
-            optional cookies are only set on the basis of your freely given, informed, specific, and
-            unambiguous consent — which you can withdraw at any time.
+            Strictly necessary cookies do not need consent under PECR, and we rely on our legitimate
+            interest in running the site for the small amount of data they hold. Optional cookies and
+            tools are only used with your freely given, informed, specific and unambiguous consent,
+            which you can withdraw at any time.
           </p>
         </div>
 
