@@ -1,14 +1,14 @@
-export const metadata = {
-  title: "Cookie Policy",
+import { pageMetadata } from "@/lib/seo";
+export const metadata = pageMetadata({
+  title: "Cookie policy",
   description:
-    "How ScotiTech uses cookies and similar technologies on scotitech.com — UK GDPR / PECR aligned.",
-  alternates: { canonical: "/cookie-policy" },
-  robots: { index: true, follow: true },
-};
+    "How ScotiTech uses cookies and similar technologies on scotitech.com, in line with UK GDPR and PECR.",
+  path: "/cookie-policy",
+});
 
 export default function CookiePolicyPage() {
   return (
-    <section className="mx-auto max-w-5xl px-5 py-16 font-lora text-black min-[500px]:px-10 md:px-20">
+    <section className="mx-auto max-w-5xl px-4 py-16 font-lora text-black sm:px-6 lg:px-8">
       <div className="space-y-12 text-gray-800">
         <div>
           <h1 className="text-center font-karla text-4xl font-bold text-main-dark">

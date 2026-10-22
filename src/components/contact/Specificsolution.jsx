@@ -15,14 +15,14 @@ const SpecificSolution = () => {
     {
       id: 2,
       name: "AXOS",
-      image: "/images/brand/axos-icon.png",
+      image: "/images/brand/axos-icon-256.webp",
       description: "Enterprise-only employee workspace with AI built directly in",
       link: "/products/axos",
     },
     {
       id: 3,
       name: "ClarityPath",
-      image: "/images/brand/claritypath-logo.png",
+      image: "/images/brand/claritypath-logo-256.webp",
       description: "Private decision-support app",
       link: "/products/claritypath",
     },
@@ -124,16 +124,16 @@ const SpecificSolution = () => {
   };
 
   return (
-    <section className="relative bg-[#f5f3ee] overflow-hidden py-12 lg:py-20">
-      <div className="relative max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-        <h2 className="text-2xl lg:text-[48px] font-bold font-karla text-[#0F172A] text-center mb-8 lg:mb-16">
+    <section className="relative bg-[#f4f2ec] overflow-hidden py-12 lg:py-20">
+      <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl lg:text-[48px] font-bold font-karla text-[#0b1f1e] text-center mb-8 lg:mb-16">
           Looking for a Specific Product?
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[45%_51%] gap-5 min-[1400px]:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,45fr)_minmax(0,51fr)] gap-5 min-[1400px]:gap-12">
           <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-[0_22px_55px_rgba(15,23,42,0.10)] border border-slate-200">
             <div className="border border-slate-200 p-6 rounded-2xl relative bg-slate-50/80">
-              <h3 className="text-2xl lg:text-3xl font-karla text-[#0F172A] mb-6 lg:mb-8">
+              <h3 className="text-2xl lg:text-3xl font-karla text-[#0b1f1e] mb-6 lg:mb-8">
                 Send us a Message
               </h3>
 
@@ -211,7 +211,7 @@ const SpecificSolution = () => {
                   <div className="flex justify-end pt-4">
                     <button
                       type="submit"
-                      className="bg-[#0F172A] cursor-pointer font-lora text-white px-5 py-2 lg:text-lg rounded-full font-semibold hover:bg-slate-900 transition-all duration-300 ease-in-out text-sm"
+                      className="bg-[#0b1f1e] cursor-pointer font-lora text-white px-5 py-2 lg:text-lg rounded-full font-semibold hover:bg-slate-900 transition-all duration-300 ease-in-out text-sm"
                     >
                       {success ? "Sent" : "Send"}
                     </button>
@@ -246,7 +246,7 @@ const SpecificSolution = () => {
                       {card.description}
                     </p>
                     <Link href={card.link}>
-                      <button className="bg-[#0F172A] cursor-pointer font-karla text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs lg:px-4 px-6 py-2 rounded-full hover:bg-slate-900 transition-colors shadow-[0_8px_20px_rgba(15,23,42,0.22)]">
+                      <button className="bg-[#0b1f1e] cursor-pointer font-karla text-nowrap absolute left-1/2 -translate-x-1/2 -bottom-3 text-white text-xs lg:px-4 px-6 py-2 rounded-full hover:bg-slate-900 transition-colors shadow-[0_8px_20px_rgba(15,23,42,0.22)]">
                         Read More
                       </button>
                     </Link>
@@ -256,9 +256,9 @@ const SpecificSolution = () => {
             </div>
 
             <div className="bg-white h-full border border-slate-200 rounded-3xl relative overflow-hidden lg:h-[53%] mt-10 shadow-[0_20px_50px_rgba(15,23,42,0.10)]">
-              <div className="grid lg:grid-cols-[28%_72%] lg:h-full">
+              <div className="grid lg:grid-cols-[minmax(0,28fr)_minmax(0,72fr)] lg:h-full">
                 <div>
-                  <h3 className="text-[#0F172A] text-xl font-bold p-4 px-7 font-lora">
+                  <h3 className="text-[#0b1f1e] text-xl font-bold p-4 px-7 font-lora">
                     Our Location
                   </h3>
                   <Image

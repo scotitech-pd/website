@@ -533,7 +533,7 @@ export default function GrowthRoles() {
             </button>
 
             <aside className="relative hidden max-h-[calc(100dvh-104px)] overflow-y-auto bg-ink p-8 text-on-ink lg:block lg:p-10">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_20%_0%,rgba(226,88,14,0.30),transparent_62%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_20%_0%,rgba(15,118,110,0.30),transparent_62%)]" />
               <div className="relative z-10">
                 <Badge variant="onInk">{selectedRole.type}</Badge>
                 <h2 className="t-h2 mt-5 text-on-ink">{selectedRole.title}</h2>

@@ -1,0 +1,136 @@
+<!doctype html>
+<!--
+  Share-card source for /public/og/*.jpg (1200x630).
+  Render one card per hash (#home, #vamiq, #axos, #claritypath, #private-ai, #company) with a
+  headless browser at 1200x630 and save as JPEG, e.g. with
+  scripts/render-og-cards.mjs. Uses only files from /public.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>ScotiTech share cards</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+  .card { display: none; position: relative; width: 1200px; height: 630px; overflow: hidden; }
+  .card:target { display: block; }
+  .serif { font-family: ui-serif, "New York", Georgia, serif; font-weight: 400; }
+  .wordmark { height: 40px; filter: brightness(0); }
+  .wordmark.light { filter: brightness(0) invert(1); }
+  .foot { position: absolute; left: 72px; bottom: 56px; font-size: 22px; font-weight: 500; }
+
+  /* home */
+  #home { background: #f4f2ec; color: #0b1f1e; }
+  #home .glow { position: absolute; inset: 0; background: radial-gradient(55% 60% at 80% 70%, rgba(15,118,110,.14), transparent 70%); }
+  #home .copy { position: absolute; left: 72px; top: 72px; width: 560px; }
+  #home h1 { margin-top: 44px; font-size: 60px; line-height: 1.04; letter-spacing: -0.035em; font-weight: 650; }
+  #home .foot { color: #3b4a48; }
+  #home .win { position: absolute; left: 650px; top: 120px; width: 600px; border-radius: 14px; overflow: hidden; background: #fff; border: 1px solid #d9d5cc; box-shadow: 0 30px 60px rgba(11,31,30,.16); }
+  #home .bar { height: 26px; background: #f7f6f2; border-bottom: 1px solid #e3dfd5; display: flex; gap: 6px; align-items: center; padding: 0 12px; }
+  #home .bar i { width: 9px; height: 9px; border-radius: 50%; background: #d9d5cc; display: block; }
+  #home .win img { display: block; width: 100%; }
+  #home .phone { position: absolute; left: 960px; top: 250px; width: 170px; border: 6px solid #0b1f1e; border-radius: 28px; background: #0b1f1e; box-shadow: 0 30px 60px rgba(11,31,30,.25); }
+
+  /* vamiq */
+  #vamiq { background: linear-gradient(135deg, #032b2a 0%, #05403c 55%, #0b5550 100%); color: #fff; }
+  #vamiq .glow { position: absolute; inset: 0; background: radial-gradient(50% 60% at 95% 0%, rgba(94,234,212,.2), transparent 60%); }
+  #vamiq .logo { position: absolute; left: 72px; top: 72px; height: 48px; }
+  #vamiq h1 { position: absolute; left: 72px; top: 170px; width: 520px; font-size: 54px; line-height: 1.1; letter-spacing: -0.01em; }
+  #vamiq .foot { color: rgba(255,255,255,.75); }
+  #vamiq .poster { position: absolute; left: 640px; top: 120px; width: 620px; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.12); }
+
+  /* axos */
+  #axos { background: linear-gradient(150deg, #0d1b2a, #1d3550); color: #fff; }
+  #axos .copy { position: absolute; left: 72px; top: 72px; width: 520px; }
+  #axos .eyebrow { margin-top: 48px; font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: #9fc4e6; font-weight: 600; }
+  #axos h1 { margin-top: 14px; font-size: 56px; line-height: 1.08; }
+  #axos .foot { color: rgba(255,255,255,.7); }
+  #axos .shot { position: absolute; left: 610px; top: 110px; width: 760px; border-radius: 12px; box-shadow: 0 30px 70px rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.1); }
+
+  /* claritypath */
+  #claritypath { background: linear-gradient(160deg, #f4efe4, #e2d6bd); color: #2b2416; }
+  #claritypath .copy { position: absolute; left: 72px; top: 72px; width: 600px; }
+  #claritypath .eyebrow { margin-top: 48px; font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: #8a5a06; font-weight: 600; }
+  #claritypath h1 { margin-top: 14px; font-size: 58px; line-height: 1.08; color: #1f1a10; }
+  #claritypath .foot { color: #5c5240; }
+  #claritypath .phone { position: absolute; left: 820px; top: 70px; width: 280px; border: 8px solid #0b1f1e; border-radius: 40px; background: #0b1f1e; box-shadow: 0 40px 70px rgba(43,36,22,.3); }
+
+  /* private-ai */
+  #private-ai { background: #f4f2ec; color: #0b1f1e; }
+  #private-ai .glow { position: absolute; inset: 0; background: radial-gradient(50% 70% at 85% 60%, rgba(15,118,110,.18), transparent 70%); }
+  #private-ai .copy { position: absolute; left: 72px; top: 72px; width: 760px; }
+  #private-ai .eyebrow { margin-top: 48px; font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: #0b5d57; font-weight: 600; }
+  #private-ai h1 { margin-top: 14px; font-size: 76px; line-height: 1.02; letter-spacing: -0.04em; font-weight: 650; }
+  #private-ai .foot { color: #3b4a48; }
+
+  /* company */
+  #company { background: #002d35; color: #fff; }
+  #company .photo { position: absolute; left: 340px; top: 0; width: 860px; height: 100%; object-fit: cover; object-position: 50% 40%; }
+  #company .tint { position: absolute; inset: 0; background: linear-gradient(90deg, #002d35 0%, #002d35 30%, rgba(0,45,53,.55) 60%, rgba(0,45,53,.1) 100%); }
+  #company .copy { position: absolute; left: 72px; top: 72px; width: 640px; }
+  #company h1 { margin-top: 56px; font-size: 62px; line-height: 1.06; }
+  #company .foot { color: rgba(255,255,255,.8); }
+</style>
+</head>
+<body>
+  <section class="card" id="home">
+    <div class="glow"></div>
+    <div class="copy">
+      <img class="wordmark" src="../public/logo/scotitech-wordmark.png" alt="">
+      <h1>Your apps, your devices, your data. Under your control.</h1>
+    </div>
+    <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="../public/media/vamiq/vamiq-hero-poster-20261021.webp" alt=""></div>
+    <img class="phone" src="../public/media/vamiq/vamiq-hero-phone-20261021.webp" alt="">
+    <p class="foot">The company behind Vamiq · scotitech.com</p>
+  </section>
+
+  <section class="card" id="vamiq">
+    <div class="glow"></div>
+    <img class="logo" src="../public/images/brand/vamiq/vamiq-logo-on-dark.svg" alt="">
+    <h1 class="serif">Your Apple devices and your own apps, managed in one place.</h1>
+    <img class="poster" src="../public/media/vamiq/vamiq-film-poster-20261021.webp" alt="">
+    <p class="foot">Vamiq, formerly AppDeploy · from ScotiTech</p>
+  </section>
+
+  <section class="card" id="axos">
+    <div class="copy">
+      <img class="wordmark light" src="../public/logo/scotitech-wordmark.png" alt="">
+      <p class="eyebrow">AXOS · Private AI workspace</p>
+      <h1 class="serif">Your enterprise AI workspace, on your own servers.</h1>
+    </div>
+    <img class="shot" src="../public/images/products/axos/command-center-dashboard-1200.webp" alt="">
+    <p class="foot">scotitech.com/products/axos</p>
+  </section>
+
+  <section class="card" id="claritypath">
+    <div class="copy">
+      <img class="wordmark" src="../public/logo/scotitech-wordmark.png" alt="">
+      <p class="eyebrow">ClarityPath · Guided decision support</p>
+      <h1 class="serif">A clear daily focus for life’s biggest decisions.</h1>
+    </div>
+    <img class="phone" src="../public/images/products/claritypath/app-focus-600.webp" alt="">
+    <p class="foot">scotitech.com/products/claritypath</p>
+  </section>
+
+  <section class="card" id="private-ai">
+    <div class="glow"></div>
+    <div class="copy">
+      <img class="wordmark" src="../public/logo/scotitech-wordmark.png" alt="">
+      <p class="eyebrow">Private AI for your business</p>
+      <h1>Stop renting AI. Start owning it.</h1>
+    </div>
+    <p class="foot">Explore the time your team could reclaim · scotitech.com/private-ai</p>
+  </section>
+
+  <section class="card" id="company">
+    <img class="photo" src="../public/images/company/startup-awards-2026-event-1-1600.webp" alt="">
+    <div class="tint"></div>
+    <div class="copy">
+      <img class="wordmark light" src="../public/logo/scotitech-wordmark.png" alt="">
+      <h1 class="serif">The company behind Vamiq and AXOS.</h1>
+    </div>
+    <p class="foot">ScotiTech Solutions · scotitech.com</p>
+  </section>
+</body>
+</html>

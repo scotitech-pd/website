@@ -10,9 +10,9 @@ const surfaces = {
 
 const spacings = {
   none: "",
-  sm: "py-10 md:py-12",
-  md: "py-12 md:py-16",
-  lg: "py-16 md:py-24",
+  sm: "py-10 md:py-14",
+  md: "py-14 md:py-20",
+  lg: "py-20 md:py-28",
 };
 
 /**

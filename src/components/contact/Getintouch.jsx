@@ -68,7 +68,7 @@ const getContactHref = (item) => {
 /* main section */
 const GetInTouch = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f5f3ee] py-12 lg:py-20">
+    <section className="relative overflow-hidden bg-[#f4f2ec] py-12 lg:py-20">
       {/* background decorative images */}
       <div>
         <Image
@@ -90,10 +90,10 @@ const GetInTouch = () => {
       </div>
 
       {/* content */}
-      <div className="relative z-10 max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xxl:grid-cols-[60%_40%] gap-8 lg:gap-14">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xxl:grid-cols-[minmax(0,60fr)_minmax(0,40fr)] gap-8 lg:gap-14">
           {/* left side */}
-          <div className="text-[#0F172A] space-y-8">
+          <div className="text-[#0b1f1e] space-y-8">
             <div>
               <h1 className="text-3xl lg:text-4xl xxl:text-5xl font-karla font-bold mb-4 lg:mb-6">
                 Speak with Our Team

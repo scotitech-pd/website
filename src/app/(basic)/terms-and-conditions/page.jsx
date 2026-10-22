@@ -1,16 +1,17 @@
 
 import React from "react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Terms & Conditions",
-  description: "Terms governing use of scotitech.com and ScotiTech products.",
-  alternates: { canonical: "/terms-and-conditions" },
-  robots: { index: true, follow: true },
-};
+export const metadata = pageMetadata({
+  title: "Terms and conditions",
+  description:
+    "The terms that govern use of scotitech.com and ScotiTech products.",
+  path: "/terms-and-conditions",
+});
 
 const TermsAndConditions = () => {
   return (
-    <section className="max-w-5xl mx-auto px-5 min-[500px]:px-10 md:px-20 py-16 text-black font-lora">
+    <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-black font-lora">
       <div className="space-y-10 text-gray-800">
         {/* Heading */}
         <div>

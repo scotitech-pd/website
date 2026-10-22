@@ -15,9 +15,9 @@ export const metadata = {
 export default function EditorialPage() {
   if (!editorialModeEnabled) {
     return (
-      <main className="min-h-[70vh] bg-[#f5f3ee] px-5 py-20 text-[#0F172A] min-[500px]:px-10 md:px-20">
+      <div className="min-h-[70vh] bg-[#f4f2ec] px-5 py-20 text-[#0b1f1e] min-[500px]:px-10 md:px-20">
         <div className="mx-auto max-w-4xl rounded-[28px] border border-slate-200 bg-white p-10 text-center shadow-[0_30px_100px_-60px_rgba(15,23,42,0.45)]">
-          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#b8430b]">
+          <p className="text-sm font-karla font-semibold uppercase tracking-[0.18em] text-[#0b5d57]">
             Editorial review
           </p>
           <h1 className="mt-4 text-4xl font-karla font-semibold text-slate-900">
@@ -29,7 +29,7 @@ export default function EditorialPage() {
             site locally to review drafts and approve them for publication.
           </p>
         </div>
-      </main>
+      </div>
     );
   }
 

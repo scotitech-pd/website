@@ -1,183 +1,94 @@
-"use client";
-
-import { Fragment } from "react";
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, ArrowUpRight, ShieldCheck, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
-import { useModal } from "@/components/ModalContext";
-import ProductShowcase from "@/components/products/ProductShowcase";
+import LoopVideo from "@/components/media/LoopVideo";
+import FilmDialog from "@/components/media/FilmDialog";
+import { vamiqMedia } from "@/lib/company";
 
-const announcements = [
-  { label: "AppDeploy is now Vamiq", href: "/products/vamiq", cta: "Meet Vamiq" },
-  { label: "Now hiring growth roles worldwide", href: "/careers" },
-];
-
+/**
+ * Home hero: one confident line, one paragraph, two actions, and the real
+ * product in a framed window (Vamiq's 14-second loop, a sample workspace)
+ * with the branded app store on an iPhone beside it.
+ */
 export default function HeroSection() {
-  const { setShowModal } = useModal();
-  const reduce = useReducedMotion();
-
-  const rise = (delay = 0) =>
-    reduce
-      ? {}
-      : {
-          initial: { opacity: 0, y: 24 },
-          animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay },
-        };
+  const { loop, poster, phone } = vamiqMedia;
 
   return (
-    <section className="relative min-h-screen bg-[#080d18] flex flex-col" style={{ marginBottom: "-80px", paddingBottom: "80px" }}>
-      {/* ── Background layers ── */}
-      {/* Deep radial brand glow */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(226,88,14,0.18),transparent_65%)]" />
-      {/* Subtle bottom-left warmth */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_-5%_100%,rgba(184,67,11,0.10),transparent_60%)]" />
-      {/* Fine dot grid */}
+    <section className="relative overflow-hidden bg-surface-muted pb-20 pt-12 md:pb-28 md:pt-20">
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.18]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.55) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-          maskImage:
-            "radial-gradient(ellipse 80% 70% at 50% 0%, black 40%, transparent 100%)",
-          WebkitMaskImage:
-            "radial-gradient(ellipse 80% 70% at 50% 0%, black 40%, transparent 100%)",
-        }}
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-[38%] h-[60%] bg-[radial-gradient(60%_55%_at_50%_45%,rgba(15,118,110,0.10),transparent_70%)]"
       />
-      {/* Horizontal scan line */}
-      <div className="pointer-events-none absolute inset-x-0 top-[72px] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-      {/* ── Main content ── */}
-      <Container className="relative z-10 flex flex-1 flex-col items-center justify-center pt-28 pb-20 text-center md:pt-36 md:pb-28">
-        {/* Announcement strip */}
-        <motion.div {...rise(0)}>
-          <div className="inline-flex max-w-full flex-wrap items-center justify-center gap-x-2.5 gap-y-1.5 rounded-full border border-white/12 bg-white/[0.06] px-4 py-1.5 backdrop-blur-sm">
-            {announcements.map((item, i) => (
-              <Fragment key={item.label}>
-                {i > 0 && (
-                  <span aria-hidden="true" className="hidden text-white/25 sm:inline">
-                    ·
-                  </span>
-                )}
-                <Link
-                  href={item.href}
-                  className="inline-flex items-center gap-1.5 font-karla text-xs font-semibold uppercase tracking-[0.18em] text-white/70 transition-colors hover:text-white"
-                >
-                  {item.label}
-                  {item.cta && (
-                    <span className="inline-flex items-center gap-1 text-brand">
-                      {item.cta}
-                      <ArrowRight size={12} />
-                    </span>
-                  )}
-                </Link>
-              </Fragment>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Headline */}
-        <motion.h1
-          {...rise(0.08)}
-          className="mt-8 max-w-4xl font-geist-sans text-[clamp(2.6rem,1.6rem+4.2vw,5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white"
-        >
-          Software that gives teams{" "}
-          <span className="bg-gradient-to-r from-brand to-[#f97316] bg-clip-text text-transparent">
-            real control
-          </span>{" "}
-          over how apps ship and where data lives.
-        </motion.h1>
-
-        {/* Sub-headline */}
-        <motion.p
-          {...rise(0.16)}
-          className="mt-6 max-w-2xl font-karla text-[clamp(1rem,0.9rem+0.5vw,1.2rem)] leading-relaxed text-white/55"
-        >
-          ScotiTech is a UK software company, led from Scotland. Our flagship,{" "}
-          <span className="text-white/80 font-medium">Vamiq</span>, puts
-          private apps on company iPhones, iPads and Macs, with every release
-          checked before it ships and recorded after. We also build{" "}
-          <span className="text-white/80 font-medium">AXOS</span>, a
-          self-hosted enterprise AI workspace.
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          {...rise(0.24)}
-          className="mt-10 flex flex-wrap items-center justify-center gap-3"
-        >
-          <Link
-            href="/products/vamiq"
-            className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 font-karla text-[15px] font-semibold text-white shadow-[0_0_32px_rgba(226,88,14,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-strong hover:shadow-[0_0_44px_rgba(226,88,14,0.50)]"
+      <Container className="relative">
+        <div className="mx-auto max-w-[920px] text-center">
+          <h1 className="t-display reveal-now">
+            Your apps, your devices, your data. Under your control.
+          </h1>
+          <p
+            className="reveal-now mx-auto mt-6 max-w-[700px] text-[clamp(1.0625rem,1rem+0.35vw,1.25rem)] leading-[1.6] text-body"
+            style={{ animationDelay: "0.08s" }}
           >
-            Meet Vamiq
-            <ArrowRight size={16} />
-          </Link>
-          <a
-            href="https://vamiq.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-7 py-3.5 font-karla text-[15px] font-semibold text-white/80 backdrop-blur-sm transition-all duration-200 hover:border-white/25 hover:text-white"
-          >
-            Try Vamiq free
-            <ArrowUpRight size={16} />
-          </a>
-          <button
-            onClick={() => setShowModal(true)}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-3.5 font-karla text-[15px] font-semibold text-white/60 transition-colors hover:text-white"
-          >
-            Talk to us
-          </button>
-        </motion.div>
-
-        {/* Trust strip */}
-        <motion.div
-          {...rise(0.30)}
-          className="mt-10 flex items-center justify-center gap-2 text-white/40"
-        >
-          <ShieldCheck size={15} className="text-brand/70" />
-          <p className="font-karla text-xs tracking-wide">
-            Built and hosted in the UK · Apple MDM Vendor · direct access to the founder
+            ScotiTech makes Vamiq (formerly AppDeploy), which manages company iPhones, iPads and Macs
+            and delivers your own apps through a branded app store, and AXOS, an AI workspace that runs
+            on your own servers.
           </p>
-        </motion.div>
-
-        {/* Product preview card */}
-        <motion.div
-          {...rise(0.20)}
-          className="relative mt-16 w-full max-w-4xl"
-        >
-          <div className="pointer-events-none absolute -inset-x-8 -bottom-6 h-24 bg-[radial-gradient(ellipse_70%_100%_at_50%_100%,rgba(226,88,14,0.20),transparent_70%)] blur-2xl" />
-          <motion.div
-            animate={reduce ? undefined : { y: [0, -5, 0] }}
-            transition={
-              reduce
-                ? undefined
-                : { duration: 7, ease: "easeInOut", repeat: Infinity }
-            }
+          <div
+            className="reveal-now mt-9 flex flex-wrap items-center justify-center gap-3"
+            style={{ animationDelay: "0.15s" }}
           >
-            <ProductShowcase
-              variant="vamiq"
-              src="/images/products/appdeploy/claritypath-portal.webp"
-              alt="Vamiq branded app store for an organisation, listing its approved private apps"
-              priority
-            />
-          </motion.div>
-        </motion.div>
-      </Container>
+            <Link
+              href="/products/vamiq"
+              className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand px-6 text-base font-semibold text-white shadow-soft transition-colors hover:bg-brand-strong"
+            >
+              Meet Vamiq
+              <ArrowRight size={17} aria-hidden="true" />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex h-12 items-center rounded-lg border border-hairline-strong bg-surface px-6 text-base font-semibold text-strong transition-colors hover:bg-white"
+            >
+              Talk to us
+            </Link>
+          </div>
+          <div className="reveal-now mt-7" style={{ animationDelay: "0.2s" }}>
+            <FilmDialog />
+          </div>
+        </div>
 
-      {/* ── Scroll indicator ── */}
-      <div className="relative z-10 flex justify-center pb-8">
-        <motion.div
-          animate={reduce ? undefined : { y: [0, 6, 0] }}
-          transition={reduce ? undefined : { duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center gap-2 text-white/25"
-        >
-          <span className="font-karla text-[10px] uppercase tracking-[0.2em]">Scroll</span>
-          <ChevronDown size={18} />
-        </motion.div>
-      </div>
+        {/* The product, framed */}
+        <figure className="reveal-now relative mx-auto mt-14 max-w-[1040px] md:mt-16" style={{ animationDelay: "0.25s" }}>
+          <div className="relative mr-[12%] overflow-hidden rounded-xl border border-hairline-strong/70 bg-white shadow-lift sm:mr-[16%]">
+            <div className="flex h-8 items-center gap-1.5 border-b border-hairline bg-[#f7f6f2] px-3" aria-hidden="true">
+              <span className="size-2.5 rounded-full bg-[#d9d5cc]" />
+              <span className="size-2.5 rounded-full bg-[#d9d5cc]" />
+              <span className="size-2.5 rounded-full bg-[#d9d5cc]" />
+              <span className="mx-auto hidden rounded-md bg-white px-10 py-0.5 text-[11px] text-muted ring-1 ring-hairline sm:block">
+                vamiq.app/dashboard
+              </span>
+            </div>
+            <LoopVideo
+              src={loop.src}
+              poster={poster.src}
+              width={loop.width}
+              height={loop.height}
+              label={poster.alt}
+              className="block aspect-[16/10] w-full bg-white object-cover"
+            />
+          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={phone.src}
+            alt={phone.alt}
+            width={phone.width}
+            height={phone.height}
+            fetchPriority="high"
+            className="absolute -bottom-4 right-0 w-[27%] max-w-[250px] sm:-bottom-6 rounded-[1.6rem] border-[5px] border-ink bg-ink shadow-lift sm:rounded-[2rem] sm:border-[7px]"
+          />
+          <figcaption className="mt-8 pr-[30%] text-left text-[13px] text-muted sm:mt-10 sm:pr-0 sm:text-center">
+            Vamiq · sample workspace
+          </figcaption>
+        </figure>
+      </Container>
     </section>
   );
 }

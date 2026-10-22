@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils";
 
 const variants = {
-  live: "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600/15",
-  early: "bg-brand-soft text-brand-strong ring-1 ring-brand/20",
-  supporting: "bg-slate-100 text-slate-600 ring-1 ring-slate-500/15",
+  live: "bg-brand-soft text-brand-strong ring-1 ring-brand/20",
+  early: "bg-[#e8eef5] text-axos ring-1 ring-axos/20",
+  supporting: "bg-surface-sunken text-body ring-1 ring-hairline-strong/60",
   neutral: "bg-surface-sunken text-muted ring-1 ring-hairline-strong/40",
   brand: "bg-brand text-brand-contrast",
   onInk: "bg-white/10 text-on-ink ring-1 ring-white/15",
@@ -16,15 +16,14 @@ export default function Badge({ variant = "neutral", dot = false, className, chi
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-karla text-xs font-semibold uppercase tracking-[0.1em]",
+        "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 font-sans text-[11px] font-semibold uppercase tracking-[0.1em]",
         variants[variant],
         className
       )}
     >
       {dot && (
         <span className="relative flex h-1.5 w-1.5">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-current opacity-60" />
-          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-current" />
+                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-current" />
         </span>
       )}
       {children}

@@ -1,14 +1,15 @@
 
 import React from "react";
-export const metadata = {
-  title: "Privacy Policy",
-  description: "How ScotiTech Solutions Limited handles personal data, in line with UK GDPR.",
-  alternates: { canonical: "/privacy-policy" },
-  robots: { index: true, follow: true },
-}
+import { pageMetadata } from "@/lib/seo";
+export const metadata = pageMetadata({
+  title: "Privacy policy",
+  description:
+    "How ScotiTech Solutions Limited handles personal data, in line with UK GDPR.",
+  path: "/privacy-policy",
+});
 const  PrivacyPolicy  = () => {
   return (
-    <section className="max-w-5xl mx-auto px-5 min-[500px]:px-10 md:px-20 py-16 text-black font-lora">
+    <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-black font-lora">
       <div className="space-y-12 text-gray-800">
 
         {/* Heading */}

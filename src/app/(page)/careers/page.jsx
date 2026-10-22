@@ -15,21 +15,14 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import Reveal from "@/components/ui/Reveal";
 import Section from "@/components/ui/Section";
 import { Button } from "@/components/ui/button";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Growth roles",
+export const metadata = pageMetadata({
+  title: "Careers: growth roles",
   description:
-    "Commission-based growth, referral, partnership, and ambassador roles for people who can open relevant product and enterprise conversations for ScotiTech.",
-  alternates: { canonical: "/careers" },
-  openGraph: {
-    title: "Growth roles at ScotiTech",
-    description:
-      "Commission-based roles for people who can open relevant product, partnership, and enterprise conversations.",
-    url: "/careers",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image" },
-};
+    "Commission-based growth, referral, partnership and ambassador roles for people who can open the right product conversations for ScotiTech.",
+  path: "/careers",
+});
 
 const principles = [
   {
@@ -75,7 +68,7 @@ const productsToKnow = [
     status: "Enterprise only",
     tagline: "A self-hosted enterprise AI workspace — mail, drive, calendar, chat, video, tasks, knowledge, and private AI in one place.",
     audience:
-      "Enterprises that need a Google Workspace or Microsoft 365 alternative they fully control, with AI that keeps data in-house.",
+      "Enterprises that need a collaboration suite they fully control, with AI that keeps data in-house.",
   },
 ];
 
@@ -128,15 +121,14 @@ const faqs = [
 export default function CareersPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-ink pt-28 pb-16 text-on-ink md:pt-32 md:pb-20">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_55%_at_80%_0%,rgba(226,88,14,0.30),transparent_62%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent_42%)]" />
+      <section className="relative overflow-hidden bg-surface-muted pb-16 pt-12 md:pb-24 md:pt-20">
         <Container className="relative z-10">
           <Reveal immediate className="max-w-4xl">
-            <Badge variant="onInk">Now hiring</Badge>
-            <h1 className="t-display mt-5 text-on-ink">
+            <Badge variant="live">Now hiring</Badge>
+            <h1 className="t-display mt-5">
               Join ScotiTech and help grow serious products the right way.
             </h1>
-            <p className="mt-6 max-w-2xl font-karla text-xl leading-8 text-on-ink-muted">
+            <p className="t-lead mt-6 max-w-2xl">
               We are opening relationship-led growth roles for people who can
               create real commercial momentum without gimmicks, spam, or
               borrowed credibility. We are looking for people who understand
@@ -144,13 +136,13 @@ export default function CareersPage() {
               the right product in front of the right organisation.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" variant="onInkSolid">
+              <Button asChild size="lg">
                 <Link href="mailto:join@scotitech.com?subject=Business%20growth%20opportunity%20application">
                   Apply by email
                   <ArrowRight size={17} />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="onInk">
+              <Button asChild size="lg" variant="outline">
                 <Link href="#open-roles">View roles</Link>
               </Button>
             </div>
@@ -232,7 +224,7 @@ export default function CareersPage() {
       </Section>
 
       <section className="relative overflow-hidden bg-ink py-16 text-on-ink md:py-20">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_15%_0%,rgba(226,88,14,0.22),transparent_62%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_15%_0%,rgba(15,118,110,0.22),transparent_62%)]" />
         <Container className="relative z-10">
           <Reveal className="max-w-3xl">
             <Badge variant="onInk">For agencies &amp; consultants</Badge>
@@ -386,7 +378,7 @@ export default function CareersPage() {
         <Container>
           <Reveal>
             <div className="relative overflow-hidden rounded-xl bg-ink px-7 py-12 text-center md:px-12 md:py-14">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(226,88,14,0.25),transparent_60%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(15,118,110,0.25),transparent_60%)]" />
               <div className="relative z-10 mx-auto max-w-2xl">
                 <h2 className="t-h1 text-on-ink">
                   Want to grow with ScotiTech?

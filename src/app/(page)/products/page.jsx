@@ -1,84 +1,31 @@
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
-import Reveal from "@/components/ui/Reveal";
-import Eyebrow from "@/components/ui/Eyebrow";
-import Badge from "@/components/ui/Badge";
-import { products } from "@/lib/products";
+import ProductsSection from "@/components/home/ProductsSection";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Products",
+export const metadata = pageMetadata({
+  title: "Products: Vamiq, AXOS and ClarityPath",
   description:
-    "Explore ScotiTech products: Vamiq, a branded app store for your private apps with Apple device management for iPhone, iPad and Mac; AXOS for enterprise AI workspaces; and ClarityPath for guided decision support.",
-  alternates: { canonical: "/products" },
-  openGraph: {
-    title: "Products — Vamiq, AXOS, ClarityPath",
-    description:
-      "Private app stores and Apple device management, governance-first AI workspaces, and guided decision support.",
-    url: "/products",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image" },
-};
-
-const order = ["vamiq", "axos", "claritypath"];
+    "ScotiTech products: Vamiq for Apple device management and a private app store, AXOS for a self-hosted AI workspace, and ClarityPath for guided decision support.",
+  path: "/products",
+});
 
 export default function ProductsPage() {
-  const list = order.map((slug) => products[slug]);
-
   return (
     <>
-      <section className="relative overflow-hidden bg-surface pt-28 pb-12 md:pt-32 md:pb-16">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
-        <Container className="relative z-10">
-          <Reveal immediate className="max-w-3xl">
-            <Eyebrow>Products</Eyebrow>
-            <h1 className="t-display mt-3">
-              Focused products, built for control.
-            </h1>
-            <p className="t-lead mt-5 max-w-2xl">
-              Vamiq leads the portfolio: a branded app store for your private apps,
-              and Apple device management that installs them on iPhone, iPad and
-              Mac, with build checks before each release. AXOS brings private
-              enterprise operations together, and ClarityPath supports sensitive
-              decision journeys.
+      <section className="bg-surface-muted pb-4 pt-12 md:pt-20">
+        <Container>
+          <div className="max-w-3xl">
+            <p className="t-eyebrow reveal-now">Products</p>
+            <h1 className="t-display reveal-now mt-4">Focused products that do one job well.</h1>
+            <p className="t-lead reveal-now mt-6 max-w-2xl">
+              Vamiq (formerly AppDeploy) leads: Apple device management and a branded app store for
+              your own apps. AXOS is a private AI workspace that runs on your own servers, and
+              ClarityPath brings structure to life&apos;s biggest decisions.
             </p>
-          </Reveal>
+          </div>
         </Container>
       </section>
-
-      <Section surface="muted" spacing="lg">
-        <div className="grid gap-6">
-          {list.map((p, i) => (
-            <Reveal key={p.slug} delay={i * 0.06}>
-              <Link
-                href={`/products/${p.slug}`}
-                className="group grid gap-6 overflow-hidden rounded-3xl border border-hairline bg-surface p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card md:grid-cols-[1fr_auto] md:items-center md:p-9"
-              >
-                <div>
-                  <div className="flex items-center gap-3">
-                    <h2 className="font-karla text-2xl font-semibold text-strong">
-                      {p.name}
-                    </h2>
-                    <Badge variant={p.status.variant} dot={p.status.dot}>
-                      {p.status.label}
-                    </Badge>
-                  </div>
-                  <p className="t-h3 mt-3 font-karla !font-semibold">{p.tagline}</p>
-                  <p className="t-body mt-3 max-w-2xl">{p.description}</p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong">
-                    Explore {p.name}
-                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-                  </span>
-                </div>
-                <span className={`hidden h-full w-1.5 rounded-full bg-${p.accent} md:block`} />
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
+      <ProductsSection showIntro={false} />
     </>
   );
 }

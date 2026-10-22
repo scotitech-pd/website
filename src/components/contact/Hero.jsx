@@ -17,7 +17,7 @@ function Hero() {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-8xl mx-auto px-5 min-[500px]:px-10 md:px-20 flex flex-col lg:flex-row justify-between items-center lg:items-center">
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center lg:items-center">
         {/* Left Text Section */}
         <div className="flex flex-col justify-center w-full items-start text-left lg:items-start lg:text-left">
           <h2 className="text-white text-2xl font-bold font-karla lg:text-4xl max-[1040px]:text-3xl">

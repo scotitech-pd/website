@@ -1,163 +1,183 @@
 import Link from "next/link";
-import { ArrowRight, Building2, Globe2, Layers, Trophy } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
-import Eyebrow from "@/components/ui/Eyebrow";
-import { Button } from "@/components/ui/button";
 import LeadershipTeam from "@/components/aboutus/Leadershipteam";
-import ClientLogoStrip from "@/components/aboutus/ClientLogoStrip";
-import OfficeCollage from "@/components/aboutus/OfficeCollage";
+import FounderSection from "@/components/home/FounderSection";
+import ContactSection from "@/components/home/ContactSection";
+import { ogImage, pageMetadata } from "@/lib/seo";
+import { companyFacts, recognition } from "@/lib/company";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "About ScotiTech",
   description:
-    "ScotiTech Solutions is a UK-registered product company building privacy-conscious software, infrastructure, and AI for teams worldwide.",
-  alternates: { canonical: "/aboutus" },
-  openGraph: {
-    title: "About ScotiTech Solutions",
-    description:
-      "A UK-registered product company building privacy-conscious software for teams worldwide.",
-    url: "/aboutus",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image" },
-};
+    "ScotiTech Solutions Limited is a UK software company, the company behind Vamiq and AXOS. Meet the founder, Pradeep Dahiya, and the team.",
+  path: "/aboutus",
+  image: ogImage("company.jpg", "ScotiTech Solutions, the company behind Vamiq and AXOS"),
+});
 
-const facts = [
-  { icon: Building2, value: "UK-registered", label: "Operated from Scotland" },
-  { icon: Layers, value: "Broad technology focus", label: "Products, platforms, AI, and delivery" },
-  { icon: Globe2, value: "Worldwide", label: "Global reach, clients, and partnerships" },
-  { icon: Trophy, value: "2026 Regional Finalist", label: "UK StartUp Awards, Scotland" },
-];
+function Tile({ src, srcSet, sizes, alt, width, height, className, label }) {
+  return (
+    <figure className={`relative overflow-hidden rounded-xl bg-grade shadow-card ${className}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        srcSet={srcSet}
+        sizes={sizes}
+        alt={alt}
+        width={width}
+        height={height}
+        decoding="async"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <span className="photo-tint absolute inset-0" aria-hidden="true" />
+      {label && (
+        <>
+          <span className="photo-grade absolute inset-0" aria-hidden="true" />
+          <figcaption className="absolute inset-x-0 bottom-0 p-4 text-[13px] font-semibold leading-snug text-white">
+            {label}
+          </figcaption>
+        </>
+      )}
+    </figure>
+  );
+}
 
 export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-surface pt-28 pb-12 md:pt-32 md:pb-16">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_85%_-5%,rgba(226,88,14,0.10),transparent_60%)]" />
-        <Container className="relative z-10">
-          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.88fr)_minmax(500px,1.12fr)] lg:gap-8 xl:gap-14">
-            <Reveal immediate className="max-w-3xl">
-              <Eyebrow>About ScotiTech</Eyebrow>
-              <h1 className="t-display mt-3">
-                A UK-registered technology company building for teams worldwide.
-              </h1>
-              <p className="t-lead mt-5 max-w-2xl">
-                ScotiTech Solutions Limited is a product-led company founded in
-                Scotland. We build privacy-conscious products, platforms, AI
-                capabilities, and delivery solutions with clearer deployment,
-                rollout, and operational control at the centre.
+      <section className="bg-surface-muted pb-16 pt-12 md:pb-24 md:pt-20">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
+            <div>
+              <p className="t-eyebrow reveal-now">About ScotiTech</p>
+              <h1 className="t-display reveal-now mt-4">The company behind Vamiq and AXOS.</h1>
+              <p className="t-lead reveal-now mt-6 max-w-xl">
+                ScotiTech Solutions Limited is a UK software company, registered in Scotland and run
+                from Eurocentral, Motherwell. We make Vamiq (formerly AppDeploy), our flagship, along
+                with AXOS and ClarityPath, and we work with teams worldwide.
               </p>
-            </Reveal>
-
-            <Reveal immediate delay={0.12}>
-              <OfficeCollage />
-            </Reveal>
+            </div>
+            <div className="reveal-now grid h-[420px] grid-cols-[1.35fr_1fr] grid-rows-2 gap-3 sm:h-[480px]">
+              <Tile
+                className="row-span-2"
+                src={recognition[0].image.src}
+                srcSet={`${recognition[0].image.srcSmall} 800w, ${recognition[0].image.src} 1600w`}
+                sizes="(min-width: 1024px) 30vw, 60vw"
+                alt={recognition[0].image.alt}
+                width={1600}
+                height={1200}
+                label="UK StartUp Awards 2026, Scotland regional final"
+              />
+              <Tile
+                src="/images/company/office-maxim-1-exterior.webp"
+                alt="Maxim 1 at Eurocentral, Motherwell, where ScotiTech works"
+                width={480}
+                height={270}
+                label="Maxim 1, Eurocentral"
+              />
+              <Tile
+                src="/images/company/office-meeting-room.webp"
+                alt="A meeting room at ScotiTech's Eurocentral office"
+                width={702}
+                height={468}
+              />
+            </div>
           </div>
+
+          <dl className="reveal-now mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-hairline pt-10 md:grid-cols-4">
+            {companyFacts.map((f) => (
+              <div key={f.label}>
+                <dt className="text-[13px] text-muted">{f.label}</dt>
+                <dd className="mt-1 text-[18px] font-semibold text-strong">{f.value}</dd>
+              </div>
+            ))}
+          </dl>
         </Container>
       </section>
 
-      {/* Facts */}
-      <Section surface="muted" spacing="md">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {facts.map((f, i) => {
-            const Icon = f.icon;
-            return (
-              <Reveal key={f.value} delay={i * 0.06}>
-                <div className="h-full rounded-xl border border-hairline bg-surface p-6 transition-shadow duration-300 hover:shadow-md">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand-strong">
-                    <Icon size={18} />
-                  </span>
-                  <p className="mt-5 font-karla text-lg font-bold text-strong">{f.value}</p>
-                  <p className="mt-1 font-karla text-xs uppercase tracking-[0.12em] text-muted">{f.label}</p>
-                </div>
-              </Reveal>
-            );
-          })}
-        </div>
-      </Section>
-
-      {/* Mission / story */}
-      <Section surface="base" spacing="lg">
-        <div className="grid gap-12 lg:grid-cols-[40%_60%] lg:gap-16">
+      {/* Story */}
+      <Section surface="base" spacing="lg" className="border-y border-hairline">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
           <Reveal>
-            <Eyebrow>Why we exist</Eyebrow>
+            <p className="t-eyebrow">Why we exist</p>
             <h2 className="t-h1 mt-3">Practical control, not platform sprawl.</h2>
           </Reveal>
-          <Reveal delay={0.08} className="space-y-5">
+          <Reveal className="space-y-5">
             <p className="t-lead">
-              Most teams don't need another sprawling platform. They need a few
-              focused tools that do one job well — and give them real control over
-              how software is deployed and where their data lives.
+              Most teams do not need another sprawling platform. They need a few focused tools that do
+              one job well, and that leave them in charge of how software is rolled out and where their
+              data lives.
             </p>
             <p className="t-body">
-              That's the principle behind our portfolio. Vamiq, our flagship, is a
-              branded app store for your private apps, and Apple device management
-              that installs them on iPhone, iPad and Mac, with build checks before
-              each release. AXOS brings everyday team
-              operations into one private, self-hostable environment with AI built
-              in. ClarityPath supports structured, sensitive decision journeys.
+              That is the idea behind everything we make. Vamiq manages a company&apos;s iPhones, iPads
+              and Macs and gives its people their own branded app store, with each release checked
+              before it reaches a device. AXOS brings mail, files, chat, video and tasks into one private
+              workspace, with governed AI built in, on the organisation&apos;s own servers. ClarityPath
+              brings structure to life&apos;s biggest decisions.
             </p>
             <p className="t-body">
-              We're UK-registered and led from Scotland, with a distributed team
-              and customers worldwide — combining product direction, engineering,
-              infrastructure, AI, and digital delivery around the real operational
-              problems our clients face.
+              We are founder-led and close to our customers. The people who build the products are the
+              people you talk to, from the first call to the day you go live.
             </p>
-            <p className="t-body">
-              ScotiTech is bootstrapped, founder-led, and shipping. Vamiq (formerly
-              AppDeploy) is live in production, with two active customer workspaces, 450+ apps
-              installed and 300+ devices reached. AXOS is in private evaluation
-              with enterprise teams. We are actively engaging with UK innovation
-              grants and seed funding routes as we scale the platform from
-              founder-led delivery toward a wider commercial footprint.
-            </p>
-            <div className="pt-2">
-              <Button asChild variant="outline">
-                <Link href="/products">
-                  Explore our products
-                  <ArrowRight size={16} />
-                </Link>
-              </Button>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 pt-2">
+              <Link href="/products" className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand-strong hover:text-brand">
+                Explore our products
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+              <Link href="/#services" className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand-strong hover:text-brand">
+                See our services
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
             </div>
           </Reveal>
         </div>
       </Section>
 
-      {/* Leadership + clients (system-aligned existing components) */}
+      <FounderSection />
       <LeadershipTeam />
-      <ClientLogoStrip />
 
-      {/* CTA */}
-      <section className="bg-surface py-16 md:py-24">
-        <Container>
-          <Reveal>
-            <div className="relative overflow-hidden rounded-xl bg-ink px-7 py-12 text-center md:px-12 md:py-14">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(226,88,14,0.25),transparent_60%)]" />
-              <div className="relative z-10 mx-auto max-w-2xl">
-                <h2 className="t-h1 text-on-ink">Let's build something credible together.</h2>
-                <p className="mt-4 font-karla text-lg text-on-ink-muted">
-                  Whether you're evaluating our products or exploring a
-                  partnership, we'd be glad to talk.
-                </p>
-                <div className="mt-8 flex flex-wrap justify-center gap-3">
-                  <Button asChild size="lg" variant="onInkSolid">
-                    <Link href="/contact">
-                      Get in touch
-                      <ArrowRight size={17} />
-                    </Link>
-                  </Button>
-                  <Button asChild size="lg" variant="onInk">
-                    <Link href="/products">View products</Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
+      {/* Recognition */}
+      <Section surface="muted" spacing="lg">
+        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+          <Reveal className="max-w-2xl">
+            <p className="t-eyebrow">Recognition</p>
+            <h2 className="t-h1 mt-3">Recognised for what we build.</h2>
           </Reveal>
-        </Container>
-      </section>
+          <Link href="/media" className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand-strong hover:text-brand">
+            Media and awards
+            <ArrowRight size={16} aria-hidden="true" />
+          </Link>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {recognition.map((r) => (
+            <Reveal key={r.title}>
+              <figure className="relative overflow-hidden rounded-xl bg-grade shadow-card">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={r.image.src}
+                  srcSet={r.image.srcSmall !== r.image.src ? `${r.image.srcSmall} 800w, ${r.image.src} 1600w` : undefined}
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  alt={r.image.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-[4/3] w-full object-cover object-top"
+                />
+                <span className="photo-tint absolute inset-0" aria-hidden="true" />
+                <span className="photo-grade absolute inset-0" aria-hidden="true" />
+                <figcaption className="absolute inset-x-0 bottom-0 p-6">
+                  <span className="block text-[1.2rem] font-semibold text-white">{r.title}</span>
+                  <span className="mt-1 block text-[15px] text-white/80">{r.detail}</span>
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      <ContactSection />
     </>
   );
 }

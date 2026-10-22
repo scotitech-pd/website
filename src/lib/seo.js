@@ -14,6 +14,57 @@ export const siteUrl = (path = "/") => new URL(path, SITE_URL).toString();
 
 export const canonical = (path) => ({ canonical: siteUrl(path) });
 
+export const SITE_DESCRIPTION =
+  "ScotiTech makes Vamiq, Apple device management with a private app store for your company's own apps, and AXOS, a private AI workspace that runs on your own servers.";
+
+/**
+ * Share cards are real .jpg files in /public/og (rendered from
+ * scripts/og-cards.html), so every platform receives a proper image
+ * content type. The old generated cards were served as octet-stream.
+ */
+export const ogImage = (file, alt) => ({
+  url: `/og/${file}`,
+  width: 1200,
+  height: 630,
+  alt,
+  type: "image/jpeg",
+});
+
+export const DEFAULT_OG_IMAGE = ogImage(
+  "scotitech-home.jpg",
+  "ScotiTech Solutions, the company behind Vamiq"
+);
+
+/**
+ * Per-page metadata with a canonical URL, Open Graph and X cards that always
+ * carry an image. A page that sets `openGraph` replaces the root's, so pages
+ * should build their metadata here rather than by hand.
+ */
+export function pageMetadata({ title, description, path, image = DEFAULT_OG_IMAGE, keywords, absoluteTitle = false }) {
+  const shareTitle = absoluteTitle ? title : `${title} | ScotiTech`;
+  return {
+    title: absoluteTitle ? { absolute: title } : title,
+    description,
+    ...(keywords ? { keywords } : {}),
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website",
+      siteName: SITE_NAME,
+      locale: "en_GB",
+      title: shareTitle,
+      description,
+      url: path,
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: shareTitle,
+      description,
+      images: [image.url],
+    },
+  };
+}
+
 /**
  * SoftwareApplication / Product schema generated from products.js entries.
  * Renders pricing offers when `product.pricing.plans` is present.

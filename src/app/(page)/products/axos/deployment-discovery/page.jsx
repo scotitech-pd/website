@@ -9,21 +9,14 @@ import {
 } from "lucide-react";
 import AxosDeploymentDiscovery from "@/components/products/axos/AxosDeploymentDiscovery";
 import { meetingLinks } from "@/lib/scheduling";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "AXOS Rollout Review",
+export const metadata = pageMetadata({
+  title: "Plan an AXOS rollout",
   description:
-    "Request an AXOS rollout review for secure workspace deployment, controlled AI use cases, identity planning, data sources, and on-premises readiness.",
-  alternates: { canonical: "/products/axos/deployment-discovery" },
-  openGraph: {
-    title: "AXOS Rollout Review",
-    description:
-      "Request an AXOS rollout review for deployment, identity, data, and on-premises readiness.",
-    url: "/products/axos/deployment-discovery",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image" },
-};
+    "Request an AXOS rollout review: secure workspace deployment, controlled AI use cases, identity planning, data sources and on-premises readiness.",
+  path: "/products/axos/deployment-discovery",
+});
 
 const outcomeCards = [
   {
@@ -48,10 +41,9 @@ const outcomeCards = [
 
 export default function AxosDeploymentDiscoveryPage() {
   return (
-    <main className="bg-[#f5f3ee] text-[#111827]">
+    <div className="bg-surface-muted text-strong">
       <section className="relative overflow-hidden py-14 sm:py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(15,118,110,0.18),transparent_30%),radial-gradient(circle_at_85%_12%,rgba(37,99,235,0.10),transparent_28%)]" />
-        <div className="relative z-10 mx-auto max-w-8xl px-5 min-[500px]:px-10 md:px-20">
+                <div className="relative z-10 mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <Link
             href="/products/axos"
             className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-slate-700 transition hover:text-slate-950"
@@ -60,15 +52,15 @@ export default function AxosDeploymentDiscoveryPage() {
             Back to AXOS
           </Link>
 
-          <div className="grid gap-10 xl:grid-cols-[56%_44%] xl:items-end">
+          <div className="grid gap-10 xl:grid-cols-[minmax(0,56fr)_minmax(0,44fr)] xl:items-end">
             <div>
-              <p className="mb-4 inline-flex rounded-full border border-[#0F766E]/20 bg-[#ECFDF5] px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#0F766E]">
+              <p className="t-eyebrow mb-4">
                 AXOS rollout review
               </p>
-              <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-[#111827] sm:text-5xl lg:text-6xl">
+              <h1 className="t-display max-w-4xl">
                 Design a secure AI workspace rollout with the right controls from day one.
               </h1>
-              <p className="mt-6 max-w-3xl font-lora text-lg leading-8 text-slate-700 md:text-xl">
+              <p className="t-lead mt-6 max-w-3xl">
                 This page helps your team request a focused AXOS review. Share
                 the business workflow, deployment preference, identity setup,
                 and AI use case so the first conversation is specific and useful.
@@ -79,22 +71,22 @@ export default function AxosDeploymentDiscoveryPage() {
                   href={meetingLinks.axos}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#100E0C] px-7 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(16,14,12,0.18)] transition hover:bg-[#1C1714]"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-brand px-6 text-[15px] font-semibold text-white transition hover:bg-brand-strong"
                 >
                   Book AXOS session
                   <ArrowRight className="size-4" />
                 </a>
                 <a
                   href="#axos-deployment-discovery"
-                  className="inline-flex items-center justify-center rounded-full border border-[#cfd7cf] bg-white/80 px-7 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-white"
+                  className="inline-flex h-12 items-center justify-center rounded-lg border border-hairline-strong bg-surface px-6 text-[15px] font-semibold text-strong transition hover:bg-white"
                 >
                   Complete rollout brief
                 </a>
               </div>
             </div>
 
-            <div className="rounded-[1.5rem] border border-[#111827]/10 bg-white p-5 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-6">
-              <div className="mb-5 rounded-[1.15rem] bg-[#100E0C] p-5 text-white">
+            <div className="rounded-xl border border-hairline bg-surface p-5 shadow-card sm:p-6">
+              <div className="mb-5 rounded-lg bg-ink p-5 text-white">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#5EEAD4]">
                   After you submit
                 </p>
@@ -111,7 +103,7 @@ export default function AxosDeploymentDiscoveryPage() {
                 {outcomeCards.map((item) => (
                   <div
                     key={item.title}
-                    className="flex gap-4 rounded-2xl border border-slate-200 bg-[#f8fafc] p-4"
+                    className="flex gap-4 rounded-lg border border-hairline bg-surface-muted p-4"
                   >
                     <div className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-[#ECFDF5] text-[#0F766E]">
                       <item.icon className="size-5" />
@@ -140,6 +132,6 @@ export default function AxosDeploymentDiscoveryPage() {
       </section>
 
       <AxosDeploymentDiscovery />
-    </main>
+    </div>
   );
 }

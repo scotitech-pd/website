@@ -1,4 +1,5 @@
 import { meetingLinks } from "@/lib/scheduling";
+import { vamiqMedia } from "@/lib/company";
 
 /**
  * Product configuration consumed by the shared ProductTemplate.
@@ -45,18 +46,40 @@ export const products = {
     },
     hero: {
       media: {
-        type: "image",
-        src: "/images/products/appdeploy/claritypath-portal.webp",
-        alt: "Vamiq branded app store for an organisation, listing its approved private apps",
-        presentation: "showcase",
-        variant: "vamiq",
+        type: "loop",
+        src: vamiqMedia.loop.src,
+        poster: vamiqMedia.poster.src,
+        width: vamiqMedia.loop.width,
+        height: vamiqMedia.loop.height,
+        alt: vamiqMedia.poster.alt,
+        phone: vamiqMedia.phone,
+        caption: "Sample workspace",
       },
     },
-    metrics: [
-      { value: "450+", label: "Apps installed" },
-      { value: "99.9%", label: "Availability SLO" },
-      { value: "~14 days", label: "Typical enterprise rollout" },
-      { value: "Apple MDM Vendor", label: "Verified enterprise distribution partner", raw: true },
+    film: true,
+    photoCards: [
+      {
+        photo: "iphone-at-work",
+        eyebrow: "For your people",
+        title: "Private app distribution",
+        body: "Your own branded app store for your company's private and internal apps.",
+        href: "https://vamiq.app/private-app-distribution",
+      },
+      {
+        photo: "device-macbook",
+        eyebrow: "For your devices",
+        title: "Device management",
+        body: "Enrol company iPhones, iPads and Macs, install their apps, and manage their settings and security.",
+        href: "https://vamiq.app/device-management",
+        position: "55% 50%",
+      },
+      {
+        photo: "code-on-mac",
+        eyebrow: "For your releases",
+        title: "Release controls",
+        body: "Check each new build before it reaches a device, and keep a record of what was released.",
+        href: "https://vamiq.app/release-controls",
+      },
     ],
     problem: {
       title: "Private apps fall between the App Store and a full MDM suite.",
@@ -97,7 +120,7 @@ export const products = {
         {
           icon: "TrendingUp",
           title: "Startups setting up company devices",
-          body: "Device records, a daily compliance history and an audit log you can hand to an auditor for SOC 2 or ISO 27001 work. Free for up to 5 devices. Vamiq itself is not yet certified.",
+          body: "Device records, a daily compliance history and an audit log you can hand to an auditor for your own SOC 2 or ISO 27001 work. Free for up to 5 devices.",
         },
         {
           icon: "BriefcaseBusiness",
@@ -129,21 +152,14 @@ export const products = {
         { label: "Live service status", href: "https://vamiq.app/status" },
       ],
     },
-    proof: {
-      quote:
-        "We replaced three different manual processes with a single AppDeploy workspace. Our IT team now ships updates to 40+ employees faster, and install-related support is much easier to manage.",
-      name: "Rohit Ahlawat",
-      role: "Director, Aviskaar Enterprises (customer since AppDeploy)",
-      img: "/images/solution/rohit.jpeg",
-    },
     security: {
-      title: "Security on every plan, stated honestly",
+      title: "Security on every plan, Free included",
       points: [
-        "Customer data hosted in Glasgow, UK, on servers ScotiTech operates.",
+        "Customer data is hosted in the UK and backed up daily.",
         "Traffic over HTTPS; Apple Business credentials, integration secrets and push-certificate keys encrypted at rest with AES-256-GCM.",
         "Every signed-in request checked on the server, and queries on customer data filtered to the user’s own workspace.",
         "An audit log on every plan, Free included: app changes, roles, Apple Business sync and admin actions.",
-        "Not yet certified to SOC 2 or ISO 27001. Device records, a daily compliance history and the audit log are available to review today.",
+        "Device records, a daily compliance history and the audit log are ready for your auditor or security team to review.",
       ],
     },
     pricing: {
@@ -211,19 +227,6 @@ export const products = {
         },
       ],
     },
-    caseStudy: {
-      eyebrow: "ClarityPath case study",
-      title: "An App Store setback became a clearer, controlled route to users.",
-      body: "ClarityPath’s public App Store review exposed a familiar problem for specialised products: a useful app can still struggle to explain its distinction inside a crowded category. Rather than reduce the product to another public listing, Vamiq gave it a branded route where its purpose, access model and installation journey can be understood before a user begins.",
-      points: [
-        "The review challenge made the product-positioning and distribution problem visible early.",
-        "Vamiq presents ClarityPath inside an organisation-branded app store with clear platform and access context.",
-        "Direct sharing and QR access give approved teams one consistent route instead of fragmented links and instructions.",
-      ],
-      image: "/images/products/appdeploy/1.jpeg",
-      imageAlt: "ClarityPath App Store review challenge documented during the product launch journey",
-      link: { label: "Explore ClarityPath", href: "/products/claritypath" },
-    },
     faqs: [
       { q: "What happened to AppDeploy?", a: "In October 2026 AppDeploy became Vamiq. The product, the team and the company behind it, ScotiTech Solutions Limited, are unchanged. Existing accounts, enrolled devices, apps, integrations and billing continue without any action." },
       { q: "Does Vamiq replace Apple Business?", a: "No. Apple Business stays underneath and remains the source of your apps, licences and device assignments. Vamiq is the operational layer on top: the branded app store, device management and release controls." },
@@ -243,7 +246,7 @@ export const products = {
     slug: "axos",
     name: "AXOS",
     accent: "axos",
-    logo: "/images/brand/axos-icon.png",
+    logo: "/images/brand/axos-icon-256.webp",
     externalUrl: "https://axos.scotitech.com",
     externalLabel: "Request AXOS access",
     externalNote: "Enterprise access starts at",
@@ -251,22 +254,58 @@ export const products = {
     eyebrow: "Private AI workspace",
     tagline: "Your enterprise AI platform, self-hosted.",
     description:
-      "AXOS is a completed core platform currently available for private enterprise evaluation — mail, drive, calendar, chat, video, tasks, enterprise knowledge management, and private AI built in. Organisations share their business profile first, then receive private enterprise evaluation access before adopting AXOS for employees.",
+      "Mail, files, calendar, chat, video and tasks in one workspace, with private AI built in and enterprise knowledge search across it all. AXOS runs inside your own environment, so your data never leaves it. Enterprises start with a guided evaluation, then roll it out to their people.",
     hero: {
       media: {
-        type: "image",
-        src: "/images/products/axos/command-center-dashboard.webp",
-        alt: "AXOS Command Center dashboard showing governed AI, mail, calendar, tasks and team operations",
-        presentation: "showcase",
-        variant: "axos",
+        type: "window",
+        src: "/images/products/axos/command-center-dashboard-1200.webp",
+        width: 1200,
+        height: 637,
+        chrome: "axos.scotitech.com",
+        alt: "AXOS Command Centre: governed AI, mail, calendar, tasks and team operations in one view",
+        caption: "AXOS Command Centre",
       },
+    },
+    gallery: {
+      eyebrow: "Inside AXOS",
+      title: "One private workspace for your whole team.",
+      body: "Real screens from AXOS. Everything runs in your environment, under your access rules.",
+      items: [
+        {
+          src: "/images/products/axos/command-center-dashboard-1200.webp",
+          width: 1200,
+          height: 637,
+          chrome: "axos.scotitech.com",
+          title: "Command Centre",
+          caption: "Your day at a glance: priority mail, focus meetings, work items and a morning brief from governed AI.",
+          alt: "AXOS Command Centre with priority queues, meetings and a morning brief",
+        },
+        {
+          src: "/images/products/axos/workspace-dashboard-1200.webp",
+          width: 1200,
+          height: 772,
+          chrome: "axos.scotitech.com",
+          title: "Workspace",
+          caption: "Mail, drive, calendar, chat, video, tasks and contacts in one place, with recent activity and today's schedule.",
+          alt: "AXOS workspace dashboard with mail, calendar, tasks and recent activity",
+        },
+        {
+          src: "/images/products/axos/sign-in-1200.webp",
+          width: 1200,
+          height: 770,
+          chrome: "axos.scotitech.com",
+          title: "Single sign-on",
+          caption: "Your people sign in with your identity provider over SAML, with biometric sign-in on mobile.",
+          alt: "AXOS sign-in page with single sign-on",
+        },
+      ],
     },
     problem: {
       title: "Most digital workplace solutions put your data in someone else's cloud.",
       points: [
         "Mail, files, chat, and tasks scattered across external SaaS you don't control.",
         "AI features that quietly send your work to third-party models.",
-        "Many Google Workspace alternatives or Microsoft 365 alternatives still leave knowledge, search, and governance split across tools.",
+        "Many collaboration suites still leave knowledge, search, and governance split across tools.",
       ],
     },
     solution: {
@@ -398,7 +437,7 @@ export const products = {
     faqs: [
       { q: "Is AXOS really self-hosted?", a: "Yes. AXOS can run on your own infrastructure or private cloud, with zero external calls and complete data sovereignty for teams that need self-hosted AI or on-premise AI." },
       { q: "What's included in the AI workspace?", a: "Mail, drive, calendar, chat, video, and tasks, plus a governance-first AI agent built directly into the digital workspace platform." },
-      { q: "Is AXOS a Google Workspace or Microsoft 365 alternative?", a: "AXOS is not positioned as a free or lightweight replacement for every team. It is an enterprise-only Google Workspace alternative or Microsoft 365 alternative for organisations that need private hosting, secure collaboration, and stronger data control." },
+      { q: "Can AXOS replace our current office suite?", a: "AXOS is an enterprise workspace for organisations that need private hosting, secure collaboration and stronger data control: mail, files, chat, video and tasks in one place, with governed AI built in." },
       { q: "Does AXOS support enterprise knowledge management?", a: "Yes. AXOS brings files, communication, tasks, and governed AI into one workspace so teams can build controlled enterprise knowledge management and enterprise search AI workflows around their own data." },
       { q: "How do people sign in?", a: "SSO (SAML) on the web, with biometric login available on mobile." },
       { q: "Can we test AXOS before adopting it?", a: "Yes. AXOS is enterprise-only, so we first review your business information and intended use case. Suitable organisations receive private enterprise evaluation access to evaluate AXOS before deciding on employee adoption." },
@@ -440,23 +479,60 @@ export const products = {
     slug: "claritypath",
     name: "ClarityPath",
     accent: "claritypath",
-    logo: "/images/brand/claritypath-logo.png",
+    logo: "/images/brand/claritypath-logo-256.webp",
     externalUrl: "https://vamiq.app/w/scotitech-solutions",
-    externalLabel: "Open in AppDeploy",
-    externalNote: "Access it in the AppDeploy portal at",
-    status: { variant: "supporting", label: "Accessed via AppDeploy" },
+    externalLabel: "Open in Vamiq",
+    externalNote: "Access it in the Vamiq portal at",
+    status: { variant: "supporting", label: "Accessed via Vamiq" },
     eyebrow: "Guided decision support",
     tagline: "Daily strategic focus for life's biggest decisions.",
     description:
-      "A mobile decision-support companion that turns considered, high-stakes choices — relocation, career, property, and finances — into a clear daily focus and a structured plan. Accessed through the AppDeploy portal.",
+      "ClarityPath turns big, considered decisions such as relocation, career, property and finances into a clear daily focus and a structured plan. Your people open it from your organisation's own app store in Vamiq.",
     hero: {
       media: {
         type: "phone",
         screens: [
-          "/images/products/claritypath/app-insights.png",
-          "/images/products/claritypath/app-focus.png",
+          "/images/products/claritypath/app-insights-600.webp",
+          "/images/products/claritypath/app-focus-600.webp",
         ],
         alt: "ClarityPath app showing deeper insights and today's strategic focus",
+      },
+    },
+    gallery: {
+      eyebrow: "Inside ClarityPath",
+      title: "A calm daily focus, and the bigger picture.",
+      frame: "phone",
+      items: [
+        {
+          src: "/images/products/claritypath/app-focus-600.webp",
+          width: 600,
+          height: 1298,
+          title: "Today's focus",
+          caption: "A short daily read across career, finances and planning, so the day starts with one clear priority.",
+          alt: "ClarityPath on iPhone showing today's strategic focus",
+        },
+        {
+          src: "/images/products/claritypath/app-insights-600.webp",
+          width: 600,
+          height: 1298,
+          title: "Deeper insights",
+          caption: "Guided areas for relocation, career, property and financial growth, with a month-by-month roadmap.",
+          alt: "ClarityPath on iPhone showing the deeper insights screen",
+        },
+      ],
+    },
+    spotlight: {
+      eyebrow: "Delivered through Vamiq",
+      title: "Your team finds it in your own app store.",
+      body: "ClarityPath is published in your organisation's branded app store on Vamiq. People open the portal, or scan its QR code on their phone, and install it from there.",
+      link: { label: "See how Vamiq works", href: "/products/vamiq" },
+      image: {
+        src: "/images/products/appdeploy/claritypath-portal.webp",
+        width: 1357,
+        height: 772,
+        chrome: "vamiq.app",
+        alt: "ScotiTech's organisation app store on Vamiq, listing ClarityPath",
+        caption: "ScotiTech's own app store on Vamiq",
       },
     },
     problem: {
@@ -484,8 +560,8 @@ export const products = {
       { icon: "Calendar", title: "Yearly roadmap", body: "A month-by-month roadmap to guide the year ahead." },
     ],
     cta: {
-      title: "See ClarityPath in the AppDeploy portal.",
-      body: "ClarityPath is delivered through AppDeploy. Talk to us about access for your team.",
+      title: "See ClarityPath in the Vamiq portal.",
+      body: "ClarityPath is delivered through Vamiq. Talk to us about access for your team.",
       primary: "Talk to our team",
       secondary: { label: "Book a call", href: "/contact" },
     },

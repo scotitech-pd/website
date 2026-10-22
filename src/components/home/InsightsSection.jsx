@@ -1,123 +1,68 @@
-"use client";
-
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
-import Eyebrow from "@/components/ui/Eyebrow";
-import { insights, featuredInsight } from "@/lib/insights";
+import { formatInsightDate, insightImage, insights } from "@/lib/insights";
+
+/* Briefings shown on the home page, picked for a general business reader. */
+const HOME_PICKS = [
+  "private-apple-app-rollout-needs-more-than-approval",
+  "wwdc26-app-store-updates-mean-for-appdeploy-rollout",
+  "uk-ai-governance-gap-business-policy",
+];
 
 export default function InsightsSection() {
-  const others = insights.filter((i) => i.slug !== featuredInsight.slug).slice(0, 3);
+  const picks = HOME_PICKS.map((slug) => insights.find((i) => i.slug === slug)).filter(Boolean);
+  const list = picks.length === 3 ? picks : insights.slice(0, 3);
 
   return (
-    <Section id="insights" surface="base" spacing="lg">
+    <Section id="insights" surface="base" spacing="lg" className="border-y border-hairline">
       <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
         <Reveal className="max-w-2xl">
-          <Eyebrow>Insights</Eyebrow>
-          <h2 className="t-h1 mt-3">Briefings on the shifts that affect rollout.</h2>
-          <p className="t-lead mt-5">
-            Practical, source-backed analysis on the platform and policy changes
-            shaping how teams deploy and operate.
-          </p>
+          <p className="t-eyebrow">Insights</p>
+          <h2 className="t-h1 mt-3">Latest insights.</h2>
         </Reveal>
-        <Reveal delay={0.1}>
-          <Link
-            href="/insights"
-            className="inline-flex items-center gap-1.5 font-karla text-sm font-semibold text-brand-strong hover:text-brand"
-          >
-            Read all insights
-            <ArrowRight size={16} />
-          </Link>
-        </Reveal>
+        <Link
+          href="/insights"
+          className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand-strong hover:text-brand"
+        >
+          All insights
+          <ArrowRight size={16} aria-hidden="true" />
+        </Link>
       </div>
 
-      <Reveal delay={0.05}>
-        <Link
-          href={`/insights/${featuredInsight.slug}`}
-          className="group mt-10 grid overflow-hidden rounded-xl border border-hairline bg-surface transition-shadow duration-300 hover:shadow-md lg:grid-cols-2"
-        >
-          <div
-            className={`relative aspect-[16/10] overflow-hidden lg:aspect-auto ${
-              featuredInsight.imageFit === "contain"
-                ? "bg-[#0b1422]"
-                : "bg-surface-sunken"
-            }`}
-          >
-            <Image
-              src={featuredInsight.image}
-              alt={featuredInsight.title}
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className={`${
-                featuredInsight.imageFit === "contain"
-                  ? "object-contain"
-                  : "object-cover"
-              } transition-transform duration-500 group-hover:scale-[1.02]`}
-            />
-          </div>
-          <div className="flex flex-col p-6 md:p-8">
-            <div className="flex items-center justify-between gap-3">
-              <span className="inline-flex rounded-full px-2.5 py-0.5 font-karla text-[10.5px] font-semibold uppercase tracking-[0.18em] text-brand-strong ring-1 ring-inset ring-brand-soft bg-brand-soft/40">
-                {featuredInsight.category}
-              </span>
-              <span className="inline-flex items-center gap-1.5 font-karla text-[11.5px] uppercase tracking-[0.12em] text-muted">
-                <Clock size={12} />
-                {featuredInsight.readTime}
-              </span>
-            </div>
-            <h3 className="mt-5 font-karla text-2xl font-bold leading-snug text-strong">
-              {featuredInsight.title}
-            </h3>
-            <p className="mt-3 font-lora text-[15px] leading-7 text-body flex-1">
-              {featuredInsight.summary}
-            </p>
-            <div className="mt-6 flex items-center justify-between border-t border-hairline pt-4">
-              <span className="font-karla text-xs uppercase tracking-[0.12em] text-muted">
-                {featuredInsight.displayDate}
-              </span>
-              <span className="inline-flex items-center gap-1.5 font-karla text-xs font-semibold uppercase tracking-[0.14em] text-brand-strong">
-                Read briefing
-                <ArrowRight
-                  size={14}
-                  className="transition-transform group-hover:translate-x-0.5"
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
+        {list.map((item, i) => (
+          <Reveal key={item.slug} delay={i * 0.05}>
+            <Link
+              href={`/insights/${item.slug}`}
+              className="group flex h-full flex-col overflow-hidden rounded-xl border border-hairline bg-surface transition-shadow hover:shadow-card"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden bg-surface-sunken">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={insightImage(item.image).small}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
-              </span>
-            </div>
-          </div>
-        </Link>
-      </Reveal>
-
-      {others.length > 0 && (
-        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {others.map((post, i) => (
-            <Reveal key={post.slug} delay={i * 0.07}>
-              <Link
-                href={`/insights/${post.slug}`}
-                className="group flex h-full flex-col rounded-xl border border-hairline bg-surface p-6 transition-shadow duration-300 hover:shadow-md"
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <span className="inline-flex rounded-full px-2.5 py-0.5 font-karla text-[10.5px] font-semibold uppercase tracking-[0.18em] text-brand-strong ring-1 ring-inset ring-brand-soft bg-brand-soft/40">
-                    {post.category}
-                  </span>
-                </div>
-                <h4 className="mt-4 font-karla text-lg font-bold leading-snug text-strong">
-                  {post.title}
-                </h4>
-                <p className="mt-2 font-lora text-[14px] leading-6 text-body flex-1">
-                  {post.summary}
+                <span className="photo-tint absolute inset-0" aria-hidden="true" />
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-brand-strong">
+                  {item.category}
                 </p>
-                <div className="mt-5 border-t border-hairline pt-3">
-                  <span className="font-karla text-[11.5px] uppercase tracking-[0.12em] text-muted">
-                    {post.displayDate}
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-      )}
+                <h3 className="mt-3 text-[1.1rem] font-semibold leading-snug text-strong">{item.title}</h3>
+                <p className="mt-auto pt-5 text-[13px] text-muted">
+                  {formatInsightDate(item.date)}
+                  {item.readTime ? ` · ${item.readTime}` : ""}
+                </p>
+              </div>
+            </Link>
+          </Reveal>
+        ))}
+      </div>
     </Section>
   );
 }

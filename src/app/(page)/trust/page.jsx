@@ -14,20 +14,14 @@ import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/button";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Trust & Security",
+export const metadata = pageMetadata({
+  title: "Trust, security and privacy",
   description:
-    "ScotiTech Solutions Limited company identity, certification status, responsible disclosure policy, and privacy law coverage across UK GDPR, India's DPDP Act and US state privacy laws.",
-  alternates: { canonical: "/trust" },
-  openGraph: {
-    title: "Trust & Security | ScotiTech Solutions",
-    description:
-      "Company identity, certification status, responsible disclosure, and privacy law coverage. Product-level controls live in each product's Trust Centre.",
-    url: "/trust",
-    type: "website",
-  },
-};
+    "ScotiTech Solutions Limited company details, security, responsible disclosure and privacy law coverage across UK GDPR, India’s DPDP Act and US state privacy laws.",
+  path: "/trust",
+});
 
 
 const companyFacts = [
@@ -146,27 +140,26 @@ const reviewMaterials = [
 export default function TrustPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-ink pb-16 pt-28 text-on-ink md:pb-24 md:pt-36">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_85%_0%,rgba(226,88,14,0.22),transparent_65%)]" />
+      <section className="relative overflow-hidden bg-surface-muted pb-16 pt-12 md:pb-24 md:pt-20">
         <Container className="relative z-10">
           <Reveal immediate className="max-w-4xl">
-            <Eyebrow onInk>Trust, privacy &amp; delivery</Eyebrow>
-            <h1 className="mt-4 max-w-3xl font-geist-sans text-[clamp(2.6rem,1.7rem+3.8vw,4.8rem)] font-semibold leading-[1.02] tracking-[-0.035em] text-on-ink">
+            <Eyebrow>Trust, privacy &amp; delivery</Eyebrow>
+            <h1 className="t-display mt-4 max-w-3xl">
               Confidence built into every product relationship.
             </h1>
-            <p className="mt-6 max-w-2xl font-karla text-lg leading-8 text-on-ink-muted">
+            <p className="t-lead mt-6 max-w-2xl">
               See how we approach company accountability, privacy, product
               security, deployment, and support from first evaluation through
               ongoing use.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Button asChild size="lg" variant="onInkSolid">
+              <Button asChild size="lg">
                 <Link href="/contact">
                   Discuss your requirements
                   <ArrowRight size={17} />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="onInk">
+              <Button asChild size="lg" variant="outline">
                 <Link href="/products">Explore our products</Link>
               </Button>
             </div>
@@ -176,7 +169,7 @@ export default function TrustPage() {
 
       {/* COMPANY */}
       <Section surface="muted" spacing="lg">
-        <div className="grid gap-12 lg:grid-cols-[34%_66%] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,34fr)_minmax(0,66fr)] lg:gap-16">
           <Reveal>
             <Eyebrow>Company</Eyebrow>
             <h2 className="t-h1 mt-3">Who you are contracting with.</h2>
@@ -258,7 +251,7 @@ export default function TrustPage() {
 
       {/* RESPONSIBLE DISCLOSURE */}
       <Section id="disclosure" surface="muted" spacing="lg">
-        <div className="grid gap-12 lg:grid-cols-[38%_62%] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:gap-16">
           <Reveal>
             <Eyebrow>Responsible disclosure</Eyebrow>
             <h2 className="t-h1 mt-3">Report a vulnerability.</h2>
@@ -458,7 +451,7 @@ export default function TrustPage() {
         <Container>
           <Reveal>
             <div className="relative overflow-hidden rounded-2xl bg-ink px-7 py-12 text-on-ink md:px-12 md:py-14">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_70%_at_90%_0%,rgba(226,88,14,0.24),transparent_65%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_70%_at_90%_0%,rgba(15,118,110,0.24),transparent_65%)]" />
               <div className="relative z-10 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
                 <div className="max-w-2xl">
                   <div className="flex items-center gap-2 text-brand">

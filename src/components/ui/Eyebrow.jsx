@@ -8,7 +8,7 @@ export default function Eyebrow({ children, onInk = false, className }) {
   return (
     <p
       className={cn(
-        "font-karla text-[0.8125rem] font-semibold uppercase tracking-[0.16em]",
+        "font-sans text-xs font-semibold uppercase tracking-[0.14em]",
         onInk ? "text-on-ink-muted" : "text-brand-strong",
         className
       )}

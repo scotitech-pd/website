@@ -1,36 +1,45 @@
 import ProductTemplate from "@/components/products/ProductTemplate";
+import JsonLd from "@/components/seo/JsonLd";
 import { getProduct } from "@/lib/products";
+import { ogImage, pageMetadata, siteUrl } from "@/lib/seo";
+import { vamiqMedia } from "@/lib/company";
 
-export const metadata = {
-  title: "Vamiq — Private App Distribution and Apple Device Management",
+export const metadata = pageMetadata({
+  title: "Vamiq: Apple device management and private apps",
   description:
-    "Vamiq (formerly AppDeploy) is a branded app store for your private apps, and Apple device management that installs them on iPhone, iPad and Mac, with build checks before each release.",
-  alternates: { canonical: "/products/vamiq" },
+    "Vamiq (formerly AppDeploy) manages your company's iPhones, iPads and Macs and gives your people a branded app store for your private apps, with build checks before each release.",
+  path: "/products/vamiq",
+  image: ogImage("vamiq.jpg", "Vamiq: your Apple devices and your own apps, managed in one place"),
   keywords: [
     "Vamiq",
     "AppDeploy",
+    "Apple device management",
     "private app distribution",
     "internal iOS app distribution",
-    "Apple device management",
-    "Mac management",
-    "Apple Business integration",
     "branded app store",
+    "Mac management",
+    "Apple Business",
     "release controls",
   ],
-  openGraph: {
-    title: "Vamiq — Private App Distribution and Apple Device Management",
-    description:
-      "A branded app store for your private apps, and Apple device management that installs them on iPhone, iPad and Mac, with build checks before each release.",
-    url: "/products/vamiq",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Vamiq — Private apps on your team’s iPhones, iPads and Macs",
-    description: "A branded app store, Apple device management and release controls in one workspace.",
-  },
+});
+
+const filmJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: vamiqMedia.film.title,
+  description: vamiqMedia.film.description,
+  thumbnailUrl: siteUrl(vamiqMedia.film.poster),
+  contentUrl: vamiqMedia.film.src,
+  uploadDate: vamiqMedia.film.uploadDate,
+  duration: vamiqMedia.film.duration,
+  publisher: { "@id": "https://scotitech.com/#organization" },
 };
 
 export default function VamiqPage() {
-  return <ProductTemplate product={getProduct("vamiq")} />;
+  return (
+    <>
+      <JsonLd data={filmJsonLd} />
+      <ProductTemplate product={getProduct("vamiq")} />
+    </>
+  );
 }
