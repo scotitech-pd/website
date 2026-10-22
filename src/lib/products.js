@@ -442,13 +442,13 @@ export const products = {
     accent: "claritypath",
     logo: "/images/brand/claritypath-logo.png",
     externalUrl: "https://vamiq.app/w/scotitech-solutions",
-    externalLabel: "Open in AppDeploy",
-    externalNote: "Access it in the AppDeploy portal at",
-    status: { variant: "supporting", label: "Accessed via AppDeploy" },
+    externalLabel: "Open in Vamiq",
+    externalNote: "Access it in the Vamiq portal at",
+    status: { variant: "supporting", label: "Accessed via Vamiq" },
     eyebrow: "Guided decision support",
     tagline: "Daily strategic focus for life's biggest decisions.",
     description:
-      "A mobile decision-support companion that turns considered, high-stakes choices — relocation, career, property, and finances — into a clear daily focus and a structured plan. Accessed through the AppDeploy portal.",
+      "A mobile decision-support companion that turns considered, high-stakes choices — relocation, career, property, and finances — into a clear daily focus and a structured plan. Accessed through the Vamiq portal.",
     hero: {
       media: {
         type: "phone",
@@ -484,8 +484,8 @@ export const products = {
       { icon: "Calendar", title: "Yearly roadmap", body: "A month-by-month roadmap to guide the year ahead." },
     ],
     cta: {
-      title: "See ClarityPath in the AppDeploy portal.",
-      body: "ClarityPath is delivered through AppDeploy. Talk to us about access for your team.",
+      title: "See ClarityPath in the Vamiq portal.",
+      body: "ClarityPath is delivered through Vamiq. Talk to us about access for your team.",
       primary: "Talk to our team",
       secondary: { label: "Book a call", href: "/contact" },
     },
