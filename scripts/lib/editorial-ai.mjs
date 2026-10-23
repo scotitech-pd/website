@@ -286,7 +286,7 @@ function defaultRelatedProduct(brief) {
 
   if (brief.product === "AppDeploy") {
     return {
-      href: "/products/appdeploy",
+      href: "/products/vamiq",
       cta: "Explore AppDeploy",
       description:
         "A branded operational layer for internal app access, rollout visibility, and clearer Apple deployment workflows.",

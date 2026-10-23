@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Products: Vamiq, AXOS and ClarityPath",
   description:
-    "ScotiTech products: Vamiq for Apple device management and a private app store, AXOS for a self-hosted AI workspace, and ClarityPath for guided decision support.",
+    "ScotiTech products: Vamiq for Apple device management and a private app store, AXOS for a self-hosted AI workspace, and ClarityPath for decisions.",
   path: "/products",
 });
 

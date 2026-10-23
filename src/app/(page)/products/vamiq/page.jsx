@@ -7,7 +7,7 @@ import { vamiqMedia } from "@/lib/company";
 export const metadata = pageMetadata({
   title: "Vamiq: Apple device management and private apps",
   description:
-    "Vamiq (formerly AppDeploy) manages your company's iPhones, iPads and Macs and gives your people a branded app store for your private apps, with build checks before each release.",
+    "Vamiq (formerly AppDeploy) manages your company's iPhones, iPads and Macs and gives your people a branded app store for your private apps.",
   path: "/products/vamiq",
   image: ogImage("vamiq.jpg", "Vamiq: your Apple devices and your own apps, managed in one place"),
   keywords: [

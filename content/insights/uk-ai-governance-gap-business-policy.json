@@ -5,10 +5,11 @@
   "category": "AI Governance",
   "topic": "UK business AI policy",
   "title": "UK AI governance gap: just 5% of AI-using businesses have a written policy",
+  "seoTitle": "UK AI governance: 5% of AI-using firms have a written policy",
   "summary": "AI adoption is moving faster than operational governance. The UK Business Data Survey 2026 found that 41% of businesses handling digitised data use AI, yet only 17% of AI-using businesses have any policy or guidance. The gap is a warning for every organisation choosing an AI workspace, private AI deployment, or enterprise AI platform: governance has to work inside the product, not only in a policy document.",
-  "seoDescription": "UK government data shows just 5% of AI-using businesses have a written policy. See what AI governance, private AI and enterprise platforms must operationalise.",
+  "seoDescription": "UK government data shows just 5% of AI-using businesses have a written policy. What AI governance, private AI and enterprise platforms must put in place.",
   "date": "2026-08-16",
-  "updated": "2026-08-16",
+  "updated": "2026-10-23",
   "displayDate": "16 August 2026",
   "readTime": "7 min read",
   "sourceName": "UK Business Data Survey 2026 - GOV.UK",
@@ -110,5 +111,11 @@
     "Evaluate AI workspace and enterprise AI platform controls against real permissions, files, and business scenarios.",
     "Require evidence for data processing, external model training, retention, activity logging, and incident response.",
     "Run a time-limited private AI evaluation before expanding access across employees."
+  ],
+  "readNext": [
+    {
+      "label": "AXOS, the self-hosted enterprise AI workspace",
+      "href": "/products/axos"
+    }
   ]
 }

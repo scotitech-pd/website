@@ -30,9 +30,10 @@ export async function generateMetadata({ params }) {
 
   // Long headlines drop the " | ScotiTech" suffix so search results show the
   // whole headline rather than a truncated one.
-  const withSuffix = `${insight.title} | ScotiTech`;
+  const seoTitle = insight.seoTitle || insight.title;
+  const withSuffix = `${seoTitle} | ScotiTech`;
   return {
-    title: withSuffix.length > 60 ? { absolute: insight.title } : insight.title,
+    title: withSuffix.length > 60 ? { absolute: seoTitle } : seoTitle,
     description: insight.seoDescription,
     alternates: {
       canonical: url,
@@ -191,6 +192,19 @@ export default async function InsightArticlePage({ params }) {
                     </section>
                   ))}
                 </div>
+
+                {insight.readNext?.length > 0 && (
+                  <nav aria-label="Read next" className="mt-12 border-t border-hairline pt-8">
+                    <p className="t-eyebrow">Read next</p>
+                    <ul className="mt-4 grid gap-3">
+                      {insight.readNext.map((item) => (
+                        <li key={item.href} className="text-[16px] leading-7 text-body">
+                          <Link href={item.href} className="font-semibold text-brand-strong underline underline-offset-4 hover:text-brand">{item.label}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                )}
 
                 {insight.workedExample && (
                   <section className="mt-14 rounded-xl border border-hairline bg-surface-muted p-6 sm:p-8">

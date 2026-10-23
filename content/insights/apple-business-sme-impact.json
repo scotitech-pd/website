@@ -4,11 +4,11 @@
   "slug": "apple-business-sme-impact",
   "category": "Industry Update",
   "topic": "Apple ecosystem",
-  "title": "Apple Business Manager custom apps need a cleaner rollout model",
+  "title": "Apple Business custom apps need a cleaner rollout model",
   "summary": "For many SMEs, Apple administration has been a patchwork of device setup, app access, employee changes, support routes, and brand details. Apple Business brings those pieces closer together. The opportunity for ScotiTech is to help organisations turn Apple Business Manager custom apps into cleaner app distribution, better access workflows, and less operational noise.",
-  "seoDescription": "How SMEs should approach Apple Business Manager custom apps, app distribution, MDM, access governance, and private app rollout with a cleaner operating model.",
+  "seoDescription": "How SMEs should roll out Apple Business (formerly Apple Business Manager) custom apps, with device management and access governance kept simple.",
   "date": "2026-03-24",
-  "updated": "2026-10-21",
+  "updated": "2026-10-23",
   "displayDate": "24 March 2026",
   "readTime": "5 min read",
   "sourceName": "Apple Newsroom",
@@ -80,5 +80,15 @@
     "Map where app access still depends on email approvals, manual messages, or disconnected spreadsheets.",
     "Create a single rollout workflow for requests, eligibility, install guidance, release updates, and support.",
     "Connect Apple Business foundations with Vamiq-style visibility so private app delivery feels controlled from day one."
+  ],
+  "readNext": [
+    {
+      "label": "How Apple Business app distribution works",
+      "href": "https://vamiq.app/apple-business-app-distribution"
+    },
+    {
+      "label": "Do I need MDM for one to three internal apps?",
+      "href": "https://vamiq.app/do-i-need-mdm-for-internal-apps"
+    }
   ]
 }

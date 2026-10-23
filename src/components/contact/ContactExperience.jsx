@@ -61,7 +61,7 @@ const contactRoutes = [
     icon: Building2,
     label: "Operational office",
     value:
-      "Regus - Lanarkshire Eurocentral, Maxim 1, 2 Parklands Way, Eurocentral, Motherwell ML1 4WR, United Kingdom",
+      "Maxim 1, 2 Parklands Way, Eurocentral, Motherwell ML1 4WR, United Kingdom",
     href: operationalMapUrl,
   },
   {
@@ -414,9 +414,9 @@ export default function ContactExperience() {
                   ScotiTech Solutions Limited
                 </h2>
                 <p className="mt-3 font-lora text-sm leading-7 text-white/65">
-                  UK-registered technology and product company. Our operational
-                  office is at Regus Lanarkshire Eurocentral, working with
-                  clients and partners worldwide.
+                  UK-registered software company. Our operational office is at
+                  Maxim 1, Eurocentral, and we work with clients and partners
+                  worldwide.
                 </p>
               </div>
               <a

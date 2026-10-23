@@ -3,9 +3,9 @@ import { getProduct } from "@/lib/products";
 import { ogImage, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "AXOS: private AI workspace on your own servers",
+  title: "AXOS: self-hosted enterprise AI workspace",
   description:
-    "AXOS is a self-hosted enterprise workspace: mail, files, chat, video and tasks with governed AI built in, running entirely inside your own environment.",
+    "AXOS is a self-hosted enterprise AI workspace: mail, files, chat, video and tasks with governed AI built in, running entirely inside your own environment.",
   path: "/products/axos",
   image: ogImage("axos.jpg", "AXOS, the private AI workspace from ScotiTech"),
   keywords: [
