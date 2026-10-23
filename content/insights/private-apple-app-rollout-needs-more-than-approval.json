@@ -4,11 +4,11 @@
   "slug": "private-apple-app-rollout-needs-more-than-approval",
   "category": "Platform Briefing",
   "topic": "Private app distribution",
-  "title": "Private app distribution needs more than App Store approval",
+  "title": "Private Apple app rollout needs more than App Store approval",
   "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the private app distribution rails. Vamiq gives iOS app distribution a working operating layer after approval.",
-  "seoDescription": "Private app distribution for iOS needs more than App Store approval. Learn how Apple Business Manager custom apps, MDM app distribution, and Vamiq fit together.",
+  "seoDescription": "Getting a private iPhone app approved is the start. How Apple Business Custom Apps, device management and Vamiq turn approval into a controlled rollout.",
   "date": "2026-05-04",
-  "updated": "2026-10-21",
+  "updated": "2026-10-23",
   "displayDate": "4 May 2026",
   "readTime": "5 min read",
   "sourceName": "Apple Developer",
@@ -80,5 +80,15 @@
     "Create one trusted access page with eligibility, install steps, release notes, and support contact.",
     "Track approved versions and target audiences so users never act on stale instructions.",
     "Treat failed installs and access requests as part of the product experience, not background admin."
+  ],
+  "readNext": [
+    {
+      "label": "Private app distribution with your own branded app store",
+      "href": "https://vamiq.app/private-app-distribution"
+    },
+    {
+      "label": "Enterprise iOS app distribution: every option explained",
+      "href": "https://vamiq.app/enterprise-ios-app-distribution-guide"
+    }
   ]
 }

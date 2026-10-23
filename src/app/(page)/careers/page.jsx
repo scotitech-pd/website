@@ -18,7 +18,8 @@ import { Button } from "@/components/ui/button";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Careers: growth roles",
+  title: "Careers at ScotiTech: growth and partner roles",
+  absoluteTitle: true,
   description:
     "Commission-based growth, referral, partnership and ambassador roles for people who can open the right product conversations for ScotiTech.",
   path: "/careers",

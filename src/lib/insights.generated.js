@@ -8,11 +8,11 @@ export const insights = [
     "slug": "uk-built-apple-business-app-distribution",
     "category": "Private App Distribution",
     "topic": "UK enterprise mobility",
-    "title": "Why are so many Apple device-management vendors American?",
+    "title": "A UK-built layer for Apple Business app distribution",
     "summary": "Apple Business launched worldwide in April 2026 with a free MDM layer and an Admin API — and the vendors building on it are almost all American. We went looking for a UK-built platform doing standalone app distribution on Apple's business APIs, then had independent research tools look too. Neither search found one. Here is why that gap matters for UK organisations, and what we built into it.",
-    "seoDescription": "Jamf, Kandji, Mosyle and SimpleMDM are all US companies. Research found no other UK-built SaaS doing standalone Apple Business app distribution. Vamiq is built in Scotland.",
+    "seoDescription": "Apple Business launched worldwide in April 2026. Why a UK-built layer for private app distribution and Apple device management matters to buyers now.",
     "date": "2026-08-29",
-    "updated": "2026-10-21",
+    "updated": "2026-10-23",
     "displayDate": "29 August 2026",
     "readTime": "6 min read",
     "sourceName": "Apple Newsroom — Introducing Apple Business",
@@ -24,7 +24,6 @@ export const insights = [
       "private app distribution",
       "UK tech",
       "enterprise mobility",
-      "MDM alternative",
       "Apple Business Manager",
       "iOS app deployment",
       "Vamiq"
@@ -32,14 +31,14 @@ export const insights = [
     "relatedProduct": {
       "name": "Vamiq",
       "href": "/products/vamiq",
-      "description": "Private app distribution built around Apple Business, with optional remote deployment — built in Scotland, hosted in Glasgow.",
+      "description": "Apple device management and a branded app store for your private apps, with build checks before each release.",
       "cta": "Explore Vamiq"
     },
     "highlights": [
       {
         "label": "The incumbents",
-        "value": "All US",
-        "description": "Jamf (Minneapolis), Kandji (San Francisco), Mosyle (Florida), SimpleMDM (Oregon). The closest architectural comparable, Appaloosa, is French."
+        "value": "US-built",
+        "description": "Most of the best-known Apple device-management platforms are headquartered in the United States."
       },
       {
         "label": "The UK market",
@@ -61,10 +60,10 @@ export const insights = [
         ]
       },
       {
-        "heading": "The vendor map is a map of America",
+        "heading": "Most of the category is built outside the UK",
         "paragraphs": [
-          "Jamf is headquartered in Minneapolis. Kandji in San Francisco. Mosyle in Florida. SimpleMDM in Oregon. Addigy in Miami. Of the early SaaS products publicly building on the new Apple Business endpoints, the visible names are US-based too.",
-          "The closest thing to a European exception in app-distribution-first architecture is Appaloosa — which is French. Look for the United Kingdom on this map and you find something specific: service companies. UK firms in Apple device management overwhelmingly resell and configure the American platforms — implementation, support and consulting on Jamf, Intune or Mosyle — rather than building distribution software of their own."
+          "Most of the best-known Apple device-management platforms are headquartered in the United States, and the visible early SaaS products building on the new Apple Business endpoints are US-based too.",
+          "Look for the United Kingdom in this category and you find something specific: service companies. UK firms in Apple device management mostly implement, support and resell platforms built elsewhere, rather than building distribution software of their own."
         ]
       },
       {
@@ -79,15 +78,15 @@ export const insights = [
         "heading": "Why a UK-built layer matters now",
         "paragraphs": [
           "For most UK organisations this is not about flag-waving. It is about where the operational layer above their Apple estate lives, who operates it, and under which laws.",
-          "Vamiq is operated by a Scottish-registered company, hosted in Glasgow, with no US transfer by default; encrypted off-server backups in the EU are being set up. The data-processing agreement, sub-processor list and service status are published, not gated behind sales. For public-sector-adjacent, legal, healthcare and finance buyers who must answer data-residency questions in procurement, a UK operational layer on top of Apple's platform is a materially simpler answer.",
-          "Architecture is the other half. Apple Business now gives every organisation a free MDM layer — which makes it more important, not less, to separate two decisions most platforms couple: getting an app onto a device, and managing the device. Vamiq distributes through a branded portal with no enrolment at all, and treats silent MDM-based deployment as an optional, per-device add-on. You buy control only where you need it."
+          "Vamiq is operated by a Scottish-registered company and hosted in Glasgow, with no US transfer by default. The data-processing agreement, sub-processor list and service status are published, not gated behind sales. For public-sector-adjacent, legal, healthcare and finance buyers who must answer data-residency questions in procurement, a UK operational layer on top of Apple's platform is a materially simpler answer.",
+          "Architecture is the other half. Apple Business now gives every organisation a free MDM layer — which makes it more important, not less, to separate two decisions most platforms couple: getting an app onto a device, and managing the device. Vamiq keeps those decisions separate: a branded app store for your private apps, Apple device management that installs them on the iPhones, iPads and Macs you enrol, and build checks before each release. Start with whichever one solves today’s problem."
         ]
       },
       {
         "heading": "What this means if you are choosing tooling",
         "paragraphs": [
-          "If your organisation needs full device management across the fleet — configuration profiles, macOS patching, compliance dashboards — the American suites are mature and Apple's own free MDM layer is now an option. We say that plainly on our comparison pages.",
-          "But if your actual problem is getting your own apps to your own people — employees, field teams, client organisations — with governance, audit and rollout control, you no longer have to buy a device-management programme to get it, and you no longer have to buy American to get it either. That is the segment Vamiq is built for: teams who have outgrown Apple's free tier but are not ready for a full MDM platform — the control layer in between."
+          "If your organisation needs full device management across the fleet — configuration profiles, macOS patching, compliance dashboards — the established suites are mature and Apple's own free MDM layer is now an option. We say that plainly on our comparison pages.",
+          "But if your actual problem is getting your own apps to your own people — employees, field teams, client organisations — with governance, audit and rollout control, you no longer have to buy a large device-management suite to get it, or buy it from outside the UK. That is what Vamiq is built for: teams who have outgrown Apple’s free tier and want their Apple devices and their own apps managed in one place."
         ]
       }
     ],
@@ -95,8 +94,18 @@ export const insights = [
       "Map which of your Apple tooling needs are app distribution and which are genuine device management — they price and procure differently.",
       "Ask any vendor where the operational layer is hosted, under which jurisdiction, and where backups live.",
       "Review Apple Business (free since April 2026) for the baseline MDM layer before paying per-device for one.",
-      "Pilot portal-based distribution on personally owned devices before enrolling anything.",
+      "Pilot with a small group: list the apps in your branded app store and install them on a few enrolled company devices.",
       "If you know a UK-built platform in this category, tell us — we will link them here."
+    ],
+    "readNext": [
+      {
+        "label": "How Apple Business app distribution works",
+        "href": "https://vamiq.app/apple-business-app-distribution"
+      },
+      {
+        "label": "Private app distribution with your own branded app store",
+        "href": "https://vamiq.app/private-app-distribution"
+      }
     ]
   },
   {
@@ -106,10 +115,11 @@ export const insights = [
     "category": "AI Governance",
     "topic": "UK business AI policy",
     "title": "UK AI governance gap: just 5% of AI-using businesses have a written policy",
+    "seoTitle": "UK AI governance: 5% of AI-using firms have a written policy",
     "summary": "AI adoption is moving faster than operational governance. The UK Business Data Survey 2026 found that 41% of businesses handling digitised data use AI, yet only 17% of AI-using businesses have any policy or guidance. The gap is a warning for every organisation choosing an AI workspace, private AI deployment, or enterprise AI platform: governance has to work inside the product, not only in a policy document.",
-    "seoDescription": "UK government data shows just 5% of AI-using businesses have a written policy. See what AI governance, private AI and enterprise platforms must operationalise.",
+    "seoDescription": "UK government data shows just 5% of AI-using businesses have a written policy. What AI governance, private AI and enterprise platforms must put in place.",
     "date": "2026-08-16",
-    "updated": "2026-08-16",
+    "updated": "2026-10-23",
     "displayDate": "16 August 2026",
     "readTime": "7 min read",
     "sourceName": "UK Business Data Survey 2026 - GOV.UK",
@@ -211,126 +221,13 @@ export const insights = [
       "Evaluate AI workspace and enterprise AI platform controls against real permissions, files, and business scenarios.",
       "Require evidence for data processing, external model training, retention, activity logging, and incident response.",
       "Run a time-limited private AI evaluation before expanding access across employees."
+    ],
+    "readNext": [
+      {
+        "label": "AXOS, the self-hosted enterprise AI workspace",
+        "href": "/products/axos"
+      }
     ]
-  },
-  {
-    "status": "published",
-    "featured": false,
-    "slug": "firebase-app-distribution-vs-private-app-rollout",
-    "category": "App Distribution",
-    "topic": "Firebase App Distribution",
-    "title": "Firebase App Distribution solves testing, not private app rollout",
-    "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where Vamiq should sit: not as a Firebase replacement, but as the operating layer for private app rollout.",
-    "seoDescription": "Firebase App Distribution is built for pre-release app testing. Learn why private app distribution, iOS rollout, MDM app distribution, and Vamiq need a different operating layer.",
-    "date": "2026-07-14",
-    "updated": "2026-10-21",
-    "displayDate": "14 July 2026",
-    "readTime": "5 min read",
-    "sourceName": "Firebase Docs",
-    "sourceUrl": "https://firebase.google.com/docs/app-distribution",
-    "image": "/images/insights/private-app-rollout-tablet.jpg",
-    "tags": [
-      "Firebase App Distribution",
-      "app distribution",
-      "private app distribution",
-      "iOS app distribution",
-      "Android app distribution",
-      "Vamiq"
-    ],
-    "relatedProduct": {
-      "name": "Vamiq",
-      "href": "/products/vamiq",
-      "description": "A branded operational layer for private app access, install guidance, rollout visibility, and clearer release communication.",
-      "cta": "Explore Vamiq"
-    },
-    "highlights": [
-      {
-        "label": "Search intent",
-        "value": "Testing vs rollout",
-        "description": "Firebase App Distribution has strong search demand, but the buyer problem shifts once testing ends and a private app needs controlled business rollout."
-      },
-      {
-        "label": "Platform fit",
-        "value": "Pre-release builds",
-        "description": "Firebase is useful for sending Android and iOS builds to trusted testers, collecting feedback, and supporting development workflows."
-      },
-      {
-        "label": "Vamiq fit",
-        "value": "Private rollout",
-        "description": "Vamiq is stronger when the question becomes who should access the app, which version is approved, and how rollout is supported."
-      }
-    ],
-    "sections": [
-      {
-        "heading": "Firebase App Distribution is a testing tool",
-        "paragraphs": [
-          "The keyword data is clear: Firebase App Distribution attracts far more search demand than most private app distribution phrases. That makes sense. Developers know the pain of getting builds to testers, especially across Android and iOS, and Firebase gives them a familiar path for pre-release delivery.",
-          "That does not make Firebase App Distribution the answer to every app distribution problem. It is built around trusted tester delivery, feedback, and build iteration. Those are development needs. A private app launch has a wider business problem once the build is approved."
-        ]
-      },
-      {
-        "heading": "Private app distribution has a different buyer",
-        "paragraphs": [
-          "The person searching for Firebase App Distribution may be an engineer trying to ship a test build. The person responsible for private app distribution may be an operations lead, product owner, IT manager, compliance reviewer, or founder who needs a controlled rollout to real users.",
-          "Their questions are different. Who is allowed to install the app? Which audience receives which version? Is this Apple Business Manager custom app available to the right organisation? Does MDM app distribution apply? Where do users go when install guidance fails? Who can prove rollout is complete?"
-        ]
-      },
-      {
-        "heading": "Why iOS app distribution becomes operational",
-        "paragraphs": [
-          "iOS app distribution can look simple when it is only TestFlight, ad hoc testing, or a small QA group. It becomes more serious when the app is meant for employees, partners, franchisees, dealers, or client teams who need a stable production route.",
-          "At that point, the problem is not only the installation file. It is identity, eligibility, release notes, legal acceptance, support routing, version visibility, and the confidence that people are acting on current instructions."
-        ]
-      },
-      {
-        "heading": "Where Vamiq fits beside Firebase, TestFlight, and MDM",
-        "paragraphs": [
-          "Vamiq should not pretend to replace every developer distribution tool. Firebase App Distribution, TestFlight, and fastlane all have clear roles in build testing and release operations. MDM tools have a clear role in managed device environments.",
-          "Vamiq fits above that layer as the branded business front door: one place for app access, install guidance, rollout status, release communication, support context, and the operational evidence a team needs after the build leaves the engineering workflow."
-        ]
-      },
-      {
-        "heading": "The ScotiTech view",
-        "paragraphs": [
-          "The best SEO answer is also the honest product answer: Firebase App Distribution is excellent for pre-release app testing, but private app distribution needs more than a tester workflow.",
-          "For Vamiq, the opportunity is to own the messy middle between technical distribution and real adoption. That means clearer Apple Business Manager custom app rollout, better iOS app distribution guidance, MDM-aware status, and a user experience that feels credible to the business, not only the developer."
-        ]
-      }
-    ],
-    "actionItems": [
-      "Use Firebase App Distribution, TestFlight, or fastlane for pre-release testing workflows where they fit.",
-      "Separate tester distribution from production private app rollout before users are invited.",
-      "Map eligibility, version ownership, support routes, and rollout evidence before launch.",
-      "Use Vamiq as the business-facing layer for private app distribution once the app needs controlled adoption."
-    ],
-    "workedExample": {
-      "eyebrow": "Worked handover example",
-      "title": "Handing a tested iPad app from Firebase to staff",
-      "intro": "Illustrative example: five QA testers approve version 1.4 (build 42) of an internal iPad inspection app in Firebase App Distribution. Operations now needs to release it to 30 field staff. Here is what the handover looks like.",
-      "steps": [
-        {
-          "label": "Testing stays where it works",
-          "body": "Engineering keeps the five QA testers in Firebase for future release candidates. The product owner records build 42, the test sign-off and release notes as the approved production release."
-        },
-        {
-          "label": "Choose the production route",
-          "body": "IT confirms the app's approved Apple distribution route, such as a Custom App made available to the organisation through Apple Business Manager. A Firebase invitation is not converted into a production licence or installation route."
-        },
-        {
-          "label": "Pilot with five field staff",
-          "body": "IT assigns the approved app to a five-person pilot in Vamiq. Staff use the organisation portal and install guidance, or managed deployment on eligible enrolled devices. Operations checks installation and a completed inspection before inviting the remaining 25 staff."
-        },
-        {
-          "label": "Close the handover with evidence",
-          "body": "The handover record names the release owner and support contact, identifies the approved version, and records deployment outcomes where reported. Self-service users confirm access separately; a portal invitation alone is not proof of installation."
-        }
-      ],
-      "link": {
-        "prefix": "Planning the same move from Firebase testing to employee rollout? Compare Apple distribution routes, self-service access and managed deployment in the",
-        "label": "Vamiq guide to internal app distribution",
-        "href": "https://vamiq.app/internal-app-distribution"
-      }
-    }
   },
   {
     "status": "published",
@@ -338,11 +235,11 @@ export const insights = [
     "slug": "ai-workspace-vs-digital-workplace-solutions",
     "category": "AI Workspace",
     "topic": "Digital workplace solutions",
-    "title": "AI workspace or digital workplace solution? The difference matters",
+    "title": "AI workspace vs digital workplace: what is the difference?",
     "summary": "AI workspace, digital workplace, digital workspace platform, and enterprise AI platform are often used as if they mean the same thing. They do not. For serious buyers, the important question is whether the workspace controls data, identity, files, AI access, and deployment boundaries well enough to support real employee adoption.",
-    "seoDescription": "Compare AI workspace, digital workplace solutions, digital workspace platforms, private AI, self-hosted AI, and enterprise AI platform requirements for serious buyers.",
+    "seoDescription": "What is an AI workspace, and how is it different from a digital workplace? What to check on data, identity, files and AI access before employee rollout.",
     "date": "2026-07-14",
-    "updated": "2026-08-16",
+    "updated": "2026-10-23",
     "displayDate": "14 July 2026",
     "readTime": "5 min read",
     "sourceName": "AI Management Essentials - GOV.UK",
@@ -354,7 +251,6 @@ export const insights = [
       "enterprise AI platform",
       "private AI",
       "self-hosted AI",
-      "self hosted AI",
       "on premise AI",
       "AXOS"
     ],
@@ -366,9 +262,9 @@ export const insights = [
     },
     "highlights": [
       {
-        "label": "Search demand",
+        "label": "Buyer focus",
         "value": "AI workspace",
-        "description": "The strongest keyword signal points to buyers looking for practical AI workspace and digital workplace solutions, not generic AI commentary."
+        "description": "Buyers want a practical AI workspace and fewer disconnected digital workplace tools, not generic AI commentary."
       },
       {
         "label": "Buyer need",
@@ -383,14 +279,14 @@ export const insights = [
     ],
     "sections": [
       {
-        "heading": "AI workspace is becoming the sharper search term",
+        "heading": "What is an AI workspace?",
         "paragraphs": [
-          "The keyword signal is clear: buyers are searching for AI workspace, enterprise AI platform, private AI, and digital workplace solutions because the old productivity-suite category no longer answers the whole problem.",
+          "An AI workspace is a digital workplace with AI built into the work itself: mail, files, chat, meetings and tasks, with an assistant that works across them under the organisation’s own access rules. The old productivity-suite category no longer answers the whole problem.",
           "A normal digital workplace helps people communicate and coordinate. An AI workspace has to go further: it must decide what AI can see, which files are available, who can ask questions, how outputs are reviewed, and whether sensitive work stays inside a controlled environment."
         ]
       },
       {
-        "heading": "Digital workplace solutions still matter",
+        "heading": "AI in the digital workplace: what changes",
         "paragraphs": [
           "The phrase digital workplace solutions is broad, but the buyer intent behind it is useful. Teams want fewer disconnected tools, clearer employee access, better collaboration, and less operational sprawl.",
           "The risk is that AI gets added as a feature on top of that sprawl. If files, chat, tasks, meetings, and AI all live in separate systems, the organisation may gain convenience without gaining control."
@@ -400,7 +296,7 @@ export const insights = [
         "heading": "What makes an enterprise AI platform credible",
         "paragraphs": [
           "An enterprise AI platform should be judged by operating controls, not only by model quality. Buyers should ask how identity, file access, audit logs, retention, deployment model, and human review work before they expand access to employees.",
-          "That is especially important for private AI, self-hosted AI, self hosted AI, and on premise AI discussions. The promise is not simply that the tool has AI. The promise is that the organisation can use AI without losing ownership of its data and workflow boundaries.",
+          "That is especially important for private, self-hosted and on-premise AI. The promise is not simply that the tool has AI. The promise is that the organisation can use AI without losing ownership of its data and workflow boundaries.",
           "The UK government's AI Management Essentials guidance reinforces this process-based view. It helps organisations assess internal processes, risk management, and communication around AI, while making clear that the self-assessment does not certify an AI product. Buyers need both sides: accountable organisational governance and technology capable of enforcing the controls they choose."
         ]
       },
@@ -424,6 +320,16 @@ export const insights = [
       "Review identity, file access, audit logs, retention, and human review before employee rollout.",
       "Separate public-cloud AI convenience from private AI, self-hosted AI, or on premise AI requirements.",
       "Use a limited evaluation environment before adopting an AI workspace across employees."
+    ],
+    "readNext": [
+      {
+        "label": "AXOS, the self-hosted enterprise AI workspace",
+        "href": "/products/axos"
+      },
+      {
+        "label": "Google Workspace alternatives for secure collaboration",
+        "href": "/insights/google-workspace-alternative-private-ai"
+      }
     ]
   },
   {
@@ -431,7 +337,7 @@ export const insights = [
     "featured": false,
     "slug": "enterprise-ai-trials-need-tighter-control-before-rollout",
     "date": "2026-07-14",
-    "updated": "2026-08-16",
+    "updated": "2026-10-23",
     "displayDate": "14 July 2026",
     "readTime": "5 min read",
     "sourceName": "AI Growth Lab - GOV.UK",
@@ -444,8 +350,9 @@ export const insights = [
     "category": "AI Governance",
     "topic": "Enterprise AI platform evaluation",
     "title": "Enterprise AI platform trials need tighter control before rollout",
+    "seoTitle": "Enterprise AI trials need tighter control before rollout",
     "summary": "Before broad employee adoption, enterprises should evaluate AI in governed, time-limited AI workspaces. Controlled trials reduce risk, surface integration needs, and produce measurable readiness criteria. AXOS provides the mechanisms enterprises need to test a private AI workspace or self-hosted enterprise AI platform before rollout.",
-    "seoDescription": "Learn why enterprise AI platform trials should run in governed AI workspaces, and how AXOS supports private AI, self-hosted AI, and measurable rollout criteria.",
+    "seoDescription": "Why enterprise AI platform trials should run in governed AI workspaces, and how AXOS supports private, self-hosted AI with measurable rollout criteria.",
     "tags": [
       "enterprise AI",
       "enterprise AI platform",
@@ -535,7 +442,143 @@ export const insights = [
       "href": "/products/axos",
       "description": "AXOS provides governed private AI workspaces with policy controls, auditing, and lifecycle management to support safe enterprise AI platform pilots and staged rollouts.",
       "cta": "Explore AXOS"
-    }
+    },
+    "readNext": [
+      {
+        "label": "AXOS, the self-hosted enterprise AI workspace",
+        "href": "/products/axos"
+      }
+    ]
+  },
+  {
+    "status": "published",
+    "featured": false,
+    "slug": "firebase-app-distribution-vs-private-app-rollout",
+    "category": "App Distribution",
+    "topic": "Firebase App Distribution",
+    "title": "Firebase App Distribution solves testing, not private app rollout",
+    "seoTitle": "Firebase App Distribution vs TestFlight: built for testing",
+    "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where Vamiq sits: not as a Firebase replacement, but as the layer for private app rollout.",
+    "seoDescription": "Firebase App Distribution and TestFlight are built for pre-release testing. Here is what changes when a tested app has to reach your staff's devices.",
+    "date": "2026-07-14",
+    "updated": "2026-10-23",
+    "displayDate": "14 July 2026",
+    "readTime": "5 min read",
+    "sourceName": "Firebase Docs",
+    "sourceUrl": "https://firebase.google.com/docs/app-distribution",
+    "image": "/images/insights/private-app-rollout-tablet.jpg",
+    "tags": [
+      "Firebase App Distribution",
+      "app distribution",
+      "private app distribution",
+      "iOS app distribution",
+      "Android app distribution",
+      "Vamiq"
+    ],
+    "relatedProduct": {
+      "name": "Vamiq",
+      "href": "/products/vamiq",
+      "description": "A branded operational layer for private app access, install guidance, rollout visibility, and clearer release communication.",
+      "cta": "Explore Vamiq"
+    },
+    "highlights": [
+      {
+        "label": "The shift",
+        "value": "Testing vs rollout",
+        "description": "The problem changes once testing ends and a private app needs a controlled rollout to staff."
+      },
+      {
+        "label": "Platform fit",
+        "value": "Pre-release builds",
+        "description": "Firebase is useful for sending Android and iOS builds to trusted testers, collecting feedback, and supporting development workflows."
+      },
+      {
+        "label": "Vamiq fit",
+        "value": "Private rollout",
+        "description": "Vamiq is stronger when the question becomes who should access the app, which version is approved, and how rollout is supported."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Firebase App Distribution is a testing tool",
+        "paragraphs": [
+          "Developers know the pain of getting builds to testers, especially across Android and iOS, and Firebase App Distribution gives them a familiar path for pre-release delivery.",
+          "That does not make Firebase App Distribution the answer to every app distribution problem. It is built around trusted tester delivery, feedback, and build iteration. Those are development needs. A private app launch has a wider business problem once the build is approved."
+        ]
+      },
+      {
+        "heading": "Private app distribution has a different buyer",
+        "paragraphs": [
+          "The person searching for Firebase App Distribution may be an engineer trying to ship a test build. The person responsible for private app distribution may be an operations lead, product owner, IT manager, compliance reviewer, or founder who needs a controlled rollout to real users.",
+          "Their questions are different. Who is allowed to install the app? Which audience receives which version? Is this Apple Business Manager custom app available to the right organisation? Does MDM app distribution apply? Where do users go when install guidance fails? Who can prove rollout is complete?"
+        ]
+      },
+      {
+        "heading": "Why iOS app distribution becomes operational",
+        "paragraphs": [
+          "iOS app distribution can look simple when it is only TestFlight, ad hoc testing, or a small QA group. It becomes more serious when the app is meant for employees, partners, franchisees, dealers, or client teams who need a stable production route.",
+          "At that point, the problem is not only the installation file. It is identity, eligibility, release notes, legal acceptance, support routing, version visibility, and the confidence that people are acting on current instructions."
+        ]
+      },
+      {
+        "heading": "Where Vamiq fits beside Firebase, TestFlight, and MDM",
+        "paragraphs": [
+          "Vamiq does not replace developer distribution tools. Firebase App Distribution, TestFlight, and fastlane all have clear roles in build testing and release operations. MDM tools have a clear role in managed device environments.",
+          "Vamiq fits above that layer as the branded business front door: one place for app access, install guidance, rollout status, release communication, support context, and the operational evidence a team needs after the build leaves the engineering workflow."
+        ]
+      },
+      {
+        "heading": "The ScotiTech view",
+        "paragraphs": [
+          "The short answer: Firebase App Distribution is excellent for pre-release app testing, but private app distribution needs more than a tester workflow.",
+          "Vamiq covers the middle ground between technical distribution and real adoption: Apple Business Custom Apps, device management that installs the approved version by group, and a branded app store your staff recognise."
+        ]
+      }
+    ],
+    "actionItems": [
+      "Use Firebase App Distribution, TestFlight, or fastlane for pre-release testing workflows where they fit.",
+      "Separate tester distribution from production private app rollout before users are invited.",
+      "Map eligibility, version ownership, support routes, and rollout evidence before launch.",
+      "Use Vamiq as the business-facing layer for private app distribution once the app needs controlled adoption."
+    ],
+    "workedExample": {
+      "eyebrow": "Worked handover example",
+      "title": "Handing a tested iPad app from Firebase to staff",
+      "intro": "Illustrative example: five QA testers approve version 1.4 (build 42) of an internal iPad inspection app in Firebase App Distribution. Operations now needs to release it to 30 field staff. Here is what the handover looks like.",
+      "steps": [
+        {
+          "label": "Testing stays where it works",
+          "body": "Engineering keeps the five QA testers in Firebase for future release candidates. The product owner records build 42, the test sign-off and release notes as the approved production release."
+        },
+        {
+          "label": "Choose the production route",
+          "body": "IT confirms the app's approved Apple distribution route, such as a Custom App made available to the organisation through Apple Business Manager. A Firebase invitation is not converted into a production licence or installation route."
+        },
+        {
+          "label": "Pilot with five field staff",
+          "body": "IT assigns the approved app to a five-person pilot in Vamiq. Staff use the organisation portal and install guidance, or managed deployment on eligible enrolled devices. Operations checks installation and a completed inspection before inviting the remaining 25 staff."
+        },
+        {
+          "label": "Close the handover with evidence",
+          "body": "The handover record names the release owner and support contact, identifies the approved version, and records deployment outcomes where reported. Self-service users confirm access separately; a portal invitation alone is not proof of installation."
+        }
+      ],
+      "link": {
+        "prefix": "Planning the same move from Firebase testing to employee rollout? Compare Apple distribution routes, self-service access and managed deployment in the",
+        "label": "Vamiq guide to internal app distribution",
+        "href": "https://vamiq.app/internal-app-distribution"
+      }
+    },
+    "readNext": [
+      {
+        "label": "TestFlight is for testing: the production route for staff apps",
+        "href": "https://vamiq.app/testflight-for-internal-apps"
+      },
+      {
+        "label": "Private app distribution with your own branded app store",
+        "href": "https://vamiq.app/private-app-distribution"
+      }
+    ]
   },
   {
     "status": "published",
@@ -544,10 +587,11 @@ export const insights = [
     "category": "AI Workspace",
     "topic": "Secure collaboration software",
     "title": "Looking for a Google Workspace alternative? Start with control, not features",
-    "summary": "Search demand around Google Workspace alternatives, Microsoft 365 alternatives, secure collaboration software, and enterprise knowledge management points to a bigger issue: buyers are not only comparing mail, files, and chat. They are asking who controls the workspace, where knowledge lives, and whether AI can be used without exposing sensitive business data.",
-    "seoDescription": "A practical guide for teams comparing Google Workspace alternatives, Microsoft 365 alternatives, secure collaboration software, enterprise knowledge management, and private AI workspaces.",
+    "seoTitle": "Google Workspace alternatives for secure collaboration",
+    "summary": "Teams comparing Google Workspace alternatives are rarely comparing mail, files and chat alone. They are asking who controls the workspace, where knowledge lives, and whether AI can be used without exposing sensitive business data.",
+    "seoDescription": "Comparing Google Workspace alternatives for secure collaboration? Check data control, enterprise search, permissions and AI boundaries before features.",
     "date": "2026-07-14",
-    "updated": "2026-08-16",
+    "updated": "2026-10-23",
     "displayDate": "14 July 2026",
     "readTime": "5 min read",
     "sourceName": "NCSC Cloud Security Principles",
@@ -555,8 +599,6 @@ export const insights = [
     "image": "/images/insights/secure-ai-governance.jpg",
     "tags": [
       "Google Workspace alternative",
-      "Microsoft 365 alternative",
-      "Office 365 alternative",
       "secure collaboration software",
       "enterprise knowledge management",
       "enterprise search AI",
@@ -570,9 +612,9 @@ export const insights = [
     },
     "highlights": [
       {
-        "label": "Search intent",
-        "value": "Workspace alternatives",
-        "description": "Buyers search for Google Workspace alternative, Microsoft 365 alternative, and Office 365 alternative when standard SaaS does not match their control needs."
+        "label": "Why teams look",
+        "value": "Control, not cost",
+        "description": "Teams look for a workspace alternative when standard SaaS does not match their control needs."
       },
       {
         "label": "Real question",
@@ -590,7 +632,7 @@ export const insights = [
         "heading": "Alternative does not mean cheaper clone",
         "paragraphs": [
           "A serious Google Workspace alternative is not just a different inbox and file drive. For enterprise teams, the real comparison is about control: data location, access rules, auditability, AI use, and whether the workspace can support sensitive employee operations.",
-          "The same is true for Microsoft 365 alternative and Office 365 alternative searches. Some buyers want cost reduction, but many are signalling a deeper concern: their current collaboration stack is powerful, yet too broad, too external, or too difficult to govern for specific workflows.",
+          "The same is true across the other big productivity suites. Some buyers want cost reduction, but many are signalling a deeper concern: their current collaboration stack is powerful, yet too broad, too external, or too difficult to govern for specific workflows.",
           "The National Cyber Security Centre's Cloud Security Principles apply to both cloud platforms and Software-as-a-Service. They direct buyers to examine governance, data protection, customer separation, secure user management, identity, and audit information. That is a stronger foundation for a workspace decision than a feature grid alone."
         ]
       },
@@ -602,7 +644,7 @@ export const insights = [
         ]
       },
       {
-        "heading": "Enterprise knowledge management is the hidden requirement",
+        "heading": "Enterprise search and knowledge management decide the shortlist",
         "paragraphs": [
           "Most organisations already have knowledge. The problem is that it is fragmented across drives, inboxes, chat threads, task boards, and personal notes. A workspace alternative that does not improve enterprise knowledge management may only move the same sprawl into a new interface.",
           "Enterprise search AI can help, but only when search respects permissions, approved sources, retention expectations, and the organisation's deployment model. Search that ignores governance is not intelligence; it is a faster way to create risk."
@@ -628,6 +670,16 @@ export const insights = [
       "Ask whether secure collaboration software includes AI access controls, audit trails, and data residency options.",
       "Review enterprise knowledge management and enterprise search AI requirements before moving sensitive files into a new workspace.",
       "Use a limited testing platform before adopting a private AI workspace for employees."
+    ],
+    "readNext": [
+      {
+        "label": "AXOS, the self-hosted enterprise AI workspace",
+        "href": "/products/axos"
+      },
+      {
+        "label": "AI workspace vs digital workplace: what is the difference?",
+        "href": "/insights/ai-workspace-vs-digital-workplace-solutions"
+      }
     ]
   },
   {
@@ -637,10 +689,11 @@ export const insights = [
     "category": "WWDC 2026 Briefing",
     "topic": "Vamiq",
     "title": "Apple Business Admin APIs could make Vamiq the app distribution command centre",
+    "seoTitle": "Apple Business Admin APIs and private app distribution",
     "summary": "The old private app question was simple: how do users install it? The better enterprise question is sharper: which people, devices, groups, MDM routes, app versions, and exceptions are actually in play? Apple's direction with Apple Business, including Admin API access to device, user, audit, and MDM service data, gives Vamiq a bigger path: from polished install portal to app distribution command centre for private Apple apps.",
     "seoDescription": "A ScotiTech briefing on Vamiq, Apple Business Admin APIs, app distribution, MDM app distribution, live fleet visibility, and private Apple app rollout.",
     "date": "2026-06-13",
-    "updated": "2026-10-21",
+    "updated": "2026-10-23",
     "displayDate": "13 June 2026",
     "readTime": "7 min read",
     "sourceName": "Apple Newsroom",
@@ -703,7 +756,7 @@ export const insights = [
       {
         "heading": "MDM app distribution-aware, not MDM-heavy",
         "paragraphs": [
-          "The winning position is not to ask enterprises to replace Jamf, Intune, Kandji, Mosyle, or Apple Business. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
+          "The winning position is to work with the device-management tools and Apple Business set-up an organisation already has. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
           "That means Vamiq can become the practical command centre: which devices are assigned, which MDM route applies, which installs are pending, which app version is current, where exceptions exist, and what still needs attention before rollout can be called complete."
         ]
       },
@@ -720,6 +773,16 @@ export const insights = [
       "Model Apple Business device, user, group, app, audit, and MDM service data as core product concepts.",
       "Prioritise views for group-based targeting, version status, pending installs, deployment exceptions, and audit-ready evidence.",
       "Keep the promise MDM-agnostic: Vamiq should coordinate around the customer's existing stack, not compete with it."
+    ],
+    "readNext": [
+      {
+        "label": "How Apple Business app distribution works",
+        "href": "https://vamiq.app/apple-business-app-distribution"
+      },
+      {
+        "label": "Private app distribution with your own branded app store",
+        "href": "https://vamiq.app/private-app-distribution"
+      }
     ]
   },
   {
@@ -728,11 +791,11 @@ export const insights = [
     "slug": "private-apple-app-rollout-needs-more-than-approval",
     "category": "Platform Briefing",
     "topic": "Private app distribution",
-    "title": "Private app distribution needs more than App Store approval",
+    "title": "Private Apple app rollout needs more than App Store approval",
     "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the private app distribution rails. Vamiq gives iOS app distribution a working operating layer after approval.",
-    "seoDescription": "Private app distribution for iOS needs more than App Store approval. Learn how Apple Business Manager custom apps, MDM app distribution, and Vamiq fit together.",
+    "seoDescription": "Getting a private iPhone app approved is the start. How Apple Business Custom Apps, device management and Vamiq turn approval into a controlled rollout.",
     "date": "2026-05-04",
-    "updated": "2026-10-21",
+    "updated": "2026-10-23",
     "displayDate": "4 May 2026",
     "readTime": "5 min read",
     "sourceName": "Apple Developer",
@@ -804,6 +867,16 @@ export const insights = [
       "Create one trusted access page with eligibility, install steps, release notes, and support contact.",
       "Track approved versions and target audiences so users never act on stale instructions.",
       "Treat failed installs and access requests as part of the product experience, not background admin."
+    ],
+    "readNext": [
+      {
+        "label": "Private app distribution with your own branded app store",
+        "href": "https://vamiq.app/private-app-distribution"
+      },
+      {
+        "label": "Enterprise iOS app distribution: every option explained",
+        "href": "https://vamiq.app/enterprise-ios-app-distribution-guide"
+      }
     ]
   },
   {
@@ -813,8 +886,9 @@ export const insights = [
     "category": "AI Governance",
     "topic": "Private AI adoption",
     "title": "Private AI adoption fails when policy never reaches the workflow",
+    "seoTitle": "Private AI adoption fails when policy stays on paper",
     "summary": "Most AI risk does not appear in a board policy document. It appears when files move into the wrong workspace, prompts expose sensitive context, outputs influence decisions, and nobody can see who did what. The UK AI Cyber Security Code gives buyers a useful baseline. AXOS turns that conversation toward controlled private AI workspaces and digital workplace governance.",
-    "seoDescription": "A ScotiTech briefing on private AI, secure AI platforms, access governance, monitoring, and why enterprise AI adoption needs controlled workspace operations.",
+    "seoDescription": "A ScotiTech briefing on private AI, secure AI platforms, access governance, monitoring, and why enterprise AI adoption needs controlled workspaces.",
     "date": "2026-05-04",
     "updated": "2026-06-14",
     "displayDate": "4 May 2026",
@@ -898,8 +972,9 @@ export const insights = [
     "category": "Security Briefing",
     "topic": "Software assurance",
     "title": "Software buyers are starting to ask harder security questions",
+    "seoTitle": "Software buyers now ask harder security questions",
     "summary": "Security is no longer a late-stage procurement checkbox. The UK Software Security Code of Practice gives buyers a sharper way to ask how software is designed, built, updated, supported, and retired. For vendors, the opportunity is clear: the companies that can explain their security posture simply will look more trustworthy before the technical review even starts.",
-    "seoDescription": "A ScotiTech briefing on the UK Software Security Code of Practice, secure-by-design software, vendor assurance, deployment, maintenance, and buyer expectations.",
+    "seoDescription": "A ScotiTech briefing on the UK Software Security Code of Practice, secure-by-design software, vendor assurance, maintenance and buyer expectations.",
     "date": "2026-05-04",
     "updated": "2026-06-14",
     "displayDate": "4 May 2026",
@@ -979,11 +1054,11 @@ export const insights = [
     "slug": "apple-business-sme-impact",
     "category": "Industry Update",
     "topic": "Apple ecosystem",
-    "title": "Apple Business Manager custom apps need a cleaner rollout model",
+    "title": "Apple Business custom apps need a cleaner rollout model",
     "summary": "For many SMEs, Apple administration has been a patchwork of device setup, app access, employee changes, support routes, and brand details. Apple Business brings those pieces closer together. The opportunity for ScotiTech is to help organisations turn Apple Business Manager custom apps into cleaner app distribution, better access workflows, and less operational noise.",
-    "seoDescription": "How SMEs should approach Apple Business Manager custom apps, app distribution, MDM, access governance, and private app rollout with a cleaner operating model.",
+    "seoDescription": "How SMEs should roll out Apple Business (formerly Apple Business Manager) custom apps, with device management and access governance kept simple.",
     "date": "2026-03-24",
-    "updated": "2026-10-21",
+    "updated": "2026-10-23",
     "displayDate": "24 March 2026",
     "readTime": "5 min read",
     "sourceName": "Apple Newsroom",
@@ -1055,6 +1130,16 @@ export const insights = [
       "Map where app access still depends on email approvals, manual messages, or disconnected spreadsheets.",
       "Create a single rollout workflow for requests, eligibility, install guidance, release updates, and support.",
       "Connect Apple Business foundations with Vamiq-style visibility so private app delivery feels controlled from day one."
+    ],
+    "readNext": [
+      {
+        "label": "How Apple Business app distribution works",
+        "href": "https://vamiq.app/apple-business-app-distribution"
+      },
+      {
+        "label": "Do I need MDM for one to three internal apps?",
+        "href": "https://vamiq.app/do-i-need-mdm-for-internal-apps"
+      }
     ]
   }
 ];

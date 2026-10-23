@@ -135,9 +135,9 @@ const organizationSchema = {
     {
       "@type": "PostalAddress",
       name: "Operational office",
-      streetAddress: "Maxim 1, 2 Parklands Way, Maxim Business Park, 1st Floor",
+      streetAddress: "Maxim 1, 2 Parklands Way, Eurocentral",
       addressLocality: "Motherwell",
-      addressRegion: "Eurocentral, Scotland",
+      addressRegion: "North Lanarkshire",
       postalCode: "ML1 4WR",
       addressCountry: "GB",
     },

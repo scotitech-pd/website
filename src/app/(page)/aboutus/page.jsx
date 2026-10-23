@@ -10,7 +10,8 @@ import { ogImage, pageMetadata } from "@/lib/seo";
 import { companyFacts, recognition } from "@/lib/company";
 
 export const metadata = pageMetadata({
-  title: "About ScotiTech",
+  title: "About ScotiTech: the company behind Vamiq and AXOS",
+  absoluteTitle: true,
   description:
     "ScotiTech Solutions Limited is a UK software company, the company behind Vamiq and AXOS. Meet the founder, Pradeep Dahiya, and the team.",
   path: "/aboutus",

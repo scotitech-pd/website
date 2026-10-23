@@ -3,7 +3,7 @@
   "featured": false,
   "slug": "enterprise-ai-trials-need-tighter-control-before-rollout",
   "date": "2026-07-14",
-  "updated": "2026-08-16",
+  "updated": "2026-10-23",
   "displayDate": "14 July 2026",
   "readTime": "5 min read",
   "sourceName": "AI Growth Lab - GOV.UK",
@@ -16,8 +16,9 @@
   "category": "AI Governance",
   "topic": "Enterprise AI platform evaluation",
   "title": "Enterprise AI platform trials need tighter control before rollout",
+  "seoTitle": "Enterprise AI trials need tighter control before rollout",
   "summary": "Before broad employee adoption, enterprises should evaluate AI in governed, time-limited AI workspaces. Controlled trials reduce risk, surface integration needs, and produce measurable readiness criteria. AXOS provides the mechanisms enterprises need to test a private AI workspace or self-hosted enterprise AI platform before rollout.",
-  "seoDescription": "Learn why enterprise AI platform trials should run in governed AI workspaces, and how AXOS supports private AI, self-hosted AI, and measurable rollout criteria.",
+  "seoDescription": "Why enterprise AI platform trials should run in governed AI workspaces, and how AXOS supports private, self-hosted AI with measurable rollout criteria.",
   "tags": [
     "enterprise AI",
     "enterprise AI platform",
@@ -107,5 +108,11 @@
     "href": "/products/axos",
     "description": "AXOS provides governed private AI workspaces with policy controls, auditing, and lifecycle management to support safe enterprise AI platform pilots and staged rollouts.",
     "cta": "Explore AXOS"
-  }
+  },
+  "readNext": [
+    {
+      "label": "AXOS, the self-hosted enterprise AI workspace",
+      "href": "/products/axos"
+    }
+  ]
 }

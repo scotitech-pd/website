@@ -19,7 +19,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Trust, security and privacy",
   description:
-    "ScotiTech Solutions Limited company details, security, responsible disclosure and privacy law coverage across UK GDPR, India’s DPDP Act and US state privacy laws.",
+    "ScotiTech Solutions Limited company details, security, responsible disclosure and privacy law coverage: UK GDPR, India’s DPDP Act and US state laws.",
   path: "/trust",
 });
 

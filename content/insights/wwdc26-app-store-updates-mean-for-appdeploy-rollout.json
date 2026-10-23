@@ -5,10 +5,11 @@
   "category": "WWDC 2026 Briefing",
   "topic": "Vamiq",
   "title": "Apple Business Admin APIs could make Vamiq the app distribution command centre",
+  "seoTitle": "Apple Business Admin APIs and private app distribution",
   "summary": "The old private app question was simple: how do users install it? The better enterprise question is sharper: which people, devices, groups, MDM routes, app versions, and exceptions are actually in play? Apple's direction with Apple Business, including Admin API access to device, user, audit, and MDM service data, gives Vamiq a bigger path: from polished install portal to app distribution command centre for private Apple apps.",
   "seoDescription": "A ScotiTech briefing on Vamiq, Apple Business Admin APIs, app distribution, MDM app distribution, live fleet visibility, and private Apple app rollout.",
   "date": "2026-06-13",
-  "updated": "2026-10-21",
+  "updated": "2026-10-23",
   "displayDate": "13 June 2026",
   "readTime": "7 min read",
   "sourceName": "Apple Newsroom",
@@ -71,7 +72,7 @@
     {
       "heading": "MDM app distribution-aware, not MDM-heavy",
       "paragraphs": [
-        "The winning position is not to ask enterprises to replace Jamf, Intune, Kandji, Mosyle, or Apple Business. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
+        "The winning position is to work with the device-management tools and Apple Business set-up an organisation already has. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
         "That means Vamiq can become the practical command centre: which devices are assigned, which MDM route applies, which installs are pending, which app version is current, where exceptions exist, and what still needs attention before rollout can be called complete."
       ]
     },
@@ -88,5 +89,15 @@
     "Model Apple Business device, user, group, app, audit, and MDM service data as core product concepts.",
     "Prioritise views for group-based targeting, version status, pending installs, deployment exceptions, and audit-ready evidence.",
     "Keep the promise MDM-agnostic: Vamiq should coordinate around the customer's existing stack, not compete with it."
+  ],
+  "readNext": [
+    {
+      "label": "How Apple Business app distribution works",
+      "href": "https://vamiq.app/apple-business-app-distribution"
+    },
+    {
+      "label": "Private app distribution with your own branded app store",
+      "href": "https://vamiq.app/private-app-distribution"
+    }
   ]
 }

@@ -4,6 +4,8 @@
     { "source": "/products/appdeploy/", "destination": "/products/vamiq", "permanent": true },
     { "source": "/products/opsly", "destination": "/products/axos", "permanent": true },
     { "source": "/products/opsly/", "destination": "/products/axos", "permanent": true },
+    { "source": "/products/aicaptionstudio", "destination": "/products", "permanent": true },
+    { "source": "/products/aicaptionstudio/", "destination": "/products", "permanent": true },
     { "source": "/solutions", "destination": "/products", "permanent": true },
     { "source": "/solutions/", "destination": "/products", "permanent": true }
   ],
