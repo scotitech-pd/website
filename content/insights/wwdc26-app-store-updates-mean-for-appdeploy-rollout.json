@@ -72,7 +72,7 @@
     {
       "heading": "MDM app distribution-aware, not MDM-heavy",
       "paragraphs": [
-        "The winning position is not to ask enterprises to replace Jamf, Intune, Kandji, Mosyle, or Apple Business. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
+        "The winning position is to work with the device-management tools and Apple Business set-up an organisation already has. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
         "That means Vamiq can become the practical command centre: which devices are assigned, which MDM route applies, which installs are pending, which app version is current, where exceptions exist, and what still needs attention before rollout can be called complete."
       ]
     },

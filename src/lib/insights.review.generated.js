@@ -756,7 +756,7 @@ export const allInsights = [
       {
         "heading": "MDM app distribution-aware, not MDM-heavy",
         "paragraphs": [
-          "The winning position is not to ask enterprises to replace Jamf, Intune, Kandji, Mosyle, or Apple Business. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
+          "The winning position is to work with the device-management tools and Apple Business set-up an organisation already has. The stronger move is to understand MDM app distribution environments and make deployment status easier for non-specialists to act on.",
           "That means Vamiq can become the practical command centre: which devices are assigned, which MDM route applies, which installs are pending, which app version is current, where exceptions exist, and what still needs attention before rollout can be called complete."
         ]
       },
@@ -886,8 +886,9 @@ export const allInsights = [
     "category": "AI Governance",
     "topic": "Private AI adoption",
     "title": "Private AI adoption fails when policy never reaches the workflow",
+    "seoTitle": "Private AI adoption fails when policy stays on paper",
     "summary": "Most AI risk does not appear in a board policy document. It appears when files move into the wrong workspace, prompts expose sensitive context, outputs influence decisions, and nobody can see who did what. The UK AI Cyber Security Code gives buyers a useful baseline. AXOS turns that conversation toward controlled private AI workspaces and digital workplace governance.",
-    "seoDescription": "A ScotiTech briefing on private AI, secure AI platforms, access governance, monitoring, and why enterprise AI adoption needs controlled workspace operations.",
+    "seoDescription": "A ScotiTech briefing on private AI, secure AI platforms, access governance, monitoring, and why enterprise AI adoption needs controlled workspaces.",
     "date": "2026-05-04",
     "updated": "2026-06-14",
     "displayDate": "4 May 2026",
@@ -971,8 +972,9 @@ export const allInsights = [
     "category": "Security Briefing",
     "topic": "Software assurance",
     "title": "Software buyers are starting to ask harder security questions",
+    "seoTitle": "Software buyers now ask harder security questions",
     "summary": "Security is no longer a late-stage procurement checkbox. The UK Software Security Code of Practice gives buyers a sharper way to ask how software is designed, built, updated, supported, and retired. For vendors, the opportunity is clear: the companies that can explain their security posture simply will look more trustworthy before the technical review even starts.",
-    "seoDescription": "A ScotiTech briefing on the UK Software Security Code of Practice, secure-by-design software, vendor assurance, deployment, maintenance, and buyer expectations.",
+    "seoDescription": "A ScotiTech briefing on the UK Software Security Code of Practice, secure-by-design software, vendor assurance, maintenance and buyer expectations.",
     "date": "2026-05-04",
     "updated": "2026-06-14",
     "displayDate": "4 May 2026",
