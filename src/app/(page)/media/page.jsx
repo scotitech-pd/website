@@ -107,7 +107,7 @@ export default function MediaPage() {
             <h2 className="t-h1 mt-3">ScotiTech founder named NextGen Innovator of the Year.</h2>
             <div className="mt-6 space-y-5 text-[17px] leading-8 text-body">
               <p>
-                ScotiTech Solutions Limited announces that its founder and CEO, Pradeep Dahiya, has been
+                ScotiTech Solutions Limited announces that its founder, Pradeep Dahiya, has been
                 named NextGen Innovator of the Year at the Forttuna Global Excellence Awards 2025, held in
                 Dubai, UAE.
               </p>
@@ -136,7 +136,7 @@ export default function MediaPage() {
                 support behind ScotiTech. We build technology with the intention of making life simpler,
                 safer and more accessible.&rdquo;
                 <footer className="mt-3 font-sans text-[14px] font-semibold text-body">
-                  Pradeep Dahiya, Founder and CEO
+                  Pradeep Dahiya, Founder &amp; Software Architect
                 </footer>
               </blockquote>
               <p>
