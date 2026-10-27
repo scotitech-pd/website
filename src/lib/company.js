@@ -116,12 +116,12 @@ export const services = [
 
 export const founder = {
   name: "Pradeep Dahiya",
-  title: "Founder and CEO",
+  title: "Founder & Software Architect",
   portrait: {
     src: "/images/company/pradeep-dahiya-800.webp",
     width: 800,
     height: 1096,
-    alt: "Pradeep Dahiya, Founder and CEO of ScotiTech Solutions",
+    alt: "Pradeep Dahiya, Founder & Software Architect of ScotiTech Solutions",
   },
   linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
   bio: "Pradeep founded ScotiTech and architects its products, Vamiq and AXOS. He sets the company's product direction and works directly with customers, so the people who use the software talk to the person who builds it.",
