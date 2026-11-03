@@ -51,8 +51,8 @@ const certifications = [
     icon: ShieldCheck,
     tone: "product",
     name: "Product controls",
-    status: "Operated",
-    body: "Each product operates the technical controls a SOC 2 or ISO 27001 auditor would inspect. The detail is product-specific and published in each product's Trust Centre below.",
+    status: "Published",
+    body: "Each product publishes its own security controls in its Trust Centre below. These controls have not yet been independently audited or certified.",
   },
 ];
 
