@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {
-  AlertTriangle,
   ArrowRight,
   CheckCircle2,
   ExternalLink,
@@ -35,11 +34,11 @@ const companyFacts = [
 
 const certifications = [
   {
-    icon: AlertTriangle,
-    tone: "progress",
+    icon: Scale,
+    tone: "none",
     name: "Cyber Essentials",
-    status: "In progress",
-    body: "Application in progress as of August 2026. When granted, the certificate number and badge will be published here — not before.",
+    status: "Not held",
+    body: "Not held today. We are preparing for assessment against the current Cyber Essentials requirements. When a certificate is issued, its number will be published here, linked to IASME's certificate search — not before.",
   },
   {
     icon: Scale,
