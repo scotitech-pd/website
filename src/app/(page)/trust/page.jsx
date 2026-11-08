@@ -105,7 +105,7 @@ const privacyCoverage = [
 const trustCentres = [
   {
     name: "Vamiq",
-    label: "Private apps and Apple devices",
+    label: "Apple and Windows devices, private apps",
     body: "Control detail, service status, data processing terms, and the sub-processor list are published in full.",
     links: [
       { label: "Trust Centre", href: "https://vamiq.app/trust" },

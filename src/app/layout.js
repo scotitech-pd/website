@@ -31,6 +31,7 @@ export const metadata = {
     "AXOS",
     "ClarityPath",
     "Apple device management",
+    "Windows device management",
     "private app store",
     "internal app distribution",
     "Apple Business",
@@ -84,7 +85,7 @@ const organizationSchema = {
   alternateName: "ScotiTech",
   url: "https://scotitech.com",
   description:
-    "UK software company. Its flagship product, Vamiq (formerly AppDeploy), is Apple device management and a branded app store for your private apps, with build checks before each release. ScotiTech also makes AXOS and ClarityPath.",
+    "UK software company. Its flagship product, Vamiq (formerly AppDeploy), is device management for Apple devices and Windows PCs, with a branded app store for your private apps and build checks before each release. ScotiTech also makes AXOS and ClarityPath.",
   identifier: {
     "@type": "PropertyValue",
     propertyID: "UK Companies House company number",

@@ -11,6 +11,7 @@ export const VAMIQ_URL = "https://vamiq.app";
 
 export const vamiqLinks = {
   home: "https://vamiq.app",
+  signup: "https://vamiq.app/join",
   privateApps: "https://vamiq.app/private-app-distribution",
   devices: "https://vamiq.app/device-management",
   releases: "https://vamiq.app/release-controls",
@@ -107,7 +108,7 @@ export const services = [
     id: "partners",
     icon: "Handshake",
     title: "Partner programme",
-    body: "For app agencies and Apple IT firms: refer your clients to Vamiq, or resell it with your own support.",
+    body: "For app agencies and IT firms: refer your clients to Vamiq, or resell it with your own support.",
     href: vamiqLinks.partners,
     linkLabel: "The partner offer",
     external: true,

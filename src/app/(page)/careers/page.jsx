@@ -60,9 +60,9 @@ const productsToKnow = [
   {
     name: "Vamiq",
     status: "Live",
-    tagline: "A branded app store for your private apps, and Apple device management that installs them on iPhone, iPad and Mac, with build checks before each release.",
+    tagline: "Device management for iPhones, iPads, Macs and Windows PCs in one workspace, and a branded app store for your private apps, with build checks before each release.",
     audience:
-      "IT leaders and operations teams distributing internal apps to employees, testers, or partner organisations on Apple devices.",
+      "IT leaders and operations teams managing company devices, or distributing internal apps to employees, testers, or partner organisations on Apple devices.",
   },
   {
     name: "AXOS",

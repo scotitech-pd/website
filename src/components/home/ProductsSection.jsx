@@ -5,7 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 import Badge from "@/components/ui/Badge";
 import PhotoCard from "@/components/media/PhotoCard";
 import FilmDialog from "@/components/media/FilmDialog";
-import { VAMIQ_URL, vamiqLinks } from "@/lib/company";
+import { vamiqLinks } from "@/lib/company";
 
 const vamiqParts = [
   {
@@ -19,7 +19,7 @@ const vamiqParts = [
     photo: "device-macbook",
     eyebrow: "For your devices",
     title: "Device management",
-    body: "Enrol company iPhones, iPads and Macs, install their apps, and manage their settings and security.",
+    body: "Enrol company iPhones, iPads, Macs and Windows PCs, install their apps, and manage their settings and security.",
     href: vamiqLinks.devices,
     position: "55% 50%",
   },
@@ -75,8 +75,8 @@ export default function ProductsSection({ showIntro = true }) {
         <p className="t-eyebrow">What we make</p>
         <h2 className="t-h1 mt-3">Focused products that do one job well.</h2>
         <p className="t-lead mt-5">
-          Vamiq is our flagship. Use it to run your company&apos;s Apple devices and your own apps from
-          one workspace.
+          Vamiq is our flagship. Use it to run your company&apos;s Apple devices, Windows PCs and your
+          own apps from one workspace.
         </p>
       </Reveal>
       )}
@@ -96,15 +96,16 @@ export default function ProductsSection({ showIntro = true }) {
                 <Badge variant="onInk">Live</Badge>
               </div>
               <h3 className="mt-7 font-serif text-[clamp(1.75rem,1.3rem+1.6vw,2.5rem)] font-normal leading-[1.12] tracking-[-0.01em] text-white">
-                Your Apple devices and your own apps, managed in one place.
+                Your devices and your own apps, managed in one place.
               </h3>
               <p className="mt-5 max-w-xl text-[16px] leading-7 text-white/75">
-                Set up and secure your team&apos;s iPhones, iPads and Macs, and put your private apps on
-                them through your own branded app store. Each release is checked before it ships.
+                Set up and secure your team&apos;s iPhones, iPads, Macs and Windows PCs in one workspace,
+                and put your private apps on your Apple devices through your own branded app store. Each
+                release is checked before it ships.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
-                  href={VAMIQ_URL}
+                  href={vamiqLinks.signup}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex h-11 items-center gap-2 rounded-lg bg-white px-5 text-[15px] font-semibold text-ink transition-colors hover:bg-[#eef4f2]"
@@ -121,7 +122,7 @@ export default function ProductsSection({ showIntro = true }) {
                 </Link>
               </div>
               <p className="mt-5 text-[13px] text-white/60">
-                Free for up to 5 devices, with no card. £1 per device a month after that.
+                Free for up to 5 devices, with no card. Then £1 / $1 / €1 / ₹100 a device a month.
               </p>
             </div>
             <FilmDialog variant="poster" />
