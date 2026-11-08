@@ -40,7 +40,7 @@ export const products = {
         href: "https://vamiq.app/compare",
       },
       points: [
-        { title: "Private app distribution", body: "Your own branded app store for your company’s private and internal apps, on your own web address if you want." },
+        { title: "Private app distribution", body: "Your own branded app store for your company’s private and internal apps." },
         { title: "Device management", body: "Set up company iPhones, iPads, Macs and Windows PCs, install apps on them, and keep OS updates in view." },
         { title: "Release controls", body: "Check each new build before it reaches a device, forecast the risk of a rollout, and keep a verifiable record of what was released." },
         { title: "Use one part or all three", body: "The three parts run in the same workspace. Start with whichever one solves today’s problem." },
@@ -102,17 +102,17 @@ export const products = {
       ],
     },
     features: [
-      { icon: "Palette", title: "Branded app store, built on Apple Business", body: "Your people find your private and internal apps in your own branded store, optionally on your own web address. Apple Business Custom Apps and App Store apps, Apps and Books licence sync, Managed Apple Account mapping and directory sync. Your account, apps and licences stay yours." },
+      { icon: "Palette", title: "Branded app store, built on Apple Business", body: "Your people find your private and internal apps in your own branded store, with your logo and brand colour. Apple Business Custom Apps and App Store apps, Apps and Books licence sync, Managed Apple Account mapping and directory sync. Your account, apps and licences stay yours." },
       { icon: "ServerCog", title: "Apple device management", body: "Zero-touch enrolment for devices bought through Apple Business, or enrolment by link. App installs by group, Web Clips, passcode rules, OS updates, and lock or erase for a lost iPhone or iPad." },
       { icon: "Laptop", title: "Mac management", body: "Enrol Macs on macOS 14 and later by link or zero-touch. Each Mac reports FileVault, firewall, System Integrity Protection and Secure Boot; install Apple Business apps and signed .pkg packages, and set macOS update deadlines on supervised Macs." },
-      { icon: "Monitor", title: "Windows management", body: "Enrol Windows 11 Pro PCs with a link and a one-time code. See each PC’s model, serial number, Windows version and update status; set screen lock, Windows Update active hours and Microsoft Defender real-time protection; install apps, and restart, locate or erase a PC. No extra Microsoft licence is needed." },
+      { icon: "Monitor", title: "Windows management", body: "Enrol Windows 11 Pro PCs with a link and a one-time code. See each PC’s model, serial number, Windows version and update status; set screen lock, Windows Update active hours and Microsoft Defender real-time protection; install apps, and restart, locate or erase a PC. No extra Microsoft licence is needed to enrol a PC." },
       { icon: "MousePointerClick", title: "Release controls", body: "Release Guard build checks, Risk Forecast, deployment answers and checksummed Evidence Packs, plus a release upload API for CI/CD and Slack and Microsoft Teams alerts." },
-      { icon: "GitBranch", title: "Enterprise identity", body: "SAML and OIDC single sign-on, SCIM provisioning, scheduled directory sync and group rules. Signed Android APK delivery is available as an Enterprise extra." },
+      { icon: "GitBranch", title: "Enterprise provisioning", body: "SCIM provisioning for supported identity providers, scheduled directory sync and group rules. Signed Android APK delivery is available as an Enterprise extra." },
     ],
     audiences: {
       eyebrow: "Who it's for",
       title: "Built for three kinds of team.",
-      body: "Vamiq works for any organisation with company iPhones, iPads, Macs or Windows PCs. These three get the most from it.",
+      body: "Vamiq works for any organisation with company iPhones, iPads, Macs or Windows 11 Pro PCs. These three get the most from it.",
       items: [
         {
           icon: "Building2",
@@ -188,7 +188,7 @@ export const products = {
           featured: false,
           price: "£1",
           period: "/device/mo",
-          note: "$1 / €1 / ₹100 a month, or £10 / $10 / €10 / ₹1,000 a year",
+          note: "$1 / €1 / ₹100 a device a month, or £10 / $10 / €10 / ₹1,000 a device a year",
           desc: "Device management for each iPhone, iPad, Mac or Windows PC beyond the free 5. No base fee and no minimum.",
           features: [
             "Everything in Free, for every enrolled device",
@@ -206,7 +206,7 @@ export const products = {
           tag: "14-day free trial",
           desc: "Your own branded app store and release controls, the same price with or without devices.",
           features: [
-            "Branded app store, on your own web address if you want",
+            "Branded app store with your logo and brand colour",
             "Release Guard, Risk Forecast and Evidence Packs",
             "Release upload API for CI/CD",
             "Slack and Microsoft Teams alerts",
@@ -220,7 +220,7 @@ export const products = {
           price: "By agreement",
           desc: "For identity integration, procurement and larger rollouts.",
           features: [
-            "SAML/OIDC single sign-on and SCIM",
+            "SCIM provisioning for supported identity providers",
             "Scheduled directory sync and group rules",
             "Signed Android APK delivery",
             "Executed DPA and security questionnaire response",
@@ -239,7 +239,7 @@ export const products = {
       { q: "What happens after the 14-day trial?", a: "Nothing is charged and nothing is deleted. The workspace moves to Free: up to 5 devices keep working and keep receiving your apps. Your own app store and release controls pause until you add Distribution." },
     ],
     cta: {
-      title: "Put your private apps on your team’s devices, with proof of every release.",
+      title: "Put your private apps on your team’s Apple devices, with proof of every release.",
       body: "Start free with up to 5 devices, or book a demo with the founder. Every trial includes a free 30-minute setup call to connect Apple Business and enrol your first device: email info@vamiq.app to book yours.",
       primary: "Book a demo",
       secondary: { label: "Contact us", href: "/contact" },

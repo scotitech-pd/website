@@ -114,7 +114,7 @@ export default function AboutPage() {
             </p>
             <p className="t-body">
               That is the idea behind everything we make. Vamiq manages a company&apos;s iPhones, iPads,
-              Macs and Windows PCs and gives its people their own branded app store, with each release
+              Macs and Windows PCs, and gives its people their own branded app store, with each release
               checked before it reaches a device. AXOS brings mail, files, chat, video and tasks into one private
               workspace, with governed AI built in, on the organisation&apos;s own servers. ClarityPath
               brings structure to life&apos;s biggest decisions.

@@ -29,8 +29,8 @@ export default function HeroSection() {
             style={{ animationDelay: "0.08s" }}
           >
             ScotiTech makes Vamiq (formerly AppDeploy), which manages company iPhones, iPads, Macs and
-            Windows PCs and delivers your own apps through a branded app store, and AXOS, an AI
-            workspace that runs on your own servers.
+            Windows PCs and puts your own apps on your Apple devices through a branded app store. We
+            also make AXOS, an AI workspace that runs on your own servers.
           </p>
           <div
             className="reveal-now mt-9 flex flex-wrap items-center justify-center gap-3"
