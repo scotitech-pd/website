@@ -5,15 +5,16 @@ import { ogImage, pageMetadata, siteUrl } from "@/lib/seo";
 import { vamiqMedia } from "@/lib/company";
 
 export const metadata = pageMetadata({
-  title: "Vamiq: Apple device management and private apps",
+  title: "Vamiq: Apple and Windows device management",
   description:
-    "Vamiq (formerly AppDeploy) manages your company's iPhones, iPads and Macs and gives your people a branded app store for your private apps.",
+    "Vamiq (formerly AppDeploy) manages your company's iPhones, iPads, Macs and Windows PCs, and gives your people a branded app store for your private apps.",
   path: "/products/vamiq",
-  image: ogImage("vamiq.jpg", "Vamiq: your Apple devices and your own apps, managed in one place"),
+  image: ogImage("vamiq.jpg", "Vamiq: your devices and your own apps, managed in one place"),
   keywords: [
     "Vamiq",
     "AppDeploy",
     "Apple device management",
+    "Windows device management",
     "private app distribution",
     "internal iOS app distribution",
     "branded app store",

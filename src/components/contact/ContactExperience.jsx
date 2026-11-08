@@ -19,8 +19,8 @@ import { meetingLinks } from "@/lib/scheduling";
 const productPaths = [
   {
     name: "Vamiq",
-    eyebrow: "Private apps and Apple devices",
-    description: "Branded app store, Apple device management, and build checks before each release.",
+    eyebrow: "Apple and Windows devices, private apps",
+    description: "Device management for Apple devices and Windows PCs, a branded app store, and build checks before each release.",
     href: "/products/vamiq",
     accent: "from-teal-500/20 via-teal-400/10 to-white/0",
   },

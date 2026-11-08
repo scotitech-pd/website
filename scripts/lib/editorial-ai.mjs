@@ -284,10 +284,11 @@ function defaultRelatedProduct(brief) {
     };
   }
 
-  if (brief.product === "AppDeploy") {
+  // "AppDeploy" is Vamiq's former name; older briefs may still use it.
+  if (brief.product === "Vamiq" || brief.product === "AppDeploy") {
     return {
       href: "/products/vamiq",
-      cta: "Explore AppDeploy",
+      cta: "Explore Vamiq",
       description:
         "A branded operational layer for internal app access, rollout visibility, and clearer Apple deployment workflows.",
     };

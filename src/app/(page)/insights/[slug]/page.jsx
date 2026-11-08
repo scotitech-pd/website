@@ -78,7 +78,7 @@ export default async function InsightArticlePage({ params }) {
     name: "Vamiq",
     href: "/products/vamiq",
     description:
-      "Apple device management and a branded app store for your private apps, with build checks before each release.",
+      "Device management for Apple devices and Windows PCs, and a branded app store for your private apps, with build checks before each release.",
     cta: "Explore Vamiq",
   };
   const structuredData = [

@@ -45,6 +45,7 @@ import {
   Store,
   Truck,
   Laptop,
+  Monitor,
 } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
@@ -71,7 +72,7 @@ const icons = {
   Sparkles, Bot, FileSearch, FileText, Layers3, Video, Calendar,
   Plane, Briefcase, Home, Coins, CalendarRange, TrendingUp,
   HeartPulse, Landmark, Factory, BriefcaseBusiness, Store, Truck,
-  Cloud, Server, ShieldCheck, Laptop,
+  Cloud, Server, ShieldCheck, Laptop, Monitor,
 };
 
 const deployIcons = [Cloud, Server, ServerCog, ShieldCheck];
@@ -256,6 +257,8 @@ export default function ProductTemplate({ product }) {
   const accentText = `text-${product.accent}`;
   const extHost = product.externalUrl ? new URL(product.externalUrl).hostname : null;
   const extLabel = product.externalLabel || `Visit ${product.name}`;
+  // The main call-to-action can open a sign-up page; "Live at" keeps the home address.
+  const ctaUrl = product.signupUrl || product.externalUrl;
 
   const productPath = `/products/${product.slug}`;
   const structuredData = [
@@ -299,7 +302,7 @@ export default function ProductTemplate({ product }) {
                 {product.externalUrl ? (
                   <>
                     <Button asChild size="lg">
-                      <a href={product.externalUrl} target="_blank" rel="noopener noreferrer">
+                      <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
                         {extLabel}
                         <ArrowUpRight size={17} />
                       </a>
@@ -1225,7 +1228,7 @@ export default function ProductTemplate({ product }) {
                     {product.externalUrl ? (
                       <>
                         <Button asChild size="lg" variant="onInkSolid">
-                          <a href={product.externalUrl} target="_blank" rel="noopener noreferrer">
+                          <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
                             {extLabel}
                             <ArrowUpRight size={17} />
                           </a>

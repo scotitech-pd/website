@@ -44,7 +44,7 @@ Create a review-ready draft directly from the terminal:
 npm run insights:draft -- \
   --topic "Apple Business rollout visibility" \
   --angle "How live device and group context changes private app deployment" \
-  --product "AppDeploy" \
+  --product "Vamiq" \
   --source-name "Apple Newsroom" \
   --source-url "https://www.apple.com/newsroom/"
 ```

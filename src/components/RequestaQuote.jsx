@@ -20,7 +20,7 @@ const agenda = [
 const sessions = [
   {
     name: "Vamiq session",
-    body: "For teams distributing private apps to iPhone, iPad and Mac, with a branded app store, device management, and build checks before each release.",
+    body: "For teams managing iPhones, iPads, Macs and Windows PCs, or distributing private apps through a branded app store with build checks before each release.",
     cta: "Book Vamiq session",
     href: meetingLinks.vamiq,
   },
@@ -135,7 +135,7 @@ export default function RequestaQuote() {
           <span className="t-eyebrow">Schedule a meeting</span>
           <h2 className="t-h3 mt-2 pr-8">Book the session that fits your goals.</h2>
           <p className="t-body mt-3">
-            Choose Vamiq for private apps on Apple devices or AXOS for secure workspace
+            Choose Vamiq for company devices and private apps, or AXOS for secure workspace
             planning, then book instantly with the right team.
           </p>
 
