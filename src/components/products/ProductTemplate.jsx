@@ -532,14 +532,19 @@ export default function ProductTemplate({ product }) {
               <p className="mt-5 font-karla text-lg leading-relaxed text-on-ink-muted">
                 {product.statement.body}
               </p>
-              {product.statement.link && (
-                <a
-                  href={product.statement.link.href}
-                  className="mt-6 inline-flex min-h-11 max-w-full items-center gap-2 rounded-sm font-karla text-base font-semibold text-brand-soft underline decoration-brand-soft/50 underline-offset-4 transition-colors hover:text-on-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-soft"
-                >
-                  <span>{product.statement.link.label}</span>
-                  <ArrowRight size={17} className="shrink-0" aria-hidden="true" />
-                </a>
+              {(product.statement.links || (product.statement.link ? [product.statement.link] : [])).length > 0 && (
+                <div className="mt-6 flex flex-wrap gap-x-7 gap-y-1">
+                  {(product.statement.links || [product.statement.link]).map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      className="inline-flex min-h-11 max-w-full items-center gap-2 rounded-sm font-karla text-base font-semibold text-brand-soft underline decoration-brand-soft/50 underline-offset-4 transition-colors hover:text-on-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-soft"
+                    >
+                      <span>{link.label}</span>
+                      <ArrowRight size={17} className="shrink-0" aria-hidden="true" />
+                    </a>
+                  ))}
+                </div>
               )}
             </Reveal>
             {product.statement.points && (
@@ -574,6 +579,17 @@ export default function ProductTemplate({ product }) {
                     </span>
                     <h3 className="mt-5 font-karla text-lg font-semibold text-strong">{f.title}</h3>
                     <p className="t-small mt-2 leading-6">{f.body}</p>
+                    {f.href && (
+                      <a
+                        href={f.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-auto inline-flex items-center gap-1.5 pt-5 font-karla text-sm font-semibold text-brand-strong underline decoration-brand/40 underline-offset-4 transition-colors hover:text-brand"
+                      >
+                        {f.linkLabel || f.title}
+                        <ArrowUpRight size={14} aria-hidden="true" />
+                      </a>
+                    )}
                   </div>
                 </Reveal>
               );
