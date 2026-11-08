@@ -7,7 +7,7 @@
   "title": "Firebase App Distribution solves testing, not private app rollout",
   "seoTitle": "Firebase App Distribution vs TestFlight: built for testing",
   "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where Vamiq sits: not as a Firebase replacement, but as the layer for private app rollout.",
-  "seoDescription": "Firebase App Distribution and TestFlight are built for pre-release testing. Here is what changes when a tested app has to reach your staff's devices.",
+  "seoDescription": "Firebase App Distribution and TestFlight get test builds to testers. What changes when a tested iOS or Android app has to reach your staff's devices.",
   "date": "2026-07-14",
   "updated": "2026-10-23",
   "displayDate": "14 July 2026",

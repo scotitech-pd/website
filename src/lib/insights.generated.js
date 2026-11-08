@@ -6,7 +6,7 @@ export const insights = [
     "status": "published",
     "featured": true,
     "slug": "uk-built-apple-business-app-distribution",
-    "category": "Private App Distribution",
+    "category": "App Distribution",
     "topic": "UK enterprise mobility",
     "title": "A UK-built layer for Apple Business app distribution",
     "summary": "Apple Business launched worldwide in April 2026 with a free MDM layer and an Admin API — and the vendors building on it are almost all American. We went looking for a UK-built platform doing standalone app distribution on Apple's business APIs, then had independent research tools look too. Neither search found one. Here is why that gap matters for UK organisations, and what we built into it.",
@@ -105,6 +105,10 @@ export const insights = [
       {
         "label": "Private app distribution with your own branded app store",
         "href": "https://vamiq.app/private-app-distribution"
+      },
+      {
+        "label": "Firebase App Distribution solves testing, not private app rollout",
+        "href": "/insights/firebase-app-distribution-vs-private-app-rollout"
       }
     ]
   },
@@ -226,6 +230,10 @@ export const insights = [
       {
         "label": "AXOS, the self-hosted enterprise AI workspace",
         "href": "/products/axos"
+      },
+      {
+        "label": "Google Workspace alternatives: 8 checks before you switch",
+        "href": "/insights/google-workspace-alternative-private-ai"
       }
     ]
   },
@@ -327,7 +335,7 @@ export const insights = [
         "href": "/products/axos"
       },
       {
-        "label": "Google Workspace alternatives for secure collaboration",
+        "label": "Google Workspace alternatives: 8 checks before you switch",
         "href": "/insights/google-workspace-alternative-private-ai"
       }
     ]
@@ -447,6 +455,10 @@ export const insights = [
       {
         "label": "AXOS, the self-hosted enterprise AI workspace",
         "href": "/products/axos"
+      },
+      {
+        "label": "Google Workspace alternatives: 8 checks before you switch",
+        "href": "/insights/google-workspace-alternative-private-ai"
       }
     ]
   },
@@ -459,7 +471,7 @@ export const insights = [
     "title": "Firebase App Distribution solves testing, not private app rollout",
     "seoTitle": "Firebase App Distribution vs TestFlight: built for testing",
     "summary": "Firebase App Distribution is a strong route for getting pre-release Android and iOS builds to trusted testers. But enterprise private app distribution has a different problem: approved users, business context, version clarity, support ownership, and rollout evidence after testing is over. That is where Vamiq sits: not as a Firebase replacement, but as the layer for private app rollout.",
-    "seoDescription": "Firebase App Distribution and TestFlight are built for pre-release testing. Here is what changes when a tested app has to reach your staff's devices.",
+    "seoDescription": "Firebase App Distribution and TestFlight get test builds to testers. What changes when a tested iOS or Android app has to reach your staff's devices.",
     "date": "2026-07-14",
     "updated": "2026-10-23",
     "displayDate": "14 July 2026",
@@ -587,9 +599,9 @@ export const insights = [
     "category": "AI Workspace",
     "topic": "Secure collaboration software",
     "title": "Looking for a Google Workspace alternative? Start with control, not features",
-    "seoTitle": "Google Workspace alternatives for secure collaboration",
+    "seoTitle": "Google Workspace alternatives: 8 checks before you switch",
     "summary": "Teams comparing Google Workspace alternatives are rarely comparing mail, files and chat alone. They are asking who controls the workspace, where knowledge lives, and whether AI can be used without exposing sensitive business data.",
-    "seoDescription": "Comparing Google Workspace alternatives for secure collaboration? Check data control, enterprise search, permissions and AI boundaries before features.",
+    "seoDescription": "Before you shortlist a Google Workspace alternative, test hosting, identity, file access, audit trails, search, AI boundaries, rollout and a trial period.",
     "date": "2026-07-14",
     "updated": "2026-10-23",
     "displayDate": "14 July 2026",
@@ -686,7 +698,7 @@ export const insights = [
     "status": "published",
     "featured": false,
     "slug": "wwdc26-app-store-updates-mean-for-appdeploy-rollout",
-    "category": "WWDC 2026 Briefing",
+    "category": "App Distribution",
     "topic": "Vamiq",
     "title": "Apple Business Admin APIs could make Vamiq the app distribution command centre",
     "seoTitle": "Apple Business Admin APIs and private app distribution",
@@ -789,7 +801,7 @@ export const insights = [
     "status": "published",
     "featured": false,
     "slug": "private-apple-app-rollout-needs-more-than-approval",
-    "category": "Platform Briefing",
+    "category": "App Distribution",
     "topic": "Private app distribution",
     "title": "Private Apple app rollout needs more than App Store approval",
     "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the private app distribution rails. Vamiq gives iOS app distribution a working operating layer after approval.",
@@ -876,6 +888,10 @@ export const insights = [
       {
         "label": "Enterprise iOS app distribution: every option explained",
         "href": "https://vamiq.app/enterprise-ios-app-distribution-guide"
+      },
+      {
+        "label": "Firebase App Distribution solves testing, not private app rollout",
+        "href": "/insights/firebase-app-distribution-vs-private-app-rollout"
       }
     ]
   },
@@ -1052,7 +1068,7 @@ export const insights = [
     "status": "published",
     "featured": false,
     "slug": "apple-business-sme-impact",
-    "category": "Industry Update",
+    "category": "App Distribution",
     "topic": "Apple ecosystem",
     "title": "Apple Business custom apps need a cleaner rollout model",
     "summary": "For many SMEs, Apple administration has been a patchwork of device setup, app access, employee changes, support routes, and brand details. Apple Business brings those pieces closer together. The opportunity for ScotiTech is to help organisations turn Apple Business Manager custom apps into cleaner app distribution, better access workflows, and less operational noise.",

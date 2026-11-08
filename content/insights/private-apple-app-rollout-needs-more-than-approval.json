@@ -2,7 +2,7 @@
   "status": "published",
   "featured": false,
   "slug": "private-apple-app-rollout-needs-more-than-approval",
-  "category": "Platform Briefing",
+  "category": "App Distribution",
   "topic": "Private app distribution",
   "title": "Private Apple app rollout needs more than App Store approval",
   "summary": "Approval feels like the finish line until the first real rollout starts. Then the hard questions arrive: who should get access, which version is approved, what should users do next, and who owns the mess when installs fail? Apple gives businesses the private app distribution rails. Vamiq gives iOS app distribution a working operating layer after approval.",
@@ -89,6 +89,10 @@
     {
       "label": "Enterprise iOS app distribution: every option explained",
       "href": "https://vamiq.app/enterprise-ios-app-distribution-guide"
+    },
+    {
+      "label": "Firebase App Distribution solves testing, not private app rollout",
+      "href": "/insights/firebase-app-distribution-vs-private-app-rollout"
     }
   ]
 }

@@ -35,10 +35,12 @@ export const products = {
       eyebrow: "Why Vamiq exists",
       title: "Apple Business stays underneath. Vamiq is the layer teams were building themselves.",
       body: "Apple Business is excellent at app ownership, licence pools and App Store delivery. It does not try to be the day-to-day operational layer: a branded app store employees recognise, a reviewable record of app requests and install status, and clear error states. Teams with their own apps kept building that layer in-house, or bought a large device-management suite for one job. Vamiq takes the other route: one workspace handles enrolment, app installs, release checks and security settings, with the complexity kept out of view.",
-      link: {
-        label: "How Vamiq compares",
-        href: "https://vamiq.app/compare",
-      },
+      links: [
+        { label: "How Apple Business app distribution works", href: "https://vamiq.app/apple-business-app-distribution" },
+        { label: "Internal app distribution for iPhone and iPad", href: "https://vamiq.app/internal-app-distribution" },
+        { label: "Enterprise iOS app distribution guide", href: "https://vamiq.app/enterprise-ios-app-distribution-guide" },
+        { label: "How Vamiq compares", href: "https://vamiq.app/compare" },
+      ],
       points: [
         { title: "Private app distribution", body: "Your own branded app store for your company’s private and internal apps." },
         { title: "Device management", body: "Set up company iPhones, iPads, Macs and Windows PCs, install apps on them, and keep OS updates in view." },
@@ -102,12 +104,12 @@ export const products = {
       ],
     },
     features: [
-      { icon: "Palette", title: "Branded app store, built on Apple Business", body: "Your people find your private and internal apps in your own branded store, with your logo and brand colour. Apple Business Custom Apps and App Store apps, Apps and Books licence sync, Managed Apple Account mapping and directory sync. Your account, apps and licences stay yours." },
-      { icon: "ServerCog", title: "Apple device management", body: "Zero-touch enrolment for devices bought through Apple Business, or enrolment by link. App installs by group, Web Clips, passcode rules, OS updates, and lock or erase for a lost iPhone or iPad." },
-      { icon: "Laptop", title: "Mac management", body: "Enrol Macs on macOS 14 and later by link or zero-touch. Each Mac reports FileVault, firewall, System Integrity Protection and Secure Boot; install Apple Business apps and signed .pkg packages, and set macOS update deadlines on supervised Macs." },
-      { icon: "Monitor", title: "Windows management", body: "Enrol Windows 11 Pro PCs with a link and a one-time code. See each PC’s model, serial number, Windows version and update status; set screen lock, Windows Update active hours and Microsoft Defender real-time protection; install apps, and restart, locate or erase a PC. No extra Microsoft licence is needed to enrol a PC." },
-      { icon: "MousePointerClick", title: "Release controls", body: "Release Guard build checks, Risk Forecast, deployment answers and checksummed Evidence Packs, plus a release upload API for CI/CD and Slack and Microsoft Teams alerts." },
-      { icon: "GitBranch", title: "Enterprise provisioning", body: "SCIM provisioning for supported identity providers, scheduled directory sync and group rules. Signed Android APK delivery is available as an Enterprise extra." },
+      { icon: "Palette", title: "Branded app store, built on Apple Business", body: "Your people find your private and internal apps in your own branded store, with your logo and brand colour. Apple Business Custom Apps and App Store apps, Apps and Books licence sync, Managed Apple Account mapping and directory sync. Your account, apps and licences stay yours.", href: "https://vamiq.app/enterprise-app-store", linkLabel: "Enterprise app store for iPhone and iPad" },
+      { icon: "ServerCog", title: "Apple device management", body: "Zero-touch enrolment for devices bought through Apple Business, or enrolment by link. App installs by group, Web Clips, passcode rules, OS updates, and lock or erase for a lost iPhone or iPad.", href: "https://vamiq.app/device-management", linkLabel: "Apple and Windows device management" },
+      { icon: "Laptop", title: "Mac management", body: "Enrol Macs on macOS 14 and later by link or zero-touch. Each Mac reports FileVault, firewall, System Integrity Protection and Secure Boot; install Apple Business apps and signed .pkg packages, and set macOS update deadlines on supervised Macs.", href: "https://vamiq.app/mac-management", linkLabel: "Mac management" },
+      { icon: "Monitor", title: "Windows management", body: "Enrol Windows 11 Pro PCs with a link and a one-time code. See each PC’s model, serial number, Windows version and update status; set screen lock, Windows Update active hours and Microsoft Defender real-time protection; install apps, and restart, locate or erase a PC. No extra Microsoft licence is needed to enrol a PC.", href: "https://vamiq.app/windows-device-management", linkLabel: "Windows device management" },
+      { icon: "MousePointerClick", title: "Release controls", body: "Release Guard build checks, Risk Forecast, deployment answers and checksummed Evidence Packs, plus a release upload API for CI/CD and Slack and Microsoft Teams alerts.", href: "https://vamiq.app/release-controls", linkLabel: "Release controls" },
+      { icon: "GitBranch", title: "Enterprise provisioning", body: "SCIM provisioning for supported identity providers, scheduled directory sync and group rules. Signed Android APK delivery is available as an Enterprise extra.", href: "https://vamiq.app/security", linkLabel: "Security overview" },
     ],
     audiences: {
       eyebrow: "Who it's for",
@@ -195,7 +197,7 @@ export const products = {
             "A Mac or Windows PC counts the same as an iPhone or iPad",
             "Add devices any time; reductions apply at renewal",
           ],
-          cta: { label: "See pricing examples", href: "https://vamiq.app/pricing", external: true },
+          cta: { label: "Vamiq pricing and examples", href: "https://vamiq.app/pricing", external: true },
         },
         {
           name: "Distribution",

@@ -2,7 +2,7 @@
   "status": "published",
   "featured": true,
   "slug": "uk-built-apple-business-app-distribution",
-  "category": "Private App Distribution",
+  "category": "App Distribution",
   "topic": "UK enterprise mobility",
   "title": "A UK-built layer for Apple Business app distribution",
   "summary": "Apple Business launched worldwide in April 2026 with a free MDM layer and an Admin API — and the vendors building on it are almost all American. We went looking for a UK-built platform doing standalone app distribution on Apple's business APIs, then had independent research tools look too. Neither search found one. Here is why that gap matters for UK organisations, and what we built into it.",
@@ -101,6 +101,10 @@
     {
       "label": "Private app distribution with your own branded app store",
       "href": "https://vamiq.app/private-app-distribution"
+    },
+    {
+      "label": "Firebase App Distribution solves testing, not private app rollout",
+      "href": "/insights/firebase-app-distribution-vs-private-app-rollout"
     }
   ]
 }
