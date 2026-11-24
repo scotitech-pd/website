@@ -10,12 +10,12 @@ import { ogImage, pageMetadata } from "@/lib/seo";
 import { companyFacts, recognition } from "@/lib/company";
 
 export const metadata = pageMetadata({
-  title: "About ScotiTech: the company behind Vamiq and AXOS",
+  title: "About ScotiTech: the company behind Vamiq",
   absoluteTitle: true,
   description:
-    "ScotiTech Solutions Limited is a UK software company, the company behind Vamiq and AXOS. Meet the founder, Pradeep Dahiya, and the team.",
+    "ScotiTech Solutions Limited is the UK software company behind Vamiq, device management for small businesses. Meet the founder, Pradeep Dahiya, and the team.",
   path: "/aboutus",
-  image: ogImage("company.jpg", "ScotiTech Solutions, the company behind Vamiq and AXOS"),
+  image: ogImage("company.jpg", "ScotiTech Solutions, the company behind Vamiq"),
 });
 
 function Tile({ src, srcSet, sizes, alt, width, height, className, label }) {
@@ -54,11 +54,11 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
             <div>
               <p className="t-eyebrow reveal-now">About ScotiTech</p>
-              <h1 className="t-display reveal-now mt-4">The company behind Vamiq and AXOS.</h1>
+              <h1 className="t-display reveal-now mt-4">The company behind Vamiq.</h1>
               <p className="t-lead reveal-now mt-6 max-w-xl">
                 ScotiTech Solutions Limited is a UK software company, registered in Scotland and run
-                from Eurocentral, Motherwell. We make Vamiq (formerly AppDeploy), our flagship, along
-                with AXOS and ClarityPath, and we work with teams worldwide.
+                from Eurocentral, Motherwell. We make Vamiq (formerly AppDeploy), device management for
+                small and growing businesses, and we work with teams worldwide.
               </p>
             </div>
             <div className="reveal-now grid h-[420px] grid-cols-[1.35fr_1fr] grid-rows-2 gap-3 sm:h-[480px]">
@@ -113,19 +113,18 @@ export default function AboutPage() {
               data lives.
             </p>
             <p className="t-body">
-              That is the idea behind everything we make. Vamiq manages a company&apos;s iPhones, iPads,
-              Macs and Windows PCs, and gives its people their own branded app store, with each release
-              checked before it reaches a device. AXOS brings mail, files, chat, video and tasks into one private
-              workspace, with governed AI built in, on the organisation&apos;s own servers. ClarityPath
-              brings structure to life&apos;s biggest decisions.
+              That is the idea behind Vamiq. It manages a company&apos;s iPhones, iPads, Macs and
+              Windows PCs in one workspace, and gives its people their own branded app store, with each
+              release checked before it reaches a device. Sensible defaults keep the complexity out of
+              view, so a small team can run its devices without learning a policy library.
             </p>
             <p className="t-body">
               We are founder-led and close to our customers. The people who build the products are the
               people you talk to, from the first call to the day you go live.
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-3 pt-2">
-              <Link href="/products" className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand-strong hover:text-brand">
-                Explore our products
+              <Link href="/products/vamiq" className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand-strong hover:text-brand">
+                Explore Vamiq
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link href="/#services" className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-brand-strong hover:text-brand">

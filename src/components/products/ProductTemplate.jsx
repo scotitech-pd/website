@@ -56,7 +56,6 @@ import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/ModalContext";
 import { cn } from "@/lib/utils";
 import JsonLd from "@/components/seo/JsonLd";
-import ProductShowcase from "@/components/products/ProductShowcase";
 import LoopVideo from "@/components/media/LoopVideo";
 import FilmDialog from "@/components/media/FilmDialog";
 import PhotoCard from "@/components/media/PhotoCard";
@@ -161,17 +160,6 @@ function ProductMedia({ media, accentBg }) {
     );
   }
   if (media?.type === "image") {
-    if (media.presentation === "showcase") {
-      return (
-        <ProductShowcase
-          variant={media.variant}
-          src={media.src}
-          alt={media.alt}
-          priority
-        />
-      );
-    }
-
     if (media.presentation === "bare") {
       return (
         <div className="relative">
@@ -993,7 +981,7 @@ export default function ProductTemplate({ product }) {
 
       {/* PRICING */}
       {product.pricing?.plans && (
-        <Section surface="muted" spacing="lg">
+        <Section id="pricing" surface="muted" spacing="lg">
           <Reveal className="max-w-3xl">
             <Eyebrow className={accentText}>Pricing</Eyebrow>
             <h2 className="t-h1 mt-3">Simple, transparent pricing.</h2>

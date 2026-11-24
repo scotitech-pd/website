@@ -4,15 +4,14 @@ import {
   CheckCircle2,
   ExternalLink,
   FileText,
-  Scale,
   ServerCog,
-  ShieldCheck,
 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/button";
+import SecuritySection from "@/components/home/SecuritySection";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -30,30 +29,6 @@ const companyFacts = [
   { label: "Registered office", value: "11 Caldervale Drive, Motherwell ML1 2GB, UK" },
   { label: "ICO registration", value: "ZB925464" },
   { label: "Data Protection Officer", value: "Pardeep Kumar" },
-];
-
-const certifications = [
-  {
-    icon: Scale,
-    tone: "none",
-    name: "Cyber Essentials",
-    status: "Not held",
-    body: "Not held today. We are preparing for assessment against the current Cyber Essentials requirements. When a certificate is issued, its number will be published here, linked to IASME's certificate search — not before.",
-  },
-  {
-    icon: Scale,
-    tone: "none",
-    name: "SOC 2 / ISO 27001",
-    status: "Not held",
-    body: "Neither certification is held today. Both are a 2027 roadmap item, once Enterprise volume justifies the cost of a formal audit.",
-  },
-  {
-    icon: ShieldCheck,
-    tone: "product",
-    name: "Product controls",
-    status: "Published",
-    body: "Each product publishes its own security controls in its Trust Centre below. These controls have not yet been independently audited or certified.",
-  },
 ];
 
 const disclosureCommitments = [
@@ -115,16 +90,6 @@ const trustCentres = [
       { label: "Privacy", href: "https://vamiq.app/privacy" },
     ],
   },
-  {
-    name: "AXOS",
-    label: "Private enterprise workspace",
-    body: "Trust, privacy, and data processing terms are published. Operational evidence and control review are provided during enterprise evaluation.",
-    links: [
-      { label: "Trust Centre", href: "https://axos.scotitech.com/trust" },
-      { label: "DPA", href: "https://axos.scotitech.com/dpa" },
-      { label: "Privacy", href: "https://axos.scotitech.com/privacy" },
-    ],
-  },
 ];
 
 const reviewMaterials = [
@@ -159,7 +124,7 @@ export default function TrustPage() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/products">Explore our products</Link>
+                <Link href="/products/vamiq">Explore Vamiq</Link>
               </Button>
             </div>
           </Reveal>
@@ -215,38 +180,8 @@ export default function TrustPage() {
         </div>
       </Section>
 
-      {/* CERTIFICATIONS */}
-      <Section surface="base" spacing="lg">
-        <Reveal className="max-w-3xl">
-          <Eyebrow>Certifications &amp; assurance</Eyebrow>
-          <h2 className="t-h1 mt-3">Stated honestly, including what we do not hold.</h2>
-          <p className="t-lead mt-5">
-            We publish certification status rather than badges. Nothing below is
-            claimed before it is granted.
-          </p>
-        </Reveal>
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {certifications.map((cert, index) => {
-            const Icon = cert.icon;
-            return (
-              <Reveal key={cert.name} delay={index * 0.06}>
-                <article className="h-full rounded-xl border border-hairline bg-surface p-6 shadow-soft">
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand-strong">
-                      <Icon size={18} />
-                    </span>
-                    <span className="rounded-full border border-hairline bg-surface-muted px-3 py-1 font-karla text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
-                      {cert.status}
-                    </span>
-                  </div>
-                  <h3 className="mt-5 font-karla text-lg font-bold text-strong">{cert.name}</h3>
-                  <p className="mt-2 font-lora text-sm leading-7 text-body">{cert.body}</p>
-                </article>
-              </Reveal>
-            );
-          })}
-        </div>
-      </Section>
+      {/* SECURITY (certifications appear inside it only once one is held) */}
+      <SecuritySection showTrustLink={false} />
 
       {/* RESPONSIBLE DISCLOSURE */}
       <Section id="disclosure" surface="muted" spacing="lg">
@@ -361,14 +296,14 @@ export default function TrustPage() {
       {/* PRODUCT TRUST CENTRES */}
       <Section surface="muted" spacing="lg">
         <Reveal className="max-w-3xl">
-          <Eyebrow>Product trust centres</Eyebrow>
-          <h2 className="t-h1 mt-3">Control detail lives with each product.</h2>
+          <Eyebrow>Vamiq Trust Centre</Eyebrow>
+          <h2 className="t-h1 mt-3">Control detail lives with the product.</h2>
           <p className="t-lead mt-5">
-            This page covers the company. Technical controls, service status, and
-            contractual terms are specific to each product and published there.
+            This page covers the company. Vamiq&apos;s technical controls, service status and
+            contractual terms are published in its Trust Centre.
           </p>
         </Reveal>
-        <div className="mt-10 grid gap-5 lg:grid-cols-2">
+        <div className="mt-10 grid max-w-3xl gap-5">
           {trustCentres.map((product, index) => (
             <Reveal key={product.name} delay={index * 0.07}>
               <article className="h-full rounded-xl border border-hairline bg-surface p-6 shadow-soft md:p-8">

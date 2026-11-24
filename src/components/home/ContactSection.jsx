@@ -33,10 +33,10 @@ export default function ContactSection() {
             <div className="relative grid gap-10 p-6 sm:p-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:p-14">
               <div>
                 <h2 className="font-serif text-[clamp(2rem,1.4rem+2.2vw,3rem)] font-normal leading-[1.08] tracking-[-0.01em]">
-                  Talk to the people who build it.
+                  Talk to the people who build Vamiq.
                 </h2>
                 <p className="mt-5 max-w-xl text-[17px] leading-7 text-white/75">
-                  Tell us what you need: a Vamiq rollout, a private AXOS deployment, or help with Apple
+                  Tell us what you need: a Vamiq demo, your guided setup, or a hand with Apple
                   Business. You will hear back from the team that builds the product.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">

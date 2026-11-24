@@ -1,14 +1,15 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import LoopVideo from "@/components/media/LoopVideo";
 import FilmDialog from "@/components/media/FilmDialog";
-import { vamiqMedia } from "@/lib/company";
+import { vamiqLinks, vamiqMedia } from "@/lib/company";
 
 /**
- * Home hero: one confident line, one paragraph, two actions, and the real
- * product in a framed window (Vamiq's 14-second loop, a sample workspace)
- * with the branded app store on an iPhone beside it.
+ * Home hero: Vamiq leads (founder, 24 Nov 2026). The headline is Vamiq's own
+ * D4 line from vamiq.app; the paragraph says who makes it. Two actions, then
+ * the real product in a framed window (Vamiq's 14-second loop, a sample
+ * workspace) with the branded app store on an iPhone beside it.
  */
 export default function HeroSection() {
   const { loop, poster, phone } = vamiqMedia;
@@ -21,36 +22,43 @@ export default function HeroSection() {
       />
       <Container className="relative">
         <div className="mx-auto max-w-[920px] text-center">
-          <h1 className="t-display reveal-now">
-            Your apps, your devices, your data. Under your control.
+          <p className="t-eyebrow reveal-now">Vamiq, from ScotiTech</p>
+          <h1 className="t-display reveal-now mt-4">
+            Your iPhones, iPads, Macs and Windows PCs. One workspace.
           </h1>
           <p
             className="reveal-now mx-auto mt-6 max-w-[700px] text-[clamp(1.0625rem,1rem+0.35vw,1.25rem)] leading-[1.6] text-body"
             style={{ animationDelay: "0.08s" }}
           >
-            ScotiTech makes Vamiq (formerly AppDeploy), which manages company iPhones, iPads, Macs and
-            Windows PCs and puts your own apps on your Apple devices through a branded app store. We
-            also make AXOS, an AI workspace that runs on your own servers.
+            ScotiTech makes Vamiq (formerly AppDeploy), device management for small and growing
+            businesses. Set up and secure your team&apos;s devices, install apps, and put your private
+            apps on your Apple devices through your own branded app store.
           </p>
           <div
             className="reveal-now mt-9 flex flex-wrap items-center justify-center gap-3"
             style={{ animationDelay: "0.15s" }}
           >
-            <Link
-              href="/products/vamiq"
+            <a
+              href={vamiqLinks.signup}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand px-6 text-base font-semibold text-white shadow-soft transition-colors hover:bg-brand-strong"
             >
-              Meet Vamiq
+              Start free on vamiq.app
+              <ArrowUpRight size={17} aria-hidden="true" />
+            </a>
+            <Link
+              href="/products/vamiq"
+              className="inline-flex h-12 items-center gap-2 rounded-lg border border-hairline-strong bg-surface px-6 text-base font-semibold text-strong transition-colors hover:bg-white"
+            >
+              Explore Vamiq
               <ArrowRight size={17} aria-hidden="true" />
             </Link>
-            <Link
-              href="/contact"
-              className="inline-flex h-12 items-center rounded-lg border border-hairline-strong bg-surface px-6 text-base font-semibold text-strong transition-colors hover:bg-white"
-            >
-              Talk to us
-            </Link>
           </div>
-          <div className="reveal-now mt-7" style={{ animationDelay: "0.2s" }}>
+          <p className="reveal-now mt-5 text-[14px] text-muted" style={{ animationDelay: "0.18s" }}>
+            Free for up to 5 devices. No time limit, no card.
+          </p>
+          <div className="reveal-now mt-5" style={{ animationDelay: "0.2s" }}>
             <FilmDialog />
           </div>
         </div>

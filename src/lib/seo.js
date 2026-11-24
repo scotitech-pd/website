@@ -15,7 +15,7 @@ export const siteUrl = (path = "/") => new URL(path, SITE_URL).toString();
 export const canonical = (path) => ({ canonical: siteUrl(path) });
 
 export const SITE_DESCRIPTION =
-  "ScotiTech makes Vamiq, Apple and Windows device management with a private app store for your own apps, and AXOS, a private AI workspace on your own servers.";
+  "ScotiTech makes Vamiq, device management for small businesses: iPhones, iPads, Macs and Windows PCs in one workspace. Free for up to 5 devices.";
 
 /**
  * Share cards are real .jpg files in /public/og (rendered from

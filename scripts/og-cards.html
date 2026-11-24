@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
   Share-card source for /public/og/*.jpg (1200x630).
-  Render one card per hash (#home, #vamiq, #axos, #claritypath, #private-ai, #company) with a
+  Render one card per hash (#home, #vamiq, #claritypath, #company) with a
   headless browser at 1200x630 and save as JPEG, e.g. with
   scripts/render-og-cards.mjs. Uses only files from /public.
 -->
@@ -40,13 +40,6 @@
   #vamiq .foot { color: rgba(255,255,255,.75); }
   #vamiq .poster { position: absolute; left: 640px; top: 120px; width: 620px; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.12); }
 
-  /* axos */
-  #axos { background: linear-gradient(150deg, #0d1b2a, #1d3550); color: #fff; }
-  #axos .copy { position: absolute; left: 72px; top: 72px; width: 520px; }
-  #axos .eyebrow { margin-top: 48px; font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: #9fc4e6; font-weight: 600; }
-  #axos h1 { margin-top: 14px; font-size: 56px; line-height: 1.08; }
-  #axos .foot { color: rgba(255,255,255,.7); }
-  #axos .shot { position: absolute; left: 610px; top: 110px; width: 760px; border-radius: 12px; box-shadow: 0 30px 70px rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.1); }
 
   /* claritypath */
   #claritypath { background: linear-gradient(160deg, #f4efe4, #e2d6bd); color: #2b2416; }
@@ -56,13 +49,6 @@
   #claritypath .foot { color: #5c5240; }
   #claritypath .phone { position: absolute; left: 820px; top: 70px; width: 280px; border: 8px solid #0b1f1e; border-radius: 40px; background: #0b1f1e; box-shadow: 0 40px 70px rgba(43,36,22,.3); }
 
-  /* private-ai */
-  #private-ai { background: #f4f2ec; color: #0b1f1e; }
-  #private-ai .glow { position: absolute; inset: 0; background: radial-gradient(50% 70% at 85% 60%, rgba(15,118,110,.18), transparent 70%); }
-  #private-ai .copy { position: absolute; left: 72px; top: 72px; width: 760px; }
-  #private-ai .eyebrow { margin-top: 48px; font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: #0b5d57; font-weight: 600; }
-  #private-ai h1 { margin-top: 14px; font-size: 76px; line-height: 1.02; letter-spacing: -0.04em; font-weight: 650; }
-  #private-ai .foot { color: #3b4a48; }
 
   /* company */
   #company { background: #002d35; color: #fff; }
@@ -78,11 +64,11 @@
     <div class="glow"></div>
     <div class="copy">
       <img class="wordmark" src="../public/logo/scotitech-wordmark.png" alt="">
-      <h1>Your apps, your devices, your data. Under your control.</h1>
+      <h1>Your iPhones, iPads, Macs and Windows PCs. One workspace.</h1>
     </div>
     <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="../public/media/vamiq/vamiq-hero-poster-20261021.webp" alt=""></div>
     <img class="phone" src="../public/media/vamiq/vamiq-hero-phone-20261021.webp" alt="">
-    <p class="foot">The company behind Vamiq · scotitech.com</p>
+    <p class="foot">Vamiq device management, from ScotiTech · scotitech.com</p>
   </section>
 
   <section class="card" id="vamiq">
@@ -93,15 +79,6 @@
     <p class="foot">Vamiq, formerly AppDeploy · from ScotiTech</p>
   </section>
 
-  <section class="card" id="axos">
-    <div class="copy">
-      <img class="wordmark light" src="../public/logo/scotitech-wordmark.png" alt="">
-      <p class="eyebrow">AXOS · Private AI workspace</p>
-      <h1 class="serif">Your enterprise AI workspace, on your own servers.</h1>
-    </div>
-    <img class="shot" src="../public/images/products/axos/command-center-dashboard-1200.webp" alt="">
-    <p class="foot">scotitech.com/products/axos</p>
-  </section>
 
   <section class="card" id="claritypath">
     <div class="copy">
@@ -113,22 +90,13 @@
     <p class="foot">scotitech.com/products/claritypath</p>
   </section>
 
-  <section class="card" id="private-ai">
-    <div class="glow"></div>
-    <div class="copy">
-      <img class="wordmark" src="../public/logo/scotitech-wordmark.png" alt="">
-      <p class="eyebrow">Private AI for your business</p>
-      <h1>Stop renting AI. Start owning it.</h1>
-    </div>
-    <p class="foot">Explore the time your team could reclaim · scotitech.com/private-ai</p>
-  </section>
 
   <section class="card" id="company">
     <img class="photo" src="../public/images/company/startup-awards-2026-event-1-1600.webp" alt="">
     <div class="tint"></div>
     <div class="copy">
       <img class="wordmark light" src="../public/logo/scotitech-wordmark.png" alt="">
-      <h1 class="serif">The company behind Vamiq and AXOS.</h1>
+      <h1 class="serif">The company behind Vamiq.</h1>
     </div>
     <p class="foot">ScotiTech Solutions · scotitech.com</p>
   </section>

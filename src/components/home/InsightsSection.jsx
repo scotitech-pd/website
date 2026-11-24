@@ -4,16 +4,19 @@ import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import { formatInsightDate, insightImage, insights } from "@/lib/insights";
 
-/* Briefings shown on the home page, picked for a general business reader. */
+/*
+ * Briefings shown on the home page: app and device topics, to sit with Vamiq.
+ * Two picks with different cover images. The UK-built article stays off the
+ * home page: its cover image lists other vendors' names.
+ */
 const HOME_PICKS = [
-  "private-apple-app-rollout-needs-more-than-approval",
   "wwdc26-app-store-updates-mean-for-appdeploy-rollout",
-  "uk-ai-governance-gap-business-policy",
+  "private-apple-app-rollout-needs-more-than-approval",
 ];
 
 export default function InsightsSection() {
   const picks = HOME_PICKS.map((slug) => insights.find((i) => i.slug === slug)).filter(Boolean);
-  const list = picks.length === 3 ? picks : insights.slice(0, 3);
+  const list = picks.length === HOME_PICKS.length ? picks : insights.slice(0, 2);
 
   return (
     <Section id="insights" surface="base" spacing="lg" className="border-y border-hairline">
@@ -31,7 +34,7 @@ export default function InsightsSection() {
         </Link>
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
+      <div className="mt-10 grid gap-6 md:grid-cols-2">
         {list.map((item, i) => (
           <Reveal key={item.slug} delay={i * 0.05}>
             <Link

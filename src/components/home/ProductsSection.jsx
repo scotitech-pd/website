@@ -9,19 +9,19 @@ import { vamiqLinks } from "@/lib/company";
 
 const vamiqParts = [
   {
-    photo: "iphone-at-work",
-    eyebrow: "For your people",
-    title: "Private app distribution",
-    body: "Your own branded app store for your company's private and internal apps.",
-    href: vamiqLinks.privateApps,
-  },
-  {
     photo: "device-macbook",
     eyebrow: "For your devices",
     title: "Device management",
     body: "Enrol company iPhones, iPads, Macs and Windows PCs, install their apps, and manage their settings and security.",
     href: vamiqLinks.devices,
     position: "55% 50%",
+  },
+  {
+    photo: "iphone-at-work",
+    eyebrow: "For your people",
+    title: "Private app distribution",
+    body: "Your own branded app store for your company's private and internal apps.",
+    href: vamiqLinks.privateApps,
   },
   {
     photo: "code-on-mac",
@@ -33,22 +33,6 @@ const vamiqParts = [
 ];
 
 const otherProducts = [
-  {
-    name: "AXOS",
-    status: { variant: "early", label: "Enterprise" },
-    eyebrow: "Private AI workspace",
-    title: "Your enterprise AI workspace, on your own servers.",
-    body: "Mail, files, chat, video and tasks with governed AI built in, running entirely inside your own environment.",
-    href: "/products/axos",
-    linkLabel: "Explore AXOS",
-    image: {
-      src: "/images/products/axos/command-center-dashboard-1200.webp",
-      width: 1200,
-      height: 637,
-      alt: "AXOS Command Center: governed AI and the connected workspace modules",
-    },
-    frame: "wide",
-  },
   {
     name: "ClarityPath",
     status: { variant: "supporting", label: "In the Vamiq portal" },
@@ -73,10 +57,10 @@ export default function ProductsSection({ showIntro = true }) {
       {showIntro && (
       <Reveal className="max-w-3xl">
         <p className="t-eyebrow">What we make</p>
-        <h2 className="t-h1 mt-3">Focused products that do one job well.</h2>
+        <h2 className="t-h1 mt-3">Vamiq: one workspace for your team&apos;s devices.</h2>
         <p className="t-lead mt-5">
-          Vamiq is our flagship. Use it to run your company&apos;s Apple devices, Windows PCs and your
-          own apps from one workspace.
+          Vamiq is device management for small and growing businesses: your iPhones, iPads, Macs and
+          Windows PCs in one workspace, with a branded app store for your own apps.
         </p>
       </Reveal>
       )}
@@ -96,12 +80,12 @@ export default function ProductsSection({ showIntro = true }) {
                 <Badge variant="onInk">Live</Badge>
               </div>
               <h3 className="mt-7 font-serif text-[clamp(1.75rem,1.3rem+1.6vw,2.5rem)] font-normal leading-[1.12] tracking-[-0.01em] text-white">
-                Your devices and your own apps, managed in one place.
+                Your iPhones, iPads, Macs and Windows PCs. One workspace.
               </h3>
               <p className="mt-5 max-w-xl text-[16px] leading-7 text-white/75">
-                Set up and secure your team&apos;s iPhones, iPads, Macs and Windows PCs in one workspace,
-                and put your private apps on your Apple devices through your own branded app store. Each
-                release is checked before it ships.
+                Device management for small and growing businesses. Set up and secure your team&apos;s
+                devices, install apps, and put your private apps on your Apple devices through your own
+                branded app store, with each release checked before it ships.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
@@ -122,7 +106,7 @@ export default function ProductsSection({ showIntro = true }) {
                 </Link>
               </div>
               <p className="mt-5 text-[13px] text-white/60">
-                Free for up to 5 devices, with no card. Then £1 / $1 / €1 / ₹100 a device a month.
+                Free for up to 5 devices. No time limit, no card. Then £1 / $1 / €1 / ₹100 a device a month.
               </p>
             </div>
             <FilmDialog variant="poster" />
@@ -142,7 +126,7 @@ export default function ProductsSection({ showIntro = true }) {
       <Reveal className="mt-20">
         <h3 className="t-h2">Also from ScotiTech</h3>
       </Reveal>
-      <div className="mt-8 grid gap-6 lg:grid-cols-2">
+      <div className="mt-8 grid max-w-3xl gap-6">
         {otherProducts.map((p) => (
           <Reveal key={p.name}>
             <Link

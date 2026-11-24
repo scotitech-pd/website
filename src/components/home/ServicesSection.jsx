@@ -1,20 +1,10 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  ArrowUpRight,
-  Building2,
-  Cpu,
-  Handshake,
-  Rocket,
-  Send,
-  Server,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight, Building2, Handshake, Rocket, Send, ShieldCheck } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import { services } from "@/lib/company";
 
-const icons = { Building2, Cpu, Handshake, Rocket, Send, Server, ShieldCheck };
+const icons = { Building2, Handshake, Rocket, Send, ShieldCheck };
 
 function ServiceLink({ service }) {
   const Arrow = service.external ? ArrowUpRight : ArrowRight;
@@ -53,8 +43,8 @@ export default function ServicesSection() {
           <p className="t-eyebrow">Services</p>
           <h2 className="t-h1 mt-3">We help you get set up, and stay set up.</h2>
           <p className="t-lead mt-5">
-            Around our products, our team helps with the parts that need a person: Apple Business,
-            app publishing, private deployments and partnerships.
+            Around Vamiq, our team helps with the parts that need a person: Apple Business, app
+            publishing, getting your apps ready for managed devices, and partnerships.
           </p>
           <Link
             href="/contact"

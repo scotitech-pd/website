@@ -6,29 +6,23 @@ import { ArrowRight, Clock, ShieldCheck, Sparkles, X } from "lucide-react";
 import { meetingLinks } from "@/lib/scheduling";
 
 const chips = [
-  { icon: Clock, label: "45-min session" },
-  { icon: ShieldCheck, label: "Security aligned" },
-  { icon: Sparkles, label: "Product-specific guidance" },
+  { icon: Clock, label: "30-minute call" },
+  { icon: ShieldCheck, label: "With the founder" },
+  { icon: Sparkles, label: "Your devices, your apps" },
 ];
 
 const agenda = [
-  "Select the product session that matches your use case",
-  "Review deployment, control, and rollout expectations",
-  "Leave with a clear next-step plan",
+  "Tell us about your team's devices and apps",
+  "See how Vamiq would set them up and keep them secure",
+  "Leave with a clear next step",
 ];
 
 const sessions = [
   {
-    name: "Vamiq session",
-    body: "For teams managing iPhones, iPads, Macs and Windows PCs, or distributing private apps through a branded app store with build checks before each release.",
-    cta: "Book Vamiq session",
+    name: "Vamiq call",
+    body: "For small and growing businesses with iPhones, iPads, Macs and Windows PCs to manage, or private apps to put on their Apple devices through a branded app store.",
+    cta: "Book a call",
     href: meetingLinks.vamiq,
-  },
-  {
-    name: "AXOS session",
-    body: "For teams planning a private workspace for communication, files, tasks, and governance-aligned AI operations.",
-    cta: "Book AXOS session",
-    href: meetingLinks.axos,
   },
 ];
 
@@ -64,7 +58,7 @@ export default function RequestaQuote() {
       onClick={closeModal}
       role="dialog"
       aria-modal="true"
-      aria-label="Book a product session"
+      aria-label="Book a call about Vamiq"
     >
       <div
         className="relative grid max-h-[92vh] w-full max-w-5xl overflow-hidden rounded-[1.75rem] border border-hairline bg-surface shadow-lift animate-scale-in lg:grid-cols-2"
@@ -79,10 +73,10 @@ export default function RequestaQuote() {
               Talk to sales
             </span>
 
-            <h2 className="t-h2 mt-6 text-on-ink">Book a focused product session.</h2>
+            <h2 className="t-h2 mt-6 text-on-ink">Book a call about Vamiq.</h2>
             <p className="mt-4 font-karla leading-relaxed text-on-ink-muted">
-              Choose Vamiq or AXOS and schedule the right session. We'll cover
-              product fit, deployment approach, and practical next steps for your team.
+              A 30-minute call with the team that builds Vamiq. We&apos;ll cover your devices, your
+              apps and practical next steps for your team.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2.5">
@@ -115,8 +109,7 @@ export default function RequestaQuote() {
                 ))}
               </ol>
               <p className="mt-4 border-t border-white/10 pt-3 font-karla text-xs leading-relaxed text-on-ink-muted">
-                No generic pitch. Each session is aligned to the product and rollout
-                context you choose.
+                No generic pitch: the call is about your team and your devices.
               </p>
             </div>
           </div>
@@ -133,10 +126,10 @@ export default function RequestaQuote() {
           </button>
 
           <span className="t-eyebrow">Schedule a meeting</span>
-          <h2 className="t-h3 mt-2 pr-8">Book the session that fits your goals.</h2>
+          <h2 className="t-h3 mt-2 pr-8">Pick a time that suits you.</h2>
           <p className="t-body mt-3">
-            Choose Vamiq for company devices and private apps, or AXOS for secure workspace
-            planning, then book instantly with the right team.
+            Book instantly in the calendar. Start free on vamiq.app any time; the call is there when
+            you want a hand.
           </p>
 
           <div className="mt-6 space-y-4">
@@ -161,11 +154,11 @@ export default function RequestaQuote() {
           </div>
 
           <p className="mt-6 text-center font-karla text-xs leading-relaxed text-muted">
-            Need help deciding first? Email{" "}
+            Prefer email? Write to{" "}
             <a href="mailto:info@scotitech.com" className="font-semibold text-brand-strong hover:text-brand">
               info@scotitech.com
             </a>{" "}
-            and we'll guide you to the right product session.
+            and we'll find a time that works.
           </p>
         </div>
       </div>
