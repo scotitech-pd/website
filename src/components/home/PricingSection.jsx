@@ -39,7 +39,7 @@ export default function PricingSection() {
             <div className="relative">
               <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#9fe0d4]">Pricing</p>
               <h2 className="mt-3 font-serif text-[clamp(1.9rem,1.4rem+1.8vw,2.75rem)] font-normal leading-[1.1] tracking-[-0.01em]">
-                Start free. Pay per device as you grow.
+                Free for five devices. Simple prices after that.
               </h2>
               <dl className="mt-10 grid gap-6 md:grid-cols-3">
                 {tiers.map((t) => (

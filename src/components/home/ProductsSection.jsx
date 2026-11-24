@@ -80,7 +80,7 @@ export default function ProductsSection({ showIntro = true }) {
                 <Badge variant="onInk">Live</Badge>
               </div>
               <h3 className="mt-7 font-serif text-[clamp(1.75rem,1.3rem+1.6vw,2.5rem)] font-normal leading-[1.12] tracking-[-0.01em] text-white">
-                Your iPhones, iPads, Macs and Windows PCs. One workspace.
+                Every iPhone, iPad, Mac and Windows PC your team uses, managed together.
               </h3>
               <p className="mt-5 max-w-xl text-[16px] leading-7 text-white/75">
                 Device management for small and growing businesses. Set up and secure your team&apos;s

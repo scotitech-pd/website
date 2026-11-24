@@ -29,7 +29,7 @@ export const products = {
       { label: "Platforms", value: "iPhone · iPad · Mac · Windows" },
     ],
     featuresTitle: "One workspace for the apps, the devices and the releases.",
-    howItWorksTitle: "Live in three steps.",
+    howItWorksTitle: "Up and running in three steps.",
     statement: {
       eyebrow: "Why Vamiq exists",
       title: "Apple Business stays underneath. Vamiq is the layer teams were building themselves.",
@@ -156,7 +156,7 @@ export const products = {
       ],
     },
     security: {
-      title: "Security on every plan, Free included",
+      title: "Security built in, from the free plan up",
       points: [
         "Customer data is hosted in the UK and backed up daily.",
         "Traffic over HTTPS; Apple Business credentials, integration secrets and push-certificate keys encrypted at rest with AES-256-GCM.",

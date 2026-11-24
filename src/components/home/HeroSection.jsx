@@ -22,15 +22,15 @@ export default function HeroSection() {
       />
       <Container className="relative">
         <div className="mx-auto max-w-[920px] text-center">
-          <p className="t-eyebrow reveal-now">Vamiq, from ScotiTech</p>
+          <p className="t-eyebrow reveal-now">Device management for small businesses</p>
           <h1 className="t-display reveal-now mt-4">
-            Your iPhones, iPads, Macs and Windows PCs. One workspace.
+            We build Vamiq: one workspace for your iPhones, iPads, Macs and Windows PCs.
           </h1>
           <p
             className="reveal-now mx-auto mt-6 max-w-[700px] text-[clamp(1.0625rem,1rem+0.35vw,1.25rem)] leading-[1.6] text-body"
             style={{ animationDelay: "0.08s" }}
           >
-            ScotiTech makes Vamiq (formerly AppDeploy), device management for small and growing
+            Vamiq (formerly AppDeploy) is device management for small and growing
             businesses. Set up and secure your team&apos;s devices, install apps, and put your private
             apps on your Apple devices through your own branded app store.
           </p>

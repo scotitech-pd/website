@@ -56,7 +56,7 @@ export default function SecuritySection({ showTrustLink = true }) {
       <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
           <p className="t-eyebrow">Security</p>
-          <h2 className="t-h1 mt-3">Security on every plan, Free included.</h2>
+          <h2 className="t-h1 mt-3">Security built in, from the free plan up.</h2>
           <p className="t-lead mt-5">
             Built into every Vamiq workspace, with the documents a security review asks for published
             in one place.

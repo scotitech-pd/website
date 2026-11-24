@@ -131,7 +131,7 @@ export default function VamiqSection() {
 
         <div className="mt-20 grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
           <Reveal>
-            <h2 className="t-h2">Live in three steps.</h2>
+            <h2 className="t-h2">Up and running in three steps.</h2>
             <p className="t-lead mt-4">
               Every trial includes a free 30-minute setup call: we help you connect Apple Business and
               enrol your first device. Email{" "}
