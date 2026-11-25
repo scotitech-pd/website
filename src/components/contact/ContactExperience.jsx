@@ -20,16 +20,16 @@ const productPaths = [
   {
     name: "Vamiq",
     eyebrow: "Apple and Windows devices, private apps",
-    description: "Device management for Apple devices and Windows PCs, a branded app store, and build checks before each release.",
+    description: "Device management for iPhones, iPads, Macs and Windows PCs, a branded app store, and build checks before each release.",
     href: "/products/vamiq",
     accent: "from-teal-500/20 via-teal-400/10 to-white/0",
   },
   {
-    name: "AXOS",
-    eyebrow: "Enterprise workspace",
+    name: "Setup and services",
+    eyebrow: "Help from the team",
     description:
-      "AXOS is a completed core platform currently available for private enterprise evaluation.",
-    href: "/products/axos",
+      "Guided setup and three months' support with Vamiq, Apple Business set-up, private app publishing and managed-device readiness.",
+    href: "/#services",
     accent: "from-cyan-500/20 via-emerald-400/10 to-white/0",
   },
   {
@@ -74,7 +74,7 @@ const contactRoutes = [
 
 const responseStats = [
   { value: "1 day", label: "Typical first response" },
-  { value: "3 paths", label: "Product, enterprise, partner" },
+  { value: "3 paths", label: "Product, services, partner" },
   { value: "Global", label: "Client conversations" },
 ];
 
@@ -147,8 +147,8 @@ export default function ContactExperience() {
             <p className="t-eyebrow reveal-now">Contact ScotiTech</p>
             <h1 className="t-display reveal-now mt-4">Tell us what you need.</h1>
             <p className="t-lead reveal-now mt-6 max-w-2xl">
-              Evaluating Vamiq, planning an AXOS deployment, or need a hand with Apple Business? Send a
-              message or book a call, and the team that builds the product will reply.
+              Evaluating Vamiq, ready for your guided setup, or need a hand with Apple Business? Send a
+              message or book a call, and the team that builds Vamiq will reply.
             </p>
             <div className="reveal-now mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg">
@@ -273,9 +273,9 @@ export default function ContactExperience() {
                 <ShieldCheck size={22} />
               </span>
               <div>
-                <p className="font-karla text-xl font-semibold">AXOS evaluation note</p>
+                <p className="font-karla text-xl font-semibold">A setup call with every trial</p>
                 <p className="mt-2 font-lora text-sm leading-7 text-white/68">
-                  AXOS is enterprise-only. Share your business profile, team size, workflow needs, and infrastructure preference so we can decide the right testing route.
+                  Every Vamiq trial includes a free 30-minute setup call: we help you connect Apple Business and enrol your first device.
                 </p>
               </div>
             </div>
@@ -342,9 +342,9 @@ export default function ContactExperience() {
                     className="h-11 w-full rounded-lg border border-slate-200 bg-white px-4 font-karla text-sm text-slate-950 outline-none transition-colors focus:border-teal-400"
                   >
                     <option>Vamiq</option>
-                    <option>AXOS enterprise evaluation</option>
-                    <option>ClarityPath</option>
+                    <option>Guided setup or Apple Business</option>
                     <option>Partnership</option>
+                    <option>ClarityPath</option>
                     <option>General enquiry</option>
                   </select>
                 </Field>
@@ -395,7 +395,7 @@ export default function ContactExperience() {
             Prefer a call?
           </h2>
           <p className="mt-3 font-lora text-sm leading-7 text-slate-600">
-            Book a focused session for product fit, Vamiq rollout, AXOS enterprise evaluation, or partnership routes.
+            Book a 30-minute call about Vamiq, your setup, Apple Business or partnering.
           </p>
           <Button asChild className="mt-6" variant="ink">
             <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">

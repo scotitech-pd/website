@@ -2,22 +2,28 @@
   "redirects": [
     { "source": "/products/appdeploy", "destination": "/products/vamiq", "permanent": true },
     { "source": "/products/appdeploy/", "destination": "/products/vamiq", "permanent": true },
-    { "source": "/products/opsly", "destination": "/products/axos", "permanent": true },
-    { "source": "/products/opsly/", "destination": "/products/axos", "permanent": true },
+    { "source": "/products/axos", "destination": "/", "permanent": true },
+    { "source": "/products/axos/", "destination": "/", "permanent": true },
+    { "source": "/products/axos/:path*", "destination": "/", "permanent": true },
+    { "source": "/products/opsly", "destination": "/", "permanent": true },
+    { "source": "/products/opsly/", "destination": "/", "permanent": true },
+    { "source": "/private-ai", "destination": "/", "permanent": true },
+    { "source": "/private-ai/", "destination": "/", "permanent": true },
+    { "source": "/private-ai.html", "destination": "/", "permanent": true },
+    { "source": "/insights/ai-workspace-vs-digital-workplace-solutions", "destination": "/insights", "permanent": true },
+    { "source": "/insights/ai-workspace-vs-digital-workplace-solutions/", "destination": "/insights", "permanent": true },
+    { "source": "/insights/enterprise-ai-trials-need-tighter-control-before-rollout", "destination": "/insights", "permanent": true },
+    { "source": "/insights/enterprise-ai-trials-need-tighter-control-before-rollout/", "destination": "/insights", "permanent": true },
+    { "source": "/insights/google-workspace-alternative-private-ai", "destination": "/insights", "permanent": true },
+    { "source": "/insights/google-workspace-alternative-private-ai/", "destination": "/insights", "permanent": true },
+    { "source": "/insights/secure-ai-adoption-now-needs-operating-controls", "destination": "/insights", "permanent": true },
+    { "source": "/insights/secure-ai-adoption-now-needs-operating-controls/", "destination": "/insights", "permanent": true },
+    { "source": "/insights/uk-ai-governance-gap-business-policy", "destination": "/insights", "permanent": true },
+    { "source": "/insights/uk-ai-governance-gap-business-policy/", "destination": "/insights", "permanent": true },
     { "source": "/products/aicaptionstudio", "destination": "/products", "permanent": true },
     { "source": "/products/aicaptionstudio/", "destination": "/products", "permanent": true },
     { "source": "/solutions", "destination": "/products", "permanent": true },
     { "source": "/solutions/", "destination": "/products", "permanent": true }
-  ],
-  "rewrites": [
-    {
-      "source": "/private-ai",
-      "destination": "/private-ai.html"
-    },
-    {
-      "source": "/private-ai/",
-      "destination": "/private-ai.html"
-    }
   ],
   "headers": [
     {

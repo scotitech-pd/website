@@ -6,11 +6,11 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { VAMIQ_URL } from "@/lib/company";
+import { vamiqLinks } from "@/lib/company";
 
 const navLinks = [
   { title: "Vamiq", href: "/products/vamiq" },
-  { title: "Products", href: "/products" },
+  { title: "Pricing", href: "/products/vamiq#pricing" },
   { title: "Services", href: "/#services" },
   { title: "Company", href: "/aboutus" },
   { title: "Insights", href: "/insights" },
@@ -82,12 +82,12 @@ const Navbar = () => {
 
           <div className="hidden items-center gap-2 lg:flex">
             <a
-              href={VAMIQ_URL}
+              href={vamiqLinks.signup}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-9 items-center gap-1 rounded-md border border-hairline-strong bg-surface px-3.5 text-[14px] font-semibold text-strong transition-colors hover:bg-white"
             >
-              Try Vamiq
+              Start free
               <ArrowUpRight size={14} aria-hidden="true" />
             </a>
             <Link
@@ -139,12 +139,12 @@ const Navbar = () => {
                 Talk to us
               </Link>
               <a
-                href={VAMIQ_URL}
+                href={vamiqLinks.signup}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex h-11 flex-1 items-center justify-center gap-1 rounded-lg border border-hairline-strong bg-surface text-[15px] font-semibold text-strong"
               >
-                Try Vamiq
+                Start free
                 <ArrowUpRight size={15} aria-hidden="true" />
               </a>
             </li>

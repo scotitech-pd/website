@@ -1,15 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import CookiePreferencesButton from "@/components/cookie/CookiePreferencesButton";
-import { VAMIQ_URL, contact } from "@/lib/company";
+import { VAMIQ_URL, contact, vamiqLinks } from "@/lib/company";
 
 const columns = [
   {
     title: "Products",
     links: [
       { title: "Vamiq", href: "/products/vamiq" },
+      { title: "Vamiq pricing", href: "/products/vamiq#pricing" },
+      { title: "Start free on vamiq.app", href: vamiqLinks.signup, external: true },
       { title: "Vamiq website", href: VAMIQ_URL, external: true },
-      { title: "AXOS", href: "/products/axos" },
       { title: "ClarityPath", href: "/products/claritypath" },
       { title: "All products", href: "/products" },
     ],
@@ -70,7 +71,7 @@ export default function Footer() {
               <Image src="/logo/scotitech-wordmark.png" alt="ScotiTech" width={538} height={150} className="h-7 w-auto brightness-0" />
             </Link>
             <p className="mt-5 text-[14px] leading-6 text-body">
-              The company behind Vamiq and AXOS.
+              The company behind Vamiq: device management for small businesses.
             </p>
             <p className="mt-4 text-[13px] leading-6 text-muted">{contact.office}</p>
           </div>

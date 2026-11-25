@@ -1,4 +1,3 @@
-import { meetingLinks } from "@/lib/scheduling";
 import { vamiqMedia } from "@/lib/company";
 
 /**
@@ -30,7 +29,7 @@ export const products = {
       { label: "Platforms", value: "iPhone · iPad · Mac · Windows" },
     ],
     featuresTitle: "One workspace for the apps, the devices and the releases.",
-    howItWorksTitle: "Live in three steps.",
+    howItWorksTitle: "Up and running in three steps.",
     statement: {
       eyebrow: "Why Vamiq exists",
       title: "Apple Business stays underneath. Vamiq is the layer teams were building themselves.",
@@ -129,7 +128,7 @@ export const products = {
         {
           icon: "BriefcaseBusiness",
           title: "App agencies and IT firms",
-          body: "Refer clients to Vamiq or resell it with your own support. Your partner workspace is free.",
+          body: "Refer your clients to Vamiq. Your partner workspace is free.",
         },
       ],
     },
@@ -157,7 +156,7 @@ export const products = {
       ],
     },
     security: {
-      title: "Security on every plan, Free included",
+      title: "Security built in, from the free plan up",
       points: [
         "Customer data is hosted in the UK and backed up daily.",
         "Traffic over HTTPS; Apple Business credentials, integration secrets and push-certificate keys encrypted at rest with AES-256-GCM.",
@@ -245,239 +244,6 @@ export const products = {
       body: "Start free with up to 5 devices, or book a demo with the founder. Every trial includes a free 30-minute setup call to connect Apple Business and enrol your first device: email info@vamiq.app to book yours.",
       primary: "Book a demo",
       secondary: { label: "Contact us", href: "/contact" },
-    },
-  },
-
-  axos: {
-    slug: "axos",
-    name: "AXOS",
-    accent: "axos",
-    logo: "/images/brand/axos-icon-256.webp",
-    externalUrl: "https://axos.scotitech.com",
-    externalLabel: "Request AXOS access",
-    externalNote: "Enterprise access starts at",
-    status: { variant: "early", label: "Enterprise only" },
-    eyebrow: "Private AI workspace",
-    tagline: "Your enterprise AI platform, self-hosted.",
-    description:
-      "Mail, files, calendar, chat, video and tasks in one workspace, with private AI built in and enterprise knowledge search across it all. AXOS runs inside your own environment, so your data never leaves it. Enterprises start with a guided evaluation, then roll it out to their people.",
-    hero: {
-      media: {
-        type: "window",
-        src: "/images/products/axos/command-center-dashboard-1200.webp",
-        width: 1200,
-        height: 637,
-        chrome: "axos.scotitech.com",
-        alt: "AXOS Command Centre: governed AI, mail, calendar, tasks and team operations in one view",
-        caption: "AXOS Command Centre",
-      },
-    },
-    gallery: {
-      eyebrow: "Inside AXOS",
-      title: "One private workspace for your whole team.",
-      body: "Real screens from AXOS. Everything runs in your environment, under your access rules.",
-      items: [
-        {
-          src: "/images/products/axos/command-center-dashboard-1200.webp",
-          width: 1200,
-          height: 637,
-          chrome: "axos.scotitech.com",
-          title: "Command Centre",
-          caption: "Your day at a glance: priority mail, focus meetings, work items and a morning brief from governed AI.",
-          alt: "AXOS Command Centre with priority queues, meetings and a morning brief",
-        },
-        {
-          src: "/images/products/axos/workspace-dashboard-1200.webp",
-          width: 1200,
-          height: 772,
-          chrome: "axos.scotitech.com",
-          title: "Workspace",
-          caption: "Mail, drive, calendar, chat, video, tasks and contacts in one place, with recent activity and today's schedule.",
-          alt: "AXOS workspace dashboard with mail, calendar, tasks and recent activity",
-        },
-        {
-          src: "/images/products/axos/sign-in-1200.webp",
-          width: 1200,
-          height: 770,
-          chrome: "axos.scotitech.com",
-          title: "Single sign-on",
-          caption: "Your people sign in with your identity provider over SAML, with biometric sign-in on mobile.",
-          alt: "AXOS sign-in page with single sign-on",
-        },
-      ],
-    },
-    problem: {
-      title: "Most digital workplace solutions put your data in someone else's cloud.",
-      points: [
-        "Mail, files, chat, and tasks scattered across external SaaS you don't control.",
-        "AI features that quietly send your work to third-party models.",
-        "Many collaboration suites still leave knowledge, search, and governance split across tools.",
-      ],
-    },
-    solution: {
-      title: "One self-hosted enterprise AI platform that never leaves your environment.",
-      points: [
-        "Mail, drive, calendar, chat, video, and tasks in a single private AI workspace.",
-        "Secure collaboration software with enterprise knowledge management and governed enterprise search AI built in.",
-        "100% on-premise AI: zero external calls and complete data sovereignty.",
-      ],
-    },
-    features: [
-      { icon: "Mail", title: "Mail & calendar", body: "Email and scheduling inside one private workspace your team owns." },
-      { icon: "HardDrive", title: "Drive, storage & knowledge", body: "Files, shared storage, and enterprise knowledge management controlled end to end on your infrastructure." },
-      { icon: "Video", title: "Chat & video", body: "Team messaging and calls without routing through a third-party tool." },
-      { icon: "CheckSquare", title: "Tasks", body: "Plan and coordinate work alongside everything else in the suite." },
-      { icon: "Bot", title: "Governance-first private AI", body: "Policy-aligned AI and enterprise search AI built into the workspace, shaped by your access rules, team policy, and data posture." },
-      { icon: "ServerCog", title: "Self-hosted and on-premise", body: "Self-hosted AI or on-premise AI deployment with zero external calls and complete data sovereignty by design." },
-    ],
-    audiences: {
-      eyebrow: "Who AXOS is for",
-      title: "Built for teams that can't afford to leak.",
-      body: "Regulated, sensitive, or simply serious about data ownership — these are the teams AXOS was made for. The clearer fit is usually one that already knows its current tools spread it thin.",
-      items: [
-        {
-          icon: "HeartPulse",
-          title: "Healthcare & care providers",
-          body: "Approved protocols, internal guidance, and shift handovers — searchable in seconds, without sending notes to a public model.",
-          example: "Summarise a discharge policy for a manager preparing the handover.",
-        },
-        {
-          icon: "Landmark",
-          title: "Financial services & accounting",
-          body: "Compliance knowledge, client files, and working memos in one controlled environment — no copy-paste into someone else's chatbot.",
-          example: "Pull an internal compliance check from approved policies without leaving the workspace.",
-        },
-        {
-          icon: "Factory",
-          title: "Manufacturing & logistics",
-          body: "Maintenance manuals, supplier documents, and shift summaries that operators can actually find when they need them.",
-          example: "Ask a maintenance log a question and get an answer with its source attached.",
-        },
-        {
-          icon: "BriefcaseBusiness",
-          title: "Legal & professional services",
-          body: "Privileged work stays privileged. Internal precedent and matter notes available to your team — not to the open internet.",
-          example: "Draft from a partner's matter notes without routing through a third-party drive.",
-        },
-        {
-          icon: "Store",
-          title: "Retail & multi-site operations",
-          body: "One playbook across every site. Store managers ask once; the answer comes from your real, approved guidance — never scattered shared drives.",
-          example: "Answer store-by-store policy questions from internal guidance, not multiple inboxes.",
-        },
-        {
-          icon: "Truck",
-          title: "Transport & field services",
-          body: "Operational know-how on the road. Field teams query approved procedures, safety records, and job notes from a controlled workspace.",
-          example: "Generate a field-service summary from job notes and approved safety records.",
-        },
-      ],
-    },
-    deployment: {
-      eyebrow: "Deployment model",
-      title: "Start lean. Mature toward deeper ownership.",
-      body: "Begin where evaluation is fastest. Move to private cloud, self-hosted AI, or fully on-premise AI as your data posture demands. Same secure collaboration platform, different perimeter.",
-      options: [
-        {
-          icon: "Cloud",
-          name: "Hosted evaluation",
-          body: "The fastest path to a working private evaluation. We run AXOS so your security review can start in days, not quarters.",
-        },
-        {
-          icon: "Server",
-          name: "Private cloud",
-          body: "Run AXOS inside your own cloud tenancy. Same product, your perimeter, your keys.",
-        },
-        {
-          icon: "ServerCog",
-          name: "Self-hosted",
-          body: "Deploy AXOS on infrastructure you operate. Zero external dependence, complete data residency.",
-        },
-        {
-          icon: "ShieldCheck",
-          name: "On-premises",
-          body: "Behind your firewall, on your hardware. For teams whose policy doesn't permit anything else.",
-        },
-      ],
-    },
-    qualifying: {
-      eyebrow: "Private evaluation",
-      title: "Days, not months. Scoped per team.",
-      body: "AXOS is in active deployment. Access is granted per team and moves at the pace of your security review — not the other way round.",
-      columns: [
-        {
-          label: "How to qualify",
-          title: "Book a 45-min strategy session",
-          body: "A short call where we learn your data posture and you see whether AXOS genuinely fits before either side commits.",
-        },
-        {
-          label: "What happens next",
-          title: "We map deployment fit and next steps",
-          body: "Within the same session we sketch the deployment model that fits your governance — and write the next two steps with you.",
-        },
-        {
-          label: "Pricing",
-          title: "Scoped to your deployment",
-          body: "Discussed openly in the same call, based on team size and deployment model. No SKU games, no surprise tiers.",
-        },
-        {
-          label: "Timeline",
-          title: "Evaluation to access in days",
-          body: "Most qualifying teams reach a private evaluation inside the first two weeks. Production follows the pace of your review.",
-        },
-      ],
-    },
-    howItWorks: [
-      { title: "Share your business profile", body: "Tell us your industry, team size, workflows, data requirements, and infrastructure preferences." },
-      { title: "Test AXOS for a limited time", body: "We provide a working testing platform so your decision-makers can evaluate the real product." },
-      { title: "Adopt for employees", body: "If AXOS fits, we scope the employee rollout across self-hosted or private-cloud deployment." },
-    ],
-    security: {
-      title: "Enterprise security, complete sovereignty",
-      points: [
-        "100% on-premise — zero external calls; your data never leaves your environment.",
-        "End-to-end encrypted, with SSO (SAML) on web and biometric login on mobile.",
-        "Multi-tenant isolation for separate teams, departments, or clients.",
-      ],
-    },
-    faqs: [
-      { q: "Is AXOS really self-hosted?", a: "Yes. AXOS can run on your own infrastructure or private cloud, with zero external calls and complete data sovereignty for teams that need self-hosted AI or on-premise AI." },
-      { q: "What's included in the AI workspace?", a: "Mail, drive, calendar, chat, video, and tasks, plus a governance-first AI agent built directly into the digital workspace platform." },
-      { q: "Can AXOS replace our current office suite?", a: "AXOS is an enterprise workspace for organisations that need private hosting, secure collaboration and stronger data control: mail, files, chat, video and tasks in one place, with governed AI built in." },
-      { q: "Does AXOS support enterprise knowledge management?", a: "Yes. AXOS brings files, communication, tasks, and governed AI into one workspace so teams can build controlled enterprise knowledge management and enterprise search AI workflows around their own data." },
-      { q: "How do people sign in?", a: "SSO (SAML) on the web, with biometric login available on mobile." },
-      { q: "Can we test AXOS before adopting it?", a: "Yes. AXOS is enterprise-only, so we first review your business information and intended use case. Suitable organisations receive private enterprise evaluation access to evaluate AXOS before deciding on employee adoption." },
-    ],
-    cta: {
-      title: "Run your entire workspace on your own terms.",
-      body: "Share your business information and we'll provide the right AXOS evaluation route, including private enterprise evaluation access for qualified enterprise teams.",
-      primary: "Request AXOS evaluation",
-      secondary: { label: "Book a call", href: "/contact" },
-    },
-    rolloutPaths: {
-      eyebrow: "AXOS rollout review",
-      title: "Move from product interest to a real deployment conversation.",
-      body: "Three entry points, depending on where you are right now — exploring, evaluating, or ready to talk specifics.",
-      paths: [
-        {
-          label: "See it live",
-          title: "Open the AXOS workspace",
-          body: "Visit axos.scotitech.com to see how the product presents to a real team — sign-in, modules, and AI surfaced in one place.",
-          action: { type: "external", href: "https://axos.scotitech.com", label: "Go to AXOS" },
-        },
-        {
-          label: "Send a brief",
-          title: "Complete a rollout brief",
-          body: "Share your governance, scale, and timeline. We respond with a deployment fit and the next two steps — no scheduling required.",
-          action: { type: "link", href: "/contact", label: "Brief our team" },
-        },
-        {
-          label: "Talk to the team",
-          title: "Book an AXOS session",
-          body: "A 45-minute call to map your data posture, deployment model, and a private evaluation if AXOS fits.",
-          action: { type: "modal", label: "Book AXOS session" },
-        },
-      ],
     },
   },
 

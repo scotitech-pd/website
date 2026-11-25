@@ -5,7 +5,7 @@ export const metadata = pageMetadata({
   description:
     "ScotiTech news and awards: UK StartUp Awards 2026 Scotland Regional Finalist, and NextGen Innovator of the Year 2025 for founder Pradeep Dahiya.",
   path: "/media",
-  image: ogImage("company.jpg", "ScotiTech Solutions, the company behind Vamiq and AXOS"),
+  image: ogImage("company.jpg", "ScotiTech Solutions, the company behind Vamiq"),
 });
 
 export default function MediaLayout({ children }) {

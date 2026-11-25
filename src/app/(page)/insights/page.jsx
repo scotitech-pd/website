@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Insights and briefings",
   description:
-    "ScotiTech briefings on Apple Business, private app distribution, Apple device management and governed AI.",
+    "ScotiTech briefings on Apple Business, private app distribution, device management and the security questions buyers ask.",
   path: "/insights",
 });
 
@@ -49,10 +49,10 @@ export default function InsightsPage() {
         <Container>
           <div className="max-w-3xl">
             <p className="t-eyebrow reveal-now">Insights</p>
-            <h1 className="t-display reveal-now mt-4">Briefings on Apple devices, private apps and AI.</h1>
+            <h1 className="t-display reveal-now mt-4">Briefings on company devices and private apps.</h1>
             <p className="t-lead reveal-now mt-6 max-w-2xl">
               Short, sourced analysis of the platform and policy changes that affect how organisations
-              roll out apps, manage devices and adopt AI. Each one ends with what to review next.
+              roll out apps and manage their devices. Each one ends with what to review next.
             </p>
           </div>
 

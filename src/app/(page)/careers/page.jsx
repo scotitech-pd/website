@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   ArrowRight,
+  ArrowUpRight,
   BadgePoundSterling,
   Building2,
   MailCheck,
@@ -60,26 +61,10 @@ const productsToKnow = [
   {
     name: "Vamiq",
     status: "Live",
-    tagline: "Device management for iPhones, iPads, Macs and Windows PCs in one workspace, and a branded app store for your private apps, with build checks before each release.",
+    tagline: "Device management for small and growing businesses: iPhones, iPads, Macs and Windows PCs in one workspace, and a branded app store for your private apps, with build checks before each release.",
     audience:
-      "IT leaders and operations teams managing company devices, or distributing internal apps to employees, testers, or partner organisations on Apple devices.",
+      "Small and growing businesses with a mix of company devices, companies with private apps, and the agencies and IT firms that work for them.",
   },
-  {
-    name: "AXOS",
-    status: "Enterprise only",
-    tagline: "A self-hosted enterprise AI workspace — mail, drive, calendar, chat, video, tasks, knowledge, and private AI in one place.",
-    audience:
-      "Enterprises that need a collaboration suite they fully control, with AI that keeps data in-house.",
-  },
-];
-
-const partnerTerms = [
-  { title: "30% recurring", body: "For the life of the account, not just year one. 35% once you have five active accounts." },
-  { title: "12-month attribution", body: "First touch, registered before contact — not a 90-day window that quietly expires." },
-  { title: "We never go direct", body: "We do not approach a partner-sourced client without you. Not for expansion, not at renewal." },
-  { title: "Paid in 30 days", body: "Once the client's payment clears, yours follows within 30 days." },
-  { title: "£0 to join", body: "No minimums, no annual commitment, no certification to buy into." },
-  { title: "Wholesale alternative", body: "Prefer to own billing? Take 35% off list instead and invoice your client yourself." },
 ];
 
 const processSteps = [
@@ -107,7 +92,7 @@ const faqs = [
   },
   {
     q: "Do I need to be based in the UK?",
-    a: "No. Roles are open worldwide. What matters is the market you can credibly open — some regions and sectors will be a stronger fit for Vamiq or AXOS than others, and we will be honest with you about that early.",
+    a: "No. Roles are open worldwide. What matters is the market you can credibly open — some regions and sectors will be a stronger fit for Vamiq than others, and we will be honest with you about that early.",
   },
   {
     q: "Do I need existing customers, or is a strong network enough?",
@@ -178,10 +163,10 @@ export default function CareersPage() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
           <Reveal>
             <Eyebrow>What you&apos;ll introduce</Eyebrow>
-            <h2 className="t-h1 mt-3">Two products worth having a serious conversation about.</h2>
+            <h2 className="t-h1 mt-3">A product worth having a serious conversation about.</h2>
             <p className="t-body mt-5">
               You do not need to be a technical expert. You do need enough
-              understanding of each product to spot when it actually fits a
+              understanding of Vamiq to spot when it actually fits a
               buyer&apos;s situation.
             </p>
           </Reveal>
@@ -228,43 +213,25 @@ export default function CareersPage() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_15%_0%,rgba(15,118,110,0.22),transparent_62%)]" />
         <Container className="relative z-10">
           <Reveal className="max-w-3xl">
-            <Badge variant="onInk">For agencies &amp; consultants</Badge>
+            <Badge variant="onInk">For agencies &amp; IT firms</Badge>
             <h2 className="t-h1 mt-5 text-on-ink">
-              Partner programme, with the terms published up front.
+              Partner programme for agencies and IT firms.
             </h2>
             <p className="mt-5 max-w-2xl font-karla text-lg leading-8 text-on-ink-muted">
-              If you already advise clients on software, you can resell or refer
-              ScotiTech products and keep a recurring share for as long as that
-              client stays. We publish the terms that usually stay hidden until
-              the third call.
+              If you build apps or look after company devices for clients, refer them to Vamiq. Your
+              partner workspace is free, and the partner offer is published on vamiq.app.
             </p>
           </Reveal>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {partnerTerms.map((term, i) => (
-              <Reveal key={term.title} delay={i * 0.05}>
-                <div className="h-full rounded-2xl border border-white/10 bg-white/[0.05] p-6">
-                  <p className="font-karla text-lg font-bold text-on-ink">{term.title}</p>
-                  <p className="mt-2 font-karla text-sm leading-6 text-on-ink-muted">{term.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
           <Reveal delay={0.1}>
-            <div className="mt-8 flex flex-col gap-5 rounded-2xl border border-brand/25 bg-brand/10 p-6 md:flex-row md:items-center md:justify-between md:p-7">
-              <div className="max-w-2xl">
-                <p className="font-karla text-base font-bold text-on-ink">
-                  Founding partners: the first 10 get 40% recurring.
-                </p>
-                <p className="mt-2 font-karla text-sm leading-6 text-on-ink-muted">
-                  Locked for the life of every account signed in your first 12
-                  months. We are bootstrapped and early — a client relationship is
-                  worth more to us right now than the margin on it, and we would
-                  rather say that plainly.
-                </p>
-              </div>
-              <Button asChild size="lg" variant="onInkSolid" className="shrink-0">
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild size="lg" variant="onInkSolid">
+                <a href="https://vamiq.app/partners" target="_blank" rel="noopener noreferrer">
+                  See the partner offer
+                  <ArrowUpRight size={17} />
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="onInk">
                 <Link href="mailto:join@scotitech.com?subject=Partner%20programme%20enquiry">
                   Request partner terms
                   <ArrowRight size={17} />

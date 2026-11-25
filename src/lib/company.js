@@ -5,6 +5,8 @@
  * founder-approved list of 22 Oct 2026: add or remove one only on the
  * founder's word. The setup offer is presented as included with Vamiq, with
  * no customer cap or deadline (founder, 22 Oct 2026). App development is deliberately not a service.
+ * On 24 Nov 2026 the founder made the site Vamiq-only: AXOS and the private
+ * AI services were removed.
  */
 
 export const VAMIQ_URL = "https://vamiq.app";
@@ -19,6 +21,10 @@ export const vamiqLinks = {
   pricing: "https://vamiq.app/pricing",
   partners: "https://vamiq.app/partners",
   security: "https://vamiq.app/security",
+  trust: "https://vamiq.app/trust",
+  dpa: "https://vamiq.app/dpa",
+  subProcessors: "https://vamiq.app/sub-processors",
+  windows: "https://vamiq.app/windows-device-management",
   docs: "https://vamiq.app/docs",
 };
 
@@ -89,26 +95,10 @@ export const services = [
     linkLabel: "Book a review",
   },
   {
-    id: "axos-deployment",
-    icon: "Server",
-    title: "AXOS private deployment",
-    body: "We install and configure AXOS, our self-hosted AI workspace, inside your own environment, then hand it over to your team.",
-    href: "/products/axos",
-    linkLabel: "About AXOS",
-  },
-  {
-    id: "private-ai",
-    icon: "Cpu",
-    title: "Private AI set-up",
-    body: "We help you run AI on your own servers, so your business data stays with you.",
-    href: "/private-ai",
-    linkLabel: "Explore private AI",
-  },
-  {
     id: "partners",
     icon: "Handshake",
     title: "Partner programme",
-    body: "For app agencies and IT firms: refer your clients to Vamiq, or resell it with your own support.",
+    body: "For app agencies and IT firms that look after clients' devices or build their apps: refer your clients to Vamiq. Your partner workspace is free.",
     href: vamiqLinks.partners,
     linkLabel: "The partner offer",
     external: true,
@@ -125,7 +115,7 @@ export const founder = {
     alt: "Pradeep Dahiya, Founder & Software Architect of ScotiTech Solutions",
   },
   linkedin: "https://www.linkedin.com/in/pradeepkumar2411/",
-  bio: "Pradeep founded ScotiTech and architects its products, Vamiq and AXOS. He sets the company's product direction and works directly with customers, so the people who use the software talk to the person who builds it.",
+  bio: "Pradeep founded ScotiTech and architects Vamiq. He sets the company's product direction and works directly with customers, so the people who use the software talk to the person who builds it.",
 };
 
 export const director = {
@@ -155,6 +145,26 @@ export const recognition = [
     },
   },
 ];
+
+/**
+ * Certifications held by ScotiTech. Deliberately EMPTY: the site shows no
+ * certification wording of any kind (no badge, no "in progress", no "not
+ * held") until a certificate has been issued. CertificationsSection renders
+ * nothing while this list is empty.
+ *
+ * When a certificate is issued, add one entry and release with the founder's
+ * approval, for example:
+ *   {
+ *     name: "Cyber Essentials",
+ *     body: "IASME",                       // the certification body
+ *     number: "…",                         // as printed on the certificate
+ *     issued: "2026-12-15",                // ISO dates
+ *     expires: "2027-12-15",
+ *     verifyUrl: "https://…",              // the public register entry
+ *     verifyLabel: "Check it on IASME's certificate search",
+ *   }
+ */
+export const certifications = [];
 
 export const companyFacts = [
   { label: "Founded", value: "2024" },

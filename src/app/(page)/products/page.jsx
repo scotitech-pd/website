@@ -3,9 +3,9 @@ import ProductsSection from "@/components/home/ProductsSection";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Products: Vamiq, AXOS and ClarityPath",
+  title: "Vamiq device management and ClarityPath",
   description:
-    "ScotiTech products: Vamiq for Apple and Windows device management and a private app store, AXOS for a self-hosted AI workspace, and ClarityPath for decisions.",
+    "ScotiTech products: Vamiq, device management for small businesses' iPhones, iPads, Macs and Windows PCs with a branded app store, and ClarityPath.",
   path: "/products",
 });
 
@@ -16,11 +16,11 @@ export default function ProductsPage() {
         <Container>
           <div className="max-w-3xl">
             <p className="t-eyebrow reveal-now">Products</p>
-            <h1 className="t-display reveal-now mt-4">Focused products that do one job well.</h1>
+            <h1 className="t-display reveal-now mt-4">What we make.</h1>
             <p className="t-lead reveal-now mt-6 max-w-2xl">
-              Vamiq (formerly AppDeploy) leads: device management for Apple devices and Windows PCs,
-              and a branded app store for your own apps. AXOS is a private AI workspace that runs on your own servers, and
-              ClarityPath brings structure to life&apos;s biggest decisions.
+              Vamiq (formerly AppDeploy) is our product: device management for small and growing
+              businesses, with a branded app store for your own apps. ClarityPath, our decision-support
+              app, is delivered through Vamiq.
             </p>
           </div>
         </Container>

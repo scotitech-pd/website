@@ -185,10 +185,7 @@ async function generateStructuredArticleWithOpenAI(brief) {
 }
 
 function buildTemplateArticle(brief) {
-  const productLine =
-    brief.product === "AXOS"
-      ? "governance-first AI workspaces"
-      : "deployment and rollout operations";
+  const productLine = "deployment and rollout operations";
 
   const title =
     brief.title ||
@@ -269,21 +266,11 @@ function buildTemplateArticle(brief) {
   };
 }
 
-function defaultImageForProduct(product) {
-  if (product === "AXOS") return "/images/insights/secure-ai-governance.jpg";
+function defaultImageForProduct() {
   return "/images/insights/apple-business-team-devices.jpg";
 }
 
 function defaultRelatedProduct(brief) {
-  if (brief.product === "AXOS") {
-    return {
-      href: "/products/axos",
-      cta: "Explore AXOS",
-      description:
-        "A controlled, enterprise-focused environment for private AI workflows, team operations, and governance-first adoption.",
-    };
-  }
-
   // "AppDeploy" is Vamiq's former name; older briefs may still use it.
   if (brief.product === "Vamiq" || brief.product === "AppDeploy") {
     return {
