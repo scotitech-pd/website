@@ -112,7 +112,7 @@ const organizationSchema = {
     {
       "@type": "Person",
       name: "Pradeep Dahiya",
-      jobTitle: "Founder & Software Architect",
+      jobTitle: "Founder, CEO & Software Architect",
       image: "https://scotitech.com/images/company/pradeep-dahiya-800.webp",
       url: "https://www.linkedin.com/in/pradeepkumar2411/",
     },

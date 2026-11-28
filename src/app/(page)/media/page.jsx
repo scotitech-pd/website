@@ -136,7 +136,7 @@ export default function MediaPage() {
                 support behind ScotiTech. We build technology with the intention of making life simpler,
                 safer and more accessible.&rdquo;
                 <footer className="mt-3 font-sans text-[14px] font-semibold text-body">
-                  Pradeep Dahiya, Founder &amp; Software Architect
+                  Pradeep Dahiya, Founder, CEO &amp; Software Architect
                 </footer>
               </blockquote>
               <p>
